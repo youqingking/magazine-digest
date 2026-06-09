@@ -1,0 +1,63 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:44:16.667Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_1655ed94-19c2-4d6a-bd80-a4fd7f0826d0",
+    "event_type": "accepted_warning_applied",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T04:44:16.659Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1c_three_release_mixed_preview",
+    "scenario_id": "data1c_three_release_mixed_preview",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": [
+      "economist_section_context_fallback",
+      "economist_filename_anomaly"
+    ],
+    "accepted_warning": true,
+    "details": {
+      "accepted_warnings": [
+        {
+          "id": "economist-preview-fallback",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_section_context_fallback",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        },
+        {
+          "id": "economist-preview-filename-anomaly",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_filename_anomaly",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        }
+      ]
+    }
+  }
+}

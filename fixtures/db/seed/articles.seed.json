@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "art_nebula_launch",
+    "product_key": "demo_cn_content",
+    "publication_id": "pub_daily_brief",
+    "article_key": "nebula_launch_20260316",
+    "source_article_uid": "ext_article_nebula_launch_001",
+    "title": "Nebula Launch Overview",
+    "summary": "A stable sample article root for contract validation.",
+    "topic_tags": ["science", "space"],
+    "status": "active",
+    "created_at": "2026-03-16T09:05:00+08:00",
+    "updated_at": "2026-03-16T09:05:00+08:00"
+  }
+]

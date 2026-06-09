@@ -1,0 +1,73 @@
+{
+  "scenario_id": "s06_tombstone_and_unpublish",
+  "title": "Tombstone And Unpublish",
+  "objective": "Cover tombstone withdrawal, archived variants, and scheduled-not-yet-readable content in one family.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["world_brief", "ai_digest"],
+  "article_ids": ["art_s06_withdrawn_notice", "art_s06_scheduled_lab"],
+  "covered_risks": ["tombstone_removal", "unpublish_visibility", "scheduled_not_readable"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-sync-delta", "content-detail", "bootstrap-config"],
+  "articles": [
+    {
+      "article_id": "art_s06_withdrawn_notice",
+      "article_uid": "syn_article_s06_withdrawn_notice",
+      "article_key": "withdrawn_notice_20260317",
+      "publication_key": "world_brief",
+      "title": "旧版应急演练通告已撤回",
+      "summary": "虚构报道用于演示 archived/tombstone 组合在 sync 中的移除行为。",
+      "tags": ["policy"],
+      "status": "withdrawn",
+      "created_at": "2026-03-17T07:30:00+08:00",
+      "updated_at": "2026-03-17T09:20:00+08:00"
+    },
+    {
+      "article_id": "art_s06_scheduled_lab",
+      "article_uid": "syn_article_s06_scheduled_lab",
+      "article_key": "scheduled_lab_20260317",
+      "publication_key": "ai_digest",
+      "title": "协作实验室公告排入明晨发布",
+      "summary": "虚构内容用于验证 scheduled 但未到生效时间时 detail 不可读。",
+      "tags": ["ai", "policy"],
+      "status": "scheduled",
+      "created_at": "2026-03-17T09:10:00+08:00",
+      "updated_at": "2026-03-17T09:30:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s06_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 2,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s06_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": [
+        {
+          "entity_type": "article_variant",
+          "entity_id": "var_s06_withdrawn_notice_general_quick_r1",
+          "deleted_at": "2026-03-17T09:20:00+08:00",
+          "reason_code": "unpublish"
+        }
+      ]
+    }
+  }
+}

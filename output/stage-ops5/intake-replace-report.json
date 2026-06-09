@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-03-23T15:18:59.848Z",
+  "status": "passed",
+  "target_issue_id": "ops5_replace_test__20260323",
+  "initial": {
+    "status": "ok",
+    "route": "generic_split_release",
+    "source_pack": "ops5-replace-initial.zip",
+    "manifest_path": "D:\\ws\\Playground\\ops\\intake\\manifests\\2026-03-23T15-18-57-471Z-ops5-replace-initial.zip.json",
+    "generated_issues": [
+      "ops5_replace_test__20260323"
+    ],
+    "generated_scenarios": [
+      "intake_ops5_replace_test_20260323"
+    ],
+    "archive": null,
+    "replacement": null
+  },
+  "conflict": {
+    "status": "error",
+    "error_code": "OPS5_INTAKE_TARGET_EXISTS",
+    "message": "已存在 ops5_replace_test__20260323。如要修订旧上传，请勾选“替代现有期次”后重传，系统会先做备份再替换。",
+    "route": null,
+    "source_pack": null,
+    "validation_report": null,
+    "target_issue_id": "ops5_replace_test__20260323",
+    "target_exists": true,
+    "recommended_action": "replace_existing",
+    "generated_issues": null,
+    "replacement_restore": null
+  },
+  "replaced": {
+    "status": "ok",
+    "route": "generic_split_release",
+    "source_pack": "ops5-replace-updated.zip",
+    "manifest_path": "D:\\ws\\Playground\\ops\\intake\\manifests\\2026-03-23T15-18-59-814Z-ops5-replace-updated.zip.json",
+    "generated_issues": [
+      "ops5_replace_test__20260323"
+    ],
+    "generated_scenarios": [
+      "intake_ops5_replace_test_20260323"
+    ],
+    "archive": null,
+    "replacement": {
+      "mode": "replace_existing_issue",
+      "target_issue_id": "ops5_replace_test__20260323",
+      "backup_root": "D:\\ws\\Playground\\ops\\intake\\replacements\\2026-03-23T15-18-58-748Z-ops5_replace_test__20260323",
+      "restored_on_failure": false
+    }
+  },
+  "manifest_after_replace": {
+    "title": "轨道望远镜带着新相机升空"
+  },
+  "cleanup": {
+    "publication_root_exists": false,
+    "issue_root_exists": false,
+    "scenario_bundle_exists": false
+  }
+}

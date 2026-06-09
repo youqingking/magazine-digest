@@ -1,0 +1,39 @@
+{
+  "adapter_id": "direct-magazine-summary",
+  "route_type": "direct",
+  "source_kind": "magazine_summary_object",
+  "family_kind": null,
+  "mapped_shared_fields": [
+    "ContentRef",
+    "ContentVariantKey",
+    "ContentListItem",
+    "ContentDetailEnvelope"
+  ],
+  "mapped_family_fields": [],
+  "retained_domain_extras": [
+    "issue_id",
+    "issue_label",
+    "start_page",
+    "print_taxonomy_path",
+    "cover_slot"
+  ],
+  "unmapped_source_fields": [],
+  "unsupported_reason": null,
+  "warnings": [
+    "Do not promote issue packaging into shared core."
+  ],
+  "notes": [
+    "Magazine remains direct-path-first in Step 04.",
+    "Step 06 direct magazine adoption executed through shared runtime."
+  ],
+  "retained_extra_groups": {
+    "adapter_only": [],
+    "domain_only": [
+      "issue_id",
+      "issue_label",
+      "start_page",
+      "print_taxonomy_path",
+      "cover_slot"
+    ]
+  }
+}

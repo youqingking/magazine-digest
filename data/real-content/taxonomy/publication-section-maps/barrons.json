@@ -1,0 +1,108 @@
+{
+  "version": "stage-data3-v1",
+  "publication_key": "barrons",
+  "mappings": [
+    {
+      "raw_label": "华尔街风云",
+      "canonical_section_key": "markets",
+      "publication_section_path": "Barron's > Markets",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts",
+      "canonical_section_key": "markets",
+      "publication_section_path": "Barron's > Markets",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Europe Gains Appeal",
+      "canonical_section_key": "markets",
+      "publication_section_path": "Barron's > Markets",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "标普 500 指数 8000 点之约",
+      "canonical_section_key": "markets",
+      "publication_section_path": "Barron's > Markets",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Even Worries About Inflation Matter—a Lot",
+      "canonical_section_key": "markets",
+      "publication_section_path": "Barron's > Markets",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Worthy Spots for Investors to Venture",
+      "canonical_section_key": "investing",
+      "publication_section_path": "Barron's > Investing",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Dividends You Can Bank On",
+      "canonical_section_key": "investing",
+      "publication_section_path": "Barron's > Investing",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "三家值得关注的房地产投资信托基金",
+      "canonical_section_key": "investing",
+      "publication_section_path": "Barron's > Investing",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "指数挂钩年金的新选择",
+      "canonical_section_key": "investing",
+      "publication_section_path": "Barron's > Investing",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷",
+      "canonical_section_key": "investing",
+      "publication_section_path": "Barron's > Investing",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "迪士尼的 CEO 过山车",
+      "canonical_section_key": "companies",
+      "publication_section_path": "Barron's > Companies",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "奈飞与华纳兄弟探索的“联姻”",
+      "canonical_section_key": "companies",
+      "publication_section_path": "Barron's > Companies",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "自主机器人的崛起",
+      "canonical_section_key": "technology",
+      "publication_section_path": "Barron's > Technology",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "The AI Threat in Perspective",
+      "canonical_section_key": "technology",
+      "publication_section_path": "Barron's > Technology",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "2026 旅游业展望",
+      "canonical_section_key": "lifestyle",
+      "publication_section_path": "Barron's > Lifestyle",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "罗德岛的棉纺厂",
+      "canonical_section_key": "feature",
+      "publication_section_path": "Barron's > Feature",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Barron's",
+      "canonical_section_key": "opinion",
+      "publication_section_path": "Barron's > Opinion",
+      "mapping_kind": "publication_specific"
+    }
+  ]
+}

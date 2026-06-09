@@ -1,0 +1,31 @@
+{
+  "collection": "user_product_profiles",
+  "version": "stage-h0-2026-03-18",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "user_id", "audience_segment", "teen_mode", "default_language", "push_opt_in", "sync_cursor", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "audience_segment": { "type": "string", "enum": ["general", "teen", "adult"] },
+    "teen_mode": { "type": "boolean" },
+    "default_language": { "type": "string", "enum": ["zh-CN", "en-US"] },
+    "push_opt_in": { "type": "boolean" },
+    "sync_cursor": { "type": "string" },
+    "last_sync_at": { "type": "string", "format": "date-time" },
+    "referral_code": { "type": "string" },
+    "share_identity": { "type": "string" },
+    "primary_installation_id": { "type": "string" },
+    "last_device_id": { "type": "string" },
+    "push_capability_status": { "type": "string", "enum": ["unknown", "cid_missing", "cid_present", "suppressed"] },
+    "runtime_preference": { "type": "string", "enum": ["local", "remote", "hybrid"] },
+    "remote_runtime_opt_in": { "type": "boolean" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_user_product_profile", "fields": ["product_key", "user_id"], "unique": true },
+    { "name": "idx_user_product_audience", "fields": ["product_key", "audience_segment", "updated_at"] }
+  ]
+}

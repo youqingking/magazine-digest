@@ -1,0 +1,42 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T11:41:07.248Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_8d323c0a-7fdc-4849-bec9-c9c500930df3",
+    "event_type": "taxonomy_gap_detected",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T11:41:07.244Z",
+    "severity": "warning",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": [
+      "taxonomy_unmapped"
+    ],
+    "accepted_warning": false,
+    "details": {
+      "unmapped_count": 84,
+      "mapped_ratio": 0.0967741935483871
+    }
+  }
+}

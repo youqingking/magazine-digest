@@ -1,0 +1,39 @@
+{
+  "collection": "notification_inbox",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "user_id", "inbox_key", "source_type", "source_id", "title", "status", "available_from", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "inbox_key": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "delivery_id": { "type": "string" },
+    "publish_batch_id": { "type": "string" },
+    "article_id": { "type": "string" },
+    "source_type": { "type": "string", "enum": ["publish_batch", "article_variant", "digest", "follow_subject", "system"] },
+    "source_id": { "type": "string" },
+    "title": { "type": "string" },
+    "body_preview": { "type": "string" },
+    "change_summary": { "type": "string" },
+    "action_type": { "type": "string", "enum": ["open_article", "open_publish_batch", "open_search", "open_settings", "none"] },
+    "action_target": { "type": "string" },
+    "status": { "type": "string", "enum": ["unread", "read", "archived", "expired"] },
+    "priority": { "type": "string", "enum": ["low", "normal", "high", "critical"] },
+    "notify_level": { "type": "string", "enum": ["silent", "followed_only", "eligible_users", "mandatory"] },
+    "is_breaking": { "type": "boolean" },
+    "available_from": { "type": "string", "format": "date-time" },
+    "available_until": { "type": "string", "format": "date-time" },
+    "read_at": { "type": "string", "format": "date-time" },
+    "archived_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_notification_inbox_key", "fields": ["product_key", "user_id", "inbox_key"], "unique": true },
+    { "name": "idx_notification_inbox_status", "fields": ["product_key", "user_id", "status", "available_from"] },
+    { "name": "idx_notification_inbox_batch", "fields": ["product_key", "publish_batch_id", "status", "created_at"] }
+  ]
+}

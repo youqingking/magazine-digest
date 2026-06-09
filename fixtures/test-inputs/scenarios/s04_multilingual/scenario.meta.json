@@ -1,0 +1,54 @@
+{
+  "scenario_id": "s04_multilingual",
+  "title": "Multilingual Variants",
+  "objective": "Provide exact language selection smoke for zh-CN and en variants.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["world_brief"],
+  "article_ids": ["art_s04_cloud_kitchen"],
+  "covered_risks": ["language_exact_match", "future_multilingual_smoke"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-detail", "content-sync-delta", "bootstrap-config"],
+  "articles": [
+    {
+      "article_id": "art_s04_cloud_kitchen",
+      "article_uid": "syn_article_s04_cloud_kitchen",
+      "article_key": "cloud_kitchen_20260317",
+      "publication_key": "world_brief",
+      "title": "浮岛厨房把库存面板换成双语模式",
+      "summary": "虚构餐饮联盟在同一套库存系统上测试中英双语提示和培训材料。",
+      "tags": ["productivity", "policy"],
+      "status": "active",
+      "created_at": "2026-03-17T09:30:00+08:00",
+      "updated_at": "2026-03-17T09:58:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s04_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 3,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s04_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

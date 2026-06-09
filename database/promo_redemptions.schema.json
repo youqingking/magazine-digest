@@ -1,0 +1,25 @@
+{
+  "collection": "promo_redemptions",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "append_only_ledger",
+  "required": ["_id", "product_key", "campaign_id", "code_id", "user_id", "installation_id", "redemption_key", "status", "request_id", "created_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "code_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "installation_id": { "type": "string" },
+    "redemption_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["initiated", "validated", "applied", "rejected", "reversed"] },
+    "request_id": { "type": "string" },
+    "reason_code": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_redemption_key", "fields": ["product_key", "redemption_key"], "unique": true },
+    { "name": "uk_code_user_once", "fields": ["product_key", "code_id", "user_id"], "unique": true },
+    { "name": "idx_redemption_user", "fields": ["product_key", "user_id", "created_at"] }
+  ]
+}

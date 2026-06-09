@@ -1,0 +1,822 @@
+{
+  "metadata": {
+    "exported_at": "2026-03-17T15:41:49.720Z",
+    "canonical_source": "fixtures/test-inputs/scenarios + fixtures/test-inputs/publications + fixtures/test-inputs/manifests",
+    "product_key": "demo_cn_content",
+    "scenario_id": "s17_campaign_discount_offer",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "source_kind": "synthetic_test_pack",
+    "business_flow_aliases": [
+      {
+        "alias_id": "b06_internal_beta_pricing_conflict",
+        "relationship": "primary_projection"
+      }
+    ]
+  },
+  "surfaceStatus": [
+    {
+      "surface": "bootstrap-config",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-sync-delta",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-detail",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "entitlement-snapshot",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "pricing-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "experiment-assign",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "event-ingest",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "home-discovery",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "search-content",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-catalog",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-toggle",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-inbox",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-prefs",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "mark-inbox-read",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-resume",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "save-for-later",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "publish-batch-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "commercial-offer",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "quota-status",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "promo-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "referral-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "reward-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "campaign-landing",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "profile-benefits",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "billing.createOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.confirmOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.handleWebhook",
+      "status": "future_stage"
+    },
+    {
+      "surface": "promo.redeem",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.bindReferral",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.grantReward",
+      "status": "stub_only"
+    }
+  ],
+  "scenarioMeta": {
+    "scenario_id": "s17_campaign_discount_offer",
+    "title": "Campaign Discount Offer",
+    "objective": "Provide a display-only campaign landing and offer preview for local-runtime growth flows.",
+    "product_key": "demo_cn_content",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "publications": [
+      "ai_digest"
+    ],
+    "article_ids": [
+      "art_s17_campaign_offer"
+    ],
+    "covered_risks": [
+      "campaign_offer_preview",
+      "pricing_conflict_projection",
+      "landing_copy_placeholder"
+    ],
+    "intended_stage": [
+      "G"
+    ],
+    "depends_on_surfaces": [
+      "commercial-offer",
+      "campaign-landing",
+      "experiment-assign"
+    ],
+    "business_flow_aliases": [
+      {
+        "alias_id": "b06_internal_beta_pricing_conflict",
+        "relationship": "primary_projection"
+      }
+    ],
+    "articles": [
+      {
+        "article_id": "art_s17_campaign_offer",
+        "article_uid": "syn_article_s17_campaign_offer",
+        "article_key": "campaign_offer_20260317",
+        "publication_key": "ai_digest",
+        "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+        "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。",
+        "tags": [
+          "ai",
+          "productivity"
+        ],
+        "status": "active",
+        "created_at": "2026-03-17T09:12:00+08:00",
+        "updated_at": "2026-03-17T09:57:00+08:00"
+      }
+    ],
+    "runtime": {
+      "feature_flags": [
+        "stage_g_local_growth"
+      ],
+      "experiment_ids": [
+        "exp_campaign_landing_copy_v1"
+      ],
+      "entitlement_snapshot": {
+        "subject_id": "inst_s17_reader",
+        "access_state": "denied",
+        "decision_source": "synthetic_campaign_preview",
+        "quota_remaining": 1,
+        "entitlement_snapshot": null,
+        "denial_reason": "PROMO_CAMPAIGN_PREVIEW"
+      },
+      "pricing_preview": {
+        "plan_ids": [
+          "plan_demo_monthly",
+          "plan_demo_annual"
+        ],
+        "promo_codes": [
+          "CAMPAIGN70",
+          "BETA30A001"
+        ]
+      },
+      "experiment_assign": {
+        "installation_id": "inst_s17_reader",
+        "experiment_id": "exp_campaign_landing_copy_v1",
+        "bucket_key": "discount_focus",
+        "assignment_source": "synthetic_fixture"
+      },
+      "commercial_offer": {
+        "active_campaign_adjustment": {
+          "campaign_id": "camp_internal_beta_30off",
+          "campaign_key": "internal_beta_30off",
+          "price_multiplier_basis_points": 3000,
+          "headline": "活动页展示 3 折预览，但仍不创建真实订单"
+        },
+        "experiment_offer_hint": {
+          "experiment_id": "exp_campaign_landing_copy_v1",
+          "bucket_key": "discount_focus",
+          "copy_variant": "discount_focus"
+        },
+        "promo_input_capability": {
+          "enabled": true,
+          "preview_only": true
+        },
+        "floor_guard_explanation": "活动展示价仅为预览，真实结算仍遵守 floor guard。",
+        "quota_reason": "QUOTA_AVAILABLE",
+        "entitlement_reason": "CAMPAIGN_LANDING_PREVIEW",
+        "audience_context_hint": "campaign landing from discovery"
+      },
+      "campaign_landing": {
+        "campaign_id": "camp_internal_beta_30off",
+        "campaign_key": "internal_beta_30off",
+        "title": "内部测试活动预览",
+        "subtitle": "展示折扣、适用条件与 CTA 占位，不触发真实投放",
+        "discount_label": "3 折预览",
+        "eligibility_summary": [
+          "仅限本地 Stage G synthetic runtime",
+          "需遵守价格地板规则",
+          "真实支付与真实投放均未接入"
+        ],
+        "cta_primary": "立即查看优惠",
+        "cta_secondary": "复制活动码占位"
+      },
+      "sync": {
+        "tombstones": []
+      }
+    }
+  },
+  "expectedOutcomes": {
+    "expected_variant_selection": {
+      "general_quick_30s": "var_s17_campaign_offer_general_quick_r1"
+    },
+    "expected_fallback_behavior": {
+      "can_fallback_to": [
+        "teen",
+        "general"
+      ],
+      "cannot_fallback_to": [
+        "adult"
+      ],
+      "selection": "exact_match"
+    },
+    "expected_unavailable_reason": null,
+    "expected_paywall_behavior": {
+      "entitlement_expectation": {
+        "access_state": "denied",
+        "denial_reason": "PROMO_CAMPAIGN_PREVIEW"
+      },
+      "pricing_preview_expectation": {
+        "must_include_active_campaign_adjustment": true,
+        "must_include_campaign_landing_projection": true
+      }
+    },
+    "expected_sync_behavior": {
+      "server_cursor_progresses": true,
+      "tombstones_expected": 0
+    },
+    "expected_cache_behavior": {
+      "campaign_landing_cacheable": true,
+      "offer_preview_cacheable": true
+    },
+    "expected_event_signals": [
+      "campaign_open",
+      "paywall_offer_impression"
+    ],
+    "notes": [
+      "s17 is the synthetic Stage G projection for b06_internal_beta_pricing_conflict."
+    ]
+  },
+  "bootstrapConfig": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "config_source": "synthetic_test_pack",
+      "timezone": "Asia/Shanghai",
+      "money_unit": "fen",
+      "discount_canonical": "price_multiplier_basis_points",
+      "reward_canonical": "vip_days",
+      "product": {
+        "product_key": "demo_cn_content",
+        "product_id": "prod_demo_cn_content",
+        "display_name": "Demo CN Content",
+        "default_language": "zh-CN",
+        "active_status": "active"
+      },
+      "feature_flags": [
+        "stage_g_local_growth"
+      ],
+      "experiments": [
+        {
+          "experiment_id": "exp_campaign_landing_copy_v1",
+          "experiment_key": "campaign_landing_copy_v1",
+          "assignment_unit": "installation_id",
+          "assignment_version": 1,
+          "status": "running"
+        }
+      ]
+    }
+  },
+  "contentSyncDelta": {
+    "response": {
+      "server_cursor": "2026-03-17T09:57:00+08:00|var_s17_campaign_offer_general_quick_r1",
+      "has_more": false,
+      "items": [
+        {
+          "entity_type": "article",
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "publication_id": "pub_ai_digest",
+          "publication_key": "ai_digest",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。",
+          "tags": [
+            "ai",
+            "productivity"
+          ],
+          "status": "active",
+          "updated_at": "2026-03-17T09:57:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s17_campaign_offer_general_quick_r1",
+          "article_id": "art_s17_campaign_offer",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "productivity"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:57:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:57:00+08:00",
+          "available_until": null,
+          "content_hash": "216cd11f6bad7ea1a3608b3a2b30a1a30a153aa1",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:57:00+08:00"
+        }
+      ],
+      "tombstones": []
+    }
+  },
+  "contentDetail": {
+    "responses": {
+      "art_s17_campaign_offer|zh-CN|teen|quick_30s": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s17_campaign_offer_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "活动落地页预览：折扣与适用条件必须一起展示",
+          "markdown_body": "一句话摘要：这页文案只负责把折扣、适用条件与 CTA 占位讲清楚，不承担真实投放或真实下单职责。\n\n关键要点：\n- 优惠文案与 eligibility 必须同屏可见。\n- experiment hint 只能影响展示，不改写 canonical price。\n- 活动页仍要受 floor guard 和时区规则约束。\n\n为什么重要：\n它帮助我们在 Stage G 把“可展示的商业文案”与“不可提前接入的支付闭环”严格分开。",
+          "content_hash": "216cd11f6bad7ea1a3608b3a2b30a1a30a153aa1",
+          "premium_tier": "standard",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:57:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s17_campaign_offer|zh-CN|teen|deep_3m": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      },
+      "art_s17_campaign_offer|zh-CN|general|quick_30s": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s17_campaign_offer_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "活动落地页预览：折扣与适用条件必须一起展示",
+          "markdown_body": "一句话摘要：这页文案只负责把折扣、适用条件与 CTA 占位讲清楚，不承担真实投放或真实下单职责。\n\n关键要点：\n- 优惠文案与 eligibility 必须同屏可见。\n- experiment hint 只能影响展示，不改写 canonical price。\n- 活动页仍要受 floor guard 和时区规则约束。\n\n为什么重要：\n它帮助我们在 Stage G 把“可展示的商业文案”与“不可提前接入的支付闭环”严格分开。",
+          "content_hash": "216cd11f6bad7ea1a3608b3a2b30a1a30a153aa1",
+          "premium_tier": "standard",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:57:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      },
+      "art_s17_campaign_offer|zh-CN|general|deep_3m": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      },
+      "art_s17_campaign_offer|zh-CN|adult|quick_30s": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s17_campaign_offer_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "活动落地页预览：折扣与适用条件必须一起展示",
+          "markdown_body": "一句话摘要：这页文案只负责把折扣、适用条件与 CTA 占位讲清楚，不承担真实投放或真实下单职责。\n\n关键要点：\n- 优惠文案与 eligibility 必须同屏可见。\n- experiment hint 只能影响展示，不改写 canonical price。\n- 活动页仍要受 floor guard 和时区规则约束。\n\n为什么重要：\n它帮助我们在 Stage G 把“可展示的商业文案”与“不可提前接入的支付闭环”严格分开。",
+          "content_hash": "216cd11f6bad7ea1a3608b3a2b30a1a30a153aa1",
+          "premium_tier": "standard",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:57:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s17_campaign_offer|zh-CN|adult|deep_3m": {
+        "article": {
+          "article_id": "art_s17_campaign_offer",
+          "article_key": "campaign_offer_20260317",
+          "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+          "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      }
+    }
+  },
+  "entitlementSnapshot": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "subject_id": "inst_s17_reader",
+      "access_state": "denied",
+      "decision_source": "synthetic_campaign_preview",
+      "quota_remaining": 1,
+      "entitlement_snapshot": null,
+      "denial_reason": "PROMO_CAMPAIGN_PREVIEW"
+    }
+  },
+  "pricingPreview": {
+    "responses": [
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_monthly",
+        "original_amount_fen": 3000,
+        "final_amount_fen": 3000,
+        "price_floor_fen": 900,
+        "applied_price_multiplier_basis_points": 10000,
+        "floor_applied": false,
+        "campaign_id": null,
+        "denial_reason": null
+      },
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_monthly",
+        "original_amount_fen": 3000,
+        "final_amount_fen": 900,
+        "price_floor_fen": 900,
+        "applied_price_multiplier_basis_points": 3000,
+        "floor_applied": false,
+        "campaign_id": "camp_internal_beta_30off",
+        "denial_reason": null
+      },
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_monthly",
+        "original_amount_fen": 3000,
+        "final_amount_fen": 900,
+        "price_floor_fen": 900,
+        "applied_price_multiplier_basis_points": 3000,
+        "floor_applied": false,
+        "campaign_id": "camp_internal_beta_30off",
+        "denial_reason": null
+      },
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_annual",
+        "original_amount_fen": 28800,
+        "final_amount_fen": 28800,
+        "price_floor_fen": 8640,
+        "applied_price_multiplier_basis_points": 10000,
+        "floor_applied": false,
+        "campaign_id": null,
+        "denial_reason": null
+      },
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_annual",
+        "original_amount_fen": 28800,
+        "final_amount_fen": 8640,
+        "price_floor_fen": 8640,
+        "applied_price_multiplier_basis_points": 3000,
+        "floor_applied": false,
+        "campaign_id": "camp_internal_beta_30off",
+        "denial_reason": null
+      },
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_annual",
+        "original_amount_fen": 28800,
+        "final_amount_fen": 8640,
+        "price_floor_fen": 8640,
+        "applied_price_multiplier_basis_points": 3000,
+        "floor_applied": false,
+        "campaign_id": "camp_internal_beta_30off",
+        "denial_reason": null
+      }
+    ]
+  },
+  "experimentAssign": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "installation_id": "inst_s17_reader",
+      "experiment_id": "exp_campaign_landing_copy_v1",
+      "experiment_key": "campaign_landing_copy_v1",
+      "assignment_version": 1,
+      "bucket_key": "discount_focus",
+      "assignment_source": "synthetic_fixture",
+      "cache_ttl_seconds": 3600
+    }
+  },
+  "discoveryCatalog": {
+    "items": [
+      {
+        "article_id": "art_s17_campaign_offer",
+        "article_key": "campaign_offer_20260317",
+        "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+        "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。",
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "tags": [
+          "ai",
+          "productivity"
+        ],
+        "available_modes": [
+          "quick_30s"
+        ],
+        "available_audiences": [
+          "general"
+        ],
+        "updated_at": "2026-03-17T09:57:00+08:00",
+        "publish_batch_id": null,
+        "update_type": null,
+        "update_priority": null,
+        "change_summary": null,
+        "notify_level": null,
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:57:00+08:00",
+        "available_until": null,
+        "primary_reading_mode": "quick_30s",
+        "primary_audience": "general"
+      }
+    ]
+  },
+  "followCatalog": {
+    "publications": [
+      {
+        "publication_id": "pub_world_brief",
+        "publication_key": "world_brief",
+        "display_name": "World Brief",
+        "description": "Synthetic global affairs briefs for Stage X smoke inputs."
+      },
+      {
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "display_name": "AI Digest",
+        "description": "Synthetic AI product and policy summaries for runtime tests."
+      },
+      {
+        "publication_id": "pub_market_watch",
+        "publication_key": "market_watch",
+        "display_name": "Market Watch",
+        "description": "Synthetic economy and market coverage for pricing and feed smoke."
+      }
+    ],
+    "tags": [
+      {
+        "tag_key": "economy",
+        "display_name": "economy"
+      },
+      {
+        "tag_key": "ai",
+        "display_name": "ai"
+      },
+      {
+        "tag_key": "policy",
+        "display_name": "policy"
+      },
+      {
+        "tag_key": "market",
+        "display_name": "market"
+      },
+      {
+        "tag_key": "productivity",
+        "display_name": "productivity"
+      }
+    ]
+  },
+  "publishBatches": {
+    "items": []
+  },
+  "userFollows": {
+    "items": []
+  },
+  "notificationPrefs": {
+    "response": null
+  },
+  "notificationInbox": {
+    "items": [],
+    "inbox_last_seen_at": null
+  },
+  "userContentState": {
+    "items": [],
+    "last_seen_publish_batch": null
+  },
+  "notificationDeliveries": {
+    "items": []
+  },
+  "stageG": {
+    "commercialOffer": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "available_plans": [
+          {
+            "pricing_plan_id": "plan_demo_monthly",
+            "plan_key": "monthly_standard",
+            "display_name": "Monthly Standard",
+            "billing_cycle": "monthly",
+            "original_amount_fen": 3000,
+            "display_amount_fen": 900,
+            "price_floor_fen": 900,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          },
+          {
+            "pricing_plan_id": "plan_demo_annual",
+            "plan_key": "annual_standard",
+            "display_name": "Annual Standard",
+            "billing_cycle": "annual",
+            "original_amount_fen": 28800,
+            "display_amount_fen": 8640,
+            "price_floor_fen": 8640,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          }
+        ],
+        "active_campaign_adjustment": {
+          "campaign_id": "camp_internal_beta_30off",
+          "campaign_key": "internal_beta_30off",
+          "price_multiplier_basis_points": 3000,
+          "headline": "活动页展示 3 折预览，但仍不创建真实订单"
+        },
+        "experiment_offer_hint": {
+          "experiment_id": "exp_campaign_landing_copy_v1",
+          "bucket_key": "discount_focus",
+          "copy_variant": "discount_focus"
+        },
+        "promo_input_capability": {
+          "enabled": true,
+          "preview_only": true
+        },
+        "floor_guard_explanation": "活动展示价仅为预览，真实结算仍遵守 floor guard。",
+        "quota_reason": "QUOTA_AVAILABLE",
+        "entitlement_reason": "CAMPAIGN_LANDING_PREVIEW",
+        "audience_context_hint": "campaign landing from discovery"
+      }
+    },
+    "quotaStatus": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "free_quota_total": 0,
+        "free_quota_used": 0,
+        "quota_remaining": 0,
+        "paywall_triggered": false,
+        "reset_at": null,
+        "reset_timezone": "Asia/Shanghai",
+        "quota_reason": null,
+        "reset_hint": null
+      }
+    },
+    "promoPreview": {
+      "default_plan_id": null,
+      "responses": []
+    },
+    "referralSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "invite_code": null,
+        "share_preview": "",
+        "inviter_summary": "",
+        "invitee_summary": "",
+        "reward_rule_summary": []
+      }
+    },
+    "rewardSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "ledger_preview": [],
+        "vip_days_total": 0,
+        "active_vip_days": 0,
+        "status_summary": "none"
+      }
+    },
+    "campaignLanding": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "campaign_id": "camp_internal_beta_30off",
+        "campaign_key": "internal_beta_30off",
+        "title": "内部测试活动预览",
+        "subtitle": "展示折扣、适用条件与 CTA 占位，不触发真实投放",
+        "discount_label": "3 折预览",
+        "eligibility_summary": [
+          "仅限本地 Stage G synthetic runtime",
+          "需遵守价格地板规则",
+          "真实支付与真实投放均未接入"
+        ],
+        "cta_primary": "立即查看优惠",
+        "cta_secondary": "复制活动码占位"
+      }
+    },
+    "profileBenefits": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "subscription_status": "free",
+        "entitlement_status": "inactive",
+        "entitlement_badge": "Free Reader",
+        "grace_like_summary": null,
+        "lifecycle_projection": [],
+        "quota": {
+          "remaining": 0,
+          "total": 0,
+          "reason": null
+        },
+        "saved_count": 0,
+        "inbox_unread_count": 0,
+        "reward_summary": {
+          "vip_days_total": 0,
+          "active_rewards": 0
+        },
+        "benefit_summary": []
+      }
+    }
+  }
+}

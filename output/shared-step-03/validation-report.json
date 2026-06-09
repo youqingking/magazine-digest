@@ -1,0 +1,1263 @@
+{
+  "timestamp": "2026-03-24T12:26:36.278Z",
+  "status": "ok",
+  "step": "shared-step-03",
+  "checked_step02_files": 11,
+  "checked_step03_docs": 8,
+  "checked_packages": 3,
+  "checks": [
+    {
+      "name": "exists:docs/SHARED_CANONICAL_MODELS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SHARED_ENUMS_AND_KEYS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SHARED_PACKAGE_APIS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SHARED_MODEL_EXAMPLES.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SHARED_CHANGE_POLICY.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SHARED_MIGRATION_WAVES.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/STAGE_SHARED_STEP02_DECISIONS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/STEP_02_ACCEPTANCE.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:packages/attention-core-contracts/src/index.js",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/index.js",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:packages/attention-core-harness/src/index.js",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_LAYER.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_MODELS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_ENUMS_AND_KEYS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_PROMOTION_RULES.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_EXAMPLES.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/SOURCE_FAMILY_COMPATIBILITY.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/STAGE_SHARED_STEP03_DECISIONS.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "exists:docs/STEP_03_ACCEPTANCE.md",
+      "ok": true,
+      "detail": "missing required file"
+    },
+    {
+      "name": "step02-unchanged",
+      "ok": true,
+      "detail": "no Step 02 files changed"
+    },
+    {
+      "name": "layering:shared-core-unchanged",
+      "ok": true,
+      "detail": "layer doc missing unchanged rule"
+    },
+    {
+      "name": "layering:three-layers",
+      "ok": true,
+      "detail": "three-layer boundary missing"
+    },
+    {
+      "name": "family:transcript_first_longform:layer",
+      "ok": true,
+      "detail": "missing family transcript_first_longform in layer doc"
+    },
+    {
+      "name": "family:transcript_first_longform:models",
+      "ok": true,
+      "detail": "missing family transcript_first_longform in models doc"
+    },
+    {
+      "name": "family:transcript_first_longform:enums",
+      "ok": true,
+      "detail": "missing family transcript_first_longform in enums doc"
+    },
+    {
+      "name": "family:official_structured_sources:layer",
+      "ok": true,
+      "detail": "missing family official_structured_sources in layer doc"
+    },
+    {
+      "name": "family:official_structured_sources:models",
+      "ok": true,
+      "detail": "missing family official_structured_sources in models doc"
+    },
+    {
+      "name": "family:official_structured_sources:enums",
+      "ok": true,
+      "detail": "missing family official_structured_sources in enums doc"
+    },
+    {
+      "name": "family:knowledge_community_qa:layer",
+      "ok": true,
+      "detail": "missing family knowledge_community_qa in layer doc"
+    },
+    {
+      "name": "family:knowledge_community_qa:models",
+      "ok": true,
+      "detail": "missing family knowledge_community_qa in models doc"
+    },
+    {
+      "name": "family:knowledge_community_qa:enums",
+      "ok": true,
+      "detail": "missing family knowledge_community_qa in enums doc"
+    },
+    {
+      "name": "family:open_social_expert_stream:layer",
+      "ok": true,
+      "detail": "missing family open_social_expert_stream in layer doc"
+    },
+    {
+      "name": "family:open_social_expert_stream:models",
+      "ok": true,
+      "detail": "missing family open_social_expert_stream in models doc"
+    },
+    {
+      "name": "family:open_social_expert_stream:enums",
+      "ok": true,
+      "detail": "missing family open_social_expert_stream in enums doc"
+    },
+    {
+      "name": "family:visual_inspiration_curated_asset:layer",
+      "ok": true,
+      "detail": "missing family visual_inspiration_curated_asset in layer doc"
+    },
+    {
+      "name": "family:visual_inspiration_curated_asset:models",
+      "ok": true,
+      "detail": "missing family visual_inspiration_curated_asset in models doc"
+    },
+    {
+      "name": "family:visual_inspiration_curated_asset:enums",
+      "ok": true,
+      "detail": "missing family visual_inspiration_curated_asset in enums doc"
+    },
+    {
+      "name": "rules:adapter-to-family",
+      "ok": true,
+      "detail": "adapter -> family rule missing"
+    },
+    {
+      "name": "rules:family-to-shared",
+      "ok": true,
+      "detail": "family -> shared rule missing"
+    },
+    {
+      "name": "rules:counterexamples",
+      "ok": true,
+      "detail": "counterexamples missing"
+    },
+    {
+      "name": "examples:podcast",
+      "ok": true,
+      "detail": "podcast transcript example missing"
+    },
+    {
+      "name": "examples:official",
+      "ok": true,
+      "detail": "official structured source example missing"
+    },
+    {
+      "name": "examples:qa",
+      "ok": true,
+      "detail": "Q&A example missing"
+    },
+    {
+      "name": "examples:social",
+      "ok": true,
+      "detail": "open social example missing"
+    },
+    {
+      "name": "examples:visual",
+      "ok": true,
+      "detail": "visual inspiration example missing"
+    },
+    {
+      "name": "compatibility:magazine",
+      "ok": true,
+      "detail": "magazine compatibility missing"
+    },
+    {
+      "name": "compatibility:youtube",
+      "ok": true,
+      "detail": "YouTube compatibility missing"
+    },
+    {
+      "name": "compatibility:retrofit",
+      "ok": true,
+      "detail": "retro-fit guidance missing"
+    },
+    {
+      "name": "decisions:checkpoint",
+      "ok": true,
+      "detail": "pre-step checkpoint missing"
+    },
+    {
+      "name": "decisions:shared-core",
+      "ok": true,
+      "detail": "shared-core unchanged decision missing"
+    },
+    {
+      "name": "acceptance:shared-core",
+      "ok": true,
+      "detail": "acceptance missing shared-core unchanged"
+    },
+    {
+      "name": "acceptance:validator",
+      "ok": true,
+      "detail": "acceptance missing validator commands"
+    },
+    {
+      "name": "exists:packages/attention-family-contracts/package.json",
+      "ok": true,
+      "detail": "missing package.json"
+    },
+    {
+      "name": "exists:packages/attention-family-contracts/README.md",
+      "ok": true,
+      "detail": "missing README.md"
+    },
+    {
+      "name": "exists:packages/attention-family-contracts/src/index.js",
+      "ok": true,
+      "detail": "missing src/index.js"
+    },
+    {
+      "name": "package-name:attention-family-contracts",
+      "ok": true,
+      "detail": "expected attention-family-contracts"
+    },
+    {
+      "name": "package-exports:attention-family-contracts",
+      "ok": true,
+      "detail": "missing export map"
+    },
+    {
+      "name": "readme-public-api:attention-family-contracts",
+      "ok": true,
+      "detail": "README missing Public API section"
+    },
+    {
+      "name": "readme-boundary:attention-family-contracts",
+      "ok": true,
+      "detail": "README missing Does Not Include section"
+    },
+    {
+      "name": "doc-package-mention:attention-family-contracts",
+      "ok": true,
+      "detail": "package missing from family docs"
+    },
+    {
+      "name": "module-packageName:attention-family-contracts",
+      "ok": true,
+      "detail": "module packageName mismatch"
+    },
+    {
+      "name": "module-publicApi:attention-family-contracts",
+      "ok": true,
+      "detail": "missing publicApi"
+    },
+    {
+      "name": "module-boundary:attention-family-contracts",
+      "ok": true,
+      "detail": "missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-contracts:packageBoundary",
+      "ok": true,
+      "detail": "missing export packageBoundary"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:packageBoundary",
+      "ok": true,
+      "detail": "README missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-contracts:familyNames",
+      "ok": true,
+      "detail": "missing export familyNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:familyNames",
+      "ok": true,
+      "detail": "README missing familyNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:layeringRuleNames",
+      "ok": true,
+      "detail": "missing export layeringRuleNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:layeringRuleNames",
+      "ok": true,
+      "detail": "README missing layeringRuleNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:familyModelNames",
+      "ok": true,
+      "detail": "missing export familyModelNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:familyModelNames",
+      "ok": true,
+      "detail": "README missing familyModelNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:familyEnumNames",
+      "ok": true,
+      "detail": "missing export familyEnumNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:familyEnumNames",
+      "ok": true,
+      "detail": "README missing familyEnumNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:familyKeyNames",
+      "ok": true,
+      "detail": "missing export familyKeyNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:familyKeyNames",
+      "ok": true,
+      "detail": "README missing familyKeyNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:promotionRuleNames",
+      "ok": true,
+      "detail": "missing export promotionRuleNames"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:promotionRuleNames",
+      "ok": true,
+      "detail": "README missing promotionRuleNames"
+    },
+    {
+      "name": "module-export:attention-family-contracts:compatibilityGuardrails",
+      "ok": true,
+      "detail": "missing export compatibilityGuardrails"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:compatibilityGuardrails",
+      "ok": true,
+      "detail": "README missing compatibilityGuardrails"
+    },
+    {
+      "name": "module-export:attention-family-contracts:publicApi",
+      "ok": true,
+      "detail": "missing export publicApi"
+    },
+    {
+      "name": "readme-export:attention-family-contracts:publicApi",
+      "ok": true,
+      "detail": "README missing publicApi"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyNames:transcript_first_longform",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_first_longform"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyNames:official_structured_sources",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term official_structured_sources"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyNames:knowledge_community_qa",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term knowledge_community_qa"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyNames:open_social_expert_stream",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term open_social_expert_stream"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyNames:visual_inspiration_curated_asset",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term visual_inspiration_curated_asset"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:layeringRuleNames:shared_core_unchanged",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term shared_core_unchanged"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:layeringRuleNames:family_between_core_and_adapter",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_between_core_and_adapter"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:layeringRuleNames:adapter_keeps_source_native_logic",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term adapter_keeps_source_native_logic"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:layeringRuleNames:family_promotes_before_shared",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_promotes_before_shared"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:TranscriptDocumentRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term TranscriptDocumentRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:TranscriptSegment",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term TranscriptSegment"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:SpeakerTurn",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term SpeakerTurn"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:TimestampRange",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term TimestampRange"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:TranscriptAvailabilitySnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term TranscriptAvailabilitySnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:StructuredRecordRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term StructuredRecordRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:RecordPartyRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term RecordPartyRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:RecordRevisionRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term RecordRevisionRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:RecordDeltaSummary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term RecordDeltaSummary"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:StructuredEffectiveWindow",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term StructuredEffectiveWindow"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:QaThreadRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term QaThreadRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:QaAnswerSummary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term QaAnswerSummary"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:AcceptedAnswerRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term AcceptedAnswerRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:QaRankingSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term QaRankingSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:QaModerationSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term QaModerationSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:SocialPostRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term SocialPostRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:ReplyTreeSummary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term ReplyTreeSummary"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:ReshareEdge",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term ReshareEdge"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:WatchlistMembershipSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term WatchlistMembershipSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:SocialFreshnessSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term SocialFreshnessSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:CuratedAssetRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term CuratedAssetRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:CollectionMembershipRef",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term CollectionMembershipRef"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:AttributionSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term AttributionSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:LicenseSnapshot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term LicenseSnapshot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyModelNames:AssetArrangementSlot",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term AssetArrangementSlot"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:source_family_name",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term source_family_name"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:transcript_status",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_status"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:transcript_completeness_state",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_completeness_state"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:clip_anchor_type",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term clip_anchor_type"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:record_kind",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term record_kind"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:record_status",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term record_status"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:revision_kind",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term revision_kind"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:party_role",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term party_role"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:thread_status",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term thread_status"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:acceptance_state",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term acceptance_state"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:moderation_state",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term moderation_state"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:qa_sort_mode",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term qa_sort_mode"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:reshare_type",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term reshare_type"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:freshness_state",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term freshness_state"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:watch_reason",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term watch_reason"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:asset_kind",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term asset_kind"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:license_class",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term license_class"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyEnumNames:arrangement_role",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term arrangement_role"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:source_family_item_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term source_family_item_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:transcript_document_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_document_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:segment_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term segment_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:speaker_ref",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term speaker_ref"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:record_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term record_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:revision_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term revision_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:delta_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term delta_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:party_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term party_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:qa_thread_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term qa_thread_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:qa_answer_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term qa_answer_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:accepted_answer_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term accepted_answer_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:social_post_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term social_post_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:reply_tree_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term reply_tree_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:watchlist_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term watchlist_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:asset_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term asset_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:collection_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term collection_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:familyKeyNames:license_id",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term license_id"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:promotionRuleNames:adapter_to_family_requires_two_sources",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term adapter_to_family_requires_two_sources"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:promotionRuleNames:family_to_shared_requires_cross_family_proof",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_shared_requires_cross_family_proof"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:promotionRuleNames:single_source_terms_stay_in_adapter",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term single_source_terms_stay_in_adapter"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:promotionRuleNames:family_terms_must_not_rewrite_shared_core",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_terms_must_not_rewrite_shared_core"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:compatibilityGuardrails:magazine_stays_shared_plus_adapter",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term magazine_stays_shared_plus_adapter"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:compatibilityGuardrails:youtube_stays_shared_plus_adapter",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term youtube_stays_shared_plus_adapter"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:compatibilityGuardrails:transcript_sidecars_may_use_family",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_sidecars_may_use_family"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:compatibilityGuardrails:issue_and_playback_semantics_do_not_retrofit",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term issue_and_playback_semantics_do_not_retrofit"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:packageBoundary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term packageBoundary"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:familyNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:layeringRuleNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term layeringRuleNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:familyModelNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyModelNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:familyEnumNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyEnumNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:familyKeyNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyKeyNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:promotionRuleNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term promotionRuleNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-contracts:publicApi:compatibilityGuardrails",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term compatibilityGuardrails"
+    },
+    {
+      "name": "exists:packages/attention-family-runtime/package.json",
+      "ok": true,
+      "detail": "missing package.json"
+    },
+    {
+      "name": "exists:packages/attention-family-runtime/README.md",
+      "ok": true,
+      "detail": "missing README.md"
+    },
+    {
+      "name": "exists:packages/attention-family-runtime/src/index.js",
+      "ok": true,
+      "detail": "missing src/index.js"
+    },
+    {
+      "name": "package-name:attention-family-runtime",
+      "ok": true,
+      "detail": "expected attention-family-runtime"
+    },
+    {
+      "name": "package-exports:attention-family-runtime",
+      "ok": true,
+      "detail": "missing export map"
+    },
+    {
+      "name": "readme-public-api:attention-family-runtime",
+      "ok": true,
+      "detail": "README missing Public API section"
+    },
+    {
+      "name": "readme-boundary:attention-family-runtime",
+      "ok": true,
+      "detail": "README missing Does Not Include section"
+    },
+    {
+      "name": "doc-package-mention:attention-family-runtime",
+      "ok": true,
+      "detail": "package missing from family docs"
+    },
+    {
+      "name": "module-packageName:attention-family-runtime",
+      "ok": true,
+      "detail": "module packageName mismatch"
+    },
+    {
+      "name": "module-publicApi:attention-family-runtime",
+      "ok": true,
+      "detail": "missing publicApi"
+    },
+    {
+      "name": "module-boundary:attention-family-runtime",
+      "ok": true,
+      "detail": "missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-runtime:packageBoundary",
+      "ok": true,
+      "detail": "missing export packageBoundary"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:packageBoundary",
+      "ok": true,
+      "detail": "README missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-runtime:familyRegistryNames",
+      "ok": true,
+      "detail": "missing export familyRegistryNames"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:familyRegistryNames",
+      "ok": true,
+      "detail": "README missing familyRegistryNames"
+    },
+    {
+      "name": "module-export:attention-family-runtime:familyProjectionNames",
+      "ok": true,
+      "detail": "missing export familyProjectionNames"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:familyProjectionNames",
+      "ok": true,
+      "detail": "README missing familyProjectionNames"
+    },
+    {
+      "name": "module-export:attention-family-runtime:familySeamNames",
+      "ok": true,
+      "detail": "missing export familySeamNames"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:familySeamNames",
+      "ok": true,
+      "detail": "README missing familySeamNames"
+    },
+    {
+      "name": "module-export:attention-family-runtime:adapterBridgeNames",
+      "ok": true,
+      "detail": "missing export adapterBridgeNames"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:adapterBridgeNames",
+      "ok": true,
+      "detail": "README missing adapterBridgeNames"
+    },
+    {
+      "name": "module-export:attention-family-runtime:publicApi",
+      "ok": true,
+      "detail": "missing export publicApi"
+    },
+    {
+      "name": "readme-export:attention-family-runtime:publicApi",
+      "ok": true,
+      "detail": "README missing publicApi"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyRegistryNames:family_contract_registry",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_contract_registry"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyRegistryNames:family_projection_registry",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_projection_registry"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyRegistryNames:family_adapter_registry",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_adapter_registry"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyProjectionNames:family_to_content_ref_projection",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_content_ref_projection"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyProjectionNames:family_to_content_list_projection",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_content_list_projection"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyProjectionNames:family_to_content_detail_projection",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_content_detail_projection"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familyProjectionNames:family_to_follow_target_projection",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_follow_target_projection"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familySeamNames:transcript_family_projection_seam",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term transcript_family_projection_seam"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familySeamNames:structured_record_projection_seam",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term structured_record_projection_seam"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familySeamNames:qa_family_projection_seam",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term qa_family_projection_seam"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familySeamNames:social_family_projection_seam",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term social_family_projection_seam"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:familySeamNames:curated_asset_projection_seam",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term curated_asset_projection_seam"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:adapterBridgeNames:adapter_to_family_contract_bridge",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term adapter_to_family_contract_bridge"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:adapterBridgeNames:family_to_shared_projection_bridge",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_to_shared_projection_bridge"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:adapterBridgeNames:family_compatibility_guard",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_compatibility_guard"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:publicApi:packageBoundary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term packageBoundary"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:publicApi:familyRegistryNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyRegistryNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:publicApi:familyProjectionNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyProjectionNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:publicApi:familySeamNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familySeamNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-runtime:publicApi:adapterBridgeNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term adapterBridgeNames"
+    },
+    {
+      "name": "exists:packages/attention-family-harness/package.json",
+      "ok": true,
+      "detail": "missing package.json"
+    },
+    {
+      "name": "exists:packages/attention-family-harness/README.md",
+      "ok": true,
+      "detail": "missing README.md"
+    },
+    {
+      "name": "exists:packages/attention-family-harness/src/index.js",
+      "ok": true,
+      "detail": "missing src/index.js"
+    },
+    {
+      "name": "package-name:attention-family-harness",
+      "ok": true,
+      "detail": "expected attention-family-harness"
+    },
+    {
+      "name": "package-exports:attention-family-harness",
+      "ok": true,
+      "detail": "missing export map"
+    },
+    {
+      "name": "readme-public-api:attention-family-harness",
+      "ok": true,
+      "detail": "README missing Public API section"
+    },
+    {
+      "name": "readme-boundary:attention-family-harness",
+      "ok": true,
+      "detail": "README missing Does Not Include section"
+    },
+    {
+      "name": "doc-package-mention:attention-family-harness",
+      "ok": true,
+      "detail": "package missing from family docs"
+    },
+    {
+      "name": "module-packageName:attention-family-harness",
+      "ok": true,
+      "detail": "module packageName mismatch"
+    },
+    {
+      "name": "module-publicApi:attention-family-harness",
+      "ok": true,
+      "detail": "missing publicApi"
+    },
+    {
+      "name": "module-boundary:attention-family-harness",
+      "ok": true,
+      "detail": "missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-harness:packageBoundary",
+      "ok": true,
+      "detail": "missing export packageBoundary"
+    },
+    {
+      "name": "readme-export:attention-family-harness:packageBoundary",
+      "ok": true,
+      "detail": "README missing packageBoundary"
+    },
+    {
+      "name": "module-export:attention-family-harness:validationEntryNames",
+      "ok": true,
+      "detail": "missing export validationEntryNames"
+    },
+    {
+      "name": "readme-export:attention-family-harness:validationEntryNames",
+      "ok": true,
+      "detail": "README missing validationEntryNames"
+    },
+    {
+      "name": "module-export:attention-family-harness:reportShapeNames",
+      "ok": true,
+      "detail": "missing export reportShapeNames"
+    },
+    {
+      "name": "readme-export:attention-family-harness:reportShapeNames",
+      "ok": true,
+      "detail": "README missing reportShapeNames"
+    },
+    {
+      "name": "module-export:attention-family-harness:familyConsistencyRuleNames",
+      "ok": true,
+      "detail": "missing export familyConsistencyRuleNames"
+    },
+    {
+      "name": "readme-export:attention-family-harness:familyConsistencyRuleNames",
+      "ok": true,
+      "detail": "README missing familyConsistencyRuleNames"
+    },
+    {
+      "name": "module-export:attention-family-harness:publicApi",
+      "ok": true,
+      "detail": "missing export publicApi"
+    },
+    {
+      "name": "readme-export:attention-family-harness:publicApi",
+      "ok": true,
+      "detail": "README missing publicApi"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:validationEntryNames:validate_shared_step_03",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term validate_shared_step_03"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:validationEntryNames:validate_source_family_docs",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term validate_source_family_docs"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:validationEntryNames:validate_source_family_package_surfaces",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term validate_source_family_package_surfaces"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:reportShapeNames:family_validation_report",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_validation_report"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:reportShapeNames:family_package_surface_report",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_package_surface_report"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:reportShapeNames:family_compatibility_report",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_compatibility_report"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:familyConsistencyRuleNames:shared_core_must_remain_unchanged",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term shared_core_must_remain_unchanged"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:familyConsistencyRuleNames:family_names_must_be_frozen",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term family_names_must_be_frozen"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:familyConsistencyRuleNames:examples_must_cover_all_families",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term examples_must_cover_all_families"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:familyConsistencyRuleNames:packages_must_match_docs",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term packages_must_match_docs"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:publicApi:packageBoundary",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term packageBoundary"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:publicApi:validationEntryNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term validationEntryNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:publicApi:reportShapeNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term reportShapeNames"
+    },
+    {
+      "name": "clean-family-name:attention-family-harness:publicApi:familyConsistencyRuleNames",
+      "ok": true,
+      "detail": "family package polluted by domain-specific shared term familyConsistencyRuleNames"
+    },
+    {
+      "name": "cross-doc:family-names",
+      "ok": true,
+      "detail": "family package names diverge from docs"
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "packages": [
+    {
+      "name": "attention-family-contracts",
+      "public_api_count": 8,
+      "depends_on": [
+        "attention-core-contracts"
+      ]
+    },
+    {
+      "name": "attention-family-runtime",
+      "public_api_count": 5,
+      "depends_on": [
+        "attention-core-contracts",
+        "attention-family-contracts"
+      ]
+    },
+    {
+      "name": "attention-family-harness",
+      "public_api_count": 4,
+      "depends_on": [
+        "attention-core-contracts",
+        "attention-family-contracts",
+        "attention-family-runtime"
+      ]
+    }
+  ]
+}

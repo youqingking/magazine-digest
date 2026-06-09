@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-03-23T12:17:52.392Z",
+  "schema_version": "stage-obs1-v1",
+  "taxonomy": [
+    {
+      "error_code": "OBS1_REMOTE_CHANNEL_FETCH_FAILED",
+      "severity": "error",
+      "actionability": "operator_attention",
+      "description": "remote-like channel manifest or release bundle could not be fetched",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_REMOTE_FALLBACK_APPLIED",
+      "severity": "warning",
+      "actionability": "operator_attention",
+      "description": "remote-like runtime read fell back to local channel head or current mirror",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_RUNTIME_SOURCE_INVALID",
+      "severity": "error",
+      "actionability": "release_or_runtime_attention",
+      "description": "runtime source mode or target cannot be resolved",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_SCENARIO_MISSING",
+      "severity": "error",
+      "actionability": "release_blocking",
+      "description": "scenario pointer or scenario resolution target is missing",
+      "recent_count": 2
+    },
+    {
+      "error_code": "OBS1_SCENARIO_BUNDLE_MISSING",
+      "severity": "error",
+      "actionability": "release_blocking",
+      "description": "scenario exists but bundle is not readable",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_CHANNEL_MANIFEST_INVALID",
+      "severity": "error",
+      "actionability": "release_blocking",
+      "description": "channel head is unreadable or points to an invalid release",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_RELEASE_MANIFEST_INVALID",
+      "severity": "error",
+      "actionability": "release_blocking",
+      "description": "release artifact manifest is missing or invalid",
+      "recent_count": 1
+    },
+    {
+      "error_code": "OBS1_CONTENT_LOAD_FAILED",
+      "severity": "error",
+      "actionability": "operator_attention",
+      "description": "feed/search/detail content path failed and no healthy response was produced",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_ARTICLE_PAYLOAD_INCOMPLETE",
+      "severity": "error",
+      "actionability": "operator_attention",
+      "description": "detail payload is readable but missing required fields for rendering",
+      "recent_count": 0
+    },
+    {
+      "error_code": "OBS1_WARNING_BUDGET_EXCEEDED",
+      "severity": "warning",
+      "actionability": "operator_attention",
+      "description": "accepted warnings exceeded the configured budget or unregistered warnings appeared",
+      "recent_count": 2
+    },
+    {
+      "error_code": "OBS1_PUBLISH_FAILED",
+      "severity": "error",
+      "actionability": "operator_attention",
+      "description": "publish action failed or was rejected during apply",
+      "recent_count": 4
+    },
+    {
+      "error_code": "OBS1_ROLLBACK_FAILED",
+      "severity": "critical",
+      "actionability": "release_blocking",
+      "description": "rollback could not restore a known good target",
+      "recent_count": 0
+    }
+  ],
+  "unknown_error_codes": []
+}

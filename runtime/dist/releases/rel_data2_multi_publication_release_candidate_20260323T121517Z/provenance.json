@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-03-23T12:15:17.172Z",
+  "operator_action": "build_release_artifact",
+  "release_id": "rel_data2_multi_publication_release_candidate_20260323T121517Z",
+  "source_scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "current_scenario_id": "data2_multi_publication_release_candidate",
+  "gate_result": "warning",
+  "promotion_decision": "promotable",
+  "commit_tag_context": {
+    "branch": "codex/rel2-remote-runtime-distribution-bridge-v1",
+    "commit_sha": "fd0b65c023af47a445ac09e4551c1ee7bd9e9eca",
+    "short_sha": "fd0b65c",
+    "tags_at_head": []
+  }
+}

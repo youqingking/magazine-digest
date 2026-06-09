@@ -1,0 +1,26 @@
+{
+  "expected_variant_selection": {
+    "art_s11_city_grid_general_quick_30s": "var_s11_city_grid_general_quick_r1",
+    "art_s11_model_notebook_general_quick_30s": "var_s11_model_notebook_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "non_blocking"
+  },
+  "expected_sync_behavior": {
+    "publish_batch_id_present": true,
+    "new_and_updated_are_distinct": true
+  },
+  "expected_cache_behavior": {
+    "feed_cacheable": true,
+    "batch_summary_cacheable": true
+  },
+  "expected_event_signals": ["article_impression", "bookmark_add"],
+  "notes": ["today_new and publish batch summary should both be derivable from the same local runtime bundle."]
+}

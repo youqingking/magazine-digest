@@ -1,0 +1,66 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:45.243Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_bf03b1a3-86c6-4e99-a2d9-f912d7f0733e",
+    "event_type": "crud_article_override_delete",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T04:43:45.240Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "input": {
+        "publication_id": "the_atlantic",
+        "issue_label": "012026",
+        "article_id": "art_the_atlantic_012026_006"
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "promotable"
+        },
+        {
+          "action": "refresh_metadata_quality_reports",
+          "status": "ok",
+          "metadata_quality_count": 4,
+          "warning_issue_count": 4,
+          "override_entry_count": 10
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collection": "device_installations",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "installation_id", "platform", "first_seen_at", "last_seen_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "installation_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "device_hash": { "type": "string" },
+    "device_fingerprint": { "type": "string" },
+    "platform": { "type": "string", "enum": ["android", "ios", "web", "miniapp"] },
+    "app_version": { "type": "string" },
+    "first_seen_at": { "type": "string", "format": "date-time" },
+    "last_seen_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_installation", "fields": ["product_key", "installation_id"], "unique": true },
+    { "name": "idx_device_hash", "fields": ["product_key", "device_hash", "last_seen_at"] }
+  ]
+}

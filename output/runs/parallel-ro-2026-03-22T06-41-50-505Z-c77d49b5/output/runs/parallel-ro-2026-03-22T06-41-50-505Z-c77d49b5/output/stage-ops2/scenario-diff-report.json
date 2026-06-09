@@ -1,0 +1,1864 @@
+{
+  "generated_at": "2026-03-22T06:41:52.039Z",
+  "candidate_scenario_id": "data2_multi_publication_release_candidate",
+  "mode": "candidate_context",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data1a_readers_digest_12112025",
+  "current_scenario_id": "data1a_readers_digest_12112025",
+  "comparisons": [
+    {
+      "generated_at": "2026-03-22T06:41:51.722Z",
+      "from_scenario_id": "data1a_readers_digest_12112025",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "current",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "override_count_changed",
+          "from": 0,
+          "to": 9
+        }
+      ],
+      "info": [
+        {
+          "code": "publication_removed",
+          "items": [
+            "readers_digest"
+          ]
+        },
+        {
+          "code": "issue_removed",
+          "items": [
+            "readers_digest__12112025"
+          ]
+        },
+        {
+          "code": "article_removed",
+          "count": 15,
+          "items": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ]
+        },
+        {
+          "code": "parser_profile_removed",
+          "items": [
+            "readers_digest_v1"
+          ]
+        },
+        {
+          "code": "publication_added",
+          "items": [
+            "barrons",
+            "the_atlantic"
+          ]
+        },
+        {
+          "code": "issue_added",
+          "items": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ]
+        },
+        {
+          "code": "article_added",
+          "count": 27,
+          "items": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ]
+        },
+        {
+          "code": "parser_profile_added",
+          "items": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ]
+        },
+        {
+          "code": "build_label_changed",
+          "from": "readers_digest_12112025",
+          "to": "data2_multi_publication_release_candidate"
+        },
+        {
+          "code": "publish_state_changed",
+          "from": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          },
+          "to": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      ],
+      "counts": {
+        "publication_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "issue_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "article_count": {
+          "from": 15,
+          "to": 27,
+          "delta": 12
+        },
+        "overrides_count": {
+          "from": 0,
+          "to": 9,
+          "delta": 9
+        },
+        "unresolved_warning_count": {
+          "from": 0,
+          "to": 0,
+          "delta": 0
+        }
+      },
+      "inventory": {
+        "publications_added": [
+          "barrons",
+          "the_atlantic"
+        ],
+        "publications_removed": [
+          "readers_digest"
+        ],
+        "issues_added": [
+          "barrons__09022026",
+          "the_atlantic__012026"
+        ],
+        "issues_removed": [
+          "readers_digest__12112025"
+        ],
+        "article_ids_added": [
+          "art_barrons_09022026_001",
+          "art_barrons_09022026_002",
+          "art_barrons_09022026_003",
+          "art_barrons_09022026_004",
+          "art_barrons_09022026_005",
+          "art_barrons_09022026_006",
+          "art_barrons_09022026_007",
+          "art_barrons_09022026_008",
+          "art_barrons_09022026_009",
+          "art_barrons_09022026_010",
+          "art_barrons_09022026_011",
+          "art_barrons_09022026_012",
+          "art_barrons_09022026_013",
+          "art_barrons_09022026_014",
+          "art_barrons_09022026_015",
+          "art_barrons_09022026_016",
+          "art_barrons_09022026_017",
+          "art_the_atlantic_012026_001",
+          "art_the_atlantic_012026_002",
+          "art_the_atlantic_012026_003",
+          "art_the_atlantic_012026_004",
+          "art_the_atlantic_012026_005",
+          "art_the_atlantic_012026_006",
+          "art_the_atlantic_012026_007",
+          "art_the_atlantic_012026_008",
+          "art_the_atlantic_012026_009",
+          "art_the_atlantic_012026_010"
+        ],
+        "article_ids_removed": [
+          "art_rd_12112025_001",
+          "art_rd_12112025_002",
+          "art_rd_12112025_003",
+          "art_rd_12112025_004",
+          "art_rd_12112025_005",
+          "art_rd_12112025_006",
+          "art_rd_12112025_007",
+          "art_rd_12112025_008",
+          "art_rd_12112025_009",
+          "art_rd_12112025_010",
+          "art_rd_12112025_011",
+          "art_rd_12112025_012",
+          "art_rd_12112025_013",
+          "art_rd_12112025_014",
+          "art_rd_12112025_015"
+        ]
+      },
+      "parser_profiles": {
+        "from": [
+          "readers_digest_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "added": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "removed": [
+          "readers_digest_v1"
+        ]
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 30,
+            "general": 30,
+            "adult": 30
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 54,
+            "general": 54,
+            "adult": 54
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 0,
+            "to": 4,
+            "delta": 4
+          }
+        },
+        "unresolved_counts_delta": {}
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 15,
+          "overrides_count": 0,
+          "warnings_count": 0,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 27,
+          "overrides_count": 9,
+          "warnings_count": 4,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 1
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": true,
+          "to": false
+        },
+        "current_published": {
+          "from": true,
+          "to": false
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "current",
+          "exists": true,
+          "scenario_id": "data1a_readers_digest_12112025",
+          "scenario_type": "real_content",
+          "source_kind": "real_content_pilot",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+          "build_label": "readers_digest_12112025",
+          "product_key": "demo_cn_content",
+          "publication_count": 1,
+          "issue_count": 1,
+          "article_count": 15,
+          "publication_list": [
+            "readers_digest"
+          ],
+          "issue_list": [
+            "readers_digest__12112025"
+          ],
+          "article_ids": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ],
+          "parser_profiles": [
+            "readers_digest_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 30,
+              "general": 30,
+              "adult": 30
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 15,
+            "overrides_count": 0,
+            "warnings_count": 0,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0
+          },
+          "warning_summary": {
+            "import_counts": {},
+            "unresolved_counts": {},
+            "issue_breakdown": [],
+            "import_total": 0,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 0,
+            "by_issue": {
+              "readers_digest__12112025": 0
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 2,
+          "issue_count": 2,
+          "article_count": 27,
+          "publication_list": [
+            "barrons",
+            "the_atlantic"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 54,
+              "general": 54,
+              "adult": 54
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 27,
+            "overrides_count": 9,
+            "warnings_count": 4,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 1
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4
+            },
+            "unresolved_counts": {},
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              }
+            ],
+            "import_total": 4,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 9,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "the_atlantic__012026": 9
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      }
+    },
+    {
+      "generated_at": "2026-03-22T06:41:51.880Z",
+      "from_scenario_id": "data1a_readers_digest_12112025",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "selected",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "override_count_changed",
+          "from": 0,
+          "to": 9
+        }
+      ],
+      "info": [
+        {
+          "code": "publication_removed",
+          "items": [
+            "readers_digest"
+          ]
+        },
+        {
+          "code": "issue_removed",
+          "items": [
+            "readers_digest__12112025"
+          ]
+        },
+        {
+          "code": "article_removed",
+          "count": 15,
+          "items": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ]
+        },
+        {
+          "code": "parser_profile_removed",
+          "items": [
+            "readers_digest_v1"
+          ]
+        },
+        {
+          "code": "publication_added",
+          "items": [
+            "barrons",
+            "the_atlantic"
+          ]
+        },
+        {
+          "code": "issue_added",
+          "items": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ]
+        },
+        {
+          "code": "article_added",
+          "count": 27,
+          "items": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ]
+        },
+        {
+          "code": "parser_profile_added",
+          "items": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ]
+        },
+        {
+          "code": "build_label_changed",
+          "from": "readers_digest_12112025",
+          "to": "data2_multi_publication_release_candidate"
+        },
+        {
+          "code": "publish_state_changed",
+          "from": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          },
+          "to": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      ],
+      "counts": {
+        "publication_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "issue_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "article_count": {
+          "from": 15,
+          "to": 27,
+          "delta": 12
+        },
+        "overrides_count": {
+          "from": 0,
+          "to": 9,
+          "delta": 9
+        },
+        "unresolved_warning_count": {
+          "from": 0,
+          "to": 0,
+          "delta": 0
+        }
+      },
+      "inventory": {
+        "publications_added": [
+          "barrons",
+          "the_atlantic"
+        ],
+        "publications_removed": [
+          "readers_digest"
+        ],
+        "issues_added": [
+          "barrons__09022026",
+          "the_atlantic__012026"
+        ],
+        "issues_removed": [
+          "readers_digest__12112025"
+        ],
+        "article_ids_added": [
+          "art_barrons_09022026_001",
+          "art_barrons_09022026_002",
+          "art_barrons_09022026_003",
+          "art_barrons_09022026_004",
+          "art_barrons_09022026_005",
+          "art_barrons_09022026_006",
+          "art_barrons_09022026_007",
+          "art_barrons_09022026_008",
+          "art_barrons_09022026_009",
+          "art_barrons_09022026_010",
+          "art_barrons_09022026_011",
+          "art_barrons_09022026_012",
+          "art_barrons_09022026_013",
+          "art_barrons_09022026_014",
+          "art_barrons_09022026_015",
+          "art_barrons_09022026_016",
+          "art_barrons_09022026_017",
+          "art_the_atlantic_012026_001",
+          "art_the_atlantic_012026_002",
+          "art_the_atlantic_012026_003",
+          "art_the_atlantic_012026_004",
+          "art_the_atlantic_012026_005",
+          "art_the_atlantic_012026_006",
+          "art_the_atlantic_012026_007",
+          "art_the_atlantic_012026_008",
+          "art_the_atlantic_012026_009",
+          "art_the_atlantic_012026_010"
+        ],
+        "article_ids_removed": [
+          "art_rd_12112025_001",
+          "art_rd_12112025_002",
+          "art_rd_12112025_003",
+          "art_rd_12112025_004",
+          "art_rd_12112025_005",
+          "art_rd_12112025_006",
+          "art_rd_12112025_007",
+          "art_rd_12112025_008",
+          "art_rd_12112025_009",
+          "art_rd_12112025_010",
+          "art_rd_12112025_011",
+          "art_rd_12112025_012",
+          "art_rd_12112025_013",
+          "art_rd_12112025_014",
+          "art_rd_12112025_015"
+        ]
+      },
+      "parser_profiles": {
+        "from": [
+          "readers_digest_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "added": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "removed": [
+          "readers_digest_v1"
+        ]
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 30,
+            "general": 30,
+            "adult": 30
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 54,
+            "general": 54,
+            "adult": 54
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 0,
+            "to": 4,
+            "delta": 4
+          }
+        },
+        "unresolved_counts_delta": {}
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 15,
+          "overrides_count": 0,
+          "warnings_count": 0,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 27,
+          "overrides_count": 9,
+          "warnings_count": 4,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 1
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": true,
+          "to": false
+        },
+        "current_published": {
+          "from": true,
+          "to": false
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "selected",
+          "exists": true,
+          "scenario_id": "data1a_readers_digest_12112025",
+          "scenario_type": "real_content",
+          "source_kind": "real_content_pilot",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+          "build_label": "readers_digest_12112025",
+          "product_key": "demo_cn_content",
+          "publication_count": 1,
+          "issue_count": 1,
+          "article_count": 15,
+          "publication_list": [
+            "readers_digest"
+          ],
+          "issue_list": [
+            "readers_digest__12112025"
+          ],
+          "article_ids": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ],
+          "parser_profiles": [
+            "readers_digest_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 30,
+              "general": 30,
+              "adult": 30
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 15,
+            "overrides_count": 0,
+            "warnings_count": 0,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0
+          },
+          "warning_summary": {
+            "import_counts": {},
+            "unresolved_counts": {},
+            "issue_breakdown": [],
+            "import_total": 0,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 0,
+            "by_issue": {
+              "readers_digest__12112025": 0
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 2,
+          "issue_count": 2,
+          "article_count": 27,
+          "publication_list": [
+            "barrons",
+            "the_atlantic"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 54,
+              "general": 54,
+              "adult": 54
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 27,
+            "overrides_count": 9,
+            "warnings_count": 4,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 1
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4
+            },
+            "unresolved_counts": {},
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              }
+            ],
+            "import_total": 4,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 9,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "the_atlantic__012026": 9
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      }
+    },
+    {
+      "generated_at": "2026-03-22T06:41:52.038Z",
+      "from_scenario_id": "data1a_readers_digest_12112025",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "baseline",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "override_count_changed",
+          "from": 0,
+          "to": 9
+        }
+      ],
+      "info": [
+        {
+          "code": "publication_removed",
+          "items": [
+            "readers_digest"
+          ]
+        },
+        {
+          "code": "issue_removed",
+          "items": [
+            "readers_digest__12112025"
+          ]
+        },
+        {
+          "code": "article_removed",
+          "count": 15,
+          "items": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ]
+        },
+        {
+          "code": "parser_profile_removed",
+          "items": [
+            "readers_digest_v1"
+          ]
+        },
+        {
+          "code": "publication_added",
+          "items": [
+            "barrons",
+            "the_atlantic"
+          ]
+        },
+        {
+          "code": "issue_added",
+          "items": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ]
+        },
+        {
+          "code": "article_added",
+          "count": 27,
+          "items": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ]
+        },
+        {
+          "code": "parser_profile_added",
+          "items": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ]
+        },
+        {
+          "code": "build_label_changed",
+          "from": "readers_digest_12112025",
+          "to": "data2_multi_publication_release_candidate"
+        },
+        {
+          "code": "publish_state_changed",
+          "from": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          },
+          "to": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      ],
+      "counts": {
+        "publication_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "issue_count": {
+          "from": 1,
+          "to": 2,
+          "delta": 1
+        },
+        "article_count": {
+          "from": 15,
+          "to": 27,
+          "delta": 12
+        },
+        "overrides_count": {
+          "from": 0,
+          "to": 9,
+          "delta": 9
+        },
+        "unresolved_warning_count": {
+          "from": 0,
+          "to": 0,
+          "delta": 0
+        }
+      },
+      "inventory": {
+        "publications_added": [
+          "barrons",
+          "the_atlantic"
+        ],
+        "publications_removed": [
+          "readers_digest"
+        ],
+        "issues_added": [
+          "barrons__09022026",
+          "the_atlantic__012026"
+        ],
+        "issues_removed": [
+          "readers_digest__12112025"
+        ],
+        "article_ids_added": [
+          "art_barrons_09022026_001",
+          "art_barrons_09022026_002",
+          "art_barrons_09022026_003",
+          "art_barrons_09022026_004",
+          "art_barrons_09022026_005",
+          "art_barrons_09022026_006",
+          "art_barrons_09022026_007",
+          "art_barrons_09022026_008",
+          "art_barrons_09022026_009",
+          "art_barrons_09022026_010",
+          "art_barrons_09022026_011",
+          "art_barrons_09022026_012",
+          "art_barrons_09022026_013",
+          "art_barrons_09022026_014",
+          "art_barrons_09022026_015",
+          "art_barrons_09022026_016",
+          "art_barrons_09022026_017",
+          "art_the_atlantic_012026_001",
+          "art_the_atlantic_012026_002",
+          "art_the_atlantic_012026_003",
+          "art_the_atlantic_012026_004",
+          "art_the_atlantic_012026_005",
+          "art_the_atlantic_012026_006",
+          "art_the_atlantic_012026_007",
+          "art_the_atlantic_012026_008",
+          "art_the_atlantic_012026_009",
+          "art_the_atlantic_012026_010"
+        ],
+        "article_ids_removed": [
+          "art_rd_12112025_001",
+          "art_rd_12112025_002",
+          "art_rd_12112025_003",
+          "art_rd_12112025_004",
+          "art_rd_12112025_005",
+          "art_rd_12112025_006",
+          "art_rd_12112025_007",
+          "art_rd_12112025_008",
+          "art_rd_12112025_009",
+          "art_rd_12112025_010",
+          "art_rd_12112025_011",
+          "art_rd_12112025_012",
+          "art_rd_12112025_013",
+          "art_rd_12112025_014",
+          "art_rd_12112025_015"
+        ]
+      },
+      "parser_profiles": {
+        "from": [
+          "readers_digest_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "added": [
+          "barrons_release_v1",
+          "the_atlantic_release_v1"
+        ],
+        "removed": [
+          "readers_digest_v1"
+        ]
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 30,
+            "general": 30,
+            "adult": 30
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 54,
+            "general": 54,
+            "adult": 54
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 0,
+            "to": 4,
+            "delta": 4
+          }
+        },
+        "unresolved_counts_delta": {}
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 15,
+          "overrides_count": 0,
+          "warnings_count": 0,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 27,
+          "overrides_count": 9,
+          "warnings_count": 4,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 1
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": true,
+          "to": false
+        },
+        "current_published": {
+          "from": true,
+          "to": false
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "baseline",
+          "exists": true,
+          "scenario_id": "data1a_readers_digest_12112025",
+          "scenario_type": "real_content",
+          "source_kind": "real_content_pilot",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+          "build_label": "readers_digest_12112025",
+          "product_key": "demo_cn_content",
+          "publication_count": 1,
+          "issue_count": 1,
+          "article_count": 15,
+          "publication_list": [
+            "readers_digest"
+          ],
+          "issue_list": [
+            "readers_digest__12112025"
+          ],
+          "article_ids": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ],
+          "parser_profiles": [
+            "readers_digest_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 30,
+              "general": 30,
+              "adult": 30
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 15,
+            "overrides_count": 0,
+            "warnings_count": 0,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0
+          },
+          "warning_summary": {
+            "import_counts": {},
+            "unresolved_counts": {},
+            "issue_breakdown": [],
+            "import_total": 0,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 0,
+            "by_issue": {
+              "readers_digest__12112025": 0
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-22T06:41:44.760Z",
+            "selected_at": "2026-03-22T06:41:44.760Z",
+            "published_at": "2026-03-22T06:41:44.760Z"
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 2,
+          "issue_count": 2,
+          "article_count": 27,
+          "publication_list": [
+            "barrons",
+            "the_atlantic"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "the_atlantic__012026"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "the_atlantic_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 54,
+              "general": 54,
+              "adult": 54
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 27,
+            "overrides_count": 9,
+            "warnings_count": 4,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 1
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4
+            },
+            "unresolved_counts": {},
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              }
+            ],
+            "import_total": 4,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 9,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "the_atlantic__012026": 9
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        }
+      }
+    }
+  ]
+}

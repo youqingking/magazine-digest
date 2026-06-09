@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>来源 - 效率阅读</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#341100",
+                        "primary": "#005bbf",
+                        "surface-bright": "#f7f9fc",
+                        "on-surface-variant": "#414754",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdbcb",
+                        "surface-container": "#eceef1",
+                        "background": "#f7f9fc",
+                        "on-tertiary-fixed-variant": "#783100",
+                        "on-secondary-fixed": "#001a41",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "primary-container": "#1a73e8",
+                        "outline-variant": "#c1c6d6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d8e2ff",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface": "#f7f9fc",
+                        "on-tertiary-container": "#0e0200",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-primary-container": "#ffffff",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#e6e8eb",
+                        "primary-fixed-dim": "#adc7ff",
+                        "surface-variant": "#e0e3e6",
+                        "surface-dim": "#d8dadd",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#004493",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2d3133",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#b2c9fe",
+                        "on-secondary-container": "#3d5481",
+                        "surface-tint": "#005bc0",
+                        "secondary": "#475e8c",
+                        "tertiary": "#9e4300",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#adc7ff",
+                        "primary-fixed": "#d8e2ff",
+                        "outline": "#727785",
+                        "tertiary-container": "#c55500"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f7f9fc;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 backdrop-blur-xl transition-colors duration-200">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#f2f4f7]/50 rounded-full transition-colors active:opacity-70">
+<span class="material-symbols-outlined text-slate-900" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-slate-900 text-lg">来源</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-[#f2f4f7]/50 rounded-full transition-colors active:opacity-70">
+<span class="material-symbols-outlined text-slate-900" data-icon="search">search</span>
+</button>
+</div>
+</div>
+<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-[#e0e3e6] to-transparent opacity-50"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Search Bar Section -->
+<section class="mb-12">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none h-14 pl-12 pr-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] focus:ring-2 focus:ring-primary/20 placeholder:text-outline transition-all text-on-surface" placeholder="搜索来源、媒体、杂志" type="text"/>
+</div>
+</section>
+<!-- 最近查看 (Recent View) -->
+<section class="mb-14">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-sm font-bold tracking-widest text-outline uppercase">最近查看</h2>
+<div class="h-[1px] flex-grow ml-4 bg-surface-container-highest"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Media Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex flex-col items-center text-center transition-all hover:shadow-md group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-3 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" data-icon="newspaper">newspaper</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">财新网</span>
+<span class="text-[11px] text-outline mt-1">深度政经</span>
+</div>
+<!-- Media Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex flex-col items-center text-center transition-all hover:shadow-md group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-3 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" data-icon="account_balance">account_balance</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">哈佛商业评论</span>
+<span class="text-[11px] text-outline mt-1">管理前沿</span>
+</div>
+<!-- Media Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex flex-col items-center text-center transition-all hover:shadow-md group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-3 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" data-icon="biotech">biotech</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">麻省理工科技评论</span>
+<span class="text-[11px] text-outline mt-1">新兴技术</span>
+</div>
+<!-- Media Card 4 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex flex-col items-center text-center transition-all hover:shadow-md group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-3 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" data-icon="language">language</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">经济学人</span>
+<span class="text-[11px] text-outline mt-1">全球视野</span>
+</div>
+</div>
+</section>
+<!-- 全部来源列表 (All Sources List) -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-sm font-bold tracking-widest text-outline uppercase">全部来源</h2>
+<div class="h-[1px] flex-grow ml-4 bg-surface-container-highest"></div>
+</div>
+<div class="space-y-4">
+<!-- Group A -->
+<div class="flex flex-col gap-1">
+<div class="px-4 py-2 text-xs font-bold text-primary opacity-60">商业与金融</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">华尔街日报</h3>
+<p class="text-xs text-outline">商业新闻与分析</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="h-[1px] mx-4 bg-surface-container-low"></div>
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">彭博商业周刊</h3>
+<p class="text-xs text-outline">全球金融市场</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Group B -->
+<div class="flex flex-col gap-1">
+<div class="px-4 py-2 text-xs font-bold text-primary opacity-60">科技与科学</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">Wired 连线</h3>
+<p class="text-xs text-outline">未来科技趋势</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="h-[1px] mx-4 bg-surface-container-low"></div>
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="science">science</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">Nature 自然</h3>
+<p class="text-xs text-outline">科学前沿研究</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Group C -->
+<div class="flex flex-col gap-1">
+<div class="px-4 py-2 text-xs font-bold text-primary opacity-60">社会与人文</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">纽约客</h3>
+<p class="text-xs text-outline">文化评论与长篇</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="h-[1px] mx-4 bg-surface-container-low"></div>
+<div class="flex items-center p-4 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-base font-medium text-on-surface">三联生活周刊</h3>
+<p class="text-xs text-outline">人文记录与深度</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/90 backdrop-blur-2xl border-t border-[#f2f4f7] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] h-20 px-8 pb-safe flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-slate-400 transition-all hover:text-[#1a73e8] active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#005bbf] scale-105 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="subscriptions" style="font-variation-settings: 'FILL' 1;">subscriptions</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">来源</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 transition-all hover:text-[#1a73e8] active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">我的</span>
+</a>
+</nav>
+</body></html>

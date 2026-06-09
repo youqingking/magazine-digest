@@ -1,0 +1,61 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T07:54:55.319Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_42216d9f-354e-4f41-8e0f-d6137528a4e3",
+    "event_type": "crud_scenario_membership_include_issue",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T07:54:55.317Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "scenario_preview",
+    "runtime_source_id": "data1c_three_release_mixed_preview",
+    "scenario_id": "data1c_three_release_mixed_preview",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1c_three_release_mixed_preview",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "scenario_membership",
+      "entity_id": "readers_digest__12112025",
+      "action": "include_issue",
+      "input": {
+        "issue_id": "readers_digest__12112025",
+        "classification": "accepted_best_effort",
+        "note": "Accepted best-effort ordinal gaps are allowed in the four-publication DATA2 candidate.",
+        "action_name": "include_issue",
+        "release_candidate_allowed": true
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "hold_warning"
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

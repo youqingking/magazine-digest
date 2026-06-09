@@ -1,0 +1,9 @@
+{
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "runtime_fixture_role": "selected_scenario_mirror",
+  "source_kind": "real_content_release_candidate",
+  "notes": [
+    "current runtime is a generated mirror of the selected named scenario",
+    "edit scenario bundles and registries instead of mutating current directly"
+  ]
+}

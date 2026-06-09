@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-03-23T04:39:30.596Z",
+  "status": "passed",
+  "items": [
+    {
+      "issue_id": "readers_digest__12112025",
+      "publication_id": "readers_digest",
+      "issue_label": "12112025",
+      "article_count": 15,
+      "blockers": [],
+      "warnings": [
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_001"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_002"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_003"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_004"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_005"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_006"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_007"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_008"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_009"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_010"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_011"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_012"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_013"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_014"
+        },
+        {
+          "type": "best_effort_ordinal_missing",
+          "article_id": "art_rd_12112025_015"
+        }
+      ],
+      "override_applied_count": 0,
+      "unresolved_warning_count": 0
+    },
+    {
+      "issue_id": "barrons__09022026",
+      "publication_id": "barrons",
+      "issue_label": "09022026",
+      "article_count": 17,
+      "blockers": [],
+      "warnings": [],
+      "override_applied_count": 0,
+      "unresolved_warning_count": 0
+    },
+    {
+      "issue_id": "the_atlantic__012026",
+      "publication_id": "the_atlantic",
+      "issue_label": "012026",
+      "article_count": 10,
+      "blockers": [],
+      "warnings": [],
+      "override_applied_count": 9,
+      "unresolved_warning_count": 0
+    },
+    {
+      "issue_id": "the_economist__20260314",
+      "publication_id": "the_economist",
+      "issue_label": "20260314",
+      "article_count": 51,
+      "blockers": [],
+      "warnings": [],
+      "override_applied_count": 1,
+      "unresolved_warning_count": 2
+    }
+  ],
+  "mixed_scenario_present": true,
+  "mixed_scenario_article_count": 78,
+  "override_composition_checks": {
+    "atlantic_002_override_applied": true,
+    "atlantic_002_effective_warnings": [],
+    "economist_024_section_label": "Asia"
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "prod_demo_cn_content",
+    "product_key": "demo_cn_content",
+    "display_name": "Demo CN Content",
+    "default_language": "zh-CN",
+    "active_status": "active",
+    "branding": { "brand_code": "demo", "market": "cn" },
+    "theme": { "theme_key": "sunrise_news" },
+    "price_policy_ref": "pricing_demo_cn_content_v1",
+    "content_scope": { "publication_keys": ["daily_brief"] },
+    "created_at": "2026-03-16T09:00:00+08:00",
+    "updated_at": "2026-03-16T09:00:00+08:00"
+  }
+]

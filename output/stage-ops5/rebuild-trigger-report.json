@@ -1,0 +1,646 @@
+{
+  "generated_at": "2026-03-23T11:46:30.044Z",
+  "total_follow_up_actions": 107,
+  "items": [
+    {
+      "timestamp": "2026-03-23T11:46:27.465Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "science__20260323",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T11:46:27.465Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "science__20260323",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T11:44:26.315Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "science__20260323",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T11:44:26.315Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "science__20260323",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T07:54:52.981Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T07:54:52.981Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T07:54:52.974Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "readers_digest__12112025",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T07:54:52.974Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "readers_digest__12112025",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:15.178Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:15.178Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:09.242Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:09.242Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:02.992Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:44:02.992Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:57.151Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:57.151Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:57.151Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:57.151Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:51.745Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:51.745Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:51.745Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:51.745Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:45.917Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:45.917Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:45.917Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:45.917Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:40.387Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:40.387Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:40.387Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:34.996Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:34.996Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:34.996Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:28.686Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:28.686Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:28.686Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:26.285Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:23.396Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:20.915Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:18.686Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:15.632Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-23T04:43:13.358Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:23.870Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:23.870Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:21.564Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:21.564Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:19.089Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:19.089Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:16.794Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:16.794Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:16.794Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:16.794Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:14.485Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:14.485Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:14.485Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:14.485Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:12.212Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:12.212Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:12.212Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_taxonomy_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:12.212Z",
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "create",
+      "follow_up_action": "refresh_issue_taxonomy",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:10.005Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:10.005Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:10.005Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "delete",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:07.926Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:07.926Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:07.926Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:05.860Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:05.860Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_metadata_quality_reports",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:05.860Z",
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "create",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:05.305Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:04.757Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:04.204Z",
+      "entity_type": "issue",
+      "entity_id": "ops5_demo_publication__209901",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:03.656Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:03.101Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "edit",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:35:02.554Z",
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "create",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:30.090Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:30.090Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "data2_multi_publication_release_candidate",
+      "action": "rebuild_candidate",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:28.204Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:28.204Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "exclude_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:26.154Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_observability",
+      "status": "ok"
+    },
+    {
+      "timestamp": "2026-03-22T15:30:26.154Z",
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "follow_up_action": "refresh_candidate_outputs",
+      "status": "ok"
+    }
+  ]
+}

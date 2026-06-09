@@ -1,0 +1,70 @@
+{
+  "version": "stage-data3-v1",
+  "sections": [
+    {
+      "key": "markets",
+      "label": "市场",
+      "discovery_bucket": "markets"
+    },
+    {
+      "key": "investing",
+      "label": "投资",
+      "discovery_bucket": "markets"
+    },
+    {
+      "key": "companies",
+      "label": "公司",
+      "discovery_bucket": "business"
+    },
+    {
+      "key": "technology",
+      "label": "科技",
+      "discovery_bucket": "technology"
+    },
+    {
+      "key": "world_dispatch",
+      "label": "国际报道",
+      "discovery_bucket": "international"
+    },
+    {
+      "key": "opinion",
+      "label": "观点",
+      "discovery_bucket": "opinion"
+    },
+    {
+      "key": "culture",
+      "label": "文化评论",
+      "discovery_bucket": "culture"
+    },
+    {
+      "key": "lifestyle",
+      "label": "生活方式",
+      "discovery_bucket": "lifestyle"
+    },
+    {
+      "key": "feature",
+      "label": "特写",
+      "discovery_bucket": "feature"
+    },
+    {
+      "key": "cover_story",
+      "label": "封面故事",
+      "discovery_bucket": "feature"
+    },
+    {
+      "key": "departments",
+      "label": "专栏",
+      "discovery_bucket": "reference"
+    },
+    {
+      "key": "briefing",
+      "label": "简报",
+      "discovery_bucket": "briefing"
+    },
+    {
+      "key": "letters",
+      "label": "读者来信",
+      "discovery_bucket": "reference"
+    }
+  ]
+}

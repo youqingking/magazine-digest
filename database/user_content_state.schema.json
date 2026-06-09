@@ -1,0 +1,32 @@
+{
+  "collection": "user_content_state",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "user_id", "article_id", "reading_state", "bookmark_status", "newness_state", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "article_id": { "type": "string" },
+    "article_variant_id": { "type": "string" },
+    "publish_batch_id": { "type": "string" },
+    "reading_state": { "type": "string", "enum": ["unseen", "in_progress", "completed"] },
+    "bookmark_status": { "type": "string", "enum": ["none", "saved", "removed"] },
+    "newness_state": { "type": "string", "enum": ["new", "seen_in_list", "opened", "consumed"] },
+    "resume_progress_basis_points": { "type": "integer", "minimum": 0, "maximum": 10000 },
+    "resume_anchor": { "type": "string" },
+    "available_until": { "type": "string", "format": "date-time" },
+    "first_seen_at": { "type": "string", "format": "date-time" },
+    "last_opened_at": { "type": "string", "format": "date-time" },
+    "last_completed_at": { "type": "string", "format": "date-time" },
+    "saved_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_user_content_state", "fields": ["product_key", "user_id", "article_id"], "unique": true },
+    { "name": "idx_user_content_resume", "fields": ["product_key", "user_id", "reading_state", "updated_at"] },
+    { "name": "idx_user_content_bookmark", "fields": ["product_key", "user_id", "bookmark_status", "saved_at"] }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "layer": "android_device_smoke",
+  "target_serial": "127.0.0.1:16384",
+  "connected_devices": [
+    "127.0.0.1:16384"
+  ],
+  "detected_packages": [
+    "com.llmag666.test"
+  ],
+  "package_name": "com.llmag666.test",
+  "launch_output": "bash arg: -p\r\n  bash arg: com.llmag666.test\r\n  bash arg: -c\r\n  bash arg: android.intent.category.LAUNCHER\r\n  bash arg: 1\r\nEvents injected: 1\r\n## Network stats: elapsed time=26ms (0ms mobile, 0ms wifi, 26ms not connected)",
+  "collected_log_lines": [
+    "03-19 21:05:18.392  1333  1362 W BroadcastQueue: Skipping deliver [background] BroadcastRecord{83334ab u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{f1bb708 2706 (unknown name)/2000/u-1 remote:964c525}: process gone or crashing",
+    "03-19 21:05:18.398  2733  2733 W m.llmag666.tes: Unexpected CPU variant for X86 using defaults: x86_64",
+    "03-19 21:05:18.398  2733  2733 V libnb   : enter native_bridge2_initialize /data/user/0/com.llmag666.test/code_cache arm64",
+    "03-19 21:05:18.399  2733  2733 E libnb   : The translator implementation library has not been set.",
+    "03-19 21:05:18.403  1333  1399 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.llmag666.test/io.dcloud.PandoraEntry} from uid 2000, pid 2706",
+    "03-19 21:05:18.404  1333  1399 I ActivityTaskManager: [KeepAlive] disabled for com.llmag666.test",
+    "03-19 21:05:18.406  2733  2733 E libnb   : get_callbacks native_handle 0x6a38017f28ef2b4d: 1 libnb:/system/lib64/libhoudini.so",
+    "03-19 21:05:18.406  2733  2733 I libnb   : Found /system/lib64/libhoudini.so version 6",
+    "03-19 21:05:18.406  2733  2733 D HP      : no libmumuhooker.so",
+    "03-19 21:05:18.407  2733  2733 D houdini : [2733] Intel Bridge Technology for Netease internal evaluation only, Copyright(C) Intel Corp. 2012-2025.",
+    "03-19 21:05:18.407  2733  2733 D houdini : [2733] Use permitted only under a valid evaluation software license agreement - all other rights reserved.",
+    "03-19 21:05:18.407  2733  2733 D houdini : [2733] Initialize library(version: 12.0.1_z.Netease_ev4 RELEASE)... successfully.",
+    "03-19 21:05:18.407  2733  2733 W HP      : x_initialize private_dir:/data/user/0/com.llmag666.test/code_cache instruction_set:arm64 getMethodShorty:0x7778dd13c340 ret:1",
+    "03-19 21:05:18.409  2706  2706 I Monkey  : Events injected: 1",
+    "03-19 21:05:18.411  1185  1225 I adbd    : jdwp connection from 2733",
+    "03-19 21:05:18.425  2706  2706 I Monkey  : ## Network stats: elapsed time=24ms (0ms mobile, 0ms wifi, 24ms not connected)",
+    "03-19 21:05:18.426  2733  2733 D ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument",
+    "03-19 21:05:18.427  2706  2706 I app_process: System.exit called, status: 0",
+    "03-19 21:05:18.427  2706  2706 I AndroidRuntime: VM exiting with result code 0.",
+    ""
+  ],
+  "blocking_reason": ""
+}

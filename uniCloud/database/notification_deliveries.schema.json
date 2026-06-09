@@ -1,0 +1,33 @@
+{
+  "collection": "notification_deliveries",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "workflow_fact",
+  "required": ["_id", "product_key", "delivery_key", "campaign_id", "user_id", "delivery_channel", "status", "planned_send_at", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "delivery_key": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "delivery_channel": { "type": "string", "enum": ["inbox", "push", "digest"] },
+    "status": { "type": "string", "enum": ["queued", "suppressed", "sent", "delivered", "opened", "failed", "expired"] },
+    "dedupe_key": { "type": "string" },
+    "publish_batch_id": { "type": "string" },
+    "article_id": { "type": "string" },
+    "notification_inbox_id": { "type": "string" },
+    "provider_message_id": { "type": "string" },
+    "failure_code": { "type": "string" },
+    "planned_send_at": { "type": "string", "format": "date-time" },
+    "sent_at": { "type": "string", "format": "date-time" },
+    "delivered_at": { "type": "string", "format": "date-time" },
+    "opened_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_notification_delivery_key", "fields": ["product_key", "delivery_key"], "unique": true },
+    { "name": "idx_notification_delivery_user", "fields": ["product_key", "user_id", "status", "planned_send_at"] },
+    { "name": "idx_notification_delivery_campaign", "fields": ["product_key", "campaign_id", "delivery_channel", "created_at"] }
+  ]
+}

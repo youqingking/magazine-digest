@@ -1,0 +1,366 @@
+{
+  "version": "stage-rel2-v1",
+  "generated_at": "2026-03-23T12:22:29.477Z",
+  "export_root": "runtime/dist",
+  "channels": [
+    {
+      "channel": "dev",
+      "status": "active",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "source_scenario_id": "data2_multi_publication_release_candidate",
+      "published_at": "2026-03-23T12:17:50.532Z"
+    },
+    {
+      "channel": "staging",
+      "status": "idle",
+      "release_id": null,
+      "source_scenario_id": null,
+      "published_at": null
+    },
+    {
+      "channel": "production",
+      "status": "idle",
+      "release_id": null,
+      "source_scenario_id": null,
+      "published_at": null
+    }
+  ],
+  "releases": [
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T062646Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T062646Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T062646Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T062836Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T062836Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T062836Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T063033Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063033Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063033Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T063126Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063126Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063126Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T063520Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063520Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T063520Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T064608Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064608Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064608Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T064613Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064613Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064613Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T064627Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064627Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T064627Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140453Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140454Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140454Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140454Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140550Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140550Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140550Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140552Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140552Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140552Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140701Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140701Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140701Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140704Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140704Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140704Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140738Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140738Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140738Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140740Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140740Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140740Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140742Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140742Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140742Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140753Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140753Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140753Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T140755Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140755Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140755Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T153417Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153417Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153417Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T153419Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153419Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153419Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T153421Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153421Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153421Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T153441Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153441Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153441Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260322T153443Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153443Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T153443Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043542Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043542Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043542Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043544Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043544Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043544Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043757Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043757Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043757Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043800Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T043800Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044030Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044030Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044030Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044037Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044037Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044037Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044049Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044049Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044049Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044202Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044202Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044202Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044210Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044210Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044210Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044430Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044430Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044430Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044437Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044437Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044437Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044638Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044638Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044638Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044646Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044646Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044646Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044905Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044905Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044905Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044912Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 27,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121517Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 118,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121517Z_2",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 118,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/manifest.json"
+    },
+    {
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "product_key": "demo_cn_content",
+      "article_count": 118,
+      "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+      "manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json"
+    }
+  ]
+}

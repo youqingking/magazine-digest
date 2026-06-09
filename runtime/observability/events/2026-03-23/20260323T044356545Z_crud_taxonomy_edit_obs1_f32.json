@@ -1,0 +1,73 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:56.556Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_f323b975-59c8-4d08-a6a2-2b81b70c31f5",
+    "event_type": "crud_taxonomy_edit",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T04:43:56.545Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "taxonomy",
+      "entity_id": "the_atlantic::OPS5 Smoke Label",
+      "action": "edit",
+      "input": {
+        "publication_id": "the_atlantic",
+        "raw_label": "OPS5 Smoke Label",
+        "canonical_section_key": "culture",
+        "canonical_section_label": "文化评论",
+        "discovery_bucket_key": "culture",
+        "discovery_bucket_label": "文化",
+        "mapping_kind": "publication_specific"
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_issue_taxonomy",
+          "status": "ok",
+          "issue_id": "the_atlantic__012026",
+          "updated_records": 10
+        },
+        {
+          "action": "refresh_taxonomy_reports",
+          "status": "ok"
+        },
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "promotable"
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

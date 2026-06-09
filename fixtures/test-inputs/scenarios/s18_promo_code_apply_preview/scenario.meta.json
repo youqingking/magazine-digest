@@ -1,0 +1,125 @@
+{
+  "scenario_id": "s18_promo_code_apply_preview",
+  "title": "Promo Code Apply Preview",
+  "objective": "Preview promo code outcomes locally without redeeming, granting entitlement, or mutating canonical ledgers.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["market_watch"],
+  "article_ids": ["art_s18_promo_preview"],
+  "covered_risks": ["promo_preview_validity", "promo_floor_guard", "duplicate_or_ineligible_projection"],
+  "intended_stage": ["G"],
+  "depends_on_surfaces": ["promo-preview", "commercial-offer", "quota-status"],
+  "business_flow_aliases": [
+    {
+      "alias_id": "b03_promo_redeem_success",
+      "relationship": "primary_projection"
+    },
+    {
+      "alias_id": "b04_promo_redeem_duplicate_or_ineligible",
+      "relationship": "secondary_projection"
+    }
+  ],
+  "articles": [
+    {
+      "article_id": "art_s18_promo_preview",
+      "article_uid": "syn_article_s18_promo_preview",
+      "article_key": "promo_preview_20260317",
+      "publication_key": "market_watch",
+      "title": "券码预览：有效、无效与地板价保护需要同时可见",
+      "summary": "虚构 promo preview 样本，用于 Stage G paywall 输入框和预览状态基础流程。",
+      "tags": ["market", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T09:18:00+08:00",
+      "updated_at": "2026-03-17T09:58:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": ["stage_g_local_commercial"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s18_reader",
+      "access_state": "denied",
+      "decision_source": "synthetic_promo_preview",
+      "quota_remaining": 0,
+      "entitlement_snapshot": null,
+      "denial_reason": "PAYWALL_PREVIEW_ONLY"
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly", "plan_demo_annual"],
+      "promo_codes": ["BETA30A001", "FLOOR15B015", "INVALID000", "USEDUP999"]
+    },
+    "quota_status": {
+      "free_quota_total": 3,
+      "free_quota_used": 3,
+      "quota_remaining": 0,
+      "paywall_triggered": true,
+      "reset_at": "2026-03-18T00:00:00+08:00",
+      "reset_timezone": "Asia/Shanghai",
+      "quota_reason": "DAILY_FREE_QUOTA_REACHED",
+      "reset_hint": "额度将在上海时区次日零点重置。"
+    },
+    "commercial_offer": {
+      "active_campaign_adjustment": null,
+      "experiment_offer_hint": null,
+      "promo_input_capability": {
+        "enabled": true,
+        "preview_only": true
+      },
+      "floor_guard_explanation": "任何券码都不能穿透 plan 的最低支付金额。",
+      "quota_reason": "DAILY_FREE_QUOTA_REACHED",
+      "entitlement_reason": "FREE_READER",
+      "audience_context_hint": "paywall promo input preview"
+    },
+    "promo_preview": {
+      "default_plan_id": "plan_demo_monthly",
+      "responses": [
+        {
+          "promo_code": "BETA30A001",
+          "pricing_plan_id": "plan_demo_monthly",
+          "status": "valid",
+          "final_amount_fen": 900,
+          "original_amount_fen": 3000,
+          "applied_price_multiplier_basis_points": 3000,
+          "campaign_id": "camp_internal_beta_30off",
+          "floor_applied": false,
+          "message": "有效券码，展示价已更新。"
+        },
+        {
+          "promo_code": "FLOOR15B015",
+          "pricing_plan_id": "plan_demo_monthly",
+          "status": "floor_limited",
+          "final_amount_fen": 900,
+          "original_amount_fen": 3000,
+          "applied_price_multiplier_basis_points": 1500,
+          "campaign_id": "camp_preview_floor_guard",
+          "floor_applied": true,
+          "message": "券码可预览，但最低支付金额保护已生效。"
+        },
+        {
+          "promo_code": "INVALID000",
+          "pricing_plan_id": "plan_demo_monthly",
+          "status": "invalid",
+          "final_amount_fen": 3000,
+          "original_amount_fen": 3000,
+          "applied_price_multiplier_basis_points": 10000,
+          "campaign_id": null,
+          "floor_applied": false,
+          "message": "券码不存在或已失效。"
+        },
+        {
+          "promo_code": "USEDUP999",
+          "pricing_plan_id": "plan_demo_monthly",
+          "status": "not_applicable",
+          "final_amount_fen": 3000,
+          "original_amount_fen": 3000,
+          "applied_price_multiplier_basis_points": 10000,
+          "campaign_id": null,
+          "floor_applied": false,
+          "message": "券码已达上限或当前用户不适用。"
+        }
+      ]
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

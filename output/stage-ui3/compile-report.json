@@ -1,0 +1,21 @@
+﻿{
+    "generated_at":  "2026-03-20T22:09:36.2420599+08:00",
+    "stage":  "UI3.5",
+    "classification":  "compile_readiness_passed_but_real_compile_not_triggered",
+    "compile_readiness_passed":  true,
+    "real_compile_attempted":  false,
+    "compile_success":  false,
+    "project_dir":  "D:\\ws\\Playground\\mobile",
+    "hbuilderx_path":  "D:/HBuilderX/HBuilderX.exe",
+    "launch_project_dir":  "D:/ws/Playground/mobile",
+    "detail_compile_risk":  {
+                                "template_optional_chain_present":  false,
+                                "script_optional_chain_present":  true,
+                                "status":  "template_safe_script_only_optional_chain",
+                                "note":  "No optional chaining remains inside the detail template; optional chaining remains in script/computed code only."
+                            },
+    "notes":  [
+                  "build-mobile now classifies readiness separately from real compile execution.",
+                  "Current result shows shell readiness passed but no trustworthy real compile trigger was recorded."
+              ]
+}

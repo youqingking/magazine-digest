@@ -1,0 +1,147 @@
+{
+  "scenario_id": "s11_new_publish_batch",
+  "title": "New Publish Batch",
+  "objective": "Exercise new publish batch grouping, today_new, and batch summary on local runtime.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["world_brief", "ai_digest"],
+  "article_ids": ["art_s11_city_grid", "art_s11_model_notebook"],
+  "covered_risks": ["publish_batch_grouping", "today_new", "batch_summary", "saved_for_later_section_contract"],
+  "intended_stage": ["F1", "G"],
+  "depends_on_surfaces": ["home-discovery", "publish-batch-summary", "content-resume", "save-for-later"],
+  "articles": [
+    {
+      "article_id": "art_s11_city_grid",
+      "article_uid": "syn_article_s11_city_grid",
+      "article_key": "city_grid_20260317",
+      "publication_key": "world_brief",
+      "title": "应急电网把演练卡片拆成早晚两批",
+      "summary": "world_brief 的新批次内容，用于今日新增和 publish batch 摘要。",
+      "tags": ["policy"],
+      "status": "active",
+      "created_at": "2026-03-17T08:10:00+08:00",
+      "updated_at": "2026-03-17T09:10:00+08:00"
+    },
+    {
+      "article_id": "art_s11_model_notebook",
+      "article_uid": "syn_article_s11_model_notebook",
+      "article_key": "model_notebook_20260317",
+      "publication_key": "ai_digest",
+      "title": "协作模型把晨会记录压成三段式提要",
+      "summary": "ai_digest 的新批次内容，用于 batch 聚合和 discovery home。",
+      "tags": ["ai", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T08:20:00+08:00",
+      "updated_at": "2026-03-17T09:12:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s11_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 4,
+      "entitlement_snapshot": {
+        "grant_source": "stage_f1_fixture",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s11_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    },
+    "publish_batches": [
+      {
+        "_id": "pb_s11_morning_drop",
+        "product_key": "demo_cn_content",
+        "batch_key": "morning_drop_20260317",
+        "batch_type": "new_publish",
+        "title": "今日早间发布",
+        "change_summary": "两篇新内容同时进入首页发现流。",
+        "status": "published",
+        "scheduled_at": "2026-03-17T08:50:00+08:00",
+        "published_at": "2026-03-17T09:00:00+08:00",
+        "available_from": "2026-03-17T09:00:00+08:00",
+        "available_until": "2026-03-20T23:59:59+08:00",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "content_count": 2,
+        "created_at": "2026-03-17T08:30:00+08:00",
+        "updated_at": "2026-03-17T09:00:00+08:00"
+      }
+    ],
+    "user_follows": [],
+    "user_notification_prefs": {
+      "_id": "unp_s11_reader",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "status": "active",
+      "push_enabled": true,
+      "inbox_enabled": true,
+      "digest_enabled": true,
+      "follow_alert_level": "immediate",
+      "breaking_push_override": true,
+      "quiet_hours_enabled": false,
+      "quiet_hours_start_minute": 1320,
+      "quiet_hours_end_minute": 420,
+      "timezone": "Asia/Shanghai",
+      "digest_frequency": "daily",
+      "created_at": "2026-03-17T08:00:00+08:00",
+      "updated_at": "2026-03-17T09:00:00+08:00"
+    },
+    "notification_inbox": [
+      {
+        "_id": "inbox_s11_batch",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "inbox_key": "pb_s11_morning_drop:user_local_stage_e0",
+        "publish_batch_id": "pb_s11_morning_drop",
+        "article_id": "art_s11_city_grid",
+        "source_type": "publish_batch",
+        "source_id": "pb_s11_morning_drop",
+        "title": "今日早间发布已上架",
+        "body_preview": "world_brief 和 ai_digest 各有一篇新内容进入首页。",
+        "change_summary": "2 new items",
+        "action_type": "open_publish_batch",
+        "action_target": "pb_s11_morning_drop",
+        "status": "unread",
+        "priority": "normal",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:00:00+08:00",
+        "created_at": "2026-03-17T09:00:00+08:00",
+        "updated_at": "2026-03-17T09:00:00+08:00"
+      }
+    ],
+    "user_content_state": [
+      {
+        "_id": "ucs_s11_city_grid",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s11_city_grid",
+        "publish_batch_id": "pb_s11_morning_drop",
+        "reading_state": "unseen",
+        "bookmark_status": "none",
+        "newness_state": "new",
+        "resume_progress_basis_points": 0,
+        "first_seen_at": "2026-03-17T09:00:00+08:00",
+        "created_at": "2026-03-17T09:00:00+08:00",
+        "updated_at": "2026-03-17T09:00:00+08:00"
+      }
+    ],
+    "inbox_last_seen_at": "2026-03-17T08:30:00+08:00",
+    "last_seen_publish_batch": "pb_s10_previous"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "version": "stage-test2-v1",
+  "scripts": {
+    "scripts/tests/run-test1.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/run-gate.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true,
+      "notes": "Becomes stateful only when refresh reruns TEST1."
+    },
+    "scripts/ops/compare-scenarios.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/evaluate-promotion.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/promote-scenario.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/rollback-scenario.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/apply-promotion-drill.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/apply-taxonomy-normalization.mjs": {
+      "profile": "stateful_import",
+      "requires_lock": false,
+      "parallel_safe": false
+    },
+    "scripts/ops/report-taxonomy-coverage.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/start-operator-console.mjs": {
+      "profile": "read_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/build-release-artifact.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/publish-channel.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/promote-channel.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/rollback-channel.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/set-runtime-source.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/show-runtime-source.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/crud/publications.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/crud/issues.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/crud/article-overrides.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/crud/taxonomy.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/crud/scenario-membership.mjs": {
+      "profile": "stateful_publish",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/ops/show-channel-state.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/export-runtime-dist.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/show-runtime-dist.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/verify-runtime-dist.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/serve-runtime-dist.mjs": {
+      "profile": "read_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/list-channels.mjs": {
+      "profile": "report_only",
+      "requires_lock": false,
+      "parallel_safe": true
+    },
+    "scripts/ops/hold-state-lock.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/import/import-content-pack.mjs": {
+      "profile": "stateful_import",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-test1.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-ops2.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-data2.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-ops3.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-data3.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-ops4.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-rel1.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-obs1.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-ops5.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    },
+    "scripts/bootstrap/smoke-stage-rel2.mjs": {
+      "profile": "stateful_runtime",
+      "requires_lock": true,
+      "lock_name": "runtime-state",
+      "parallel_safe": false
+    }
+  }
+}

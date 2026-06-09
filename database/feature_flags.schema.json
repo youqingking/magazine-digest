@@ -1,0 +1,22 @@
+{
+  "collection": "feature_flags",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "flag_key", "flag_type", "status", "rollout", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "flag_key": { "type": "string" },
+    "flag_type": { "type": "string", "enum": ["kill_switch", "access_gate", "ui_gate", "ops_gate"] },
+    "status": { "type": "string", "enum": ["enabled", "disabled"] },
+    "rollout": { "type": "object" },
+    "description": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_flag_key", "fields": ["product_key", "flag_key"], "unique": true },
+    { "name": "idx_flag_status", "fields": ["product_key", "status", "flag_type"] }
+  ]
+}

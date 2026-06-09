@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Public+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb691",
+              "tertiary-container": "#c55500",
+              "surface-container-highest": "#e0e3e6",
+              "on-surface-variant": "#414754",
+              "surface-variant": "#e0e3e6",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#1a73e8",
+              "outline": "#727785",
+              "tertiary-fixed": "#ffdbcb",
+              "surface-container-high": "#e6e8eb",
+              "on-primary-container": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f2f4f7",
+              "on-secondary-container": "#3d5481",
+              "surface": "#f7f9fc",
+              "inverse-on-surface": "#eff1f4",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#001a41",
+              "secondary-fixed": "#d8e2ff",
+              "surface-dim": "#d8dadd",
+              "on-secondary-fixed-variant": "#2e4673",
+              "on-secondary-fixed": "#001a41",
+              "surface-container": "#eceef1",
+              "on-primary-fixed-variant": "#004493",
+              "on-tertiary-fixed": "#341100",
+              "surface-bright": "#f7f9fc",
+              "secondary": "#475e8c",
+              "on-tertiary-fixed-variant": "#783100",
+              "inverse-surface": "#2d3133",
+              "error-container": "#ffdad6",
+              "surface-tint": "#005bc0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#0e0200",
+              "inverse-primary": "#adc7ff",
+              "secondary-fixed-dim": "#afc7fb",
+              "outline-variant": "#c1c6d6",
+              "on-background": "#191c1e",
+              "on-surface": "#191c1e",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-container": "#b2c9fe",
+              "on-error": "#ffffff",
+              "tertiary": "#9e4300",
+              "on-primary": "#ffffff",
+              "primary": "#005bbf",
+              "background": "#f7f9fc",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-100 p-2 rounded-full transition-colors active:opacity-70">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="text-xl font-bold text-slate-900 dark:text-slate-50 tracking-wide">付费订阅</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-500" data-icon="help_outline">help_outline</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-screen-md mx-auto">
+<!-- Hero Section -->
+<section class="mb-12 text-center">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-4">为什么值得订阅？</h1>
+<p class="text-on-surface-variant leading-relaxed max-w-lg mx-auto">
+                数字策展人旨在为您构建一个绝对静谧、高效的信息处理环境。订阅后，您将解锁跨平台深度阅读与知识管理的全量权限。
+            </p>
+</section>
+<!-- Bento Grid Benefits -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+<!-- Benefit 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="all_inclusive">all_inclusive</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">全站来源覆盖</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        无缝整合主流媒体与私有 RSS 订阅，打破平台壁垒，实现真正的一站式信息策展。
+                    </p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">双模阅读模式</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        提供 30 秒概览与 3 分钟深读双模，AI 自动提炼核心论点，精准适配碎片化与深度场景。
+                    </p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="cloud_download">cloud_download</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">收藏与离线缓存</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        支持永久收藏内容并自动离线缓存，即使在无网络环境下，您的知识库依然触手可及。
+                    </p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-1">动态更新提醒</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        实时监测订阅源更新，提供静默通知推送。不错过任何关键信息，不干扰任何心流时刻。
+                    </p>
+</div>
+</div>
+</section>
+<!-- Subscription Plans -->
+<section class="space-y-4 mb-16">
+<h2 class="text-sm font-bold uppercase tracking-widest text-outline mb-6 text-center">选择订阅方案</h2>
+<!-- Annual Plan -->
+<div class="relative bg-surface-container-lowest border-2 border-primary p-6 rounded-xl flex items-center justify-between group cursor-pointer transition-all hover:bg-primary/5">
+<div class="absolute -top-3 left-6 bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">
+                    最受推荐 · 省 35%
+                </div>
+<div class="flex flex-col">
+<span class="text-lg font-bold">年度全能会员</span>
+<span class="text-xs text-on-surface-variant">次年按原价自动续费，可随时取消</span>
+</div>
+<div class="text-right">
+<div class="text-2xl font-black text-primary">¥ 198<span class="text-sm font-normal text-on-surface-variant">/年</span></div>
+<div class="text-xs line-through text-outline">¥ 306</div>
+</div>
+</div>
+<!-- Monthly Plan -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl flex items-center justify-between cursor-pointer hover:border-primary/50 transition-colors">
+<div class="flex flex-col">
+<span class="text-lg font-bold">月度全能会员</span>
+<span class="text-xs text-on-surface-variant">每月灵活订阅，体验全量功能</span>
+</div>
+<div class="text-right">
+<div class="text-2xl font-black">¥ 28<span class="text-sm font-normal text-on-surface-variant">/月</span></div>
+</div>
+</div>
+</section>
+<!-- Payment Actions -->
+<section class="space-y-6">
+<div class="flex flex-col gap-3">
+<button class="h-12 bg-primary text-on-primary font-semibold rounded-lg flex items-center justify-center gap-2 active:opacity-90 transition-all">
+                    立即开启全站通行
+                </button>
+<div class="flex items-center justify-center gap-6 py-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-[12px] font-medium">微信支付</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-[12px] font-medium">支付宝</span>
+</div>
+</div>
+</div>
+<p class="text-[11px] text-center text-outline leading-relaxed px-8">
+                订阅即代表您同意《会员服务协议》与《自动续费协议》。
+                年度计划将在到期前 24 小时自动扣费，您可随时在应用设置或系统订阅中心管理并关闭。
+            </p>
+</section>
+</main>
+<!-- Background Decoration (Subtle Tonal Layers) -->
+<div class="fixed top-0 right-0 -z-10 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-secondary/5 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
+</body></html>

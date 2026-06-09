@@ -1,0 +1,39 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:09.352Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_55e0975c-cc30-4ed3-8177-735b02e774ee",
+    "event_type": "detail_loaded",
+    "event_category": "content_detail",
+    "occurred_at": "2026-03-23T04:43:09.344Z",
+    "severity": "info",
+    "source_surface": "app",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "dev",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": "readers_digest",
+    "issue_id": null,
+    "article_id": "art_rd_12112025_001",
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "smoke": true
+    }
+  }
+}

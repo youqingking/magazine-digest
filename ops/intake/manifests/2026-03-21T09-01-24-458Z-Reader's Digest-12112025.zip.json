@@ -1,0 +1,19 @@
+{
+  "imported_at": "2026-03-21T09:01:24.458Z",
+  "source_pack": "Reader's Digest-12112025.zip",
+  "source_path": "D:\\ws\\Playground\\ops\\intake\\inbox\\Reader's Digest-12112025.zip",
+  "parser_routing": "content_batch",
+  "warnings_summary": [
+    {
+      "publication_id": "readers_digest",
+      "warning_count": 2
+    }
+  ],
+  "generated_issues": [
+    "readers_digest__12112025"
+  ],
+  "generated_scenarios": [
+    "data1a_readers_digest_12112025"
+  ],
+  "archive": null
+}

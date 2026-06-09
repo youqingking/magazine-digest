@@ -1,0 +1,30 @@
+{
+  "version": "stage-data3-v1",
+  "publication_key": "readers_digest",
+  "mappings": [
+    {
+      "raw_label": "封面故事 (Cover Story)",
+      "canonical_section_key": "cover_story",
+      "publication_section_path": "Reader's Digest > Cover Story",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "精选专栏 (Departments)",
+      "canonical_section_key": "departments",
+      "publication_section_path": "Reader's Digest > Departments",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "本期文章 (Articles)",
+      "canonical_section_key": "feature",
+      "publication_section_path": "Reader's Digest > Articles",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "深度阅读 (More Reading)",
+      "canonical_section_key": "feature",
+      "publication_section_path": "Reader's Digest > More Reading",
+      "mapping_kind": "canonical"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+export const generatedResourceRegistry = [
+  {
+    "resource": "products",
+    "track": "generated",
+    "sourceOfTruth": "database/products.schema.json"
+  },
+  {
+    "resource": "publications",
+    "track": "generated",
+    "sourceOfTruth": "database/publications.schema.json"
+  },
+  {
+    "resource": "articles",
+    "track": "generated",
+    "sourceOfTruth": "database/articles.schema.json"
+  },
+  {
+    "resource": "pricing_plans",
+    "track": "generated",
+    "sourceOfTruth": "database/pricing_plans.schema.json"
+  },
+  {
+    "resource": "quota_policies",
+    "track": "generated",
+    "sourceOfTruth": "database/quota_policies.schema.json"
+  },
+  {
+    "resource": "promo_campaigns",
+    "track": "generated",
+    "sourceOfTruth": "database/promo_campaigns.schema.json"
+  },
+  {
+    "resource": "promo_codes",
+    "track": "generated",
+    "sourceOfTruth": "database/promo_codes.schema.json"
+  },
+  {
+    "resource": "referrals",
+    "track": "generated",
+    "sourceOfTruth": "database/referrals.schema.json"
+  },
+  {
+    "resource": "reward_ledger",
+    "track": "generated",
+    "sourceOfTruth": "database/reward_ledger.schema.json"
+  },
+  {
+    "resource": "feature_flags",
+    "track": "generated",
+    "sourceOfTruth": "database/feature_flags.schema.json"
+  },
+  {
+    "resource": "experiments",
+    "track": "generated",
+    "sourceOfTruth": "database/experiments.schema.json"
+  },
+  {
+    "resource": "publish_batches",
+    "track": "generated",
+    "sourceOfTruth": "database/publish_batches.schema.json"
+  },
+  {
+    "resource": "notification_campaigns",
+    "track": "generated",
+    "sourceOfTruth": "database/notification_campaigns.schema.json"
+  },
+  {
+    "resource": "user_notification_prefs",
+    "track": "generated",
+    "sourceOfTruth": "database/user_notification_prefs.schema.json"
+  },
+  {
+    "resource": "notification_inbox",
+    "track": "generated",
+    "sourceOfTruth": "database/notification_inbox.schema.json"
+  },
+  {
+    "resource": "notification_deliveries",
+    "track": "generated",
+    "sourceOfTruth": "database/notification_deliveries.schema.json"
+  },
+  {
+    "resource": "device_installations",
+    "track": "generated",
+    "sourceOfTruth": "database/device_installations.schema.json"
+  },
+  {
+    "resource": "user_follows",
+    "track": "generated",
+    "sourceOfTruth": "database/user_follows.schema.json"
+  },
+  {
+    "resource": "user_content_state",
+    "track": "generated",
+    "sourceOfTruth": "database/user_content_state.schema.json"
+  }
+];

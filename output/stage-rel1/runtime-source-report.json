@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-03-23T12:17:52.289Z",
+  "runtime_source": {
+    "version": "stage-rel1-v1",
+    "updated_at": "2026-03-23T07:58:57.381Z",
+    "mode": "current_mirror",
+    "scenario_id": null,
+    "channel": null,
+    "release_id": null,
+    "remote_base_url": null,
+    "selection_reason": "manual_current_mirror"
+  },
+  "effective_runtime_source": {
+    "version": "stage-rel1-v1",
+    "updated_at": "2026-03-23T07:58:57.381Z",
+    "mode": "current_mirror",
+    "scenario_id": null,
+    "channel": null,
+    "release_id": null,
+    "remote_base_url": null,
+    "selection_reason": "manual_current_mirror"
+  },
+  "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "visible_publications": [
+    "barrons",
+    "readers_digest",
+    "science",
+    "the_atlantic",
+    "the_economist"
+  ],
+  "explanation": [
+    "local-first 开发与真机默认都应先读 current_mirror。",
+    "当前 current_mirror 实际是 data2_multi_publication_release_candidate。",
+    "要看四刊可发布版本，可切到 current_mirror、scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。",
+    "要看三刊对照预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "config_source": "real_content_release_candidate",
+    "timezone": "Asia/Shanghai",
+    "money_unit": "fen",
+    "discount_canonical": "price_multiplier_basis_points",
+    "reward_canonical": "vip_days",
+    "product": {
+      "product_key": "demo_cn_content",
+      "product_id": "prod_demo_cn_content",
+      "display_name": "Demo CN Content",
+      "default_language": "zh-CN",
+      "active_status": "active"
+    },
+    "feature_flags": [
+      "stage_g_local_commercial"
+    ],
+    "experiments": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "scenario_id": "s10_multi_publication_feed",
+  "title": "Multi Publication Feed",
+  "objective": "Cover feed assembly across multiple publications and tags with a minimal three-article pack.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["world_brief", "ai_digest", "market_watch"],
+  "article_ids": ["art_s10_world_lane", "art_s10_ai_shift", "art_s10_market_board"],
+  "covered_risks": ["feed_grouping", "publication_channel_smoke", "tag_filter_smoke"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-sync-delta", "bootstrap-config", "content-detail"],
+  "articles": [
+    {
+      "article_id": "art_s10_world_lane",
+      "article_uid": "syn_article_s10_world_lane",
+      "article_key": "world_lane_20260317",
+      "publication_key": "world_brief",
+      "title": "海上通道演练改成分时进港",
+      "summary": "world_brief 维度的虚构 feed 项。",
+      "tags": ["policy"],
+      "status": "active",
+      "created_at": "2026-03-17T08:15:00+08:00",
+      "updated_at": "2026-03-17T08:50:00+08:00"
+    },
+    {
+      "article_id": "art_s10_ai_shift",
+      "article_uid": "syn_article_s10_ai_shift",
+      "article_key": "ai_shift_20260317",
+      "publication_key": "ai_digest",
+      "title": "协作机器人把换班提醒做成颜色卡",
+      "summary": "ai_digest 维度的虚构 feed 项。",
+      "tags": ["ai", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T08:20:00+08:00",
+      "updated_at": "2026-03-17T08:55:00+08:00"
+    },
+    {
+      "article_id": "art_s10_market_board",
+      "article_uid": "syn_article_s10_market_board",
+      "article_key": "market_board_20260317",
+      "publication_key": "market_watch",
+      "title": "批发板块用新色块提示波动区间",
+      "summary": "market_watch 维度的虚构 feed 项。",
+      "tags": ["economy", "market"],
+      "status": "active",
+      "created_at": "2026-03-17T08:25:00+08:00",
+      "updated_at": "2026-03-17T09:00:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s10_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 3,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s10_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

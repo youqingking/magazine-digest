@@ -1,0 +1,20 @@
+{
+  "exported_at": "2026-03-24T04:11:45.987Z",
+  "canonical_source": "DATA2 multi-publication release candidate",
+  "product_key": "demo_cn_content",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "runtime_now": "2026-03-24T04:11:45.865Z",
+  "source_kind": "real_content_release_candidate",
+  "runtime_fixture_role": "selected_scenario_mirror",
+  "build_label": "data2_multi_publication_release_candidate",
+  "free_quota_limit": 8,
+  "excluded_invalid_record_count": 15,
+  "content_package_gate": {
+    "status": "blocked",
+    "blocked_record_count": 15,
+    "blocker_count": 15
+  },
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "published_to_current_at": "2026-03-24T04:12:36.268Z",
+  "selection_source": "codex_multi_issue_refresh"
+}

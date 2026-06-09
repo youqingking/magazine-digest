@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>搜索 - 效率阅读</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#005bbf",
+                        "primary-container": "#1a73e8",
+                        "surface": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e6e8eb",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#414754",
+                        "outline": "#727785",
+                        "outline-variant": "#c1c6d6",
+                        "secondary": "#475e8c",
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Public Sans"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 no-border bg-gradient-to-b from-[#f2f4f7] to-transparent">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto bg-[#f7f9fc]/80 backdrop-blur-xl">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:bg-[#f2f4f7]/50 p-2 rounded-full transition-colors active:opacity-70 duration-200">menu</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-slate-900 text-lg">效率阅读</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-[#005bbf] hover:bg-[#f2f4f7]/50 p-2 rounded-full transition-colors active:opacity-70 duration-200">search</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Search Input Area -->
+<section class="mb-10">
+<div class="relative flex items-center group">
+<span class="material-symbols-outlined absolute left-4 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-lowest border-none rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] focus:ring-2 focus:ring-primary/20 text-lg placeholder:text-outline/60" placeholder="搜索文章、来源、主题" type="text" value="商业周刊"/>
+</div>
+<!-- Trending Chips -->
+<div class="flex flex-wrap gap-2 mt-4 overflow-x-auto hide-scrollbar">
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant text-sm rounded-full whitespace-nowrap">人工智能</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant text-sm rounded-full whitespace-nowrap">半导体进展</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant text-sm rounded-full whitespace-nowrap">财新周刊</span>
+<span class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant text-sm rounded-full whitespace-nowrap">晚点LatePost</span>
+</div>
+</section>
+<!-- Result Section: Sources -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">来源结果</h2>
+<span class="text-sm text-outline">2个匹配项</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Source Card 1 -->
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+<div class="w-12 h-12 rounded-lg bg-slate-100 overflow-hidden mr-4">
+<img class="w-full h-full object-cover" data-alt="Financial news brand logo in minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3z4yoArW61AJq0HhsDj9l0NFqOk4EAdandGAF5NNRLlDNGV2AdlUKGBdnrqwHrADNlVb-XAuihFOifxNhurvVOqxX5LpCvU00CbM_55CaGLZmF2M8xPr7BhJW4cJeKnhBzcOBBBwbG9JZBN_kzU56X1qcuzccIUb1HIA_R0dTXo1p-dfExGyI6YkAffWL0p4hXnY7YKnZfazlQg9S_qEZlJ09S4aDeqiOYPqsm3rn6qT2JjA396iKTfsXGd8hJiZh9WQcpbhbM_k"/>
+</div>
+<div class="flex-1">
+<div class="font-bold text-on-surface">财新网</div>
+<div class="text-xs text-outline mt-0.5">深度调查与商业评论</div>
+</div>
+</div>
+<!-- Source Card 2 -->
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+<div class="w-12 h-12 rounded-lg bg-slate-100 overflow-hidden mr-4">
+<img class="w-full h-full object-cover" data-alt="Tech publication logo with abstract geometric shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDsQhazHf3KFFeDn3gUUAq_EqIwy-SMwKq5ueYR7lFmY_CkQz8erlUD48E8RQ0N0Yuk5e8dIoG2PRPqH3lEm1rxcEHpPNrIj-mgP33viaQFe22xFx_9giVxPixY7BX2545ttiOTC2-jDaL-z9HYcCPe1hztlFsRwjvw_YLpvepp7L4lqhEeayvKzWkJGZr26qWhuk4V3pCZvT3yMZ7Vlo0mHOf28al3iHVwO82zxlBoJop7IlmTHGhxKSqLvuJvDDO0eCEl4Nlex4"/>
+</div>
+<div class="flex-1">
+<div class="font-bold text-on-surface">晚点LatePost</div>
+<div class="text-xs text-outline mt-0.5">商业世界的真实细节</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Result Section: Articles -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">文章结果</h2>
+<span class="text-sm text-outline">相关度排序</span>
+</div>
+<div class="space-y-6">
+<!-- Article Card 1 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">商业</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-xs text-outline">2小时前</span>
+</div>
+<h3 class="text-lg font-bold leading-snug mb-3 text-on-surface">硅谷新变量：当阅读器开始介入深度内容的分发逻辑</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">
+                                在信息爆炸的时代，如何通过算法与人工策展实现最高效的内容触达。本文深度解析了目前主流阅读工具的筛选算法...
+                            </p>
+<!-- Dual Mode Identifier -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-primary/5 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="text-[12px] font-bold">30秒速览</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="text-[12px] font-bold">3分钟深度</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:block w-32 h-32 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Abstract digital network visualization in blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXDGFcIpc-eaX-L1JkrxPAzRZ_6CfIKkQ6QkrOHOk4NSqM9Y2EaG4e-cTL4y8epPHxdDr3jr3mQZyXq5U2W7N-zR0H7IRJ5_9pvKiRembwTe1SuAmj6IormD9Qf3zvXftwxkaZY9Sb2lsx7_WJgF9gojxjoI1iI9A0STuANgJ67vNtl6MQjF9013xYpPTXQZvw9LVq7ccg-xAb25KLSbK7V7Nme77Rem9qkD_gW5Y8el-hWKrKzTWUXEY9AazxZvmBS7hqUjZ0zTM"/>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer border-l-4 border-primary">
+<div class="flex justify-between items-start gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">晚点独家</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-xs text-outline">昨日</span>
+</div>
+<h3 class="text-lg font-bold leading-snug mb-3 text-on-surface">大模型时代的“慢读”复兴：为什么我们依然需要长文</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">
+                                面对AI生成的碎片化信息，人类的深度思考能力正在经受考验。通过结构化的阅读，重塑逻辑思维的高地...
+                            </p>
+<!-- Dual Mode Identifier -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-primary/5 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="text-[12px] font-bold">30秒速览</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="text-[12px] font-bold">3分钟深度</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">财新</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-xs text-outline">3天前</span>
+</div>
+<h3 class="text-lg font-bold leading-snug mb-3 text-on-surface">全球芯片供应链重构：阵痛与新机遇</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">
+                                随着地缘政治与技术封锁的加剧，全球半导体产业正经历前所未有的格局调整。这对于国内厂商而言既是挑战也是...
+                            </p>
+<!-- Dual Mode Identifier -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-primary/5 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="text-[12px] font-bold">30秒速览</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span class="text-[12px] font-bold">3分钟深度</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:block w-32 h-32 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Macro photo of circuit board electronic components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx_GRA4rnTLwFFG0YcPFkf5yBequG-oxb7Dyy5UKm03PCYPm4DAqoWX3x_3q4dFcaEQhd3bEjbkHsxGH-xpAmXKWjEKsOQoE6dBEhKNJYsCRQX671_VWbOUV-dkVxOkfy_sjzIXbWBMxBXJ1-0iAkhZriUfaDZNjLVuDt6aozLsVn7XAIpsQw8hWYKxdWNGsX3-0M88MfbhRCSlhLcvVlyIyGEb5U_fMDZ7oPZtaHojE6nrBMRtKUm93821Xg4yKAxdIF2Iy7dfno"/>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<button class="w-full mt-10 py-4 border border-outline-variant rounded-xl text-outline text-sm font-medium hover:bg-surface-container-low transition-colors active:opacity-70">
+                查看更多文章结果
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Shell Content) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-8 pb-safe bg-white/90 backdrop-blur-2xl border-t border-[#f2f4f7] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50 rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-400 tap-highlight-transparent active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">首页</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#005bbf] scale-105 transition-transform tap-highlight-transparent active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">subscriptions</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">来源</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 tap-highlight-transparent active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">我的</span>
+</div>
+</nav>
+</body></html>

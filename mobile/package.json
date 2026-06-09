@@ -1,0 +1,8 @@
+{
+  "name": "mobile-shell",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:shell": "powershell -ExecutionPolicy Bypass -File ..\\scripts\\bootstrap\\build-mobile.ps1"
+  }
+}

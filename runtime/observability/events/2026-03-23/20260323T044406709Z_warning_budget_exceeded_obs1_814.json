@@ -1,0 +1,60 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:44:06.718Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_814152f2-2fae-4dba-a831-4a65f8801c82",
+    "event_type": "warning_budget_exceeded",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T04:44:06.709Z",
+    "severity": "warning",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": "OBS1_WARNING_BUDGET_EXCEEDED",
+    "error_message": null,
+    "warning_taxonomy": [
+      "economist_section_context_fallback",
+      "economist_filename_anomaly"
+    ],
+    "accepted_warning": false,
+    "details": {
+      "over_budget_warnings": [],
+      "unregistered_warnings": [
+        {
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_section_context_fallback",
+          "count": 1,
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_filename_anomaly",
+          "count": 1,
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        }
+      ]
+    }
+  }
+}

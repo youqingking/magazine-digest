@@ -1,0 +1,51 @@
+{
+  "version": "stage-data2-v1",
+  "scenario_budgets": {
+    "data1c_three_release_mixed_preview": {
+      "scenario_class": "preview_only",
+      "release_eligible": false,
+      "note": "Mixed preview remains useful for broad coverage and preview comparison, but is not the release target in DATA2."
+    },
+    "data2_multi_publication_release_candidate": {
+      "scenario_class": "release_candidate",
+      "release_eligible": true,
+      "note": "DATA2 release-candidate accepts only issues with zero unresolved warnings and accepted editorial override drift."
+    },
+    "default_preview_only": {
+      "scenario_class": "preview_only",
+      "release_eligible": false
+    },
+    "default_release_candidate": {
+      "scenario_class": "release_candidate",
+      "release_eligible": true
+    }
+  },
+  "issue_budgets": {
+    "readers_digest__12112025": {
+      "classification": "accepted_best_effort",
+      "release_candidate_allowed": true,
+      "note": "Accepted best-effort ordinal gaps are allowed in the four-publication DATA2 candidate."
+    },
+    "barrons__09022026": {
+      "classification": "release_ready",
+      "release_candidate_allowed": true,
+      "note": "No unresolved warning budget required."
+    },
+    "the_atlantic__012026": {
+      "classification": "release_ready_with_editorial_overrides",
+      "release_candidate_allowed": true,
+      "override_budget": 9,
+      "note": "Allowed only with zero unresolved warnings."
+    },
+    "the_economist__20260314": {
+      "classification": "accepted_release_candidate_anomaly",
+      "release_candidate_allowed": true,
+      "note": "Known single-article anomaly is accepted and tracked in the four-publication DATA2 candidate."
+    },
+    "science__20260323": {
+      "classification": "release_ready",
+      "release_candidate_allowed": true,
+      "note": "included_via_zip_intake"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "publication_name": "Reader's Digest",
+  "publication_key": "readers_digest",
+  "issue_label": "12112025",
+  "source_zip": "Reader's Digest-12112025.zip",
+  "imported_article_count": 15,
+  "skipped_assets": [
+    "Reader's Digest-12112025_adult.md"
+  ],
+  "parser_profile": "readers_digest_v1",
+  "parse_rule_version": "data1b-readers-digest-v1",
+  "runtime_test_rule": {
+    "free_quota_limit": 8,
+    "source": "derived_from_runtime_test_rule"
+  },
+  "status": "active",
+  "articles": [
+    {
+      "article_id": "art_rd_12112025_001",
+      "title": "23项冬季生活锦囊",
+      "original_title": "23 Winter-Tipps",
+      "section_label": "封面故事 (Cover Story)",
+      "start_page": 30,
+      "source_file_name": "01 23 Winter Tips.md"
+    },
+    {
+      "article_id": "art_rd_12112025_002",
+      "title": "摇滚传奇布鲁斯·斯普林斯汀访谈录",
+      "original_title": "Bruce Springsteen: Die Rocklegende im Interview",
+      "section_label": "精选专栏 (Departments)",
+      "start_page": 26,
+      "source_file_name": "02 In Focus - Bruce Springsteen.md"
+    },
+    {
+      "article_id": "art_rd_12112025_003",
+      "title": "消失的数百万美金",
+      "original_title": "Die Millionen sind weg!",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 38,
+      "source_file_name": "03 The Millions Are Gone!.md"
+    },
+    {
+      "article_id": "art_rd_12112025_004",
+      "title": "寻路：导航史上的里程碑",
+      "original_title": "Wegweisend: Fragen zur Geschichte der Navigation",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 48,
+      "source_file_name": "04 Pathfinding.md"
+    },
+    {
+      "article_id": "art_rd_12112025_005",
+      "title": "玻璃的进击：从装饰品到高科技支柱",
+      "original_title": "Caution, Glass! (Vorsicht, Glas!)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 52,
+      "source_file_name": "05 Caution, Glass!.md"
+    },
+    {
+      "article_id": "art_rd_12112025_006",
+      "title": "你好吗？（心理健康的重要性）",
+      "original_title": "How Are You? (Wie geht es Ihnen?)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 58,
+      "source_file_name": "06 How Are You.md"
+    },
+    {
+      "article_id": "art_rd_12112025_007",
+      "title": "从记忆中汲取力量",
+      "original_title": "Schöpfen Sie Kraft aus der Erinnerung (Drawing Strength from Memory)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 64,
+      "source_file_name": "07 Classic - Drawing Strength from Memory.md"
+    },
+    {
+      "article_id": "art_rd_12112025_008",
+      "title": "亲爱的圣诞圣童：来自孩子的信",
+      "original_title": "Liebes Christkind (Dear Christ Child)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 68,
+      "source_file_name": "08 Dear Christ Child....md"
+    },
+    {
+      "article_id": "art_rd_12112025_009",
+      "title": "这关你什么事？",
+      "original_title": "Was geht Sie das an?",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 74,
+      "source_file_name": "09 What’s It to You.md"
+    },
+    {
+      "article_id": "art_rd_12112025_010",
+      "title": "冰凉的愉悦：野泳的魅力",
+      "original_title": "Ice-Cold Pleasure (Eiskaltes Vergnügen)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 78,
+      "source_file_name": "10 Ice-Cold Pleasure.md"
+    },
+    {
+      "article_id": "art_rd_12112025_011",
+      "title": "梦幻庆典：圣诞季的魔力时刻",
+      "original_title": "Magisches Fest (Magical Celebration)",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 84,
+      "source_file_name": "11 Magical Celebration.md"
+    },
+    {
+      "article_id": "art_rd_12112025_012",
+      "title": "南极点：关于南极洲的13个惊人事实",
+      "original_title": "Am Südpol: 13 erstaunliche Fakten über die Antarktis",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 94,
+      "source_file_name": "12 At the South Pole.md"
+    },
+    {
+      "article_id": "art_rd_12112025_013",
+      "title": "甜蜜的传统",
+      "original_title": "Süße Tradition",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 98,
+      "source_file_name": "13 Sweet Tradition.md"
+    },
+    {
+      "article_id": "art_rd_12112025_014",
+      "title": "西西里岛的甜蜜生活：锡拉库萨之魅",
+      "original_title": "Dolce Vita in Sizilien: Der Charme von Syrakus",
+      "section_label": "本期文章 (Articles)",
+      "start_page": 108,
+      "source_file_name": "14 Dolce Vita in Sicily.md"
+    },
+    {
+      "article_id": "art_rd_12112025_015",
+      "title": "最终航程：波旁罗德号的最后时刻",
+      "original_title": "Die letzte Fahrt der Bourbon Rhode (The Final Voyage of the Bourbon Rhode)",
+      "section_label": "深度阅读 (More Reading)",
+      "start_page": 118,
+      "source_file_name": "15 The Final Voyage of the Bourbon Rhode.md"
+    }
+  ]
+}

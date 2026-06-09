@@ -1,0 +1,100 @@
+{
+  "scenario_id": "s19_referral_reward_preview",
+  "title": "Referral Reward Preview",
+  "objective": "Provide local-runtime invite and reward summary projections without performing real referral binding or reward grant.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["ai_digest"],
+  "article_ids": ["art_s19_referral_preview"],
+  "covered_risks": ["invite_preview", "reward_summary_projection", "growth_loop_boundary"],
+  "intended_stage": ["G"],
+  "depends_on_surfaces": ["referral-summary", "reward-summary", "profile-benefits"],
+  "business_flow_aliases": [
+    {
+      "alias_id": "b05_referral_bind_then_milestone_reward",
+      "relationship": "primary_projection"
+    }
+  ],
+  "articles": [
+    {
+      "article_id": "art_s19_referral_preview",
+      "article_uid": "syn_article_s19_referral_preview",
+      "article_key": "referral_preview_20260317",
+      "publication_key": "ai_digest",
+      "title": "邀请奖励预览：邀请码、分享文案与奖励摘要",
+      "summary": "虚构 referral 与 reward summary 内容，用于 Stage G invite/profile 页面本地基础流程。",
+      "tags": ["ai", "market"],
+      "status": "active",
+      "created_at": "2026-03-17T09:22:00+08:00",
+      "updated_at": "2026-03-17T09:59:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": ["stage_g_local_growth"],
+    "entitlement_snapshot": {
+      "subject_id": "user_s19_inviter",
+      "access_state": "allowed",
+      "decision_source": "synthetic_reward_preview",
+      "quota_remaining": 2,
+      "entitlement_snapshot": {
+        "status": "active",
+        "source": "reward_projection_preview"
+      },
+      "denial_reason": null
+    },
+    "referral_summary": {
+      "invite_code": "INVITE-S19",
+      "share_preview": "复制这段邀请文案占位，发送给好友查看本地预览。",
+      "inviter_summary": "邀请人可查看注册奖励与里程碑奖励说明。",
+      "invitee_summary": "被邀请人可查看试用权益预览，但不会真实绑定。",
+      "reward_rule_summary": [
+        "注册成功可预览首段奖励",
+        "完成首个有效动作可预览里程碑奖励",
+        "本阶段不做真实 bind 完成"
+      ]
+    },
+    "reward_summary": {
+      "ledger_preview": [
+        {
+          "reward_type": "registration_reward",
+          "status": "granted",
+          "vip_days": 3,
+          "reason": "invitee registration preview"
+        },
+        {
+          "reward_type": "first_valid_action_reward",
+          "status": "pending",
+          "vip_days": 7,
+          "reason": "milestone not completed in Stage G"
+        }
+      ],
+      "vip_days_total": 3,
+      "active_vip_days": 3,
+      "status_summary": "1 granted, 1 pending"
+    },
+    "profile_benefits": {
+      "subscription_status": "reward_preview_active",
+      "entitlement_status": "active",
+      "entitlement_badge": "Reward Preview Active",
+      "quota": {
+        "remaining": 2,
+        "total": 3,
+        "reason": "ACTIVE_REWARD_PREVIEW"
+      },
+      "saved_count": 1,
+      "inbox_unread_count": 2,
+      "reward_summary": {
+        "vip_days_total": 3,
+        "active_rewards": 1
+      },
+      "benefit_summary": [
+        "邀请奖励展示为本地摘要",
+        "里程碑奖励仍处于预览态",
+        "不做真实奖励发放"
+      ]
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

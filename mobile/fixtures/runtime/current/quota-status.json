@@ -1,0 +1,13 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "free_quota_total": 8,
+    "free_quota_used": 8,
+    "quota_remaining": 0,
+    "paywall_triggered": true,
+    "reset_at": null,
+    "reset_timezone": "Asia/Shanghai",
+    "quota_reason": "REAL_CONTENT_TEST_FREE_QUOTA_REACHED",
+    "reset_hint": "当前为 real-content test scenario。"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "resource": "experiments",
+  "track": "generated",
+  "generatedAt": "2026-03-17T12:02:25.357Z",
+  "status": "stage-d-foundation",
+  "sourceOfTruth": "database/experiments.schema.json"
+}

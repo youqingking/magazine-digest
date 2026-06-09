@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-03-23T04:40:22.807Z",
+  "read_only": [
+    "scripts/ops/start-operator-console.mjs",
+    "scripts/ops/serve-runtime-dist.mjs"
+  ],
+  "report_only": [
+    "scripts/ops/run-gate.mjs",
+    "scripts/ops/compare-scenarios.mjs",
+    "scripts/ops/evaluate-promotion.mjs",
+    "scripts/ops/report-taxonomy-coverage.mjs",
+    "scripts/ops/build-release-artifact.mjs",
+    "scripts/ops/set-runtime-source.mjs",
+    "scripts/ops/show-runtime-source.mjs",
+    "scripts/ops/show-channel-state.mjs",
+    "scripts/ops/export-runtime-dist.mjs",
+    "scripts/ops/show-runtime-dist.mjs",
+    "scripts/ops/verify-runtime-dist.mjs",
+    "scripts/ops/list-channels.mjs"
+  ],
+  "stateful": [
+    "scripts/tests/run-test1.mjs",
+    "scripts/ops/promote-scenario.mjs",
+    "scripts/ops/rollback-scenario.mjs",
+    "scripts/ops/apply-promotion-drill.mjs",
+    "scripts/ops/apply-taxonomy-normalization.mjs",
+    "scripts/ops/publish-channel.mjs",
+    "scripts/ops/promote-channel.mjs",
+    "scripts/ops/rollback-channel.mjs",
+    "scripts/ops/crud/publications.mjs",
+    "scripts/ops/crud/issues.mjs",
+    "scripts/ops/crud/article-overrides.mjs",
+    "scripts/ops/crud/taxonomy.mjs",
+    "scripts/ops/crud/scenario-membership.mjs",
+    "scripts/ops/hold-state-lock.mjs",
+    "scripts/import/import-content-pack.mjs",
+    "scripts/bootstrap/smoke-stage-test1.mjs",
+    "scripts/bootstrap/smoke-stage-ops2.mjs",
+    "scripts/bootstrap/smoke-stage-data2.mjs",
+    "scripts/bootstrap/smoke-stage-ops3.mjs",
+    "scripts/bootstrap/smoke-stage-data3.mjs",
+    "scripts/bootstrap/smoke-stage-ops4.mjs",
+    "scripts/bootstrap/smoke-stage-rel1.mjs",
+    "scripts/bootstrap/smoke-stage-obs1.mjs",
+    "scripts/bootstrap/smoke-stage-ops5.mjs",
+    "scripts/bootstrap/smoke-stage-rel2.mjs"
+  ],
+  "sandbox_root_pattern": "output/runs/<run-id>/..."
+}

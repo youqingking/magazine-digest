@@ -1,0 +1,23 @@
+{
+  "collection": "quota_policies",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "policy_key", "quota_type", "daily_limit", "reset_timezone", "status", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "policy_key": { "type": "string" },
+    "quota_type": { "type": "string", "enum": ["free_reads", "trial_reads", "promo_bonus_reads"] },
+    "daily_limit": { "type": "integer", "minimum": 0 },
+    "reset_timezone": { "type": "string" },
+    "audience_scope": { "type": "string", "enum": ["all", "general", "teen", "adult"] },
+    "status": { "type": "string", "enum": ["draft", "active", "inactive"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_policy_key", "fields": ["product_key", "policy_key"], "unique": true },
+    { "name": "idx_quota_status", "fields": ["product_key", "status", "quota_type"] }
+  ]
+}

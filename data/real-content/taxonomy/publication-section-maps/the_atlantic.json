@@ -1,0 +1,30 @@
+{
+  "version": "stage-data3-v1",
+  "publication_key": "the_atlantic",
+  "mappings": [
+    {
+      "raw_label": "Front",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Atlantic > Front",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Dispatches",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Atlantic > Dispatches",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Opening Argument",
+      "canonical_section_key": "opinion",
+      "publication_section_path": "The Atlantic > Opening Argument",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Culture & Critics",
+      "canonical_section_key": "culture",
+      "publication_section_path": "The Atlantic > Culture & Critics",
+      "mapping_kind": "canonical"
+    }
+  ]
+}

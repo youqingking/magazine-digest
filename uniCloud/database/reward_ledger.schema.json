@@ -1,0 +1,23 @@
+{
+  "collection": "reward_ledger",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "append_only_ledger",
+  "required": ["_id", "product_key", "beneficiary_user_id", "reward_type", "reward_key", "status", "source_type", "source_ref", "vip_days", "created_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "beneficiary_user_id": { "type": "string" },
+    "reward_type": { "type": "string", "enum": ["inviter_bonus", "invitee_welcome", "registration_bonus", "first_valid_action_bonus"] },
+    "reward_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["pending", "granted", "reversed", "expired"] },
+    "source_type": { "type": "string", "enum": ["referral", "promo_campaign", "promo_redemption", "admin_action"] },
+    "source_ref": { "type": "string" },
+    "vip_days": { "type": "integer", "minimum": 0 },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_reward_key", "fields": ["product_key", "reward_key"], "unique": true },
+    { "name": "idx_reward_beneficiary", "fields": ["product_key", "beneficiary_user_id", "created_at"] }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "stage": "REL1",
+  "generated_at": "2026-03-22T06:50:30.000Z",
+  "scope": [
+    "mobile/pages/feed/index.vue",
+    "mobile/pages/search/index.vue",
+    "mobile/pages/detail/index.vue",
+    "mobile/pages/paywall/index.vue",
+    "mobile/pages/profile/index.vue",
+    "mobile/pages/settings/index.vue",
+    "mobile/components/account/AuthStateCard.vue",
+    "mobile/components/account/DeviceStateCard.vue",
+    "mobile/components/account/PushStateCard.vue",
+    "mobile/components/account/DeviceDiagnosticCard.vue",
+    "mobile/components/commercial/CampaignHero.vue",
+    "mobile/components/commercial/OfferSummaryCard.vue",
+    "mobile/components/growth/RewardSummaryCard.vue"
+  ],
+  "findings": {
+    "must_cleaned_internal_terms": [
+      "preview_only",
+      "current",
+      "selected",
+      "canonical",
+      "pipeline",
+      "warning taxonomy",
+      "override drift",
+      "scenario id",
+      "promotable",
+      "blocked",
+      "hold_warning",
+      "runtime source mode"
+    ],
+    "allowed_content_terms": [
+      "Barron's",
+      "The Atlantic",
+      "The Economist",
+      "Reader's Digest",
+      "raw section label",
+      "article title",
+      "proper noun"
+    ],
+    "high_priority_surfaces": [
+      {
+        "path": "mobile/pages/feed/index.vue",
+        "risk": "runtime adapter/debug wording visible in feed header and cards",
+        "status": "fixed"
+      },
+      {
+        "path": "mobile/pages/search/index.vue",
+        "risk": "English section/filter/result wording leaked into normal browse flow",
+        "status": "fixed"
+      },
+      {
+        "path": "mobile/pages/detail/index.vue",
+        "risk": "audience/rights/meta labels exposed engineering-oriented wording",
+        "status": "fixed"
+      },
+      {
+        "path": "mobile/pages/paywall/index.vue",
+        "risk": "campaign/subscription/provider wording too internal",
+        "status": "fixed"
+      },
+      {
+        "path": "mobile/pages/profile/index.vue",
+        "risk": "membership and reward labels exposed internal semantics",
+        "status": "fixed"
+      },
+      {
+        "path": "mobile/pages/settings/index.vue",
+        "risk": "runtime/scenario/channel data needed isolation into dev-only low-emphasis copy",
+        "status": "fixed"
+      }
+    ]
+  },
+  "summary": {
+    "user_facing_english_reduced": true,
+    "internal_debug_terms_isolated_to_dev_only": true,
+    "publication_identity_preserved": true,
+    "visual_restructure_performed": false
+  }
+}

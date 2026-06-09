@@ -1,0 +1,136 @@
+{
+  "responses": {
+    "art_nebula_launch|zh-CN|general|quick_30s": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_general_quick_r1",
+        "audience_segment": "general",
+        "reading_mode": "quick_30s",
+        "revision": 1,
+        "title": "Nebula Launch General Quick",
+        "markdown_body": "General quick fallback version.",
+        "content_hash": "hash_general_quick_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_nebula_launch|zh-CN|general|deep_3m": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_general_deep_r1",
+        "audience_segment": "general",
+        "reading_mode": "deep_3m",
+        "revision": 1,
+        "title": "Nebula Launch General Deep",
+        "markdown_body": "General deep fallback version.",
+        "content_hash": "hash_general_deep_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_nebula_launch|zh-CN|teen|quick_30s": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_teen_quick_r1",
+        "audience_segment": "teen",
+        "reading_mode": "quick_30s",
+        "revision": 1,
+        "title": "Nebula Launch Teen Quick",
+        "markdown_body": "Teen quick version.",
+        "content_hash": "hash_teen_quick_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_nebula_launch|zh-CN|teen|deep_3m": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_teen_deep_r1",
+        "audience_segment": "teen",
+        "reading_mode": "deep_3m",
+        "revision": 1,
+        "title": "Nebula Launch Teen Deep",
+        "markdown_body": "Teen deep version.",
+        "content_hash": "hash_teen_deep_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_nebula_launch|zh-CN|adult|quick_30s": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_adult_quick_r1",
+        "audience_segment": "adult",
+        "reading_mode": "quick_30s",
+        "revision": 1,
+        "title": "Nebula Launch Adult Quick",
+        "markdown_body": "Adult quick version.",
+        "content_hash": "hash_adult_quick_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_nebula_launch|zh-CN|adult|deep_3m": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_adult_deep_r1",
+        "audience_segment": "adult",
+        "reading_mode": "deep_3m",
+        "revision": 1,
+        "title": "Nebula Launch Adult Deep",
+        "markdown_body": "Adult deep version.",
+        "content_hash": "hash_adult_deep_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "art_fixture_unavailable|zh-CN|teen|quick_30s": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": null,
+      "selection_reason": null,
+      "fallback_applied": false,
+      "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expected_variant_selection": {
+    "art_s12_policy_stack_general_quick_30s": "var_s12_policy_stack_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "non_blocking"
+  },
+  "expected_sync_behavior": {
+    "follow_alert_surface_expected": true,
+    "notify_level": "followed_only"
+  },
+  "expected_cache_behavior": {
+    "follow_state_local_first": true,
+    "inbox_persistent": true
+  },
+  "expected_event_signals": ["follow_add", "notification_received", "inbox_open"],
+  "notes": ["关注 publication 和 topic tag 都应命中 followed_updates。"]
+}

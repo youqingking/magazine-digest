@@ -1,0 +1,24 @@
+{
+  "collection": "entitlements",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "current_state_projection",
+  "required": ["_id", "product_key", "user_id", "entitlement_type", "access_status", "effective_at", "expires_at", "last_grant_source_type", "last_grant_source_id", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "entitlement_type": { "type": "string", "enum": ["subscription", "promo_access", "reward_access", "quota_bonus", "manual_grant"] },
+    "access_status": { "type": "string", "enum": ["active", "grace", "paused", "expired", "revoked"] },
+    "effective_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "last_grant_source_type": { "type": "string", "enum": ["payment_order", "subscription_record", "promo_redemption", "reward_ledger", "admin_action"] },
+    "last_grant_source_id": { "type": "string" },
+    "projection_version": { "type": "integer", "minimum": 1 },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_entitlement_current", "fields": ["product_key", "user_id", "entitlement_type"], "unique": true },
+    { "name": "idx_entitlement_access", "fields": ["product_key", "access_status", "expires_at"] }
+  ]
+}

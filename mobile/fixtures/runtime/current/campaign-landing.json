@@ -1,0 +1,13 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "campaign_id": null,
+    "campaign_key": null,
+    "title": "Campaign preview",
+    "subtitle": "Barron's + Reader's Digest + Science + The Atlantic + The Economist release candidate",
+    "discount_label": null,
+    "eligibility_summary": [],
+    "cta_primary": "View offer",
+    "cta_secondary": "Later"
+  }
+}

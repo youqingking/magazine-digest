@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operator Console</title>
+    <script>
+      window.__OPERATOR_CONSOLE_CONFIG__ = {
+        basePath: __CONSOLE_BASE_PATH_JSON__,
+        runtimeBasePath: __RUNTIME_BASE_PATH_JSON__,
+        defaultRemoteBaseUrl: __DEFAULT_REMOTE_BASE_URL_JSON__
+      };
+    </script>
+    <link rel="stylesheet" href="__CONSOLE_STYLES_URL__" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">OPS5</p>
+          <h1>Operator Console</h1>
+          <p class="lede">以现有脚本、report、history 为底座的本地 release desk，并带基础 editorial CRUD。</p>
+        </div>
+        <div class="status-box" id="status-box">加载中...</div>
+      </header>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Overview</h2>
+          <div id="overview"></div>
+        </article>
+        <article class="card">
+          <h2>Actions</h2>
+          <form id="action-form" class="form">
+            <label>Action
+              <select name="action">
+                <option value="compare">compare</option>
+                <option value="evaluate">evaluate</option>
+                <option value="dry_run_publish">dry_run_publish</option>
+                <option value="apply_publish">apply_publish</option>
+                <option value="rollback">rollback</option>
+                <option value="retire">retire</option>
+                <option value="build_release_candidate">build_release_candidate</option>
+                <option value="intake">intake</option>
+                <option value="export_runtime_dist">export_runtime_dist</option>
+                <option value="serve_runtime_dist">serve_runtime_dist</option>
+              </select>
+            </label>
+            <label>Scenario
+              <input name="scenario" value="data2_multi_publication_release_candidate" />
+            </label>
+            <label>Baseline
+              <input name="baseline" value="data1a_readers_digest_12112025" />
+            </label>
+            <label>Channel
+              <input name="channel" value="dev" />
+            </label>
+            <label>Mode
+              <input name="mode" value="remote_channel_head" />
+            </label>
+            <label>Remote Base URL
+              <input name="remote_base_url" placeholder="http://8.136.215.40/magazine-runtime" />
+            </label>
+            <button type="submit">Run Action</button>
+          </form>
+          <pre id="action-result" class="result"></pre>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Content</h2>
+          <div id="content"></div>
+        </article>
+        <article class="card">
+          <h2>Quality</h2>
+          <div id="quality"></div>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Scenarios</h2>
+          <div id="scenarios"></div>
+        </article>
+        <article class="card">
+          <h2>Release</h2>
+          <div id="release"></div>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Observability</h2>
+          <div id="observability"></div>
+        </article>
+        <article class="card">
+          <h2>Incidents</h2>
+          <div id="incidents"></div>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>ZIP Intake</h2>
+          <p class="form-help">适合新增单刊 zip，或一个 zip 内含多刊 release 目录的批量包。上传后只走 intake 链路与门禁校验，不会直接改 release artifact。</p>
+          <div class="hint-panel">
+            <h3>上传前先看</h3>
+            <ul class="hint-list">
+              <li>`auto` 适合绝大多数情况，只有在自动识别明显错路时才手动指定 Route Hint。</li>
+              <li>如果 zip 文件名里混有月份、批次号、`release` 等噪音，建议显式填写 `publication_id`、`display_name`、`issue_label`，避免系统误推导。</li>
+              <li>上传结果会先给出可转发的诊断摘要，再附原始 JSON，方便直接贴给内容处理同学。</li>
+            </ul>
+          </div>
+          <form id="intake-upload-form" class="form">
+            <label>ZIP File
+              <input type="file" name="zip_file" accept=".zip,application/zip" />
+            </label>
+            <label>Route Hint
+              <select name="route_hint">
+                <option value="auto">auto</option>
+                <option value="single_issue_batch">single_issue_batch</option>
+                <option value="multi_release_pack">multi_release_pack</option>
+                <option value="generic_split_release">generic_split_release</option>
+              </select>
+            </label>
+            <p class="field-help">`single_issue_batch` 适合 Reader's Digest 这类单刊批量 markdown；`multi_release_pack` 适合一个 zip 里含多刊 release 目录；`generic_split_release` 适合单刊且目录里有 `adult/youth/merged`。</p>
+            <label>Publication ID
+              <input name="publication_id" placeholder="可选，默认从 zip 文件名推导" />
+            </label>
+            <label>Display Name
+              <input name="publication_display_name" placeholder="可选，默认从 zip 文件名推导" />
+            </label>
+            <label>Issue Label
+              <input name="issue_label" placeholder="可选，默认优先取文件名日期，否则取当天 YYYYMMDD" />
+            </label>
+            <label>Parser Profile
+              <input name="parser_profile" placeholder="可选，例如 generic_split_release_v1" />
+            </label>
+            <label>Free Quota Limit
+              <input name="free_quota_limit" type="number" min="1" value="8" />
+            </label>
+            <label class="checkbox-row">
+              <input name="archive_source" type="checkbox" checked />
+              <span>导入后归档原始 zip</span>
+            </label>
+            <p class="field-help">建议默认勾选。适合需要保留原包审计、复盘、二次比对的绝大多数情况；只有你明确要保留在 inbox 里继续人工重试时再取消。</p>
+            <label class="checkbox-row">
+              <input name="replace_existing" type="checkbox" />
+              <span>替代现有期次（需填写 publication_id + issue_label）</span>
+            </label>
+            <p class="field-help field-help-warning">默认不允许静默覆盖旧期次。只有在修订同一刊同一期旧上传时才勾选；系统会先备份现有 issue，再做替换，若导入失败会自动回滚。</p>
+            <label class="checkbox-row">
+              <input name="include_in_candidate" type="checkbox" />
+              <span>导入后纳入当前 release candidate</span>
+            </label>
+            <p class="field-help">只有在内容包已经通过门禁，且你确认这期应该进入当前候选版本时才勾。若只是试传、校验结构、或等内容补稿，别勾。</p>
+            <label class="checkbox-row">
+              <input name="publish_to_current" type="checkbox" />
+              <span>导入后直接发布五刊 current</span>
+            </label>
+            <p class="field-help field-help-warning">这是最高风险选项。只有在内容已通过门禁、已纳入 candidate、并且你准备立即把当前线上 current 切到最新候选时才勾。日常试传、补录、门禁排错不要勾。</p>
+            <button type="submit">Upload ZIP and Intake</button>
+          </form>
+          <pre id="intake-upload-result" class="result"></pre>
+        </article>
+        <article class="card">
+          <h2>Import Notes</h2>
+          <p>推荐操作是直接上传 zip。后台会先落到 `ops/intake/inbox/`，再调用 intake action layer，保留 manifest、scenario 与审计轨迹。</p>
+          <p>如果返回 `CONTENT_PACKAGE_GATE_BLOCKED`，说明系统已经读懂包结构，但内容本身不满足导入门禁；这时要根据摘要里的 blocker codes 去补内容，而不是继续改 route。</p>
+          <p>如果是修正旧上传，不要先手删旧 issue。请勾选“替代现有期次”，并填写明确的 `publication_id + issue_label`；系统会先备份再替换，失败自动回滚。</p>
+          <p>如果返回 `ENOENT` 或结构类错误，优先检查 Route Hint 与 zip 目录结构是否匹配，再检查是否遗漏 `adult/youth/merged` 目录。</p>
+          <p>“纳入当前 release candidate” 会尝试把新 issue 加入候选版本；“直接发布五刊 current” 会进一步触发候选发布。只要导入本身失败，这两步都不会执行。</p>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Editorial</h2>
+          <div id="editorial"></div>
+        </article>
+        <article class="card">
+          <h2>OPS5 Audit</h2>
+          <div id="ops5"></div>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Publications</h2>
+          <form id="publication-form" class="form">
+            <label>Action
+              <select name="action_name">
+                <option value="edit">edit</option>
+                <option value="create">create</option>
+                <option value="archive">archive</option>
+                <option value="unarchive">unarchive</option>
+                <option value="delete">delete</option>
+              </select>
+            </label>
+            <label>Publication ID
+              <input name="publication_id" value="the_atlantic" />
+            </label>
+            <label>Display Name
+              <input name="display_name" />
+            </label>
+            <label>Status
+              <input name="status" />
+            </label>
+            <label>Locale
+              <input name="locale" value="zh-CN" />
+            </label>
+            <label>Notes
+              <input name="notes" />
+            </label>
+            <label class="checkbox-row">
+              <input name="cascade" type="checkbox" />
+              <span>级联删除关联 issues / budgets / overrides</span>
+            </label>
+            <label class="checkbox-row">
+              <input name="purge_files" type="checkbox" checked />
+              <span>删除刊物源目录与 publication taxonomy map</span>
+            </label>
+            <p class="field-help field-help-warning">`delete` 默认只允许删除没有关联 issue 的空刊物。若这本杂志已经导入过 issue，必须勾选级联删除；该动作不会改 `runtime/releases/` 下的 immutable artifact。</p>
+            <button type="submit">Apply Publication</button>
+          </form>
+          <pre id="publication-result" class="result"></pre>
+        </article>
+        <article class="card">
+          <h2>Issues</h2>
+          <form id="issue-form" class="form">
+            <label>Action
+              <select name="action_name">
+                <option value="edit">edit</option>
+                <option value="create">create</option>
+                <option value="archive">archive</option>
+                <option value="unarchive">unarchive</option>
+                <option value="delete">delete</option>
+              </select>
+            </label>
+            <label>Issue ID
+              <input name="issue_id" value="the_atlantic__012026" />
+            </label>
+            <label>Publication ID
+              <input name="publication_id" value="the_atlantic" />
+            </label>
+            <label>Issue Label
+              <input name="issue_label" value="012026" />
+            </label>
+            <p id="issue-derived-hint" class="field-help">create 时只填 `publication_id + issue_label` 也可以，系统会自动推导 issue_id。</p>
+            <label>Source Pack
+              <input name="source_pack" />
+            </label>
+            <label>Parser Profile
+              <input name="parser_profile" />
+            </label>
+            <label>Notes
+              <input name="notes" />
+            </label>
+            <label class="checkbox-row">
+              <input name="purge_files" type="checkbox" checked />
+              <span>delete 时同步删除 issue 源目录与 override 目录</span>
+            </label>
+            <p class="field-help">`edit` 若改 `publication_id` 或 `issue_label`，系统会同步迁移 issue_id、source-of-truth 目录、accepted warnings 与 candidate budget；`delete` 会把这期自动移出 candidate 相关预算。</p>
+            <button type="submit">Apply Issue</button>
+          </form>
+          <pre id="issue-result" class="result"></pre>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Article Metadata</h2>
+          <form id="article-override-form" class="form">
+            <label>Action
+              <select name="action_name">
+                <option value="edit">edit</option>
+                <option value="create">create</option>
+                <option value="delete">delete</option>
+              </select>
+            </label>
+            <label>Publication ID
+              <input name="publication_id" value="the_atlantic" />
+            </label>
+            <label>Issue Label
+              <input name="issue_label" value="012026" />
+            </label>
+            <label>Article ID
+              <input name="article_id" value="art_the_atlantic_012026_002" />
+            </label>
+            <label>Title
+              <input name="title" />
+            </label>
+            <label>Section Label
+              <input name="section_label" />
+            </label>
+            <label>Author
+              <input name="author" />
+            </label>
+            <label>Canonical URL
+              <input name="canonical_url" />
+            </label>
+            <label>Warning Suppression
+              <input name="display_warning_suppression" placeholder="comma,separated" />
+            </label>
+            <label>Notes
+              <input name="notes" />
+            </label>
+            <button type="submit">Apply Article Override</button>
+          </form>
+          <pre id="article-result" class="result"></pre>
+        </article>
+        <article class="card">
+          <h2>Taxonomy</h2>
+          <form id="taxonomy-form" class="form">
+            <label>Action
+              <select name="action_name">
+                <option value="edit">edit</option>
+                <option value="create">create</option>
+                <option value="disable">disable</option>
+              </select>
+            </label>
+            <label>Publication ID
+              <input name="publication_id" value="the_atlantic" />
+            </label>
+            <label>Raw Label
+              <input name="raw_label" value="Front" />
+            </label>
+            <label>Canonical Key
+              <input name="canonical_section_key" value="world_dispatch" />
+            </label>
+            <label>Canonical Label
+              <input name="canonical_section_label" value="国际报道" />
+            </label>
+            <label>Bucket Key
+              <input name="discovery_bucket_key" value="international" />
+            </label>
+            <label>Bucket Label
+              <input name="discovery_bucket_label" value="国际" />
+            </label>
+            <label>Mapping Kind
+              <input name="mapping_kind" value="canonical" />
+            </label>
+            <button type="submit">Apply Taxonomy</button>
+          </form>
+          <pre id="taxonomy-result" class="result"></pre>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Scenario Membership</h2>
+          <form id="membership-form" class="form">
+            <label>Action
+              <select name="action_name">
+                <option value="edit">edit</option>
+                <option value="include">include</option>
+                <option value="exclude">exclude</option>
+              </select>
+            </label>
+            <label>Issue ID
+              <input name="issue_id" value="the_economist__20260314" />
+            </label>
+            <label>Classification
+              <input name="classification" />
+            </label>
+            <label>Note
+              <input name="note" />
+            </label>
+            <button type="submit">Apply Membership</button>
+          </form>
+          <button type="button" id="membership-rebuild">Rebuild Candidate</button>
+          <pre id="membership-result" class="result"></pre>
+        </article>
+        <article class="card">
+          <h2>Safety Notes</h2>
+          <p>所有 stateful CRUD 动作都走 file-backed action layer，继承 TEST2 锁与原子写规则。</p>
+          <p>OPS5 不编辑 immutable release artifact，不把 mobile 用户页面变成后台。</p>
+          <p>article metadata 仅写 override，taxonomy 仅写映射，scenario membership 仅写候选构成。</p>
+        </article>
+      </section>
+    </main>
+    <script src="__CONSOLE_APP_URL__"></script>
+  </body>
+</html>

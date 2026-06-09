@@ -1,0 +1,1826 @@
+{
+  "generated_at": "2026-03-23T07:56:26.095Z",
+  "publications": [
+    {
+      "publication_key": "barrons",
+      "issue_count": 1,
+      "article_count": 17,
+      "raw_section_count": 17,
+      "mapped_ratio": 0,
+      "issue_summaries": [
+        {
+          "publication_key": "barrons",
+          "issue_label": "09022026",
+          "issue_id": "barrons__09022026",
+          "issue_path": "data/real-content/barrons/09022026",
+          "article_count": 17,
+          "raw_section_count": 17,
+          "raw_labels": [
+            "2026 旅游业展望",
+            "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷",
+            "Barron's",
+            "Dividends You Can Bank On",
+            "Europe Gains Appeal",
+            "Even Worries About Inflation Matter—a Lot",
+            "The AI Threat in Perspective",
+            "The Dow Hits a Fresh Milestone & Global Market Shifts",
+            "Worthy Spots for Investors to Venture",
+            "三家值得关注的房地产投资信托基金",
+            "华尔街风云",
+            "奈飞与华纳兄弟探索的“联姻”",
+            "指数挂钩年金的新选择",
+            "标普 500 指数 8000 点之约",
+            "罗德岛的棉纺厂",
+            "自主机器人的崛起",
+            "迪士尼的 CEO 过山车"
+          ],
+          "raw_label_counts": {
+            "华尔街风云": 1,
+            "迪士尼的 CEO 过山车": 1,
+            "The AI Threat in Perspective": 1,
+            "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷": 1,
+            "指数挂钩年金的新选择": 1,
+            "自主机器人的崛起": 1,
+            "Even Worries About Inflation Matter—a Lot": 1,
+            "Dividends You Can Bank On": 1,
+            "三家值得关注的房地产投资信托基金": 1,
+            "罗德岛的棉纺厂": 1,
+            "2026 旅游业展望": 1,
+            "Worthy Spots for Investors to Venture": 1,
+            "The Dow Hits a Fresh Milestone & Global Market Shifts": 1,
+            "Europe Gains Appeal": 1,
+            "标普 500 指数 8000 点之约": 1,
+            "奈飞与华纳兄弟探索的“联姻”": 1,
+            "Barron's": 1
+          },
+          "canonical_section_counts": {},
+          "discovery_bucket_counts": {},
+          "mapped_article_count": 0,
+          "mapped_ratio": 0,
+          "unmapped": [
+            {
+              "article_id": "art_barrons_09022026_001",
+              "raw_label": "华尔街风云"
+            },
+            {
+              "article_id": "art_barrons_09022026_002",
+              "raw_label": "迪士尼的 CEO 过山车"
+            },
+            {
+              "article_id": "art_barrons_09022026_003",
+              "raw_label": "The AI Threat in Perspective"
+            },
+            {
+              "article_id": "art_barrons_09022026_004",
+              "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷"
+            },
+            {
+              "article_id": "art_barrons_09022026_005",
+              "raw_label": "指数挂钩年金的新选择"
+            },
+            {
+              "article_id": "art_barrons_09022026_006",
+              "raw_label": "自主机器人的崛起"
+            },
+            {
+              "article_id": "art_barrons_09022026_007",
+              "raw_label": "Even Worries About Inflation Matter—a Lot"
+            },
+            {
+              "article_id": "art_barrons_09022026_008",
+              "raw_label": "Dividends You Can Bank On"
+            },
+            {
+              "article_id": "art_barrons_09022026_009",
+              "raw_label": "三家值得关注的房地产投资信托基金"
+            },
+            {
+              "article_id": "art_barrons_09022026_010",
+              "raw_label": "罗德岛的棉纺厂"
+            },
+            {
+              "article_id": "art_barrons_09022026_011",
+              "raw_label": "2026 旅游业展望"
+            },
+            {
+              "article_id": "art_barrons_09022026_012",
+              "raw_label": "Worthy Spots for Investors to Venture"
+            },
+            {
+              "article_id": "art_barrons_09022026_013",
+              "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts"
+            },
+            {
+              "article_id": "art_barrons_09022026_014",
+              "raw_label": "Europe Gains Appeal"
+            },
+            {
+              "article_id": "art_barrons_09022026_015",
+              "raw_label": "标普 500 指数 8000 点之约"
+            },
+            {
+              "article_id": "art_barrons_09022026_016",
+              "raw_label": "奈飞与华纳兄弟探索的“联姻”"
+            },
+            {
+              "article_id": "art_barrons_09022026_017",
+              "raw_label": "Barron's"
+            }
+          ],
+          "publication_specific_fallbacks": []
+        }
+      ]
+    },
+    {
+      "publication_key": "the_atlantic",
+      "issue_count": 1,
+      "article_count": 10,
+      "raw_section_count": 4,
+      "mapped_ratio": 0.9,
+      "issue_summaries": [
+        {
+          "publication_key": "the_atlantic",
+          "issue_label": "012026",
+          "issue_id": "the_atlantic__012026",
+          "issue_path": "data/real-content/the_atlantic/012026",
+          "article_count": 10,
+          "raw_section_count": 4,
+          "raw_labels": [
+            "Culture & Critics",
+            "Dispatches",
+            "Front",
+            "Opening Argument"
+          ],
+          "raw_label_counts": {
+            "Front": 1,
+            "Opening Argument": 1,
+            "Dispatches": 3,
+            "Culture & Critics": 5
+          },
+          "canonical_section_counts": {
+            "world_dispatch": 4,
+            "opinion": 1,
+            "culture": 4
+          },
+          "discovery_bucket_counts": {
+            "国际": 4,
+            "观点": 1,
+            "文化": 4
+          },
+          "mapped_article_count": 9,
+          "mapped_ratio": 0.9,
+          "unmapped": [
+            {
+              "article_id": "art_the_atlantic_012026_006",
+              "raw_label": "Culture & Critics"
+            }
+          ],
+          "publication_specific_fallbacks": []
+        }
+      ]
+    },
+    {
+      "publication_key": "the_economist",
+      "issue_count": 1,
+      "article_count": 51,
+      "raw_section_count": 13,
+      "mapped_ratio": 0,
+      "issue_summaries": [
+        {
+          "publication_key": "the_economist",
+          "issue_label": "20260314",
+          "issue_id": "the_economist__20260314",
+          "issue_path": "data/real-content/the_economist/20260314",
+          "article_count": 51,
+          "raw_section_count": 13,
+          "raw_labels": [
+            "Asia",
+            "Briefing",
+            "Britain",
+            "By Invitation",
+            "China",
+            "Europe",
+            "International",
+            "Leaders",
+            "Letters",
+            "Middle East & Africa",
+            "The Americas",
+            "The Economist",
+            "United States"
+          ],
+          "raw_label_counts": {
+            "The Economist": 2,
+            "Leaders": 5,
+            "Letters": 1,
+            "By Invitation": 1,
+            "Briefing": 3,
+            "United States": 6,
+            "The Americas": 2,
+            "Asia": 5,
+            "China": 4,
+            "Middle East & Africa": 8,
+            "Europe": 5,
+            "Britain": 8,
+            "International": 1
+          },
+          "canonical_section_counts": {},
+          "discovery_bucket_counts": {},
+          "mapped_article_count": 0,
+          "mapped_ratio": 0,
+          "unmapped": [
+            {
+              "article_id": "art_the_economist_20260314_001",
+              "raw_label": "The Economist"
+            },
+            {
+              "article_id": "art_the_economist_20260314_002",
+              "raw_label": "The Economist"
+            },
+            {
+              "article_id": "art_the_economist_20260314_003",
+              "raw_label": "Leaders"
+            },
+            {
+              "article_id": "art_the_economist_20260314_004",
+              "raw_label": "Leaders"
+            },
+            {
+              "article_id": "art_the_economist_20260314_005",
+              "raw_label": "Leaders"
+            },
+            {
+              "article_id": "art_the_economist_20260314_006",
+              "raw_label": "Leaders"
+            },
+            {
+              "article_id": "art_the_economist_20260314_007",
+              "raw_label": "Leaders"
+            },
+            {
+              "article_id": "art_the_economist_20260314_008",
+              "raw_label": "Letters"
+            },
+            {
+              "article_id": "art_the_economist_20260314_009",
+              "raw_label": "By Invitation"
+            },
+            {
+              "article_id": "art_the_economist_20260314_010",
+              "raw_label": "Briefing"
+            },
+            {
+              "article_id": "art_the_economist_20260314_011",
+              "raw_label": "Briefing"
+            },
+            {
+              "article_id": "art_the_economist_20260314_012",
+              "raw_label": "Briefing"
+            },
+            {
+              "article_id": "art_the_economist_20260314_013",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_014",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_015",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_016",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_017",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_018",
+              "raw_label": "United States"
+            },
+            {
+              "article_id": "art_the_economist_20260314_019",
+              "raw_label": "The Americas"
+            },
+            {
+              "article_id": "art_the_economist_20260314_020",
+              "raw_label": "The Americas"
+            },
+            {
+              "article_id": "art_the_economist_20260314_021",
+              "raw_label": "Asia"
+            },
+            {
+              "article_id": "art_the_economist_20260314_022",
+              "raw_label": "Asia"
+            },
+            {
+              "article_id": "art_the_economist_20260314_023",
+              "raw_label": "Asia"
+            },
+            {
+              "article_id": "art_the_economist_20260314_024",
+              "raw_label": "Asia"
+            },
+            {
+              "article_id": "art_the_economist_20260314_025",
+              "raw_label": "Asia"
+            },
+            {
+              "article_id": "art_the_economist_20260314_026",
+              "raw_label": "China"
+            },
+            {
+              "article_id": "art_the_economist_20260314_027",
+              "raw_label": "China"
+            },
+            {
+              "article_id": "art_the_economist_20260314_028",
+              "raw_label": "China"
+            },
+            {
+              "article_id": "art_the_economist_20260314_029",
+              "raw_label": "China"
+            },
+            {
+              "article_id": "art_the_economist_20260314_030",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_031",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_032",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_033",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_034",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_035",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_036",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_037",
+              "raw_label": "Middle East & Africa"
+            },
+            {
+              "article_id": "art_the_economist_20260314_038",
+              "raw_label": "Europe"
+            },
+            {
+              "article_id": "art_the_economist_20260314_039",
+              "raw_label": "Europe"
+            },
+            {
+              "article_id": "art_the_economist_20260314_040",
+              "raw_label": "Europe"
+            },
+            {
+              "article_id": "art_the_economist_20260314_041",
+              "raw_label": "Europe"
+            },
+            {
+              "article_id": "art_the_economist_20260314_042",
+              "raw_label": "Europe"
+            },
+            {
+              "article_id": "art_the_economist_20260314_043",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_044",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_045",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_046",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_047",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_048",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_049",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_050",
+              "raw_label": "Britain"
+            },
+            {
+              "article_id": "art_the_economist_20260314_051",
+              "raw_label": "International"
+            }
+          ],
+          "publication_specific_fallbacks": []
+        }
+      ]
+    },
+    {
+      "publication_key": "readers_digest",
+      "issue_count": 1,
+      "article_count": 15,
+      "raw_section_count": 4,
+      "mapped_ratio": 0,
+      "issue_summaries": [
+        {
+          "publication_key": "readers_digest",
+          "issue_label": "12112025",
+          "issue_id": "readers_digest__12112025",
+          "issue_path": "data/real-content/readers-digest/12112025",
+          "article_count": 15,
+          "raw_section_count": 4,
+          "raw_labels": [
+            "封面故事 (Cover Story)",
+            "本期文章 (Articles)",
+            "深度阅读 (More Reading)",
+            "精选专栏 (Departments)"
+          ],
+          "raw_label_counts": {
+            "封面故事 (Cover Story)": 1,
+            "精选专栏 (Departments)": 1,
+            "本期文章 (Articles)": 12,
+            "深度阅读 (More Reading)": 1
+          },
+          "canonical_section_counts": {},
+          "discovery_bucket_counts": {},
+          "mapped_article_count": 0,
+          "mapped_ratio": 0,
+          "unmapped": [
+            {
+              "article_id": "art_rd_12112025_001",
+              "raw_label": "封面故事 (Cover Story)"
+            },
+            {
+              "article_id": "art_rd_12112025_002",
+              "raw_label": "精选专栏 (Departments)"
+            },
+            {
+              "article_id": "art_rd_12112025_003",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_004",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_005",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_006",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_007",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_008",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_009",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_010",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_011",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_012",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_013",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_014",
+              "raw_label": "本期文章 (Articles)"
+            },
+            {
+              "article_id": "art_rd_12112025_015",
+              "raw_label": "深度阅读 (More Reading)"
+            }
+          ],
+          "publication_specific_fallbacks": []
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "data1a_readers_digest_12112025",
+      "status": "active",
+      "source_kind": "real_content_pilot",
+      "publication_count": 1,
+      "issue_count": 1,
+      "article_count": 15,
+      "mapped_article_count": 0,
+      "mapped_ratio": 0,
+      "unmapped_count": 15,
+      "unmapped": [
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_001",
+          "raw_label": "封面故事 (Cover Story)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_002",
+          "raw_label": "精选专栏 (Departments)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_003",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_004",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_005",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_006",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_007",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_008",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_009",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_010",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_011",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_012",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_013",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_014",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_015",
+          "raw_label": "深度阅读 (More Reading)"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {}
+    },
+    {
+      "scenario_id": "data1c_barrons_09022026",
+      "status": "active",
+      "source_kind": "real_content_split_pack",
+      "publication_count": 1,
+      "issue_count": 1,
+      "article_count": 17,
+      "mapped_article_count": 0,
+      "mapped_ratio": 0,
+      "unmapped_count": 17,
+      "unmapped": [
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_001",
+          "raw_label": "华尔街风云"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_002",
+          "raw_label": "迪士尼的 CEO 过山车"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_003",
+          "raw_label": "The AI Threat in Perspective"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_004",
+          "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_005",
+          "raw_label": "指数挂钩年金的新选择"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_006",
+          "raw_label": "自主机器人的崛起"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_007",
+          "raw_label": "Even Worries About Inflation Matter—a Lot"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_008",
+          "raw_label": "Dividends You Can Bank On"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_009",
+          "raw_label": "三家值得关注的房地产投资信托基金"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_010",
+          "raw_label": "罗德岛的棉纺厂"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_011",
+          "raw_label": "2026 旅游业展望"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_012",
+          "raw_label": "Worthy Spots for Investors to Venture"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_013",
+          "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_014",
+          "raw_label": "Europe Gains Appeal"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_015",
+          "raw_label": "标普 500 指数 8000 点之约"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_016",
+          "raw_label": "奈飞与华纳兄弟探索的“联姻”"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_017",
+          "raw_label": "Barron's"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {}
+    },
+    {
+      "scenario_id": "data1c_the_atlantic_012026",
+      "status": "active",
+      "source_kind": "real_content_split_pack",
+      "publication_count": 1,
+      "issue_count": 1,
+      "article_count": 10,
+      "mapped_article_count": 9,
+      "mapped_ratio": 0.9,
+      "unmapped_count": 1,
+      "unmapped": [
+        {
+          "issue_id": "the_atlantic__012026",
+          "article_id": "art_the_atlantic_012026_006",
+          "raw_label": "Culture & Critics"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {
+        "国际": 4,
+        "观点": 1,
+        "文化": 4
+      }
+    },
+    {
+      "scenario_id": "data1c_the_economist_20260314",
+      "status": "active",
+      "source_kind": "real_content_split_pack",
+      "publication_count": 1,
+      "issue_count": 1,
+      "article_count": 51,
+      "mapped_article_count": 0,
+      "mapped_ratio": 0,
+      "unmapped_count": 51,
+      "unmapped": [
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_001",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_002",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_003",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_004",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_005",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_006",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_007",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_008",
+          "raw_label": "Letters"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_009",
+          "raw_label": "By Invitation"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_010",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_011",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_012",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_013",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_014",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_015",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_016",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_017",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_018",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_019",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_020",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_021",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_022",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_023",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_024",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_025",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_026",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_027",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_028",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_029",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_030",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_031",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_032",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_033",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_034",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_035",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_036",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_037",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_038",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_039",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_040",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_041",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_042",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_043",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_044",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_045",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_046",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_047",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_048",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_049",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_050",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_051",
+          "raw_label": "International"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {}
+    },
+    {
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "status": "active",
+      "source_kind": "real_content_split_pack_mixed",
+      "publication_count": 3,
+      "issue_count": 3,
+      "article_count": 78,
+      "mapped_article_count": 9,
+      "mapped_ratio": 0.11538461538461539,
+      "unmapped_count": 69,
+      "unmapped": [
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_001",
+          "raw_label": "华尔街风云"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_002",
+          "raw_label": "迪士尼的 CEO 过山车"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_003",
+          "raw_label": "The AI Threat in Perspective"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_004",
+          "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_005",
+          "raw_label": "指数挂钩年金的新选择"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_006",
+          "raw_label": "自主机器人的崛起"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_007",
+          "raw_label": "Even Worries About Inflation Matter—a Lot"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_008",
+          "raw_label": "Dividends You Can Bank On"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_009",
+          "raw_label": "三家值得关注的房地产投资信托基金"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_010",
+          "raw_label": "罗德岛的棉纺厂"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_011",
+          "raw_label": "2026 旅游业展望"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_012",
+          "raw_label": "Worthy Spots for Investors to Venture"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_013",
+          "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_014",
+          "raw_label": "Europe Gains Appeal"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_015",
+          "raw_label": "标普 500 指数 8000 点之约"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_016",
+          "raw_label": "奈飞与华纳兄弟探索的“联姻”"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_017",
+          "raw_label": "Barron's"
+        },
+        {
+          "issue_id": "the_atlantic__012026",
+          "article_id": "art_the_atlantic_012026_006",
+          "raw_label": "Culture & Critics"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_001",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_002",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_003",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_004",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_005",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_006",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_007",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_008",
+          "raw_label": "Letters"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_009",
+          "raw_label": "By Invitation"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_010",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_011",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_012",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_013",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_014",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_015",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_016",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_017",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_018",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_019",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_020",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_021",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_022",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_023",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_024",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_025",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_026",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_027",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_028",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_029",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_030",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_031",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_032",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_033",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_034",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_035",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_036",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_037",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_038",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_039",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_040",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_041",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_042",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_043",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_044",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_045",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_046",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_047",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_048",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_049",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_050",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_051",
+          "raw_label": "International"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {
+        "国际": 4,
+        "观点": 1,
+        "文化": 4
+      }
+    },
+    {
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "status": "active",
+      "source_kind": "real_content_release_candidate",
+      "publication_count": 4,
+      "issue_count": 4,
+      "article_count": 93,
+      "mapped_article_count": 9,
+      "mapped_ratio": 0.0967741935483871,
+      "unmapped_count": 84,
+      "unmapped": [
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_001",
+          "raw_label": "封面故事 (Cover Story)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_002",
+          "raw_label": "精选专栏 (Departments)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_003",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_004",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_005",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_006",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_007",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_008",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_009",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_010",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_011",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_012",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_013",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_014",
+          "raw_label": "本期文章 (Articles)"
+        },
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_id": "art_rd_12112025_015",
+          "raw_label": "深度阅读 (More Reading)"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_001",
+          "raw_label": "华尔街风云"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_002",
+          "raw_label": "迪士尼的 CEO 过山车"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_003",
+          "raw_label": "The AI Threat in Perspective"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_004",
+          "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_005",
+          "raw_label": "指数挂钩年金的新选择"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_006",
+          "raw_label": "自主机器人的崛起"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_007",
+          "raw_label": "Even Worries About Inflation Matter—a Lot"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_008",
+          "raw_label": "Dividends You Can Bank On"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_009",
+          "raw_label": "三家值得关注的房地产投资信托基金"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_010",
+          "raw_label": "罗德岛的棉纺厂"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_011",
+          "raw_label": "2026 旅游业展望"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_012",
+          "raw_label": "Worthy Spots for Investors to Venture"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_013",
+          "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_014",
+          "raw_label": "Europe Gains Appeal"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_015",
+          "raw_label": "标普 500 指数 8000 点之约"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_016",
+          "raw_label": "奈飞与华纳兄弟探索的“联姻”"
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_id": "art_barrons_09022026_017",
+          "raw_label": "Barron's"
+        },
+        {
+          "issue_id": "the_atlantic__012026",
+          "article_id": "art_the_atlantic_012026_006",
+          "raw_label": "Culture & Critics"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_001",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_002",
+          "raw_label": "The Economist"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_003",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_004",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_005",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_006",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_007",
+          "raw_label": "Leaders"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_008",
+          "raw_label": "Letters"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_009",
+          "raw_label": "By Invitation"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_010",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_011",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_012",
+          "raw_label": "Briefing"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_013",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_014",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_015",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_016",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_017",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_018",
+          "raw_label": "United States"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_019",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_020",
+          "raw_label": "The Americas"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_021",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_022",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_023",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_024",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_025",
+          "raw_label": "Asia"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_026",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_027",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_028",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_029",
+          "raw_label": "China"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_030",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_031",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_032",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_033",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_034",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_035",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_036",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_037",
+          "raw_label": "Middle East & Africa"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_038",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_039",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_040",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_041",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_042",
+          "raw_label": "Europe"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_043",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_044",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_045",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_046",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_047",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_048",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_049",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_050",
+          "raw_label": "Britain"
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_id": "art_the_economist_20260314_051",
+          "raw_label": "International"
+        }
+      ],
+      "publication_specific_fallback_count": 0,
+      "discovery_bucket_distribution": {
+        "国际": 4,
+        "观点": 1,
+        "文化": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-03-17T05:57:58.617Z",
+  "target_url": "http://localhost:8080/#/",
+  "navigation_error": null,
+  "white_screen_detected": false,
+  "heuristics": {
+    "dom_empty": false,
+    "empty_container_only": false,
+    "no_visible_text": false
+  },
+  "page_state": {
+    "title": "Feed",
+    "href": "http://localhost:8080/#/",
+    "domEmpty": false,
+    "emptyContainerOnly": false,
+    "noVisibleText": false,
+    "bodyText": "Feed\nFEED_PAGE_READY\nRead Feed\nbootstrap-config + content-sync-delta powered feed, source: local runtime\nRefresh\nPaywall\nNebula Launch Overview\nA stable sample article root for contract validation.\nmodes: deep_3m / quick_30s | audiences: adult / general / teen\ndeep_3m\nquick_30s\nFeed\nProfile\nSettings",
+    "appChildren": 0,
+    "uniAppChildren": 4,
+    "appText": "",
+    "appHtml": "",
+    "uniAppText": " Feed FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s  Feed  Profile  Settings  Cancel  Cancel  OK",
+    "firstVisibleTexts": [
+      " Feed FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s  Feed  Profile  Settings  Cancel  Cancel  OK",
+      " Feed FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s",
+      " Feed",
+      " Feed",
+      "Feed",
+      "Feed",
+      "FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s",
+      "FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s",
+      "FEED_PAGE_READYRead Feed bootstrap-config + content-sync-delta powered feed, source: local runtime RefreshPaywallNebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s",
+      "FEED_PAGE_READY",
+      "FEED_PAGE_READY",
+      "Read Feed",
+      "Read Feed",
+      "bootstrap-config + content-sync-delta powered feed, source: local runtime",
+      "bootstrap-config + content-sync-delta powered feed, source: local runtime",
+      "RefreshPaywall",
+      "Refresh",
+      "Paywall",
+      "Nebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s",
+      "Nebula Launch OverviewA stable sample article root for contract validation. modes: deep_3m / quick_30s | audiences: adult / general / teen  deep_3m  quick_30s"
+    ],
+    "sentinels": {
+      "feed": true,
+      "detail": false,
+      "paywall": false,
+      "settings": false
+    }
+  },
+  "detail_probe": {
+    "status": "reachable",
+    "href": "http://localhost:8080/#/pages/detail/index?articleId=art_nebula_launch&readingMode=quick_30s",
+    "hasDetailSentinel": true,
+    "hasReadableBody": true
+  },
+  "counts": {
+    "console_total": 4,
+    "console_blocking_total": 0,
+    "pageerror_total": 0,
+    "requestfailed_total": 0
+  },
+  "requestfailed": [],
+  "screenshot_path": "D:\\ws\\Playground\\output\\stage-e1-h5\\last-screenshot.png"
+}

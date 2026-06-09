@@ -1,0 +1,26 @@
+{
+  "collection": "user_follows",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "user_id", "subject_type", "subject_key", "status", "notify_level", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "subject_type": { "type": "string", "enum": ["publication", "topic_tag", "author", "publish_batch"] },
+    "subject_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "muted", "removed"] },
+    "notify_level": { "type": "string", "enum": ["immediate", "digest_only", "mute"] },
+    "source_surface": { "type": "string", "enum": ["follow_catalog", "content_detail", "search_content", "notification_inbox", "ops_import"] },
+    "last_notified_publish_batch_id": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "removed_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_user_follow_subject", "fields": ["product_key", "user_id", "subject_type", "subject_key"], "unique": true },
+    { "name": "idx_user_follow_status", "fields": ["product_key", "user_id", "status", "updated_at"] },
+    { "name": "idx_follow_subject_lookup", "fields": ["product_key", "subject_type", "subject_key", "status"] }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "expected_variant_selection": {
+    "general_quick_30s": "var_s18_promo_preview_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "denied",
+      "denial_reason": "PAYWALL_PREVIEW_ONLY"
+    },
+    "pricing_preview_expectation": {
+      "must_include_valid_invalid_and_floor_guard": true,
+      "preview_only_no_real_redeem": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "promo_preview_cacheable": true,
+    "paywall_state_cacheable": true
+  },
+  "expected_event_signals": ["promo_apply_attempt", "promo_apply_success", "promo_apply_fail"],
+  "notes": [
+    "s18 projects b03_promo_redeem_success and b04_promo_redeem_duplicate_or_ineligible into a local preview-only surface."
+  ]
+}

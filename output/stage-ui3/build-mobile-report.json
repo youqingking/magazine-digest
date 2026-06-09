@@ -1,0 +1,245 @@
+﻿{
+    "generated_at":  "2026-03-24T21:53:40.5775603+08:00",
+    "stage":  "UI3.5",
+    "source_stage":  "E1",
+    "classification":  "tool_missing",
+    "compile_success":  false,
+    "compile_readiness_passed":  false,
+    "real_compile_attempted":  false,
+    "tool_detected":  false,
+    "compile_target":  {
+                           "preferred":  "android-app-plus-local",
+                           "fallback":  "h5-preview",
+                           "verified_target":  null
+                       },
+    "environment":  {
+                        "hbuilderx_path":  null,
+                        "hbuilderx_detection_priority":  [
+                                                             "D:/HBuilderX/HBuilderX.exe",
+                                                             "HBUILDERX_EXE",
+                                                             "HBUILDERX_PATH",
+                                                             "common default paths"
+                                                         ],
+                        "project_dir":  "D:\\ws\\Playground\\mobile",
+                        "package_name":  "mobile-shell",
+                        "manifest_appid":  "__UNI__005A993"
+                    },
+    "pages":  [
+                  "pages/feed/index",
+                  "pages/search/index",
+                  "pages/detail/index",
+                  "pages/paywall/index",
+                  "pages/invite/index",
+                  "pages/profile/index",
+                  "pages/settings/index",
+                  "pages/inbox/index",
+                  "pages/follows/index",
+                  "pages/campaign/index",
+                  "uni_modules/uni-id-pages/pages/register/register",
+                  "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+                  "uni_modules/uni-id-pages/pages/login/login-withpwd",
+                  "uni_modules/uni-id-pages/pages/login/login-smscode",
+                  "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+                  "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+                  "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+                  "uni_modules/uni-id-pages/pages/register/register-by-email",
+                  "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+                  "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+                  "uni_modules/uni-id-pages/pages/common/webview/webview",
+                  "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+                  "uni_modules/uni-id-pages/pages/register/register-admin",
+                  "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+                  "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+                  "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify"
+              ],
+    "findings":  {
+                     "missing_files":  [
+
+                                       ],
+                     "cross_root_imports":  [
+                                                "mobile/pages/feed/index.vue",
+                                                "mobile/pages/search/index.vue"
+                                            ],
+                     "relevant_node_only_references":  [
+                                                           {
+                                                               "file":  "mobile/fixtures/runtime/scenarios/data1c_barrons_09022026.bundle.json",
+                                                               "pattern":  "Buffer"
+                                                           },
+                                                           {
+                                                               "file":  "mobile/fixtures/runtime/scenarios/data1c_three_release_mixed_preview.bundle.json",
+                                                               "pattern":  "Buffer"
+                                                           },
+                                                           {
+                                                               "file":  "mobile/fixtures/runtime/source-registry.generated.json",
+                                                               "pattern":  "Buffer"
+                                                           },
+                                                           {
+                                                               "file":  "mobile/fixtures/runtime/source-registry.js",
+                                                               "pattern":  "Buffer"
+                                                           }
+                                                       ],
+                     "ignored_node_only_references":  [
+                                                          {
+                                                              "file":  "mobile/uniCloud-aliyun/cloudfunctions/device-sync-co/index.obj.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-captcha/uniCloud/cloudfunctions/common/uni-captcha/index.js",
+                                                              "pattern":  "__dirname"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center/index.js",
+                                                              "pattern":  "__dirname"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-common/uniCloud/cloudfunctions/common/uni-id-common/index.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/common/sensitive-aes-cipher.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/npm/index.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/account/index.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/rsa-public-key-pem.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/qq/normalize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/share/certutil.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/weixin/normalize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/utils/weixin.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/module/facial-recognition-verify/get-auth-result.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/cache/wgt/__UNI__005A993/app-service.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/cache/wgt/__UNI__005A993/app-view.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/cache/wgt/__UNI__005A993/view.umd.min.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/cache/wgt/__UNI__005A993/__uniappquill.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/cache/wgt/__UNI__005A993/__uniappquillimageresize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/app-plus/app-service.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/app-plus/app-view.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/app-plus/view.umd.min.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/app-plus/__uniappquill.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/app-plus/__uniappquillimageresize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/web/static/js/chunk-vendors.09f914cd.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/build/web/static/js/index.c69f7a1d.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/dev/app-plus/app-service.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/dev/app-plus/app-view.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/dev/app-plus/view.umd.min.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/dev/app-plus/__uniappquill.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/dist/dev/app-plus/__uniappquillimageresize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/resources/__UNI__005A993/www/app-service.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/resources/__UNI__005A993/www/app-view.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/resources/__UNI__005A993/www/view.umd.min.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/resources/__UNI__005A993/www/__uniappquill.js",
+                                                              "pattern":  "node:"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/unpackage/resources/__UNI__005A993/www/__uniappquillimageresize.js",
+                                                              "pattern":  "Buffer"
+                                                          }
+                                                      ],
+                     "main_js_uses_create_ssr_app":  false,
+                     "main_js_uses_legacy_vue_mount":  true,
+                     "app_vue_uses_slot_shell":  false
+                 },
+    "auto_steps":  [
+                       "detected HBuilderX executable using explicit-path/env/default fallback priority",
+                       "validated required mobile shell files",
+                       "validated pages.json route list",
+                       "validated manifest.json presence",
+                       "scanned mobile sources for cross-root imports",
+                       "scanned mobile sources for Node-only API references",
+                       "checked main.js for uni-app-compatible bootstrap",
+                       "checked App.vue for uni-app-safe lifecycle shell"
+                   ],
+    "manual_steps_required":  [
+                                  "Install or locate HBuilderX",
+                                  "Open mobile/ in HBuilderX",
+                                  "Run Android app-plus local debug first",
+                                  "If Android target is unavailable, run H5 preview and capture console/runtime output"
+                              ],
+    "raw_stage_e1_conclusion":  "compile_readiness_passed_hbuilderx_missing_manual_compile_blocked",
+    "classification_notes":  "HBuilderX executable not detected; readiness cannot advance to real compile."
+}

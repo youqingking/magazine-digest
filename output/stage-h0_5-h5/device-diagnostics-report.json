@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-03-19T16:58:48.429Z",
+  "status": "ok",
+  "blocking_reason": "",
+  "settings_has_device_diagnostics": true,
+  "settings_has_error_token": false,
+  "auth_test_ready": true,
+  "auth_test_has_device_diagnostics": true,
+  "auth_test_has_buttons": true,
+  "automation_summary": "AUTOMATION_SUMMARY login=success uid=69baa9686e5d2dbbffc17773 login_error=none session=active_uni_id token=token_present device=registered db=ok device_found=yes user_device_found=yes db_error=none",
+  "login_error": "none",
+  "login_success": true,
+  "db_verification_ok": true,
+  "device_found": true,
+  "user_device_found": true,
+  "console_errors": [],
+  "page_errors": []
+}

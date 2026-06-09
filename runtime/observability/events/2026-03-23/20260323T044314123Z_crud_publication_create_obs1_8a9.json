@@ -1,0 +1,54 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:14.138Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_8a9fa5b2-30e5-4c8c-98d5-ab79f4deba5f",
+    "event_type": "crud_publication_create",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T04:43:14.123Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "publication",
+      "entity_id": "ops5_demo_publication",
+      "action": "create",
+      "input": {
+        "publication_id": "ops5_demo_publication",
+        "display_name": "OPS5 Demo Publication",
+        "locale": "zh-CN",
+        "status": "active",
+        "notes": "ops5 smoke create"
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

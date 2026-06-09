@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-03-23T12:18:04.538Z",
+  "status": "ok",
+  "index_release_count": 42,
+  "index_channel_count": 3,
+  "channel_checks": [
+    {
+      "channel": "dev",
+      "source_release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "dist_release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "status": "active"
+    },
+    {
+      "channel": "staging",
+      "source_release_id": null,
+      "dist_release_id": null,
+      "status": "idle"
+    },
+    {
+      "channel": "production",
+      "source_release_id": null,
+      "dist_release_id": null,
+      "status": "idle"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "channel_idle:staging",
+    "channel_idle:production"
+  ]
+}

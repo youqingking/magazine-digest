@@ -1,0 +1,28 @@
+{
+  "collection": "notification_campaigns",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "workflow_master",
+  "required": ["_id", "product_key", "campaign_key", "campaign_type", "status", "starts_at", "ends_at", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "campaign_key": { "type": "string" },
+    "campaign_type": { "type": "string", "enum": ["new_publish_batch", "followed_topic_alert", "inbox_digest", "revision_highlight", "operational_retouch"] },
+    "display_name": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "active", "paused", "inactive", "archived"] },
+    "priority": { "type": "string", "enum": ["low", "normal", "high", "critical"] },
+    "template_ref": { "type": "string" },
+    "targeting": { "type": "object" },
+    "channel_policy": { "type": "object" },
+    "dedupe_window_minutes": { "type": "integer", "minimum": 0 },
+    "starts_at": { "type": "string", "format": "date-time" },
+    "ends_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_notification_campaign_key", "fields": ["product_key", "campaign_key"], "unique": true },
+    { "name": "idx_notification_campaign_status", "fields": ["product_key", "status", "starts_at", "ends_at"] }
+  ]
+}

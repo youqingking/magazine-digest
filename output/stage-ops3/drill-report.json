@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-03-23T04:40:22.699Z",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "status": "passed",
+  "initial_state": {
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_scenario_id": "data1a_readers_digest_12112025"
+  },
+  "final_state": {
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_scenario_id": "data1a_readers_digest_12112025"
+  },
+  "release_notes_path": "D:\\ws\\Playground\\output\\stage-ops3\\release-notes.md",
+  "release_manifest_path": "D:\\ws\\Playground\\output\\stage-ops3\\release-manifest.json",
+  "snapshots": {
+    "pre_publish": "D:\\ws\\Playground\\output\\stage-ops3\\pre-publish-snapshot.json",
+    "post_publish": "D:\\ws\\Playground\\output\\stage-ops3\\post-publish-snapshot.json",
+    "post_rollback": "D:\\ws\\Playground\\output\\stage-ops3\\post-rollback-snapshot.json"
+  },
+  "preview_only_reject": {
+    "scenario_id": "data1c_three_release_mixed_preview",
+    "status": "warning_requires_override",
+    "decision": "hold_warning"
+  },
+  "history": [
+    {
+      "timestamp": "2026-03-23T04:40:10.765Z",
+      "action": "inspect",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:11.014Z",
+      "action": "compare",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "comparison_warnings": [
+        "override_count_changed"
+      ]
+    },
+    {
+      "timestamp": "2026-03-23T04:40:13.456Z",
+      "action": "gate",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "gate_status": "passed"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:15.056Z",
+      "action": "evaluate",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "decision": "promotable"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:16.577Z",
+      "action": "manifest",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:18.121Z",
+      "action": "release_notes",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:18.722Z",
+      "action": "snapshot_pre_publish",
+      "result": "ok",
+      "current_scenario_id": "data1a_readers_digest_12112025"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:19.712Z",
+      "action": "promote_apply",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "decision": "promotable"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:19.957Z",
+      "action": "snapshot_post_publish",
+      "result": "ok",
+      "current_scenario_id": "data2_multi_publication_release_candidate"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:20.639Z",
+      "action": "rollback",
+      "result": "ok",
+      "scenario_id": "data1a_readers_digest_12112025"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:21.172Z",
+      "action": "snapshot_post_rollback",
+      "result": "ok",
+      "current_scenario_id": "data1a_readers_digest_12112025"
+    },
+    {
+      "timestamp": "2026-03-23T04:40:22.680Z",
+      "action": "preview_only_apply_reject",
+      "result": "warning_requires_override",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "decision": "hold_warning"
+    }
+  ],
+  "dashboard": {
+    "generated_at": "2026-03-23T04:40:22.693Z",
+    "candidate_scenario_id": "data2_multi_publication_release_candidate",
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "initial_current_scenario_id": "data1a_readers_digest_12112025",
+    "post_publish_current_scenario_id": "data2_multi_publication_release_candidate",
+    "post_rollback_current_scenario_id": "data1a_readers_digest_12112025",
+    "promotion_decision": "promotable",
+    "publish_action": {
+      "timestamp": "2026-03-23T04:40:19.712Z",
+      "action": "promote_apply",
+      "result": "ok",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "decision": "promotable"
+    },
+    "rollback_action": {
+      "timestamp": "2026-03-23T04:40:20.639Z",
+      "action": "rollback",
+      "result": "ok",
+      "scenario_id": "data1a_readers_digest_12112025"
+    },
+    "accepted_anomalies": [],
+    "preview_only_reject": {
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "status": "warning_requires_override",
+      "decision": "hold_warning",
+      "warnings": [
+        "policy:preview_only_scenario:preview_only"
+      ]
+    },
+    "release_notes_path": "output/stage-ops3/release-notes.md",
+    "release_manifest_path": "output/stage-ops3/release-manifest.json"
+  }
+}

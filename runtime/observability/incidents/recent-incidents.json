@@ -1,0 +1,392 @@
+{
+  "generated_at": "2026-03-23T12:17:52.389Z",
+  "schema_version": "stage-obs1-v1",
+  "total_incidents": 8,
+  "counts_by_severity": {
+    "warning": 6,
+    "error": 2
+  },
+  "counts_by_type": {
+    "warning_budget_exceeded": 2,
+    "scenario_resolution_failed": 2,
+    "publish_failed": 4
+  },
+  "top_publications": [],
+  "top_issues": [],
+  "top_articles": [],
+  "publish_correlation": [
+    {
+      "event_id": "obs1_8eb10f18-ccb9-4820-8bd5-a32428b8248d",
+      "event_type": "channel_publish_succeeded",
+      "occurred_at": "2026-03-23T12:17:52.106Z",
+      "channel": "dev",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "related_failures": 0,
+      "related_failure_types": []
+    },
+    {
+      "event_id": "obs1_a86ecd98-d467-460e-a426-997db578b995",
+      "event_type": "channel_publish_succeeded",
+      "occurred_at": "2026-03-23T12:15:22.237Z",
+      "channel": "dev",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121517Z",
+      "related_failures": 0,
+      "related_failure_types": []
+    },
+    {
+      "event_id": "obs1_d7c43827-9073-47a2-98ee-12f77c9f4074",
+      "event_type": "channel_publish_succeeded",
+      "occurred_at": "2026-03-23T11:46:30.727Z",
+      "channel": null,
+      "release_id": null,
+      "related_failures": 0,
+      "related_failure_types": []
+    },
+    {
+      "event_id": "obs1_b2a9cfa5-b8c4-46e6-909e-5f7595d8b03b",
+      "event_type": "channel_publish_succeeded",
+      "occurred_at": "2026-03-23T11:45:51.749Z",
+      "channel": null,
+      "release_id": null,
+      "related_failures": 0,
+      "related_failure_types": []
+    },
+    {
+      "event_id": "obs1_cabbf8f0-f12d-4dee-82b7-00af778d3610",
+      "event_type": "channel_publish_succeeded",
+      "occurred_at": "2026-03-23T07:58:56.372Z",
+      "channel": null,
+      "release_id": null,
+      "related_failures": 0,
+      "related_failure_types": []
+    }
+  ],
+  "recent_incidents": [
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_814152f2-2fae-4dba-a831-4a65f8801c82",
+      "event_type": "warning_budget_exceeded",
+      "event_category": "quality",
+      "occurred_at": "2026-03-23T04:44:06.709Z",
+      "severity": "warning",
+      "source_surface": "ops",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "current_mirror",
+      "runtime_source_id": "data2_multi_publication_release_candidate",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "release_id": null,
+      "channel": null,
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_WARNING_BUDGET_EXCEEDED",
+      "error_message": null,
+      "warning_taxonomy": [
+        "economist_section_context_fallback",
+        "economist_filename_anomaly"
+      ],
+      "accepted_warning": false,
+      "details": {
+        "over_budget_warnings": [],
+        "unregistered_warnings": [
+          {
+            "issue_id": "the_economist__20260314",
+            "warning_type": "economist_section_context_fallback",
+            "count": 1,
+            "article_ids": [
+              "art_the_economist_20260314_024"
+            ]
+          },
+          {
+            "issue_id": "the_economist__20260314",
+            "warning_type": "economist_filename_anomaly",
+            "count": 1,
+            "article_ids": [
+              "art_the_economist_20260314_024"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_3211c150-8955-4e28-b9c7-88a90f884381",
+      "event_type": "scenario_resolution_failed",
+      "event_category": "incident",
+      "occurred_at": "2026-03-23T04:43:02.561Z",
+      "severity": "error",
+      "source_surface": "runtime",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "scenario_preview",
+      "runtime_source_id": "does_not_exist",
+      "scenario_id": "does_not_exist",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T044049Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_SCENARIO_MISSING",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "scenario_missing"
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_7551225c-5acf-445e-aa6a-0854251bad59",
+      "event_type": "publish_failed",
+      "event_category": "ops_release",
+      "occurred_at": "2026-03-23T04:40:22.131Z",
+      "severity": "warning",
+      "source_surface": "release",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "remote_channel_head",
+      "runtime_source_id": "data1c_three_release_mixed_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_PUBLISH_FAILED",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "warning_requires_override",
+        "warnings": [
+          "policy:preview_only_scenario:preview_only"
+        ]
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_cee508bd-4a86-4c84-a945-8e7fd04a32a7",
+      "event_type": "publish_failed",
+      "event_category": "ops_release",
+      "occurred_at": "2026-03-23T04:40:02.582Z",
+      "severity": "warning",
+      "source_surface": "release",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "remote_channel_head",
+      "runtime_source_id": "data1c_three_release_mixed_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_PUBLISH_FAILED",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "warning_requires_override",
+        "warnings": [
+          "policy:preview_only_scenario:preview_only"
+        ]
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_45682075-28d8-4efc-a4b4-cd6d0063de18",
+      "event_type": "publish_failed",
+      "event_category": "ops_release",
+      "occurred_at": "2026-03-23T04:40:00.418Z",
+      "severity": "warning",
+      "source_surface": "release",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "remote_channel_head",
+      "runtime_source_id": "data1c_three_release_mixed_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_PUBLISH_FAILED",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "warning_requires_override",
+        "warnings": [
+          "policy:preview_only_scenario:preview_only"
+        ]
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_1cec7e46-62a1-4fbb-a2e2-5efee373d5b5",
+      "event_type": "scenario_resolution_failed",
+      "event_category": "incident",
+      "occurred_at": "2026-03-23T04:39:38.615Z",
+      "severity": "error",
+      "source_surface": "runtime",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "remote_channel_head",
+      "runtime_source_id": "does_not_exist",
+      "scenario_id": "does_not_exist",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_SCENARIO_MISSING",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "scenario_missing"
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_d8781680-a844-4f99-8b87-60b992c069d9",
+      "event_type": "publish_failed",
+      "event_category": "ops_release",
+      "occurred_at": "2026-03-23T04:39:37.662Z",
+      "severity": "warning",
+      "source_surface": "release",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "remote_channel_head",
+      "runtime_source_id": "data1c_three_release_mixed_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T043800Z",
+      "channel": "dev",
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_PUBLISH_FAILED",
+      "error_message": null,
+      "warning_taxonomy": null,
+      "accepted_warning": false,
+      "details": {
+        "reason": "warning_requires_override",
+        "warnings": [
+          "policy:preview_only_scenario:preview_only"
+        ]
+      }
+    },
+    {
+      "schema_version": "stage-obs1-v1",
+      "event_id": "obs1_05dedc1c-7425-4c70-aef6-60d6f598a19c",
+      "event_type": "warning_budget_exceeded",
+      "event_category": "quality",
+      "occurred_at": "2026-03-22T15:35:20.586Z",
+      "severity": "warning",
+      "source_surface": "ops",
+      "session_id": null,
+      "run_id": "manual",
+      "user_mode": "operator",
+      "app_env": "local",
+      "product_key": "demo_cn_content",
+      "runtime_source_mode": "current_mirror",
+      "runtime_source_id": "data2_multi_publication_release_candidate",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "release_id": null,
+      "channel": null,
+      "baseline_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "publication_id": null,
+      "issue_id": null,
+      "article_id": null,
+      "canonical_section_key": null,
+      "discovery_bucket": null,
+      "error_code": "OBS1_WARNING_BUDGET_EXCEEDED",
+      "error_message": null,
+      "warning_taxonomy": [
+        "economist_section_context_fallback",
+        "economist_filename_anomaly"
+      ],
+      "accepted_warning": false,
+      "details": {
+        "over_budget_warnings": [],
+        "unregistered_warnings": [
+          {
+            "issue_id": "the_economist__20260314",
+            "warning_type": "economist_section_context_fallback",
+            "count": 1,
+            "article_ids": [
+              "art_the_economist_20260314_024"
+            ]
+          },
+          {
+            "issue_id": "the_economist__20260314",
+            "warning_type": "economist_filename_anomaly",
+            "count": 1,
+            "article_ids": [
+              "art_the_economist_20260314_024"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "collection": "user_profiles",
+  "version": "stage-b-2026-03-16",
+  "scope": "global",
+  "write_model": "master_data",
+  "required": ["_id", "phone", "auth_state", "consent_accepted", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "phone": { "type": "string" },
+    "auth_state": { "type": "string", "enum": ["anonymous", "verified", "disabled"] },
+    "consent_accepted": { "type": "boolean" },
+    "consent_accepted_at": { "type": "string", "format": "date-time" },
+    "display_name": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_phone", "fields": ["phone"], "unique": true },
+    { "name": "idx_auth_state", "fields": ["auth_state", "updated_at"] }
+  ]
+}

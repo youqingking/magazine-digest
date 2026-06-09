@@ -1,0 +1,26 @@
+{
+  "content_ref": {
+    "product_key": "demo_audio_digest",
+    "source_id": "show_deep_research_radio",
+    "source_key": "deep_research_radio",
+    "content_item_id": "pod_ep_204",
+    "content_key": "deep_research_radio_204",
+    "language": "en"
+  },
+  "content_detail_envelope": {
+    "content_ref": "content_ref",
+    "resolved_variant_key": null,
+    "title": "Episode 204 Summary",
+    "body": "Transcript-derived longform summary for Deep Research Radio episode 204.",
+    "body_format": "markdown",
+    "tags": [
+      "podcast",
+      "transcript_first_longform"
+    ],
+    "entitlement_snapshot": null,
+    "quota_snapshot": null,
+    "runtime_mode": "local",
+    "source": "family_podcast_transcript_adoption",
+    "fetched_at": "2026-03-24T00:00:00+08:00"
+  }
+}

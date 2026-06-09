@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-03-21T08:34:01.871Z",
+  "selected_before": "data1a_readers_digest_12112025",
+  "selected_after_select": "data1c_three_release_mixed_preview",
+  "current_after_publish": "data1c_three_release_mixed_preview",
+  "current_after_rollback": "data1a_readers_digest_12112025",
+  "selected_after_rollback": "data1a_readers_digest_12112025",
+  "scenario_list_before": [
+    {
+      "scenario_id": "data1a_readers_digest_12112025",
+      "status": "active",
+      "is_selected_for_current": true
+    },
+    {
+      "scenario_id": "data1c_barrons_09022026",
+      "status": "active",
+      "is_selected_for_current": false
+    },
+    {
+      "scenario_id": "data1c_the_atlantic_012026",
+      "status": "active",
+      "is_selected_for_current": false
+    },
+    {
+      "scenario_id": "data1c_the_economist_20260314",
+      "status": "active",
+      "is_selected_for_current": false
+    },
+    {
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "status": "active",
+      "is_selected_for_current": false
+    }
+  ],
+  "scenario_list_after": [
+    {
+      "scenario_id": "data1a_readers_digest_12112025",
+      "status": "active",
+      "is_selected_for_current": true,
+      "selected_for_current_at": "2026-03-21T08:34:01.713Z"
+    },
+    {
+      "scenario_id": "data1c_barrons_09022026",
+      "status": "active",
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_the_atlantic_012026",
+      "status": "active",
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_the_economist_20260314",
+      "status": "active",
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "status": "active",
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    }
+  ]
+}

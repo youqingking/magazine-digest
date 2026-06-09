@@ -1,0 +1,32 @@
+{
+  "expected_variant_selection": {
+    "adult_quick_30s": "var_s08_pricing_lab_adult_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "denied",
+      "denial_reason": "QUOTA_EXHAUSTED_PREVIEW_ONLY"
+    },
+    "pricing_preview_expectation": {
+      "must_include_campaign_bucket_copy": true,
+      "must_include_internal_beta_preview": true,
+      "must_include_floor_guard_preview": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "pricing_preview_cacheable": true,
+    "experiment_assignment_cacheable": true
+  },
+  "expected_event_signals": ["paywall_impression", "plan_select"],
+  "notes": ["The campaign preview does not create orders; it only prepares later-stage commercial smoke inputs."]
+}

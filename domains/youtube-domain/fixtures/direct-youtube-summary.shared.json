@@ -1,0 +1,49 @@
+{
+  "content_ref": {
+    "product_key": "demo_cn_content",
+    "source_id": "yt_ch_ai_briefing",
+    "source_key": "ai_briefing",
+    "content_item_id": "yt_vid_2026_03_24_001",
+    "content_key": "ai_briefing_2026_03_24",
+    "language": "zh-CN"
+  },
+  "content_variant_key": {
+    "product_key": "demo_cn_content",
+    "content_item_id": "yt_vid_2026_03_24_001",
+    "language": "zh-CN",
+    "audience_segment": "general",
+    "reading_mode": "quick_30s",
+    "revision": 2
+  },
+  "content_list_item": {
+    "content_ref": "content_ref",
+    "primary_variant_key": "content_variant_key",
+    "title": "AI Briefing March 24",
+    "summary": "Short summary projection",
+    "tags": [
+      "ai",
+      "video_summary"
+    ],
+    "publish_status": "published",
+    "available_from": "2026-03-24T09:00:00+08:00",
+    "available_until": null,
+    "update_type": "revision",
+    "update_priority": 80
+  },
+  "content_detail_envelope": {
+    "content_ref": "content_ref",
+    "resolved_variant_key": "content_variant_key",
+    "title": "AI Briefing March 24",
+    "body": "Normalized summary body for AI Briefing March 24.",
+    "body_format": "markdown",
+    "tags": [
+      "ai",
+      "video_summary"
+    ],
+    "entitlement_snapshot": null,
+    "quota_snapshot": null,
+    "runtime_mode": "local",
+    "source": "direct_youtube_summary_adoption",
+    "fetched_at": "2026-03-24T00:00:00+08:00"
+  }
+}

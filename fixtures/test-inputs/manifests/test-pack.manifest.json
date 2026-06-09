@@ -1,0 +1,152 @@
+{
+  "pack_id": "synthetic_test_content_pack_stage_x",
+  "product": {
+    "product_key": "demo_cn_content",
+    "product_id": "prod_demo_cn_content",
+    "display_name": "Demo CN Content",
+    "default_language": "zh-CN",
+    "active_status": "active"
+  },
+  "defaults": {
+    "timezone": "Asia/Shanghai",
+    "money_unit": "fen",
+    "discount_canonical": "price_multiplier_basis_points",
+    "reward_canonical": "vip_days",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "cache_ttl_seconds": 3600
+  },
+  "surface_status": [
+    { "surface": "bootstrap-config", "status": "implemented_now" },
+    { "surface": "content-sync-delta", "status": "implemented_now" },
+    { "surface": "content-detail", "status": "implemented_now" },
+    { "surface": "entitlement-snapshot", "status": "implemented_now" },
+    { "surface": "pricing-preview", "status": "implemented_now" },
+    { "surface": "experiment-assign", "status": "implemented_now" },
+    { "surface": "event-ingest", "status": "implemented_now" },
+    { "surface": "home-discovery", "status": "implemented_now" },
+    { "surface": "search-content", "status": "implemented_now" },
+    { "surface": "follow-catalog", "status": "implemented_now" },
+    { "surface": "follow-toggle", "status": "implemented_now" },
+    { "surface": "notification-inbox", "status": "implemented_now" },
+    { "surface": "notification-prefs", "status": "implemented_now" },
+    { "surface": "mark-inbox-read", "status": "implemented_now" },
+    { "surface": "content-resume", "status": "implemented_now" },
+    { "surface": "save-for-later", "status": "implemented_now" },
+    { "surface": "publish-batch-summary", "status": "implemented_now" },
+    { "surface": "commercial-offer", "status": "implemented_now" },
+    { "surface": "quota-status", "status": "implemented_now" },
+    { "surface": "promo-preview", "status": "implemented_now" },
+    { "surface": "referral-summary", "status": "implemented_now" },
+    { "surface": "reward-summary", "status": "implemented_now" },
+    { "surface": "campaign-landing", "status": "implemented_now" },
+    { "surface": "profile-benefits", "status": "implemented_now" },
+    { "surface": "billing.createOrder", "status": "future_stage" },
+    { "surface": "billing.confirmOrder", "status": "future_stage" },
+    { "surface": "billing.handleWebhook", "status": "future_stage" },
+    { "surface": "promo.redeem", "status": "stub_only" },
+    { "surface": "growth.bindReferral", "status": "stub_only" },
+    { "surface": "growth.grantReward", "status": "stub_only" }
+  ],
+  "pricing_plans": [
+    {
+      "_id": "plan_demo_monthly",
+      "plan_key": "monthly_standard",
+      "display_name": "Monthly Standard",
+      "price_fen": 3000,
+      "currency": "CNY",
+      "billing_cycle": "monthly",
+      "price_floor_fen": 900,
+      "status": "active"
+    },
+    {
+      "_id": "plan_demo_annual",
+      "plan_key": "annual_standard",
+      "display_name": "Annual Standard",
+      "price_fen": 28800,
+      "currency": "CNY",
+      "billing_cycle": "annual",
+      "price_floor_fen": 8640,
+      "status": "active"
+    }
+  ],
+  "promo_campaigns": [
+    {
+      "_id": "camp_internal_beta_30off",
+      "campaign_key": "internal_beta_30off",
+      "display_name": "Internal Beta 30 Off",
+      "campaign_type": "internal_beta",
+      "price_multiplier_basis_points": 3000,
+      "stackable": false,
+      "status": "active",
+      "starts_at": "2026-03-16T00:00:00+08:00",
+      "ends_at": "2026-04-30T23:59:59+08:00"
+    },
+    {
+      "_id": "camp_preview_floor_guard",
+      "campaign_key": "preview_floor_guard",
+      "display_name": "Preview Floor Guard",
+      "campaign_type": "campaign_preview",
+      "price_multiplier_basis_points": 1500,
+      "stackable": false,
+      "status": "active",
+      "starts_at": "2026-03-16T00:00:00+08:00",
+      "ends_at": "2026-04-30T23:59:59+08:00"
+    }
+  ],
+  "promo_codes": [
+    {
+      "_id": "code_internal_beta_a001",
+      "campaign_id": "camp_internal_beta_30off",
+      "code": "BETA30A001",
+      "status": "active"
+    },
+    {
+      "_id": "code_preview_floor_b015",
+      "campaign_id": "camp_preview_floor_guard",
+      "code": "FLOOR15B015",
+      "status": "active"
+    },
+    {
+      "_id": "code_campaign_preview_c070",
+      "campaign_id": "camp_internal_beta_30off",
+      "code": "CAMPAIGN70",
+      "status": "active"
+    }
+  ],
+  "experiments": [
+    {
+      "_id": "exp_paywall_layout_v1",
+      "experiment_key": "paywall_layout_v1",
+      "status": "running",
+      "assignment_unit": "installation_id",
+      "assignment_version": 1,
+      "bucket_definitions": [
+        { "bucket_key": "A", "weight": 50 },
+        { "bucket_key": "B", "weight": 50 }
+      ]
+    },
+    {
+      "_id": "exp_pricing_preview_copy_v1",
+      "experiment_key": "pricing_preview_copy_v1",
+      "status": "running",
+      "assignment_unit": "installation_id",
+      "assignment_version": 2,
+      "bucket_definitions": [
+        { "bucket_key": "control", "weight": 50 },
+        { "bucket_key": "campaign_banner", "weight": 50 }
+      ]
+    },
+    {
+      "_id": "exp_campaign_landing_copy_v1",
+      "experiment_key": "campaign_landing_copy_v1",
+      "status": "running",
+      "assignment_unit": "installation_id",
+      "assignment_version": 1,
+      "bucket_definitions": [
+        { "bucket_key": "baseline", "weight": 50 },
+        { "bucket_key": "discount_focus", "weight": 50 }
+      ]
+    }
+  ],
+  "tag_catalog": ["economy", "ai", "policy", "market", "productivity"]
+}

@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-03-23T04:50:22.722Z",
+  "status": "ok",
+  "remote_base_url": "http://127.0.0.1:4184",
+  "channel": "dev",
+  "fallback_used": true,
+  "runtime_source": "remote_channel_head_with_local_fallback",
+  "remote_ready": false,
+  "fallback_release_id": null,
+  "item_count": 3
+}

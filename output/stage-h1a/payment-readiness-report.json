@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "stage": "H1A_PAYMENT_READINESS",
+  "generated_at": "2026-03-20T05:03:01.762Z",
+  "project_type": "uni-app",
+  "payment_plugin_route": "uni-pay",
+  "route_fixed": true,
+  "frozen_contracts_preserved": true,
+  "docs_complete": true,
+  "merchant_inputs_documented": true,
+  "example_runbook_documented": true,
+  "h1b_entry_conditions_documented": true,
+  "h1a_complete": true,
+  "h1b_ready": false,
+  "needs_human_count": 3,
+  "issue_count": 4,
+  "app_owned_uni_app_x_markers": [],
+  "route_evidence": [
+    "mobile/App.vue",
+    "mobile/main.js",
+    "mobile/pages.json",
+    "mobile/unpackage/dist/dev/app-plus/manifest.json:useragent.value=uni-app"
+  ],
+  "git": {
+    "branch": "payment-readiness/stage-h1a",
+    "head": "6c682fd0977b0591108a3a2364424618d9dae68b"
+  },
+  "artifacts": {
+    "report": "output/stage-h1a/payment-readiness-report.json",
+    "issues": "output/stage-h1a/issues.json"
+  }
+}

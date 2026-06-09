@@ -1,0 +1,907 @@
+{
+  "metadata": {
+    "exported_at": "2026-03-17T15:41:49.715Z",
+    "canonical_source": "fixtures/test-inputs/scenarios + fixtures/test-inputs/publications + fixtures/test-inputs/manifests",
+    "product_key": "demo_cn_content",
+    "scenario_id": "s12_followed_topic_alert",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "source_kind": "synthetic_test_pack",
+    "business_flow_aliases": []
+  },
+  "surfaceStatus": [
+    {
+      "surface": "bootstrap-config",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-sync-delta",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-detail",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "entitlement-snapshot",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "pricing-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "experiment-assign",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "event-ingest",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "home-discovery",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "search-content",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-catalog",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-toggle",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-inbox",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-prefs",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "mark-inbox-read",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-resume",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "save-for-later",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "publish-batch-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "commercial-offer",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "quota-status",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "promo-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "referral-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "reward-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "campaign-landing",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "profile-benefits",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "billing.createOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.confirmOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.handleWebhook",
+      "status": "future_stage"
+    },
+    {
+      "surface": "promo.redeem",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.bindReferral",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.grantReward",
+      "status": "stub_only"
+    }
+  ],
+  "scenarioMeta": {
+    "scenario_id": "s12_followed_topic_alert",
+    "title": "Followed Topic Alert",
+    "objective": "Verify followed publication and topic alerts become inbox items and followed_updates modules.",
+    "product_key": "demo_cn_content",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "publications": [
+      "ai_digest"
+    ],
+    "article_ids": [
+      "art_s12_policy_stack"
+    ],
+    "covered_risks": [
+      "follow_match",
+      "followed_updates",
+      "inbox_follow_alert"
+    ],
+    "intended_stage": [
+      "F1",
+      "G"
+    ],
+    "depends_on_surfaces": [
+      "follow-catalog",
+      "follow-toggle",
+      "notification-inbox",
+      "home-discovery"
+    ],
+    "articles": [
+      {
+        "article_id": "art_s12_policy_stack",
+        "article_uid": "syn_article_s12_policy_stack",
+        "article_key": "policy_stack_20260317",
+        "publication_key": "ai_digest",
+        "title": "模型治理周报把政策条目合成跟进清单",
+        "summary": "用于 follow topic alert 的最小内容样本。",
+        "tags": [
+          "ai",
+          "policy"
+        ],
+        "status": "active",
+        "created_at": "2026-03-17T07:50:00+08:00",
+        "updated_at": "2026-03-17T09:16:00+08:00"
+      }
+    ],
+    "runtime": {
+      "feature_flags": [],
+      "experiment_ids": [
+        "exp_paywall_layout_v1"
+      ],
+      "entitlement_snapshot": {
+        "subject_id": "inst_s12_reader",
+        "access_state": "active",
+        "decision_source": "synthetic_access_grant",
+        "quota_remaining": 4,
+        "entitlement_snapshot": {
+          "grant_source": "stage_f1_fixture",
+          "premium_tier": "free"
+        },
+        "denial_reason": null
+      },
+      "pricing_preview": {
+        "plan_ids": [
+          "plan_demo_monthly"
+        ],
+        "promo_codes": []
+      },
+      "experiment_assign": {
+        "installation_id": "inst_s12_reader",
+        "experiment_id": "exp_paywall_layout_v1",
+        "bucket_key": "A",
+        "assignment_source": "synthetic_fixture"
+      },
+      "sync": {
+        "tombstones": []
+      },
+      "publish_batches": [
+        {
+          "_id": "pb_s12_follow_alert",
+          "product_key": "demo_cn_content",
+          "batch_key": "follow_alert_20260317",
+          "batch_type": "new_publish",
+          "title": "关注主题更新",
+          "change_summary": "你关注的 ai / policy 有一条新内容。",
+          "status": "published",
+          "scheduled_at": "2026-03-17T09:00:00+08:00",
+          "published_at": "2026-03-17T09:10:00+08:00",
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "content_count": 1,
+          "created_at": "2026-03-17T08:40:00+08:00",
+          "updated_at": "2026-03-17T09:10:00+08:00"
+        }
+      ],
+      "user_follows": [
+        {
+          "_id": "follow_s12_ai_digest",
+          "product_key": "demo_cn_content",
+          "user_id": "user_local_stage_e0",
+          "subject_type": "publication",
+          "subject_key": "ai_digest",
+          "status": "active",
+          "notify_level": "immediate",
+          "source_surface": "follow_catalog",
+          "created_at": "2026-03-17T08:00:00+08:00",
+          "updated_at": "2026-03-17T08:00:00+08:00"
+        },
+        {
+          "_id": "follow_s12_policy",
+          "product_key": "demo_cn_content",
+          "user_id": "user_local_stage_e0",
+          "subject_type": "topic_tag",
+          "subject_key": "policy",
+          "status": "active",
+          "notify_level": "immediate",
+          "source_surface": "follow_catalog",
+          "created_at": "2026-03-17T08:05:00+08:00",
+          "updated_at": "2026-03-17T08:05:00+08:00"
+        }
+      ],
+      "user_notification_prefs": {
+        "_id": "unp_s12_reader",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "status": "active",
+        "push_enabled": true,
+        "inbox_enabled": true,
+        "digest_enabled": true,
+        "follow_alert_level": "immediate",
+        "breaking_push_override": true,
+        "quiet_hours_enabled": false,
+        "quiet_hours_start_minute": 1320,
+        "quiet_hours_end_minute": 420,
+        "timezone": "Asia/Shanghai",
+        "digest_frequency": "daily",
+        "created_at": "2026-03-17T08:00:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      },
+      "notification_inbox": [
+        {
+          "_id": "inbox_s12_follow",
+          "product_key": "demo_cn_content",
+          "user_id": "user_local_stage_e0",
+          "inbox_key": "follow:pb_s12_follow_alert:user_local_stage_e0",
+          "publish_batch_id": "pb_s12_follow_alert",
+          "article_id": "art_s12_policy_stack",
+          "source_type": "follow_subject",
+          "source_id": "policy",
+          "title": "你关注的 policy 有新内容",
+          "body_preview": "ai_digest 发布了一条政策整理内容。",
+          "change_summary": "follow match",
+          "action_type": "open_article",
+          "action_target": "art_s12_policy_stack",
+          "status": "unread",
+          "priority": "normal",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "created_at": "2026-03-17T09:10:00+08:00",
+          "updated_at": "2026-03-17T09:10:00+08:00"
+        }
+      ],
+      "user_content_state": [
+        {
+          "_id": "ucs_s12_policy_stack",
+          "product_key": "demo_cn_content",
+          "user_id": "user_local_stage_e0",
+          "article_id": "art_s12_policy_stack",
+          "publish_batch_id": "pb_s12_follow_alert",
+          "reading_state": "unseen",
+          "bookmark_status": "none",
+          "newness_state": "new",
+          "resume_progress_basis_points": 0,
+          "created_at": "2026-03-17T09:10:00+08:00",
+          "updated_at": "2026-03-17T09:10:00+08:00"
+        }
+      ],
+      "inbox_last_seen_at": "2026-03-17T08:55:00+08:00",
+      "last_seen_publish_batch": "pb_s10_previous"
+    }
+  },
+  "expectedOutcomes": {
+    "expected_variant_selection": {
+      "art_s12_policy_stack_general_quick_30s": "var_s12_policy_stack_general_quick_r1"
+    },
+    "expected_fallback_behavior": {
+      "can_fallback_to": [
+        "teen",
+        "general"
+      ],
+      "cannot_fallback_to": [
+        "adult"
+      ],
+      "selection": "exact_match"
+    },
+    "expected_unavailable_reason": null,
+    "expected_paywall_behavior": {
+      "entitlement_expectation": "active_access",
+      "pricing_preview_expectation": "non_blocking"
+    },
+    "expected_sync_behavior": {
+      "follow_alert_surface_expected": true,
+      "notify_level": "followed_only"
+    },
+    "expected_cache_behavior": {
+      "follow_state_local_first": true,
+      "inbox_persistent": true
+    },
+    "expected_event_signals": [
+      "follow_add",
+      "notification_received",
+      "inbox_open"
+    ],
+    "notes": [
+      "关注 publication 和 topic tag 都应命中 followed_updates。"
+    ]
+  },
+  "bootstrapConfig": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "config_source": "synthetic_test_pack",
+      "timezone": "Asia/Shanghai",
+      "money_unit": "fen",
+      "discount_canonical": "price_multiplier_basis_points",
+      "reward_canonical": "vip_days",
+      "product": {
+        "product_key": "demo_cn_content",
+        "product_id": "prod_demo_cn_content",
+        "display_name": "Demo CN Content",
+        "default_language": "zh-CN",
+        "active_status": "active"
+      },
+      "feature_flags": [],
+      "experiments": [
+        {
+          "experiment_id": "exp_paywall_layout_v1",
+          "experiment_key": "paywall_layout_v1",
+          "assignment_unit": "installation_id",
+          "assignment_version": 1,
+          "status": "running"
+        }
+      ]
+    }
+  },
+  "contentSyncDelta": {
+    "response": {
+      "server_cursor": "2026-03-17T09:16:00+08:00|var_s12_policy_stack_general_quick_r1",
+      "has_more": false,
+      "items": [
+        {
+          "entity_type": "article",
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "publication_id": "pub_ai_digest",
+          "publication_key": "ai_digest",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "status": "active",
+          "updated_at": "2026-03-17T09:16:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s12_policy_stack_general_quick_r1",
+          "article_id": "art_s12_policy_stack",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:10:00+08:00",
+          "revision": 1,
+          "publish_batch_id": "pb_s12_follow_alert",
+          "update_type": "new_publish",
+          "update_priority": "high",
+          "change_summary": "关注主题命中新内容",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null,
+          "content_hash": "afbb6d89c78b4079d2c40487204e081f0817587e",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:16:00+08:00"
+        }
+      ],
+      "tombstones": []
+    }
+  },
+  "contentDetail": {
+    "responses": {
+      "art_s12_policy_stack|zh-CN|teen|quick_30s": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s12_policy_stack_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "markdown_body": "一句话摘要：模型治理周报把新政策条目和团队待办合成一张跟进清单，方便追踪主题变化。\n\n关键要点：\n- 文章同时命中 publication `ai_digest` 和 tag `policy`。\n- 这让 follow-catalog 和 follow-toggle 的双维度联动可以被测试。\n- 同一条内容应该出现在 followed_updates，也应该生成 inbox alert。\n\n为什么重要：\n它是验证 follow 边命中新内容时，首页模块、inbox 列表和事件埋点能否一起工作的最小样本。",
+          "content_hash": "afbb6d89c78b4079d2c40487204e081f0817587e",
+          "premium_tier": "free",
+          "publish_batch_id": "pb_s12_follow_alert",
+          "update_type": "new_publish",
+          "update_priority": "high",
+          "change_summary": "关注主题命中新内容",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s12_policy_stack|zh-CN|teen|deep_3m": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      },
+      "art_s12_policy_stack|zh-CN|general|quick_30s": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s12_policy_stack_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "markdown_body": "一句话摘要：模型治理周报把新政策条目和团队待办合成一张跟进清单，方便追踪主题变化。\n\n关键要点：\n- 文章同时命中 publication `ai_digest` 和 tag `policy`。\n- 这让 follow-catalog 和 follow-toggle 的双维度联动可以被测试。\n- 同一条内容应该出现在 followed_updates，也应该生成 inbox alert。\n\n为什么重要：\n它是验证 follow 边命中新内容时，首页模块、inbox 列表和事件埋点能否一起工作的最小样本。",
+          "content_hash": "afbb6d89c78b4079d2c40487204e081f0817587e",
+          "premium_tier": "free",
+          "publish_batch_id": "pb_s12_follow_alert",
+          "update_type": "new_publish",
+          "update_priority": "high",
+          "change_summary": "关注主题命中新内容",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      },
+      "art_s12_policy_stack|zh-CN|general|deep_3m": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      },
+      "art_s12_policy_stack|zh-CN|adult|quick_30s": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s12_policy_stack_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "markdown_body": "一句话摘要：模型治理周报把新政策条目和团队待办合成一张跟进清单，方便追踪主题变化。\n\n关键要点：\n- 文章同时命中 publication `ai_digest` 和 tag `policy`。\n- 这让 follow-catalog 和 follow-toggle 的双维度联动可以被测试。\n- 同一条内容应该出现在 followed_updates，也应该生成 inbox alert。\n\n为什么重要：\n它是验证 follow 边命中新内容时，首页模块、inbox 列表和事件埋点能否一起工作的最小样本。",
+          "content_hash": "afbb6d89c78b4079d2c40487204e081f0817587e",
+          "premium_tier": "free",
+          "publish_batch_id": "pb_s12_follow_alert",
+          "update_type": "new_publish",
+          "update_priority": "high",
+          "change_summary": "关注主题命中新内容",
+          "notify_level": "followed_only",
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s12_policy_stack|zh-CN|adult|deep_3m": {
+        "article": {
+          "article_id": "art_s12_policy_stack",
+          "article_key": "policy_stack_20260317",
+          "title": "模型治理周报把政策条目合成跟进清单",
+          "summary": "用于 follow topic alert 的最小内容样本。"
+        },
+        "resolved_variant": null,
+        "selection_reason": null,
+        "fallback_applied": false,
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      }
+    }
+  },
+  "entitlementSnapshot": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "subject_id": "inst_s12_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 4,
+      "entitlement_snapshot": {
+        "grant_source": "stage_f1_fixture",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    }
+  },
+  "pricingPreview": {
+    "responses": [
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_monthly",
+        "original_amount_fen": 3000,
+        "final_amount_fen": 3000,
+        "price_floor_fen": 900,
+        "applied_price_multiplier_basis_points": 10000,
+        "floor_applied": false,
+        "campaign_id": null,
+        "denial_reason": null
+      }
+    ]
+  },
+  "experimentAssign": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "installation_id": "inst_s12_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "experiment_key": "paywall_layout_v1",
+      "assignment_version": 1,
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture",
+      "cache_ttl_seconds": 3600
+    }
+  },
+  "discoveryCatalog": {
+    "items": [
+      {
+        "article_id": "art_s12_policy_stack",
+        "article_key": "policy_stack_20260317",
+        "title": "模型治理周报把政策条目合成跟进清单",
+        "summary": "用于 follow topic alert 的最小内容样本。",
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "tags": [
+          "ai",
+          "policy"
+        ],
+        "available_modes": [
+          "quick_30s"
+        ],
+        "available_audiences": [
+          "general"
+        ],
+        "updated_at": "2026-03-17T09:16:00+08:00",
+        "publish_batch_id": "pb_s12_follow_alert",
+        "update_type": "new_publish",
+        "update_priority": "high",
+        "change_summary": "关注主题命中新内容",
+        "notify_level": "followed_only",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:10:00+08:00",
+        "available_until": null,
+        "primary_reading_mode": "quick_30s",
+        "primary_audience": "general"
+      }
+    ]
+  },
+  "followCatalog": {
+    "publications": [
+      {
+        "publication_id": "pub_world_brief",
+        "publication_key": "world_brief",
+        "display_name": "World Brief",
+        "description": "Synthetic global affairs briefs for Stage X smoke inputs."
+      },
+      {
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "display_name": "AI Digest",
+        "description": "Synthetic AI product and policy summaries for runtime tests."
+      },
+      {
+        "publication_id": "pub_market_watch",
+        "publication_key": "market_watch",
+        "display_name": "Market Watch",
+        "description": "Synthetic economy and market coverage for pricing and feed smoke."
+      }
+    ],
+    "tags": [
+      {
+        "tag_key": "economy",
+        "display_name": "economy"
+      },
+      {
+        "tag_key": "ai",
+        "display_name": "ai"
+      },
+      {
+        "tag_key": "policy",
+        "display_name": "policy"
+      },
+      {
+        "tag_key": "market",
+        "display_name": "market"
+      },
+      {
+        "tag_key": "productivity",
+        "display_name": "productivity"
+      }
+    ]
+  },
+  "publishBatches": {
+    "items": [
+      {
+        "_id": "pb_s12_follow_alert",
+        "product_key": "demo_cn_content",
+        "batch_key": "follow_alert_20260317",
+        "batch_type": "new_publish",
+        "title": "关注主题更新",
+        "change_summary": "你关注的 ai / policy 有一条新内容。",
+        "status": "published",
+        "scheduled_at": "2026-03-17T09:00:00+08:00",
+        "published_at": "2026-03-17T09:10:00+08:00",
+        "available_from": "2026-03-17T09:10:00+08:00",
+        "notify_level": "followed_only",
+        "is_breaking": false,
+        "content_count": 1,
+        "created_at": "2026-03-17T08:40:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ]
+  },
+  "userFollows": {
+    "items": [
+      {
+        "_id": "follow_s12_ai_digest",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "subject_type": "publication",
+        "subject_key": "ai_digest",
+        "status": "active",
+        "notify_level": "immediate",
+        "source_surface": "follow_catalog",
+        "created_at": "2026-03-17T08:00:00+08:00",
+        "updated_at": "2026-03-17T08:00:00+08:00"
+      },
+      {
+        "_id": "follow_s12_policy",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "subject_type": "topic_tag",
+        "subject_key": "policy",
+        "status": "active",
+        "notify_level": "immediate",
+        "source_surface": "follow_catalog",
+        "created_at": "2026-03-17T08:05:00+08:00",
+        "updated_at": "2026-03-17T08:05:00+08:00"
+      }
+    ]
+  },
+  "notificationPrefs": {
+    "response": {
+      "_id": "unp_s12_reader",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "status": "active",
+      "push_enabled": true,
+      "inbox_enabled": true,
+      "digest_enabled": true,
+      "follow_alert_level": "immediate",
+      "breaking_push_override": true,
+      "quiet_hours_enabled": false,
+      "quiet_hours_start_minute": 1320,
+      "quiet_hours_end_minute": 420,
+      "timezone": "Asia/Shanghai",
+      "digest_frequency": "daily",
+      "created_at": "2026-03-17T08:00:00+08:00",
+      "updated_at": "2026-03-17T09:10:00+08:00"
+    }
+  },
+  "notificationInbox": {
+    "items": [
+      {
+        "_id": "inbox_s12_follow",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "inbox_key": "follow:pb_s12_follow_alert:user_local_stage_e0",
+        "publish_batch_id": "pb_s12_follow_alert",
+        "article_id": "art_s12_policy_stack",
+        "source_type": "follow_subject",
+        "source_id": "policy",
+        "title": "你关注的 policy 有新内容",
+        "body_preview": "ai_digest 发布了一条政策整理内容。",
+        "change_summary": "follow match",
+        "action_type": "open_article",
+        "action_target": "art_s12_policy_stack",
+        "status": "unread",
+        "priority": "normal",
+        "notify_level": "followed_only",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:10:00+08:00",
+        "created_at": "2026-03-17T09:10:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ],
+    "inbox_last_seen_at": "2026-03-17T08:55:00+08:00"
+  },
+  "userContentState": {
+    "items": [
+      {
+        "_id": "ucs_s12_policy_stack",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s12_policy_stack",
+        "publish_batch_id": "pb_s12_follow_alert",
+        "reading_state": "unseen",
+        "bookmark_status": "none",
+        "newness_state": "new",
+        "resume_progress_basis_points": 0,
+        "created_at": "2026-03-17T09:10:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ],
+    "last_seen_publish_batch": "pb_s10_previous"
+  },
+  "notificationDeliveries": {
+    "items": []
+  },
+  "stageG": {
+    "commercialOffer": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "available_plans": [
+          {
+            "pricing_plan_id": "plan_demo_monthly",
+            "plan_key": "monthly_standard",
+            "display_name": "Monthly Standard",
+            "billing_cycle": "monthly",
+            "original_amount_fen": 3000,
+            "display_amount_fen": 3000,
+            "price_floor_fen": 900,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          },
+          {
+            "pricing_plan_id": "plan_demo_annual",
+            "plan_key": "annual_standard",
+            "display_name": "Annual Standard",
+            "billing_cycle": "annual",
+            "original_amount_fen": 28800,
+            "display_amount_fen": 28800,
+            "price_floor_fen": 8640,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          }
+        ],
+        "active_campaign_adjustment": null,
+        "experiment_offer_hint": {
+          "experiment_id": "exp_paywall_layout_v1",
+          "bucket_key": "A"
+        },
+        "promo_input_capability": {
+          "enabled": true,
+          "preview_only": true
+        },
+        "floor_guard_explanation": "Display preview still obeys canonical floor guard.",
+        "quota_reason": null,
+        "entitlement_reason": null,
+        "audience_context_hint": null
+      }
+    },
+    "quotaStatus": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "free_quota_total": 0,
+        "free_quota_used": 0,
+        "quota_remaining": 0,
+        "paywall_triggered": false,
+        "reset_at": null,
+        "reset_timezone": "Asia/Shanghai",
+        "quota_reason": null,
+        "reset_hint": null
+      }
+    },
+    "promoPreview": {
+      "default_plan_id": null,
+      "responses": []
+    },
+    "referralSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "invite_code": null,
+        "share_preview": "",
+        "inviter_summary": "",
+        "invitee_summary": "",
+        "reward_rule_summary": []
+      }
+    },
+    "rewardSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "ledger_preview": [],
+        "vip_days_total": 0,
+        "active_vip_days": 0,
+        "status_summary": "none"
+      }
+    },
+    "campaignLanding": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "campaign_id": null,
+        "campaign_key": null,
+        "title": "Campaign preview",
+        "subtitle": "Display-only campaign landing placeholder.",
+        "discount_label": null,
+        "eligibility_summary": [],
+        "cta_primary": "View offer",
+        "cta_secondary": "Later"
+      }
+    },
+    "profileBenefits": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "subscription_status": "free",
+        "entitlement_status": "inactive",
+        "entitlement_badge": "Free Reader",
+        "grace_like_summary": null,
+        "lifecycle_projection": [],
+        "quota": {
+          "remaining": 0,
+          "total": 0,
+          "reason": null
+        },
+        "saved_count": 0,
+        "inbox_unread_count": 0,
+        "reward_summary": {
+          "vip_days_total": 0,
+          "active_rewards": 0
+        },
+        "benefit_summary": []
+      }
+    }
+  }
+}

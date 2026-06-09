@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Magazine Digest",
+    "slug": "magazine-digest",
+    "extra": {
+      "eas": {
+        "projectId": "4de3b379-1b12-491c-bea9-de45b34960a4"
+      }
+    },
+    "owner": "daowei2026",
+    "android": {
+      "package": "com.daowei2026.magazinedigest"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "command": "node scripts/tests/run-test1.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": ""
+  },
+  {
+    "command": "node scripts/ops/build-release-artifact.mjs --scenario data2_multi_publication_release_candidate",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"quality:override_count:9:accepted_by_budget\",\n      \"taxonomy:unmapped_count:18\"\n    ]\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/publish-channel.mjs --channel dev --scenario data2_multi_publication_release_candidate --apply",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "    \"release_id\": \"rel_data2_multi_publication_release_candidate_20260322T153421Z\",\n    \"remote_base_url\": \"http://127.0.0.1:4184\",\n    \"selection_reason\": \"manual_remote_channel_head\"\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/export-runtime-dist.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"source_scenario_id\": null,\n      \"published_at\": null\n    }\n  ]\n}"
+  },
+  {
+    "command": "node scripts/ops/show-runtime-dist.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "    }\n  ],\n  \"verify_status\": \"ok\",\n  \"verify_errors\": []\n}"
+  },
+  {
+    "command": "node scripts/ops/verify-runtime-dist.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "  \"warnings\": [\n    \"channel_idle:staging\",\n    \"channel_idle:production\"\n  ]\n}"
+  },
+  {
+    "command": "node scripts/ops/serve-runtime-dist.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        }\n      ]\n    }\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/show-runtime-source.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"要看三刊预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。\",\n      \"要看两刊可发布版本，可切到 scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。\"\n    ]\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/set-runtime-source.mjs --mode remote_channel_head --channel dev",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"要看三刊预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。\",\n      \"要看两刊可发布版本，可切到 scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。\"\n    ]\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/show-runtime-source.mjs",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"要看三刊预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。\",\n      \"要看两刊可发布版本，可切到 scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。\"\n    ]\n  }\n}"
+  },
+  {
+    "command": "node scripts/ops/rollback-channel.mjs --channel dev",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "      \"status\": \"idle\",\n      \"history_count\": 0\n    }\n  ]\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/harness/verify.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "                      \"exists\":  true\n                  }\n              ],\n    \"all_present\":  true\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-b.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "  \"seed_count\": 10,\n  \"product_key\": \"demo_cn_content\",\n  \"article_variant_count\": 6,\n  \"validation\": \"passed\"\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-f1-foundation.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "    \"s13_inbox_digest\",\n    \"s14_revision_highlight\",\n    \"s15_quiet_hours_and_dedupe\"\n  ]\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-g.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "    \"s20\"\n  ],\n  \"checked_surfaces\": 7,\n  \"checked_events\": 10\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-h0.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "  \"checked_surfaces\": 6,\n  \"checked_mobile_foundations\": 6,\n  \"checked_admin_foundations\": 4,\n  \"checked_events\": 9\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-test1.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": ""
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-ops2.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"history_items\": 505\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-data2.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"current_unchanged\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-ops3.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"dashboard\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-test2.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"orchestration_report\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-ops4.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"current_unchanged_from_before\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-rel1.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"selected_is_baseline\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-obs1.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"current_is_baseline\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-ops5.ps1",
+    "exit_code": 0,
+    "ok": true,
+    "tail": "        \"rebuild_trigger\": true\n      }\n    }\n  }\n}"
+  },
+  {
+    "command": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-rel2.ps1",
+    "exit_code": 1,
+    "ok": false,
+    "tail": "    at main (file:///D:/ws/Playground/scripts/bootstrap/smoke-stage-rel2.mjs:172:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///D:/ws/Playground/scripts/bootstrap/smoke-stage-rel2.mjs:177:1\nSystem.Management.Automation.RemoteException\nNode.js v24.14.0"
+  }
+]

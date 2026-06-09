@@ -1,0 +1,43 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:35:58.153Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_6a601748-f458-4371-99c3-f8537616b23c",
+    "event_type": "runtime_source_loaded",
+    "event_category": "runtime_source",
+    "occurred_at": "2026-03-23T04:35:58.149Z",
+    "severity": "info",
+    "source_surface": "runtime",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "remote_channel_head",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": "rel_data2_multi_publication_release_candidate_20260322T153421Z",
+    "channel": "dev",
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "visible_publications": [
+        "barrons",
+        "the_atlantic"
+      ]
+    }
+  }
+}

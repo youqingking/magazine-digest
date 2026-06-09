@@ -1,0 +1,49 @@
+{
+  "name": "magazine-digest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preflight": "powershell -ExecutionPolicy Bypass -File scripts/harness/preflight.ps1",
+    "validate:preflight": "powershell -ExecutionPolicy Bypass -File scripts/validate/preflight.ps1",
+    "validate:preflight:sh": "sh ./scripts/validate/preflight.sh",
+    "install": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/install.ps1",
+    "build:mobile": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/build-mobile.ps1",
+    "export:mobile-fixtures": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/export-mobile-runtime-fixtures.ps1",
+    "build:admin": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/build-admin.ps1",
+    "build:backend": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/build-backend.ps1",
+    "validate:stage-h0": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-h0.ps1",
+    "validate:h0_5-device-readiness": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-h0_5-device-readiness.ps1",
+    "build:test-inputs": "powershell -ExecutionPolicy Bypass -File scripts/content/build-synthetic-test-pack.ps1",
+    "generate-admin": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/generate-admin.ps1",
+    "validate:f1-foundation": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-f1-foundation.ps1",
+    "validate:stage-g": "powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-g.ps1",
+    "validate:test-inputs": "powershell -ExecutionPolicy Bypass -File scripts/content/validate-synthetic-test-pack.ps1",
+    "export:runtime-scenarios": "powershell -ExecutionPolicy Bypass -File scripts/content/export-runtime-scenarios.ps1",
+    "select:runtime-scenario": "powershell -ExecutionPolicy Bypass -File scripts/content/select-runtime-scenario.ps1",
+    "smoke:test-inputs": "powershell -ExecutionPolicy Bypass -File scripts/content/smoke-test-input-pack.ps1",
+    "sync:unicloud-database": "powershell -ExecutionPolicy Bypass -File scripts/contracts/sync-unicloud-database.ps1",
+    "verify": "powershell -ExecutionPolicy Bypass -File scripts/harness/verify.ps1 && powershell -ExecutionPolicy Bypass -File scripts/contracts/validate-stage-b.ps1",
+    "smoke": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-c.ps1",
+    "smoke:multi-issue-support": "node scripts/bootstrap/smoke-multi-issue-support.mjs",
+    "smoke:stage-d": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-d.ps1",
+    "smoke:stage-ops5": "node scripts/bootstrap/smoke-stage-ops5.mjs",
+    "smoke:stage-e0": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-e0.ps1",
+    "smoke:stage-f1": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-f1.ps1",
+    "smoke:stage-g": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-g.ps1",
+    "smoke:stage-h0": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-h0.ps1",
+    "smoke:stage-ui35-h5": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-stage-ui35-h5.ps1",
+    "smoke:h0_5-h5": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-h5.ps1",
+    "smoke:h0_5-hbuilderx": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-hbuilderx.ps1",
+    "smoke:h0_5-android": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android.ps1",
+    "smoke:h0_5-android-ui": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android-ui.ps1",
+    "verify:h0_5-db": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/verify-h0_5-device-db.ps1",
+    "report:h0_5": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/report-h0_5-automation.ps1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  },
+  "dependencies": {
+    "expo": "^55.0.10-canary-20260328-bdc6273",
+    "expo-dev-client": "55.0.20-canary-20260328-bdc6273"
+  }
+}

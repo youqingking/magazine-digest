@@ -1,0 +1,368 @@
+{
+  "generated_at": "2026-03-17T15:41:49.586Z",
+  "canonical_source": "fixtures/test-inputs/scenarios",
+  "manifest": "synthetic_test_content_pack_stage_x",
+  "publications": [
+    {
+      "_id": "pub_world_brief",
+      "product_key": "demo_cn_content",
+      "publication_key": "world_brief",
+      "display_name": "World Brief",
+      "language": "zh-CN",
+      "status": "active",
+      "description": "Synthetic global affairs briefs for Stage X smoke inputs.",
+      "sort_order": 1
+    },
+    {
+      "_id": "pub_ai_digest",
+      "product_key": "demo_cn_content",
+      "publication_key": "ai_digest",
+      "display_name": "AI Digest",
+      "language": "zh-CN",
+      "status": "active",
+      "description": "Synthetic AI product and policy summaries for runtime tests.",
+      "sort_order": 2
+    },
+    {
+      "_id": "pub_market_watch",
+      "product_key": "demo_cn_content",
+      "publication_key": "market_watch",
+      "display_name": "Market Watch",
+      "language": "zh-CN",
+      "status": "active",
+      "description": "Synthetic economy and market coverage for pricing and feed smoke.",
+      "sort_order": 3
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "s01_normal_full_matrix",
+      "title": "Normal Full Matrix",
+      "publications": [
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s01_city_signals"
+      ],
+      "markdown_variants": 4,
+      "covered_risks": [
+        "normal_read_path",
+        "audience_mode_switch",
+        "reading_mode_switch"
+      ]
+    },
+    {
+      "scenario_id": "s02_general_fallback",
+      "title": "General Fallback Only",
+      "publications": [
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s02_bridge_robot"
+      ],
+      "markdown_variants": 4,
+      "covered_risks": [
+        "teen_general_fallback",
+        "adult_leak_prevention"
+      ]
+    },
+    {
+      "scenario_id": "s03_teen_unavailable",
+      "title": "Teen Unavailable",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s03_port_futures"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "safe_unavailable_reason",
+        "teen_block_on_adult_only"
+      ]
+    },
+    {
+      "scenario_id": "s04_multilingual",
+      "title": "Multilingual Variants",
+      "publications": [
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s04_cloud_kitchen"
+      ],
+      "markdown_variants": 4,
+      "covered_risks": [
+        "language_exact_match",
+        "future_multilingual_smoke"
+      ]
+    },
+    {
+      "scenario_id": "s05_revision_update",
+      "title": "Revision Update",
+      "publications": [
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s05_river_meter"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "revision_upgrade",
+        "delta_sync",
+        "cache_invalidation"
+      ]
+    },
+    {
+      "scenario_id": "s06_tombstone_and_unpublish",
+      "title": "Tombstone And Unpublish",
+      "publications": [
+        "world_brief",
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s06_withdrawn_notice",
+        "art_s06_scheduled_lab"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "tombstone_removal",
+        "unpublish_visibility",
+        "scheduled_not_readable"
+      ]
+    },
+    {
+      "scenario_id": "s07_premium_paywall",
+      "title": "Premium Paywall",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s07_premium_signal"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "premium_gate",
+        "paywall_preview",
+        "quota_denied"
+      ]
+    },
+    {
+      "scenario_id": "s08_experiment_pricing_preview",
+      "title": "Experiment Pricing Preview",
+      "publications": [
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s08_pricing_lab"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "experiment_bucket",
+        "pricing_preview",
+        "floor_price_guard"
+      ]
+    },
+    {
+      "scenario_id": "s09_cache_offline_fallback",
+      "title": "Cache Offline Fallback",
+      "publications": [
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s09_offline_note"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "cache_seed",
+        "offline_feed_detail",
+        "safe_cached_variant"
+      ]
+    },
+    {
+      "scenario_id": "s10_multi_publication_feed",
+      "title": "Multi Publication Feed",
+      "publications": [
+        "world_brief",
+        "ai_digest",
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s10_world_lane",
+        "art_s10_ai_shift",
+        "art_s10_market_board"
+      ],
+      "markdown_variants": 3,
+      "covered_risks": [
+        "feed_grouping",
+        "publication_channel_smoke",
+        "tag_filter_smoke"
+      ]
+    },
+    {
+      "scenario_id": "s11_new_publish_batch",
+      "title": "New Publish Batch",
+      "publications": [
+        "world_brief",
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s11_city_grid",
+        "art_s11_model_notebook"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "publish_batch_grouping",
+        "today_new",
+        "batch_summary",
+        "saved_for_later_section_contract"
+      ]
+    },
+    {
+      "scenario_id": "s12_followed_topic_alert",
+      "title": "Followed Topic Alert",
+      "publications": [
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s12_policy_stack"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "follow_match",
+        "followed_updates",
+        "inbox_follow_alert"
+      ]
+    },
+    {
+      "scenario_id": "s13_inbox_digest",
+      "title": "Inbox Digest",
+      "publications": [
+        "market_watch",
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s13_market_note",
+        "art_s13_world_note"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "digest_aggregation",
+        "inbox_unread_count",
+        "digest_open"
+      ]
+    },
+    {
+      "scenario_id": "s14_revision_highlight",
+      "title": "Revision Highlight",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s14_supply_note"
+      ],
+      "markdown_variants": 2,
+      "covered_risks": [
+        "revision_highlight",
+        "change_summary",
+        "continue_reading_preserved"
+      ]
+    },
+    {
+      "scenario_id": "s15_quiet_hours_and_dedupe",
+      "title": "Quiet Hours And Dedupe",
+      "publications": [
+        "world_brief"
+      ],
+      "article_ids": [
+        "art_s15_evening_flash"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "quiet_hours",
+        "dedupe",
+        "digest_vs_instant",
+        "inbox_truth"
+      ]
+    },
+    {
+      "scenario_id": "s16_quota_exhausted_paywall",
+      "title": "Quota Exhausted Paywall",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s16_quota_paywall"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "quota_boundary",
+        "paywall_reason_projection",
+        "commercial_offer_local_runtime"
+      ]
+    },
+    {
+      "scenario_id": "s17_campaign_discount_offer",
+      "title": "Campaign Discount Offer",
+      "publications": [
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s17_campaign_offer"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "campaign_offer_preview",
+        "pricing_conflict_projection",
+        "landing_copy_placeholder"
+      ]
+    },
+    {
+      "scenario_id": "s18_promo_code_apply_preview",
+      "title": "Promo Code Apply Preview",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s18_promo_preview"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "promo_preview_validity",
+        "promo_floor_guard",
+        "duplicate_or_ineligible_projection"
+      ]
+    },
+    {
+      "scenario_id": "s19_referral_reward_preview",
+      "title": "Referral Reward Preview",
+      "publications": [
+        "ai_digest"
+      ],
+      "article_ids": [
+        "art_s19_referral_preview"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "invite_preview",
+        "reward_summary_projection",
+        "growth_loop_boundary"
+      ]
+    },
+    {
+      "scenario_id": "s20_active_entitlement_profile",
+      "title": "Active Entitlement Profile",
+      "publications": [
+        "market_watch"
+      ],
+      "article_ids": [
+        "art_s20_profile_entitlement"
+      ],
+      "markdown_variants": 1,
+      "covered_risks": [
+        "subscription_lifecycle_projection",
+        "profile_benefit_summary",
+        "quota_and_reward_rollup"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "adapter_id": "family-podcast-transcript",
+  "route_type": "family",
+  "source_kind": "podcast_transcript_source",
+  "family_kind": "transcript_first_longform",
+  "mapped_shared_fields": [
+    "ContentRef",
+    "ContentDetailEnvelope"
+  ],
+  "mapped_family_fields": [
+    "TranscriptDocumentRef",
+    "TranscriptSegment",
+    "SpeakerTurn",
+    "TimestampRange"
+  ],
+  "retained_domain_extras": [
+    "cue_id",
+    "provider_confidence_trace",
+    "player_deep_link_fragment",
+    "subtitle_track_id",
+    "show_id",
+    "show_title",
+    "episode_title",
+    "guest_names",
+    "chapter_titles",
+    "feed_url",
+    "episode_number",
+    "season_number",
+    "audio_source_url",
+    "source_platform",
+    "podcast_network",
+    "enclosure_url"
+  ],
+  "unmapped_source_fields": [],
+  "unsupported_reason": null,
+  "warnings": [
+    "Transcript-native metadata is not shared-core truth."
+  ],
+  "notes": [
+    "Transcript semantics normalize through family before shared projection.",
+    "Step 06 podcast adoption executed through transcript family and shared runtime."
+  ],
+  "retained_extra_groups": {
+    "adapter_only": [
+      "cue_id",
+      "provider_confidence_trace",
+      "player_deep_link_fragment",
+      "subtitle_track_id"
+    ],
+    "domain_only": [
+      "show_id",
+      "show_title",
+      "episode_title",
+      "guest_names",
+      "chapter_titles",
+      "feed_url",
+      "episode_number",
+      "season_number",
+      "audio_source_url",
+      "source_platform",
+      "podcast_network",
+      "enclosure_url"
+    ]
+  }
+}

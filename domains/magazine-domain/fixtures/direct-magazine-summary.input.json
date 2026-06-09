@@ -1,0 +1,28 @@
+{
+  "product_key": "demo_cn_content",
+  "publication_id": "pub_readers_digest",
+  "publication_key": "readers_digest",
+  "article_id": "art_rd_2026_03_001",
+  "article_key": "rd_2026_03_001",
+  "language": "zh-CN",
+  "title": "Spring Cleanup Checklist",
+  "summary": "Quick summary for the issue feature",
+  "body": "Markdown body for the spring cleanup checklist.",
+  "issue_id": "issue_rd_2026_03",
+  "issue_label": "2026-03",
+  "start_page": 24,
+  "print_taxonomy_path": [
+    "home",
+    "cleaning"
+  ],
+  "cover_slot": "feature",
+  "audience_segment": "general",
+  "reading_mode": "quick_30s",
+  "revision": 1,
+  "publish_status": "published",
+  "available_from": "2026-03-01T09:00:00+08:00",
+  "available_until": null,
+  "update_type": "new_publish",
+  "update_priority": 100,
+  "fetched_at": "2026-03-24T00:00:00+08:00"
+}

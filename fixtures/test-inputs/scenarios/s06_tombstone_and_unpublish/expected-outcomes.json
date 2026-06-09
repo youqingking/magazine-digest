@@ -1,0 +1,36 @@
+{
+  "expected_variant_selection": {
+    "art_s06_withdrawn_notice_general_quick_30s": null,
+    "art_s06_scheduled_lab_general_quick_30s": null
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "scheduled_variant_before_publish_time": "unavailable"
+  },
+  "expected_unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING",
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "non_blocking"
+  },
+  "expected_sync_behavior": {
+    "feed_visibility": {
+      "art_s06_withdrawn_notice": "metadata_may_exist_but_variant_removed",
+      "art_s06_scheduled_lab": "not_readable_until_effective_time"
+    },
+    "detail_accessibility": {
+      "art_s06_withdrawn_notice": "not_accessible",
+      "art_s06_scheduled_lab": "not_accessible"
+    },
+    "sync_delta_behavior": {
+      "tombstones_expected": 1,
+      "unpublish_reason_code": "unpublish"
+    }
+  },
+  "expected_cache_behavior": {
+    "tombstone_should_purge_cached_variant": true,
+    "scheduled_before_effective_time_not_cache_readable": true
+  },
+  "expected_event_signals": ["article_impression"],
+  "notes": ["Withdrawn and scheduled content should both end up unavailable at read time for different reasons."]
+}

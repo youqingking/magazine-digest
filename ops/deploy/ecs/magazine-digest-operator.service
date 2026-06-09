@@ -1,0 +1,17 @@
+[Unit]
+Description=Magazine Digest operator console
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+Group=deploy
+WorkingDirectory=/srv/magazine-digest/current
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /srv/magazine-digest/current/scripts/ops/start-operator-console.mjs --host 127.0.0.1 --port 4174 --base-path /magazine-admin --runtime-base-path /magazine-runtime --default-remote-base-url same-origin
+Restart=always
+RestartSec=5
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

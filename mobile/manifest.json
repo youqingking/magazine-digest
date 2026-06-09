@@ -1,0 +1,25 @@
+{
+    "name" : "高效阅读",
+    "appid" : "__UNI__005A993",
+    "description" : "Compile-targeted placeholder shell aligned with Stage B contracts.",
+    "versionName" : "0.0.0-stage-c",
+    "versionCode" : "1",
+    "app-plus" : {
+        "modules" : {
+            "Push" : {}
+        },
+        "distribute" : {
+            "sdkConfigs" : {
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : false
+                    }
+                }
+            },
+            "ios" : {
+                "dSYMs" : false
+            }
+        }
+    }
+}

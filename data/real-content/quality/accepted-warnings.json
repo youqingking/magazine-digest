@@ -1,0 +1,69 @@
+{
+  "version": "stage-data2-v1",
+  "entries": [
+    {
+      "id": "rd-ordinal-best-effort",
+      "kind": "warning",
+      "classification": "accepted_best_effort",
+      "issue_id": "readers_digest__12112025",
+      "warning_type": "best_effort_ordinal_missing",
+      "applies_to_scenarios": [
+        "data1a_readers_digest_12112025",
+        "data2_multi_publication_release_candidate"
+      ],
+      "max_count": 15,
+      "note": "Baseline Reader's Digest ordinal gap is accepted best-effort and should not block promotion work for other scenarios."
+    },
+    {
+      "id": "economist-preview-fallback",
+      "kind": "warning",
+      "classification": "accepted_best_effort",
+      "issue_id": "the_economist__20260314",
+      "warning_type": "economist_section_context_fallback",
+      "applies_to_scenarios": [
+        "data1c_three_release_mixed_preview",
+        "data2_multi_publication_release_candidate"
+      ],
+      "max_count": 1,
+      "note": "Preview-only accepted single-article fallback for the known Economist anomaly."
+    },
+    {
+      "id": "economist-preview-filename-anomaly",
+      "kind": "warning",
+      "classification": "accepted_best_effort",
+      "issue_id": "the_economist__20260314",
+      "warning_type": "economist_filename_anomaly",
+      "applies_to_scenarios": [
+        "data1c_three_release_mixed_preview",
+        "data2_multi_publication_release_candidate"
+      ],
+      "max_count": 1,
+      "note": "Preview-only accepted single-article filename anomaly for the known Economist anomaly."
+    },
+    {
+      "id": "atlantic-editorial-override-drift",
+      "kind": "override_count",
+      "classification": "temporary_override",
+      "issue_id": "the_atlantic__012026",
+      "applies_to_scenarios": [
+        "data1c_the_atlantic_012026",
+        "data1c_three_release_mixed_preview",
+        "data2_multi_publication_release_candidate"
+      ],
+      "max_count": 9,
+      "note": "Atlantic section-label overrides are accepted editorial refinement in DATA2."
+    },
+    {
+      "id": "economist-single-override-drift",
+      "kind": "override_count",
+      "classification": "temporary_override",
+      "issue_id": "the_economist__20260314",
+      "applies_to_scenarios": [
+        "data1c_three_release_mixed_preview",
+        "data2_multi_publication_release_candidate"
+      ],
+      "max_count": 1,
+      "note": "Single Economist override is accepted for both preview-only mixed scenario and four-publication DATA2 candidate."
+    }
+  ]
+}

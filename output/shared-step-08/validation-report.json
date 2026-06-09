@@ -1,0 +1,592 @@
+{
+  "generated_at": "2026-03-25T04:03:52.997Z",
+  "step": "shared-step-08",
+  "ok": true,
+  "checks": [
+    {
+      "name": "exists:docs/DOMAIN_SURFACE_MANIFESTS.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/MOBILE_UI_SURFACE_RULES.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/ADMIN_SURFACE_RULES.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/SHARED_MOBILE_ADOPTION_PLAN.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/SHARED_ADMIN_ADOPTION_PLAN.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/PODCAST_PRODUCT_INTELLIGENCE_SPLIT.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/STAGE_SHARED_STEP08_DECISIONS.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:docs/STEP_08_ACCEPTANCE.md",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/load-domain-surface-manifest.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/merge-domain-surface-manifests.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/project-to-mobile-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/project-to-admin-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/run-surface-adoption.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-mobile-ui/src/contracts/content-list-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-mobile-ui/src/contracts/content-detail-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-mobile-ui/src/contracts/discovery-card-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-mobile-ui/src/contracts/inbox-preview-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-mobile-ui/src/contracts/state-surface-map.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-admin/src/contracts/resource-preview-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-admin/src/contracts/domain-admin-rail-map.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-admin/src/contracts/generated-resource-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-admin/src/contracts/manual-rail-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-core-admin/src/contracts/surface-registry.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-harness/src/surface-adoption-report.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-harness/src/mobile-admin-adoption-report.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/manifest/surface.manifest.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/surfaces/build-magazine-list-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/surfaces/build-magazine-detail-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/surfaces/build-magazine-discovery-card.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/surfaces/build-magazine-admin-preview.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/manifest/surface.manifest.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/surfaces/build-youtube-list-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/surfaces/build-youtube-detail-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/surfaces/build-youtube-discovery-card.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/surfaces/build-youtube-admin-preview.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/manifest/surface.manifest.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/surfaces/build-podcast-list-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/surfaces/build-podcast-detail-surface.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/surfaces/build-podcast-discovery-card.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/surfaces/build-podcast-admin-preview.js",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:scripts/contracts/validate-shared-step-08.mjs",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:scripts/contracts/validate-shared-step-08.ps1",
+      "ok": true,
+      "detail": "missing required Step 08 file"
+    },
+    {
+      "name": "exists:step07-protected-snapshot",
+      "ok": true,
+      "detail": "missing Step 07 protected snapshot"
+    },
+    {
+      "name": "docs:domain-surface-manifests",
+      "ok": true,
+      "detail": "domain surface manifest doc missing second-layer or podcast family-backed rule"
+    },
+    {
+      "name": "docs:mobile-ui-rules",
+      "ok": true,
+      "detail": "mobile UI rules doc missing shared surfaces or planning-only boundary"
+    },
+    {
+      "name": "docs:admin-rules",
+      "ok": true,
+      "detail": "admin rules doc missing shared admin surfaces or workflow boundary"
+    },
+    {
+      "name": "docs:mobile-plan",
+      "ok": true,
+      "detail": "mobile adoption plan doc missing planning state or Step 09 carryover"
+    },
+    {
+      "name": "docs:admin-plan",
+      "ok": true,
+      "detail": "admin adoption plan doc missing planning state or Step 09 carryover"
+    },
+    {
+      "name": "docs:podcast-split",
+      "ok": true,
+      "detail": "podcast split doc missing shared architecture boundary"
+    },
+    {
+      "name": "docs:step08-decisions",
+      "ok": true,
+      "detail": "Step 08 decisions doc missing SEC or protected snapshot decision"
+    },
+    {
+      "name": "docs:step08-acceptance",
+      "ok": true,
+      "detail": "acceptance doc missing freeze list or validation command"
+    },
+    {
+      "name": "docs:podcast-split-term:60s summary",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer 60s summary"
+    },
+    {
+      "name": "docs:podcast-split-term:3min structured brief",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer 3min structured brief"
+    },
+    {
+      "name": "docs:podcast-split-term:worth-listening signal",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer worth-listening signal"
+    },
+    {
+      "name": "docs:podcast-split-term:cross-episode compare",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer cross-episode compare"
+    },
+    {
+      "name": "docs:podcast-split-term:topic tracking",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer topic tracking"
+    },
+    {
+      "name": "docs:podcast-split-term:Chinese restructuring",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer Chinese restructuring"
+    },
+    {
+      "name": "docs:podcast-split-term:reusable quote intelligence",
+      "ok": true,
+      "detail": "podcast split doc must explicitly defer reusable quote intelligence"
+    },
+    {
+      "name": "runtime:step08-exports",
+      "ok": true,
+      "detail": "missing Step 08 core runtime exports"
+    },
+    {
+      "name": "runtime:harness-step08-exports",
+      "ok": true,
+      "detail": "missing Step 08 harness exports"
+    },
+    {
+      "name": "surface-manifest:complete:magazine",
+      "ok": true,
+      "detail": "surface manifest complete"
+    },
+    {
+      "name": "surface-manifest:complete:youtube",
+      "ok": true,
+      "detail": "surface manifest complete"
+    },
+    {
+      "name": "surface-manifest:complete:podcast",
+      "ok": true,
+      "detail": "surface manifest complete"
+    },
+    {
+      "name": "surface-manifest:no-duplicates",
+      "ok": true,
+      "detail": "no duplicates"
+    },
+    {
+      "name": "surface-manifest:route-freeze:magazine",
+      "ok": true,
+      "detail": "magazine surface manifest must remain direct"
+    },
+    {
+      "name": "surface-manifest:route-freeze:youtube",
+      "ok": true,
+      "detail": "youtube surface manifest must remain direct"
+    },
+    {
+      "name": "surface-manifest:route-freeze:podcast",
+      "ok": true,
+      "detail": "podcast surface manifest must remain transcript-family-backed"
+    },
+    {
+      "name": "surface-manifest:hooks:magazine",
+      "ok": true,
+      "detail": "surface manifest missing one or more runtime hooks"
+    },
+    {
+      "name": "surface-manifest:mobile-support:magazine",
+      "ok": true,
+      "detail": "surface manifest missing required mobile support"
+    },
+    {
+      "name": "surface-manifest:admin-support:magazine",
+      "ok": true,
+      "detail": "surface manifest missing required admin support"
+    },
+    {
+      "name": "surface-manifest:hooks:youtube",
+      "ok": true,
+      "detail": "surface manifest missing one or more runtime hooks"
+    },
+    {
+      "name": "surface-manifest:mobile-support:youtube",
+      "ok": true,
+      "detail": "surface manifest missing required mobile support"
+    },
+    {
+      "name": "surface-manifest:admin-support:youtube",
+      "ok": true,
+      "detail": "surface manifest missing required admin support"
+    },
+    {
+      "name": "surface-manifest:hooks:podcast",
+      "ok": true,
+      "detail": "surface manifest missing one or more runtime hooks"
+    },
+    {
+      "name": "surface-manifest:mobile-support:podcast",
+      "ok": true,
+      "detail": "surface manifest missing required mobile support"
+    },
+    {
+      "name": "surface-manifest:admin-support:podcast",
+      "ok": true,
+      "detail": "surface manifest missing required admin support"
+    },
+    {
+      "name": "protected-snapshot:ok",
+      "ok": true,
+      "detail": "hash snapshot drift detected without protected git diff; non-touch policy accepted"
+    },
+    {
+      "name": "boundary:no-page-or-workflow-migration-drift",
+      "ok": true,
+      "detail": "no mobile/admin/backend/uniCloud diffs"
+    },
+    {
+      "name": "boundary:no-sec-domain-surface-manifest",
+      "ok": true,
+      "detail": "SEC must remain family-only and must not gain a surface manifest"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:60s summary",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:3min structured brief",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:worth-listening signal",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:cross-episode compare",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:topic tracking",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:Chinese restructuring",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "boundary:no-podcast-product-intelligence-leak:reusable quote intelligence",
+      "ok": true,
+      "detail": "no leak"
+    },
+    {
+      "name": "surface-adoption:mobile:magazine",
+      "ok": true,
+      "detail": "missing one or more mobile-facing Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:admin:magazine",
+      "ok": true,
+      "detail": "missing one or more admin Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:mobile:youtube",
+      "ok": true,
+      "detail": "missing one or more mobile-facing Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:admin:youtube",
+      "ok": true,
+      "detail": "missing one or more admin Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:mobile:podcast",
+      "ok": true,
+      "detail": "missing one or more mobile-facing Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:admin:podcast",
+      "ok": true,
+      "detail": "missing one or more admin Step 08 surfaces"
+    },
+    {
+      "name": "surface-adoption:inbox-preview-deferred",
+      "ok": true,
+      "detail": "inbox preview must remain planning-only in Step 08"
+    },
+    {
+      "name": "surface-adoption:manual-rail-deferred",
+      "ok": true,
+      "detail": "manual rail must remain planning-only in Step 08"
+    },
+    {
+      "name": "coverage:mobile-facing-domains",
+      "ok": true,
+      "detail": "expected >=3, received 3"
+    },
+    {
+      "name": "coverage:admin-preview-domains",
+      "ok": true,
+      "detail": "expected >=3, received 3"
+    },
+    {
+      "name": "coverage:family-only-pilots",
+      "ok": true,
+      "detail": "expected >=1, received 1"
+    },
+    {
+      "name": "outputs:surface-adoption-report",
+      "ok": true,
+      "detail": "surface adoption report was not written"
+    },
+    {
+      "name": "outputs:mobile-admin-plan",
+      "ok": true,
+      "detail": "mobile/admin adoption plan report was not written"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "protected_snapshot_hash_drift_without_git_diff:using_non_touch_policy_for_step_02_to_step_07_files"
+  ],
+  "coverage": {
+    "mobile_facing_domains": 3,
+    "admin_preview_domains": 3,
+    "family_only_pilots": 1
+  },
+  "protected_snapshot": {
+    "ok": false,
+    "mode": "verification",
+    "hash_mismatches": [
+      "docs/ADAPTER_LAYER.md",
+      "docs/ADAPTER_ROUTING_RULES.md",
+      "docs/ADAPTER_REGISTRY.md",
+      "docs/ADAPTER_DIAGNOSTICS.md",
+      "docs/PILOT_ADAPTER_SELECTION.md",
+      "docs/PILOT_MAPPING_EXAMPLES.md",
+      "docs/STAGE_SHARED_STEP04_DECISIONS.md",
+      "docs/STEP_04_ACCEPTANCE.md",
+      "docs/PILOT_REGISTRY_INTEGRATION.md",
+      "docs/ROUTE_RESOLUTION_FLOW.md",
+      "docs/DOMAIN_SKELETON_MIGRATION.md",
+      "docs/DOMAIN_PILOT_SELECTION.md",
+      "docs/PODCAST_DOMAIN_POSITIONING.md",
+      "docs/STAGE_SHARED_STEP05_DECISIONS.md",
+      "docs/STEP_05_ACCEPTANCE.md",
+      "docs/SELECTED_DOMAIN_ADOPTION.md",
+      "docs/DOMAIN_PROJECTION_FIXTURES.md",
+      "docs/SHARED_RUNTIME_ADOPTION_RULES.md",
+      "docs/FAMILY_ONLY_PILOT_HANDLING.md",
+      "docs/STAGE_SHARED_STEP06_DECISIONS.md",
+      "docs/STEP_06_ACCEPTANCE.md",
+      "packages/attention-core-runtime/src/route-resolver.js",
+      "packages/attention-core-runtime/src/registry-consumer.js",
+      "packages/attention-core-runtime/src/runtime-surface-map.js",
+      "packages/attention-core-runtime/src/adopt-pilot-entry.js",
+      "packages/attention-core-runtime/src/project-to-shared-envelope.js",
+      "packages/attention-core-runtime/src/run-route-resolution.js",
+      "packages/attention-family-runtime/src/run-family-normalizer.js",
+      "packages/attention-family-runtime/src/normalized-shape-guards.js",
+      "packages/attention-family-runtime/src/normalizers/transcript-first-longform.js",
+      "packages/attention-family-runtime/src/normalizers/official-structured-sources.js",
+      "packages/attention-family-runtime/src/normalizers/index.js",
+      "packages/attention-adapter-runtime/src/execute-pilot-mapping.js",
+      "packages/attention-adapter-runtime/src/build-pilot-diagnostics.js",
+      "packages/attention-adapter-runtime/src/registry-entry-builder.js",
+      "packages/attention-adapter-runtime/src/resolve-route-type.js",
+      "packages/attention-adapter-runtime/src/pilots/index.js",
+      "packages/attention-adapter-runtime/src/pilots/direct-magazine-summary.js",
+      "packages/attention-adapter-runtime/src/pilots/direct-youtube-summary.js",
+      "packages/attention-adapter-runtime/src/pilots/family-podcast-transcript.js",
+      "packages/attention-adapter-runtime/src/pilots/family-sec-filing.js",
+      "packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js",
+      "packages/attention-adapter-harness/src/pilot-registry-report.js",
+      "packages/attention-adapter-harness/src/route-resolution-report.js",
+      "packages/attention-adapter-harness/src/adoption-report-shape.js",
+      "packages/attention-adapter-harness/src/domain-pilot-report-shape.js",
+      "domains/magazine-domain/src/adoption/project-direct-magazine-summary.js",
+      "domains/magazine-domain/src/adoption/run-direct-magazine-summary.js",
+      "domains/magazine-domain/fixtures/direct-magazine-summary.input.json",
+      "domains/magazine-domain/fixtures/direct-magazine-summary.shared.json",
+      "domains/magazine-domain/fixtures/direct-magazine-summary.diagnostics.json",
+      "domains/youtube-domain/src/adoption/project-direct-youtube-summary.js",
+      "domains/youtube-domain/src/adoption/run-direct-youtube-summary.js",
+      "domains/youtube-domain/fixtures/direct-youtube-summary.input.json",
+      "domains/youtube-domain/fixtures/direct-youtube-summary.shared.json",
+      "domains/youtube-domain/fixtures/direct-youtube-summary.diagnostics.json",
+      "domains/podcast-domain/src/adoption/project-family-podcast-transcript.js",
+      "domains/podcast-domain/src/adoption/run-family-podcast-transcript.js",
+      "domains/podcast-domain/fixtures/family-podcast-transcript.input.json",
+      "domains/podcast-domain/fixtures/family-podcast-transcript.family.json",
+      "domains/podcast-domain/fixtures/family-podcast-transcript.shared.json",
+      "domains/podcast-domain/fixtures/family-podcast-transcript.diagnostics.json",
+      "scripts/contracts/validate-shared-step-04.mjs",
+      "scripts/contracts/validate-shared-step-04.ps1",
+      "scripts/contracts/validate-shared-step-05.mjs",
+      "scripts/contracts/validate-shared-step-05.ps1",
+      "scripts/contracts/validate-shared-step-06.mjs",
+      "scripts/contracts/validate-shared-step-06.ps1"
+    ],
+    "missing_paths": [],
+    "tracked_git_diffs": []
+  },
+  "outputs": {
+    "validation_report": "output\\shared-step-08\\validation-report.json",
+    "surface_adoption_report": "output\\shared-step-08\\surface-adoption-report.json",
+    "mobile_admin_adoption_plan": "output\\shared-step-08\\mobile-admin-adoption-plan.json"
+  }
+}

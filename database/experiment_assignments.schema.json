@@ -1,0 +1,23 @@
+{
+  "collection": "experiment_assignments",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "fact_audit",
+  "required": ["_id", "product_key", "experiment_id", "subject_type", "subject_id", "assignment_version", "bucket_key", "assignment_hash", "assigned_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "experiment_id": { "type": "string" },
+    "subject_type": { "type": "string", "enum": ["user", "installation"] },
+    "subject_id": { "type": "string" },
+    "assignment_version": { "type": "integer", "minimum": 1 },
+    "bucket_key": { "type": "string" },
+    "assignment_hash": { "type": "string" },
+    "request_id": { "type": "string" },
+    "assigned_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_assignment", "fields": ["product_key", "experiment_id", "subject_type", "subject_id", "assignment_version"], "unique": true },
+    { "name": "idx_assignment_subject", "fields": ["product_key", "subject_type", "subject_id", "assigned_at"] }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-03-23T04:43:40.431Z",
+  "items": [
+    {
+      "issue_id": "readers_digest__12112025",
+      "import_warning_counts": {},
+      "unresolved_warning_counts": {}
+    },
+    {
+      "issue_id": "barrons__09022026",
+      "import_warning_counts": {},
+      "unresolved_warning_counts": {}
+    },
+    {
+      "issue_id": "the_atlantic__012026",
+      "import_warning_counts": {
+        "atlantic_filename_truncated": 4
+      },
+      "unresolved_warning_counts": {}
+    },
+    {
+      "issue_id": "the_economist__20260314",
+      "import_warning_counts": {
+        "economist_section_context_fallback": 1,
+        "economist_filename_anomaly": 1
+      },
+      "unresolved_warning_counts": {
+        "economist_section_context_fallback": 1,
+        "economist_filename_anomaly": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "generated_at": "2026-03-23T11:46:27.557Z",
+  "accepted_registry": {
+    "version": "stage-data2-v1",
+    "entries": [
+      {
+        "id": "rd-ordinal-best-effort",
+        "kind": "warning",
+        "classification": "accepted_best_effort",
+        "issue_id": "readers_digest__12112025",
+        "warning_type": "best_effort_ordinal_missing",
+        "applies_to_scenarios": [
+          "data1a_readers_digest_12112025",
+          "data2_multi_publication_release_candidate"
+        ],
+        "max_count": 15,
+        "note": "Baseline Reader's Digest ordinal gap is accepted best-effort and should not block promotion work for other scenarios."
+      },
+      {
+        "id": "economist-preview-fallback",
+        "kind": "warning",
+        "classification": "accepted_best_effort",
+        "issue_id": "the_economist__20260314",
+        "warning_type": "economist_section_context_fallback",
+        "applies_to_scenarios": [
+          "data1c_three_release_mixed_preview",
+          "data2_multi_publication_release_candidate"
+        ],
+        "max_count": 1,
+        "note": "Preview-only accepted single-article fallback for the known Economist anomaly."
+      },
+      {
+        "id": "economist-preview-filename-anomaly",
+        "kind": "warning",
+        "classification": "accepted_best_effort",
+        "issue_id": "the_economist__20260314",
+        "warning_type": "economist_filename_anomaly",
+        "applies_to_scenarios": [
+          "data1c_three_release_mixed_preview",
+          "data2_multi_publication_release_candidate"
+        ],
+        "max_count": 1,
+        "note": "Preview-only accepted single-article filename anomaly for the known Economist anomaly."
+      },
+      {
+        "id": "atlantic-editorial-override-drift",
+        "kind": "override_count",
+        "classification": "temporary_override",
+        "issue_id": "the_atlantic__012026",
+        "applies_to_scenarios": [
+          "data1c_the_atlantic_012026",
+          "data1c_three_release_mixed_preview",
+          "data2_multi_publication_release_candidate"
+        ],
+        "max_count": 9,
+        "note": "Atlantic section-label overrides are accepted editorial refinement in DATA2."
+      },
+      {
+        "id": "economist-single-override-drift",
+        "kind": "override_count",
+        "classification": "temporary_override",
+        "issue_id": "the_economist__20260314",
+        "applies_to_scenarios": [
+          "data1c_three_release_mixed_preview",
+          "data2_multi_publication_release_candidate"
+        ],
+        "max_count": 1,
+        "note": "Single Economist override is accepted for both preview-only mixed scenario and four-publication DATA2 candidate."
+      }
+    ]
+  },
+  "warning_budgets": {
+    "version": "stage-data2-v1",
+    "scenario_budgets": {
+      "data1c_three_release_mixed_preview": {
+        "scenario_class": "preview_only",
+        "release_eligible": false,
+        "note": "Mixed preview remains useful for broad coverage and preview comparison, but is not the release target in DATA2."
+      },
+      "data2_multi_publication_release_candidate": {
+        "scenario_class": "release_candidate",
+        "release_eligible": true,
+        "note": "DATA2 release-candidate accepts only issues with zero unresolved warnings and accepted editorial override drift."
+      },
+      "default_preview_only": {
+        "scenario_class": "preview_only",
+        "release_eligible": false
+      },
+      "default_release_candidate": {
+        "scenario_class": "release_candidate",
+        "release_eligible": true
+      }
+    },
+    "issue_budgets": {
+      "readers_digest__12112025": {
+        "classification": "accepted_best_effort",
+        "release_candidate_allowed": true,
+        "note": "Accepted best-effort ordinal gaps are allowed in the four-publication DATA2 candidate."
+      },
+      "barrons__09022026": {
+        "classification": "release_ready",
+        "release_candidate_allowed": true,
+        "note": "No unresolved warning budget required."
+      },
+      "the_atlantic__012026": {
+        "classification": "release_ready_with_editorial_overrides",
+        "release_candidate_allowed": true,
+        "override_budget": 9,
+        "note": "Allowed only with zero unresolved warnings."
+      },
+      "the_economist__20260314": {
+        "classification": "accepted_release_candidate_anomaly",
+        "release_candidate_allowed": true,
+        "note": "Known single-article anomaly is accepted and tracked in the four-publication DATA2 candidate."
+      },
+      "science__20260323": {
+        "classification": "release_ready",
+        "release_candidate_allowed": true,
+        "note": "included_via_zip_intake"
+      }
+    }
+  },
+  "scenario_consumption": [
+    {
+      "generated_at": "2026-03-23T11:46:27.567Z",
+      "scenario_id": "data1a_readers_digest_12112025",
+      "scenario_class": "release_candidate",
+      "release_eligible": true,
+      "issue_summaries": [
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_count": 15,
+          "import_warning_counts": {},
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        }
+      ],
+      "accepted_warnings": [],
+      "over_budget_warnings": [],
+      "unregistered_warnings": [],
+      "accepted_overrides": [],
+      "over_budget_overrides": []
+    },
+    {
+      "generated_at": "2026-03-23T11:46:27.591Z",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "scenario_class": "preview_only",
+      "release_eligible": false,
+      "issue_summaries": [
+        {
+          "issue_id": "barrons__09022026",
+          "article_count": 17,
+          "import_warning_counts": {},
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        },
+        {
+          "issue_id": "the_atlantic__012026",
+          "article_count": 10,
+          "import_warning_counts": {
+            "atlantic_filename_truncated": 4
+          },
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_count": 51,
+          "import_warning_counts": {
+            "economist_section_context_fallback": 1,
+            "economist_filename_anomaly": 1
+          },
+          "unresolved_warning_counts": {
+            "economist_section_context_fallback": 1,
+            "economist_filename_anomaly": 1
+          },
+          "unresolved_warning_articles": {
+            "economist_section_context_fallback": [
+              "art_the_economist_20260314_024"
+            ],
+            "economist_filename_anomaly": [
+              "art_the_economist_20260314_024"
+            ]
+          }
+        }
+      ],
+      "accepted_warnings": [
+        {
+          "id": "economist-preview-fallback",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_section_context_fallback",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        },
+        {
+          "id": "economist-preview-filename-anomaly",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_filename_anomaly",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        }
+      ],
+      "over_budget_warnings": [],
+      "unregistered_warnings": [],
+      "accepted_overrides": [
+        {
+          "id": "atlantic-editorial-override-drift",
+          "issue_id": "the_atlantic__012026",
+          "count": 9,
+          "classification": "temporary_override"
+        },
+        {
+          "id": "economist-single-override-drift",
+          "issue_id": "the_economist__20260314",
+          "count": 1,
+          "classification": "temporary_override"
+        }
+      ],
+      "over_budget_overrides": []
+    },
+    {
+      "generated_at": "2026-03-23T11:46:27.627Z",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "scenario_class": "release_candidate",
+      "release_eligible": true,
+      "issue_summaries": [
+        {
+          "issue_id": "readers_digest__12112025",
+          "article_count": 15,
+          "import_warning_counts": {},
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "article_count": 17,
+          "import_warning_counts": {},
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        },
+        {
+          "issue_id": "the_atlantic__012026",
+          "article_count": 10,
+          "import_warning_counts": {
+            "atlantic_filename_truncated": 4
+          },
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "article_count": 51,
+          "import_warning_counts": {
+            "economist_section_context_fallback": 1,
+            "economist_filename_anomaly": 1
+          },
+          "unresolved_warning_counts": {
+            "economist_section_context_fallback": 1,
+            "economist_filename_anomaly": 1
+          },
+          "unresolved_warning_articles": {
+            "economist_section_context_fallback": [
+              "art_the_economist_20260314_024"
+            ],
+            "economist_filename_anomaly": [
+              "art_the_economist_20260314_024"
+            ]
+          }
+        },
+        {
+          "issue_id": "science__20260323",
+          "article_count": 25,
+          "import_warning_counts": {
+            "adult_content_incomplete": 5,
+            "youth_content_incomplete": 3
+          },
+          "unresolved_warning_counts": {},
+          "unresolved_warning_articles": {}
+        }
+      ],
+      "accepted_warnings": [
+        {
+          "id": "economist-preview-fallback",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_section_context_fallback",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        },
+        {
+          "id": "economist-preview-filename-anomaly",
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_filename_anomaly",
+          "count": 1,
+          "classification": "accepted_best_effort",
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        }
+      ],
+      "over_budget_warnings": [],
+      "unregistered_warnings": [],
+      "accepted_overrides": [
+        {
+          "id": "atlantic-editorial-override-drift",
+          "issue_id": "the_atlantic__012026",
+          "count": 9,
+          "classification": "temporary_override"
+        },
+        {
+          "id": "economist-single-override-drift",
+          "issue_id": "the_economist__20260314",
+          "count": 1,
+          "classification": "temporary_override"
+        }
+      ],
+      "over_budget_overrides": []
+    }
+  ]
+}

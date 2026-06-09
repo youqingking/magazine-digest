@@ -1,0 +1,69 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:39.731Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_313e4cba-96a2-4b0e-b017-3368aec32ef2",
+    "event_type": "crud_article_override_edit",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T04:43:39.726Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "article_override",
+      "entity_id": "the_atlantic__012026__art_the_atlantic_012026_006",
+      "action": "edit",
+      "input": {
+        "publication_id": "the_atlantic",
+        "issue_label": "012026",
+        "article_id": "art_the_atlantic_012026_006",
+        "title": "OPS5 smoke override title v2",
+        "section_label": "Dispatches",
+        "notes": "ops5 smoke edit override"
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "hold_warning"
+        },
+        {
+          "action": "refresh_metadata_quality_reports",
+          "status": "ok",
+          "metadata_quality_count": 4,
+          "warning_issue_count": 4,
+          "override_entry_count": 11
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

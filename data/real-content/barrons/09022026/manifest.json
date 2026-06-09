@@ -1,0 +1,167 @@
+{
+  "publication_id": "barrons",
+  "publication_key": "barrons",
+  "publication_name": "Barron's",
+  "issue_label": "09022026",
+  "source_pack": "Three-release.zip",
+  "source_release_dir": "Barron’s-09022026-release",
+  "parser_profile": "barrons_release_v1",
+  "article_pair_count": 17,
+  "import_status": "active",
+  "warnings_count": 0,
+  "articles": [
+    {
+      "article_id": "art_barrons_09022026_001",
+      "ordinal": 1,
+      "title": "华尔街风云：情绪化的市场",
+      "section_label": "华尔街风云",
+      "source_adult_path": "Barron’s-09022026-release/adult/001_华尔街风云_情绪化的市场_Up_Down_Wall_Street_A_Moody_Market.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/001_华尔街风云_情绪化的市场_Up_Down_Wall_Street_A_Moody_Market.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_002",
+      "ordinal": 2,
+      "title": "迪士尼的 CEO 过山车：乐园掌门人能否稳住魔法王国的航向？",
+      "section_label": "迪士尼的 CEO 过山车",
+      "source_adult_path": "Barron’s-09022026-release/adult/002_迪士尼的_CEO_过山车_乐园掌门人能否稳住魔法王国的航向_Disney_s_CEO_Roller_Coaster.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/002_迪士尼的_CEO_过山车_乐园掌门人能否稳住魔法王国的航向_Disney_s_CEO_Roller_Coaster.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_003",
+      "ordinal": 3,
+      "title": "理性透视 AI 威胁",
+      "section_label": "The AI Threat in Perspective",
+      "source_adult_path": "Barron’s-09022026-release/adult/003_理性透视_AI_威胁_The_AI_Threat_in_Perspective.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/003_理性透视_AI_威胁_The_AI_Threat_in_Perspective.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_004",
+      "ordinal": 4,
+      "title": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷：风险还是机遇？",
+      "section_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷",
+      "source_adult_path": "Barron’s-09022026-release/adult/004_BDCs_Get_Cheaper_Amid_Software_Selloff_软件股抛售潮下的私人信贷_风险还是机遇.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/004_BDCs_Get_Cheaper_Amid_Software_Selloff_软件股抛售潮下的私人信贷_风险还是机遇.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_005",
+      "ordinal": 5,
+      "title": "指数挂钩年金的新选择：在国际化配置中寻求风险对冲",
+      "section_label": "指数挂钩年金的新选择",
+      "source_adult_path": "Barron’s-09022026-release/adult/005_指数挂钩年金的新选择_在国际化配置中寻求风险对冲_New_Choices_Among_Annuities_Seeking_Risk_Hedging_in_Int.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/005_指数挂钩年金的新选择_在国际化配置中寻求风险对冲_New_Choices_Among_Annuities_Seeking_Risk_Hedging_in_Int.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_006",
+      "ordinal": 6,
+      "title": "自主机器人的崛起：投资新赛道的进场指南",
+      "section_label": "自主机器人的崛起",
+      "source_adult_path": "Barron’s-09022026-release/adult/006_自主机器人的崛起_投资新赛道的进场指南_Ways_to_Play_the_Rise_of_Autonomous_Robots.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/006_自主机器人的崛起_投资新赛道的进场指南_Ways_to_Play_the_Rise_of_Autonomous_Robots.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_007",
+      "ordinal": 7,
+      "title": "通胀预期的“锚”动摇了吗？——美联储面临的信任挑战",
+      "section_label": "Even Worries About Inflation Matter—a Lot",
+      "source_adult_path": "Barron’s-09022026-release/adult/007_通胀预期的_锚_动摇了吗_美联储面临的信任挑战_Even_Worries_About_Inflation_Matter_a_Lot.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/007_通胀预期的_锚_动摇了吗_美联储面临的信任挑战_Even_Worries_About_Inflation_Matter_a_Lot.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_008",
+      "ordinal": 8,
+      "title": "值得信赖的银行分红",
+      "section_label": "Dividends You Can Bank On",
+      "source_adult_path": "Barron’s-09022026-release/adult/008_值得信赖的银行分红_Dividends_You_Can_Bank_On.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/008_值得信赖的银行分红_Dividends_You_Can_Bank_On.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_009",
+      "ordinal": 9,
+      "title": "三家值得关注的房地产投资信托基金：绩优基金经理的避险清单",
+      "section_label": "三家值得关注的房地产投资信托基金",
+      "source_adult_path": "Barron’s-09022026-release/adult/009_三家值得关注的房地产投资信托基金_绩优基金经理的避险清单_3_REIT_Picks_From_a_Standout_Fund_Manager.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/009_三家值得关注的房地产投资信托基金_绩优基金经理的避险清单_3_REIT_Picks_From_a_Standout_Fund_Manager.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_010",
+      "ordinal": 10,
+      "title": "罗德岛的棉纺厂：点燃风险投资的狂热",
+      "section_label": "罗德岛的棉纺厂",
+      "source_adult_path": "Barron’s-09022026-release/adult/010_罗德岛的棉纺厂_点燃风险投资的狂热_Cotton_Mill_in_Rhode_Island_Kicked_Off_VC_Frenzy.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/010_罗德岛的棉纺厂_点燃风险投资的狂热_Cotton_Mill_in_Rhode_Island_Kicked_Off_VC_Frenzy.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_011",
+      "ordinal": 11,
+      "title": "2026 旅游业展望：拥抱凯悦，远离爱彼迎",
+      "section_label": "2026 旅游业展望",
+      "source_adult_path": "Barron’s-09022026-release/adult/011_2026_旅游业展望_拥抱凯悦_远离爱彼迎_Checking_Into_Hyatt_Hotels_Out_of_Airbnb.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/011_2026_旅游业展望_拥抱凯悦_远离爱彼迎_Checking_Into_Hyatt_Hotels_Out_of_Airbnb.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_012",
+      "ordinal": 12,
+      "title": "投资者值得探索的避风港与新机遇",
+      "section_label": "Worthy Spots for Investors to Venture",
+      "source_adult_path": "Barron’s-09022026-release/adult/012_投资者值得探索的避风港与新机遇_Worthy_Spots_for_Investors_to_Venture.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/012_投资者值得探索的避风港与新机遇_Worthy_Spots_for_Investors_to_Venture.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_013",
+      "ordinal": 13,
+      "title": "道指再创新高与全球资产天平的倾斜",
+      "section_label": "The Dow Hits a Fresh Milestone & Global Market Shifts",
+      "source_adult_path": "Barron’s-09022026-release/adult/013_道指再创新高与全球资产天平的倾斜_The_Dow_Hits_a_Fresh_Milestone_Global_Market_Shifts.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/013_道指再创新高与全球资产天平的倾斜_The_Dow_Hits_a_Fresh_Milestone_Global_Market_Shifts.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_014",
+      "ordinal": 14,
+      "title": "欧洲吸引力上升",
+      "section_label": "Europe Gains Appeal",
+      "source_adult_path": "Barron’s-09022026-release/adult/014_欧洲吸引力上升_Europe_Gains_Appeal.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/014_欧洲吸引力上升_Europe_Gains_Appeal.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_015",
+      "ordinal": 15,
+      "title": "标普 500 指数 8000 点之约：期权市场的多头豪赌",
+      "section_label": "标普 500 指数 8000 点之约",
+      "source_adult_path": "Barron’s-09022026-release/adult/015_标普_500_指数_8000_点之约_期权市场的多头豪赌_Will_the_S_P_500_Hit_8000_How_to_Play_It.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/015_标普_500_指数_8000_点之约_期权市场的多头豪赌_Will_the_S_P_500_Hit_8000_How_to_Play_It.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_016",
+      "ordinal": 16,
+      "title": "奈飞与华纳兄弟探索的“联姻”：是垄断寒冬还是竞争春天？",
+      "section_label": "奈飞与华纳兄弟探索的“联姻”",
+      "source_adult_path": "Barron’s-09022026-release/adult/016_奈飞与华纳兄弟探索的_联姻_是垄断寒冬还是竞争春天_Let_Netflix_and_Warner_Bros._Discovery_Marry.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/016_奈飞与华纳兄弟探索的_联姻_是垄断寒冬还是竞争春天_Let_Netflix_and_Warner_Bros._Discovery_Marry.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_barrons_09022026_017",
+      "ordinal": 17,
+      "title": "拥抱多元化 / Embrace Diversification",
+      "section_label": "Barron's",
+      "source_adult_path": "Barron’s-09022026-release/adult/017_拥抱多元化_Embrace_Diversification.md",
+      "source_youth_path": "Barron’s-09022026-release/youth/017_拥抱多元化_Embrace_Diversification.md",
+      "import_warnings": []
+    }
+  ]
+}

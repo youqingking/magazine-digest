@@ -1,0 +1,54 @@
+{
+  "scenario_id": "s02_general_fallback",
+  "title": "General Fallback Only",
+  "objective": "Verify teen requests may fall back to general content but never to adult content.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["ai_digest"],
+  "article_ids": ["art_s02_bridge_robot"],
+  "covered_risks": ["teen_general_fallback", "adult_leak_prevention"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-detail", "content-sync-delta", "event-ingest"],
+  "articles": [
+    {
+      "article_id": "art_s02_bridge_robot",
+      "article_uid": "syn_article_s02_bridge_robot",
+      "article_key": "bridge_robot_20260317",
+      "publication_key": "ai_digest",
+      "title": "桥梁巡检机器人先学会报告，再学会建议",
+      "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。",
+      "tags": ["ai", "policy"],
+      "status": "active",
+      "created_at": "2026-03-17T09:00:00+08:00",
+      "updated_at": "2026-03-17T09:25:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s02_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 2,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s02_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

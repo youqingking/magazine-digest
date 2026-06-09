@@ -1,0 +1,7 @@
+{
+  "run_id": "stateful-conflict-2026-03-22T05-00-07-024Z-03460a5a",
+  "root": "D:\\ws\\Playground\\output\\runs\\stateful-conflict-2026-03-22T05-00-07-024Z-03460a5a",
+  "script": "scripts/ops/rollback-scenario.mjs",
+  "profile": "stateful_publish",
+  "created_at": "2026-03-22T05:00:07.024Z"
+}

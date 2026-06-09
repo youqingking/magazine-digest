@@ -1,0 +1,42 @@
+{
+  "release_id": "rel_data2_multi_publication_release_candidate_20260322T140738Z",
+  "built_at": "2026-03-22T14:07:38.923Z",
+  "source_scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "publication_list": [
+    "barrons",
+    "the_atlantic"
+  ],
+  "issue_list": [
+    "barrons__09022026",
+    "the_atlantic__012026"
+  ],
+  "article_count": 27,
+  "warning_summary": {
+    "gate_warnings": [],
+    "decision_warnings": [],
+    "accepted_anomalies": []
+  },
+  "accepted_anomaly_summary": [],
+  "override_summary": {
+    "total_override_count": 9,
+    "accepted_overrides": [
+      {
+        "issue_id": "the_atlantic__012026",
+        "count": 9,
+        "classification": "temporary_override"
+      }
+    ]
+  },
+  "promotion_decision": "promotable",
+  "build_label": "data2_multi_publication_release_candidate",
+  "source_bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+  "git_context": {
+    "branch": "rc/ui35-runtime-closeout-kit",
+    "commit_sha": "c2a638c4145d9d954566e351e01110ac13c0dc99",
+    "short_sha": "c2a638c",
+    "tags_at_head": [
+      "codex/obs1-start-20260322-001"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-03-23T04:40:22.810Z",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "recovery": {
+    "current_restored": true,
+    "selected_restored": true,
+    "unchanged_from_before": true
+  },
+  "failed_run_sandboxes_retained": true
+}

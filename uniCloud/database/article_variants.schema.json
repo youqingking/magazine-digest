@@ -1,0 +1,42 @@
+{
+  "collection": "article_variants",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "workflow_master",
+  "required": ["_id", "article_id", "product_key", "language", "audience_segment", "reading_mode", "revision", "publish_status", "publish_at", "markdown_body", "content_hash", "fallback_policy", "source_article_uid", "is_deleted", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "article_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "language": { "type": "string", "enum": ["zh-CN", "en-US"] },
+    "audience_segment": { "type": "string", "enum": ["general", "teen", "adult"] },
+    "reading_mode": { "type": "string", "enum": ["quick_30s", "deep_3m"] },
+    "revision": { "type": "integer", "minimum": 1 },
+    "publish_status": { "type": "string", "enum": ["draft", "review_pending", "approved", "scheduled", "published", "paused", "archived"] },
+    "publish_at": { "type": "string", "format": "date-time" },
+    "publish_batch_id": { "type": "string" },
+    "update_type": { "type": "string", "enum": ["new_publish", "revision", "correction", "highlight_refresh", "sunset"] },
+    "update_priority": { "type": "string", "enum": ["low", "normal", "high", "critical"] },
+    "change_summary": { "type": "string" },
+    "notify_level": { "type": "string", "enum": ["silent", "followed_only", "eligible_users", "mandatory"] },
+    "is_breaking": { "type": "boolean" },
+    "available_from": { "type": "string", "format": "date-time" },
+    "available_until": { "type": "string", "format": "date-time" },
+    "title": { "type": "string" },
+    "markdown_body": { "type": "string" },
+    "content_hash": { "type": "string" },
+    "fallback_policy": { "type": "string", "enum": ["none", "allow_general", "allow_same_audience_only", "allow_general_for_teen_only"] },
+    "source_article_uid": { "type": "string" },
+    "external_content_uid": { "type": "string" },
+    "is_deleted": { "type": "boolean" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_variant_business_key", "fields": ["product_key", "article_id", "language", "audience_segment", "reading_mode", "revision"], "unique": true },
+    { "name": "idx_variant_resolution", "fields": ["product_key", "article_id", "language", "audience_segment", "reading_mode", "publish_status", "publish_at"] },
+    { "name": "idx_variant_sync", "fields": ["product_key", "updated_at", "_id"] },
+    { "name": "idx_variant_publish_batch", "fields": ["product_key", "publish_batch_id", "update_priority", "publish_at"] },
+    { "name": "idx_variant_availability", "fields": ["product_key", "available_from", "available_until", "publish_status"] }
+  ]
+}

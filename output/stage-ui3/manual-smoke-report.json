@@ -1,0 +1,80 @@
+﻿{
+    "generated_at":  "2026-03-20T22:09:36.3879441+08:00",
+    "stage":  "UI3.5",
+    "status":  "pending_human_execution",
+    "project_root":  "D:/ws/Playground/mobile",
+    "steps":  [
+                  "Open D:/ws/Playground/mobile in HBuilderX.",
+                  "Run Android app-plus local debug, or H5 preview if app-plus is unavailable.",
+                  "Observe bottom shell, entry paths, and Build Audit in settings.",
+                  "Fill the checklist results below."
+              ],
+    "checklist":  [
+                      {
+                          "id":  "tabbar-count",
+                          "expected":  "Bottom shell shows exactly 3 tabs",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "tabbar-routes",
+                          "expected":  "Tabs are feed, search/鏉ユ簮(route pages/search/index), profile",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "paywall-entry",
+                          "expected":  "paywall reachable from feed/profile/detail/campaign",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "invite-entry",
+                          "expected":  "invite reachable from profile/paywall",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "settings-entry",
+                          "expected":  "settings reachable from profile",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "detail-entry",
+                          "expected":  "detail opens only from content click",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "detail-quick",
+                          "expected":  "detail defaults to quick_30s",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "detail-deep",
+                          "expected":  "detail top switch reaches deep_3m",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "feed-return-state",
+                          "expected":  "feed restores scrollTop/activeTab/publicationKey/updateType after detail back",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "build-audit",
+                          "expected":  "settings shows Build Audit",
+                          "status":  "pending",
+                          "evidence":  null
+                      },
+                      {
+                          "id":  "runtime-provenance",
+                          "expected":  "running package can still be tied to current source directory",
+                          "status":  "pending",
+                          "evidence":  null
+                      }
+                  ]
+}

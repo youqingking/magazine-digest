@@ -1,0 +1,114 @@
+{
+  "responses": [
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 3000,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 900,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 3000,
+      "floor_applied": false,
+      "campaign_id": "camp_internal_beta_30off",
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 900,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 1500,
+      "floor_applied": true,
+      "campaign_id": "camp_preview_floor_guard",
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 3000,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 3000,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_annual",
+      "original_amount_fen": 28800,
+      "final_amount_fen": 28800,
+      "price_floor_fen": 8640,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_annual",
+      "original_amount_fen": 28800,
+      "final_amount_fen": 8640,
+      "price_floor_fen": 8640,
+      "applied_price_multiplier_basis_points": 3000,
+      "floor_applied": false,
+      "campaign_id": "camp_internal_beta_30off",
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_annual",
+      "original_amount_fen": 28800,
+      "final_amount_fen": 8640,
+      "price_floor_fen": 8640,
+      "applied_price_multiplier_basis_points": 1500,
+      "floor_applied": true,
+      "campaign_id": "camp_preview_floor_guard",
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_annual",
+      "original_amount_fen": 28800,
+      "final_amount_fen": 28800,
+      "price_floor_fen": 8640,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    },
+    {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_annual",
+      "original_amount_fen": 28800,
+      "final_amount_fen": 28800,
+      "price_floor_fen": 8640,
+      "applied_price_multiplier_basis_points": 10000,
+      "floor_applied": false,
+      "campaign_id": null,
+      "denial_reason": null
+    }
+  ]
+}

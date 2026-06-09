@@ -1,0 +1,46 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:43:37.629Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_9d4b7c6d-b197-465a-8d3e-88879f4f13e4",
+    "event_type": "override_applied",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T04:43:37.618Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1c_three_release_mixed_preview",
+    "scenario_id": "data1c_three_release_mixed_preview",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "accepted_overrides": [
+        {
+          "id": "economist-single-override-drift",
+          "issue_id": "the_economist__20260314",
+          "count": 1,
+          "classification": "temporary_override"
+        }
+      ]
+    }
+  }
+}

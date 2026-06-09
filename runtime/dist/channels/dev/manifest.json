@@ -1,0 +1,18 @@
+{
+  "version": "stage-rel2-v1",
+  "channel": "dev",
+  "status": "active",
+  "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+  "source_scenario_id": "data2_multi_publication_release_candidate",
+  "promoted_from": null,
+  "published_at": "2026-03-23T12:17:50.532Z",
+  "rollback_target": "rel_data2_multi_publication_release_candidate_20260323T121517Z",
+  "release_manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json",
+  "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+  "provenance_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/provenance.json",
+  "exported_at": "2026-03-23T12:22:30.700Z",
+  "source_manifest": "runtime/channels/dev/manifest.json",
+  "notes": [
+    "channel_head_exported_from_rel1"
+  ]
+}

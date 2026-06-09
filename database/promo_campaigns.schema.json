@@ -1,0 +1,28 @@
+{
+  "collection": "promo_campaigns",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "campaign_key", "display_name", "campaign_type", "stackable", "status", "starts_at", "ends_at", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "campaign_key": { "type": "string" },
+    "display_name": { "type": "string" },
+    "campaign_type": { "type": "string", "enum": ["pricing_discount", "welcome_reward", "invite_reward", "internal_beta"] },
+    "price_multiplier_basis_points": { "type": "integer", "minimum": 0, "maximum": 10000 },
+    "reward_vip_days": { "type": "integer", "minimum": 0 },
+    "stackable": { "type": "boolean" },
+    "status": { "type": "string", "enum": ["draft", "active", "paused", "inactive", "archived"] },
+    "starts_at": { "type": "string", "format": "date-time" },
+    "ends_at": { "type": "string", "format": "date-time" },
+    "targeting": { "type": "object" },
+    "reward_policy_ref": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_campaign_key", "fields": ["product_key", "campaign_key"], "unique": true },
+    { "name": "idx_campaign_status_window", "fields": ["product_key", "status", "starts_at", "ends_at"] }
+  ]
+}

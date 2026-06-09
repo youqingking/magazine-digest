@@ -1,0 +1,60 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T04:44:08.528Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_fcfde5cd-2c30-4fb2-9492-cbaef9b1d3b9",
+    "event_type": "crud_scenario_membership_include_issue",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T04:44:08.519Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data1a_readers_digest_12112025",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "scenario_membership",
+      "entity_id": "the_economist__20260314",
+      "action": "include_issue",
+      "input": {
+        "issue_id": "the_economist__20260314",
+        "classification": "ops5_smoke_rc",
+        "action_name": "include_issue",
+        "release_candidate_allowed": true
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "hold_warning"
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "evt_article_open_001",
+    "product_key": "demo_cn_content",
+    "event_name": "article_open",
+    "user_id": "user_invitee_001",
+    "installation_id": "inst_invitee_android_001",
+    "session_id": "sess_001",
+    "article_id": "art_nebula_launch",
+    "article_variant_id": "var_nebula_teen_quick_r1",
+    "experiment_bucket": "paywall_layout_v1:B",
+    "request_id": "req_evt_001",
+    "dedup_key": "demo_cn_content:article_open:req_evt_001",
+    "occurred_at": "2026-03-16T10:05:00+08:00",
+    "server_received_at": "2026-03-16T10:05:02+08:00",
+    "source": "client",
+    "payload": { "progress": 0.1, "platform": "android" }
+  },
+  {
+    "_id": "evt_paywall_001",
+    "product_key": "demo_cn_content",
+    "event_name": "paywall_impression",
+    "user_id": "user_invitee_001",
+    "installation_id": "inst_invitee_android_001",
+    "session_id": "sess_001",
+    "article_id": "art_nebula_launch",
+    "article_variant_id": "var_nebula_teen_quick_r1",
+    "experiment_bucket": "paywall_layout_v1:B",
+    "request_id": "req_evt_002",
+    "dedup_key": "demo_cn_content:paywall_impression:req_evt_002",
+    "occurred_at": "2026-03-16T10:06:00+08:00",
+    "server_received_at": "2026-03-16T10:06:01+08:00",
+    "source": "client",
+    "payload": { "platform": "android" }
+  },
+  {
+    "_id": "evt_invite_success_001",
+    "product_key": "demo_cn_content",
+    "event_name": "invite_bind_success",
+    "user_id": "user_invitee_001",
+    "installation_id": "inst_invitee_android_001",
+    "session_id": "sess_002",
+    "request_id": "req_evt_003",
+    "dedup_key": "demo_cn_content:invite_bind_success:req_evt_003",
+    "occurred_at": "2026-03-16T10:07:00+08:00",
+    "server_received_at": "2026-03-16T10:07:01+08:00",
+    "source": "server",
+    "payload": { "referral_id": "ref_bind_001", "platform": "android" }
+  }
+]

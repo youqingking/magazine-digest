@@ -1,0 +1,26 @@
+{
+  "collection": "pricing_plans",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "plan_key", "display_name", "price_fen", "currency", "billing_cycle", "is_default_display", "stackable_with_campaign", "price_floor_fen", "status", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "plan_key": { "type": "string" },
+    "display_name": { "type": "string" },
+    "price_fen": { "type": "integer", "minimum": 0 },
+    "currency": { "type": "string", "enum": ["CNY"] },
+    "billing_cycle": { "type": "string", "enum": ["monthly", "annual"] },
+    "is_default_display": { "type": "boolean" },
+    "stackable_with_campaign": { "type": "boolean" },
+    "price_floor_fen": { "type": "integer", "minimum": 0 },
+    "status": { "type": "string", "enum": ["draft", "active", "inactive", "archived"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_plan_key", "fields": ["product_key", "plan_key"], "unique": true },
+    { "name": "idx_pricing_display", "fields": ["product_key", "status", "is_default_display", "billing_cycle"] }
+  ]
+}

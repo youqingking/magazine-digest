@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-03-23T04:39:47.350Z",
+  "status": "passed",
+  "checks": {
+    "apply_drill": {
+      "status": "ok",
+      "final_current": "data1a_readers_digest_12112025",
+      "final_selected": "data1a_readers_digest_12112025"
+    },
+    "preview_only_reject": {
+      "status": "warning_requires_override",
+      "decision": "hold_warning",
+      "current_unchanged": true,
+      "selected_unchanged": true
+    },
+    "artifacts": {
+      "release_notes": true,
+      "release_manifest": true,
+      "pre_publish_snapshot": true,
+      "post_publish_snapshot": true,
+      "post_rollback_snapshot": true,
+      "drill_report": true,
+      "publish_history": true,
+      "dashboard": true
+    }
+  }
+}

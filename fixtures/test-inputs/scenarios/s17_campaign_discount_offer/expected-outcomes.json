@@ -1,0 +1,33 @@
+{
+  "expected_variant_selection": {
+    "general_quick_30s": "var_s17_campaign_offer_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "denied",
+      "denial_reason": "PROMO_CAMPAIGN_PREVIEW"
+    },
+    "pricing_preview_expectation": {
+      "must_include_active_campaign_adjustment": true,
+      "must_include_campaign_landing_projection": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "campaign_landing_cacheable": true,
+    "offer_preview_cacheable": true
+  },
+  "expected_event_signals": ["campaign_open", "paywall_offer_impression"],
+  "notes": [
+    "s17 is the synthetic Stage G projection for b06_internal_beta_pricing_conflict."
+  ]
+}

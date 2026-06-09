@@ -1,0 +1,92 @@
+{
+  "scenario_id": "s17_campaign_discount_offer",
+  "title": "Campaign Discount Offer",
+  "objective": "Provide a display-only campaign landing and offer preview for local-runtime growth flows.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["ai_digest"],
+  "article_ids": ["art_s17_campaign_offer"],
+  "covered_risks": ["campaign_offer_preview", "pricing_conflict_projection", "landing_copy_placeholder"],
+  "intended_stage": ["G"],
+  "depends_on_surfaces": ["commercial-offer", "campaign-landing", "experiment-assign"],
+  "business_flow_aliases": [
+    {
+      "alias_id": "b06_internal_beta_pricing_conflict",
+      "relationship": "primary_projection"
+    }
+  ],
+  "articles": [
+    {
+      "article_id": "art_s17_campaign_offer",
+      "article_uid": "syn_article_s17_campaign_offer",
+      "article_key": "campaign_offer_20260317",
+      "publication_key": "ai_digest",
+      "title": "活动落地页预览：折扣说明与适用条件需同时可见",
+      "summary": "虚构 campaign landing 文案，用于 Stage G 活动页与优惠说明基础联动。",
+      "tags": ["ai", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T09:12:00+08:00",
+      "updated_at": "2026-03-17T09:57:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": ["stage_g_local_growth"],
+    "experiment_ids": ["exp_campaign_landing_copy_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s17_reader",
+      "access_state": "denied",
+      "decision_source": "synthetic_campaign_preview",
+      "quota_remaining": 1,
+      "entitlement_snapshot": null,
+      "denial_reason": "PROMO_CAMPAIGN_PREVIEW"
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly", "plan_demo_annual"],
+      "promo_codes": ["CAMPAIGN70", "BETA30A001"]
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s17_reader",
+      "experiment_id": "exp_campaign_landing_copy_v1",
+      "bucket_key": "discount_focus",
+      "assignment_source": "synthetic_fixture"
+    },
+    "commercial_offer": {
+      "active_campaign_adjustment": {
+        "campaign_id": "camp_internal_beta_30off",
+        "campaign_key": "internal_beta_30off",
+        "price_multiplier_basis_points": 3000,
+        "headline": "活动页展示 3 折预览，但仍不创建真实订单"
+      },
+      "experiment_offer_hint": {
+        "experiment_id": "exp_campaign_landing_copy_v1",
+        "bucket_key": "discount_focus",
+        "copy_variant": "discount_focus"
+      },
+      "promo_input_capability": {
+        "enabled": true,
+        "preview_only": true
+      },
+      "floor_guard_explanation": "活动展示价仅为预览，真实结算仍遵守 floor guard。",
+      "quota_reason": "QUOTA_AVAILABLE",
+      "entitlement_reason": "CAMPAIGN_LANDING_PREVIEW",
+      "audience_context_hint": "campaign landing from discovery"
+    },
+    "campaign_landing": {
+      "campaign_id": "camp_internal_beta_30off",
+      "campaign_key": "internal_beta_30off",
+      "title": "内部测试活动预览",
+      "subtitle": "展示折扣、适用条件与 CTA 占位，不触发真实投放",
+      "discount_label": "3 折预览",
+      "eligibility_summary": [
+        "仅限本地 Stage G synthetic runtime",
+        "需遵守价格地板规则",
+        "真实支付与真实投放均未接入"
+      ],
+      "cta_primary": "立即查看优惠",
+      "cta_secondary": "复制活动码占位"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

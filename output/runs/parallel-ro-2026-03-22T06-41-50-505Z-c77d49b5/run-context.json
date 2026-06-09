@@ -1,0 +1,7 @@
+{
+  "run_id": "parallel-ro-2026-03-22T06-41-50-505Z-c77d49b5",
+  "root": "D:\\ws\\Playground\\output\\runs\\parallel-ro-2026-03-22T06-41-50-505Z-c77d49b5",
+  "script": "scripts/ops/evaluate-promotion.mjs",
+  "profile": "report_only",
+  "created_at": "2026-03-22T06:41:50.510Z"
+}

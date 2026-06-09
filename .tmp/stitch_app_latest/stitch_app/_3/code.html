@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb691",
+              "tertiary-container": "#c55500",
+              "surface-container-highest": "#e0e3e6",
+              "on-surface-variant": "#414754",
+              "surface-variant": "#e0e3e6",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#1a73e8",
+              "outline": "#727785",
+              "tertiary-fixed": "#ffdbcb",
+              "surface-container-high": "#e6e8eb",
+              "on-primary-container": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f2f4f7",
+              "on-secondary-container": "#3d5481",
+              "surface": "#f7f9fc",
+              "inverse-on-surface": "#eff1f4",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#001a41",
+              "secondary-fixed": "#d8e2ff",
+              "surface-dim": "#d8dadd",
+              "on-secondary-fixed-variant": "#2e4673",
+              "on-secondary-fixed": "#001a41",
+              "surface-container": "#eceef1",
+              "on-primary-fixed-variant": "#004493",
+              "on-tertiary-fixed": "#341100",
+              "surface-bright": "#f7f9fc",
+              "secondary": "#475e8c",
+              "on-tertiary-fixed-variant": "#783100",
+              "inverse-surface": "#2d3133",
+              "error-container": "#ffdad6",
+              "surface-tint": "#005bc0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#0e0200",
+              "inverse-primary": "#adc7ff",
+              "secondary-fixed-dim": "#afc7fb",
+              "outline-variant": "#c1c6d6",
+              "on-background": "#191c1e",
+              "on-surface": "#191c1e",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-container": "#b2c9fe",
+              "on-error": "#ffffff",
+              "tertiary": "#9e4300",
+              "on-primary": "#ffffff",
+              "primary": "#005bbf",
+              "background": "#f7f9fc",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- Top App Bar (Shared Component Strategy) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">menu_book</span>
+<span class="text-xl font-bold text-slate-900 dark:text-slate-50 tracking-wide">数字策展人</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full active:opacity-70 transition-all duration-200">
+<span class="material-symbols-outlined text-slate-500">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full active:opacity-70 transition-all duration-200">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-screen-md mx-auto space-y-8">
+<!-- User Profile Section -->
+<section class="flex items-center justify-between py-6">
+<div class="flex items-center gap-5">
+<div class="relative">
+<img alt="User Avatar" class="w-20 h-20 rounded-full object-cover border-4 border-surface-container-lowest shadow-sm" data-alt="Professional portrait of a woman in a minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3vcQ_JJ1YD4lb-4QvO4HYD8QKoQDpWAh8bDFA9d0P-o5bnuRh-glY4tp0AO_1yksQPsjyL3ADPdMjRvUrvWJ4FoVphALfCJdW5KCY3FFj6Dx-bZ8xWcyrqcBmx4EP5O_gK-PIQSpsLzKiixACCWQ_25ORAsJg5C8jsOZ45BLMaRx-FM-UCdCAMo4iaIjXXjApvAmVpb63E1RA5CIq-pT7gu__lWmkwH2H5BVI7cEW7SpToluNmpkCIllQuRcL-0WuGmOFW9IApNs"/>
+<div class="absolute bottom-0 right-0 bg-primary-container text-white p-1 rounded-full border-2 border-surface">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="space-y-1">
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">林静远</h2>
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">PREMIUM</span>
+<span class="text-sm text-outline font-medium">数字策展人 ID: 88291</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership & Assets Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- VIP Status Card -->
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-xl p-6 text-white shadow-lg relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<p class="text-sm font-medium opacity-90">全站通行证已开启</p>
+</div>
+<h3 class="text-xl font-bold">终身尊享会员</h3>
+</div>
+<p class="mt-4 text-xs opacity-75 font-medium">到期时间：2029-12-31</p>
+</div>
+<!-- Abstract background pattern -->
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<!-- Quota Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 flex flex-col justify-between border border-transparent">
+<div>
+<p class="text-sm font-medium text-outline mb-1">今日免费剩余额度</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-on-surface">12</span>
+<span class="text-outline text-sm">/ 20 篇</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[60%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Lists (The No-Line Rule) -->
+<section class="space-y-2">
+<h3 class="text-sm font-bold text-outline px-2 py-2 uppercase tracking-[0.1em]">阅读资产</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+<a class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<span class="font-medium">收藏夹</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-sm">128 项</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="font-medium">阅读历史</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-sm">今日 4 篇</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">download_for_offline</span>
+</div>
+<span class="font-medium">离线缓存</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-sm">1.2 GB</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Rewards Section -->
+<section class="space-y-2">
+<h3 class="text-sm font-bold text-outline px-2 py-2 uppercase tracking-[0.1em]">福利中心</h3>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+<a class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined">redeem</span>
+</div>
+<span class="font-medium">兑换码</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-rose-50 flex items-center justify-center text-rose-600">
+<span class="material-symbols-outlined">card_giftcard</span>
+</div>
+<span class="font-medium">邀请奖励</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-rose-100 text-rose-600 text-[10px] font-bold rounded">HOT</span>
+<span class="material-symbols-outlined text-outline text-sm">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Logout / Footer Info -->
+<footer class="pt-8 pb-12 flex flex-col items-center gap-4">
+<button class="text-error text-sm font-semibold px-6 py-2 rounded-lg hover:bg-error/5 transition-colors">退出当前账号</button>
+<p class="text-[10px] text-outline opacity-50 font-medium tracking-widest uppercase">Digital Curator v4.2.0 • Editorial Efficiency</p>
+</footer>
+</main>
+<!-- Bottom Nav Bar (Shared Component Strategy) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-safe bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl shadow-[0_-1px_0_0_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 opacity-80 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em]">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 opacity-80 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">subscriptions</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em]">来源</span>
+</a>
+<!-- Active State: Profile -->
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 font-bold scale-105 transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em]">我的</span>
+</a>
+</nav>
+</body></html>

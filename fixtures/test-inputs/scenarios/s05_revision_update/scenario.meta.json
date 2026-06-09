@@ -1,0 +1,54 @@
+{
+  "scenario_id": "s05_revision_update",
+  "title": "Revision Update",
+  "objective": "Provide visible revision differences for sync delta, highest revision selection, and cache invalidation tests.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["world_brief"],
+  "article_ids": ["art_s05_river_meter"],
+  "covered_risks": ["revision_upgrade", "delta_sync", "cache_invalidation"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-sync-delta", "content-detail", "event-ingest"],
+  "articles": [
+    {
+      "article_id": "art_s05_river_meter",
+      "article_uid": "syn_article_s05_river_meter",
+      "article_key": "river_meter_20260317",
+      "publication_key": "world_brief",
+      "title": "河道水尺项目在复核后改写结论",
+      "summary": "同一篇虚构报道提供 revision 1 与 revision 2，方便验证更高修订号是否覆盖旧缓存。",
+      "tags": ["policy", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T09:35:00+08:00",
+      "updated_at": "2026-03-17T10:05:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s05_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 2,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s05_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "B",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

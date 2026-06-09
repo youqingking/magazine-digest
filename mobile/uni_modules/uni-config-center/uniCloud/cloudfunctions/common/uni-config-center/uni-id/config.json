@@ -1,0 +1,14 @@
+{
+  "dcloudAppid": [
+    "NEED_HUMAN_DCLOUD_APP_ID"
+  ],
+  "passwordSecret": "NEED_HUMAN_LOCAL_SECRET",
+  "tokenSecret": "NEED_HUMAN_LOCAL_SECRET",
+  "automation": {
+    "disablePasswordLoginCaptcha": true
+  },
+  "tokenExpiresIn": 7200,
+  "tokenExpiresThreshold": 1200,
+  "passwordErrorLimit": 6,
+  "bindTokenToDevice": false
+}

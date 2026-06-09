@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "plan_demo_monthly",
+    "product_key": "demo_cn_content",
+    "plan_key": "monthly_standard",
+    "display_name": "Monthly Standard",
+    "price_fen": 3000,
+    "currency": "CNY",
+    "billing_cycle": "monthly",
+    "is_default_display": true,
+    "stackable_with_campaign": true,
+    "price_floor_fen": 900,
+    "status": "active",
+    "created_at": "2026-03-16T09:20:00+08:00",
+    "updated_at": "2026-03-16T09:20:00+08:00"
+  },
+  {
+    "_id": "plan_demo_annual",
+    "product_key": "demo_cn_content",
+    "plan_key": "annual_standard",
+    "display_name": "Annual Standard",
+    "price_fen": 28800,
+    "currency": "CNY",
+    "billing_cycle": "annual",
+    "is_default_display": false,
+    "stackable_with_campaign": true,
+    "price_floor_fen": 8640,
+    "status": "active",
+    "created_at": "2026-03-16T09:20:00+08:00",
+    "updated_at": "2026-03-16T09:20:00+08:00"
+  }
+]

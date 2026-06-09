@@ -1,0 +1,112 @@
+{
+  "publication_id": "the_atlantic",
+  "publication_key": "the_atlantic",
+  "publication_name": "The Atlantic",
+  "issue_label": "012026",
+  "source_pack": "Three-release.zip",
+  "source_release_dir": "The Atlantic-012026-release",
+  "parser_profile": "the_atlantic_release_v1",
+  "article_pair_count": 10,
+  "import_status": "active",
+  "warnings_count": 0,
+  "articles": [
+    {
+      "article_id": "art_the_atlantic_012026_001",
+      "ordinal": 1,
+      "title": "2026年1月刊前瞻：秩序的终结与机构的重塑",
+      "section_label": "Front",
+      "source_adult_path": "The Atlantic-012026-release/adult/001_JANUARY_2026_Front_Dispatches_Culture_Critics_Back.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/001_JANUARY_2026_Front_Dispatches_Culture_Critics_Back.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_002",
+      "ordinal": 2,
+      "title": "优待之国：美国大学的“考试延时”困局",
+      "section_label": "Opening Argument",
+      "source_adult_path": "The Atlantic-012026-release/adult/002_OPE_NING_A_RGU_M_E_N_T_ACCOMMODATION_NATION_America_s_colleges_have_an.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/002_OPE_NING_A_RGU_M_E_N_T_ACCOMMODATION_NATION_America_s_colleges_have_an.md",
+      "import_warnings": [
+        "atlantic_filename_truncated"
+      ]
+    },
+    {
+      "article_id": "art_the_atlantic_012026_003",
+      "ordinal": 3,
+      "title": "《制度的代价：从“学术加时”泛滥看美国社会治理与道德资本的博弈》",
+      "section_label": "Dispatches",
+      "source_adult_path": "The Atlantic-012026-release/adult/003_Dispatches_OPE_NING_A_RGU_M_E_N_T_diagnosis._Hailey_Strickler_pathologizing_norm.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/003_Dispatches_OPE_NING_A_RGU_M_E_N_T_diagnosis._Hailey_Strickler_pathologizing_norm.md",
+      "import_warnings": [
+        "atlantic_filename_truncated"
+      ]
+    },
+    {
+      "article_id": "art_the_atlantic_012026_004",
+      "ordinal": 5,
+      "title": "从快乐蜂的全球扩张到德国工业的防务转型",
+      "section_label": "Dispatches",
+      "source_adult_path": "The Atlantic-012026-release/adult/005_Tanmantiong_s_hopes_for_expansion_rest_mostly_but_not_entirely_on_the_distinctiv.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/005_Tanmantiong_s_hopes_for_expansion_rest_mostly_but_not_entirely_on_the_distinctiv.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_005",
+      "ordinal": 6,
+      "title": "德国的军事觉醒：二战后防务范式的根本转型",
+      "section_label": "Dispatches",
+      "source_adult_path": "The Atlantic-012026-release/adult/006_In_the_decades_since_World_War_II_Germans_have_developed_a_deep_aversion_to_anyt.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/006_In_the_decades_since_World_War_II_Germans_have_developed_a_deep_aversion_to_anyt.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_006",
+      "ordinal": 7,
+      "title": "《幕后律动：十五位鼓手谱写的摇滚进化史》",
+      "section_label": "Culture & Critics",
+      "source_adult_path": "The Atlantic-012026-release/adult/007_Culture_Critics_O_M_NIVOR_E_Lingan_s_book_to_tell_a_story_of_rock-and-roll_evolu.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/007_Culture_Critics_O_M_NIVOR_E_Lingan_s_book_to_tell_a_story_of_rock-and-roll_evolu.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_007",
+      "ordinal": 8,
+      "title": "谁在左右我们的餐桌？——从“食品巨头”到“社交媒体推手”的权力转移",
+      "section_label": "Culture & Critics",
+      "source_adult_path": "The Atlantic-012026-release/adult/008_15_percent_of_children._Food_companies_had_long.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/008_15_percent_of_children._Food_companies_had_long.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_008",
+      "ordinal": 9,
+      "title": "《昨日的现代人：萨姆·谢泼德，自塑牛仔与男性焦虑的诗人》",
+      "section_label": "Culture & Critics",
+      "source_adult_path": "The Atlantic-012026-release/adult/009_a_former_paramour_called_him_a_man_playing_cowboys_and_Shepard.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/009_a_former_paramour_called_him_a_man_playing_cowboys_and_Shepard.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_atlantic_012026_009",
+      "ordinal": 10,
+      "title": "恐惧的博弈：个体在极端环境下的道德抉择",
+      "section_label": "Culture & Critics",
+      "source_adult_path": "The Atlantic-012026-release/adult/010_will_tell_u_that_story_again_again..md",
+      "source_youth_path": "The Atlantic-012026-release/youth/010_will_tell_u_that_story_again_again..md",
+      "import_warnings": [
+        "atlantic_filename_truncated"
+      ]
+    },
+    {
+      "article_id": "art_the_atlantic_012026_010",
+      "ordinal": 11,
+      "title": "感受的考古学：我们真的能理解古人的痛苦吗？",
+      "section_label": "Culture & Critics",
+      "source_adult_path": "The Atlantic-012026-release/adult/011_hammering_away_in_his.md",
+      "source_youth_path": "The Atlantic-012026-release/youth/011_hammering_away_in_his.md",
+      "import_warnings": [
+        "atlantic_filename_truncated"
+      ]
+    }
+  ]
+}

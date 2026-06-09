@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "generated_at": "2026-03-17T07:33:43.171Z",
+  "selected_scenarios": [
+    "s01_normal_full_matrix",
+    "s02_general_fallback",
+    "s03_teen_unavailable"
+  ]
+}

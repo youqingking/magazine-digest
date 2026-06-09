@@ -1,0 +1,28 @@
+{
+  "collection": "event_logs_raw",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "append_only_ledger",
+  "required": ["_id", "product_key", "event_name", "installation_id", "session_id", "request_id", "dedup_key", "occurred_at", "server_received_at", "source", "payload"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "event_name": { "type": "string", "enum": ["article_impression", "article_open", "variant_switch", "read_progress", "paywall_impression", "paywall_dismiss", "plan_select", "purchase_success", "purchase_fail", "share_click", "share_success", "invite_bind_success", "promo_redeem_success", "notification_received", "notification_open", "inbox_open", "follow_add", "follow_remove", "bookmark_add", "bookmark_remove", "continue_read_click", "search_query", "filter_apply", "digest_open"] },
+    "user_id": { "type": "string" },
+    "installation_id": { "type": "string" },
+    "session_id": { "type": "string" },
+    "article_id": { "type": "string" },
+    "article_variant_id": { "type": "string" },
+    "experiment_bucket": { "type": "string" },
+    "request_id": { "type": "string" },
+    "dedup_key": { "type": "string" },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "server_received_at": { "type": "string", "format": "date-time" },
+    "source": { "type": "string", "enum": ["client", "server", "admin"] },
+    "payload": { "type": "object" }
+  },
+  "indexes": [
+    { "name": "uk_event_dedup", "fields": ["product_key", "dedup_key"], "unique": true },
+    { "name": "idx_event_daily", "fields": ["product_key", "event_name", "server_received_at"] }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-22T15:35:27.254Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_3aa5d452-07b8-44b5-b022-184a19d496ee",
+    "event_type": "override_applied",
+    "event_category": "quality",
+    "occurred_at": "2026-03-22T15:35:27.252Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "accepted_overrides": [
+        {
+          "id": "atlantic-editorial-override-drift",
+          "issue_id": "the_atlantic__012026",
+          "count": 9,
+          "classification": "temporary_override"
+        }
+      ]
+    }
+  }
+}

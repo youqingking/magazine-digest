@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb691",
+              "tertiary-container": "#c55500",
+              "surface-container-highest": "#e0e3e6",
+              "on-surface-variant": "#414754",
+              "surface-variant": "#e0e3e6",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#1a73e8",
+              "outline": "#727785",
+              "tertiary-fixed": "#ffdbcb",
+              "surface-container-high": "#e6e8eb",
+              "on-primary-container": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f2f4f7",
+              "on-secondary-container": "#3d5481",
+              "surface": "#f7f9fc",
+              "inverse-on-surface": "#eff1f4",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#001a41",
+              "secondary-fixed": "#d8e2ff",
+              "surface-dim": "#d8dadd",
+              "on-secondary-fixed-variant": "#2e4673",
+              "on-secondary-fixed": "#001a41",
+              "surface-container": "#eceef1",
+              "on-primary-fixed-variant": "#004493",
+              "on-tertiary-fixed": "#341100",
+              "surface-bright": "#f7f9fc",
+              "secondary": "#475e8c",
+              "on-tertiary-fixed-variant": "#783100",
+              "inverse-surface": "#2d3133",
+              "error-container": "#ffdad6",
+              "surface-tint": "#005bc0",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#0e0200",
+              "inverse-primary": "#adc7ff",
+              "secondary-fixed-dim": "#afc7fb",
+              "outline-variant": "#c1c6d6",
+              "on-background": "#191c1e",
+              "on-surface": "#191c1e",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-container": "#b2c9fe",
+              "on-error": "#ffffff",
+              "tertiary": "#9e4300",
+              "on-primary": "#ffffff",
+              "primary": "#005bbf",
+              "background": "#f7f9fc",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="menu_book">menu_book</span>
+<span class="text-xl font-bold text-slate-900 dark:text-slate-50 tracking-wide">数字策展人</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full active:opacity-70">
+<span class="material-symbols-outlined text-slate-500" data-icon="search">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24 max-w-screen-xl mx-auto">
+<!-- Sticky Navigation Layers -->
+<nav class="sticky top-16 z-40 bg-surface/80 backdrop-blur-md">
+<!-- First Layer: Media Sources -->
+<div class="px-6 py-4 flex items-center justify-between overflow-x-auto no-scrollbar gap-6">
+<div class="flex items-center gap-8 whitespace-nowrap">
+<a class="text-blue-700 dark:text-blue-400 font-bold tracking-tight" href="#">全部来源</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">财新</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">晚点</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">极客公园</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">少数派</a>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-surface-container-high transition-colors">
+<span>更多</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<!-- Second Layer: Topic Categories -->
+<div class="px-6 py-3 flex items-center gap-2 overflow-x-auto no-scrollbar">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold">全部</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-colors">科技</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-colors">商业</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-colors">设计</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-colors">深度</button>
+</div>
+</nav>
+<!-- Content Canvas: Article Cards -->
+<section class="px-6 mt-8 space-y-6">
+<!-- Article Card 1 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest transition-all hover:bg-white hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">财新网</span>
+<span class="text-xs text-outline">•</span>
+<span class="text-xs text-outline">12分钟前</span>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-[10px] font-bold text-on-surface-variant">
+                                30秒 概览
+                            </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container/10 text-[10px] font-bold text-primary">
+                                3分钟 深度
+                            </span>
+</div>
+</div>
+<h2 class="text-xl font-bold leading-snug tracking-tight text-on-surface hover:text-primary transition-colors cursor-pointer">
+                        全球半导体格局重塑：供应链多元化下的成本挑战与机遇
+                    </h2>
+<p class="text-sm leading-relaxed text-on-surface-variant line-clamp-2 opacity-80">
+                        随着主要经济体持续加大对本土半导体制造的补贴，全球供应链正在从过去的效率优先转向安全优先。这一转变虽然增强了韧性，但也带来了前所未有的资本开支压力。
+                    </p>
+<div class="flex items-center gap-3 mt-1">
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 商业</span>
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 科技</span>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest transition-all hover:bg-white hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">晚点 LATEPOST</span>
+<span class="text-xs text-outline">•</span>
+<span class="text-xs text-outline">1小时前</span>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-[10px] font-bold text-on-surface-variant">
+                                30秒 概览
+                            </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container/10 text-[10px] font-bold text-primary">
+                                3分钟 深度
+                            </span>
+</div>
+</div>
+<h2 class="text-xl font-bold leading-snug tracking-tight text-on-surface hover:text-primary transition-colors cursor-pointer">
+                        对话大模型开发者：当技术红利期结束，应用层如何寻找护城河？
+                    </h2>
+<p class="text-sm leading-relaxed text-on-surface-variant line-clamp-2 opacity-80">
+                        在基础模型能力趋同的当下，纯粹的技术领先已经难以维持长期优势。开发者们开始回归业务逻辑，探讨如何在特定垂直领域构建无法被替代的闭环体验。
+                    </p>
+<div class="flex items-center gap-3 mt-1">
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 人工智能</span>
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 深度</span>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest transition-all hover:bg-white hover:shadow-sm border-l-4 border-primary">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">少数派</span>
+<span class="text-xs text-outline">•</span>
+<span class="text-xs text-outline">3小时前</span>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-[10px] font-bold text-on-surface-variant">
+                                30秒 概览
+                            </span>
+</div>
+</div>
+<h2 class="text-xl font-bold leading-snug tracking-tight text-on-surface hover:text-primary transition-colors cursor-pointer">
+                        数字极简主义实践：如何在信息洪流中重建深度思考的能力
+                    </h2>
+<p class="text-sm leading-relaxed text-on-surface-variant line-clamp-2 opacity-80">
+                        我们被精准的算法和无穷无尽的通知所包围。通过对阅读工作流的重塑，我们可以有意识地筛选信息，将碎片化的时间重新聚合为深度学习的土壤。
+                    </p>
+<div class="flex items-center gap-3 mt-1">
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 设计</span>
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 效率</span>
+</div>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest transition-all hover:bg-white hover:shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">极客公园</span>
+<span class="text-xs text-outline">•</span>
+<span class="text-xs text-outline">昨天</span>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-container/10 text-[10px] font-bold text-primary">
+                                3分钟 深度
+                            </span>
+</div>
+</div>
+<h2 class="text-xl font-bold leading-snug tracking-tight text-on-surface hover:text-primary transition-colors cursor-pointer">
+                        空间计算时代的交互范式：从触屏到多维感知的跨越
+                    </h2>
+<p class="text-sm leading-relaxed text-on-surface-variant line-clamp-2 opacity-80">
+                        硬件的革新正在倒逼软件交互设计的进化。当屏幕不再是唯一的窗口，设计师需要重新思考如何利用视线、手势以及语音构建自然的数字世界入口。
+                    </p>
+<div class="flex items-center gap-3 mt-1">
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 科技</span>
+<span class="px-2 py-1 bg-surface-container text-[11px] font-medium text-secondary rounded"># 设计</span>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-safe bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl shadow-[0_-1px_0_0_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 font-bold scale-105 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em] mt-1">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 opacity-80 hover:text-blue-600 dark:hover:text-blue-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="subscriptions">subscriptions</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em] mt-1">来源</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 opacity-80 hover:text-blue-600 dark:hover:text-blue-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium leading-tight tracking-[0.02em] mt-1">我的</span>
+</a>
+</nav>
+</body></html>

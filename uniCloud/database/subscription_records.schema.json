@@ -1,0 +1,26 @@
+{
+  "collection": "subscription_records",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "fact",
+  "required": ["_id", "product_key", "user_id", "pricing_plan_id", "status", "billing_cycle", "effective_at", "expires_at", "billing_cycle_anchor", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "pricing_plan_id": { "type": "string" },
+    "payment_order_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["trial", "active", "grace", "paused", "cancelled", "expired"] },
+    "billing_cycle": { "type": "string", "enum": ["monthly", "annual"] },
+    "effective_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "billing_cycle_anchor": { "type": "string", "format": "date-time" },
+    "external_subscription_ref": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_external_subscription_cycle", "fields": ["product_key", "external_subscription_ref", "billing_cycle_anchor"], "unique": true, "sparse": true },
+    { "name": "idx_subscription_user_status", "fields": ["product_key", "user_id", "status", "expires_at"] }
+  ]
+}

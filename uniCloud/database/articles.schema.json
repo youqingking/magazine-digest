@@ -1,0 +1,24 @@
+{
+  "collection": "articles",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "publication_id", "article_key", "source_article_uid", "title", "status", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "publication_id": { "type": "string" },
+    "article_key": { "type": "string" },
+    "source_article_uid": { "type": "string" },
+    "title": { "type": "string" },
+    "summary": { "type": "string" },
+    "topic_tags": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string", "enum": ["draft", "active", "archived"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_article_key", "fields": ["product_key", "article_key"], "unique": true },
+    { "name": "idx_article_publication", "fields": ["product_key", "publication_id", "updated_at"] }
+  ]
+}

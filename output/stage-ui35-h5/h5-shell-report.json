@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-03-24T06:01:05.427Z",
+  "status": "passed",
+  "target_url": "http://127.0.0.1:18085/#/",
+  "automated_checks": {
+    "tabbar_count": {
+      "status": "passed",
+      "labels": [
+        "首页",
+        "来源",
+        "我的"
+      ]
+    },
+    "tabbar_routes": {
+      "status": "passed",
+      "labels": [
+        "首页",
+        "来源",
+        "我的"
+      ]
+    },
+    "search_tab_route": {
+      "status": "passed",
+      "label": "来源",
+      "url": "http://127.0.0.1:18085/#/pages/search/index"
+    },
+    "profile_tab_route": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/profile/index"
+    },
+    "feed_paywall_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/paywall/index?source=feed"
+    },
+    "profile_paywall_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/paywall/index?source=profile"
+    },
+    "profile_invite_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/invite/index?source=profile"
+    },
+    "paywall_invite_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/invite/index?source=paywall"
+    },
+    "profile_settings_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/settings/index"
+    },
+    "campaign_alias_entry": {
+      "status": "passed",
+      "url": "http://127.0.0.1:18085/#/pages/paywall/index?focus=campaign"
+    },
+    "detail_default_quick": {
+      "status": "passed",
+      "active_labels": [
+        "通用"
+      ],
+      "url": "http://127.0.0.1:18085/#/pages/detail/index?articleId=art_barrons_09022026_004&readingMode=quick_30s&source=feed"
+    },
+    "detail_deep_switch": {
+      "status": "passed",
+      "active_labels": [
+        "青少年"
+      ]
+    },
+    "feed_restore_state_partial": {
+      "status": "passed",
+      "active_chips": [
+        "全部来源",
+        "全部期次",
+        "消息摘要"
+      ],
+      "update_label_visible": true
+    },
+    "settings_foundation": {
+      "status": "passed",
+      "build_audit_visible": false
+    },
+    "build_audit_visible": {
+      "status": "manual_remaining",
+      "visible": false
+    }
+  },
+  "manual_remaining": [
+    "settings Build Audit visibility in the dev-style runtime",
+    "runtime provenance re-confirmation through in-app Build Audit",
+    "exact scrollTop restoration pixel value",
+    "app-plus or MuMu specific runtime proof"
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "fatal_error": "",
+  "final_url": "http://127.0.0.1:18085/#/",
+  "screenshot_path": "D:\\ws\\Playground\\output\\stage-ui35-h5\\h5-shell.png"
+}

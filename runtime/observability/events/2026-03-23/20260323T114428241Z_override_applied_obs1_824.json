@@ -1,0 +1,52 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T11:44:28.244Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_8241f403-66ca-42f1-9a30-7d41434d20cd",
+    "event_type": "override_applied",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T11:44:28.241Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "accepted_overrides": [
+        {
+          "id": "atlantic-editorial-override-drift",
+          "issue_id": "the_atlantic__012026",
+          "count": 9,
+          "classification": "temporary_override"
+        },
+        {
+          "id": "economist-single-override-drift",
+          "issue_id": "the_economist__20260314",
+          "count": 1,
+          "classification": "temporary_override"
+        }
+      ]
+    }
+  }
+}

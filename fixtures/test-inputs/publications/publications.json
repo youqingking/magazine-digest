@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "pub_world_brief",
+    "product_key": "demo_cn_content",
+    "publication_key": "world_brief",
+    "display_name": "World Brief",
+    "language": "zh-CN",
+    "status": "active",
+    "description": "Synthetic global affairs briefs for Stage X smoke inputs.",
+    "sort_order": 1
+  },
+  {
+    "_id": "pub_ai_digest",
+    "product_key": "demo_cn_content",
+    "publication_key": "ai_digest",
+    "display_name": "AI Digest",
+    "language": "zh-CN",
+    "status": "active",
+    "description": "Synthetic AI product and policy summaries for runtime tests.",
+    "sort_order": 2
+  },
+  {
+    "_id": "pub_market_watch",
+    "product_key": "demo_cn_content",
+    "publication_key": "market_watch",
+    "display_name": "Market Watch",
+    "language": "zh-CN",
+    "status": "active",
+    "description": "Synthetic economy and market coverage for pricing and feed smoke.",
+    "sort_order": 3
+  }
+]

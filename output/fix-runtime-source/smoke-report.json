@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-03-22T07:38:08.405Z",
+  "status": "passed",
+  "before": {
+    "runtime_source": {
+      "version": "stage-rel1-v1",
+      "updated_at": "2026-03-22T07:37:50.547Z",
+      "mode": "scenario_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "channel": null,
+      "release_id": null,
+      "selection_reason": "manual_scenario_preview"
+    },
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_scenario_id": "data1c_three_release_mixed_preview"
+  },
+  "preview_switch": {
+    "runtime_source": {
+      "version": "stage-rel1-v1",
+      "updated_at": "2026-03-22T07:38:07.268Z",
+      "mode": "scenario_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "channel": null,
+      "release_id": null,
+      "selection_reason": "smoke_fix_runtime_source_h5_preview"
+    },
+    "h5_dev_sync": {
+      "status": "ok",
+      "mode": "scenario_preview",
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "visible_publications": [
+        "barrons",
+        "the_atlantic",
+        "the_economist"
+      ]
+    },
+    "diagnostic": {
+      "generated_at": "2026-03-22T07:38:08.325Z",
+      "runtime_source": {
+        "version": "stage-rel1-v1",
+        "updated_at": "2026-03-22T07:38:07.268Z",
+        "mode": "scenario_preview",
+        "scenario_id": "data1c_three_release_mixed_preview",
+        "channel": null,
+        "release_id": null,
+        "selection_reason": "smoke_fix_runtime_source_h5_preview"
+      },
+      "effective_runtime_source": {
+        "version": "stage-rel1-v1",
+        "updated_at": "2026-03-22T07:38:07.268Z",
+        "mode": "scenario_preview",
+        "scenario_id": "data1c_three_release_mixed_preview",
+        "channel": null,
+        "release_id": null,
+        "selection_reason": "ops_set_runtime_source_for_h5_dev"
+      },
+      "current_mirror_scenario_id": "data1c_three_release_mixed_preview",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "visible_publications": [
+        "barrons",
+        "the_atlantic",
+        "the_economist"
+      ],
+      "explanation": [
+        "之前 H5/HBuilderX 看不到三本新刊，是因为默认 source 仍指向 current_mirror。",
+        "当时 current_mirror 实际是 data1c_three_release_mixed_preview。",
+        "要看三刊预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。",
+        "要看两刊可发布版本，可切到 scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。"
+      ]
+    }
+  },
+  "restore": {
+    "runtime_source": {
+      "version": "stage-rel1-v1",
+      "updated_at": "2026-03-22T07:38:08.333Z",
+      "mode": "current_mirror",
+      "scenario_id": null,
+      "channel": null,
+      "release_id": null,
+      "selection_reason": "smoke_fix_runtime_source_h5_restore"
+    },
+    "h5_dev_sync": {
+      "status": "ok",
+      "mode": "current_mirror",
+      "scenario_id": "data1a_readers_digest_12112025",
+      "visible_publications": [
+        "readers_digest"
+      ]
+    },
+    "diagnostic": {
+      "generated_at": "2026-03-22T07:38:08.398Z",
+      "runtime_source": {
+        "version": "stage-rel1-v1",
+        "updated_at": "2026-03-22T07:38:08.333Z",
+        "mode": "current_mirror",
+        "scenario_id": null,
+        "channel": null,
+        "release_id": null,
+        "selection_reason": "smoke_fix_runtime_source_h5_restore"
+      },
+      "effective_runtime_source": {
+        "version": "stage-rel1-v1",
+        "updated_at": "2026-03-22T07:38:08.333Z",
+        "mode": "current_mirror",
+        "scenario_id": null,
+        "channel": null,
+        "release_id": null,
+        "selection_reason": "smoke_fix_runtime_source_h5_restore"
+      },
+      "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+      "selected_scenario_id": "data1a_readers_digest_12112025",
+      "visible_publications": [
+        "readers_digest"
+      ],
+      "explanation": [
+        "之前 H5/HBuilderX 看不到三本新刊，是因为默认 source 仍指向 current_mirror。",
+        "当时 current_mirror 实际是 data1a_readers_digest_12112025。",
+        "要看三刊预览，需要显式切到 scenario_preview:data1c_three_release_mixed_preview。",
+        "要看两刊可发布版本，可切到 scenario_preview:data2_multi_publication_release_candidate 或 channel_head:dev。"
+      ]
+    }
+  }
+}

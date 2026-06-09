@@ -1,0 +1,84 @@
+{
+  "version": "stage-data3-v1",
+  "publication_key": "the_economist",
+  "mappings": [
+    {
+      "raw_label": "Leaders",
+      "canonical_section_key": "opinion",
+      "publication_section_path": "The Economist > Leaders",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "By Invitation",
+      "canonical_section_key": "opinion",
+      "publication_section_path": "The Economist > By Invitation",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "The Economist",
+      "canonical_section_key": "opinion",
+      "publication_section_path": "The Economist > The Economist",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Briefing",
+      "canonical_section_key": "briefing",
+      "publication_section_path": "The Economist > Briefing",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Letters",
+      "canonical_section_key": "letters",
+      "publication_section_path": "The Economist > Letters",
+      "mapping_kind": "canonical"
+    },
+    {
+      "raw_label": "Britain",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > Britain",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Europe",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > Europe",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "China",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > China",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Asia",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > Asia",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "United States",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > United States",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "Middle East & Africa",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > Middle East & Africa",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "The Americas",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > The Americas",
+      "mapping_kind": "publication_specific"
+    },
+    {
+      "raw_label": "International",
+      "canonical_section_key": "world_dispatch",
+      "publication_section_path": "The Economist > International",
+      "mapping_kind": "publication_specific"
+    }
+  ]
+}

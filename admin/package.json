@@ -1,0 +1,9 @@
+{
+  "name": "admin-shell",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:shell": "powershell -ExecutionPolicy Bypass -File ..\\scripts\\bootstrap\\build-admin.ps1",
+    "generate:pages": "powershell -ExecutionPolicy Bypass -File ..\\scripts\\bootstrap\\generate-admin.ps1"
+  }
+}

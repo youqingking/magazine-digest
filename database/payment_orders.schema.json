@@ -1,0 +1,31 @@
+{
+  "collection": "payment_orders",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "fact",
+  "required": ["_id", "product_key", "user_id", "pricing_plan_id", "status", "currency", "original_amount_fen", "final_amount_fen", "idempotency_key", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "pricing_plan_id": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "promo_code_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["created", "pending_payment", "paid", "failed", "cancelled", "refunded", "closed"] },
+    "currency": { "type": "string", "enum": ["CNY"] },
+    "original_amount_fen": { "type": "integer", "minimum": 0 },
+    "final_amount_fen": { "type": "integer", "minimum": 0 },
+    "payment_channel": { "type": "string", "enum": ["mock", "wxpay", "alipay", "unknown"] },
+    "idempotency_key": { "type": "string" },
+    "provider_transaction_id": { "type": "string" },
+    "provider_event_id": { "type": "string" },
+    "pricing_snapshot": { "type": "object" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_order_idempotency", "fields": ["product_key", "idempotency_key"], "unique": true },
+    { "name": "uk_provider_event", "fields": ["product_key", "provider_event_id"], "unique": true, "sparse": true },
+    { "name": "idx_order_user_status", "fields": ["product_key", "user_id", "status", "created_at"] }
+  ]
+}

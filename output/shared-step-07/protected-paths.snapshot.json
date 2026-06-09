@@ -1,0 +1,537 @@
+{
+  "generated_at": "2026-03-24T16:33:08.312Z",
+  "snapshot_version": "0.0.0-step07",
+  "mode": "baseline",
+  "baseline_snapshot_generated": true,
+  "protected_path_count": 88,
+  "entries": [
+    {
+      "path": "docs/SHARED_CANONICAL_MODELS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d2a1dfeadf2883a11961c0a574e1d1ab37c9f35498c5b886c58abc606e1e46d4"
+    },
+    {
+      "path": "docs/SHARED_ENUMS_AND_KEYS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "eb18e645f96a86e50fa485fc8d6dfba8da5c5b6a4ad1cfd04184d40e884d148d"
+    },
+    {
+      "path": "docs/SHARED_PACKAGE_APIS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "eae29e763297bce9fe699300873a8065c33cdc926c8b14c72bd28fe829cbcbf5"
+    },
+    {
+      "path": "docs/SHARED_MODEL_EXAMPLES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "cd2747f7b80c3147b618cb8b3ba5057255eea656d3e17f23a07fc55896b9b795"
+    },
+    {
+      "path": "docs/SHARED_CHANGE_POLICY.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "f36d79783b941babb952fd059e273218d3a0212ce6756e3855823deea370d8ae"
+    },
+    {
+      "path": "docs/SHARED_MIGRATION_WAVES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "1356bbdbbd15f01145b92419fba4ded74724072e33c0f2af21cd76efd68635ad"
+    },
+    {
+      "path": "docs/STAGE_SHARED_STEP02_DECISIONS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "af30db814c25a0c3fe1bb3dcfe214580629183e25f1d4a86223076b9e5ab1e64"
+    },
+    {
+      "path": "docs/STEP_02_ACCEPTANCE.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "14314f7a8a6477615aa1967ef6bd389a7886726b018151340111513339498c3a"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_LAYER.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "a7d4f085ed6fdd4b2b21a6e20b09987ea74cc7e86ec138f8767cb1a48300f444"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_MODELS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "878d755351357b18f38948b7bb553bef9a2e06b48059e5d991e1367cc907c92e"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_ENUMS_AND_KEYS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "03a7b66c6bdea9aa9750a3950ed16c95eae4ceaed92fef69d64057928443eea1"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_PROMOTION_RULES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "5f6205d97317aed68f3a8d3788827821bdc559ed2cdbf71dd8fe81de0f93fab4"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_EXAMPLES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "1f80aee6a8ff908a62afd20b018e66af177cb8eec4ac8556e36f0c52a0b68aca"
+    },
+    {
+      "path": "docs/SOURCE_FAMILY_COMPATIBILITY.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "896c71543f50b39bdd059b3f64a71c4594a8b643e4d593a2e1924635036dedea"
+    },
+    {
+      "path": "docs/STAGE_SHARED_STEP03_DECISIONS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "ca58f0c3a643d7084d71c28df923f022237d247dea47e012b44eb318692ded33"
+    },
+    {
+      "path": "docs/STEP_03_ACCEPTANCE.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "9ee8c0512516f4879ffd8cb9850dd6af709f12a6bc6c53f171fd6d89e918d0ed"
+    },
+    {
+      "path": "docs/ADAPTER_LAYER.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "6fd1e590d9a811a2191f7601c077e90672328143636fadb51f9e8c383717e0d9"
+    },
+    {
+      "path": "docs/ADAPTER_ROUTING_RULES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "c2890d09289d42b60dc8c753d518ef58dd73650030df35c22714f312bbf93eaf"
+    },
+    {
+      "path": "docs/ADAPTER_REGISTRY.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "4b9dd1b0626ca85d6d4d50215292af7965d923e54aff9200f96e423392b544f3"
+    },
+    {
+      "path": "docs/ADAPTER_DIAGNOSTICS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "e0297f737a8aa745e0ab8431eaa897ecb4f639e954b68471fcbaa0281bc8f54b"
+    },
+    {
+      "path": "docs/PILOT_ADAPTER_SELECTION.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "30786f3393fac7bb76734085dfbc784cef165a44c7b025e163c8c2538bfd4ea4"
+    },
+    {
+      "path": "docs/PILOT_MAPPING_EXAMPLES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "c261199d0e673f220e4a1c175d256494bd1626b236dac3397f39047000ec8162"
+    },
+    {
+      "path": "docs/STAGE_SHARED_STEP04_DECISIONS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "4c1f3be05eee1cf8c34e2f0a9c1f72630337cc58db7af97c82ce613413efa60a"
+    },
+    {
+      "path": "docs/STEP_04_ACCEPTANCE.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d31caa913e34d9edb3aac917db4eae3866a12d71d082f0603c294856546efa33"
+    },
+    {
+      "path": "docs/PILOT_REGISTRY_INTEGRATION.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "16167d974a4f814baa76ffc1144d7df822609910efcfa02e943acc0d7585ea17"
+    },
+    {
+      "path": "docs/ROUTE_RESOLUTION_FLOW.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "cd77fee26acb3e79a36026d243a2ebcc359f6ffc718588498ab5f9740eb8d1da"
+    },
+    {
+      "path": "docs/DOMAIN_SKELETON_MIGRATION.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "1d6cbff7c023466a8c3aef758dd2360ff63bc351733f3f07f821dcffacf1fd96"
+    },
+    {
+      "path": "docs/DOMAIN_PILOT_SELECTION.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "ab8bcb35ba944ed1b8a682f4d2a84be1b0a37933257e96fabbedd464096edd05"
+    },
+    {
+      "path": "docs/PODCAST_DOMAIN_POSITIONING.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "b532ce0b481d9e9124d6e42beecafee9e467eadaaccdb6155b43421a0a3099f9"
+    },
+    {
+      "path": "docs/STAGE_SHARED_STEP05_DECISIONS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d396ea5a9aa5123575a93b86f7a908f66787398a5a8a3426b9dd6db9a10a68de"
+    },
+    {
+      "path": "docs/STEP_05_ACCEPTANCE.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "03b0482e17b2198c489aad06284bc5817ef8f5b6ab5399b26ea8287a5e002dd2"
+    },
+    {
+      "path": "docs/SELECTED_DOMAIN_ADOPTION.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "63721fca5331a494c231ac96ba81a3a79013e0ff283d79ec04bd4d215acc090b"
+    },
+    {
+      "path": "docs/DOMAIN_PROJECTION_FIXTURES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "6cff70026a90598bdf1c33a83d143dcc16d0134f147e8ab91ac71594e3ba05e2"
+    },
+    {
+      "path": "docs/SHARED_RUNTIME_ADOPTION_RULES.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "29a4d03debfb7adc02d1818c48b0c3e162ea2c5b73b25ee665d88d351f9cb15d"
+    },
+    {
+      "path": "docs/FAMILY_ONLY_PILOT_HANDLING.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "11c1b4077b21531a1170542ea88448ca9c555467056b98e2488d208e707061ea"
+    },
+    {
+      "path": "docs/STAGE_SHARED_STEP06_DECISIONS.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "ec8236bf73046af2f6a3706d6bdd37c3ec4d5c4fb83d41d9bb80e68256bae5f2"
+    },
+    {
+      "path": "docs/STEP_06_ACCEPTANCE.md",
+      "exists": true,
+      "tracked": true,
+      "sha256": "5c5b98a5b1464dd87b7ec7e09499485f95650b65bdd0ff08055af7e5c5e21f19"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/route-resolver.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d71ad19e5219b8259e3420ff539e3f0bfc4d07a6090d4d5ada1cb21b82fb04aa"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/registry-consumer.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "fb40589ffca982b2c75122f1641d507af6c98dc8cdb53ffd85dd1fa520be4d70"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/runtime-surface-map.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "ceb4807f3946bc10f66fd3d5a0408cfe9f393564b304a00d71346aa99493bf07"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/adopt-pilot-entry.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "0c9ba0cbc6bff33c074703707de2339d593d2a3925afa1b9a51b99dcd5067edc"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/project-to-shared-envelope.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "06e2345e7d2bdca68ee1dbdf0ff6495d191254e341c8447b5669bc929c55868d"
+    },
+    {
+      "path": "packages/attention-core-runtime/src/run-route-resolution.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "885c5d243d850790a5aa03d9e62836ec6ac256c03e8b339b4edfe9ce0377924e"
+    },
+    {
+      "path": "packages/attention-family-runtime/src/run-family-normalizer.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "68f93e388a13c58add50afff18c1aac4100c6067a22e5109a81d611898599492"
+    },
+    {
+      "path": "packages/attention-family-runtime/src/normalized-shape-guards.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "a36335a4b9704e18fc64f09bbffad3553390c1fda6a4b3bf48e233b99f01fbab"
+    },
+    {
+      "path": "packages/attention-family-runtime/src/normalizers/transcript-first-longform.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "b27f3cfabfb01e5b3bdb3b4416b6e6a9cc0c27b346b3d2df988e2668701d5e56"
+    },
+    {
+      "path": "packages/attention-family-runtime/src/normalizers/official-structured-sources.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "9e70e8933f56413f76041a3c07a35bf2bb8c196769fe5b8fa21ab156b02e5560"
+    },
+    {
+      "path": "packages/attention-family-runtime/src/normalizers/index.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "ebe0cff4790caa007d494342149499e88ec828455f74ac877b2659b4e037790f"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/execute-pilot-mapping.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "35ddac51e00f2dc5aa9ee18a79a670b2476e3cfe948441cd1bd87d8ada1a8141"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/build-pilot-diagnostics.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "26171511f07b980d0cb206842bed6c7fc5532d7a20289d61bf1cdbb8748b5535"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/registry-entry-builder.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "77b1ca530d6034dfd0fac2f21c9c84f9f5b1aabeeb395ccfb7f45a4b5abd2545"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/resolve-route-type.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "be8bbba2027163f2b5c3ae991b9fa69082cb3fe8e2126b030c3a82079cd32cb4"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/index.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "2505bd0e32a145df90cb1e5c5fc5e5e13b9f593ed7a2837a68b6beb350a588c9"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/direct-magazine-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "b1826bdb13d0c45ca4f1a941de33b541396f590a933095d3ffcec7e379da03a3"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/direct-youtube-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "fab6f2cafa89233ef20fb62b63ee8d358ae85545167d2e94898d8fd9f7b9d9cf"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/family-podcast-transcript.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "f844406582fed85a669d230addbc767bd7b2fde865b10fa39c877c309f72551d"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/family-sec-filing.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "67e286cebca6e40ee061772c623766830e1dc8480f1095b1fef3360c6db83910"
+    },
+    {
+      "path": "packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "20242aa9c16488689ade354ed0bf15dc3c1421138c7116dc1eaa7b39ff9092e3"
+    },
+    {
+      "path": "packages/attention-adapter-harness/src/pilot-registry-report.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "e071a072844bdc5fccd1553a01bb5d1fc0ecc64c89be01324e94251685eb08b7"
+    },
+    {
+      "path": "packages/attention-adapter-harness/src/route-resolution-report.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "211386b68882c4484fa0c630491c3e027f50be250efef1fa77989aa3d6b44b51"
+    },
+    {
+      "path": "packages/attention-adapter-harness/src/adoption-report-shape.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "cb67bc09aa8b2d02e351dacccfdc00b4dacf5d83d9b71868e2588bea576ca984"
+    },
+    {
+      "path": "packages/attention-adapter-harness/src/domain-pilot-report-shape.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "df306f1091ae3755c0eb37736c0de977f1fbb9cac437431035f0e59e001e0160"
+    },
+    {
+      "path": "domains/magazine-domain/src/adoption/project-direct-magazine-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d27738a93df271961e0d9267ab35421b0922345a3d314fdda97333ba4c308fbd"
+    },
+    {
+      "path": "domains/magazine-domain/src/adoption/run-direct-magazine-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "9a072f60e2be5736593f59bbcfd48d8151793068c3f70e24722bee50892682dc"
+    },
+    {
+      "path": "domains/magazine-domain/fixtures/direct-magazine-summary.input.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "fe21a0a5e001a3e394337f029d817693df5d769228c823c50a5ad4ddfbbc9f45"
+    },
+    {
+      "path": "domains/magazine-domain/fixtures/direct-magazine-summary.shared.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "e58b23de9f35cf023ba38297e2941db5cfbb7900cf16e4e12f15c61d3ac88122"
+    },
+    {
+      "path": "domains/magazine-domain/fixtures/direct-magazine-summary.diagnostics.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "fbe71ceba1fcb79077cb1fd73ef11575041fa6e71196e0acdca69bf9c4967e3a"
+    },
+    {
+      "path": "domains/youtube-domain/src/adoption/project-direct-youtube-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "20bd3e50ea5d13876963fd264b4437c0ba019f44bc567b34559a9f24878e9430"
+    },
+    {
+      "path": "domains/youtube-domain/src/adoption/run-direct-youtube-summary.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "af34e0f3b7ceb913878e351f78edec6ae104b9007a7374d21795713ee8ec4c10"
+    },
+    {
+      "path": "domains/youtube-domain/fixtures/direct-youtube-summary.input.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "8fa42f4e9fa0cda7ff3d8c806be168fc41487b8b466257c82831a29e54d042ca"
+    },
+    {
+      "path": "domains/youtube-domain/fixtures/direct-youtube-summary.shared.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "c51c0306edd9f2d2ee22dad4e0d115e79960448a8b52618aeec21591455f2883"
+    },
+    {
+      "path": "domains/youtube-domain/fixtures/direct-youtube-summary.diagnostics.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "2452e3d9135c2e14e1eefa9da009e21332fcf9ee19fb642846c63a3feae38bb3"
+    },
+    {
+      "path": "domains/podcast-domain/src/adoption/project-family-podcast-transcript.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "4c54728d90de4479e80c173060e13fe5c54abd690bb6927bc60831a4bbe93625"
+    },
+    {
+      "path": "domains/podcast-domain/src/adoption/run-family-podcast-transcript.js",
+      "exists": true,
+      "tracked": true,
+      "sha256": "b0d433f4b66881c68126ff720a254dd34d1cdc6c31aab1bd11d565aea0426663"
+    },
+    {
+      "path": "domains/podcast-domain/fixtures/family-podcast-transcript.input.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "d2c4950ae2c61d0faafbee923a7e8b08b35d3436682dfe26e53f224091d5ece1"
+    },
+    {
+      "path": "domains/podcast-domain/fixtures/family-podcast-transcript.family.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "f81f42273a19b42009590c4a0b6b3f5c3e534d3251a924457a348372ab62a20c"
+    },
+    {
+      "path": "domains/podcast-domain/fixtures/family-podcast-transcript.shared.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "534152d27e591470a0b185cf6e39a0a5eb8f178c8123d7b48cf36d3a624e445d"
+    },
+    {
+      "path": "domains/podcast-domain/fixtures/family-podcast-transcript.diagnostics.json",
+      "exists": true,
+      "tracked": true,
+      "sha256": "5d18c0382985679e1a60bfee027b622eaf1231d206acb8e5f0856dc2496052f1"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-02.mjs",
+      "exists": true,
+      "tracked": true,
+      "sha256": "2c581fdff3ea31733e570ae7b0ad326d9756daa72874257de78dd596b3df2eca"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-02.ps1",
+      "exists": true,
+      "tracked": true,
+      "sha256": "6efc6ce1decafa3e622204e293c26489e19dfaa57e6ad0c17895d7f7a6ce16b6"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-03.mjs",
+      "exists": true,
+      "tracked": true,
+      "sha256": "820ecd48b981dd20880ea1f1f14070ffe67a0a3b8ccbc64d8839c7f084ffc17b"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-03.ps1",
+      "exists": true,
+      "tracked": true,
+      "sha256": "f0809c7c1948c3f9e480f8960791b3c1d567aca62fb64a6a6499ad8d424c2069"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-04.mjs",
+      "exists": true,
+      "tracked": true,
+      "sha256": "eeea98117eab06f41f1d9d662e3232c3c7bf37906c761db30a3b31d9db47e23b"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-04.ps1",
+      "exists": true,
+      "tracked": true,
+      "sha256": "173729dcd7560a2329d56f269276ed0cb786c88612c2cb64a99c64eae71def07"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-05.mjs",
+      "exists": true,
+      "tracked": true,
+      "sha256": "0b47a69de73812cca34da02000b692a6acc7379530b97cb842b9876555fd6c61"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-05.ps1",
+      "exists": true,
+      "tracked": true,
+      "sha256": "1e110f8414547b6134ddf93025bc2b95adf6906ee0fce8c908fedad91904d07f"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-06.mjs",
+      "exists": true,
+      "tracked": true,
+      "sha256": "9376be74b419044bcaf191b8ce50839c693e36837cd10778173f51d442002bf8"
+    },
+    {
+      "path": "scripts/contracts/validate-shared-step-06.ps1",
+      "exists": true,
+      "tracked": true,
+      "sha256": "f05e6cebd1a388c86860849408b9e2782b33adb4d727d5e91bf0a9a4d2d58821"
+    }
+  ]
+}

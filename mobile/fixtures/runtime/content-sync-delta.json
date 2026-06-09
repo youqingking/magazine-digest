@@ -1,0 +1,103 @@
+{
+  "response": {
+    "server_cursor": "2026-03-16T09:10:00+08:00|var_nebula_teen_quick_r1",
+    "has_more": false,
+    "items": [
+      {
+        "entity_type": "article",
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "publication_id": "pub_daily_brief",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation.",
+        "status": "active",
+        "updated_at": "2026-03-16T09:05:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_adult_deep_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "adult",
+        "reading_mode": "deep_3m",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_adult_deep_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_adult_quick_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "adult",
+        "reading_mode": "quick_30s",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_adult_quick_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_general_deep_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "general",
+        "reading_mode": "deep_3m",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_general_deep_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_general_quick_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "general",
+        "reading_mode": "quick_30s",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_general_quick_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_teen_deep_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "teen",
+        "reading_mode": "deep_3m",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_teen_deep_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      },
+      {
+        "entity_type": "article_variant",
+        "article_variant_id": "var_nebula_teen_quick_r1",
+        "article_id": "art_nebula_launch",
+        "language": "zh-CN",
+        "audience_segment": "teen",
+        "reading_mode": "quick_30s",
+        "publish_status": "published",
+        "publish_at": "2026-03-16T09:10:00+08:00",
+        "revision": 1,
+        "content_hash": "hash_teen_quick_r1",
+        "is_deleted": false,
+        "updated_at": "2026-03-16T09:10:00+08:00"
+      }
+    ],
+    "tombstones": []
+  }
+}

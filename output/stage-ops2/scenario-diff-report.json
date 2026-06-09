@@ -1,0 +1,2622 @@
+{
+  "generated_at": "2026-03-23T12:17:47.924Z",
+  "candidate_scenario_id": "data2_multi_publication_release_candidate",
+  "mode": "candidate_context",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "current_scenario_id": "data2_multi_publication_release_candidate",
+  "comparisons": [
+    {
+      "generated_at": "2026-03-23T12:17:47.804Z",
+      "from_scenario_id": "data2_multi_publication_release_candidate",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "current",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [],
+      "info": [],
+      "counts": {
+        "publication_count": {
+          "from": 5,
+          "to": 5,
+          "delta": 0
+        },
+        "issue_count": {
+          "from": 5,
+          "to": 5,
+          "delta": 0
+        },
+        "article_count": {
+          "from": 118,
+          "to": 118,
+          "delta": 0
+        },
+        "overrides_count": {
+          "from": 10,
+          "to": 10,
+          "delta": 0
+        },
+        "unresolved_warning_count": {
+          "from": 2,
+          "to": 2,
+          "delta": 0
+        }
+      },
+      "inventory": {
+        "publications_added": [],
+        "publications_removed": [],
+        "issues_added": [],
+        "issues_removed": [],
+        "article_ids_added": [],
+        "article_ids_removed": []
+      },
+      "parser_profiles": {
+        "from": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "readers_digest_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "readers_digest_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "added": [],
+        "removed": []
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 236,
+            "general": 236,
+            "adult": 236
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 236,
+            "general": 236,
+            "adult": 236
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 4,
+            "to": 4,
+            "delta": 0
+          },
+          "economist_filename_anomaly": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          },
+          "economist_section_context_fallback": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          }
+        },
+        "unresolved_counts_delta": {
+          "economist_filename_anomaly": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          },
+          "economist_section_context_fallback": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          }
+        }
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_economist__20260314",
+              "article_count": 51,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 1,
+              "warnings_count": 2,
+              "unresolved_warnings_count": 2
+            }
+          ],
+          "total_article_count": 93,
+          "overrides_count": 10,
+          "warnings_count": 6,
+          "unresolved_warnings_count": 2,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0.75
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_economist__20260314",
+              "article_count": 51,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 1,
+              "warnings_count": 2,
+              "unresolved_warnings_count": 2
+            }
+          ],
+          "total_article_count": 93,
+          "overrides_count": 10,
+          "warnings_count": 6,
+          "unresolved_warnings_count": 2,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0.75
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": true,
+          "to": true
+        },
+        "current_published": {
+          "from": true,
+          "to": true
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "current",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 5,
+          "issue_count": 5,
+          "article_count": 118,
+          "publication_list": [
+            "barrons",
+            "readers_digest",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "readers_digest__12112025",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "readers_digest_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 236,
+              "general": 236,
+              "adult": 236
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "article_count": 51,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 1,
+                "warnings_count": 2,
+                "unresolved_warnings_count": 2
+              }
+            ],
+            "total_article_count": 93,
+            "overrides_count": 10,
+            "warnings_count": 6,
+            "unresolved_warnings_count": 2,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0.75
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4,
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "unresolved_counts": {
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "import_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                },
+                "unresolved_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                }
+              }
+            ],
+            "import_total": 6,
+            "unresolved_total": 2
+          },
+          "override_summary": {
+            "count": 10,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "readers_digest__12112025": 0,
+              "science__20260323": 0,
+              "the_atlantic__012026": 9,
+              "the_economist__20260314": 1
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 5,
+          "issue_count": 5,
+          "article_count": 118,
+          "publication_list": [
+            "barrons",
+            "readers_digest",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "readers_digest__12112025",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "readers_digest_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 236,
+              "general": 236,
+              "adult": 236
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "article_count": 51,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 1,
+                "warnings_count": 2,
+                "unresolved_warnings_count": 2
+              }
+            ],
+            "total_article_count": 93,
+            "overrides_count": 10,
+            "warnings_count": 6,
+            "unresolved_warnings_count": 2,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0.75
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4,
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "unresolved_counts": {
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "import_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                },
+                "unresolved_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                }
+              }
+            ],
+            "import_total": 6,
+            "unresolved_total": 2
+          },
+          "override_summary": {
+            "count": 10,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "readers_digest__12112025": 0,
+              "science__20260323": 0,
+              "the_atlantic__012026": 9,
+              "the_economist__20260314": 1
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        }
+      }
+    },
+    {
+      "generated_at": "2026-03-23T12:17:47.877Z",
+      "from_scenario_id": "data2_multi_publication_release_candidate",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "selected",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [],
+      "info": [],
+      "counts": {
+        "publication_count": {
+          "from": 5,
+          "to": 5,
+          "delta": 0
+        },
+        "issue_count": {
+          "from": 5,
+          "to": 5,
+          "delta": 0
+        },
+        "article_count": {
+          "from": 118,
+          "to": 118,
+          "delta": 0
+        },
+        "overrides_count": {
+          "from": 10,
+          "to": 10,
+          "delta": 0
+        },
+        "unresolved_warning_count": {
+          "from": 2,
+          "to": 2,
+          "delta": 0
+        }
+      },
+      "inventory": {
+        "publications_added": [],
+        "publications_removed": [],
+        "issues_added": [],
+        "issues_removed": [],
+        "article_ids_added": [],
+        "article_ids_removed": []
+      },
+      "parser_profiles": {
+        "from": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "readers_digest_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "readers_digest_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "added": [],
+        "removed": []
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 236,
+            "general": 236,
+            "adult": 236
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 236,
+            "general": 236,
+            "adult": 236
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 4,
+            "to": 4,
+            "delta": 0
+          },
+          "economist_filename_anomaly": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          },
+          "economist_section_context_fallback": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          }
+        },
+        "unresolved_counts_delta": {
+          "economist_filename_anomaly": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          },
+          "economist_section_context_fallback": {
+            "from": 1,
+            "to": 1,
+            "delta": 0
+          }
+        }
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_economist__20260314",
+              "article_count": 51,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 1,
+              "warnings_count": 2,
+              "unresolved_warnings_count": 2
+            }
+          ],
+          "total_article_count": 93,
+          "overrides_count": 10,
+          "warnings_count": 6,
+          "unresolved_warnings_count": 2,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0.75
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_economist__20260314",
+              "article_count": 51,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 1,
+              "warnings_count": 2,
+              "unresolved_warnings_count": 2
+            }
+          ],
+          "total_article_count": 93,
+          "overrides_count": 10,
+          "warnings_count": 6,
+          "unresolved_warnings_count": 2,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0.75
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": true,
+          "to": true
+        },
+        "current_published": {
+          "from": true,
+          "to": true
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "selected",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 5,
+          "issue_count": 5,
+          "article_count": 118,
+          "publication_list": [
+            "barrons",
+            "readers_digest",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "readers_digest__12112025",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "readers_digest_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 236,
+              "general": 236,
+              "adult": 236
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "article_count": 51,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 1,
+                "warnings_count": 2,
+                "unresolved_warnings_count": 2
+              }
+            ],
+            "total_article_count": 93,
+            "overrides_count": 10,
+            "warnings_count": 6,
+            "unresolved_warnings_count": 2,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0.75
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4,
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "unresolved_counts": {
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "import_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                },
+                "unresolved_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                }
+              }
+            ],
+            "import_total": 6,
+            "unresolved_total": 2
+          },
+          "override_summary": {
+            "count": 10,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "readers_digest__12112025": 0,
+              "science__20260323": 0,
+              "the_atlantic__012026": 9,
+              "the_economist__20260314": 1
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 5,
+          "issue_count": 5,
+          "article_count": 118,
+          "publication_list": [
+            "barrons",
+            "readers_digest",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "readers_digest__12112025",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "readers_digest_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 236,
+              "general": 236,
+              "adult": 236
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "article_count": 51,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 1,
+                "warnings_count": 2,
+                "unresolved_warnings_count": 2
+              }
+            ],
+            "total_article_count": 93,
+            "overrides_count": 10,
+            "warnings_count": 6,
+            "unresolved_warnings_count": 2,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0.75
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4,
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "unresolved_counts": {
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "import_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                },
+                "unresolved_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                }
+              }
+            ],
+            "import_total": 6,
+            "unresolved_total": 2
+          },
+          "override_summary": {
+            "count": 10,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "readers_digest__12112025": 0,
+              "science__20260323": 0,
+              "the_atlantic__012026": 9,
+              "the_economist__20260314": 1
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        }
+      }
+    },
+    {
+      "generated_at": "2026-03-23T12:17:47.923Z",
+      "from_scenario_id": "data1a_readers_digest_12112025",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "from_state_role": "baseline",
+      "to_state_role": "candidate",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "warning_taxonomy_increase",
+          "items": [
+            {
+              "warning_type": "economist_filename_anomaly",
+              "from": 0,
+              "to": 1,
+              "delta": 1
+            },
+            {
+              "warning_type": "economist_section_context_fallback",
+              "from": 0,
+              "to": 1,
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "code": "override_count_changed",
+          "from": 0,
+          "to": 10
+        }
+      ],
+      "info": [
+        {
+          "code": "publication_added",
+          "items": [
+            "barrons",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ]
+        },
+        {
+          "code": "issue_added",
+          "items": [
+            "barrons__09022026",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ]
+        },
+        {
+          "code": "article_added",
+          "count": 103,
+          "items": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ]
+        },
+        {
+          "code": "parser_profile_added",
+          "items": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ]
+        },
+        {
+          "code": "build_label_changed",
+          "from": "readers_digest_12112025",
+          "to": "data2_multi_publication_release_candidate"
+        },
+        {
+          "code": "publish_state_changed",
+          "from": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          },
+          "to": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        }
+      ],
+      "counts": {
+        "publication_count": {
+          "from": 1,
+          "to": 5,
+          "delta": 4
+        },
+        "issue_count": {
+          "from": 1,
+          "to": 5,
+          "delta": 4
+        },
+        "article_count": {
+          "from": 15,
+          "to": 118,
+          "delta": 103
+        },
+        "overrides_count": {
+          "from": 0,
+          "to": 10,
+          "delta": 10
+        },
+        "unresolved_warning_count": {
+          "from": 0,
+          "to": 2,
+          "delta": 2
+        }
+      },
+      "inventory": {
+        "publications_added": [
+          "barrons",
+          "science",
+          "the_atlantic",
+          "the_economist"
+        ],
+        "publications_removed": [],
+        "issues_added": [
+          "barrons__09022026",
+          "science__20260323",
+          "the_atlantic__012026",
+          "the_economist__20260314"
+        ],
+        "issues_removed": [],
+        "article_ids_added": [
+          "art_barrons_09022026_001",
+          "art_barrons_09022026_002",
+          "art_barrons_09022026_003",
+          "art_barrons_09022026_004",
+          "art_barrons_09022026_005",
+          "art_barrons_09022026_006",
+          "art_barrons_09022026_007",
+          "art_barrons_09022026_008",
+          "art_barrons_09022026_009",
+          "art_barrons_09022026_010",
+          "art_barrons_09022026_011",
+          "art_barrons_09022026_012",
+          "art_barrons_09022026_013",
+          "art_barrons_09022026_014",
+          "art_barrons_09022026_015",
+          "art_barrons_09022026_016",
+          "art_barrons_09022026_017",
+          "art_science_20260323_001",
+          "art_science_20260323_002",
+          "art_science_20260323_003",
+          "art_science_20260323_004",
+          "art_science_20260323_005",
+          "art_science_20260323_006",
+          "art_science_20260323_007",
+          "art_science_20260323_008",
+          "art_science_20260323_009",
+          "art_science_20260323_010",
+          "art_science_20260323_011",
+          "art_science_20260323_012",
+          "art_science_20260323_013",
+          "art_science_20260323_014",
+          "art_science_20260323_015",
+          "art_science_20260323_016",
+          "art_science_20260323_017",
+          "art_science_20260323_018",
+          "art_science_20260323_019",
+          "art_science_20260323_020",
+          "art_science_20260323_021",
+          "art_science_20260323_022",
+          "art_science_20260323_023",
+          "art_science_20260323_024",
+          "art_science_20260323_025",
+          "art_the_atlantic_012026_001",
+          "art_the_atlantic_012026_002",
+          "art_the_atlantic_012026_003",
+          "art_the_atlantic_012026_004",
+          "art_the_atlantic_012026_005",
+          "art_the_atlantic_012026_006",
+          "art_the_atlantic_012026_007",
+          "art_the_atlantic_012026_008",
+          "art_the_atlantic_012026_009",
+          "art_the_atlantic_012026_010",
+          "art_the_economist_20260314_001",
+          "art_the_economist_20260314_002",
+          "art_the_economist_20260314_003",
+          "art_the_economist_20260314_004",
+          "art_the_economist_20260314_005",
+          "art_the_economist_20260314_006",
+          "art_the_economist_20260314_007",
+          "art_the_economist_20260314_008",
+          "art_the_economist_20260314_009",
+          "art_the_economist_20260314_010",
+          "art_the_economist_20260314_011",
+          "art_the_economist_20260314_012",
+          "art_the_economist_20260314_013",
+          "art_the_economist_20260314_014",
+          "art_the_economist_20260314_015",
+          "art_the_economist_20260314_016",
+          "art_the_economist_20260314_017",
+          "art_the_economist_20260314_018",
+          "art_the_economist_20260314_019",
+          "art_the_economist_20260314_020",
+          "art_the_economist_20260314_021",
+          "art_the_economist_20260314_022",
+          "art_the_economist_20260314_023",
+          "art_the_economist_20260314_024",
+          "art_the_economist_20260314_025",
+          "art_the_economist_20260314_026",
+          "art_the_economist_20260314_027",
+          "art_the_economist_20260314_028",
+          "art_the_economist_20260314_029",
+          "art_the_economist_20260314_030",
+          "art_the_economist_20260314_031",
+          "art_the_economist_20260314_032",
+          "art_the_economist_20260314_033",
+          "art_the_economist_20260314_034",
+          "art_the_economist_20260314_035",
+          "art_the_economist_20260314_036",
+          "art_the_economist_20260314_037",
+          "art_the_economist_20260314_038",
+          "art_the_economist_20260314_039",
+          "art_the_economist_20260314_040",
+          "art_the_economist_20260314_041",
+          "art_the_economist_20260314_042",
+          "art_the_economist_20260314_043",
+          "art_the_economist_20260314_044",
+          "art_the_economist_20260314_045",
+          "art_the_economist_20260314_046",
+          "art_the_economist_20260314_047",
+          "art_the_economist_20260314_048",
+          "art_the_economist_20260314_049",
+          "art_the_economist_20260314_050",
+          "art_the_economist_20260314_051"
+        ],
+        "article_ids_removed": []
+      },
+      "parser_profiles": {
+        "from": [
+          "readers_digest_v1"
+        ],
+        "to": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "readers_digest_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "added": [
+          "barrons_release_v1",
+          "generic_split_release_v1",
+          "the_atlantic_release_v1",
+          "the_economist_release_v1"
+        ],
+        "removed": []
+      },
+      "audience_coverage": {
+        "from": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 30,
+            "general": 30,
+            "adult": 30
+          }
+        },
+        "to": {
+          "audiences": [
+            "adult",
+            "general",
+            "teen"
+          ],
+          "reading_modes": [
+            "deep_3m",
+            "quick_30s"
+          ],
+          "response_count_by_audience": {
+            "teen": 236,
+            "general": 236,
+            "adult": 236
+          }
+        },
+        "added": [],
+        "removed": []
+      },
+      "warning_counts_by_taxonomy": {
+        "import_counts_delta": {
+          "atlantic_filename_truncated": {
+            "from": 0,
+            "to": 4,
+            "delta": 4
+          },
+          "economist_filename_anomaly": {
+            "from": 0,
+            "to": 1,
+            "delta": 1
+          },
+          "economist_section_context_fallback": {
+            "from": 0,
+            "to": 1,
+            "delta": 1
+          }
+        },
+        "unresolved_counts_delta": {
+          "economist_filename_anomaly": {
+            "from": 0,
+            "to": 1,
+            "delta": 1
+          },
+          "economist_section_context_fallback": {
+            "from": 0,
+            "to": 1,
+            "delta": 1
+          }
+        }
+      },
+      "metadata_quality_summary": {
+        "from": {
+          "issues": [
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            }
+          ],
+          "total_article_count": 15,
+          "overrides_count": 0,
+          "warnings_count": 0,
+          "unresolved_warnings_count": 0,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0
+        },
+        "to": {
+          "issues": [
+            {
+              "issue_id": "barrons__09022026",
+              "article_count": 17,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "readers_digest__12112025",
+              "article_count": 15,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 0,
+              "overrides_count": 0,
+              "warnings_count": 0,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_atlantic__012026",
+              "article_count": 10,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 9,
+              "warnings_count": 4,
+              "unresolved_warnings_count": 0
+            },
+            {
+              "issue_id": "the_economist__20260314",
+              "article_count": 51,
+              "title_complete_rate": 1,
+              "section_label_complete_rate": 1,
+              "ordinal_complete_rate": 1,
+              "overrides_count": 1,
+              "warnings_count": 2,
+              "unresolved_warnings_count": 2
+            }
+          ],
+          "total_article_count": 93,
+          "overrides_count": 10,
+          "warnings_count": 6,
+          "unresolved_warnings_count": 2,
+          "average_title_complete_rate": 1,
+          "average_section_label_complete_rate": 1,
+          "average_ordinal_complete_rate": 0.75
+        }
+      },
+      "paywall_test_rule": {
+        "from": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        },
+        "to": {
+          "rule_key": "global_free_quota_limit",
+          "free_quota_limit": 8
+        }
+      },
+      "lifecycle_state": {
+        "status": {
+          "from": "active",
+          "to": "active"
+        },
+        "selected_pointer": {
+          "from": false,
+          "to": true
+        },
+        "current_published": {
+          "from": false,
+          "to": true
+        },
+        "retired": {
+          "from": false,
+          "to": false
+        }
+      },
+      "snapshots": {
+        "from": {
+          "role": "baseline",
+          "exists": true,
+          "scenario_id": "data1a_readers_digest_12112025",
+          "scenario_type": "real_content",
+          "source_kind": "real_content_pilot",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+          "build_label": "readers_digest_12112025",
+          "product_key": "demo_cn_content",
+          "publication_count": 1,
+          "issue_count": 1,
+          "article_count": 15,
+          "publication_list": [
+            "readers_digest"
+          ],
+          "issue_list": [
+            "readers_digest__12112025"
+          ],
+          "article_ids": [
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015"
+          ],
+          "parser_profiles": [
+            "readers_digest_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 30,
+              "general": 30,
+              "adult": 30
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              }
+            ],
+            "total_article_count": 15,
+            "overrides_count": 0,
+            "warnings_count": 0,
+            "unresolved_warnings_count": 0,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0
+          },
+          "warning_summary": {
+            "import_counts": {},
+            "unresolved_counts": {},
+            "issue_breakdown": [
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              }
+            ],
+            "import_total": 0,
+            "unresolved_total": 0
+          },
+          "override_summary": {
+            "count": 0,
+            "by_issue": {
+              "readers_digest__12112025": 0
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": false,
+            "current_published": false,
+            "is_selected_for_current": false,
+            "selected_for_current_at": null,
+            "selected_at": null,
+            "published_at": null
+          }
+        },
+        "to": {
+          "role": "candidate",
+          "exists": true,
+          "scenario_id": "data2_multi_publication_release_candidate",
+          "scenario_type": "real_content_multi_publication_release_candidate",
+          "source_kind": "real_content_release_candidate",
+          "status": "active",
+          "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+          "build_label": "data2_multi_publication_release_candidate",
+          "product_key": "demo_cn_content",
+          "publication_count": 5,
+          "issue_count": 5,
+          "article_count": 118,
+          "publication_list": [
+            "barrons",
+            "readers_digest",
+            "science",
+            "the_atlantic",
+            "the_economist"
+          ],
+          "issue_list": [
+            "barrons__09022026",
+            "readers_digest__12112025",
+            "science__20260323",
+            "the_atlantic__012026",
+            "the_economist__20260314"
+          ],
+          "article_ids": [
+            "art_barrons_09022026_001",
+            "art_barrons_09022026_002",
+            "art_barrons_09022026_003",
+            "art_barrons_09022026_004",
+            "art_barrons_09022026_005",
+            "art_barrons_09022026_006",
+            "art_barrons_09022026_007",
+            "art_barrons_09022026_008",
+            "art_barrons_09022026_009",
+            "art_barrons_09022026_010",
+            "art_barrons_09022026_011",
+            "art_barrons_09022026_012",
+            "art_barrons_09022026_013",
+            "art_barrons_09022026_014",
+            "art_barrons_09022026_015",
+            "art_barrons_09022026_016",
+            "art_barrons_09022026_017",
+            "art_rd_12112025_001",
+            "art_rd_12112025_002",
+            "art_rd_12112025_003",
+            "art_rd_12112025_004",
+            "art_rd_12112025_005",
+            "art_rd_12112025_006",
+            "art_rd_12112025_007",
+            "art_rd_12112025_008",
+            "art_rd_12112025_009",
+            "art_rd_12112025_010",
+            "art_rd_12112025_011",
+            "art_rd_12112025_012",
+            "art_rd_12112025_013",
+            "art_rd_12112025_014",
+            "art_rd_12112025_015",
+            "art_science_20260323_001",
+            "art_science_20260323_002",
+            "art_science_20260323_003",
+            "art_science_20260323_004",
+            "art_science_20260323_005",
+            "art_science_20260323_006",
+            "art_science_20260323_007",
+            "art_science_20260323_008",
+            "art_science_20260323_009",
+            "art_science_20260323_010",
+            "art_science_20260323_011",
+            "art_science_20260323_012",
+            "art_science_20260323_013",
+            "art_science_20260323_014",
+            "art_science_20260323_015",
+            "art_science_20260323_016",
+            "art_science_20260323_017",
+            "art_science_20260323_018",
+            "art_science_20260323_019",
+            "art_science_20260323_020",
+            "art_science_20260323_021",
+            "art_science_20260323_022",
+            "art_science_20260323_023",
+            "art_science_20260323_024",
+            "art_science_20260323_025",
+            "art_the_atlantic_012026_001",
+            "art_the_atlantic_012026_002",
+            "art_the_atlantic_012026_003",
+            "art_the_atlantic_012026_004",
+            "art_the_atlantic_012026_005",
+            "art_the_atlantic_012026_006",
+            "art_the_atlantic_012026_007",
+            "art_the_atlantic_012026_008",
+            "art_the_atlantic_012026_009",
+            "art_the_atlantic_012026_010",
+            "art_the_economist_20260314_001",
+            "art_the_economist_20260314_002",
+            "art_the_economist_20260314_003",
+            "art_the_economist_20260314_004",
+            "art_the_economist_20260314_005",
+            "art_the_economist_20260314_006",
+            "art_the_economist_20260314_007",
+            "art_the_economist_20260314_008",
+            "art_the_economist_20260314_009",
+            "art_the_economist_20260314_010",
+            "art_the_economist_20260314_011",
+            "art_the_economist_20260314_012",
+            "art_the_economist_20260314_013",
+            "art_the_economist_20260314_014",
+            "art_the_economist_20260314_015",
+            "art_the_economist_20260314_016",
+            "art_the_economist_20260314_017",
+            "art_the_economist_20260314_018",
+            "art_the_economist_20260314_019",
+            "art_the_economist_20260314_020",
+            "art_the_economist_20260314_021",
+            "art_the_economist_20260314_022",
+            "art_the_economist_20260314_023",
+            "art_the_economist_20260314_024",
+            "art_the_economist_20260314_025",
+            "art_the_economist_20260314_026",
+            "art_the_economist_20260314_027",
+            "art_the_economist_20260314_028",
+            "art_the_economist_20260314_029",
+            "art_the_economist_20260314_030",
+            "art_the_economist_20260314_031",
+            "art_the_economist_20260314_032",
+            "art_the_economist_20260314_033",
+            "art_the_economist_20260314_034",
+            "art_the_economist_20260314_035",
+            "art_the_economist_20260314_036",
+            "art_the_economist_20260314_037",
+            "art_the_economist_20260314_038",
+            "art_the_economist_20260314_039",
+            "art_the_economist_20260314_040",
+            "art_the_economist_20260314_041",
+            "art_the_economist_20260314_042",
+            "art_the_economist_20260314_043",
+            "art_the_economist_20260314_044",
+            "art_the_economist_20260314_045",
+            "art_the_economist_20260314_046",
+            "art_the_economist_20260314_047",
+            "art_the_economist_20260314_048",
+            "art_the_economist_20260314_049",
+            "art_the_economist_20260314_050",
+            "art_the_economist_20260314_051"
+          ],
+          "parser_profiles": [
+            "barrons_release_v1",
+            "generic_split_release_v1",
+            "readers_digest_v1",
+            "the_atlantic_release_v1",
+            "the_economist_release_v1"
+          ],
+          "audience_coverage": {
+            "audiences": [
+              "adult",
+              "general",
+              "teen"
+            ],
+            "reading_modes": [
+              "deep_3m",
+              "quick_30s"
+            ],
+            "response_count_by_audience": {
+              "teen": 236,
+              "general": 236,
+              "adult": 236
+            }
+          },
+          "paywall_test_rule": {
+            "rule_key": "global_free_quota_limit",
+            "free_quota_limit": 8
+          },
+          "metadata_quality_summary": {
+            "issues": [
+              {
+                "issue_id": "barrons__09022026",
+                "article_count": 17,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "article_count": 15,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 0,
+                "overrides_count": 0,
+                "warnings_count": 0,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "article_count": 10,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 9,
+                "warnings_count": 4,
+                "unresolved_warnings_count": 0
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "article_count": 51,
+                "title_complete_rate": 1,
+                "section_label_complete_rate": 1,
+                "ordinal_complete_rate": 1,
+                "overrides_count": 1,
+                "warnings_count": 2,
+                "unresolved_warnings_count": 2
+              }
+            ],
+            "total_article_count": 93,
+            "overrides_count": 10,
+            "warnings_count": 6,
+            "unresolved_warnings_count": 2,
+            "average_title_complete_rate": 1,
+            "average_section_label_complete_rate": 1,
+            "average_ordinal_complete_rate": 0.75
+          },
+          "warning_summary": {
+            "import_counts": {
+              "atlantic_filename_truncated": 4,
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "unresolved_counts": {
+              "economist_section_context_fallback": 1,
+              "economist_filename_anomaly": 1
+            },
+            "issue_breakdown": [
+              {
+                "issue_id": "barrons__09022026",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "readers_digest__12112025",
+                "import_warning_counts": {},
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_atlantic__012026",
+                "import_warning_counts": {
+                  "atlantic_filename_truncated": 4
+                },
+                "unresolved_warning_counts": {}
+              },
+              {
+                "issue_id": "the_economist__20260314",
+                "import_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                },
+                "unresolved_warning_counts": {
+                  "economist_section_context_fallback": 1,
+                  "economist_filename_anomaly": 1
+                }
+              }
+            ],
+            "import_total": 6,
+            "unresolved_total": 2
+          },
+          "override_summary": {
+            "count": 10,
+            "by_issue": {
+              "barrons__09022026": 0,
+              "readers_digest__12112025": 0,
+              "science__20260323": 0,
+              "the_atlantic__012026": 9,
+              "the_economist__20260314": 1
+            }
+          },
+          "lifecycle_state": {
+            "retired": false,
+            "selected_pointer": true,
+            "current_published": true,
+            "is_selected_for_current": true,
+            "selected_for_current_at": "2026-03-23T11:46:30.590Z",
+            "selected_at": "2026-03-23T11:46:30.590Z",
+            "published_at": "2026-03-23T11:46:30.590Z"
+          }
+        }
+      }
+    }
+  ]
+}

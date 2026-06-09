@@ -1,0 +1,240 @@
+{
+  "version": "stage-data1b-v1",
+  "generated_at": "2026-03-24T04:12:36.268Z",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "items": [
+    {
+      "scenario_id": "data1a_readers_digest_12112025",
+      "scenario_type": "real_content",
+      "source_kind": "real_content_pilot",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+      "included_publications": [
+        "readers_digest"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "readers_digest",
+          "issue_label": "12112025"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "readers_digest_v1"
+      ],
+      "build_label": "readers_digest_12112025",
+      "enabled_at": "2026-03-23T09:44:31.541Z",
+      "status": "active",
+      "imported_article_count": 15,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_barrons_09022026",
+      "scenario_type": "real_content_single_release",
+      "source_kind": "real_content_split_pack",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data1c_barrons_09022026.bundle.json",
+      "included_publications": [
+        "barrons"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "barrons",
+          "issue_label": "09022026"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "barrons_release_v1"
+      ],
+      "build_label": "barrons_09022026",
+      "enabled_at": "2026-03-23T04:39:27.440Z",
+      "status": "active",
+      "imported_article_count": 17,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_the_atlantic_012026",
+      "scenario_type": "real_content_single_release",
+      "source_kind": "real_content_split_pack",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data1c_the_atlantic_012026.bundle.json",
+      "included_publications": [
+        "the_atlantic"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "the_atlantic",
+          "issue_label": "012026"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "the_atlantic_release_v1"
+      ],
+      "build_label": "the_atlantic_012026",
+      "enabled_at": "2026-03-23T04:39:27.990Z",
+      "status": "active",
+      "imported_article_count": 10,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_the_economist_20260314",
+      "scenario_type": "real_content_single_release",
+      "source_kind": "real_content_split_pack",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data1c_the_economist_20260314.bundle.json",
+      "included_publications": [
+        "the_economist"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "the_economist",
+          "issue_label": "20260314"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "the_economist_release_v1"
+      ],
+      "build_label": "the_economist_20260314",
+      "enabled_at": "2026-03-23T04:39:30.037Z",
+      "status": "active",
+      "imported_article_count": 51,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data1c_three_release_mixed_preview",
+      "scenario_type": "real_content_mixed_preview",
+      "source_kind": "real_content_split_pack_mixed",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data1c_three_release_mixed_preview.bundle.json",
+      "included_publications": [
+        "barrons",
+        "the_atlantic",
+        "the_economist"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "barrons",
+          "issue_label": "09022026"
+        },
+        {
+          "publication_id": "the_atlantic",
+          "issue_label": "012026"
+        },
+        {
+          "publication_id": "the_economist",
+          "issue_label": "20260314"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "barrons_release_v1",
+        "the_atlantic_release_v1",
+        "the_economist_release_v1"
+      ],
+      "build_label": "three_release_mixed_preview",
+      "enabled_at": "2026-03-23T04:39:30.447Z",
+      "status": "active",
+      "imported_article_count": 78,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    },
+    {
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "scenario_type": "real_content_multi_publication_release_candidate",
+      "source_kind": "real_content_release_candidate",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+      "included_publications": [
+        "barrons",
+        "readers_digest",
+        "science",
+        "the_atlantic",
+        "the_economist"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "readers_digest",
+          "issue_label": "12112025"
+        },
+        {
+          "publication_id": "barrons",
+          "issue_label": "09022026"
+        },
+        {
+          "publication_id": "the_atlantic",
+          "issue_label": "012026"
+        },
+        {
+          "publication_id": "the_economist",
+          "issue_label": "20260314"
+        },
+        {
+          "publication_id": "science",
+          "issue_label": "20260323"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 8
+      },
+      "parser_profiles": [
+        "barrons_release_v1",
+        "generic_split_release_v1",
+        "readers_digest_v1",
+        "the_atlantic_release_v1",
+        "the_economist_release_v1"
+      ],
+      "build_label": "data2_multi_publication_release_candidate",
+      "enabled_at": "2026-03-24T04:11:46.101Z",
+      "status": "active",
+      "imported_article_count": 78,
+      "is_selected_for_current": true,
+      "data2_candidate": true,
+      "selected_for_current_at": "2026-03-24T04:12:36.268Z"
+    },
+    {
+      "scenario_id": "intake_science_20260323",
+      "scenario_type": "real_content_single_release",
+      "source_kind": "generic_split_release",
+      "bundle_path": "mobile/fixtures/runtime/scenarios/intake_science_20260323.bundle.json",
+      "included_publications": [
+        "science"
+      ],
+      "included_issues": [
+        {
+          "publication_id": "science",
+          "issue_label": "20260323"
+        }
+      ],
+      "paywall_test_rule": {
+        "rule_key": "global_free_quota_limit",
+        "free_quota_limit": 80
+      },
+      "parser_profiles": [
+        "generic_split_release_v1"
+      ],
+      "build_label": "science_20260323",
+      "enabled_at": "2026-03-23T11:46:27.311Z",
+      "status": "active",
+      "imported_article_count": 25,
+      "is_selected_for_current": false,
+      "selected_for_current_at": null
+    }
+  ]
+}

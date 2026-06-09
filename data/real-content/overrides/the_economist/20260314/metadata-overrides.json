@@ -1,0 +1,14 @@
+{
+  "version": "stage-data1d-v1",
+  "publication_id": "the_economist",
+  "issue_label": "20260314",
+  "articles": [
+    {
+      "article_id": "art_the_economist_20260314_024",
+      "reason": "Known filename anomaly belongs to the Asia run; keep anomaly warning but stabilize section label.",
+      "fields": {
+        "section_label": "Asia"
+      }
+    }
+  ]
+}

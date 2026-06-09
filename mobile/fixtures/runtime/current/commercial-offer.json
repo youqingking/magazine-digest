@@ -1,0 +1,41 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "available_plans": [
+      {
+        "pricing_plan_id": "plan_demo_monthly",
+        "plan_key": "monthly_standard",
+        "display_name": "Monthly Standard",
+        "billing_cycle": "monthly",
+        "original_amount_fen": 3000,
+        "display_amount_fen": 3000,
+        "price_floor_fen": 900,
+        "floor_applied": false,
+        "currency": "CNY",
+        "is_default_display": false
+      },
+      {
+        "pricing_plan_id": "plan_demo_annual",
+        "plan_key": "annual_standard",
+        "display_name": "Annual Standard",
+        "billing_cycle": "annual",
+        "original_amount_fen": 28800,
+        "display_amount_fen": 28800,
+        "price_floor_fen": 8640,
+        "floor_applied": false,
+        "currency": "CNY",
+        "is_default_display": false
+      }
+    ],
+    "active_campaign_adjustment": null,
+    "experiment_offer_hint": null,
+    "promo_input_capability": {
+      "enabled": true,
+      "preview_only": true
+    },
+    "floor_guard_explanation": "任何券码都不能穿透 plan 的最低支付金额。",
+    "quota_reason": "REAL_CONTENT_TEST_FREE_QUOTA_REACHED",
+    "entitlement_reason": "REAL_CONTENT_TEST_RULE",
+    "audience_context_hint": "Barron's + Reader's Digest + Science + The Atlantic + The Economist release candidate"
+  }
+}

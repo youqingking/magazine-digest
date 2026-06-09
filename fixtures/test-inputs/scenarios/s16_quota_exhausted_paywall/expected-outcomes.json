@@ -1,0 +1,34 @@
+{
+  "expected_variant_selection": {
+    "general_quick_30s": "var_s16_quota_paywall_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "denied",
+      "denial_reason": "QUOTA_EXHAUSTED"
+    },
+    "pricing_preview_expectation": {
+      "must_include_monthly_and_annual": true,
+      "must_include_quota_reason": true,
+      "must_include_floor_guard": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "detail_cacheable": true,
+    "paywall_state_cacheable": true
+  },
+  "expected_event_signals": ["quota_exhausted", "paywall_offer_impression", "entitlement_view"],
+  "notes": [
+    "s16 is the Stage G synthetic projection for b01_quota_boundary and may also borrow paywall copy from b02_premium_locked_then_preview."
+  ]
+}

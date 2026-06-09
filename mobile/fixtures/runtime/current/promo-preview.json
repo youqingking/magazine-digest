@@ -1,0 +1,49 @@
+{
+  "default_plan_id": "plan_demo_monthly",
+  "responses": [
+    {
+      "promo_code": "BETA30A001",
+      "pricing_plan_id": "plan_demo_monthly",
+      "status": "valid",
+      "final_amount_fen": 900,
+      "original_amount_fen": 3000,
+      "applied_price_multiplier_basis_points": 3000,
+      "campaign_id": "camp_internal_beta_30off",
+      "floor_applied": false,
+      "message": "有效券码，展示价已更新。"
+    },
+    {
+      "promo_code": "FLOOR15B015",
+      "pricing_plan_id": "plan_demo_monthly",
+      "status": "floor_limited",
+      "final_amount_fen": 900,
+      "original_amount_fen": 3000,
+      "applied_price_multiplier_basis_points": 1500,
+      "campaign_id": "camp_preview_floor_guard",
+      "floor_applied": true,
+      "message": "券码可预览，但最低支付金额保护已生效。"
+    },
+    {
+      "promo_code": "INVALID000",
+      "pricing_plan_id": "plan_demo_monthly",
+      "status": "invalid",
+      "final_amount_fen": 3000,
+      "original_amount_fen": 3000,
+      "applied_price_multiplier_basis_points": 10000,
+      "campaign_id": null,
+      "floor_applied": false,
+      "message": "券码不存在或已失效。"
+    },
+    {
+      "promo_code": "USEDUP999",
+      "pricing_plan_id": "plan_demo_monthly",
+      "status": "not_applicable",
+      "final_amount_fen": 3000,
+      "original_amount_fen": 3000,
+      "applied_price_multiplier_basis_points": 10000,
+      "campaign_id": null,
+      "floor_applied": false,
+      "message": "券码已达上限或当前用户不适用。"
+    }
+  ]
+}

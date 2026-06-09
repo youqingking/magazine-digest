@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-card" aria-label="Snake game">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Classic Arcade</p>
+          <h1>Snake</h1>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <div class="status-row">
+        <p id="status">Press Start to begin.</p>
+        <div class="actions">
+          <button id="start-button" type="button">Start</button>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div
+        id="board"
+        class="board"
+        role="grid"
+        aria-label="Snake board"
+        tabindex="0"
+      ></div>
+
+      <div class="controls" aria-label="On-screen controls">
+        <button class="control-button" data-direction="up" type="button">Up</button>
+        <div class="control-row">
+          <button class="control-button" data-direction="left" type="button">Left</button>
+          <button class="control-button" data-direction="down" type="button">Down</button>
+          <button class="control-button" data-direction="right" type="button">Right</button>
+        </div>
+      </div>
+
+      <p class="help-text">Use arrow keys or WASD to move. Press Space to pause or resume.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

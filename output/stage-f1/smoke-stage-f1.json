@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "generated_at": "2026-03-17T12:05:07.131Z",
+  "scenario_id": "s15_quiet_hours_and_dedupe",
+  "checks": {
+    "home_modules": [
+      "today_new",
+      "since_last_visit",
+      "followed_updates",
+      "continue_reading",
+      "saved_for_later"
+    ],
+    "inbox_items": 1,
+    "search_items": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T07:54:55.049Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_9085ce66-9cf1-4a58-bc00-fb8a2509fe21",
+    "event_type": "override_applied",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T07:54:55.045Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "scenario_preview",
+    "runtime_source_id": "data1c_three_release_mixed_preview",
+    "scenario_id": "data1c_three_release_mixed_preview",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1c_three_release_mixed_preview",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "stage": "ops5_refresh"
+    }
+  }
+}

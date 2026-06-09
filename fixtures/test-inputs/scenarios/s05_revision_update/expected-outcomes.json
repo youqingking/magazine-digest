@@ -1,0 +1,26 @@
+{
+  "expected_variant_selection": {
+    "adult_deep_3m": "var_s05_river_meter_adult_deep_r2"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "adult_request_result": "highest_revision"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "non_blocking"
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "latest_revision": 2,
+    "older_revision_remains_in_delta_history": true
+  },
+  "expected_cache_behavior": {
+    "cache_should_replace_lower_revision": true,
+    "content_hash_changes_between_revisions": true
+  },
+  "expected_event_signals": ["article_open", "read_progress"],
+  "notes": ["Revision 2 corrects the original conclusion after field verification."]
+}

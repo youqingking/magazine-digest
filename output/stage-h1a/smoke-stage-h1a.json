@@ -1,0 +1,29 @@
+{
+  "status": "ok",
+  "stage": "H1A_PAYMENT_READINESS",
+  "generated_at": "2026-03-20T05:03:01.968Z",
+  "readiness_smoke_only": true,
+  "real_payment_attempted": false,
+  "main_project_order_path_touched": false,
+  "main_project_webhook_touched": false,
+  "docs_and_config_slots_complete": true,
+  "route_decision": {
+    "project_type": "uni-app",
+    "payment_plugin_route": "uni-pay"
+  },
+  "checklist_status": {
+    "merchant_inputs_documented": true,
+    "example_runbook_documented": true,
+    "h1b_entry_conditions_documented": true
+  },
+  "readiness": {
+    "h1a_complete": "YES",
+    "h1b_ready": "NO"
+  },
+  "issues_summary": {
+    "total": 4,
+    "needs_human": 3,
+    "blockers": 3,
+    "warnings": 1
+  }
+}

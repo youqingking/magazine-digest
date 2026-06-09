@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-03-24T16:33:19.593Z",
+  "step": "shared-step-07",
+  "domains": [
+    {
+      "domain_key": "magazine",
+      "route_type": "direct",
+      "family_kind": null,
+      "shared_projection_ready": true,
+      "retained_extras_ready": true,
+      "diagnostics_ready": true,
+      "stable_manifest_ready": true,
+      "product_intelligence_deferred": true,
+      "ui_migration_started": false,
+      "ingestion_started": false,
+      "family_only": false,
+      "no_domain_upgrade": false
+    },
+    {
+      "domain_key": "youtube",
+      "route_type": "direct",
+      "family_kind": null,
+      "shared_projection_ready": true,
+      "retained_extras_ready": true,
+      "diagnostics_ready": true,
+      "stable_manifest_ready": true,
+      "product_intelligence_deferred": true,
+      "ui_migration_started": false,
+      "ingestion_started": false,
+      "family_only": false,
+      "no_domain_upgrade": false
+    },
+    {
+      "domain_key": "podcast",
+      "route_type": "family",
+      "family_kind": "transcript_first_longform",
+      "shared_projection_ready": true,
+      "retained_extras_ready": true,
+      "diagnostics_ready": true,
+      "stable_manifest_ready": true,
+      "product_intelligence_deferred": true,
+      "ui_migration_started": false,
+      "ingestion_started": false,
+      "family_only": false,
+      "no_domain_upgrade": false
+    }
+  ],
+  "family_only_pilots": [
+    {
+      "adapter_id": "family-sec-filing",
+      "route_type": "family",
+      "family_kind": "official_structured_sources",
+      "no_domain_upgrade": true
+    }
+  ],
+  "coverage": {
+    "direct_domains": 2,
+    "family_backed_domains": 1,
+    "family_only_pilots": 1
+  },
+  "no_domain_upgrade": true
+}

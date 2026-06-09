@@ -1,0 +1,504 @@
+{
+  "runtime": {
+    "runtimeMode": "local",
+    "productKey": "demo_cn_content",
+    "timezone": "Asia/Shanghai",
+    "moneyUnit": "fen",
+    "discountCanonical": "price_multiplier_basis_points",
+    "rewardCanonical": "vip_days",
+    "fixtureRoot": "fixtures/db/seed",
+    "now": "2026-03-17T00:00:00+08:00",
+    "remoteBaseUrl": "https://placeholder.invalid/runtime",
+    "remoteProjectId": "demo-remote-project",
+    "remoteAppId": "demo-remote-app",
+    "remotePushAppId": "demo-remote-push-app",
+    "remoteAuthProvider": "uni-id",
+    "allowRemoteFallback": true
+  },
+  "surfaces": [
+    {
+      "surface": "bootstrap-config",
+      "contractSource": "Stage B canonical constants + product fixture",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-sync-delta",
+      "contractSource": "docs/CONTENT_SYNC.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-detail",
+      "contractSource": "docs/API_CONTRACTS.md -> content.resolveVariant",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "entitlement-snapshot",
+      "contractSource": "docs/API_CONTRACTS.md -> access.evaluate response shape",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "pricing-preview",
+      "contractSource": "docs/RULE_PRECEDENCE.md + docs/TIME_AND_MONEY_RULES.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "experiment-assign",
+      "contractSource": "experiments + experiment_assignments Stage B shape",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "event-ingest",
+      "contractSource": "docs/API_CONTRACTS.md -> event.ingest",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "home-discovery",
+      "contractSource": "docs/API_CONTRACTS.md -> home-discovery",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "search-content",
+      "contractSource": "docs/API_CONTRACTS.md -> search-content",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-catalog",
+      "contractSource": "docs/API_CONTRACTS.md -> follow-catalog",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-toggle",
+      "contractSource": "docs/API_CONTRACTS.md -> follow-toggle",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-inbox",
+      "contractSource": "docs/API_CONTRACTS.md -> notification-inbox",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-prefs",
+      "contractSource": "docs/API_CONTRACTS.md -> notification-prefs",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "mark-inbox-read",
+      "contractSource": "docs/API_CONTRACTS.md -> mark-inbox-read",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-resume",
+      "contractSource": "docs/API_CONTRACTS.md -> content-resume",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "save-for-later",
+      "contractSource": "docs/API_CONTRACTS.md -> save-for-later",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "publish-batch-summary",
+      "contractSource": "docs/API_CONTRACTS.md -> publish-batch-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "commercial-offer",
+      "contractSource": "docs/COMMERCIAL_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "quota-status",
+      "contractSource": "docs/COMMERCIAL_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "promo-preview",
+      "contractSource": "docs/COMMERCIAL_FOUNDATION.md + docs/RULE_PRECEDENCE.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "referral-summary",
+      "contractSource": "docs/GROWTH_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "reward-summary",
+      "contractSource": "docs/GROWTH_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "campaign-landing",
+      "contractSource": "docs/COMMERCIAL_FOUNDATION.md + docs/GROWTH_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "profile-benefits",
+      "contractSource": "docs/COMMERCIAL_FOUNDATION.md",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "auth-session",
+      "contractSource": "docs/API_CONTRACTS.md -> auth-session",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "auth-refresh",
+      "contractSource": "docs/API_CONTRACTS.md -> auth-refresh",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "auth-signout",
+      "contractSource": "docs/API_CONTRACTS.md -> auth-signout",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "register-device",
+      "contractSource": "docs/API_CONTRACTS.md -> register-device",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "push-capability",
+      "contractSource": "docs/API_CONTRACTS.md -> push-capability",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-delivery-preview",
+      "contractSource": "docs/API_CONTRACTS.md -> notification-delivery-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "billing.createOrder",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.confirmOrder",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.handleWebhook",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "future_stage"
+    },
+    {
+      "surface": "promo.redeem",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.bindReferral",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.grantReward",
+      "contractSource": "docs/API_CONTRACTS.md",
+      "status": "stub_only"
+    }
+  ],
+  "samples": {
+    "bootstrapConfig": {
+      "product_key": "demo_cn_content",
+      "config_source": "local",
+      "timezone": "Asia/Shanghai",
+      "money_unit": "fen",
+      "discount_canonical": "price_multiplier_basis_points",
+      "reward_canonical": "vip_days",
+      "product": {
+        "product_id": "prod_demo_cn_content",
+        "display_name": "Demo CN Content",
+        "default_language": "zh-CN",
+        "active_status": "active"
+      },
+      "feature_flags": [],
+      "experiments": [
+        {
+          "experiment_id": "exp_paywall_layout_v1",
+          "experiment_key": "paywall_layout_v1",
+          "assignment_unit": "installation_id",
+          "assignment_version": 1,
+          "status": "running"
+        }
+      ]
+    },
+    "contentSyncDelta": {
+      "server_cursor": "2026-03-17T09:58:00+08:00|var_s18_promo_preview_general_quick_r1",
+      "has_more": false,
+      "items": [
+        {
+          "entity_type": "article",
+          "article_id": "art_s18_promo_preview",
+          "article_key": "promo_preview_20260317",
+          "publication_id": "pub_market_watch",
+          "publication_key": "market_watch",
+          "title": "券码预览：有效、无效与地板价保护需要同时可见",
+          "summary": "虚构 promo preview 样本，用于 Stage G paywall 输入框和预览状态基础流程。",
+          "tags": [
+            "market",
+            "productivity"
+          ],
+          "status": "active",
+          "updated_at": "2026-03-17T09:58:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s18_promo_preview_general_quick_r1",
+          "article_id": "art_s18_promo_preview",
+          "publication_key": "market_watch",
+          "tags": [
+            "market",
+            "productivity"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:58:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:58:00+08:00",
+          "available_until": null,
+          "content_hash": "5e53d5d9e513548faff07bb9118011bc75e733c5",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:58:00+08:00"
+        }
+      ],
+      "tombstones": []
+    },
+    "contentDetail": {
+      "article": {
+        "article_id": "art_nebula_launch",
+        "article_key": "nebula_launch_20260316",
+        "title": "Nebula Launch Overview",
+        "summary": "A stable sample article root for contract validation."
+      },
+      "resolved_variant": {
+        "article_variant_id": "var_nebula_teen_quick_r1",
+        "audience_segment": "teen",
+        "reading_mode": "quick_30s",
+        "revision": 1,
+        "title": "Nebula Launch Teen Quick",
+        "markdown_body": "Teen quick version.",
+        "content_hash": "hash_teen_quick_r1"
+      },
+      "selection_reason": "exact_match",
+      "fallback_applied": false,
+      "unavailable_reason": null
+    },
+    "entitlementSnapshot": {
+      "product_key": "demo_cn_content",
+      "subject_id": "inst_smoke_001",
+      "access_state": "denied",
+      "decision_source": "local_runtime_stub",
+      "quota_remaining": 0,
+      "entitlement_snapshot": null,
+      "denial_reason": "LOCAL_RUNTIME_NO_BILLING_FACTS"
+    },
+    "pricingPreview": {
+      "product_key": "demo_cn_content",
+      "pricing_plan_id": "plan_demo_monthly",
+      "original_amount_fen": 3000,
+      "final_amount_fen": 900,
+      "price_floor_fen": 900,
+      "applied_price_multiplier_basis_points": 3000,
+      "floor_applied": false,
+      "campaign_id": "camp_internal_beta_30off",
+      "denial_reason": null
+    },
+    "experimentAssign": {
+      "product_key": "demo_cn_content",
+      "installation_id": "inst_smoke_001",
+      "experiment_id": "exp_paywall_layout_v1",
+      "experiment_key": "paywall_layout_v1",
+      "assignment_version": 1,
+      "bucket_key": "A",
+      "assignment_source": "local_fixture_backed",
+      "cache_ttl_seconds": 3600
+    },
+    "eventIngest": {
+      "product_key": "demo_cn_content",
+      "ingest_status": "accepted",
+      "dedup_key": "demo_cn_content:article_open:req_smoke_evt_001",
+      "event_id": "evt_runtime_3f45533e-4d31-40eb-85b7-49927a7de7c4"
+    },
+    "homeDiscovery": {
+      "modules": [
+        {
+          "section_key": "today_new",
+          "title": "今日新增",
+          "items": []
+        },
+        {
+          "section_key": "since_last_visit",
+          "title": "自上次访问以来",
+          "items": []
+        },
+        {
+          "section_key": "followed_updates",
+          "title": "关注更新",
+          "items": []
+        },
+        {
+          "section_key": "continue_reading",
+          "title": "继续阅读",
+          "items": []
+        },
+        {
+          "section_key": "saved_for_later",
+          "title": "稍后再读",
+          "items": []
+        }
+      ],
+      "continue_reading": [],
+      "inbox_unread_count": 0,
+      "next_digest_hint": "digest_available",
+      "server_time": "2026-03-17T00:00:00+08:00"
+    },
+    "searchContent": {
+      "items": [],
+      "facets": {
+        "publication": [
+          "market_watch"
+        ],
+        "tag": [
+          "market",
+          "productivity"
+        ],
+        "reading_mode": [
+          "quick_30s"
+        ],
+        "audience": [
+          "general"
+        ],
+        "newness": []
+      },
+      "cursor": null,
+      "has_more": false
+    },
+    "notificationInbox": {
+      "items": [],
+      "unread_count": 0,
+      "cursor": null,
+      "has_more": false
+    },
+    "contentResume": {
+      "items": [],
+      "server_time": "2026-03-17T00:00:00+08:00"
+    },
+    "commercialOffer": {
+      "product_key": "demo_cn_content",
+      "available_plans": [
+        {
+          "pricing_plan_id": "plan_demo_monthly",
+          "plan_key": "monthly_standard",
+          "display_name": "Monthly Standard",
+          "billing_cycle": "monthly",
+          "original_amount_fen": 3000,
+          "display_amount_fen": 3000,
+          "price_floor_fen": 900,
+          "floor_applied": false,
+          "currency": "CNY",
+          "is_default_display": false
+        },
+        {
+          "pricing_plan_id": "plan_demo_annual",
+          "plan_key": "annual_standard",
+          "display_name": "Annual Standard",
+          "billing_cycle": "annual",
+          "original_amount_fen": 28800,
+          "display_amount_fen": 28800,
+          "price_floor_fen": 8640,
+          "floor_applied": false,
+          "currency": "CNY",
+          "is_default_display": false
+        }
+      ],
+      "active_campaign_adjustment": null,
+      "experiment_offer_hint": null,
+      "promo_input_capability": {
+        "enabled": true,
+        "preview_only": true
+      },
+      "floor_guard_explanation": "任何券码都不能穿透 plan 的最低支付金额。",
+      "quota_reason": "DAILY_FREE_QUOTA_REACHED",
+      "entitlement_reason": "FREE_READER",
+      "audience_context_hint": "paywall promo input preview"
+    },
+    "quotaStatus": {
+      "product_key": "demo_cn_content",
+      "free_quota_total": 3,
+      "free_quota_used": 3,
+      "quota_remaining": 0,
+      "paywall_triggered": true,
+      "reset_at": "2026-03-18T00:00:00+08:00",
+      "reset_timezone": "Asia/Shanghai",
+      "quota_reason": "DAILY_FREE_QUOTA_REACHED",
+      "reset_hint": "额度将在上海时区次日零点重置。"
+    },
+    "campaignLanding": {
+      "product_key": "demo_cn_content",
+      "campaign_id": null,
+      "campaign_key": null,
+      "title": "Campaign preview",
+      "subtitle": "Display-only campaign landing placeholder.",
+      "discount_label": null,
+      "eligibility_summary": [],
+      "cta_primary": "View offer",
+      "cta_secondary": "Later"
+    },
+    "authSession": {
+      "session_state": "active_local_stub",
+      "auth_provider": "uni-id",
+      "user_id": "user_local_stage_e0",
+      "session_id": "sess_local_user_local_stage_e0",
+      "token_state": "local_present",
+      "expires_at": "2026-03-16T17:00:00.000Z",
+      "runtime_mode": "local",
+      "source": "local_fixture",
+      "product_key": "demo_cn_content"
+    },
+    "registerDevice": {
+      "registration_state": "registered",
+      "installation_id": "inst_smoke_001",
+      "device_id": "device_smoke_001",
+      "push_clientid": "cid_smoke_001",
+      "appid": "demo-mobile-app",
+      "product_key": "demo_cn_content",
+      "last_seen_at": "2026-03-17T00:00:00+08:00",
+      "runtime_mode": "local",
+      "source": "local_fixture"
+    },
+    "pushCapability": {
+      "capability_state": "cid_present",
+      "permission_state": "granted",
+      "transport_state": "local_stubbed",
+      "push_enabled": true,
+      "push_clientid_present": true,
+      "push_clientid": "cid_smoke_001",
+      "push_appid": "demo-remote-push-app",
+      "product_key": "demo_cn_content",
+      "installation_id": "inst_smoke_001",
+      "source": "local_fixture"
+    },
+    "notificationDeliveryPreview": {
+      "preview_state": "suppressed",
+      "transport_decision": "suppressed_by_quiet_hours",
+      "suppression_reason": "quiet_hours",
+      "inbox_truth_state": "durable",
+      "delivery_channel": "push",
+      "notification_inbox_id": "inbox_smoke_001",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "publish_batch_id": null,
+      "article_id": null,
+      "runtime_mode": "local",
+      "source": "local_fixture"
+    }
+  }
+}

@@ -1,0 +1,842 @@
+{
+  "metadata": {
+    "exported_at": "2026-03-17T15:41:49.702Z",
+    "canonical_source": "fixtures/test-inputs/scenarios + fixtures/test-inputs/publications + fixtures/test-inputs/manifests",
+    "product_key": "demo_cn_content",
+    "scenario_id": "s02_general_fallback",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "source_kind": "synthetic_test_pack",
+    "business_flow_aliases": []
+  },
+  "surfaceStatus": [
+    {
+      "surface": "bootstrap-config",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-sync-delta",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-detail",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "entitlement-snapshot",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "pricing-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "experiment-assign",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "event-ingest",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "home-discovery",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "search-content",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-catalog",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "follow-toggle",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-inbox",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "notification-prefs",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "mark-inbox-read",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "content-resume",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "save-for-later",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "publish-batch-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "commercial-offer",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "quota-status",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "promo-preview",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "referral-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "reward-summary",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "campaign-landing",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "profile-benefits",
+      "status": "implemented_now"
+    },
+    {
+      "surface": "billing.createOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.confirmOrder",
+      "status": "future_stage"
+    },
+    {
+      "surface": "billing.handleWebhook",
+      "status": "future_stage"
+    },
+    {
+      "surface": "promo.redeem",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.bindReferral",
+      "status": "stub_only"
+    },
+    {
+      "surface": "growth.grantReward",
+      "status": "stub_only"
+    }
+  ],
+  "scenarioMeta": {
+    "scenario_id": "s02_general_fallback",
+    "title": "General Fallback Only",
+    "objective": "Verify teen requests may fall back to general content but never to adult content.",
+    "product_key": "demo_cn_content",
+    "runtime_now": "2026-03-17T10:00:00+08:00",
+    "publications": [
+      "ai_digest"
+    ],
+    "article_ids": [
+      "art_s02_bridge_robot"
+    ],
+    "covered_risks": [
+      "teen_general_fallback",
+      "adult_leak_prevention"
+    ],
+    "intended_stage": [
+      "E1",
+      "F",
+      "G"
+    ],
+    "depends_on_surfaces": [
+      "content-detail",
+      "content-sync-delta",
+      "event-ingest"
+    ],
+    "articles": [
+      {
+        "article_id": "art_s02_bridge_robot",
+        "article_uid": "syn_article_s02_bridge_robot",
+        "article_key": "bridge_robot_20260317",
+        "publication_key": "ai_digest",
+        "title": "桥梁巡检机器人先学会报告，再学会建议",
+        "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。",
+        "tags": [
+          "ai",
+          "policy"
+        ],
+        "status": "active",
+        "created_at": "2026-03-17T09:00:00+08:00",
+        "updated_at": "2026-03-17T09:25:00+08:00"
+      }
+    ],
+    "runtime": {
+      "feature_flags": [],
+      "experiment_ids": [
+        "exp_paywall_layout_v1"
+      ],
+      "entitlement_snapshot": {
+        "subject_id": "inst_s02_reader",
+        "access_state": "active",
+        "decision_source": "synthetic_access_grant",
+        "quota_remaining": 2,
+        "entitlement_snapshot": {
+          "grant_source": "stage_x_smoke",
+          "premium_tier": "free"
+        },
+        "denial_reason": null
+      },
+      "pricing_preview": {
+        "plan_ids": [
+          "plan_demo_monthly"
+        ],
+        "promo_codes": []
+      },
+      "experiment_assign": {
+        "installation_id": "inst_s02_reader",
+        "experiment_id": "exp_paywall_layout_v1",
+        "bucket_key": "A",
+        "assignment_source": "synthetic_fixture"
+      },
+      "sync": {
+        "tombstones": []
+      }
+    }
+  },
+  "expectedOutcomes": {
+    "expected_variant_selection": {
+      "teen_quick_30s": "var_s02_bridge_robot_general_quick_r1",
+      "teen_deep_3m": "var_s02_bridge_robot_general_deep_r1",
+      "adult_quick_30s": "var_s02_bridge_robot_adult_quick_r1",
+      "adult_deep_3m": "var_s02_bridge_robot_adult_deep_r1"
+    },
+    "expected_fallback_behavior": {
+      "can_fallback_to": [
+        "teen",
+        "general"
+      ],
+      "cannot_fallback_to": [
+        "adult"
+      ],
+      "teen_request_result": "safe_fallback",
+      "general_target": "general_only"
+    },
+    "expected_unavailable_reason": null,
+    "expected_paywall_behavior": {
+      "entitlement_expectation": "active_access",
+      "pricing_preview_expectation": "non_blocking"
+    },
+    "expected_sync_behavior": {
+      "server_cursor_progresses": true,
+      "tombstones_expected": 0
+    },
+    "expected_cache_behavior": {
+      "cache_seedable": true,
+      "offline_safe_variant_matches_runtime": true
+    },
+    "expected_event_signals": [
+      "article_open",
+      "variant_switch"
+    ],
+    "notes": [
+      "Teen request must never land on the adult copy even though adult variants exist."
+    ]
+  },
+  "bootstrapConfig": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "config_source": "synthetic_test_pack",
+      "timezone": "Asia/Shanghai",
+      "money_unit": "fen",
+      "discount_canonical": "price_multiplier_basis_points",
+      "reward_canonical": "vip_days",
+      "product": {
+        "product_key": "demo_cn_content",
+        "product_id": "prod_demo_cn_content",
+        "display_name": "Demo CN Content",
+        "default_language": "zh-CN",
+        "active_status": "active"
+      },
+      "feature_flags": [],
+      "experiments": [
+        {
+          "experiment_id": "exp_paywall_layout_v1",
+          "experiment_key": "paywall_layout_v1",
+          "assignment_unit": "installation_id",
+          "assignment_version": 1,
+          "status": "running"
+        }
+      ]
+    }
+  },
+  "contentSyncDelta": {
+    "response": {
+      "server_cursor": "2026-03-17T09:25:00+08:00|art_s02_bridge_robot",
+      "has_more": false,
+      "items": [
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s02_bridge_robot_general_quick_r1",
+          "article_id": "art_s02_bridge_robot",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:10:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null,
+          "content_hash": "0d58b6a85784faa5e70a4557bb486b06688f40f6",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:10:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s02_bridge_robot_general_deep_r1",
+          "article_id": "art_s02_bridge_robot",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "general",
+          "reading_mode": "deep_3m",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:12:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:12:00+08:00",
+          "available_until": null,
+          "content_hash": "f13b7d26965ab86cf2ce0414fae39c1d5233ff85",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:12:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s02_bridge_robot_adult_quick_r1",
+          "article_id": "art_s02_bridge_robot",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "adult",
+          "reading_mode": "quick_30s",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:14:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:14:00+08:00",
+          "available_until": null,
+          "content_hash": "92f60280b19ed2a92ca8e617c36a5e7fec2ae5a1",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:14:00+08:00"
+        },
+        {
+          "entity_type": "article_variant",
+          "article_variant_id": "var_s02_bridge_robot_adult_deep_r1",
+          "article_id": "art_s02_bridge_robot",
+          "publication_key": "ai_digest",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "language": "zh-CN",
+          "audience_segment": "adult",
+          "reading_mode": "deep_3m",
+          "publish_status": "published",
+          "publish_at": "2026-03-17T09:16:00+08:00",
+          "revision": 1,
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:16:00+08:00",
+          "available_until": null,
+          "content_hash": "35109ed4f3a8da3538e9fb6d7c889be7b2c74197",
+          "is_deleted": false,
+          "updated_at": "2026-03-17T09:16:00+08:00"
+        },
+        {
+          "entity_type": "article",
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "publication_id": "pub_ai_digest",
+          "publication_key": "ai_digest",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。",
+          "tags": [
+            "ai",
+            "policy"
+          ],
+          "status": "active",
+          "updated_at": "2026-03-17T09:25:00+08:00"
+        }
+      ],
+      "tombstones": []
+    }
+  },
+  "contentDetail": {
+    "responses": {
+      "art_s02_bridge_robot|zh-CN|teen|quick_30s": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "桥梁巡检机器人先交中性报告",
+          "markdown_body": "一句话摘要：桥梁巡检机器人现在先输出“看到了什么”，而不是直接给出高风险结论。\n\n关键要点：\n- 报告只写裂缝位置、长度变化和需要复查的时间。\n- 维护建议改由人工审核后再发布。\n- 这样能让更多读者先理解事实，再看更复杂的判断。\n\n为什么重要：\nteen 请求没有专门版本时，可以安全地退回这类中性表述，而不是落到更专业、也更容易引起误解的成人版。",
+          "content_hash": "0d58b6a85784faa5e70a4557bb486b06688f40f6",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s02_bridge_robot|zh-CN|teen|deep_3m": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_general_deep_r1",
+          "audience_segment": "general",
+          "reading_mode": "deep_3m",
+          "revision": 1,
+          "title": "中性版深读：巡检机器人为什么先报告事实",
+          "markdown_body": "一句话摘要：虚构市政团队重新设计巡检机器人流程，让它先交事实报告，再把是否升级为维护建议交给人工判断。\n\n关键要点：\n- 机器人会汇总桥面图像和震动读数，标记“变化出现在哪一段”。\n- 系统把“疑似异常”与“建议停运”分开，避免单一步骤输出过强结论。\n- 对外发布版本只保留通俗、可解释的内容，方便普通读者和学生理解。\n\n为什么重要：\n内容分层能降低误读风险。一个系统如果一开始就把复杂判断包装成确定答案，普通读者很难知道其中还有多少人工校验步骤。先给事实，再给建议，也更符合青少年和普通用户的阅读边界。\n\n背景：\n过去的自动报告把检测指标和处置建议写在同一页，读者容易把“需要人工复核”理解成“已经确认危险”。新的写法把原始观察、趋势变化和人工建议拆开，让信息更清楚。\n\n风险：\n如果中性版过于简化，也可能让人忽略维护工作的紧迫性，所以项目仍保留面向专业团队的成人版。\n\n接下来观察点：\n要看读者是否能更准确地区分“发现问题”和“确认风险”，以及人工审核队列会不会因此更稳定。",
+          "content_hash": "f13b7d26965ab86cf2ce0414fae39c1d5233ff85",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:12:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "safe_fallback",
+        "fallback_applied": true,
+        "unavailable_reason": null
+      },
+      "art_s02_bridge_robot|zh-CN|general|quick_30s": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_general_quick_r1",
+          "audience_segment": "general",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "桥梁巡检机器人先交中性报告",
+          "markdown_body": "一句话摘要：桥梁巡检机器人现在先输出“看到了什么”，而不是直接给出高风险结论。\n\n关键要点：\n- 报告只写裂缝位置、长度变化和需要复查的时间。\n- 维护建议改由人工审核后再发布。\n- 这样能让更多读者先理解事实，再看更复杂的判断。\n\n为什么重要：\nteen 请求没有专门版本时，可以安全地退回这类中性表述，而不是落到更专业、也更容易引起误解的成人版。",
+          "content_hash": "0d58b6a85784faa5e70a4557bb486b06688f40f6",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:10:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      },
+      "art_s02_bridge_robot|zh-CN|general|deep_3m": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_general_deep_r1",
+          "audience_segment": "general",
+          "reading_mode": "deep_3m",
+          "revision": 1,
+          "title": "中性版深读：巡检机器人为什么先报告事实",
+          "markdown_body": "一句话摘要：虚构市政团队重新设计巡检机器人流程，让它先交事实报告，再把是否升级为维护建议交给人工判断。\n\n关键要点：\n- 机器人会汇总桥面图像和震动读数，标记“变化出现在哪一段”。\n- 系统把“疑似异常”与“建议停运”分开，避免单一步骤输出过强结论。\n- 对外发布版本只保留通俗、可解释的内容，方便普通读者和学生理解。\n\n为什么重要：\n内容分层能降低误读风险。一个系统如果一开始就把复杂判断包装成确定答案，普通读者很难知道其中还有多少人工校验步骤。先给事实，再给建议，也更符合青少年和普通用户的阅读边界。\n\n背景：\n过去的自动报告把检测指标和处置建议写在同一页，读者容易把“需要人工复核”理解成“已经确认危险”。新的写法把原始观察、趋势变化和人工建议拆开，让信息更清楚。\n\n风险：\n如果中性版过于简化，也可能让人忽略维护工作的紧迫性，所以项目仍保留面向专业团队的成人版。\n\n接下来观察点：\n要看读者是否能更准确地区分“发现问题”和“确认风险”，以及人工审核队列会不会因此更稳定。",
+          "content_hash": "f13b7d26965ab86cf2ce0414fae39c1d5233ff85",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:12:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      },
+      "art_s02_bridge_robot|zh-CN|adult|quick_30s": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_adult_quick_r1",
+          "audience_segment": "adult",
+          "reading_mode": "quick_30s",
+          "revision": 1,
+          "title": "巡检机器人把维护建议分级输出",
+          "markdown_body": "一句话摘要：巡检机器人开始分级给出维护建议，把复核、限流和封闭检查拆成不同处置层级。\n\n关键要点：\n- 建议层级和责任人绑定。\n- 高风险提示必须进入人工审批。\n- 报告强调工单流转，而不只是一段自动结论。\n\n为什么重要：\n成人版更适合测试专业语义是否只在允许的 audience 下展示。",
+          "content_hash": "92f60280b19ed2a92ca8e617c36a5e7fec2ae5a1",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:14:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      },
+      "art_s02_bridge_robot|zh-CN|adult|deep_3m": {
+        "article": {
+          "article_id": "art_s02_bridge_robot",
+          "article_key": "bridge_robot_20260317",
+          "title": "桥梁巡检机器人先学会报告，再学会建议",
+          "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。"
+        },
+        "resolved_variant": {
+          "article_variant_id": "var_s02_bridge_robot_adult_deep_r1",
+          "audience_segment": "adult",
+          "reading_mode": "deep_3m",
+          "revision": 1,
+          "title": "巡检机器人把异常判断拆成报告、建议与处置三层",
+          "markdown_body": "一句话摘要：桥梁巡检机器人不再直接给出单一结论，而是把异常识别、维护建议和处置动作拆成三层，以便工程团队分责处理。\n\n关键要点：\n- 系统先输出观测证据，再根据证据等级生成维护建议。\n- 只有满足更高阈值的项目才会进入限流或封闭评估。\n- 审批链路记录谁复核、谁签发、谁执行，避免责任模糊。\n\n为什么重要：\n这类内容对工程流程、风险分级和责任链条的描述更密，适合成人版，但不应作为 teen fallback。Stage X 用这个差异验证 safe boundary 是否真的生效。\n\n背景：\n在旧流程里，自动化工具输出的“高风险”标签经常被直接转给外部沟通团队，造成公众理解偏差。现在系统要求先完成证据归档和人工复核，才能触发更强的处置建议。\n\n风险：\n如果审批链太长，真正需要限流的情况可能响应变慢，所以系统必须平衡谨慎与速度。\n\n接下来观察点：\n要持续看误报率、复核时长，以及不同层级建议是否能真正帮助维护排班。",
+          "content_hash": "35109ed4f3a8da3538e9fb6d7c889be7b2c74197",
+          "premium_tier": "free",
+          "publish_batch_id": null,
+          "update_type": null,
+          "update_priority": null,
+          "change_summary": null,
+          "notify_level": null,
+          "is_breaking": false,
+          "available_from": "2026-03-17T09:16:00+08:00",
+          "available_until": null
+        },
+        "selection_reason": "exact_match",
+        "fallback_applied": false,
+        "unavailable_reason": null
+      }
+    }
+  },
+  "entitlementSnapshot": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "subject_id": "inst_s02_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 2,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    }
+  },
+  "pricingPreview": {
+    "responses": [
+      {
+        "product_key": "demo_cn_content",
+        "pricing_plan_id": "plan_demo_monthly",
+        "original_amount_fen": 3000,
+        "final_amount_fen": 3000,
+        "price_floor_fen": 900,
+        "applied_price_multiplier_basis_points": 10000,
+        "floor_applied": false,
+        "campaign_id": null,
+        "denial_reason": null
+      }
+    ]
+  },
+  "experimentAssign": {
+    "response": {
+      "product_key": "demo_cn_content",
+      "installation_id": "inst_s02_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "experiment_key": "paywall_layout_v1",
+      "assignment_version": 1,
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture",
+      "cache_ttl_seconds": 3600
+    }
+  },
+  "discoveryCatalog": {
+    "items": [
+      {
+        "article_id": "art_s02_bridge_robot",
+        "article_key": "bridge_robot_20260317",
+        "title": "桥梁巡检机器人先学会报告，再学会建议",
+        "summary": "虚构市政团队先让巡检机器人输出中性报告，再按权限生成更细的维护建议。",
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "tags": [
+          "ai",
+          "policy"
+        ],
+        "available_modes": [
+          "deep_3m",
+          "quick_30s"
+        ],
+        "available_audiences": [
+          "adult",
+          "general"
+        ],
+        "updated_at": "2026-03-17T09:25:00+08:00",
+        "publish_batch_id": null,
+        "update_type": null,
+        "update_priority": null,
+        "change_summary": null,
+        "notify_level": null,
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:16:00+08:00",
+        "available_until": null,
+        "primary_reading_mode": "deep_3m",
+        "primary_audience": "adult"
+      }
+    ]
+  },
+  "followCatalog": {
+    "publications": [
+      {
+        "publication_id": "pub_world_brief",
+        "publication_key": "world_brief",
+        "display_name": "World Brief",
+        "description": "Synthetic global affairs briefs for Stage X smoke inputs."
+      },
+      {
+        "publication_id": "pub_ai_digest",
+        "publication_key": "ai_digest",
+        "display_name": "AI Digest",
+        "description": "Synthetic AI product and policy summaries for runtime tests."
+      },
+      {
+        "publication_id": "pub_market_watch",
+        "publication_key": "market_watch",
+        "display_name": "Market Watch",
+        "description": "Synthetic economy and market coverage for pricing and feed smoke."
+      }
+    ],
+    "tags": [
+      {
+        "tag_key": "economy",
+        "display_name": "economy"
+      },
+      {
+        "tag_key": "ai",
+        "display_name": "ai"
+      },
+      {
+        "tag_key": "policy",
+        "display_name": "policy"
+      },
+      {
+        "tag_key": "market",
+        "display_name": "market"
+      },
+      {
+        "tag_key": "productivity",
+        "display_name": "productivity"
+      }
+    ]
+  },
+  "publishBatches": {
+    "items": []
+  },
+  "userFollows": {
+    "items": []
+  },
+  "notificationPrefs": {
+    "response": null
+  },
+  "notificationInbox": {
+    "items": [],
+    "inbox_last_seen_at": null
+  },
+  "userContentState": {
+    "items": [],
+    "last_seen_publish_batch": null
+  },
+  "notificationDeliveries": {
+    "items": []
+  },
+  "stageG": {
+    "commercialOffer": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "available_plans": [
+          {
+            "pricing_plan_id": "plan_demo_monthly",
+            "plan_key": "monthly_standard",
+            "display_name": "Monthly Standard",
+            "billing_cycle": "monthly",
+            "original_amount_fen": 3000,
+            "display_amount_fen": 3000,
+            "price_floor_fen": 900,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          },
+          {
+            "pricing_plan_id": "plan_demo_annual",
+            "plan_key": "annual_standard",
+            "display_name": "Annual Standard",
+            "billing_cycle": "annual",
+            "original_amount_fen": 28800,
+            "display_amount_fen": 28800,
+            "price_floor_fen": 8640,
+            "floor_applied": false,
+            "currency": "CNY",
+            "is_default_display": false
+          }
+        ],
+        "active_campaign_adjustment": null,
+        "experiment_offer_hint": {
+          "experiment_id": "exp_paywall_layout_v1",
+          "bucket_key": "A"
+        },
+        "promo_input_capability": {
+          "enabled": true,
+          "preview_only": true
+        },
+        "floor_guard_explanation": "Display preview still obeys canonical floor guard.",
+        "quota_reason": null,
+        "entitlement_reason": null,
+        "audience_context_hint": null
+      }
+    },
+    "quotaStatus": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "free_quota_total": 0,
+        "free_quota_used": 0,
+        "quota_remaining": 0,
+        "paywall_triggered": false,
+        "reset_at": null,
+        "reset_timezone": "Asia/Shanghai",
+        "quota_reason": null,
+        "reset_hint": null
+      }
+    },
+    "promoPreview": {
+      "default_plan_id": null,
+      "responses": []
+    },
+    "referralSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "invite_code": null,
+        "share_preview": "",
+        "inviter_summary": "",
+        "invitee_summary": "",
+        "reward_rule_summary": []
+      }
+    },
+    "rewardSummary": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "ledger_preview": [],
+        "vip_days_total": 0,
+        "active_vip_days": 0,
+        "status_summary": "none"
+      }
+    },
+    "campaignLanding": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "campaign_id": null,
+        "campaign_key": null,
+        "title": "Campaign preview",
+        "subtitle": "Display-only campaign landing placeholder.",
+        "discount_label": null,
+        "eligibility_summary": [],
+        "cta_primary": "View offer",
+        "cta_secondary": "Later"
+      }
+    },
+    "profileBenefits": {
+      "response": {
+        "product_key": "demo_cn_content",
+        "subscription_status": "free",
+        "entitlement_status": "inactive",
+        "entitlement_badge": "Free Reader",
+        "grace_like_summary": null,
+        "lifecycle_projection": [],
+        "quota": {
+          "remaining": 0,
+          "total": 0,
+          "reason": null
+        },
+        "saved_count": 0,
+        "inbox_unread_count": 0,
+        "reward_summary": {
+          "vip_days_total": 0,
+          "active_rewards": 0
+        },
+        "benefit_summary": []
+      }
+    }
+  }
+}

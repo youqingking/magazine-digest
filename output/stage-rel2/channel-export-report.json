@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-03-23T12:22:29.477Z",
+  "status": "ok",
+  "channels": [
+    {
+      "channel": "dev",
+      "status": "active",
+      "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "source_scenario_id": "data2_multi_publication_release_candidate",
+      "published_at": "2026-03-23T12:17:50.532Z",
+      "dist_manifest_path": "runtime/dist/channels/dev/manifest.json"
+    },
+    {
+      "channel": "staging",
+      "status": "idle",
+      "release_id": null,
+      "source_scenario_id": null,
+      "published_at": null,
+      "dist_manifest_path": "runtime/dist/channels/staging/manifest.json"
+    },
+    {
+      "channel": "production",
+      "status": "idle",
+      "release_id": null,
+      "source_scenario_id": null,
+      "published_at": null,
+      "dist_manifest_path": "runtime/dist/channels/production/manifest.json"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>订阅方案 - 效率阅读</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#341100",
+              "primary": "#005bbf",
+              "surface-bright": "#f7f9fc",
+              "on-surface-variant": "#414754",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ffdbcb",
+              "surface-container": "#eceef1",
+              "background": "#f7f9fc",
+              "on-tertiary-fixed-variant": "#783100",
+              "on-secondary-fixed": "#001a41",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f2f4f7",
+              "primary-container": "#1a73e8",
+              "outline-variant": "#c1c6d6",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#d8e2ff",
+              "secondary-fixed-dim": "#afc7fb",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface": "#f7f9fc",
+              "on-tertiary-container": "#0e0200",
+              "inverse-on-surface": "#eff1f4",
+              "surface-container-highest": "#e0e3e6",
+              "on-primary-container": "#ffffff",
+              "on-primary-fixed": "#001a41",
+              "surface-container-high": "#e6e8eb",
+              "primary-fixed-dim": "#adc7ff",
+              "surface-variant": "#e0e3e6",
+              "surface-dim": "#d8dadd",
+              "on-secondary-fixed-variant": "#2e4673",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "tertiary-fixed-dim": "#ffb691",
+              "inverse-surface": "#2d3133",
+              "on-surface": "#191c1e",
+              "on-background": "#191c1e",
+              "on-error-container": "#93000a",
+              "secondary-container": "#b2c9fe",
+              "on-secondary-container": "#3d5481",
+              "surface-tint": "#005bc0",
+              "secondary": "#475e8c",
+              "tertiary": "#9e4300",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#adc7ff",
+              "primary-fixed": "#d8e2ff",
+              "outline": "#727785",
+              "tertiary-container": "#c55500"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 backdrop-blur-xl no-border bg-gradient-to-b from-[#f2f4f7] to-transparent">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-70 duration-200">menu</span>
+<span class="text-lg font-bold text-[#005bbf]">效率阅读</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-8 text-sm font-medium">
+<span class="text-slate-500 hover:text-[#1a73e8] cursor-pointer transition-colors">首页</span>
+<span class="text-slate-500 hover:text-[#1a73e8] cursor-pointer transition-colors">来源</span>
+<span class="text-[#005bbf]">我的</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:opacity-70 duration-200">search</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Header Section -->
+<header class="text-center mb-16">
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-4">
+                一个会员，通读全站：覆盖 50+ 顶级媒体
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">
+                专业的策展逻辑，为您从信息海洋中精选每日必读，让深阅读变得更高效。
+            </p>
+</header>
+<!-- Pricing Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<!-- Features Highlight (Asymmetric Left) -->
+<div class="md:col-span-7 space-y-4">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-transparent hover:border-outline-variant/20 transition-all">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+                        会员专属权益
+                    </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-3">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">speed</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">30秒/3分钟阅读</h4>
+<p class="text-sm text-on-surface-variant mt-1">解锁全站核心摘要，快速掌握要点</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">cloud_download</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">收藏与缓存</h4>
+<p class="text-sm text-on-surface-variant mt-1">支持离线阅读，永久保存珍贵内容</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">更新提醒</h4>
+<p class="text-sm text-on-surface-variant mt-1">新内容实时更新提醒，不错过关键报道</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">跨端同步</h4>
+<p class="text-sm text-on-surface-variant mt-1">手机、平板、电脑阅读进度无缝衔接</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<img alt="" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-variant" data-alt="Avatar of professional user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR__HUxgAgMosGIW4zql4L3aWGI1I75D6P-eVNShmcN1hTaOnSic2zcalZOyAO1iKtxV-RL8Kefhk8aiyVPYYban_R_5B1RFAvH4hCAWaTPDY9tJQuyBgxtPNAk8S0q4D2BxINb4uOV-qifnloyYP-b7GZe7VtJL0iG4loDMMUI0K3TuidVFKs-94F968Qs6LVEyZEh7aoXLmc8lXy8oUQmIVQwQXk_kijPaHh-_ny3D5QwRAkDHM1zDJCmlJwYVT50spuRRAbcSA"/>
+<img alt="" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-variant" data-alt="Avatar of business professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG05xt0n4V8971KzIGwLIVqb7q4j7vTWm6MATxAiTtE1yvG1-KhaaQsfRG7mRNFfyobPDaF5tETC0UAs6VAZ4CLOCIO5xMwf4k4izMHeK2WbZFr89cOuDEx5ecotNOmddk2BdjdaHhzCqQ7Ff4GRUTno9QxSoNZLxbGonNiZbJMXodKrmbXceZ1NgUT9CHwnUxkdRYVn3kDJvP53uF2_e88atTxm1suBnsvelBkgC5qRLhixqRr7ilelgiVsu3tIdlUV19tXISSy4"/>
+<img alt="" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-variant" data-alt="Avatar of a digital curator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJQd1Re7oVG4b_62Ri3PnJYFgL9CewPAdjV-Fj0-DjteTSMbGCEWqnmV6bxek3s4-N2uBTUSy8uJZ3d5s4og-Vsz0NIwXfWfJAln5SiZiay38ESHr5nJIlm7W44J1L7I2U1mVR5e7ZXzt8h6V0clpbQhhrLbKe59PjNTJdoI26dq5uh6QG1Ma3zSkRhvN9jTXyTbWyvXI7-KkBlH2KY4jhuOPw6jsH50bDmPKLxCvRJNlQgGog-Y2ISpuzdyxQ76WClXECHb97CqM"/>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">已有 12,000+ 专业人士选择</span>
+</div>
+<span class="text-xs font-bold text-primary tracking-widest">TRUSTED</span>
+</div>
+</div>
+<!-- Pricing Options (Asymmetric Right) -->
+<div class="md:col-span-5 flex flex-col gap-4">
+<!-- Annual Plan -->
+<div class="relative bg-primary text-on-primary p-8 rounded-xl shadow-xl overflow-hidden group active:scale-[0.98] transition-all cursor-pointer">
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-bl-xl text-xs font-bold">最佳价值</div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-lg font-bold opacity-90">年度订阅</h3>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-3xl font-extrabold tracking-tighter">¥298</span>
+<span class="text-sm opacity-70">/年</span>
+</div>
+</div>
+<div class="bg-white/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-3xl">calendar_today</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 text-sm opacity-90">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 约合 ¥24.8/月</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 尊享年度专属徽章</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 包含所有 Pro 功能</li>
+</ul>
+<button class="w-full bg-on-primary text-primary font-bold py-3 rounded-lg hover:bg-secondary-fixed transition-colors">立即开启</button>
+</div>
+<!-- Monthly Plan -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-surface-container-high hover:shadow-md transition-all group active:scale-[0.98] cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-lg font-bold text-on-surface">月度订阅</h3>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-3xl font-extrabold tracking-tighter text-on-surface">¥35</span>
+<span class="text-sm text-on-surface-variant">/月</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-full">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant">event</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 随时取消</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 全平台功能解锁</li>
+</ul>
+<button class="w-full bg-surface-container-high text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-highest transition-colors">开启试用</button>
+</div>
+</div>
+</div>
+<!-- Media Logos (Rational Context) -->
+<section class="mt-20">
+<h4 class="text-center text-xs font-bold uppercase tracking-widest text-on-surface-variant/40 mb-8">覆盖全站顶级来源</h4>
+<div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="text-lg font-extrabold tracking-tighter font-headline">The New York Times</span>
+<span class="text-lg font-extrabold tracking-tighter font-headline">The Economist</span>
+<span class="text-lg font-extrabold tracking-tighter font-headline">Bloomberg</span>
+<span class="text-lg font-extrabold tracking-tighter font-headline">Wired</span>
+<span class="text-lg font-extrabold tracking-tighter font-headline">Financial Times</span>
+<span class="text-lg font-extrabold tracking-tighter font-headline">Harvard Business Review</span>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-8 pb-safe bg-white/90 backdrop-blur-2xl border-t border-[#f2f4f7] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50 rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">首页</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">subscriptions</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">来源</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#005bbf] scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">我的</span>
+</div>
+</footer>
+</body></html>

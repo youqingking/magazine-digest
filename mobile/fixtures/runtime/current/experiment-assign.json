@@ -1,0 +1,12 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "installation_id": "inst_s18_reader",
+    "experiment_id": null,
+    "experiment_key": null,
+    "assignment_version": 0,
+    "bucket_key": null,
+    "assignment_source": "synthetic_fixture",
+    "cache_ttl_seconds": 3600
+  }
+}

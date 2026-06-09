@@ -1,0 +1,34 @@
+{
+  "collection": "device_installations",
+  "version": "stage-h0-2026-03-18",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "installation_id", "platform", "first_seen_at", "last_seen_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "installation_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "device_id": { "type": "string" },
+    "device_hash": { "type": "string" },
+    "device_fingerprint": { "type": "string" },
+    "platform": { "type": "string", "enum": ["android", "ios", "web", "miniapp"] },
+    "app_version": { "type": "string" },
+    "push_clientid": { "type": "string" },
+    "push_appid": { "type": "string" },
+    "push_vendor": { "type": "string" },
+    "push_permission_state": { "type": "string", "enum": ["unknown", "prompt", "granted", "denied"] },
+    "push_registered_at": { "type": "string", "format": "date-time" },
+    "remote_runtime_mode": { "type": "string", "enum": ["local", "remote", "hybrid"] },
+    "remote_project_id": { "type": "string" },
+    "last_register_request_id": { "type": "string" },
+    "last_capability_checked_at": { "type": "string", "format": "date-time" },
+    "first_seen_at": { "type": "string", "format": "date-time" },
+    "last_seen_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_installation", "fields": ["product_key", "installation_id"], "unique": true },
+    { "name": "idx_device_hash", "fields": ["product_key", "device_hash", "last_seen_at"] },
+    { "name": "idx_push_clientid", "fields": ["product_key", "push_clientid", "last_seen_at"] }
+  ]
+}

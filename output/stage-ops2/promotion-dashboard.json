@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-03-23T12:17:47.731Z",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "current_scenario_id": "data2_multi_publication_release_candidate",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "candidate_scenario_id": "data2_multi_publication_release_candidate",
+  "diff_summary": [
+    {
+      "from_state_role": "current",
+      "from_scenario_id": "data2_multi_publication_release_candidate",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "blockers": 0,
+      "warnings": 0,
+      "info": 0,
+      "article_delta": 0
+    },
+    {
+      "from_state_role": "selected",
+      "from_scenario_id": "data2_multi_publication_release_candidate",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "blockers": 0,
+      "warnings": 0,
+      "info": 0,
+      "article_delta": 0
+    },
+    {
+      "from_state_role": "baseline",
+      "from_scenario_id": "data1a_readers_digest_12112025",
+      "to_scenario_id": "data2_multi_publication_release_candidate",
+      "blockers": 0,
+      "warnings": 2,
+      "info": 6,
+      "article_delta": 103
+    }
+  ],
+  "gate_summary": {
+    "generated_at": "2026-03-23T12:17:47.645Z",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "refresh_mode": "read_existing_reports",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_scenario_id": "data2_multi_publication_release_candidate",
+    "blockers": [],
+    "warnings": [
+      "readers_digest__12112025:best_effort_ordinal_missing",
+      "the_economist__20260314:economist_section_context_fallback",
+      "the_economist__20260314:economist_filename_anomaly"
+    ],
+    "status": "warning",
+    "upstream_reports": {
+      "metadata_quality": "output/stage-data1d/metadata-quality-report.json",
+      "warning_report": "output/stage-data1d/warning-report.json",
+      "override_report": "output/stage-data1d/override-report.json",
+      "test1_final": "output/stage-test1/final-report.json",
+      "content_contract": "output/stage-test1/content-contract-report.json",
+      "parser_golden": "output/stage-test1/parser-golden-report.json",
+      "lifecycle": "output/stage-test1/lifecycle-report.json",
+      "app_regression": "output/stage-test1/app-regression-report.json"
+    }
+  },
+  "promotion_decision": {
+    "decision": "promotable",
+    "blockers": [],
+    "warnings": [],
+    "info": [
+      "diff:baseline:warning_taxonomy_increase:accepted_by_budget",
+      "diff:baseline:override_count_changed:accepted_by_budget",
+      "diff:baseline:publication_added",
+      "diff:baseline:issue_added",
+      "diff:baseline:article_added",
+      "diff:baseline:parser_profile_added",
+      "diff:baseline:build_label_changed",
+      "diff:baseline:publish_state_changed",
+      "gate:readers_digest__12112025:best_effort_ordinal_missing:accepted_by_budget",
+      "gate:the_economist__20260314:economist_section_context_fallback:accepted_by_budget",
+      "gate:the_economist__20260314:economist_filename_anomaly:accepted_by_budget",
+      "quality:unresolved_warning_count:2:accepted_by_budget",
+      "quality:override_count:10:accepted_by_budget",
+      "taxonomy:unmapped_count:84"
+    ]
+  },
+  "last_action": {
+    "timestamp": "2026-03-23T12:17:47.693Z",
+    "action": "evaluate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "result": "ok",
+    "decision": "promotable",
+    "blockers": [],
+    "warnings": [],
+    "info": [
+      "diff:baseline:warning_taxonomy_increase:accepted_by_budget",
+      "diff:baseline:override_count_changed:accepted_by_budget",
+      "diff:baseline:publication_added",
+      "diff:baseline:issue_added",
+      "diff:baseline:article_added",
+      "diff:baseline:parser_profile_added",
+      "diff:baseline:build_label_changed",
+      "diff:baseline:publish_state_changed",
+      "gate:readers_digest__12112025:best_effort_ordinal_missing:accepted_by_budget",
+      "gate:the_economist__20260314:economist_section_context_fallback:accepted_by_budget",
+      "gate:the_economist__20260314:economist_filename_anomaly:accepted_by_budget",
+      "quality:unresolved_warning_count:2:accepted_by_budget",
+      "quality:override_count:10:accepted_by_budget",
+      "taxonomy:unmapped_count:84"
+    ],
+    "notes": []
+  },
+  "unresolved_warnings": []
+}

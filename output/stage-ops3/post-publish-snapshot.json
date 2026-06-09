@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-03-23T04:40:19.714Z",
+  "label": "post-publish",
+  "operator_action": "ops3_publish_apply",
+  "target_scenario_id": "data2_multi_publication_release_candidate",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "source_bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+  "current_bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+  "publish_timestamp": "2026-03-23T04:40:19.229Z",
+  "gate_result": "passed",
+  "promotion_decision": "promotable",
+  "current_metadata": {
+    "exported_at": "2026-03-23T04:39:40.599Z",
+    "canonical_source": "DATA2 multi-publication release candidate",
+    "product_key": "demo_cn_content",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "runtime_now": "2026-03-23T04:39:40.583Z",
+    "source_kind": "real_content_release_candidate",
+    "runtime_fixture_role": "selected_scenario_mirror",
+    "build_label": "data2_multi_publication_release_candidate",
+    "free_quota_limit": 8,
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "published_to_current_at": "2026-03-23T04:40:19.229Z",
+    "selection_source": "ops2_promote_apply"
+  },
+  "git_context": {
+    "branch": "rc/ui35-runtime-closeout-kit",
+    "commit_sha": "c2a638c4145d9d954566e351e01110ac13c0dc99",
+    "short_sha": "c2a638c",
+    "tags_at_head": [
+      "codex/obs1-end-20260322-001",
+      "codex/obs1-start-20260322-001",
+      "codex/ops5-end-20260322-001",
+      "codex/ops5-start-20260322-001",
+      "codex/rel2-start-20260323-001"
+    ]
+  },
+  "notes": [
+    "Post-apply snapshot for OPS3 drill."
+  ]
+}

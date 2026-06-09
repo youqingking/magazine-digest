@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-23T04:39:40.257Z",
+  "status": "passed",
+  "checks": {
+    "quality_drift": "ok",
+    "release_candidate": "ok",
+    "warning_budget": "ok",
+    "mixed_preview": {
+      "decision": "hold_warning",
+      "warnings": [
+        "policy:preview_only_scenario:preview_only"
+      ]
+    },
+    "release_candidate_eval": {
+      "decision": "promotable",
+      "warnings": []
+    },
+    "release_candidate_dry_run": {
+      "status": "ok",
+      "selected_unchanged": true,
+      "current_unchanged": true
+    }
+  }
+}

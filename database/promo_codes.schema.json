@@ -1,0 +1,23 @@
+{
+  "collection": "promo_codes",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "campaign_id", "code", "status", "max_redemptions", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "code": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "active", "inactive", "archived"] },
+    "max_redemptions": { "type": "integer", "minimum": 1 },
+    "per_user_limit": { "type": "integer", "minimum": 1 },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_promo_code", "fields": ["product_key", "code"], "unique": true },
+    { "name": "idx_promo_campaign", "fields": ["product_key", "campaign_id", "status"] }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-03-23T12:17:52.247Z",
+  "channels": [
+    {
+      "channel": "dev",
+      "current_release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+      "source_scenario_id": "data2_multi_publication_release_candidate",
+      "published_at": "2026-03-23T12:17:50.532Z",
+      "rollback_target": "rel_data2_multi_publication_release_candidate_20260323T121517Z",
+      "status": "active",
+      "history_count": 35
+    },
+    {
+      "channel": "staging",
+      "current_release_id": null,
+      "source_scenario_id": null,
+      "published_at": null,
+      "rollback_target": null,
+      "status": "idle",
+      "history_count": 0
+    },
+    {
+      "channel": "production",
+      "current_release_id": null,
+      "source_scenario_id": null,
+      "published_at": null,
+      "rollback_target": null,
+      "status": "idle",
+      "history_count": 0
+    }
+  ]
+}

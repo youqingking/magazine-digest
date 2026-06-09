@@ -1,0 +1,158 @@
+{
+  "scenario_id": "s13_inbox_digest",
+  "title": "Inbox Digest",
+  "objective": "Verify low-priority updates merge into digest while inbox remains the source of truth.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["market_watch", "world_brief"],
+  "article_ids": ["art_s13_market_note", "art_s13_world_note"],
+  "covered_risks": ["digest_aggregation", "inbox_unread_count", "digest_open"],
+  "intended_stage": ["F1", "G"],
+  "depends_on_surfaces": ["notification-inbox", "notification-prefs", "home-discovery"],
+  "articles": [
+    {
+      "article_id": "art_s13_market_note",
+      "article_uid": "syn_article_s13_market_note",
+      "article_key": "market_note_20260317",
+      "publication_key": "market_watch",
+      "title": "批发价格备注改成波动原因卡",
+      "summary": "用于 digest 合并的低优先级更新一。",
+      "tags": ["economy", "market"],
+      "status": "active",
+      "created_at": "2026-03-17T07:00:00+08:00",
+      "updated_at": "2026-03-17T09:05:00+08:00"
+    },
+    {
+      "article_id": "art_s13_world_note",
+      "article_uid": "syn_article_s13_world_note",
+      "article_key": "world_note_20260317",
+      "publication_key": "world_brief",
+      "title": "港区调度说明补了一条天气备注",
+      "summary": "用于 digest 合并的低优先级更新二。",
+      "tags": ["policy"],
+      "status": "active",
+      "created_at": "2026-03-17T07:05:00+08:00",
+      "updated_at": "2026-03-17T09:06:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s13_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 4,
+      "entitlement_snapshot": {
+        "grant_source": "stage_f1_fixture",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s13_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    },
+    "publish_batches": [
+      {
+        "_id": "pb_s13_digest_group",
+        "product_key": "demo_cn_content",
+        "batch_key": "digest_group_20260317",
+        "batch_type": "digest_refresh",
+        "title": "午间更新摘要",
+        "change_summary": "两条低优先级更新汇总到 digest。",
+        "status": "published",
+        "scheduled_at": "2026-03-17T09:00:00+08:00",
+        "published_at": "2026-03-17T09:20:00+08:00",
+        "available_from": "2026-03-17T09:20:00+08:00",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "content_count": 2,
+        "created_at": "2026-03-17T08:20:00+08:00",
+        "updated_at": "2026-03-17T09:20:00+08:00"
+      }
+    ],
+    "user_follows": [],
+    "user_notification_prefs": {
+      "_id": "unp_s13_reader",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "status": "active",
+      "push_enabled": true,
+      "inbox_enabled": true,
+      "digest_enabled": true,
+      "follow_alert_level": "digest_only",
+      "breaking_push_override": false,
+      "quiet_hours_enabled": false,
+      "quiet_hours_start_minute": 1320,
+      "quiet_hours_end_minute": 420,
+      "timezone": "Asia/Shanghai",
+      "digest_frequency": "daily",
+      "created_at": "2026-03-17T08:00:00+08:00",
+      "updated_at": "2026-03-17T09:20:00+08:00"
+    },
+    "notification_inbox": [
+      {
+        "_id": "inbox_s13_digest",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "inbox_key": "digest:pb_s13_digest_group:user_local_stage_e0",
+        "publish_batch_id": "pb_s13_digest_group",
+        "source_type": "digest",
+        "source_id": "pb_s13_digest_group",
+        "title": "午间更新摘要",
+        "body_preview": "2 条更新被整理进同一张 digest 卡片。",
+        "change_summary": "2 updates",
+        "action_type": "open_publish_batch",
+        "action_target": "pb_s13_digest_group",
+        "status": "unread",
+        "priority": "low",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:20:00+08:00",
+        "created_at": "2026-03-17T09:20:00+08:00",
+        "updated_at": "2026-03-17T09:20:00+08:00",
+        "provenance": ["art_s13_market_note", "art_s13_world_note"]
+      }
+    ],
+    "user_content_state": [
+      {
+        "_id": "ucs_s13_market_note",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s13_market_note",
+        "publish_batch_id": "pb_s13_digest_group",
+        "reading_state": "unseen",
+        "bookmark_status": "none",
+        "newness_state": "new",
+        "resume_progress_basis_points": 0,
+        "created_at": "2026-03-17T09:20:00+08:00",
+        "updated_at": "2026-03-17T09:20:00+08:00"
+      },
+      {
+        "_id": "ucs_s13_world_note",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s13_world_note",
+        "publish_batch_id": "pb_s13_digest_group",
+        "reading_state": "unseen",
+        "bookmark_status": "none",
+        "newness_state": "new",
+        "resume_progress_basis_points": 0,
+        "created_at": "2026-03-17T09:20:00+08:00",
+        "updated_at": "2026-03-17T09:20:00+08:00"
+      }
+    ],
+    "inbox_last_seen_at": "2026-03-17T08:00:00+08:00",
+    "last_seen_publish_batch": "pb_s10_previous"
+  }
+}

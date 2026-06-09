@@ -1,0 +1,43 @@
+﻿{
+    "generated_at":  "2026-03-20T22:09:36.3244739+08:00",
+    "stage":  "UI3.5",
+    "status":  "pending_manual_runtime_confirmation",
+    "provenance":  {
+                       "previously_confirmed_via_build_audit":  true,
+                       "build_meta_branch":  "ui1-merge-on-mainline",
+                       "build_meta_short_sha":  "1fdd2f8",
+                       "build_meta_timestamp":  "2026-03-20T16:49:24.1733732+08:00",
+                       "launch_project_dir":  "D:/ws/Playground/mobile",
+                       "expected_project_dir":  "D:/ws/Playground/mobile"
+                   },
+    "current_code_shell":  {
+                               "tabbar_count":  3,
+                               "tabbar_pages":  [
+                                                    "pages/feed/index",
+                                                    "pages/search/index",
+                                                    "pages/profile/index"
+                                                ],
+                               "tabbar_texts":  [
+                                                    "棣栭〉",
+                                                    "鏉ユ簮",
+                                                    "鎴戠殑"
+                                                ],
+                               "official_pages":  [
+                                                      "pages/feed/index",
+                                                      "pages/search/index",
+                                                      "pages/detail/index",
+                                                      "pages/paywall/index",
+                                                      "pages/invite/index",
+                                                      "pages/profile/index",
+                                                      "pages/settings/index"
+                                                  ]
+                           },
+    "automation_limit":  "Current environment can classify readiness and inspect source, but cannot reliably drive HBuilderX GUI compile/runtime end-to-end.",
+    "manual_proof_required":  [
+                                  "Run mobile from HBuilderX or H5 preview.",
+                                  "Confirm only three tabs are visible: feed, search/鏉ユ簮, profile.",
+                                  "Confirm settings Build Audit remains visible.",
+                                  "Confirm the running package still matches current source provenance.",
+                                  "Record the observation in manual-smoke-report.json."
+                              ]
+}

@@ -1,0 +1,63 @@
+﻿{
+    "generated_at":  "2026-03-20T22:09:36.4562746+08:00",
+    "stage":  "UI3.5",
+    "final_gate":  "NO",
+    "reasons":  [
+                    "Code, routes, validators, and smokes are green.",
+                    "build-mobile classification is now normalized and reports readiness passed.",
+                    "A fresh post-UI3 runtime record confirming the 3-tab shell is still missing."
+                ],
+    "official_pages":  [
+                           "pages/feed/index",
+                           "pages/search/index",
+                           "pages/detail/index",
+                           "pages/paywall/index",
+                           "pages/invite/index",
+                           "pages/profile/index",
+                           "pages/settings/index"
+                       ],
+    "tabbar":  {
+                   "count":  3,
+                   "pages":  [
+                                 "pages/feed/index",
+                                 "pages/search/index",
+                                 "pages/profile/index"
+                             ],
+                   "texts":  [
+                                 "棣栭〉",
+                                 "鏉ユ簮",
+                                 "鎴戠殑"
+                             ]
+               },
+    "non_tab_entries":  {
+                            "paywall":  [
+                                            "feed",
+                                            "profile",
+                                            "detail",
+                                            "campaign alias"
+                                        ],
+                            "invite":  [
+                                           "profile",
+                                           "paywall"
+                                       ],
+                            "settings":  [
+                                             "profile"
+                                         ],
+                            "detail":  [
+                                           "content click only"
+                                       ]
+                        },
+    "preserved":  {
+                      "unique_detail_route":  true,
+                      "feed_return_state":  true,
+                      "stage_g_foundation":  true,
+                      "h0_h1a_foundation":  true
+                  },
+    "evidence":  {
+                     "build_mobile_classification":  "compile_readiness_passed_but_real_compile_not_triggered",
+                     "smoke_ui2":  "passed",
+                     "smoke_ui3":  "passed",
+                     "provenance_previously_confirmed":  true,
+                     "runtime_post_ui3_confirmed":  false
+                 }
+}

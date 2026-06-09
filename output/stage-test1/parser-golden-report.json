@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-03-23T04:39:31.027Z",
+  "status": "passed",
+  "items": [
+    {
+      "id": "readers_digest_v1",
+      "status": "passed",
+      "assertions": {
+        "imported_article_count": 15,
+        "merged_skipped": true,
+        "missing_block_count": 0,
+        "runtime_bundle": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json"
+      }
+    },
+    {
+      "id": "split_audience_release_v1",
+      "status": "passed",
+      "assertions": {
+        "paired_count": 1,
+        "teen_field_present": true,
+        "missing_pair_warning_count": 1
+      }
+    },
+    {
+      "id": "barrons_release_v1",
+      "status": "passed",
+      "assertions": {
+        "publication_id": "barrons",
+        "publication_display_name": "Barron's",
+        "issue_label": "09022026"
+      }
+    },
+    {
+      "id": "the_atlantic_release_v1",
+      "status": "passed",
+      "assertions": {
+        "title": "优待之国：美国大学的“考试延时”困局",
+        "suppressed_warning": [
+          "atlantic_filename_truncated"
+        ],
+        "section_009": "Culture & Critics"
+      }
+    },
+    {
+      "id": "the_economist_release_v1",
+      "status": "passed",
+      "assertions": {
+        "united_states_section": "United States",
+        "anomaly_section": "Asia",
+        "anomaly_warnings": [
+          "economist_section_context_fallback",
+          "economist_filename_anomaly"
+        ]
+      }
+    }
+  ]
+}

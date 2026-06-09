@@ -1,0 +1,466 @@
+{
+  "generated_at": "2026-03-22T15:33:45.091Z",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data1a_readers_digest_12112025",
+  "current_scenario_id": "data1a_readers_digest_12112025",
+  "diff_report": "scenario-diff-report.json",
+  "taxonomy_report": "../../../../stage-data3/taxonomy-coverage-report.json",
+  "gate": {
+    "generated_at": "2026-03-22T15:33:45.068Z",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "refresh_mode": "read_existing_reports",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_scenario_id": "data1a_readers_digest_12112025",
+    "blockers": [],
+    "warnings": [],
+    "status": "passed",
+    "upstream_reports": {
+      "metadata_quality": "output/stage-data1d/metadata-quality-report.json",
+      "warning_report": "output/stage-data1d/warning-report.json",
+      "override_report": "output/stage-data1d/override-report.json",
+      "test1_final": "output/stage-test1/final-report.json",
+      "content_contract": "output/stage-test1/content-contract-report.json",
+      "parser_golden": "output/stage-test1/parser-golden-report.json",
+      "lifecycle": "output/stage-test1/lifecycle-report.json",
+      "app_regression": "output/stage-test1/app-regression-report.json"
+    }
+  },
+  "budget_summary": {
+    "generated_at": "2026-03-22T15:33:45.089Z",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "scenario_class": "release_candidate",
+    "release_eligible": true,
+    "issue_summaries": [
+      {
+        "issue_id": "barrons__09022026",
+        "article_count": 17,
+        "import_warning_counts": {},
+        "unresolved_warning_counts": {},
+        "unresolved_warning_articles": {}
+      },
+      {
+        "issue_id": "the_atlantic__012026",
+        "article_count": 10,
+        "import_warning_counts": {
+          "atlantic_filename_truncated": 4
+        },
+        "unresolved_warning_counts": {},
+        "unresolved_warning_articles": {}
+      }
+    ],
+    "accepted_warnings": [],
+    "over_budget_warnings": [],
+    "unregistered_warnings": [],
+    "accepted_overrides": [
+      {
+        "id": "atlantic-editorial-override-drift",
+        "issue_id": "the_atlantic__012026",
+        "count": 9,
+        "classification": "temporary_override"
+      }
+    ],
+    "over_budget_overrides": []
+  },
+  "taxonomy_summary": {
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "status": "active",
+    "source_kind": "real_content_release_candidate",
+    "publication_count": 2,
+    "issue_count": 2,
+    "article_count": 27,
+    "mapped_article_count": 9,
+    "mapped_ratio": 0.3333333333333333,
+    "unmapped_count": 18,
+    "unmapped": [
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_001",
+        "raw_label": "华尔街风云"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_002",
+        "raw_label": "迪士尼的 CEO 过山车"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_003",
+        "raw_label": "The AI Threat in Perspective"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_004",
+        "raw_label": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_005",
+        "raw_label": "指数挂钩年金的新选择"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_006",
+        "raw_label": "自主机器人的崛起"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_007",
+        "raw_label": "Even Worries About Inflation Matter—a Lot"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_008",
+        "raw_label": "Dividends You Can Bank On"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_009",
+        "raw_label": "三家值得关注的房地产投资信托基金"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_010",
+        "raw_label": "罗德岛的棉纺厂"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_011",
+        "raw_label": "2026 旅游业展望"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_012",
+        "raw_label": "Worthy Spots for Investors to Venture"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_013",
+        "raw_label": "The Dow Hits a Fresh Milestone & Global Market Shifts"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_014",
+        "raw_label": "Europe Gains Appeal"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_015",
+        "raw_label": "标普 500 指数 8000 点之约"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_016",
+        "raw_label": "奈飞与华纳兄弟探索的“联姻”"
+      },
+      {
+        "issue_id": "barrons__09022026",
+        "article_id": "art_barrons_09022026_017",
+        "raw_label": "Barron's"
+      },
+      {
+        "issue_id": "the_atlantic__012026",
+        "article_id": "art_the_atlantic_012026_006",
+        "raw_label": "Culture & Critics"
+      }
+    ],
+    "publication_specific_fallback_count": 0,
+    "discovery_bucket_distribution": {
+      "国际": 4,
+      "观点": 1,
+      "文化": 4
+    }
+  },
+  "reports": {
+    "final": {
+      "generated_at": "2026-03-22T15:32:53.002Z",
+      "status": "passed",
+      "steps": [
+        {
+          "id": "reimport_sources",
+          "status": "passed"
+        },
+        {
+          "id": "content_contract",
+          "status": "passed"
+        },
+        {
+          "id": "parser_golden",
+          "status": "passed"
+        },
+        {
+          "id": "lifecycle",
+          "status": "passed"
+        },
+        {
+          "id": "app_regression",
+          "status": "passed"
+        }
+      ],
+      "reports": {
+        "matrix": "matrix-report.json",
+        "content_contract": "content-contract-report.json",
+        "parser_golden": "parser-golden-report.json",
+        "lifecycle": "lifecycle-report.json",
+        "app_regression": "app-regression-report.json"
+      }
+    },
+    "content_contract": {
+      "generated_at": "2026-03-22T15:32:58.881Z",
+      "status": "passed",
+      "items": [
+        {
+          "issue_id": "readers_digest__12112025",
+          "publication_id": "readers_digest",
+          "issue_label": "12112025",
+          "article_count": 15,
+          "blockers": [],
+          "warnings": [
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_001"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_002"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_003"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_004"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_005"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_006"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_007"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_008"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_009"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_010"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_011"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_012"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_013"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_014"
+            },
+            {
+              "type": "best_effort_ordinal_missing",
+              "article_id": "art_rd_12112025_015"
+            }
+          ],
+          "override_applied_count": 0,
+          "unresolved_warning_count": 0
+        },
+        {
+          "issue_id": "barrons__09022026",
+          "publication_id": "barrons",
+          "issue_label": "09022026",
+          "article_count": 17,
+          "blockers": [],
+          "warnings": [],
+          "override_applied_count": 0,
+          "unresolved_warning_count": 0
+        },
+        {
+          "issue_id": "the_atlantic__012026",
+          "publication_id": "the_atlantic",
+          "issue_label": "012026",
+          "article_count": 10,
+          "blockers": [],
+          "warnings": [],
+          "override_applied_count": 9,
+          "unresolved_warning_count": 0
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "publication_id": "the_economist",
+          "issue_label": "20260314",
+          "article_count": 51,
+          "blockers": [],
+          "warnings": [],
+          "override_applied_count": 1,
+          "unresolved_warning_count": 2
+        }
+      ],
+      "mixed_scenario_present": true,
+      "mixed_scenario_article_count": 78,
+      "override_composition_checks": {
+        "atlantic_002_override_applied": true,
+        "atlantic_002_effective_warnings": [],
+        "economist_024_section_label": "Asia"
+      }
+    },
+    "parser_golden": {
+      "generated_at": "2026-03-22T15:32:59.003Z",
+      "status": "passed",
+      "items": [
+        {
+          "id": "readers_digest_v1",
+          "status": "passed",
+          "assertions": {
+            "imported_article_count": 15,
+            "merged_skipped": true,
+            "missing_block_count": 0,
+            "runtime_bundle": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json"
+          }
+        },
+        {
+          "id": "split_audience_release_v1",
+          "status": "passed",
+          "assertions": {
+            "paired_count": 1,
+            "teen_field_present": true,
+            "missing_pair_warning_count": 1
+          }
+        },
+        {
+          "id": "barrons_release_v1",
+          "status": "passed",
+          "assertions": {
+            "publication_id": "barrons",
+            "publication_display_name": "Barron's",
+            "issue_label": "09022026"
+          }
+        },
+        {
+          "id": "the_atlantic_release_v1",
+          "status": "passed",
+          "assertions": {
+            "title": "优待之国：美国大学的“考试延时”困局",
+            "suppressed_warning": [
+              "atlantic_filename_truncated"
+            ],
+            "section_009": "Culture & Critics"
+          }
+        },
+        {
+          "id": "the_economist_release_v1",
+          "status": "passed",
+          "assertions": {
+            "united_states_section": "United States",
+            "anomaly_section": "Asia",
+            "anomaly_warnings": [
+              "economist_section_context_fallback",
+              "economist_filename_anomaly"
+            ]
+          }
+        }
+      ]
+    },
+    "lifecycle": {
+      "generated_at": "2026-03-22T15:32:59.142Z",
+      "status": "passed",
+      "assertions": {
+        "baseline_before": "data1a_readers_digest_12112025",
+        "selected_after_select": "data1c_three_release_mixed_preview",
+        "current_after_select": "data1a_readers_digest_12112025",
+        "current_after_publish": "data1c_three_release_mixed_preview",
+        "retired_clone_status": "retired",
+        "clone_bundle_exists": true,
+        "current_after_rollback": "data1a_readers_digest_12112025"
+      }
+    },
+    "app_regression": {
+      "generated_at": "2026-03-22T15:32:59.295Z",
+      "status": "passed",
+      "assertions": {
+        "baseline": {
+          "feed_count": 15,
+          "search_count": 15,
+          "detail_quick": true,
+          "paywall_quota": 8,
+          "profile_benefits": true
+        },
+        "mixed": {
+          "multi_publication_count": 3,
+          "barrons_count": 17,
+          "atlantic_count": 10,
+          "economist_count": 51,
+          "detail_general_quick": true,
+          "detail_teen_deep": true,
+          "quota_total": 8,
+          "profile_benefits": true
+        },
+        "restore_state": {
+          "activeTab": "followed",
+          "publicationKey": "the_economist",
+          "updateType": "new_publish",
+          "scrollTop": 600,
+          "restorePending": true,
+          "focus": ""
+        },
+        "provenance_before": "data1a_readers_digest_12112025",
+        "provenance_after_mixed": "data1c_three_release_mixed_preview"
+      }
+    }
+  },
+  "decision": "promotable",
+  "blockers": [],
+  "warnings": [],
+  "info": [
+    "diff:current:override_count_changed:accepted_by_budget",
+    "diff:current:publication_removed",
+    "diff:current:issue_removed",
+    "diff:current:article_removed",
+    "diff:current:parser_profile_removed",
+    "diff:current:publication_added",
+    "diff:current:issue_added",
+    "diff:current:article_added",
+    "diff:current:parser_profile_added",
+    "diff:current:build_label_changed",
+    "diff:current:publish_state_changed",
+    "diff:selected:override_count_changed:accepted_by_budget",
+    "diff:selected:publication_removed",
+    "diff:selected:issue_removed",
+    "diff:selected:article_removed",
+    "diff:selected:parser_profile_removed",
+    "diff:selected:publication_added",
+    "diff:selected:issue_added",
+    "diff:selected:article_added",
+    "diff:selected:parser_profile_added",
+    "diff:selected:build_label_changed",
+    "diff:selected:publish_state_changed",
+    "diff:baseline:override_count_changed:accepted_by_budget",
+    "diff:baseline:publication_removed",
+    "diff:baseline:issue_removed",
+    "diff:baseline:article_removed",
+    "diff:baseline:parser_profile_removed",
+    "diff:baseline:publication_added",
+    "diff:baseline:issue_added",
+    "diff:baseline:article_added",
+    "diff:baseline:parser_profile_added",
+    "diff:baseline:build_label_changed",
+    "diff:baseline:publish_state_changed",
+    "quality:override_count:9:accepted_by_budget",
+    "taxonomy:unmapped_count:18"
+  ]
+}

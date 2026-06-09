@@ -1,0 +1,28 @@
+{
+  "expected_variant_selection": {
+    "teen_quick_30s": "var_s01_city_signals_teen_quick_r1",
+    "teen_deep_3m": "var_s01_city_signals_teen_deep_r1",
+    "adult_quick_30s": "var_s01_city_signals_adult_quick_r1",
+    "adult_deep_3m": "var_s01_city_signals_adult_deep_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "teen_request_result": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "not_primary_path"
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "cache_seedable": true,
+    "offline_safe_variant_matches_runtime": true
+  },
+  "expected_event_signals": ["article_impression", "article_open", "read_progress"],
+  "notes": ["Baseline smoke family for detail/feed mode switching."]
+}

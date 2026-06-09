@@ -1,0 +1,22 @@
+{
+  "collection": "event_metrics_daily",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "aggregate_projection",
+  "required": ["_id", "date", "product_key", "event_name", "platform", "audience_segment", "experiment_bucket", "metric_count", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "product_key": { "type": "string" },
+    "event_name": { "type": "string" },
+    "platform": { "type": "string", "enum": ["android", "ios", "web", "miniapp", "unknown"] },
+    "audience_segment": { "type": "string", "enum": ["general", "teen", "adult", "unknown"] },
+    "experiment_bucket": { "type": "string" },
+    "metric_count": { "type": "integer", "minimum": 0 },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_daily_metric", "fields": ["date", "product_key", "event_name", "platform", "audience_segment", "experiment_bucket"], "unique": true },
+    { "name": "idx_metric_product_date", "fields": ["product_key", "date", "event_name"] }
+  ]
+}

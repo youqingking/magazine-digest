@@ -1,0 +1,68 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [3 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2703 >>
+stream
+0.11 0.20 0.28 rg
+0.11 0.20 0.28 RG
+2 w
+54 728 m 558 728 l S
+BT /F1 22 Tf 1 0 0 1 54 752 Tm (App Summary) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 736 Tm (Single-page summary based only on repository evidence) Tj ET
+BT /F1 10 Tf 1 0 0 1 360 752 Tm (Repo state: no commits, no checked-out app files) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 700 Tm (WHAT IT IS) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 684 Tm (This repository does not contain an application implementation yet.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 671 Tm (It is currently an empty Git repo with metadata only, so the app description is Not found in repo.) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 640 Tm (WHO IT'S FOR) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 624 Tm (- Primary user/persona: Not found in repo.) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 594 Tm (WHAT IT DOES) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 578 Tm (- Core user-facing functionality: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 565 Tm (- Screens, routes, or commands: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 552 Tm (- Backend/API behavior: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 539 Tm (- Authentication or account features: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 526 Tm (- Data storage or persistence behavior: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 513 Tm (- Background jobs, sync, or automation: Not found in repo.) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 478 Tm (HOW IT WORKS) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 462 Tm (No architecture for components, services, or data flow is present in the worktree.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 449 Tm (Evidence: .git/HEAD -> refs/heads/master; .git/config has only default core Git settings.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 436 Tm (No branch refs or checked-out source files are present, and Git reports the branch has no commits.) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 401 Tm (HOW TO RUN) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 385 Tm (- Install/setup steps: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 372 Tm (- Entry point or start command: Not found in repo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 359 Tm (- Required environment variables/config: Not found in repo.) Tj ET
+BT /F1 12 Tf 1 0 0 1 54 324 Tm (REPOSITORY NOTE) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 308 Tm (- Initialize or fetch actual app files into this repository.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 295 Tm (- Add docs such as a README, run command, and architecture notes.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 282 Tm (- Re-run this summary once the app source is present.) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 265 Tm (These steps are inferred from repo state, not existing repo instructions.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 54 66 Tm (Generated from local repo inspection only. Missing information is intentionally labeled Not found in repo.) Tj ET
+
+endobj
+6 0 obj
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+0000003056 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3081
+%%EOF

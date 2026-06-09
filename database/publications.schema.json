@@ -1,0 +1,23 @@
+{
+  "collection": "publications",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "publication_key", "display_name", "language", "status", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "publication_key": { "type": "string" },
+    "display_name": { "type": "string" },
+    "language": { "type": "string", "enum": ["zh-CN", "en-US"] },
+    "status": { "type": "string", "enum": ["draft", "active", "inactive", "archived"] },
+    "description": { "type": "string" },
+    "sort_order": { "type": "integer", "minimum": 0 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_publication_key", "fields": ["product_key", "publication_key"], "unique": true },
+    { "name": "idx_publication_status", "fields": ["product_key", "status", "sort_order"] }
+  ]
+}

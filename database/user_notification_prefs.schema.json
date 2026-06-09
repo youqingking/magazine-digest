@@ -1,0 +1,30 @@
+{
+  "collection": "user_notification_prefs",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "current_state",
+  "required": ["_id", "product_key", "user_id", "status", "push_enabled", "inbox_enabled", "digest_enabled", "quiet_hours_enabled", "timezone", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "paused"] },
+    "push_enabled": { "type": "boolean" },
+    "inbox_enabled": { "type": "boolean" },
+    "digest_enabled": { "type": "boolean" },
+    "follow_alert_level": { "type": "string", "enum": ["immediate", "digest_only", "off"] },
+    "breaking_push_override": { "type": "boolean" },
+    "quiet_hours_enabled": { "type": "boolean" },
+    "quiet_hours_start_minute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "quiet_hours_end_minute": { "type": "integer", "minimum": 0, "maximum": 1439 },
+    "timezone": { "type": "string" },
+    "digest_frequency": { "type": "string", "enum": ["off", "daily", "weekly"] },
+    "last_digest_sent_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_user_notification_prefs", "fields": ["product_key", "user_id"], "unique": true },
+    { "name": "idx_notification_prefs_status", "fields": ["product_key", "status", "updated_at"] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "resource": "notification_deliveries",
+  "mode": "read_only_foundation",
+  "notes": [
+    "H0 preview only",
+    "notification_inbox remains source of truth",
+    "push transport stays best effort"
+  ]
+}

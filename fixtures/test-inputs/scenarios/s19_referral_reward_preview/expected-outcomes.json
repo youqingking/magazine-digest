@@ -1,0 +1,33 @@
+{
+  "expected_variant_selection": {
+    "general_quick_30s": "var_s19_referral_preview_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "allowed",
+      "denial_reason": null
+    },
+    "pricing_preview_expectation": {
+      "invite_preview_only": true,
+      "reward_summary_projection_only": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "referral_summary_cacheable": true,
+    "reward_summary_cacheable": true
+  },
+  "expected_event_signals": ["invite_preview_open", "referral_share_click", "reward_summary_open"],
+  "notes": [
+    "s19 is the Stage G synthetic projection for b05_referral_bind_then_milestone_reward."
+  ]
+}

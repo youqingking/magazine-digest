@@ -1,0 +1,18 @@
+{
+  "version": "stage-rel2-v1",
+  "channel": "production",
+  "status": "idle",
+  "release_id": null,
+  "source_scenario_id": null,
+  "promoted_from": null,
+  "published_at": null,
+  "rollback_target": null,
+  "release_manifest_path": null,
+  "bundle_path": null,
+  "provenance_path": null,
+  "exported_at": "2026-03-23T12:22:30.703Z",
+  "source_manifest": "runtime/channels/production/manifest.json",
+  "notes": [
+    "channel_idle_no_release"
+  ]
+}

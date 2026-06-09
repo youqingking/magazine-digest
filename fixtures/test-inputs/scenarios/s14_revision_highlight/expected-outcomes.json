@@ -1,0 +1,25 @@
+{
+  "expected_variant_selection": {
+    "art_s14_supply_note_general_quick_30s": "var_s14_supply_note_general_quick_r2"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": "active_access",
+    "pricing_preview_expectation": "non_blocking"
+  },
+  "expected_sync_behavior": {
+    "revision_highlight_expected": true,
+    "continue_reading_preserved": true
+  },
+  "expected_cache_behavior": {
+    "resume_state_persisted": true,
+    "bookmark_state_persisted": true
+  },
+  "expected_event_signals": ["continue_read_click", "bookmark_add", "notification_open"],
+  "notes": ["修订必须显示 change summary，但 continue reading 不能丢失。"]
+}

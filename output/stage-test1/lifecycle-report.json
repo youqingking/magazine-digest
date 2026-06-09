@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-03-23T04:39:31.612Z",
+  "status": "passed",
+  "assertions": {
+    "baseline_before": "data1a_readers_digest_12112025",
+    "selected_after_select": "data1c_three_release_mixed_preview",
+    "current_after_select": "data1a_readers_digest_12112025",
+    "current_after_publish": "data1c_three_release_mixed_preview",
+    "retired_clone_status": "retired",
+    "clone_bundle_exists": true,
+    "current_after_rollback": "data1a_readers_digest_12112025"
+  }
+}

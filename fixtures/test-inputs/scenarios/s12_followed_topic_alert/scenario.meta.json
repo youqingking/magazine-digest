@@ -1,0 +1,158 @@
+{
+  "scenario_id": "s12_followed_topic_alert",
+  "title": "Followed Topic Alert",
+  "objective": "Verify followed publication and topic alerts become inbox items and followed_updates modules.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["ai_digest"],
+  "article_ids": ["art_s12_policy_stack"],
+  "covered_risks": ["follow_match", "followed_updates", "inbox_follow_alert"],
+  "intended_stage": ["F1", "G"],
+  "depends_on_surfaces": ["follow-catalog", "follow-toggle", "notification-inbox", "home-discovery"],
+  "articles": [
+    {
+      "article_id": "art_s12_policy_stack",
+      "article_uid": "syn_article_s12_policy_stack",
+      "article_key": "policy_stack_20260317",
+      "publication_key": "ai_digest",
+      "title": "模型治理周报把政策条目合成跟进清单",
+      "summary": "用于 follow topic alert 的最小内容样本。",
+      "tags": ["ai", "policy"],
+      "status": "active",
+      "created_at": "2026-03-17T07:50:00+08:00",
+      "updated_at": "2026-03-17T09:16:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s12_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 4,
+      "entitlement_snapshot": {
+        "grant_source": "stage_f1_fixture",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s12_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    },
+    "publish_batches": [
+      {
+        "_id": "pb_s12_follow_alert",
+        "product_key": "demo_cn_content",
+        "batch_key": "follow_alert_20260317",
+        "batch_type": "new_publish",
+        "title": "关注主题更新",
+        "change_summary": "你关注的 ai / policy 有一条新内容。",
+        "status": "published",
+        "scheduled_at": "2026-03-17T09:00:00+08:00",
+        "published_at": "2026-03-17T09:10:00+08:00",
+        "available_from": "2026-03-17T09:10:00+08:00",
+        "notify_level": "followed_only",
+        "is_breaking": false,
+        "content_count": 1,
+        "created_at": "2026-03-17T08:40:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ],
+    "user_follows": [
+      {
+        "_id": "follow_s12_ai_digest",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "subject_type": "publication",
+        "subject_key": "ai_digest",
+        "status": "active",
+        "notify_level": "immediate",
+        "source_surface": "follow_catalog",
+        "created_at": "2026-03-17T08:00:00+08:00",
+        "updated_at": "2026-03-17T08:00:00+08:00"
+      },
+      {
+        "_id": "follow_s12_policy",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "subject_type": "topic_tag",
+        "subject_key": "policy",
+        "status": "active",
+        "notify_level": "immediate",
+        "source_surface": "follow_catalog",
+        "created_at": "2026-03-17T08:05:00+08:00",
+        "updated_at": "2026-03-17T08:05:00+08:00"
+      }
+    ],
+    "user_notification_prefs": {
+      "_id": "unp_s12_reader",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "status": "active",
+      "push_enabled": true,
+      "inbox_enabled": true,
+      "digest_enabled": true,
+      "follow_alert_level": "immediate",
+      "breaking_push_override": true,
+      "quiet_hours_enabled": false,
+      "quiet_hours_start_minute": 1320,
+      "quiet_hours_end_minute": 420,
+      "timezone": "Asia/Shanghai",
+      "digest_frequency": "daily",
+      "created_at": "2026-03-17T08:00:00+08:00",
+      "updated_at": "2026-03-17T09:10:00+08:00"
+    },
+    "notification_inbox": [
+      {
+        "_id": "inbox_s12_follow",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "inbox_key": "follow:pb_s12_follow_alert:user_local_stage_e0",
+        "publish_batch_id": "pb_s12_follow_alert",
+        "article_id": "art_s12_policy_stack",
+        "source_type": "follow_subject",
+        "source_id": "policy",
+        "title": "你关注的 policy 有新内容",
+        "body_preview": "ai_digest 发布了一条政策整理内容。",
+        "change_summary": "follow match",
+        "action_type": "open_article",
+        "action_target": "art_s12_policy_stack",
+        "status": "unread",
+        "priority": "normal",
+        "notify_level": "followed_only",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:10:00+08:00",
+        "created_at": "2026-03-17T09:10:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ],
+    "user_content_state": [
+      {
+        "_id": "ucs_s12_policy_stack",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s12_policy_stack",
+        "publish_batch_id": "pb_s12_follow_alert",
+        "reading_state": "unseen",
+        "bookmark_status": "none",
+        "newness_state": "new",
+        "resume_progress_basis_points": 0,
+        "created_at": "2026-03-17T09:10:00+08:00",
+        "updated_at": "2026-03-17T09:10:00+08:00"
+      }
+    ],
+    "inbox_last_seen_at": "2026-03-17T08:55:00+08:00",
+    "last_seen_publish_batch": "pb_s10_previous"
+  }
+}

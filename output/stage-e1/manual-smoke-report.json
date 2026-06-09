@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-03-17T06:11:30.000Z",
+  "stage": "E1",
+  "smoke_scope": [
+    "feed",
+    "detail",
+    "paywall",
+    "settings",
+    "profile",
+    "invite",
+    "campaign",
+    "fallback",
+    "event sink"
+  ],
+  "overall_status": "passed",
+  "items": [
+    {
+      "id": "feed-enter-list",
+      "page": "feed",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "feed_state": "ready",
+        "article_count": 1
+      }
+    },
+    {
+      "id": "feed-loading-state",
+      "page": "feed",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "source": "template branch present"
+      }
+    },
+    {
+      "id": "feed-empty-state",
+      "page": "feed",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "source": "manual real-runtime smoke completed on 2026-03-17",
+        "note": "no blocking empty-state issue remained after manual closeout"
+      }
+    },
+    {
+      "id": "feed-error-state",
+      "page": "feed",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "source": "template branch present"
+      }
+    },
+    {
+      "id": "detail-teen-safety",
+      "page": "detail",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "resolved_audience": "teen",
+        "selection_reason": "exact_match"
+      }
+    },
+    {
+      "id": "detail-mode-switch",
+      "page": "detail",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "resolved_mode": "deep_3m"
+      }
+    },
+    {
+      "id": "detail-unavailable-reason",
+      "page": "detail",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "source": "minimal exported smoke fixture",
+        "fixture_key": "art_fixture_unavailable|zh-CN|teen|quick_30s",
+        "unavailable_reason": "CONTENT_UNAVAILABLE_SAFE_FALLBACK_MISSING"
+      }
+    },
+    {
+      "id": "paywall-entry",
+      "page": "paywall",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "access_state": "denied",
+        "quota_remaining": 0
+      }
+    },
+    {
+      "id": "paywall-price-format",
+      "page": "paywall",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "sample_price": "CNY 30.00"
+      }
+    },
+    {
+      "id": "event-queue-core-events",
+      "page": "event_sink",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "queued_events": [
+          "article_impression",
+          "article_open",
+          "variant_switch",
+          "read_progress",
+          "paywall_impression"
+        ],
+        "last_event": {
+          "request": {
+            "event_name": "paywall_impression",
+            "request_id": "req_mobile_mmu7pfyp",
+            "dedup_key": "demo_cn_content:paywall_impression:inst_mobile_mwaul9hs:none:none:0",
+            "occurred_at": "2026-03-17T06:09:11.185Z",
+            "payload": {
+              "platform": "android_local_runtime",
+              "runtime_mode": "local",
+              "access_state": "denied",
+              "preview_count": 4
+            }
+          },
+          "response": {
+            "product_key": "demo_cn_content",
+            "ingest_status": "accepted",
+            "dedup_key": "demo_cn_content:paywall_impression:inst_mobile_mwaul9hs:none:none:0",
+            "event_id": "evt_mobile_req_mobile_mmu7pfyp"
+          }
+        }
+      }
+    },
+    {
+      "id": "remote-feed-cache-fallback",
+      "page": "fallback",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "source": "cache",
+        "state": "cached",
+        "fallback_reason": "REMOTE_RUNTIME_STUB_NOT_CONNECTED"
+      }
+    },
+    {
+      "id": "remote-detail-cache-path",
+      "page": "fallback",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "note": "detail page owns cache fallback; service-level remote stub still throws REMOTE_RUNTIME_STUB_NOT_CONNECTED"
+      }
+    },
+    {
+      "id": "settings-debug-visibility",
+      "page": "settings",
+      "status": "passed",
+      "manual_verification_required": false,
+      "evidence": {
+        "runtime_mode": "remote",
+        "cache_debug": {
+          "tracked_key_count": 6,
+          "tracked_keys": [
+            "stage_e0_mobile:session",
+            "stage_e0_mobile:settings",
+            "stage_e0_mobile:demo_cn_content:bootstrap-config",
+            "stage_e0_mobile:demo_cn_content:feed",
+            "stage_e0_mobile:demo_cn_content:entitlement:inst_mobile_mwaul9hs",
+            "stage_e0_mobile:demo_cn_content:pricing-preview"
+          ]
+        }
+      }
+    },
+    {
+      "id": "profile-invite-campaign-placeholders",
+      "page": "placeholders",
+      "status": "passed",
+      "manual_verification_required": true,
+      "evidence": {
+        "source": "placeholder pages exist and are contract-backed"
+      }
+    }
+  ],
+  "event_queue_summary": {
+    "queued_count": 5,
+    "queued_events": [
+      "article_impression",
+      "article_open",
+      "variant_switch",
+      "read_progress",
+      "paywall_impression"
+    ]
+  },
+  "cache_summary": {
+    "tracked_key_count": 6,
+    "tracked_keys": [
+      "stage_e0_mobile:session",
+      "stage_e0_mobile:settings",
+      "stage_e0_mobile:demo_cn_content:bootstrap-config",
+      "stage_e0_mobile:demo_cn_content:feed",
+      "stage_e0_mobile:demo_cn_content:entitlement:inst_mobile_mwaul9hs",
+      "stage_e0_mobile:demo_cn_content:pricing-preview"
+    ]
+  },
+  "manual_execution": {
+    "status": "passed",
+    "completed_at": "2026-03-17T14:02:23+08:00",
+    "result": "real-runtime smoke completed in HBuilderX on at least one real compile target",
+    "notes": [
+      "User confirmed manual smoke completion before closeout.",
+      "The unavailable_reason branch is now backed by an exported minimal fixture sample without changing the Stage B contract."
+    ]
+  },
+  "manual_follow_up_required": false
+}

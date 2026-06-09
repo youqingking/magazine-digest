@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "generated_at": "2026-03-17T15:41:49.611Z",
+  "summary": {
+    "scenario_count": 20,
+    "markdown_count": 38,
+    "publication_count": 3,
+    "article_count": 25
+  },
+  "scenario_ids": [
+    "s01_normal_full_matrix",
+    "s02_general_fallback",
+    "s03_teen_unavailable",
+    "s04_multilingual",
+    "s05_revision_update",
+    "s06_tombstone_and_unpublish",
+    "s07_premium_paywall",
+    "s08_experiment_pricing_preview",
+    "s09_cache_offline_fallback",
+    "s10_multi_publication_feed",
+    "s11_new_publish_batch",
+    "s12_followed_topic_alert",
+    "s13_inbox_digest",
+    "s14_revision_highlight",
+    "s15_quiet_hours_and_dedupe",
+    "s16_quota_exhausted_paywall",
+    "s17_campaign_discount_offer",
+    "s18_promo_code_apply_preview",
+    "s19_referral_reward_preview",
+    "s20_active_entitlement_profile"
+  ]
+}

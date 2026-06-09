@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-03-22T04:27:26.687Z",
+  "items": [
+    {
+      "timestamp": "2026-03-22T04:27:26.685Z",
+      "action": "evaluate",
+      "scenario_id": "data2_multi_publication_release_candidate",
+      "result": "ok",
+      "decision": "promotable",
+      "blockers": [],
+      "warnings": [],
+      "info": [
+        "diff:current:override_count_changed:accepted_by_budget",
+        "diff:current:publication_removed",
+        "diff:current:issue_removed",
+        "diff:current:article_removed",
+        "diff:current:parser_profile_removed",
+        "diff:current:publication_added",
+        "diff:current:issue_added",
+        "diff:current:article_added",
+        "diff:current:parser_profile_added",
+        "diff:current:build_label_changed",
+        "diff:current:publish_state_changed",
+        "diff:selected:override_count_changed:accepted_by_budget",
+        "diff:selected:publication_removed",
+        "diff:selected:issue_removed",
+        "diff:selected:article_removed",
+        "diff:selected:parser_profile_removed",
+        "diff:selected:publication_added",
+        "diff:selected:issue_added",
+        "diff:selected:article_added",
+        "diff:selected:parser_profile_added",
+        "diff:selected:build_label_changed",
+        "diff:selected:publish_state_changed",
+        "diff:baseline:override_count_changed:accepted_by_budget",
+        "diff:baseline:publication_removed",
+        "diff:baseline:issue_removed",
+        "diff:baseline:article_removed",
+        "diff:baseline:parser_profile_removed",
+        "diff:baseline:publication_added",
+        "diff:baseline:issue_added",
+        "diff:baseline:article_added",
+        "diff:baseline:parser_profile_added",
+        "diff:baseline:build_label_changed",
+        "diff:baseline:publish_state_changed",
+        "quality:override_count:9:accepted_by_budget",
+        "taxonomy:mapped_ratio:1"
+      ],
+      "notes": []
+    }
+  ]
+}

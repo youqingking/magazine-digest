@@ -1,0 +1,138 @@
+{
+  "scenario_id": "s14_revision_highlight",
+  "title": "Revision Highlight",
+  "objective": "Exercise revision highlight, change summary, and continue reading integrity.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["market_watch"],
+  "article_ids": ["art_s14_supply_note"],
+  "covered_risks": ["revision_highlight", "change_summary", "continue_reading_preserved"],
+  "intended_stage": ["F1", "G"],
+  "depends_on_surfaces": ["home-discovery", "content-resume", "publish-batch-summary"],
+  "articles": [
+    {
+      "article_id": "art_s14_supply_note",
+      "article_uid": "syn_article_s14_supply_note",
+      "article_key": "supply_note_20260317",
+      "publication_key": "market_watch",
+      "title": "供应说明把缺货判断改成三段式标注",
+      "summary": "用于 revision highlight 与 continue reading 联动。",
+      "tags": ["economy", "market"],
+      "status": "active",
+      "created_at": "2026-03-17T06:30:00+08:00",
+      "updated_at": "2026-03-17T09:40:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s14_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 4,
+      "entitlement_snapshot": {
+        "grant_source": "stage_f1_fixture",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s14_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    },
+    "publish_batches": [
+      {
+        "_id": "pb_s14_revision",
+        "product_key": "demo_cn_content",
+        "batch_key": "revision_highlight_20260317",
+        "batch_type": "revision_highlight",
+        "title": "重要修订高亮",
+        "change_summary": "已读内容出现一处明确修订，不应当作全新文章。",
+        "status": "published",
+        "scheduled_at": "2026-03-17T09:20:00+08:00",
+        "published_at": "2026-03-17T09:35:00+08:00",
+        "available_from": "2026-03-17T09:35:00+08:00",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "content_count": 1,
+        "created_at": "2026-03-17T09:00:00+08:00",
+        "updated_at": "2026-03-17T09:35:00+08:00"
+      }
+    ],
+    "user_follows": [],
+    "user_notification_prefs": {
+      "_id": "unp_s14_reader",
+      "product_key": "demo_cn_content",
+      "user_id": "user_local_stage_e0",
+      "status": "active",
+      "push_enabled": true,
+      "inbox_enabled": true,
+      "digest_enabled": true,
+      "follow_alert_level": "immediate",
+      "breaking_push_override": true,
+      "quiet_hours_enabled": false,
+      "quiet_hours_start_minute": 1320,
+      "quiet_hours_end_minute": 420,
+      "timezone": "Asia/Shanghai",
+      "digest_frequency": "daily",
+      "created_at": "2026-03-17T08:00:00+08:00",
+      "updated_at": "2026-03-17T09:35:00+08:00"
+    },
+    "notification_inbox": [
+      {
+        "_id": "inbox_s14_revision",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "inbox_key": "revision:pb_s14_revision:user_local_stage_e0",
+        "publish_batch_id": "pb_s14_revision",
+        "article_id": "art_s14_supply_note",
+        "source_type": "article_variant",
+        "source_id": "var_s14_supply_note_general_quick_r2",
+        "title": "你正在读的内容有修订",
+        "body_preview": "供应说明补充了缺货判断的新标注。",
+        "change_summary": "新增三段式标注",
+        "action_type": "open_article",
+        "action_target": "art_s14_supply_note",
+        "status": "unread",
+        "priority": "normal",
+        "notify_level": "eligible_users",
+        "is_breaking": false,
+        "available_from": "2026-03-17T09:35:00+08:00",
+        "created_at": "2026-03-17T09:35:00+08:00",
+        "updated_at": "2026-03-17T09:35:00+08:00"
+      }
+    ],
+    "user_content_state": [
+      {
+        "_id": "ucs_s14_supply_note",
+        "product_key": "demo_cn_content",
+        "user_id": "user_local_stage_e0",
+        "article_id": "art_s14_supply_note",
+        "article_variant_id": "var_s14_supply_note_general_quick_r1",
+        "publish_batch_id": "pb_s14_revision",
+        "reading_state": "in_progress",
+        "bookmark_status": "saved",
+        "newness_state": "opened",
+        "resume_progress_basis_points": 4200,
+        "resume_anchor": "p2",
+        "first_seen_at": "2026-03-17T08:40:00+08:00",
+        "last_opened_at": "2026-03-17T08:45:00+08:00",
+        "saved_at": "2026-03-17T08:46:00+08:00",
+        "created_at": "2026-03-17T08:40:00+08:00",
+        "updated_at": "2026-03-17T09:35:00+08:00"
+      }
+    ],
+    "inbox_last_seen_at": "2026-03-17T08:50:00+08:00",
+    "last_seen_publish_batch": "pb_s10_previous"
+  }
+}

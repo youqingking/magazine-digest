@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "ref_bind_001",
+    "product_key": "demo_cn_content",
+    "inviter_user_id": "user_inviter_001",
+    "invitee_user_id": "user_invitee_001",
+    "installation_id": "inst_invitee_android_001",
+    "campaign_id": "camp_internal_beta_30off",
+    "status": "bound",
+    "bind_request_id": "req_ref_bind_001",
+    "qualified_at": "2026-03-16T10:00:00+08:00",
+    "created_at": "2026-03-16T09:50:00+08:00",
+    "updated_at": "2026-03-16T10:00:00+08:00"
+  }
+]

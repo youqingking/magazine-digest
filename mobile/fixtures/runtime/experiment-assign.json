@@ -1,0 +1,12 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "installation_id": "inst_mobile_export",
+    "experiment_id": "exp_paywall_layout_v1",
+    "experiment_key": "paywall_layout_v1",
+    "assignment_version": 1,
+    "bucket_key": "A",
+    "assignment_source": "local_fixture_backed",
+    "cache_ttl_seconds": 3600
+  }
+}

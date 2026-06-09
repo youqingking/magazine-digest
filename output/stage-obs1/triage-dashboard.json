@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-03-23T12:17:52.392Z",
+  "schema_version": "stage-obs1-v1",
+  "runtime_source": {
+    "version": "stage-rel1-v1",
+    "updated_at": "2026-03-23T07:58:57.381Z",
+    "mode": "current_mirror",
+    "scenario_id": null,
+    "channel": null,
+    "release_id": null,
+    "remote_base_url": null,
+    "selection_reason": "manual_current_mirror"
+  },
+  "source_health_status": "degraded",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+  "recent_runtime_failures": 2,
+  "recent_incidents": 8,
+  "recent_content_failures": 0,
+  "taxonomy_gap_events": 53,
+  "channel_health": [
+    {
+      "channel": "dev",
+      "status": "degraded",
+      "current_release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z"
+    },
+    {
+      "channel": "staging",
+      "status": "idle",
+      "current_release_id": null
+    },
+    {
+      "channel": "production",
+      "status": "idle",
+      "current_release_id": null
+    }
+  ],
+  "latest_publish_health": {
+    "event_id": "obs1_8eb10f18-ccb9-4820-8bd5-a32428b8248d",
+    "event_type": "channel_publish_succeeded",
+    "occurred_at": "2026-03-23T12:17:52.106Z",
+    "channel": "dev",
+    "release_id": "rel_data2_multi_publication_release_candidate_20260323T121747Z",
+    "related_failures": 0,
+    "related_failure_types": []
+  },
+  "top_content_failure": null,
+  "latest_incident": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_814152f2-2fae-4dba-a831-4a65f8801c82",
+    "event_type": "warning_budget_exceeded",
+    "event_category": "quality",
+    "occurred_at": "2026-03-23T04:44:06.709Z",
+    "severity": "warning",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": "OBS1_WARNING_BUDGET_EXCEEDED",
+    "error_message": null,
+    "warning_taxonomy": [
+      "economist_section_context_fallback",
+      "economist_filename_anomaly"
+    ],
+    "accepted_warning": false,
+    "details": {
+      "over_budget_warnings": [],
+      "unregistered_warnings": [
+        {
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_section_context_fallback",
+          "count": 1,
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        },
+        {
+          "issue_id": "the_economist__20260314",
+          "warning_type": "economist_filename_anomaly",
+          "count": 1,
+          "article_ids": [
+            "art_the_economist_20260314_024"
+          ]
+        }
+      ]
+    }
+  },
+  "latest_event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_5c6b2fb5-aff0-4e0a-a2d2-77931051b229",
+    "event_type": "runtime_source_loaded",
+    "event_category": "runtime_source",
+    "occurred_at": "2026-03-23T12:17:52.293Z",
+    "severity": "info",
+    "source_surface": "runtime",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "selected_scenario_id": "data2_multi_publication_release_candidate",
+      "visible_publications": [
+        "barrons",
+        "readers_digest",
+        "science",
+        "the_atlantic",
+        "the_economist"
+      ]
+    }
+  }
+}

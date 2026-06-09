@@ -1,0 +1,63 @@
+{
+  "article_index": 24,
+  "ordinal": 24,
+  "source_file_stem": "024_but-islam",
+  "article_id": "art_the_economist_20260314_024",
+  "article_uid": "real_the_economist_20260314_024",
+  "product_key": "demo_cn_content",
+  "publication_id": "the_economist",
+  "publication_key": "the_economist",
+  "publication_name": "The Economist",
+  "publication_display_name": "The Economist",
+  "issue_label": "20260314",
+  "source_pack": "Three-release.zip",
+  "source_release_dir": "TheEconomist20260314-release",
+  "source_adult_path": "TheEconomist20260314-release/adult/024_but-islam.md",
+  "source_youth_path": "TheEconomist20260314-release/youth/024_but-islam.md",
+  "title": "首尔交易者：首尔楼市已成韩国政治与经济的巨痛",
+  "original_title": "Seoul’s housing market is a huge political and economic headache",
+  "summary": "首尔房价收入比升至 8.7 倍，李在明政府通过收紧贷款、强制自住及取消税收优惠重击投机行为。目前江南区房价趋稳，租赁市场正从传统的“全税”向“月租”模式发生结构性倒置。",
+  "quick_30s": "首尔房价收入比升至 8.7 倍，李在明政府通过收紧贷款、强制自住及取消税收优惠重击投机行为。目前江南区房价趋稳，租赁市场正从传统的“全税”向“月租”模式发生结构性倒置。",
+  "deep_3m": "李在明政府正将政治筹码押注于楼市调控，试图通过“去投资化”扭转首尔房价连涨 20 年的势头。核心阻力源于韩国独特的“全税”（Jeonse）融资体系，在个体房东主导的租赁市场中，押金违约风险引发了向“月租”模式的避险转型。尽管机构化长租公寓迎来机遇，且中长期面临人口老龄化释放的供应红利，但短期内政策“一刀切”与刚需错配的矛盾依然尖锐，调控成效将直接决定其执政基本盘。",
+  "teen_quick_30s": "韩国首尔的房子太贵了！为了让大家都有房住，总统不仅带头降价卖房，还出台了许多“不准炒房”的新规矩。现在，首尔的租房方式正在发生像“换赛道”一样的大变化。",
+  "teen_deep_3m": "在韩国首尔，买房成了一场“超级难题”。以前流行一种叫“全税”的酷规则：租客给房东一大笔押金，住几年后钱能全退回来。但最近有些坏房东不还钱了，吓得大家开始像我们交宽带费一样按月交租。总统叔叔很着急，他认为房子是用来住的，不是用来赚钱的“股票”。虽然未来老爷爷老奶奶变多后可能会空出更多房子，但现在的年轻人还需要更聪明的办法来拥有自己的小窝。",
+  "general_quick_30s": "首尔房价收入比升至 8.7 倍，李在明政府通过收紧贷款、强制自住及取消税收优惠重击投机行为。目前江南区房价趋稳，租赁市场正从传统的“全税”向“月租”模式发生结构性倒置。",
+  "general_deep_3m": "李在明政府正将政治筹码押注于楼市调控，试图通过“去投资化”扭转首尔房价连涨 20 年的势头。核心阻力源于韩国独特的“全税”（Jeonse）融资体系，在个体房东主导的租赁市场中，押金违约风险引发了向“月租”模式的避险转型。尽管机构化长租公寓迎来机遇，且中长期面临人口老龄化释放的供应红利，但短期内政策“一刀切”与刚需错配的矛盾依然尖锐，调控成效将直接决定其执政基本盘。",
+  "general_variant_derivation": "derived_from_adult_for_general_runtime_compat",
+  "audience_policy_key": "adult_to_general_compat_v1",
+  "compliance_status": "完全安全",
+  "section_label": "Asia",
+  "section_key": "asia",
+  "start_page": null,
+  "canonical_url": null,
+  "cover": null,
+  "author": null,
+  "tags": [
+    "issue:20260314",
+    "publication:the_economist",
+    "Asia"
+  ],
+  "import_warnings": [
+    "economist_section_context_fallback",
+    "economist_filename_anomaly"
+  ],
+  "parser_profile": "the_economist_release_v1",
+  "runtime_test_rule": {
+    "free_quota_limit": 8,
+    "derived_paywall_state": "preview_locked",
+    "source": "derived_from_runtime_test_rule"
+  },
+  "publish_batch_id": "batch_the_economist_20260314",
+  "change_summary": "The Economist 20260314 split-audience 导入",
+  "updated_at": "2026-03-23T04:39:28.771Z",
+  "merged_adult_heading": "but-islam",
+  "merged_youth_heading": "but-islam",
+  "display_warning_suppression": [],
+  "effective_warnings": [
+    "economist_section_context_fallback",
+    "economist_filename_anomaly"
+  ],
+  "editorial_override_applied": true,
+  "editorial_override_note": "Known filename anomaly belongs to the Asia run; keep anomaly warning but stabilize section label.",
+  "override_source": "data/real-content/overrides/the_economist/20260314/metadata-overrides.json"
+}

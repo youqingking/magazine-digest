@@ -1,0 +1,7 @@
+{
+  "resource": "publish_batches",
+  "track": "generated",
+  "generatedAt": "2026-03-17T12:02:25.357Z",
+  "status": "stage-d-foundation",
+  "sourceOfTruth": "database/publish_batches.schema.json"
+}

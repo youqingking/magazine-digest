@@ -1,0 +1,25 @@
+{
+  "collection": "experiments",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "experiment_key", "status", "assignment_unit", "bucket_definitions", "assignment_version", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "experiment_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "running", "paused", "stopped", "archived"] },
+    "assignment_unit": { "type": "string", "enum": ["user_id", "installation_id"] },
+    "bucket_definitions": { "type": "array", "items": { "type": "object" } },
+    "assignment_version": { "type": "integer", "minimum": 1 },
+    "targeting": { "type": "object" },
+    "starts_at": { "type": "string", "format": "date-time" },
+    "ends_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_experiment_key", "fields": ["product_key", "experiment_key"], "unique": true },
+    { "name": "idx_experiment_status", "fields": ["product_key", "status", "starts_at"] }
+  ]
+}

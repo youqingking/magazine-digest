@@ -1,0 +1,39 @@
+{
+  "version": "stage-data1b-v1",
+  "selected_scenario_id": "data2_multi_publication_release_candidate",
+  "selected_at": "2026-03-24T04:12:36.268Z",
+  "selection_source": "codex_multi_issue_refresh",
+  "published_to_current": true,
+  "published_at": "2026-03-24T04:12:36.268Z",
+  "bundle_path": "mobile/fixtures/runtime/scenarios/data2_multi_publication_release_candidate.bundle.json",
+  "build_label": "data2_multi_publication_release_candidate",
+  "included_publications": [
+    "barrons",
+    "readers_digest",
+    "science",
+    "the_atlantic",
+    "the_economist"
+  ],
+  "included_issues": [
+    {
+      "publication_id": "readers_digest",
+      "issue_label": "12112025"
+    },
+    {
+      "publication_id": "barrons",
+      "issue_label": "09022026"
+    },
+    {
+      "publication_id": "the_atlantic",
+      "issue_label": "012026"
+    },
+    {
+      "publication_id": "the_economist",
+      "issue_label": "20260314"
+    },
+    {
+      "publication_id": "science",
+      "issue_label": "20260323"
+    }
+  ]
+}

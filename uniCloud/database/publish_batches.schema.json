@@ -1,0 +1,31 @@
+{
+  "collection": "publish_batches",
+  "version": "stage-f0-2026-03-17",
+  "scope": "product",
+  "write_model": "workflow_master",
+  "required": ["_id", "product_key", "batch_key", "batch_type", "status", "scheduled_at", "published_at", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "batch_key": { "type": "string" },
+    "batch_type": { "type": "string", "enum": ["new_publish", "revision_highlight", "correction", "digest_refresh", "sunset"] },
+    "title": { "type": "string" },
+    "change_summary": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "scheduled", "publishing", "published", "cancelled", "archived"] },
+    "scheduled_at": { "type": "string", "format": "date-time" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "available_from": { "type": "string", "format": "date-time" },
+    "available_until": { "type": "string", "format": "date-time" },
+    "notify_level": { "type": "string", "enum": ["silent", "followed_only", "eligible_users", "mandatory"] },
+    "is_breaking": { "type": "boolean" },
+    "targeting": { "type": "object" },
+    "content_count": { "type": "integer", "minimum": 0 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_publish_batch_key", "fields": ["product_key", "batch_key"], "unique": true },
+    { "name": "idx_publish_batch_status", "fields": ["product_key", "status", "scheduled_at", "published_at"] },
+    { "name": "idx_publish_batch_window", "fields": ["product_key", "available_from", "available_until"] }
+  ]
+}

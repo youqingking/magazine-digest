@@ -1,0 +1,45 @@
+{
+  "product_key": "demo_audio_digest",
+  "show_id": "show_deep_research_radio",
+  "podcast_show_key": "deep_research_radio",
+  "show_title": "Deep Research Radio",
+  "podcast_episode_id": "pod_ep_204",
+  "episode_key": "deep_research_radio_204",
+  "episode_title": "Episode 204 Summary",
+  "language": "en",
+  "transcript_segments": [
+    {
+      "cue_id": "c001",
+      "speaker_label": "Host",
+      "start_ms": 0,
+      "end_ms": 14000,
+      "text": "Welcome back to the show."
+    },
+    {
+      "cue_id": "c002",
+      "speaker_label": "Guest",
+      "start_ms": 14000,
+      "end_ms": 26000,
+      "text": "Thanks for having me."
+    }
+  ],
+  "provider_confidence_trace": "trace_stub_001",
+  "player_deep_link_fragment": "t=0",
+  "subtitle_track_id": "sub_en_001",
+  "guest_names": [
+    "Dr. Lin"
+  ],
+  "chapter_titles": [
+    "Opening",
+    "Key Takeaways"
+  ],
+  "feed_url": "https://example.com/feed.xml",
+  "episode_number": 204,
+  "season_number": 5,
+  "audio_source_url": "https://cdn.example.com/pod_ep_204.mp3",
+  "source_platform": "spotify",
+  "podcast_network": "Example Audio",
+  "enclosure_url": "https://cdn.example.com/pod_ep_204.mp3",
+  "summary_body": "Transcript-derived longform summary for Deep Research Radio episode 204.",
+  "fetched_at": "2026-03-24T00:00:00+08:00"
+}

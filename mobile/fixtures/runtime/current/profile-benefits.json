@@ -1,0 +1,26 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "subscription_status": "free",
+    "entitlement_status": "inactive",
+    "entitlement_badge": "Free Reader",
+    "grace_like_summary": "test free quota 8",
+    "lifecycle_projection": [],
+    "quota": {
+      "remaining": 0,
+      "total": 8,
+      "reason": "REAL_CONTENT_TEST_FREE_QUOTA_REACHED"
+    },
+    "saved_count": 1,
+    "inbox_unread_count": 1,
+    "reward_summary": {
+      "vip_days_total": 0,
+      "active_rewards": 0
+    },
+    "benefit_summary": [
+      "Barron's + Reader's Digest + Science + The Atlantic + The Economist release candidate",
+      "78 篇真实文章已导入",
+      "free quota test limit 8"
+    ]
+  }
+}

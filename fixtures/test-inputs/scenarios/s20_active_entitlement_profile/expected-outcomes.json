@@ -1,0 +1,33 @@
+{
+  "expected_variant_selection": {
+    "general_quick_30s": "var_s20_profile_entitlement_general_quick_r1"
+  },
+  "expected_fallback_behavior": {
+    "can_fallback_to": ["teen", "general"],
+    "cannot_fallback_to": ["adult"],
+    "selection": "exact_match"
+  },
+  "expected_unavailable_reason": null,
+  "expected_paywall_behavior": {
+    "entitlement_expectation": {
+      "access_state": "allowed",
+      "denial_reason": null
+    },
+    "pricing_preview_expectation": {
+      "profile_projection_only": true,
+      "must_include_active_vs_grace_like_summary": true
+    }
+  },
+  "expected_sync_behavior": {
+    "server_cursor_progresses": true,
+    "tombstones_expected": 0
+  },
+  "expected_cache_behavior": {
+    "profile_benefits_cacheable": true,
+    "reward_summary_cacheable": true
+  },
+  "expected_event_signals": ["entitlement_view", "reward_summary_open"],
+  "notes": [
+    "s20 primarily projects b07_subscription_lifecycle and keeps b08/b09/b10 reserved as future Stage H/I business-risk assets."
+  ]
+}

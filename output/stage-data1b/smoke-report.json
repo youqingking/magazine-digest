@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-03-21T08:33:12.707Z",
+  "status": "passed",
+  "fatal_error": "",
+  "checks": {
+    "batch_importer_imported_single_zip": {
+      "status": "passed",
+      "imported_count": 1
+    },
+    "reader_digest_parser_profile_retained": {
+      "status": "passed",
+      "parser_profile": "readers_digest_v1",
+      "article_count": 15
+    },
+    "publication_issue_scenario_registries_present": {
+      "status": "passed",
+      "publication_count": 4,
+      "issue_count": 4,
+      "scenario_count": 5
+    },
+    "scenario_selection_pointer_present": {
+      "status": "passed",
+      "selected_scenario": "data1a_readers_digest_12112025",
+      "current_meta_scenario": "data1a_readers_digest_12112025"
+    },
+    "current_runtime_is_selected_scenario_mirror": {
+      "status": "passed",
+      "current_meta": {
+        "exported_at": "2026-03-21T08:33:12.613Z",
+        "canonical_source": "data/real-content/readers-digest/12112025 + Reader's Digest-12112025.zip",
+        "product_key": "demo_cn_content",
+        "scenario_id": "data1a_readers_digest_12112025",
+        "runtime_now": "2025-12-11T12:11:25+08:00",
+        "source_kind": "real_content_pilot",
+        "pipeline_stage": "stage-data1b-v1",
+        "parser_profile": "readers_digest_v1",
+        "publication_key": "readers_digest",
+        "issue_label": "12112025",
+        "free_quota_limit": 8,
+        "selected_scenario_id": "data1a_readers_digest_12112025",
+        "runtime_fixture_role": "selected_scenario_mirror",
+        "published_to_current_at": "2026-03-21T08:33:12.633Z",
+        "selection_source": "batch_import_publish"
+      }
+    },
+    "app_runtime_consumes_selected_scenario": {
+      "status": "passed",
+      "today_new_count": 15,
+      "search_results": 1,
+      "quota_total": 8
+    },
+    "feed_search_detail_paths_not_regressed": {
+      "status": "passed",
+      "restore_state": {
+        "activeTab": "followed",
+        "publicationKey": "readers_digest",
+        "updateType": "new_publish",
+        "scrollTop": 320,
+        "restorePending": true,
+        "focus": ""
+      }
+    },
+    "registry_report_written": {
+      "status": "passed",
+      "registry_report": {
+        "generated_at": "2026-03-21T08:33:12.661Z",
+        "imported_count": 1,
+        "imported_sources": [
+          {
+            "scenario_id": "data1a_readers_digest_12112025",
+            "publication_id": "readers_digest",
+            "issue_label": "12112025",
+            "parser_profile": "readers_digest_v1",
+            "article_count": 15,
+            "warnings": 2,
+            "manifest_path": "data/real-content/readers-digest/12112025/manifest.json",
+            "bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json"
+          }
+        ],
+        "selected_scenario_id": "data1a_readers_digest_12112025",
+        "registry_snapshot": {
+          "publications_path": "data/real-content/publications.json",
+          "issues_path": "data/real-content/issues.json",
+          "scenarios_path": "mobile/fixtures/runtime/scenarios/index.json",
+          "selected_path": "mobile/fixtures/runtime/scenarios/selected.json"
+        }
+      }
+    }
+  }
+}

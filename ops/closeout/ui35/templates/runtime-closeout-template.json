@@ -1,0 +1,15 @@
+{
+  "template_version": "rc1-runtime-closeout-v1",
+  "status_note": "Copy or regenerate into output/stage-rc1/runtime-closeout-template.json before manual fill.",
+  "runtime_target": {
+    "platform": "",
+    "surface": "",
+    "operator": "",
+    "executed_at": ""
+  },
+  "evidence": {
+    "notes": [],
+    "screenshots": []
+  },
+  "manual_items": []
+}

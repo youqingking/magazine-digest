@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-03-23T04:50:22.535Z",
+  "status": "ok",
+  "remote_base_url": "http://127.0.0.1:4184",
+  "runtime_source": {
+    "version": "stage-rel1-v1",
+    "updated_at": "2026-03-23T04:50:01.967Z",
+    "mode": "remote_channel_head",
+    "scenario_id": null,
+    "channel": "dev",
+    "release_id": "rel_data2_multi_publication_release_candidate_20260323T044912Z",
+    "remote_base_url": "http://127.0.0.1:4184",
+    "selection_reason": "manual_remote_channel_head"
+  },
+  "channel_manifest": {
+    "version": "stage-rel2-v1",
+    "channel": "dev",
+    "status": "active",
+    "release_id": "rel_data2_multi_publication_release_candidate_20260323T044912Z",
+    "source_scenario_id": "data2_multi_publication_release_candidate",
+    "promoted_from": null,
+    "published_at": "2026-03-23T04:49:24.506Z",
+    "rollback_target": "rel_data2_multi_publication_release_candidate_20260323T044437Z",
+    "release_manifest_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/manifest.json",
+    "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/bundle.json",
+    "provenance_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/provenance.json",
+    "exported_at": "2026-03-23T04:49:55.633Z",
+    "source_manifest": "runtime/channels/dev/manifest.json",
+    "notes": [
+      "channel_head_exported_from_rel1"
+    ]
+  },
+  "local_channel_manifest": {
+    "version": "stage-rel1-v1",
+    "channel": "dev",
+    "current_release_id": "rel_data2_multi_publication_release_candidate_20260323T044912Z",
+    "source_scenario_id": "data2_multi_publication_release_candidate",
+    "promoted_from": null,
+    "published_at": "2026-03-23T04:49:24.506Z",
+    "rollback_target": "rel_data2_multi_publication_release_candidate_20260323T044437Z",
+    "release_manifest_path": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/manifest.json",
+    "provenance_path": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T044912Z/provenance.json",
+    "status": "active"
+  },
+  "remote_release_id": "rel_data2_multi_publication_release_candidate_20260323T044912Z",
+  "remote_channel": "dev",
+  "remote_ready": true,
+  "fallback_used": false,
+  "bootstrap_product_key": "demo_cn_content",
+  "remote_item_count": 5,
+  "local_item_count": 5,
+  "first_remote_article": "art_barrons_09022026_001",
+  "first_local_article": "art_barrons_09022026_001",
+  "content_parity": true
+}

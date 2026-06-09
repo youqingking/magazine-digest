@@ -1,0 +1,65 @@
+{
+  "version": "stage-data1b-v1",
+  "generated_at": "2026-03-23T15:18:59.850Z",
+  "items": [
+    {
+      "issue_id": "readers_digest__12112025",
+      "publication_id": "readers_digest",
+      "issue_label": "12112025",
+      "source_zip": "2026-03-23T09-44-30-019Z-Reader's_Digest-12112025.zip",
+      "manifest_path": "data/real-content/readers-digest/12112025/manifest.json",
+      "article_count": 15,
+      "parser_profile": "readers_digest_v1",
+      "import_warnings_count": 2,
+      "status": "active"
+    },
+    {
+      "issue_id": "barrons__09022026",
+      "publication_id": "barrons",
+      "issue_label": "09022026",
+      "source_pack": "Three-release.zip",
+      "source_release_dir": "Barron’s-09022026-release",
+      "manifest_path": "data/real-content/barrons/09022026/manifest.json",
+      "parser_profile": "barrons_release_v1",
+      "article_pair_count": 17,
+      "import_status": "active",
+      "warnings_count": 0
+    },
+    {
+      "issue_id": "the_atlantic__012026",
+      "publication_id": "the_atlantic",
+      "issue_label": "012026",
+      "source_pack": "Three-release.zip",
+      "source_release_dir": "The Atlantic-012026-release",
+      "manifest_path": "data/real-content/the_atlantic/012026/manifest.json",
+      "parser_profile": "the_atlantic_release_v1",
+      "article_pair_count": 10,
+      "import_status": "active",
+      "warnings_count": 0
+    },
+    {
+      "issue_id": "the_economist__20260314",
+      "publication_id": "the_economist",
+      "issue_label": "20260314",
+      "source_pack": "Three-release.zip",
+      "source_release_dir": "TheEconomist20260314-release",
+      "manifest_path": "data/real-content/the_economist/20260314/manifest.json",
+      "parser_profile": "the_economist_release_v1",
+      "article_pair_count": 51,
+      "import_status": "active",
+      "warnings_count": 2
+    },
+    {
+      "issue_id": "science__20260323",
+      "publication_id": "science",
+      "issue_label": "20260323",
+      "source_pack": "2026-03-23T11-46-24-108Z-Science.zip",
+      "source_release_dir": "public_release",
+      "manifest_path": "data/real-content/science/20260323/manifest.json",
+      "parser_profile": "generic_split_release_v1",
+      "article_pair_count": 25,
+      "import_status": "active",
+      "warnings_count": 8
+    }
+  ]
+}

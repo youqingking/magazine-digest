@@ -1,0 +1,759 @@
+{
+  "timestamp": "2026-03-24T16:02:26.668Z",
+  "status": "ok",
+  "step": "shared-step-06",
+  "checked_docs": 6,
+  "checked_adoption_files": 26,
+  "checked_domains": 3,
+  "coverage": {
+    "direct_domains": 2,
+    "family_backed_domains": 1,
+    "family_only_pilots": 1
+  },
+  "checks": [
+    {
+      "name": "exists:docs/SELECTED_DOMAIN_ADOPTION.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:docs/DOMAIN_PROJECTION_FIXTURES.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:docs/SHARED_RUNTIME_ADOPTION_RULES.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:docs/FAMILY_ONLY_PILOT_HANDLING.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:docs/STAGE_SHARED_STEP06_DECISIONS.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:docs/STEP_06_ACCEPTANCE.md",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/adopt-pilot-entry.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/project-to-shared-envelope.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-core-runtime/src/run-route-resolution.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-family-runtime/src/run-family-normalizer.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-family-runtime/src/normalized-shape-guards.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-runtime/src/execute-pilot-mapping.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-harness/src/adoption-report-shape.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:packages/attention-adapter-harness/src/domain-pilot-report-shape.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/adoption/run-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/src/adoption/project-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/fixtures/direct-magazine-summary.input.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/fixtures/direct-magazine-summary.shared.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/magazine-domain/fixtures/direct-magazine-summary.diagnostics.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/adoption/run-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/src/adoption/project-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/fixtures/direct-youtube-summary.input.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/fixtures/direct-youtube-summary.shared.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/youtube-domain/fixtures/direct-youtube-summary.diagnostics.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/fixtures/family-podcast-transcript.input.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/fixtures/family-podcast-transcript.family.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/fixtures/family-podcast-transcript.shared.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:domains/podcast-domain/fixtures/family-podcast-transcript.diagnostics.json",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:scripts/contracts/validate-shared-step-06.mjs",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "exists:scripts/contracts/validate-shared-step-06.ps1",
+      "ok": true,
+      "detail": "missing required Step 06 file"
+    },
+    {
+      "name": "protected-files-unchanged",
+      "ok": true,
+      "detail": "no tracked protected files changed"
+    },
+    {
+      "name": "docs:selected-domain-adoption",
+      "ok": true,
+      "detail": "selected domain adoption doc missing first adoption closure"
+    },
+    {
+      "name": "docs:fixture-rules",
+      "ok": true,
+      "detail": "fixture doc missing required fixture matrix"
+    },
+    {
+      "name": "docs:adoption-rules",
+      "ok": true,
+      "detail": "shared runtime adoption rules doc missing explicit entry file guidance"
+    },
+    {
+      "name": "docs:family-only",
+      "ok": true,
+      "detail": "family-only handling doc missing SEC rule"
+    },
+    {
+      "name": "docs:acceptance",
+      "ok": true,
+      "detail": "acceptance doc missing Step 05 guard or validation command"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:60s summary",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep 60s summary out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:3min structured brief",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep 3min structured brief out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:worth-listening signal",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep worth-listening signal out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:cross-episode compare",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep cross-episode compare out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:topic tracking",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep topic tracking out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:Chinese restructuring",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep Chinese restructuring out of scope"
+    },
+    {
+      "name": "docs:podcast-out-of-scope:reusable quote intelligence",
+      "ok": true,
+      "detail": "Step 06 docs must explicitly keep reusable quote intelligence out of scope"
+    },
+    {
+      "name": "runtime:core-exports",
+      "ok": true,
+      "detail": "missing Step 06 core runtime adoption exports"
+    },
+    {
+      "name": "runtime:family-exports",
+      "ok": true,
+      "detail": "missing Step 06 family runtime exports"
+    },
+    {
+      "name": "runtime:adapter-exports",
+      "ok": true,
+      "detail": "missing Step 06 adapter runtime exports"
+    },
+    {
+      "name": "runtime:harness-exports",
+      "ok": true,
+      "detail": "missing Step 06 harness exports"
+    },
+    {
+      "name": "domain:magazine-shared-fixture",
+      "ok": true,
+      "detail": "magazine shared projection fixture mismatch"
+    },
+    {
+      "name": "domain:magazine-diagnostics-fixture",
+      "ok": true,
+      "detail": "magazine diagnostics fixture mismatch"
+    },
+    {
+      "name": "domain:youtube-shared-fixture",
+      "ok": true,
+      "detail": "youtube shared projection fixture mismatch"
+    },
+    {
+      "name": "domain:youtube-diagnostics-fixture",
+      "ok": true,
+      "detail": "youtube diagnostics fixture mismatch"
+    },
+    {
+      "name": "domain:podcast-family-fixture",
+      "ok": true,
+      "detail": "podcast family-normalized fixture mismatch"
+    },
+    {
+      "name": "domain:podcast-shared-fixture",
+      "ok": true,
+      "detail": "podcast shared projection fixture mismatch"
+    },
+    {
+      "name": "domain:podcast-diagnostics-fixture",
+      "ok": true,
+      "detail": "podcast diagnostics fixture mismatch"
+    },
+    {
+      "name": "domain:podcast-family-path",
+      "ok": true,
+      "detail": "podcast adoption must use family path"
+    },
+    {
+      "name": "family-only:sec-report-flag",
+      "ok": true,
+      "detail": "SEC family-only pilot must stay family-only with no domain upgrade"
+    },
+    {
+      "name": "coverage:direct-domains",
+      "ok": true,
+      "detail": "direct domain adoption coverage must be >= 2"
+    },
+    {
+      "name": "coverage:family-backed-domains",
+      "ok": true,
+      "detail": "family-backed domain adoption coverage must be >= 1"
+    },
+    {
+      "name": "coverage:family-only-pilots",
+      "ok": true,
+      "detail": "family-only pilot coverage must be >= 1"
+    },
+    {
+      "name": "output:adoption-report",
+      "ok": true,
+      "detail": "missing Step 06 adoption report"
+    },
+    {
+      "name": "output:sec-family-only-report",
+      "ok": true,
+      "detail": "missing SEC family-only report"
+    },
+    {
+      "name": "output:no-sec-domain",
+      "ok": true,
+      "detail": "SEC must not become a product domain"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/magazine-domain/src/adoption/run-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/magazine-domain/src/adoption/run-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/magazine-domain/src/adoption/project-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/magazine-domain/src/adoption/project-direct-magazine-summary.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/youtube-domain/src/adoption/run-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/youtube-domain/src/adoption/run-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/youtube-domain/src/adoption/project-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/youtube-domain/src/adoption/project-direct-youtube-summary.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "domain-adoption:no-business-migration:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "domain adoption file drifted into page or business migration code"
+    },
+    {
+      "name": "domain-adoption:public-entry-imports:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js",
+      "ok": true,
+      "detail": "domain adoption file deep-imports a non-Step-06 package internal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/adopt-pilot-entry.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/project-to-shared-envelope.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-core-runtime/src/run-route-resolution.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/run-family-normalizer.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-family-runtime/src/normalized-shape-guards.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/execute-pilot-mapping.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/build-pilot-diagnostics.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:packages/attention-adapter-runtime/src/pilots/run-family-sec-filing.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/run-family-podcast-transcript.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:60s summary",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 60s summary"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:3min structured brief",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: 3min structured brief"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:worth-listening signal",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: worth-listening signal"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:cross-episode compare",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: cross-episode compare"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:topic tracking",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: topic tracking"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:Chinese restructuring",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: Chinese restructuring"
+    },
+    {
+      "name": "podcast-intelligence:not-in-code:domains/podcast-domain/src/adoption/project-family-podcast-transcript.js:reusable quote intelligence",
+      "ok": true,
+      "detail": "out-of-scope podcast intelligence leaked into Step 06 code: reusable quote intelligence"
+    }
+  ],
+  "warnings": [
+    "step04_step05_protected_files_untracked:Step 04 and Step 05 protected files are present locally but not tracked, so immutability is validated by non-touch policy rather than git diff."
+  ],
+  "errors": []
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "stage-obs1-v1",
+  "ingested_at": "2026-03-23T11:44:28.775Z",
+  "sink_version": "stage-obs1-file-v1",
+  "event": {
+    "schema_version": "stage-obs1-v1",
+    "event_id": "obs1_6b4bbc7a-a9de-4466-9387-fe14225c1d15",
+    "event_type": "crud_scenario_membership_include_issue",
+    "event_category": "editorial_crud",
+    "occurred_at": "2026-03-23T11:44:28.773Z",
+    "severity": "info",
+    "source_surface": "ops",
+    "session_id": null,
+    "run_id": "manual",
+    "user_mode": "operator",
+    "app_env": "local",
+    "product_key": "demo_cn_content",
+    "runtime_source_mode": "current_mirror",
+    "runtime_source_id": "data2_multi_publication_release_candidate",
+    "scenario_id": "data2_multi_publication_release_candidate",
+    "release_id": null,
+    "channel": null,
+    "baseline_scenario_id": "data1a_readers_digest_12112025",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_mirror_scenario_id": "data2_multi_publication_release_candidate",
+    "publication_id": null,
+    "issue_id": null,
+    "article_id": null,
+    "canonical_section_key": null,
+    "discovery_bucket": null,
+    "error_code": null,
+    "error_message": null,
+    "warning_taxonomy": null,
+    "accepted_warning": false,
+    "details": {
+      "entity_type": "scenario_membership",
+      "entity_id": "science__20260323",
+      "action": "include_issue",
+      "input": {
+        "issue_id": "science__20260323",
+        "classification": "release_ready",
+        "note": "operator intake include science",
+        "action_name": "include_issue",
+        "release_candidate_allowed": true
+      },
+      "follow_up_actions": [
+        {
+          "action": "refresh_candidate_outputs",
+          "status": "ok",
+          "warning_budget_status": "ok",
+          "release_candidate_status": "ok",
+          "readiness_release_candidate_decision": "promotable"
+        },
+        {
+          "action": "refresh_observability",
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

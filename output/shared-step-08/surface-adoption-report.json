@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-03-25T04:03:52.995Z",
+  "step": "shared-step-08",
+  "domains": [
+    {
+      "domain_key": "magazine",
+      "route_type": "direct",
+      "family_kind": null,
+      "adoption_status": "second_migration_slice_frozen",
+      "supported_mobile_surfaces": [
+        "content_list_surface",
+        "content_detail_surface",
+        "discovery_card_surface",
+        "state_panel_surface_map"
+      ],
+      "supported_admin_surfaces": [
+        "resource_preview_surface",
+        "domain_admin_rail_map",
+        "generated_resource_surface",
+        "surface_registry"
+      ],
+      "deferred_surfaces": [
+        "inbox_preview_surface",
+        "manual_rail_surface"
+      ],
+      "inbox_preview_planning_only": true,
+      "manual_rail_planning_only": true
+    },
+    {
+      "domain_key": "youtube",
+      "route_type": "direct",
+      "family_kind": null,
+      "adoption_status": "second_migration_slice_frozen",
+      "supported_mobile_surfaces": [
+        "content_list_surface",
+        "content_detail_surface",
+        "discovery_card_surface",
+        "state_panel_surface_map"
+      ],
+      "supported_admin_surfaces": [
+        "resource_preview_surface",
+        "domain_admin_rail_map",
+        "generated_resource_surface",
+        "surface_registry"
+      ],
+      "deferred_surfaces": [
+        "inbox_preview_surface",
+        "manual_rail_surface"
+      ],
+      "inbox_preview_planning_only": true,
+      "manual_rail_planning_only": true
+    },
+    {
+      "domain_key": "podcast",
+      "route_type": "family",
+      "family_kind": "transcript_first_longform",
+      "adoption_status": "second_migration_slice_frozen",
+      "supported_mobile_surfaces": [
+        "content_list_surface",
+        "content_detail_surface",
+        "discovery_card_surface",
+        "state_panel_surface_map"
+      ],
+      "supported_admin_surfaces": [
+        "resource_preview_surface",
+        "domain_admin_rail_map",
+        "generated_resource_surface",
+        "surface_registry"
+      ],
+      "deferred_surfaces": [
+        "inbox_preview_surface",
+        "manual_rail_surface"
+      ],
+      "inbox_preview_planning_only": true,
+      "manual_rail_planning_only": true
+    }
+  ],
+  "coverage": {
+    "mobile_facing_domains": 3,
+    "admin_preview_domains": 3,
+    "family_only_pilots": 1
+  },
+  "warnings": []
+}

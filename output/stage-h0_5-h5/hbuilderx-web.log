@@ -1,0 +1,35 @@
+[阿里云:llapp-magazine-reader] 本地node版本是18.20.0，云端node版本是16.15.1，请注意兼容问题。调整云端node版本参考
+[阿里云:llapp-magazine-reader] 正在上传云对象device-sync-co...
+[阿里云:llapp-magazine-reader] 云对象device-sync-co上传完成
+0:cloud functions:OK
+
+
+[阿里云:llapp-magazine-reader] 本地node版本是18.20.0，云端node版本是16.15.1，请注意兼容问题。调整云端node版本参考
+[阿里云:llapp-magazine-reader] 正在上传云函数h0_5-web-auth-smoke...
+[阿里云:llapp-magazine-reader] 云函数h0_5-web-auth-smoke上传完成
+0:cloud functions:OK
+
+
+[阿里云:llapp-magazine-reader] 正在上传公共模块uni-config-center...
+[阿里云:llapp-magazine-reader] 公共模块uni-config-center被云端云函数依赖，正在更新相关云端云函数...
+[阿里云:llapp-magazine-reader] 更新云端云函数成功
+[阿里云:llapp-magazine-reader] 公共模块uni-config-center上传成功
+0:cloud functions:OK
+
+
+[阿里云:llapp-magazine-reader] 正在上传公共模块uni-id-common...
+[阿里云:llapp-magazine-reader] 公共模块uni-id-common被云端云函数依赖，正在更新相关云端云函数...
+[阿里云:llapp-magazine-reader] 更新云端云函数成功
+[阿里云:llapp-magazine-reader] 公共模块uni-id-common上传成功
+0:cloud functions:OK
+
+
+00:57:57.321 项目 mobile [__UNI__005A993] 开始发布到Web...
+00:57:59.130 当前项目的uniCloud使用的默认服务空间spaceId为：mp-c6fe68c6-7c54-45f6-a5e0-5b4ec1bbc2a0
+00:57:59.132 [33m​发布web站点需要在uniCloud web控制台操作，绑定安全域名，否则会因为跨域问题而无法访问。教程参考：https://uniapp.dcloud.net.cn/uniCloud/publish.html#useinh5​[39m
+00:57:59.497 正在编译中...
+00:58:40.194 项目 mobile 编译成功。
+00:58:40.303 [33m项目 mobile 导出Web成功，路径为：D:\ws\Playground\mobile\unpackage\dist\build\web[39m
+00:58:40.307 [33m注意请部署到web服务器使用，不要使用资源管理器直接打开，除非进行相对路径配置，具体参考：https://ask.dcloud.net.cn/article/37432。[39m
+00:58:40.312 [31m欢迎开通 <a href='https://uniad.dcloud.net.cn'>uni-ad</a> 广告进行变现，<a href='https://uniad.dcloud.net.cn/login'>申请入口</a> | <a href='https://uniapp.dcloud.net.cn/uni-ad/'>开发文档</a>[39m
+

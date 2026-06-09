@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-03-23T04:39:33.672Z",
+  "status": "passed",
+  "checks": {
+    "compare_baseline_vs_mixed": {
+      "status": "ok",
+      "article_delta": 63,
+      "warning_count": 2
+    },
+    "evaluate_decisions": {
+      "promotable_single": "promotable",
+      "mixed": "hold_warning"
+    },
+    "dry_run_hold": {
+      "status": "warning_requires_override",
+      "selected_unchanged": true,
+      "current_unchanged": true
+    },
+    "missing_scenario_blocked": {
+      "blocked": true
+    },
+    "rollback_to_baseline": {
+      "status": "ok",
+      "current_after_rollback": "data1a_readers_digest_12112025"
+    },
+    "dashboard_outputs": {
+      "dashboard_present": true,
+      "history_items": 505
+    }
+  }
+}

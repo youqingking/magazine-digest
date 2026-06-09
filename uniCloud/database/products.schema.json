@@ -1,0 +1,24 @@
+{
+  "collection": "products",
+  "version": "stage-b-2026-03-16",
+  "scope": "product_catalog",
+  "write_model": "master_data",
+  "required": ["_id", "product_key", "display_name", "default_language", "active_status", "branding", "theme", "price_policy_ref", "content_scope", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "display_name": { "type": "string" },
+    "default_language": { "type": "string", "enum": ["zh-CN", "en-US"] },
+    "active_status": { "type": "string", "enum": ["draft", "active", "inactive", "sunset"] },
+    "branding": { "type": "object" },
+    "theme": { "type": "object" },
+    "price_policy_ref": { "type": "string" },
+    "content_scope": { "type": "object" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_product_key", "fields": ["product_key"], "unique": true },
+    { "name": "idx_active_status", "fields": ["active_status", "updated_at"] }
+  ]
+}

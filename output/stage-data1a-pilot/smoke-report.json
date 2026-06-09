@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-03-21T08:32:58.718Z",
+  "status": "passed",
+  "fatal_error": "",
+  "checks": {
+    "normalized_article_count": {
+      "status": "passed",
+      "count": 15
+    },
+    "adult_merged_not_imported": {
+      "status": "passed",
+      "skipped_assets": [
+        "Reader's Digest-12112025_adult.md"
+      ]
+    },
+    "core_content_blocks_present": {
+      "status": "passed",
+      "missing_block_count": 0
+    },
+    "section_and_page_from_merged_file": {
+      "status": "passed",
+      "sections": [
+        "封面故事 (Cover Story)",
+        "精选专栏 (Departments)",
+        "本期文章 (Articles)",
+        "深度阅读 (More Reading)"
+      ]
+    },
+    "general_runtime_compat_derivation": {
+      "status": "passed"
+    },
+    "null_optional_fields_safe": {
+      "status": "passed"
+    },
+    "feed_real_content_loaded": {
+      "status": "passed",
+      "today_new_count": 15
+    },
+    "search_publication_section_title_browse": {
+      "status": "passed",
+      "total_results": 15,
+      "section_results": 12,
+      "title_results": 1
+    },
+    "detail_variants_loaded": {
+      "status": "passed",
+      "quick_variant": "var_art_rd_12112025_001_general_quick_30s",
+      "deep_variant": "var_art_rd_12112025_001_general_deep_3m",
+      "teen_variant": "var_art_rd_12112025_001_teen_quick_30s"
+    },
+    "paywall_runtime_rule_connected": {
+      "status": "passed",
+      "quota_status": {
+        "product_key": "demo_cn_content",
+        "free_quota_total": 8,
+        "free_quota_used": 8,
+        "quota_remaining": 0,
+        "paywall_triggered": true,
+        "reset_at": "2025-12-11T23:59:59+08:00",
+        "reset_timezone": "Asia/Shanghai",
+        "quota_reason": "REAL_CONTENT_TEST_FREE_QUOTA_REACHED",
+        "reset_hint": "当前为 DATA1B 多 zip replayable pipeline 测试规则。"
+      },
+      "offer_plan_count": 2
+    },
+    "feed_return_state_restore_semantics": {
+      "status": "passed",
+      "restore_state": {
+        "activeTab": "followed",
+        "publicationKey": "readers_digest",
+        "updateType": "new_publish",
+        "scrollTop": 420,
+        "restorePending": true,
+        "focus": ""
+      },
+      "after_consume": {
+        "activeTab": "followed",
+        "publicationKey": "readers_digest",
+        "updateType": "new_publish",
+        "scrollTop": 420,
+        "restorePending": false,
+        "focus": ""
+      }
+    },
+    "runtime_bundle_is_real_content_pilot": {
+      "status": "passed",
+      "metadata": {
+        "exported_at": "2026-03-21T08:32:58.631Z",
+        "canonical_source": "data/real-content/readers-digest/12112025 + Reader's Digest-12112025.zip",
+        "product_key": "demo_cn_content",
+        "scenario_id": "data1a_readers_digest_12112025",
+        "runtime_now": "2025-12-11T12:11:25+08:00",
+        "source_kind": "real_content_pilot",
+        "pipeline_stage": "stage-data1b-v1",
+        "parser_profile": "readers_digest_v1",
+        "publication_key": "readers_digest",
+        "issue_label": "12112025",
+        "free_quota_limit": 8,
+        "selected_scenario_id": "data1a_readers_digest_12112025",
+        "runtime_fixture_role": "selected_scenario_mirror",
+        "published_to_current_at": "2026-03-21T08:32:58.648Z",
+        "selection_source": "single_import_publish"
+      }
+    }
+  }
+}

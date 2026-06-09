@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-03-23T04:40:20.645Z",
+  "label": "post-rollback",
+  "operator_action": "ops3_publish_rollback",
+  "target_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data1a_readers_digest_12112025",
+  "current_mirror_scenario_id": "data1a_readers_digest_12112025",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "source_bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+  "current_bundle_path": "mobile/fixtures/runtime/scenarios/data1a_readers_digest_12112025.bundle.json",
+  "publish_timestamp": "2026-03-23T04:40:20.132Z",
+  "gate_result": "not_applicable",
+  "promotion_decision": "rolled_back",
+  "current_metadata": {
+    "exported_at": "2026-03-23T04:39:30.686Z",
+    "canonical_source": "data/real-content/readers-digest/12112025 + Reader's Digest-12112025.zip",
+    "product_key": "demo_cn_content",
+    "scenario_id": "data1a_readers_digest_12112025",
+    "runtime_now": "2025-12-11T12:11:25+08:00",
+    "source_kind": "real_content_pilot",
+    "pipeline_stage": "stage-data1b-v1",
+    "parser_profile": "readers_digest_v1",
+    "publication_key": "readers_digest",
+    "issue_label": "12112025",
+    "free_quota_limit": 8,
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "runtime_fixture_role": "selected_scenario_mirror",
+    "published_to_current_at": "2026-03-23T04:40:20.132Z",
+    "selection_source": "ops_rollback_script"
+  },
+  "git_context": {
+    "branch": "rc/ui35-runtime-closeout-kit",
+    "commit_sha": "c2a638c4145d9d954566e351e01110ac13c0dc99",
+    "short_sha": "c2a638c",
+    "tags_at_head": [
+      "codex/obs1-end-20260322-001",
+      "codex/obs1-start-20260322-001",
+      "codex/ops5-end-20260322-001",
+      "codex/ops5-start-20260322-001",
+      "codex/rel2-start-20260323-001"
+    ]
+  },
+  "notes": [
+    "Baseline restored after OPS3 drill."
+  ]
+}

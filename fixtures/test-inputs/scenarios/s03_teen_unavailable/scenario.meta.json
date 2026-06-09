@@ -1,0 +1,54 @@
+{
+  "scenario_id": "s03_teen_unavailable",
+  "title": "Teen Unavailable",
+  "objective": "Verify explicit unavailable_reason when only adult variants exist.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["market_watch"],
+  "article_ids": ["art_s03_port_futures"],
+  "covered_risks": ["safe_unavailable_reason", "teen_block_on_adult_only"],
+  "intended_stage": ["E1", "F", "G"],
+  "depends_on_surfaces": ["content-detail", "content-sync-delta", "entitlement-snapshot"],
+  "articles": [
+    {
+      "article_id": "art_s03_port_futures",
+      "article_uid": "syn_article_s03_port_futures",
+      "article_key": "port_futures_20260317",
+      "publication_key": "market_watch",
+      "title": "远洋港口运力期约的库存对冲实验",
+      "summary": "虚构市场栏目记录一家港口联盟如何测试新的库存对冲条款。",
+      "tags": ["economy", "market"],
+      "status": "active",
+      "created_at": "2026-03-17T09:20:00+08:00",
+      "updated_at": "2026-03-17T09:48:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": [],
+    "experiment_ids": ["exp_paywall_layout_v1"],
+    "entitlement_snapshot": {
+      "subject_id": "inst_s03_reader",
+      "access_state": "active",
+      "decision_source": "synthetic_access_grant",
+      "quota_remaining": 1,
+      "entitlement_snapshot": {
+        "grant_source": "stage_x_smoke",
+        "premium_tier": "free"
+      },
+      "denial_reason": null
+    },
+    "pricing_preview": {
+      "plan_ids": ["plan_demo_monthly"],
+      "promo_codes": []
+    },
+    "experiment_assign": {
+      "installation_id": "inst_s03_reader",
+      "experiment_id": "exp_paywall_layout_v1",
+      "bucket_key": "A",
+      "assignment_source": "synthetic_fixture"
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

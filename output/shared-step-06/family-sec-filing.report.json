@@ -1,0 +1,146 @@
+{
+  "domain_name": "family-only-pilot",
+  "adapter_id": "family-sec-filing",
+  "route_type": "family",
+  "family_kind": "official_structured_sources",
+  "selected_path": [
+    "source_adapter",
+    "family_normalizer",
+    "shared_core"
+  ],
+  "family_normalized_fixture": {
+    "family_name": "official_structured_sources",
+    "normalized_shape_name": "official_structured_sources_normalized_shape",
+    "structured_record_ref": {
+      "record_id": "sec_0000123456_26_000001",
+      "record_key": "example_corp_8-k_20260310",
+      "record_kind": "filing",
+      "record_status": "filed"
+    },
+    "record_party_ref": {
+      "party_id": "issuer_example_corp",
+      "party_role": "issuer",
+      "display_name": "Example Corp"
+    },
+    "record_revision_ref": {
+      "revision_id": "rev_initial",
+      "revision_kind": "initial",
+      "effective_date": "2026-03-10"
+    },
+    "structured_effective_window": {
+      "effective_date": "2026-03-10",
+      "withdrawn_date": null,
+      "published_date": "2026-03-10"
+    },
+    "retained_adapter_only_extras": {
+      "accession_no": "0000123456-26-000001",
+      "form_type": "8-K",
+      "parser_trace_id": "trace_sec_001",
+      "raw_document_package_ref": "pkg_sec_001"
+    }
+  },
+  "shared_projection_fixture": {
+    "content_ref": {
+      "product_key": "demo_official_records",
+      "source_id": "sec_edgar",
+      "source_key": "sec_edgar",
+      "content_item_id": "sec_0000123456_26_000001",
+      "content_key": "example_corp_8-k_20260310",
+      "language": "en"
+    },
+    "content_list_item": {
+      "content_ref": "content_ref",
+      "primary_variant_key": null,
+      "title": "Example Corp 8-K",
+      "summary": "Initial filing summary",
+      "tags": [
+        "official_record",
+        "filing"
+      ],
+      "publish_status": "published",
+      "available_from": "2026-03-10T21:00:00Z",
+      "available_until": null,
+      "update_type": "new_publish",
+      "update_priority": 80
+    },
+    "content_detail_envelope": {
+      "content_ref": "content_ref",
+      "resolved_variant_key": null,
+      "title": "Example Corp 8-K",
+      "body": "Initial filing summary",
+      "body_format": "markdown",
+      "tags": [
+        "official_record",
+        "filing"
+      ],
+      "entitlement_snapshot": null,
+      "quota_snapshot": null,
+      "runtime_mode": "local",
+      "source": "family_sec_filing_adoption",
+      "fetched_at": "2026-03-24T00:00:00+08:00"
+    }
+  },
+  "diagnostics_fixture": {
+    "adapter_id": "family-sec-filing",
+    "route_type": "family",
+    "source_kind": "sec_filing_source",
+    "family_kind": "official_structured_sources",
+    "mapped_shared_fields": [
+      "ContentRef",
+      "ContentListItem",
+      "ContentDetailEnvelope"
+    ],
+    "mapped_family_fields": [
+      "StructuredRecordRef",
+      "RecordPartyRef",
+      "RecordRevisionRef",
+      "StructuredEffectiveWindow"
+    ],
+    "retained_domain_extras": [
+      "accession_no",
+      "form_type",
+      "parser_trace_id",
+      "raw_document_package_ref"
+    ],
+    "unmapped_source_fields": [
+      "product_key",
+      "source_id",
+      "source_key",
+      "title",
+      "summary",
+      "body",
+      "language",
+      "fetched_at"
+    ],
+    "unsupported_reason": null,
+    "warnings": [
+      "Do not promote parser traces beyond adapter."
+    ],
+    "notes": [
+      "Official structured semantics normalize through family before shared projection.",
+      "Step 06 family-only SEC validation executed through family runtime."
+    ],
+    "retained_extra_groups": {
+      "adapter_only": [
+        "accession_no",
+        "form_type",
+        "parser_trace_id",
+        "raw_document_package_ref"
+      ],
+      "domain_only": []
+    }
+  },
+  "retained_extras": {
+    "adapter_only": [
+      "accession_no",
+      "form_type",
+      "parser_trace_id",
+      "raw_document_package_ref"
+    ],
+    "domain_only": []
+  },
+  "warnings": [
+    "Do not promote parser traces beyond adapter."
+  ],
+  "no_domain_upgrade": true
+}

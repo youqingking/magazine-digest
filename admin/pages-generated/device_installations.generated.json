@@ -1,0 +1,9 @@
+{
+  "resource": "device_installations",
+  "mode": "read_only_foundation",
+  "notes": [
+    "H0 device registration seam only",
+    "remote-ready push fields are additive",
+    "no provider-side fanout console"
+  ]
+}

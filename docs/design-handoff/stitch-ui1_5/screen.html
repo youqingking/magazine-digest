@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>效率阅读 - 深度内容策展</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#341100",
+                        "primary": "#005bbf",
+                        "surface-bright": "#f7f9fc",
+                        "on-surface-variant": "#414754",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdbcb",
+                        "surface-container": "#eceef1",
+                        "background": "#f7f9fc",
+                        "on-tertiary-fixed-variant": "#783100",
+                        "on-secondary-fixed": "#001a41",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "primary-container": "#1a73e8",
+                        "outline-variant": "#c1c6d6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d8e2ff",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface": "#f7f9fc",
+                        "on-tertiary-container": "#0e0200",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-primary-container": "#ffffff",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#e6e8eb",
+                        "primary-fixed-dim": "#adc7ff",
+                        "surface-variant": "#e0e3e6",
+                        "surface-dim": "#d8dadd",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#004493",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-surface": "#2d3133",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#b2c9fe",
+                        "on-secondary-container": "#3d5481",
+                        "surface-tint": "#005bc0",
+                        "secondary": "#475e8c",
+                        "tertiary": "#9e4300",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#adc7ff",
+                        "primary-fixed": "#d8e2ff",
+                        "outline": "#727785",
+                        "tertiary-container": "#c55500"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 no-border bg-gradient-to-b from-[#f2f4f7] to-transparent">
+<div class="bg-[#f7f9fc]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer p-2 hover:bg-[#f2f4f7]/50 transition-colors rounded-full active:opacity-70 duration-200">menu</span>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-slate-900 text-lg">效率阅读</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 p-2 hover:bg-[#f2f4f7]/50 transition-colors rounded-full active:opacity-70 duration-200">search</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24 max-w-7xl mx-auto px-4 md:px-6">
+<!-- Sticky Sub-Header with Dual Layer Navigation -->
+<div class="sticky top-16 z-40 bg-surface/95 backdrop-blur-md pt-4 pb-2 -mx-4 px-4">
+<!-- First Layer: Sources -->
+<div class="flex items-center justify-between mb-4">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar flex-1 mr-4">
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap bg-primary text-on-primary shadow-sm transition-all active:scale-95">全部来源</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap text-on-surface-variant hover:bg-surface-container-high transition-colors">财新</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap text-on-surface-variant hover:bg-surface-container-high transition-colors">晚点</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap text-on-surface-variant hover:bg-surface-container-high transition-colors">极客公园</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap text-on-surface-variant hover:bg-surface-container-high transition-colors">少数派</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap text-on-surface-variant hover:bg-surface-container-high transition-colors">InfoQ</button>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-primary-container/10 text-primary font-semibold text-sm whitespace-nowrap border border-primary/10 transition-all hover:bg-primary/10">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'wght' 600;">add_circle</span>
+<span>更多来源</span>
+</button>
+</div>
+<!-- Second Layer: Categories -->
+<div class="flex gap-6 overflow-x-auto hide-scrollbar border-b border-outline-variant/20 pb-2">
+<button class="text-primary font-semibold text-sm whitespace-nowrap relative after:absolute after:bottom-[-9px] after:left-0 after:w-full after:h-0.5 after:bg-primary">今日焦点</button>
+<button class="text-on-surface-variant font-medium text-sm whitespace-nowrap hover:text-primary transition-colors">商业财经</button>
+<button class="text-on-surface-variant font-medium text-sm whitespace-nowrap hover:text-primary transition-colors">科技前沿</button>
+<button class="text-on-surface-variant font-medium text-sm whitespace-nowrap hover:text-primary transition-colors">产品思维</button>
+<button class="text-on-surface-variant font-medium text-sm whitespace-nowrap hover:text-primary transition-colors">开发者视角</button>
+<button class="text-on-surface-variant font-medium text-sm whitespace-nowrap hover:text-primary transition-colors">人文社科</button>
+</div>
+</div>
+<!-- Article List: Bento/Grid Layout -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Article Card 1 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">晚点 LatePost</span>
+<span class="text-[11px] text-outline">1小时前</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">大模型竞争进入深水区：算力之外，数据的护城河到底有多深？</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">当算力逐渐不再是唯一变量，高质量的行业私有数据正在成为AI巨头们角力的核心战场。从Reddit的IPO到各大媒体的版权谈判，数据确权正在改变规则。</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">人工智能</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">财新网</span>
+<span class="text-[11px] text-outline">3小时前</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">宏观透视：全球供应链重构下的跨境电商新机遇</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">在不确定的全球贸易环境中，中国跨境电商平台正通过柔性供应链与品牌出海实现逆势增长，政策利好能否持续释放红利？</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">全球贸易</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">少数派 sspai</span>
+<span class="text-[11px] text-outline">5小时前</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">个人知识管理系统的终极形态：从双链笔记到本地大脑</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">我们需要的不是更多的收集器，而是能够内化知识的处理器。本文深度拆解 Obsidian 与 Tana 的底层逻辑，构建你的数字第二大脑。</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">效率工具</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">极客公园</span>
+<span class="text-[11px] text-outline">昨日</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">空间计算时代：Vision Pro 之后的下个十年</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">当屏幕消失，交互如何重定义？从平面到三维，交互设计师面临的全新挑战与机遇，以及开发者如何提前布局空间应用。</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">科技趋势</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">InfoQ</span>
+<span class="text-[11px] text-outline">昨日</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">云原生架构演进：Serverless 是否已经跨越鸿沟？</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">深入探讨 Serverless 在大型企业中的落地痛点与优势，如何平衡成本、弹性和开发效率，以及冷启动问题的最新工业界解决方案。</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">架构设计</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+<!-- Article Card 6 -->
+<article class="group bg-surface-container-lowest rounded-xl p-5 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wider text-primary uppercase">晚点 LatePost</span>
+<span class="text-[11px] text-outline">2天前</span>
+</div>
+<h2 class="text-lg font-bold leading-snug mb-3 group-hover:text-primary transition-colors">专访字节跳动：在快速变化中寻找确定性的组织逻辑</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">独家披露大型互联网公司在业务转型期的管理阵痛与组织迭代，如何通过数据驱动决策保持高效的战略灵活性。</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-on-surface-variant">组织管理</span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-[11px] font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>支持 30秒 / 3分钟</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- FAB: Contextual Action -->
+<button class="fixed right-6 bottom-24 w-14 h-14 rounded-full bg-primary text-on-primary shadow-xl flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 28px;">edit_note</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-8 pb-safe bg-white/90 backdrop-blur-2xl border-t border-[#f2f4f7] shadow-[0_-4px_24px_rgba(0,0,0,0.04)] z-50 rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-[#005bbf] scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">首页</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-[#1a73e8] active:scale-95 transition-all">
+<span class="material-symbols-outlined">subscriptions</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">来源</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-[#1a73e8] active:scale-95 transition-all">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium tracking-[0.02em] leading-tight">我的</span>
+</div>
+</nav>
+</body></html>

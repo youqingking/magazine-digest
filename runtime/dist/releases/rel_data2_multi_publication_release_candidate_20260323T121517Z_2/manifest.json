@@ -1,0 +1,40 @@
+{
+  "version": "stage-rel2-v1",
+  "artifact_version": "stage-rel2-dist-v1",
+  "generated_at": "2026-03-23T12:22:30.580Z",
+  "release_id": "rel_data2_multi_publication_release_candidate_20260323T121517Z_2",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "product_key": "demo_cn_content",
+  "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/bundle.json",
+  "provenance_path": "/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/provenance.json",
+  "source_release_manifest": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/manifest.json",
+  "source_bundle_path": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121517Z_2/bundle.json",
+  "publication_list": [
+    "barrons",
+    "readers_digest",
+    "science",
+    "the_atlantic",
+    "the_economist"
+  ],
+  "issue_list": [
+    "barrons__09022026",
+    "readers_digest__12112025",
+    "science__20260323",
+    "the_atlantic__012026",
+    "the_economist__20260314"
+  ],
+  "article_count": 118,
+  "promotion_decision": "promotable",
+  "provenance": {
+    "operator_action": "build_release_artifact",
+    "selected_scenario_id": "data2_multi_publication_release_candidate",
+    "current_scenario_id": "data2_multi_publication_release_candidate",
+    "commit_tag_context": {
+      "branch": "codex/rel2-remote-runtime-distribution-bridge-v1",
+      "commit_sha": "fd0b65c023af47a445ac09e4551c1ee7bd9e9eca",
+      "short_sha": "fd0b65c",
+      "tags_at_head": []
+    }
+  }
+}

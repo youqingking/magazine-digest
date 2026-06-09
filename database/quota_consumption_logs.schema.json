@@ -1,0 +1,23 @@
+{
+  "collection": "quota_consumption_logs",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "append_only_ledger",
+  "required": ["_id", "product_key", "user_id", "policy_id", "quota_date", "change_type", "change_amount", "request_id", "created_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "user_id": { "type": "string" },
+    "policy_id": { "type": "string" },
+    "quota_date": { "type": "string", "format": "date" },
+    "change_type": { "type": "string", "enum": ["consume", "refund", "grant_bonus"] },
+    "change_amount": { "type": "integer" },
+    "request_id": { "type": "string" },
+    "reason_code": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "idx_quota_user_date", "fields": ["product_key", "user_id", "quota_date", "created_at"] },
+    { "name": "uk_quota_request", "fields": ["product_key", "request_id"], "unique": true }
+  ]
+}

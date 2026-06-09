@@ -1,0 +1,476 @@
+{
+  "publication_id": "the_economist",
+  "publication_key": "the_economist",
+  "publication_name": "The Economist",
+  "issue_label": "20260314",
+  "source_pack": "Three-release.zip",
+  "source_release_dir": "TheEconomist20260314-release",
+  "parser_profile": "the_economist_release_v1",
+  "article_pair_count": 51,
+  "import_status": "active",
+  "warnings_count": 2,
+  "articles": [
+    {
+      "article_id": "art_the_economist_20260314_001",
+      "ordinal": 1,
+      "title": "2026年 3月 14日全球要闻回顾",
+      "section_label": "The Economist",
+      "source_adult_path": "TheEconomist20260314-release/adult/001_March_14th_2026.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/001_March_14th_2026.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_002",
+      "ordinal": 2,
+      "title": "本周全球商业回顾",
+      "section_label": "The Economist",
+      "source_adult_path": "TheEconomist20260314-release/adult/002_The_world_this_week_Business.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/002_The_world_this_week_Business.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_003",
+      "ordinal": 3,
+      "title": "全球经济遭受重创：能源市场进入不安全新时代",
+      "section_label": "Leaders",
+      "source_adult_path": "TheEconomist20260314-release/adult/003_Leaders.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/003_Leaders.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_004",
+      "ordinal": 4,
+      "title": "权力的交接：中国代际财富转移的挑战",
+      "section_label": "Leaders",
+      "source_adult_path": "TheEconomist20260314-release/adult/004_Leaders_A_new_dynasty.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/004_Leaders_A_new_dynasty.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_005",
+      "ordinal": 5,
+      "title": "伊朗核困局：没有“最优解”的博弈",
+      "section_label": "Leaders",
+      "source_adult_path": "TheEconomist20260314-release/adult/005_Leaders_Iran_s_nuclear_programme.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/005_Leaders_Iran_s_nuclear_programme.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_006",
+      "ordinal": 6,
+      "title": "选民天平的倾斜：美国中期选举中的拉美裔变量",
+      "section_label": "Leaders",
+      "source_adult_path": "TheEconomist20260314-release/adult/006_Leaders_America_s_midterm_elections.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/006_Leaders_America_s_midterm_elections.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_007",
+      "ordinal": 7,
+      "title": "社论 | 无人机对阵黑帮：海地复苏的秩序先导论",
+      "section_label": "Leaders",
+      "source_adult_path": "TheEconomist20260314-release/adult/007_Leaders_Drones_v_gangs.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/007_Leaders_Drones_v_gangs.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_008",
+      "ordinal": 8,
+      "title": "读者来信选登",
+      "section_label": "Letters",
+      "source_adult_path": "TheEconomist20260314-release/adult/008_Letters.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/008_Letters.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_009",
+      "ordinal": 9,
+      "title": "佩德罗·桑切斯：对战争说“不”",
+      "section_label": "By Invitation",
+      "source_adult_path": "TheEconomist20260314-release/adult/009_By_Invitation.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/009_By_Invitation.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_010",
+      "ordinal": 10,
+      "title": "财富接力：中国首代创业者的代际传承考 | China’s Wealth Transfer: The Intergenerational Pivot",
+      "section_label": "Briefing",
+      "source_adult_path": "TheEconomist20260314-release/adult/010_Briefing.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/010_Briefing.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_011",
+      "ordinal": 11,
+      "title": "史诗级后果：能源冲击下的全球经济非对称重塑",
+      "section_label": "Briefing",
+      "source_adult_path": "TheEconomist20260314-release/adult/011_Briefing_Epic_consequences.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/011_Briefing_Epic_consequences.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_012",
+      "ordinal": 12,
+      "title": "海湾病夫：战火阴影下的巴林经济危机",
+      "section_label": "Briefing",
+      "source_adult_path": "TheEconomist20260314-release/adult/012_Briefing_The_sick_man_of_the_Gulf.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/012_Briefing_The_sick_man_of_the_Gulf.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_013",
+      "ordinal": 13,
+      "title": "美国：为什么 MAGA 群体目前支持特朗普的战争？",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/013_United_States.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/013_United_States.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_014",
+      "ordinal": 14,
+      "title": "美国 | 走近“德黑兰利斯”：洛杉矶的伊朗裔社区缩影",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/014_United_States_Make_Iran_Great_Again.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/014_United_States_Make_Iran_Great_Again.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_015",
+      "ordinal": 15,
+      "title": "美国国土安全部的人事震荡：克里斯蒂·诺姆的争议任期与权力更迭",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/015_United_States_Forced_removal.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/015_United_States_Forced_removal.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_016",
+      "ordinal": 16,
+      "title": "驱逐出境与选心背离：拉美裔支持率流失或让共和党错失中期选举",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/016_United_States_Deport_lose_support.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/016_United_States_Deport_lose_support.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_017",
+      "ordinal": 17,
+      "title": "美国：医治“病态”的医疗市场",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/017_United_States_Treating_an_ailing_market.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/017_United_States_Treating_an_ailing_market.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_018",
+      "ordinal": 18,
+      "title": "美国的“怪罪以色列”游说集团",
+      "section_label": "United States",
+      "source_adult_path": "TheEconomist20260314-release/adult/018_United_States_Lexington.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/018_United_States_Lexington.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_019",
+      "ordinal": 19,
+      "title": "最后的海地：安全感正在回归吗？",
+      "section_label": "The Americas",
+      "source_adult_path": "TheEconomist20260314-release/adult/019_The_Americas.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/019_The_Americas.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_020",
+      "ordinal": 20,
+      "title": "美洲：新的国家骄傲——巴西电影的黄金时刻",
+      "section_label": "The Americas",
+      "source_adult_path": "TheEconomist20260314-release/adult/020_The_Americas_The_new_national_pride.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/020_The_Americas_The_new_national_pride.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_021",
+      "ordinal": 21,
+      "title": "亚洲视角：无人机供应链的重构与技术突围",
+      "section_label": "Asia",
+      "source_adult_path": "TheEconomist20260314-release/adult/021_Asia.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/021_Asia.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_022",
+      "ordinal": 22,
+      "title": "喜马拉雅山的“山崩”：35 岁前说唱歌手当选尼泊尔总理",
+      "section_label": "Asia",
+      "source_adult_path": "TheEconomist20260314-release/adult/022_Asia_Landslide_in_the_Himalayas.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/022_Asia_Landslide_in_the_Himalayas.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_023",
+      "ordinal": 23,
+      "title": "亚洲：莫谈往事 | Asia: Don’t mention the war",
+      "section_label": "Asia",
+      "source_adult_path": "TheEconomist20260314-release/adult/023_Asia_Don_t_mention_the_war.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/023_Asia_Don_t_mention_the_war.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_024",
+      "ordinal": 24,
+      "title": "首尔交易者：首尔楼市已成韩国政治与经济的巨痛",
+      "section_label": "Asia",
+      "source_adult_path": "TheEconomist20260314-release/adult/024_but-islam.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/024_but-islam.md",
+      "import_warnings": [
+        "economist_section_context_fallback",
+        "economist_filename_anomaly"
+      ]
+    },
+    {
+      "article_id": "art_the_economist_20260314_025",
+      "ordinal": 25,
+      "title": "亚洲博览：印度是全球第四还是第五大经济体？这并不重要",
+      "section_label": "Asia",
+      "source_adult_path": "TheEconomist20260314-release/adult/025_Asia_Banyan.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/025_Asia_Banyan.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_026",
+      "ordinal": 26,
+      "title": "香港楼市转折点：低端租赁市场的合规与代价",
+      "section_label": "China",
+      "source_adult_path": "TheEconomist20260314-release/adult/026_China.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/026_China.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_027",
+      "ordinal": 27,
+      "title": "绩效焦虑：中国基层官员的“网红化”转型",
+      "section_label": "China",
+      "source_adult_path": "TheEconomist20260314-release/adult/027_China_Performance_anxiety.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/027_China_Performance_anxiety.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_028",
+      "ordinal": 28,
+      "title": "中国“新主流电影”市场遇冷：从票房巅峰到审美疲劳",
+      "section_label": "China",
+      "source_adult_path": "TheEconomist20260314-release/adult/028_China_From_China_with_propaganda.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/028_China_From_China_with_propaganda.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_029",
+      "ordinal": 29,
+      "title": "中国“茶馆”专栏：从多元展示到共同体构建",
+      "section_label": "China",
+      "source_adult_path": "TheEconomist20260314-release/adult/029_China_Chaguan.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/029_China_Chaguan.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_030",
+      "ordinal": 30,
+      "title": "伊朗革命卫队：战火中的损耗与残存之局",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/030_Middle_East_Africa.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/030_Middle_East_Africa.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_031",
+      "ordinal": 31,
+      "title": "伊朗权力交接：迷雾中的继任者",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/031_Middle_East_Africa_Supreme_but_mysterious.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/031_Middle_East_Africa_Supreme_but_mysterious.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_032",
+      "ordinal": 32,
+      "title": "只有使命最重要：特种部队能摧毁伊朗核计划吗？",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/032_Middle_East_Africa_Only_the_mission_matters.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/032_Middle_East_Africa_Only_the_mission_matters.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_033",
+      "ordinal": 33,
+      "title": "中东与非洲 | 冲突如何收场",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/033_Middle_East_Africa_How_to_end_a_conflict.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/033_Middle_East_Africa_How_to_end_a_conflict.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_034",
+      "ordinal": 34,
+      "title": "海湾国家的抉择：在防御与反击的边缘徘徊",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/034_Middle_East_Africa_On_their_guard_and_on_edge.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/034_Middle_East_Africa_On_their_guard_and_on_edge.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_035",
+      "ordinal": 35,
+      "title": "险境：霍尔木兹海峡的航行僵局与能源冲击",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/035_Middle_East_Africa_Dire_strait.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/035_Middle_East_Africa_Dire_strait.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_036",
+      "ordinal": 36,
+      "title": "中东与非洲 | 冲突数据：数据揭示的战争进展",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/036_Middle_East_Africa_Conflict_data.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/036_Middle_East_Africa_Conflict_data.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_037",
+      "ordinal": 37,
+      "title": "肯尼亚的“苦涩”甜蜜：食糖产业改革能否成为经济腾飞的试金石？",
+      "section_label": "Middle East & Africa",
+      "source_adult_path": "TheEconomist20260314-release/adult/037_Middle_East_Africa_Done_with_sweet_deals.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/037_Middle_East_Africa_Done_with_sweet_deals.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_038",
+      "ordinal": 38,
+      "title": "土耳其：地缘博弈中的“权力审判”",
+      "section_label": "Europe",
+      "source_adult_path": "TheEconomist20260314-release/adult/038_Europe.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/038_Europe.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_039",
+      "ordinal": 39,
+      "title": "巴黎：两轮与四轮之争",
+      "section_label": "Europe",
+      "source_adult_path": "TheEconomist20260314-release/adult/039_Europe_Two_wheels_v_four.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/039_Europe_Two_wheels_v_four.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_040",
+      "ordinal": 40,
+      "title": "欧洲 | 归来的“政治明星”：德国工业重镇迎来首位移民后代执政官",
+      "section_label": "Europe",
+      "source_adult_path": "TheEconomist20260314-release/adult/040_Europe_Comeback_kid.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/040_Europe_Comeback_kid.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_041",
+      "ordinal": 41,
+      "title": "欧洲：地段，地段，还是地段 | Europe: Location, location, location",
+      "section_label": "Europe",
+      "source_adult_path": "TheEconomist20260314-release/adult/041_Europe_Location_location_location.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/041_Europe_Location_location_location.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_042",
+      "ordinal": 42,
+      "title": "布达佩斯的“扩音器”：匈牙利跨国政治叙事体系的构建",
+      "section_label": "Europe",
+      "source_adult_path": "TheEconomist20260314-release/adult/042_Europe_Charlemagne.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/042_Europe_Charlemagne.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_043",
+      "ordinal": 43,
+      "title": "英国：更窄的英吉利海峡——公投十年后，英国正变得越来越“欧洲化”",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/043_Britain.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/043_Britain.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_044",
+      "ordinal": 44,
+      "title": "英国：绿色愿景背后的经济阴霾",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/044_Britain_A_Green_and_unpleasant_land.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/044_Britain_A_Green_and_unpleasant_land.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_045",
+      "ordinal": 45,
+      "title": "英国与挪威：愈发紧密的极地盟友",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/045_Britain_Ever_closer_allies.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/045_Britain_Ever_closer_allies.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_046",
+      "ordinal": 46,
+      "title": "英国：动物精神——英镑头像的“物种进化”抉择",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/046_Britain_Animal_spirits.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/046_Britain_Animal_spirits.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_047",
+      "ordinal": 47,
+      "title": "英国传媒变局：施普林格挺进《电讯报》",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/047_Britain_Springer_into_action.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/047_Britain_Springer_into_action.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_048",
+      "ordinal": 48,
+      "title": "英国：清理进行时",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/048_Britain_Cleaning_up.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/048_Britain_Cleaning_up.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_049",
+      "ordinal": 49,
+      "title": "英国钟表业：时隔多年的回归",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/049_Britain_Not_before_time.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/049_Britain_Not_before_time.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_050",
+      "ordinal": 50,
+      "title": "英国如何沦为“索赔国家”：一个不愿接受损失的社会",
+      "section_label": "Britain",
+      "source_adult_path": "TheEconomist20260314-release/adult/050_Britain_Bagehot.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/050_Britain_Bagehot.md",
+      "import_warnings": []
+    },
+    {
+      "article_id": "art_the_economist_20260314_051",
+      "ordinal": 51,
+      "title": "算法之战：美以如何构建庞大的军事目标识别体系 | How America and Israel built vast military targeting machines",
+      "section_label": "International",
+      "source_adult_path": "TheEconomist20260314-release/adult/051_International.md",
+      "source_youth_path": "TheEconomist20260314-release/youth/051_International.md",
+      "import_warnings": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "stage-rel2-v1",
+  "artifact_version": "stage-rel2-dist-v1",
+  "generated_at": "2026-03-23T12:22:29.696Z",
+  "release_id": "rel_data2_multi_publication_release_candidate_20260322T140453Z",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "product_key": "demo_cn_content",
+  "bundle_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/bundle.json",
+  "provenance_path": "/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/provenance.json",
+  "source_release_manifest": "runtime/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/manifest.json",
+  "source_bundle_path": "runtime/releases/rel_data2_multi_publication_release_candidate_20260322T140453Z/bundle.json",
+  "publication_list": [
+    "barrons",
+    "the_atlantic"
+  ],
+  "issue_list": [
+    "barrons__09022026",
+    "the_atlantic__012026"
+  ],
+  "article_count": 27,
+  "promotion_decision": "promotable",
+  "provenance": {
+    "operator_action": "build_release_artifact",
+    "selected_scenario_id": "data1a_readers_digest_12112025",
+    "current_scenario_id": "data1a_readers_digest_12112025",
+    "commit_tag_context": {
+      "branch": "rc/ui35-runtime-closeout-kit",
+      "commit_sha": "c2a638c4145d9d954566e351e01110ac13c0dc99",
+      "short_sha": "c2a638c",
+      "tags_at_head": [
+        "codex/obs1-start-20260322-001"
+      ]
+    }
+  }
+}

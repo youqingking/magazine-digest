@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-03-23T04:43:40.431Z",
+  "items": [
+    {
+      "issue_id": "readers_digest__12112025",
+      "publication_id": "readers_digest",
+      "issue_label": "12112025",
+      "article_count": 15,
+      "title_complete_rate": 1,
+      "section_label_complete_rate": 1,
+      "ordinal_complete_rate": 0,
+      "overrides_count": 0,
+      "warnings_count": 0,
+      "unresolved_warnings_count": 0
+    },
+    {
+      "issue_id": "barrons__09022026",
+      "publication_id": "barrons",
+      "issue_label": "09022026",
+      "article_count": 17,
+      "title_complete_rate": 1,
+      "section_label_complete_rate": 1,
+      "ordinal_complete_rate": 1,
+      "overrides_count": 0,
+      "warnings_count": 0,
+      "unresolved_warnings_count": 0
+    },
+    {
+      "issue_id": "the_atlantic__012026",
+      "publication_id": "the_atlantic",
+      "issue_label": "012026",
+      "article_count": 10,
+      "title_complete_rate": 1,
+      "section_label_complete_rate": 1,
+      "ordinal_complete_rate": 1,
+      "overrides_count": 9,
+      "warnings_count": 4,
+      "unresolved_warnings_count": 0
+    },
+    {
+      "issue_id": "the_economist__20260314",
+      "publication_id": "the_economist",
+      "issue_label": "20260314",
+      "article_count": 51,
+      "title_complete_rate": 1,
+      "section_label_complete_rate": 1,
+      "ordinal_complete_rate": 1,
+      "overrides_count": 1,
+      "warnings_count": 2,
+      "unresolved_warnings_count": 2
+    }
+  ]
+}

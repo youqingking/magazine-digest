@@ -1,0 +1,11 @@
+{
+  "response": {
+    "product_key": "demo_cn_content",
+    "subject_id": "inst_data2_multi_publication_release_candidate",
+    "access_state": "denied",
+    "decision_source": "real_content_release_candidate_runtime_rule",
+    "quota_remaining": 0,
+    "entitlement_snapshot": null,
+    "denial_reason": "REAL_CONTENT_TEST_FREE_QUOTA_REACHED"
+  }
+}

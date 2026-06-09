@@ -1,0 +1,112 @@
+{
+  "scenario_id": "s20_active_entitlement_profile",
+  "title": "Active Entitlement Profile",
+  "objective": "Project active and grace-like entitlement summaries into profile benefits without touching real account or payment systems.",
+  "product_key": "demo_cn_content",
+  "runtime_now": "2026-03-17T10:00:00+08:00",
+  "publications": ["market_watch"],
+  "article_ids": ["art_s20_profile_entitlement"],
+  "covered_risks": ["subscription_lifecycle_projection", "profile_benefit_summary", "quota_and_reward_rollup"],
+  "intended_stage": ["G"],
+  "depends_on_surfaces": ["profile-benefits", "quota-status", "reward-summary"],
+  "business_flow_aliases": [
+    {
+      "alias_id": "b07_subscription_lifecycle",
+      "relationship": "primary_projection"
+    },
+    {
+      "alias_id": "profile-benefit-summary",
+      "relationship": "projection_only"
+    },
+    {
+      "alias_id": "b08_order_idempotency_and_webhook_replay",
+      "relationship": "future_business_risk_asset"
+    },
+    {
+      "alias_id": "b09_event_dedup_and_metrics_rollup",
+      "relationship": "future_business_risk_asset"
+    },
+    {
+      "alias_id": "b10_admin_sensitive_change_audit",
+      "relationship": "future_business_risk_asset"
+    }
+  ],
+  "articles": [
+    {
+      "article_id": "art_s20_profile_entitlement",
+      "article_uid": "syn_article_s20_profile_entitlement",
+      "article_key": "profile_entitlement_20260317",
+      "publication_key": "market_watch",
+      "title": "权益中心预览：active、expired 与 grace-like 摘要",
+      "summary": "虚构 profile benefit 内容，用于 Stage G profile 页面展示权益、额度、保存数与通知摘要。",
+      "tags": ["economy", "productivity"],
+      "status": "active",
+      "created_at": "2026-03-17T09:25:00+08:00",
+      "updated_at": "2026-03-17T10:00:00+08:00"
+    }
+  ],
+  "runtime": {
+    "feature_flags": ["stage_g_local_commercial", "stage_g_local_growth"],
+    "entitlement_snapshot": {
+      "subject_id": "user_s20_profile",
+      "access_state": "allowed",
+      "decision_source": "synthetic_profile_projection",
+      "quota_remaining": 99,
+      "entitlement_snapshot": {
+        "status": "active",
+        "plan_key": "annual_standard",
+        "grace_like_summary": "当前展示 active 主态，同时带出 grace-like 提醒摘要。"
+      },
+      "denial_reason": null
+    },
+    "quota_status": {
+      "free_quota_total": 3,
+      "free_quota_used": 0,
+      "quota_remaining": 3,
+      "paywall_triggered": false,
+      "reset_at": "2026-03-18T00:00:00+08:00",
+      "reset_timezone": "Asia/Shanghai",
+      "quota_reason": "ACTIVE_ENTITLEMENT",
+      "reset_hint": "权益用户仍按上海时区日切展示免费额度摘要。"
+    },
+    "reward_summary": {
+      "ledger_preview": [
+        {
+          "reward_type": "referral_bonus",
+          "status": "granted",
+          "vip_days": 7,
+          "reason": "historical referral reward preview"
+        }
+      ],
+      "vip_days_total": 7,
+      "active_vip_days": 7,
+      "status_summary": "1 granted"
+    },
+    "profile_benefits": {
+      "subscription_status": "active",
+      "entitlement_status": "active",
+      "entitlement_badge": "Annual Active",
+      "grace_like_summary": "续费通道未接入；本地仅展示 grace-like 提醒摘要。",
+      "lifecycle_projection": ["active", "expired", "grace_like_summary"],
+      "quota": {
+        "remaining": 3,
+        "total": 3,
+        "reason": "ACTIVE_ENTITLEMENT"
+      },
+      "saved_count": 5,
+      "inbox_unread_count": 4,
+      "reward_summary": {
+        "vip_days_total": 7,
+        "active_rewards": 1
+      },
+      "benefit_summary": [
+        "年度权益已激活",
+        "展示 grace-like 提醒但不接真实续费",
+        "读取未读通知、收藏与奖励摘要聚合"
+      ]
+    },
+    "sync": {
+      "tombstones": []
+    }
+  }
+}

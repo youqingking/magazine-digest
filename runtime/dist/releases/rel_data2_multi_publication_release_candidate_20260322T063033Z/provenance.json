@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-03-22T06:30:33.085Z",
+  "operator_action": "build_release_artifact",
+  "release_id": "rel_data2_multi_publication_release_candidate_20260322T063033Z",
+  "source_scenario_id": "data2_multi_publication_release_candidate",
+  "baseline_scenario_id": "data1a_readers_digest_12112025",
+  "selected_scenario_id": "data1a_readers_digest_12112025",
+  "current_scenario_id": "data1a_readers_digest_12112025",
+  "gate_result": "passed",
+  "promotion_decision": "promotable",
+  "commit_tag_context": {
+    "branch": "rc/ui35-runtime-closeout-kit",
+    "commit_sha": "b9e7a9c53839d2ec5d04f787c9bc135da93b724c",
+    "short_sha": "b9e7a9c",
+    "tags_at_head": [
+      "data2-post-20260321-1",
+      "data2-pre-docs-20260321-1",
+      "data3-post-20260322-1",
+      "data3-pre-20260322-1",
+      "ops2-post-20260321-1",
+      "ops2-pre-docs-20260321-1",
+      "ops3-post-20260321-1",
+      "ops3-pre-20260321-1",
+      "ops4-post-20260322-1",
+      "ops4-pre-20260322-1",
+      "rc1-runtime-closeout-kit-v1",
+      "rel1-pre-20260322-1",
+      "test2-post-20260322-1",
+      "test2-pre-20260322-1"
+    ]
+  }
+}

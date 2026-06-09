@@ -1,0 +1,25 @@
+{
+  "collection": "referrals",
+  "version": "stage-b-2026-03-16",
+  "scope": "product",
+  "write_model": "fact_with_state",
+  "required": ["_id", "product_key", "inviter_user_id", "invitee_user_id", "installation_id", "status", "bind_request_id", "created_at", "updated_at"],
+  "properties": {
+    "_id": { "type": "string" },
+    "product_key": { "type": "string" },
+    "inviter_user_id": { "type": "string" },
+    "invitee_user_id": { "type": "string" },
+    "installation_id": { "type": "string" },
+    "campaign_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["bound", "registration_reward_granted", "qualified", "completed", "rejected"] },
+    "bind_request_id": { "type": "string" },
+    "qualified_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "indexes": [
+    { "name": "uk_referral_invitee", "fields": ["product_key", "invitee_user_id"], "unique": true },
+    { "name": "uk_referral_installation", "fields": ["product_key", "installation_id"], "unique": true },
+    { "name": "idx_referral_inviter_status", "fields": ["product_key", "inviter_user_id", "status", "created_at"] }
+  ]
+}
