@@ -90,6 +90,9 @@ $branch = Get-GitBranch
 $statusSummary = Get-GitStatusSummary
 $isGitRepo = Test-Path ".git"
 $onProtectedBranch = $branch -in @("main", "master")
+$dirtyEntries = @($statusSummary | Where-Object { -not ($_ -like "##*") })
+$hasWorktreeChanges = @($dirtyEntries).Count -gt 0
+$dirtyOnProtectedBranch = $onProtectedBranch -and $hasWorktreeChanges
 
 $report = [PSCustomObject]@{
     timestamp = (Get-Date).ToString("o")
@@ -98,6 +101,8 @@ $report = [PSCustomObject]@{
         is_repo = $isGitRepo
         branch = $branch
         on_protected_branch = $onProtectedBranch
+        has_worktree_changes = $hasWorktreeChanges
+        dirty_on_protected_branch = $dirtyOnProtectedBranch
         summary = $statusSummary
     }
     tools = [PSCustomObject]@{
@@ -109,7 +114,7 @@ $report = [PSCustomObject]@{
     required_paths = $pathChecks
     result = [PSCustomObject]@{
         missing_count = @($missing).Count
-        passed = (@($missing).Count -eq 0) -and $isGitRepo -and (-not $onProtectedBranch)
+        passed = (@($missing).Count -eq 0) -and $isGitRepo -and (-not $dirtyOnProtectedBranch)
     }
 }
 

@@ -1,6 +1,9 @@
 .env
 .env.local
 node_modules/
+tmp/
+__pycache__/
+*.pyc
 admin/.env
 admin/.env.local
 mobile/.env

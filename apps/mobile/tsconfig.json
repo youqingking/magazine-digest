@@ -1,0 +1,19 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mobile/*": ["src/*"],
+      "@magazine-digest/core-runtime/*": ["../../packages/core-runtime/src/*"]
+    }
+  },
+  "include": [
+    "app",
+    "src",
+    "expo-env.d.ts",
+    "../../packages/core-runtime/src/**/*.ts"
+  ]
+}

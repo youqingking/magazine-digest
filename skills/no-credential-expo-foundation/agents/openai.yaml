@@ -1,0 +1,4 @@
+interface:
+  display_name: "No-Credential Expo Foundation"
+  short_description: "Create or audit an Expo-first no-credential runtime foundation."
+  default_prompt: "Create or audit a no-credential Expo runtime foundation using the repo's factory pattern."

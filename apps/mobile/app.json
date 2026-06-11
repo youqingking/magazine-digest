@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Magazine Digest Runtime Shell",
+    "slug": "magazine-digest-runtime-shell",
+    "scheme": "magazinedigest",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

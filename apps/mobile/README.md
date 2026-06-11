@@ -1,17 +1,16 @@
 # apps/mobile
 
-这里是未来唯一正式移动端主壳目录。
+Expo-first mobile runtime shell for Magazine Digest.
 
-当前线程只冻结目录与边界，不执行 `create-expo-app`，因此这里暂时只保留说明文件。
+This shell reads generated runtime fixtures and renders:
 
-后续实现线程会在这里落地：
+- discovery at `/`
+- article detail at `/article/[articleId]`
+- scenario and service seam status at `/debug`
 
-- Expo
-- React Native
-- TypeScript
-- Expo Router
-- EAS
-- env seam
-- Supabase / RevenueCat / notifications adapter seam
+It does not connect to Supabase, RevenueCat, push services, production config, or the external content production pipeline.
 
-legacy `mobile/` 目录继续保留为 migration reference，不会被本目录覆盖。
+See:
+
+- `docs/mobile/MOBILE_RUNTIME_SHELL.md`
+- `docs/mobile/RUNTIME_FIXTURE_READER.md`

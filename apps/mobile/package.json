@@ -1,0 +1,28 @@
+{
+  "name": "@magazine-digest/mobile",
+  "private": true,
+  "version": "0.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "start:expo": "expo start",
+    "start:smoke": "node ../../scripts/mobile/expo-start-smoke.mjs",
+    "start:web": "expo start --web",
+    "smoke:fixture": "node ../../scripts/mobile/smoke-fixture-reader.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "expo": "55.0.10-canary-20260328-bdc6273",
+    "expo-linking": "55.0.10-canary-20260328-bdc6273",
+    "expo-router": "55.0.9-canary-20260328-bdc6273",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.4",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-screens": "~4.23.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}

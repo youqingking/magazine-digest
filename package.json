@@ -2,6 +2,13 @@
   "name": "magazine-digest",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "react-dom": "19.2.0"
+  },
   "scripts": {
     "preflight": "powershell -ExecutionPolicy Bypass -File scripts/harness/preflight.ps1",
     "validate:preflight": "powershell -ExecutionPolicy Bypass -File scripts/validate/preflight.ps1",
@@ -43,7 +50,7 @@
     "@playwright/test": "^1.58.2"
   },
   "dependencies": {
-    "expo": "^55.0.10-canary-20260328-bdc6273",
+    "expo": "55.0.10-canary-20260328-bdc6273",
     "expo-dev-client": "55.0.20-canary-20260328-bdc6273"
   }
 }

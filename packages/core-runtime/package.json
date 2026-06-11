@@ -1,0 +1,14 @@
+{
+  "name": "@magazine-digest/core-runtime",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./runtime-data-port": "./src/runtime-data-port.ts",
+    "./runtime-fixture-reader": "./src/runtime-fixture-reader.ts",
+    "./adapters/runtime-fixture-adapter": "./src/adapters/runtime-fixture-adapter.ts",
+    "./seams/supabase-seam": "./src/seams/supabase-seam.ts",
+    "./seams/revenuecat-entitlement-seam": "./src/seams/revenuecat-entitlement-seam.ts",
+    "./seams/notification-seam": "./src/seams/notification-seam.ts"
+  }
+}
