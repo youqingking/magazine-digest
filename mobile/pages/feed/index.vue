@@ -118,6 +118,22 @@
           </AppCard>
         </view>
 
+        <AppCard class="pdf-import-card" tone="muted">
+          <view class="pdf-import-content">
+            <view class="pdf-import-copy">
+              <text class="pdf-import-eyebrow">PDF 导入</text>
+              <text class="pdf-import-title">导入本地 PDF</text>
+              <text class="pdf-import-description">
+                先选择文件并保留在本机，后续再接解析与入库流程。
+              </text>
+              <text v-if="pdfImport.fileName" class="pdf-import-file">
+                {{ pdfImport.fileName }} · {{ pdfImport.fileSizeLabel }}
+              </text>
+            </view>
+            <AppButton label="选择 PDF" tone="secondary" @click="choosePdfFile" />
+          </view>
+        </AppCard>
+
         <AppCard v-if="showInboxSummary" tone="muted">
           <SectionHeader eyebrow="消息" title="消息摘要" compact />
           <view class="feed-stack">
@@ -148,6 +164,7 @@ import ArticleDigestBlock from "../../components/discovery/ArticleDigestBlock.vu
 import DiscoverySection from "../../components/discovery/DiscoverySection.vue";
 import FilterChip from "../../components/discovery/FilterChip.vue";
 import InboxBadge from "../../components/discovery/InboxBadge.vue";
+import AppButton from "../../components/ui/AppButton.vue";
 import AppCard from "../../components/ui/AppCard.vue";
 import MetaRow from "../../components/ui/MetaRow.vue";
 import StatePanel from "../../components/ui/StatePanel.vue";
@@ -177,6 +194,7 @@ const tabSectionMap = {
 export default {
   components: {
     ArticleDigestBlock,
+    AppButton,
     AppCard,
     DiscoverySection,
     FilterChip,
@@ -188,7 +206,13 @@ export default {
     return {
       store: getDiscoveryState(),
       notifications: getNotificationsState(),
-      runtime: getRuntimeState()
+      runtime: getRuntimeState(),
+      pdfImport: {
+        fileName: "",
+        fileSizeLabel: "",
+        filePath: "",
+        file: null
+      }
     };
   },
   computed: {
@@ -468,6 +492,70 @@ export default {
     });
   },
   methods: {
+    choosePdfFile() {
+      if (!uni.chooseFile) {
+        uni.showToast({
+          title: "当前环境暂不支持选择文件",
+          icon: "none"
+        });
+        return;
+      }
+
+      uni.chooseFile({
+        count: 1,
+        type: "file",
+        extension: ["pdf", ".pdf"],
+        success: (response) => {
+          const selectedFile = this.normalizeSelectedPdf(response);
+          if (!selectedFile) {
+            uni.showToast({
+              title: "请选择 PDF 文件",
+              icon: "none"
+            });
+            return;
+          }
+
+          this.pdfImport = selectedFile;
+          uni.showToast({
+            title: "PDF 已选择",
+            icon: "success"
+          });
+        },
+        fail: () => {
+          uni.showToast({
+            title: "未选择 PDF",
+            icon: "none"
+          });
+        }
+      });
+    },
+    normalizeSelectedPdf(response) {
+      const file = (response.tempFiles && response.tempFiles[0]) || null;
+      const filePath = file?.path || file?.tempFilePath || response.tempFilePaths?.[0] || "";
+      const fileName = file?.name || String(filePath).split(/[\\/]/).pop() || "";
+      const isPdf = /\.pdf$/i.test(fileName) || /\.pdf$/i.test(filePath) || file?.type === "application/pdf";
+
+      if (!isPdf) {
+        return null;
+      }
+
+      return {
+        fileName: fileName || "selected.pdf",
+        fileSizeLabel: this.formatFileSize(file?.size || 0),
+        filePath,
+        file
+      };
+    },
+    formatFileSize(size) {
+      const bytes = Number(size || 0);
+      if (!bytes) {
+        return "大小未知";
+      }
+      if (bytes < 1024 * 1024) {
+        return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+      }
+      return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+    },
     formatLabel(value) {
       const aliases = {
         readers_digest: "Reader's",
@@ -919,6 +1007,57 @@ export default {
   font-weight: 700;
   line-height: 1.24;
   color: #1f2933;
+}
+
+.pdf-import-card {
+  border: 1rpx solid #dde4dc;
+  background: #fbfcfa;
+}
+
+.pdf-import-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+}
+
+.pdf-import-copy {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.pdf-import-eyebrow,
+.pdf-import-file {
+  display: block;
+  font-size: 22rpx;
+  font-weight: 700;
+  color: #52606d;
+}
+
+.pdf-import-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #1f2933;
+}
+
+.pdf-import-description {
+  display: block;
+  font-size: 24rpx;
+  line-height: 1.55;
+  color: #414754;
+}
+
+.pdf-import-file {
+  overflow: hidden;
+  max-width: 100%;
+  color: #2f6f5e;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .feed-stack {
