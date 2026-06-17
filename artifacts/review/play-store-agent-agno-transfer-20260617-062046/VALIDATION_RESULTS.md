@@ -41,3 +41,29 @@ Remaining human gates:
 ## Artifact Policy
 
 The workflow generated run-scoped runtime artifacts under `artifacts/agno/play-store/l3/` and `artifacts/launch-package/play-store-l3-test-agent-agno-workflow-20260617-062046/` during validation. They are not committed by default; this file records the validation evidence retained in the branch.
+
+## Launch-Readiness Workflow Test
+
+Run id: `play-store-launch-20260617-072031`
+Model provider: `codex_cli`
+Model: `gpt-5.4`
+
+- `$env:PLAY_STORE_AGENT_MODEL_PROVIDER='codex_cli'; $env:PLAY_STORE_AGENT_CODEX_MODEL='gpt-5.4'; python scripts\agent_tools\run_play_store_agno_workflow.py --root . --mode launch-readiness`
+  - Result: pass
+  - Exit code: `0`
+  - `agno_status=codex_cli_model_backed_per_agent_run`
+  - `agno_maturity=A3_CODEX_CLI_BACKED`
+  - `agno_orchestration_mode=agno_native_8_step_pipeline`
+  - `native_step_count=8`
+  - `model_backed_reasoning=true`
+  - `readiness_color=RED`
+  - `status=completed`
+- `python scripts\agent_tools\validate_play_store_launch_readiness_run.py . --run-id play-store-launch-20260617-072031`
+  - Result: pass
+  - `PLAY_STORE_LAUNCH_READINESS_RUN_VALIDATION_PASSED`
+  - `agno_maturity=A3_CODEX_CLI_BACKED`
+  - `fresh_ai_agent_run=true`
+- `git diff --check`
+  - Result: pass
+
+The first no-env attempt produced `blocked_model_unavailable`; no source files were missing. The successful run required `PLAY_STORE_AGENT_MODEL_PROVIDER=codex_cli` and `PLAY_STORE_AGENT_CODEX_MODEL=gpt-5.4`.
