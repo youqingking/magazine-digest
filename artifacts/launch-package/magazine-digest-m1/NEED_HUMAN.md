@@ -1,0 +1,4 @@
+- signed Android build / EAS / Play Console submission evidence is missing
+- privacy policy URL, developer contact, Data Safety, SDK disclosure, children/family, ads/tracking require human review
+- real screenshot capture is blocked because no device/emulator screenshot evidence is present
+- content rights, listing category, target audience, and content rating require owner/legal review

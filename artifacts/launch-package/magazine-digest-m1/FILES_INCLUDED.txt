@@ -1,0 +1,13 @@
+artifacts/launch-package/magazine-digest-m1/manifest.json
+artifacts/launch-package/magazine-digest-m1/readiness-report.md
+artifacts/launch-package/magazine-digest-m1/launch-package-agent-output.json
+artifacts/launch-package/magazine-digest-m1/NEED_HUMAN.md
+artifacts/launch-package/magazine-digest-m1/FILES_INCLUDED.txt
+artifacts/agent-reality-runs/release-build-agent/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/privacy-disclosure-prep/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/google-play-listing/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/screenshot-storyboard/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/launch-info-collector/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/google-data-safety-agent/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/screenshot-capture-agent/magazine-digest/agent-output.json
+artifacts/agent-reality-runs/launch-package-agent/magazine-digest/agent-output.json

@@ -1,0 +1,197 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "launch-package-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "readiness": "RED",
+  "can_submit_google_play": false,
+  "chinese_report_ref": "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md",
+  "summary_report_ref": "artifacts/launch-package/play-store-l3-20260612-162313/readiness-report.md",
+  "manifest_ref": "artifacts/launch-package/play-store-l3-20260612-162313/manifest.json",
+  "need_human_ref": "artifacts/launch-package/play-store-l3-20260612-162313/NEED_HUMAN.md",
+  "files_included_ref": "artifacts/launch-package/play-store-l3-20260612-162313/FILES_INCLUDED.txt",
+  "blockers": [
+    "Content rating and target audience need owner/Pro decisions.",
+    "Data Safety evidence remains draft and needs owner/Pro review.",
+    "Data Safety owner review needs_human",
+    "Developer contact needs_human",
+    "EAS owner/projectId/build profile and signing policy need owner input.",
+    "EAS owner/projectId/build profile needs_human",
+    "Play Console app needs_human",
+    "Play Console app/account needs owner input.",
+    "Privacy policy URL and Developer contact are missing.",
+    "Privacy policy URL needs_human",
+    "Screenshot device/emulator is missing; capture_status remains blocked.",
+    "content rating and target audience needs_human",
+    "gdsa.c3.local_fixture_content_needs_review: Local fixture content is rendered in the app and needs privacy/content review before public store use.",
+    "gdsa.c3.no_live_service_collection_observed: Current repo evidence does not show live Supabase, RevenueCat, Push, ads/tracking, analytics, payment, or account collection in apps/mobile.",
+    "gdsa.c4.play_console_answers_need_human: Play Console Data Safety answers require owner/Pro review and cannot be produced as a store form answer by this dry-run agent.",
+    "gpl.c2.localized_copy_draft_needs_review: Localized listing wording is draft marketing copy and needs owner/Pro review before store use.",
+    "gpl.c4.play_submission_not_attempted_needs_human: Play Console submission and public listing use require human review; no Play Console action was attempted.",
+    "lic.c4.android_package_needs_human: Production Android package is missing from apps/mobile/app.json and needs owner decision.",
+    "lic.c4_store_fields_need_human: Privacy policy URL, Developer contact, category, content rating, and target audience are not available as owner-reviewed store fields.",
+    "lic.c5.play_console_action_blocked: Play Console account/app actions and credentials are outside this dry-run harness.",
+    "pdp.c3.privacy_policy_url_missing: Privacy policy URL is missing from repo evidence.",
+    "pdp.c3.service_seams_need_review: Supabase, RevenueCat, and Push are reserved seams in current repo evidence and require privacy review before any live service disclosure.",
+    "pdp.c4.data_safety_requires_owner_review: Data Safety answers are evidence draft only and require owner/Pro review before Play Console use.",
+    "rba.c4.android_release_build_blocked: No signed Android release artifact, EAS build, or Play upload evidence exists in this run.",
+    "rba.c5.play_console_credentials_blocked: Play Console credentials, signing keys, and production actions are unavailable and forbidden in this harness run.",
+    "real screenshot capture is blocked until an Android device/emulator is available.",
+    "sca.c2.public_asset_selection_needs_review: Public screenshot asset selection and visual messaging need owner/Pro review.",
+    "sca.c4.capture_blocked_no_device: No attached Android device or emulator was available, so screenshot capture is blocked.",
+    "screenshot capture_status=blocked",
+    "signed Android build missing",
+    "signed Android build missing.",
+    "ss.c2.store_visual_messaging_needs_review: Screenshot message and user benefit copy are draft store-facing wording and need owner/Pro review.",
+    "ss.c4.play_screenshot_use_needs_review: Public Play Store screenshot use requires image spec review, content authorization, and Play Console owner approval."
+  ],
+  "non_claims": [
+    "not submitted",
+    "not production_ready",
+    "not Data Safety approved",
+    "not screenshots captured",
+    "not Play Store ready",
+    "Play Console API not called",
+    "real credentials not used"
+  ],
+  "claims": [
+    {
+      "claim_id": "lpa.c0.eight_agent_outputs_present",
+      "value": "All eight Play Store agent outputs are represented in the run-scoped launch package manifest.",
+      "source": [
+        "artifacts/launch-package/play-store-l3-20260612-162313/manifest.json"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.94,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.lpa.run_manifest"
+      ],
+      "limitations": [
+        "Presence of outputs does not resolve human gates."
+      ]
+    },
+    {
+      "claim_id": "lpa.c0.l3_real_run_present",
+      "value": "The launch package was generated during a repo-owned Agno L3 real_run workflow.",
+      "source": [
+        "artifacts/agno/play-store/l3/play-store-l3-20260612-162313"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.lpa.l3_run"
+      ],
+      "limitations": [
+        "L3 orchestration does not mean Play Store submission readiness."
+      ]
+    },
+    {
+      "claim_id": "lpa.c4.readiness_red_due_to_store_blockers",
+      "value": "Readiness is RED because store submission blockers and C3/C4/C5 human gates remain unresolved.",
+      "source": [
+        "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md",
+        "artifacts/launch-package/play-store-l3-20260612-162313/readiness-report.md"
+      ],
+      "status": "blocked",
+      "confidence": 0.95,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.readiness_report"
+      ],
+      "limitations": [
+        "Owner decisions can change readiness later."
+      ]
+    },
+    {
+      "claim_id": "lpa.c5.play_console_action_blocked",
+      "value": "Play Console credentials, API calls, submission, and rollout are forbidden in this workflow.",
+      "source": [
+        "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+        "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md"
+      ],
+      "status": "blocked",
+      "confidence": 0.96,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.play_console_blocker"
+      ],
+      "limitations": [
+        "C5 work requires external owner workflow, not this repo run."
+      ]
+    },
+    {
+      "claim_id": "lpa.c2.owner_review_required",
+      "value": "The Chinese readiness report is owner-review ready but needs owner/Pro review before public or store use.",
+      "source": [
+        "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md",
+        "artifacts/launch-package/play-store-l3-20260612-162313/NEED_HUMAN.md"
+      ],
+      "status": "needs_human",
+      "confidence": 0.88,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.owner_review"
+      ],
+      "limitations": [
+        "Owner may adjust wording and decisions before PR or store use."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.lpa.run_manifest",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/play-store-l3-20260612-162313/manifest.json",
+      "observed_value": "8-agent outputs and run-scoped launch package outputs listed",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.l3_run",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/agno/play-store/l3/play-store-l3-20260612-162313",
+      "observed_value": "Agno real_run artifacts exist for this run",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.readiness_report",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md",
+      "observed_value": "readiness RED due to unresolved gates",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.play_console_blocker",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console credentials/API/submission/rollout",
+      "observed_value": "out of scope for this workflow",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.owner_review",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/play-store-l3-20260612-162313/NEED_HUMAN.md",
+      "observed_value": "owner next steps and blockers are listed",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.lpa.google_play_launch_package_review",
+      "claim_ids": [
+        "lpa.c4.readiness_red_due_to_store_blockers",
+        "lpa.c5.play_console_action_blocked",
+        "lpa.c2.owner_review_required"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

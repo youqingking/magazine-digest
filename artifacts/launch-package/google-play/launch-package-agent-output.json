@@ -1,0 +1,156 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "launch-package-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "readiness": "RED",
+  "can_submit_google_play": false,
+  "summary_report_ref": "artifacts/launch-package/google-play/readiness-report.md",
+  "manifest_ref": "artifacts/launch-package/google-play/manifest.json",
+  "non_claims": [
+    "not submitted",
+    "not production_ready",
+    "not Data Safety approved",
+    "not screenshots captured",
+    "not Play Store ready"
+  ],
+  "claims": [
+    {
+      "claim_id": "lpa.c0.eight_agent_outputs_present",
+      "value": "All eight Play Store agent outputs are represented in the Google Play launch package manifest.",
+      "source": [
+        "artifacts/launch-package/google-play/manifest.json"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.94,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.lpa.gp_manifest"
+      ],
+      "limitations": [
+        "Presence of outputs does not resolve human gates."
+      ]
+    },
+    {
+      "claim_id": "lpa.c0.l3_real_run_present",
+      "value": "The launch package was generated during a repo-owned Agno L3-A real_run workflow.",
+      "source": [
+        "artifacts/agno/play-store/l3"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.lpa.l3_run"
+      ],
+      "limitations": [
+        "L3 orchestration does not mean Play Store submission readiness."
+      ]
+    },
+    {
+      "claim_id": "lpa.c4.readiness_red_due_to_store_blockers",
+      "value": "Readiness is RED because store submission blockers and C3/C4/C5 human gates remain unresolved.",
+      "source": [
+        "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md",
+        "artifacts/launch-package/google-play/readiness-report.md"
+      ],
+      "status": "blocked",
+      "confidence": 0.95,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.gp_readiness_report"
+      ],
+      "limitations": [
+        "Owner decisions can change readiness later."
+      ]
+    },
+    {
+      "claim_id": "lpa.c5.play_console_action_blocked",
+      "value": "Play Console credentials, API calls, submission, and rollout are forbidden in this workflow.",
+      "source": [
+        "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+        "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md"
+      ],
+      "status": "blocked",
+      "confidence": 0.96,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.play_console_blocker"
+      ],
+      "limitations": [
+        "C5 work requires external owner workflow, not this repo run."
+      ]
+    },
+    {
+      "claim_id": "lpa.c2.owner_review_required",
+      "value": "The summary report is owner-review ready but needs owner/Pro review before public or store use.",
+      "source": [
+        "artifacts/launch-package/google-play/readiness-report.md"
+      ],
+      "status": "needs_human",
+      "confidence": 0.88,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lpa.owner_review"
+      ],
+      "limitations": [
+        "Owner may adjust wording and decisions before PR or store use."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.lpa.gp_manifest",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/google-play/manifest.json",
+      "observed_value": "8-agent outputs and Google Play launch package outputs listed",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.l3_run",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/agno/play-store/l3",
+      "observed_value": "L3-A Agno real_run artifacts exist",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.gp_readiness_report",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/google-play/readiness-report.md",
+      "observed_value": "readiness RED due to unresolved gates",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.play_console_blocker",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console credentials/API/submission/rollout",
+      "observed_value": "out of scope for this workflow",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.owner_review",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/google-play/readiness-report.md",
+      "observed_value": "owner next steps and blockers are listed",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.lpa.google_play_launch_package_review",
+      "claim_ids": [
+        "lpa.c4.readiness_red_due_to_store_blockers",
+        "lpa.c5.play_console_action_blocked",
+        "lpa.c2.owner_review_required"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

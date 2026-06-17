@@ -1,0 +1,168 @@
+{
+  "schema_version": "play_store_launch_package_manifest.v1",
+  "run_id": "play-store-l3-20260612-162313",
+  "branch": "codex/play-store-agent-harness-mvp-m1",
+  "source_commit": "2e3196d",
+  "readiness": "RED",
+  "readiness_reason": "存在 signed Android build、Play Console、privacy/Data Safety、content rating、target audience 和 screenshot capture 等未解除 blocker。",
+  "can_submit_google_play": false,
+  "agno_status": "real_run",
+  "execution_mode": "real_agno_orchestration",
+  "generated_by": "launch-package-agent",
+  "agent_outputs": {
+    "release-build-agent": "docs/release/release-build-agent-output.json",
+    "privacy-disclosure-prep": "docs/privacy/privacy-disclosure-prep-output.json",
+    "google-play-listing": "docs/launch/google-play/google-play-listing-agent-output.json",
+    "screenshot-storyboard": "docs/launch/screenshots/screenshot-storyboard-agent-output.json",
+    "launch-info-collector": "docs/launch/launch-info-collector-output.json",
+    "google-data-safety-agent": "docs/launch/google-play/google-data-safety-agent-output.json",
+    "screenshot-capture-agent": "docs/launch/screenshots/screenshot-capture-agent-output.json",
+    "launch-package-agent": "artifacts/launch-package/play-store-l3-20260612-162313/launch-package-agent-output.json"
+  },
+  "launch_package_outputs": [
+    "artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md",
+    "artifacts/launch-package/play-store-l3-20260612-162313/readiness-report.md",
+    "artifacts/launch-package/play-store-l3-20260612-162313/manifest.json",
+    "artifacts/launch-package/play-store-l3-20260612-162313/launch-package-agent-output.json",
+    "artifacts/launch-package/play-store-l3-20260612-162313/NEED_HUMAN.md",
+    "artifacts/launch-package/play-store-l3-20260612-162313/FILES_INCLUDED.txt"
+  ],
+  "materials_available": [
+    "release/build: 已有 release gate、Android build readiness、technical blockers 与 release-build-agent output。",
+    "privacy inventory: 已有 DATA_INVENTORY 和 privacy disclosure draft。",
+    "SDK inventory: 已有 SDK_INVENTORY，可用于 Data Safety draft 的 SDK evidence。",
+    "Google Play listing draft: 已有 en-US 与 zh-CN listing draft 以及 validation report。",
+    "screenshot storyboard: 已有 storyboard、shot list 和 human review note。",
+    "launch info / source-of-truth: 已有 LAUNCH_INFO 和 store-fields source-of-truth draft。",
+    "Data Safety evidence draft: 已有 Data Safety draft、evidence 和 human review required。",
+    "launch package manifest / readiness report: 本次 L3 workflow 已生成 run-scoped launch package。"
+  ],
+  "missing_materials": [
+    "signed Android build / EAS / signing",
+    "Play Console app/account",
+    "Privacy policy URL",
+    "Developer contact",
+    "Data Safety owner answers",
+    "content rating",
+    "target audience",
+    "real screenshot capture",
+    "public asset selection"
+  ],
+  "blockers": [
+    "Content rating and target audience need owner/Pro decisions.",
+    "Data Safety evidence remains draft and needs owner/Pro review.",
+    "Data Safety owner review needs_human",
+    "Developer contact needs_human",
+    "EAS owner/projectId/build profile and signing policy need owner input.",
+    "EAS owner/projectId/build profile needs_human",
+    "Play Console app needs_human",
+    "Play Console app/account needs owner input.",
+    "Privacy policy URL and Developer contact are missing.",
+    "Privacy policy URL needs_human",
+    "Screenshot device/emulator is missing; capture_status remains blocked.",
+    "content rating and target audience needs_human",
+    "gdsa.c3.local_fixture_content_needs_review: Local fixture content is rendered in the app and needs privacy/content review before public store use.",
+    "gdsa.c3.no_live_service_collection_observed: Current repo evidence does not show live Supabase, RevenueCat, Push, ads/tracking, analytics, payment, or account collection in apps/mobile.",
+    "gdsa.c4.play_console_answers_need_human: Play Console Data Safety answers require owner/Pro review and cannot be produced as a store form answer by this dry-run agent.",
+    "gpl.c2.localized_copy_draft_needs_review: Localized listing wording is draft marketing copy and needs owner/Pro review before store use.",
+    "gpl.c4.play_submission_not_attempted_needs_human: Play Console submission and public listing use require human review; no Play Console action was attempted.",
+    "lic.c4.android_package_needs_human: Production Android package is missing from apps/mobile/app.json and needs owner decision.",
+    "lic.c4_store_fields_need_human: Privacy policy URL, Developer contact, category, content rating, and target audience are not available as owner-reviewed store fields.",
+    "lic.c5.play_console_action_blocked: Play Console account/app actions and credentials are outside this dry-run harness.",
+    "pdp.c3.privacy_policy_url_missing: Privacy policy URL is missing from repo evidence.",
+    "pdp.c3.service_seams_need_review: Supabase, RevenueCat, and Push are reserved seams in current repo evidence and require privacy review before any live service disclosure.",
+    "pdp.c4.data_safety_requires_owner_review: Data Safety answers are evidence draft only and require owner/Pro review before Play Console use.",
+    "rba.c4.android_release_build_blocked: No signed Android release artifact, EAS build, or Play upload evidence exists in this run.",
+    "rba.c5.play_console_credentials_blocked: Play Console credentials, signing keys, and production actions are unavailable and forbidden in this harness run.",
+    "real screenshot capture is blocked until an Android device/emulator is available.",
+    "sca.c2.public_asset_selection_needs_review: Public screenshot asset selection and visual messaging need owner/Pro review.",
+    "sca.c4.capture_blocked_no_device: No attached Android device or emulator was available, so screenshot capture is blocked.",
+    "screenshot capture_status=blocked",
+    "signed Android build missing",
+    "signed Android build missing.",
+    "ss.c2.store_visual_messaging_needs_review: Screenshot message and user benefit copy are draft store-facing wording and need owner/Pro review.",
+    "ss.c4.play_screenshot_use_needs_review: Public Play Store screenshot use requires image spec review, content authorization, and Play Console owner approval."
+  ],
+  "owner_next_actions": [
+    {
+      "action": "signed Android build / EAS / signing",
+      "owner_type": "dev + owner",
+      "input": "EAS owner/projectId/build profile、Android signing policy、release build 命令或 CI evidence。",
+      "output": "signed Android build evidence 与更新后的 release gate。",
+      "unblocks": "rba.c4.android_release_build_blocked"
+    },
+    {
+      "action": "Play Console app/account",
+      "owner_type": "owner",
+      "input": "Play Console app id、package name、account ownership、发布权限边界。",
+      "output": "Play Console source-of-truth 记录。",
+      "unblocks": "lic.c5.play_console_action_blocked / lpa.c5.play_console_action_blocked"
+    },
+    {
+      "action": "Privacy policy URL",
+      "owner_type": "owner / Pro",
+      "input": "正式 privacy policy URL 与适用区域。",
+      "output": "privacy disclosure draft 更新并解除 privacy URL blocker。",
+      "unblocks": "pdp.c3.privacy_policy_url_missing"
+    },
+    {
+      "action": "Developer contact",
+      "owner_type": "owner",
+      "input": "开发者邮箱、网站或支持联系渠道。",
+      "output": "store-fields/source-of-truth.json 更新。",
+      "unblocks": "Play Console app/account needs owner input"
+    },
+    {
+      "action": "Data Safety owner answers",
+      "owner_type": "owner / Pro",
+      "input": "数据收集、共享、加密、删除请求、SDK 行为确认。",
+      "output": "reviewed Data Safety answers 与更新后的 evidence draft。",
+      "unblocks": "gdsa.c4.play_console_answers_need_human"
+    },
+    {
+      "action": "content rating",
+      "owner_type": "owner / Pro",
+      "input": "内容分级问卷答案和目标国家/地区。",
+      "output": "content rating source-of-truth。",
+      "unblocks": "content rating and target audience needs_human"
+    },
+    {
+      "action": "target audience",
+      "owner_type": "owner / Pro",
+      "input": "目标年龄层、区域、受众限制和政策判断。",
+      "output": "target audience source-of-truth。",
+      "unblocks": "content rating and target audience needs_human"
+    },
+    {
+      "action": "real screenshot capture",
+      "owner_type": "dev",
+      "input": "Android device/emulator、Expo tooling、可渲染 route、locale 和 fixture。",
+      "output": "真实 screenshot files 与 capture report。",
+      "unblocks": "sca.c4.capture_blocked_no_device"
+    },
+    {
+      "action": "public asset selection",
+      "owner_type": "owner / Pro",
+      "input": "截图候选、文案、品牌和政策审查意见。",
+      "output": "public asset approval record。",
+      "unblocks": "sca.c2.public_asset_selection_needs_review / ss.c4.play_screenshot_use_needs_review"
+    }
+  ],
+  "safety": {
+    "play_console_api_called": false,
+    "google_play_submission_attempted": false,
+    "credentials_used": false,
+    "production_action_performed": false,
+    "c5_action_executed": false,
+    "raw_screenshot_fabricated": false
+  },
+  "non_claims": [
+    "not submitted",
+    "not production_ready",
+    "not Data Safety approved",
+    "not screenshots captured",
+    "not Play Store ready",
+    "Play Console API not called",
+    "real credentials not used"
+  ]
+}

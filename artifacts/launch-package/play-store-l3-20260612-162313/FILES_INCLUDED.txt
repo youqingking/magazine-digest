@@ -1,0 +1,6 @@
+artifacts/launch-package/play-store-l3-20260612-162313/PLAY_STORE_RELEASE_READINESS.zh-CN.md
+artifacts/launch-package/play-store-l3-20260612-162313/readiness-report.md
+artifacts/launch-package/play-store-l3-20260612-162313/manifest.json
+artifacts/launch-package/play-store-l3-20260612-162313/launch-package-agent-output.json
+artifacts/launch-package/play-store-l3-20260612-162313/NEED_HUMAN.md
+artifacts/launch-package/play-store-l3-20260612-162313/FILES_INCLUDED.txt

@@ -1,7 +1,7 @@
 ﻿{
     "schema_version":  "play_store_agent_agno_transfer.v1",
     "run_id":  "play-store-agent-agno-transfer-20260617-062046",
-    "generated_at_utc":  "2026-06-17T06:29:20Z",
+    "generated_at_utc":  "2026-06-17T06:32:59Z",
     "source_commit":  "0fd7e705e0ee19d2b6ab234dc80c9019eb50ce71",
     "source_commit_short":  "0fd7e70",
     "source_ref":  "codex/play-store-agent-reality-gate",
@@ -23,9 +23,7 @@
                            "artifacts/agno/play-store/m2",
                            "artifacts/agno/play-store/m4",
                            "artifacts/agent-reality-runs",
-                           "artifacts/launch-package/manifest.json",
-                           "artifacts/launch-package/readiness-report.md",
-                           "artifacts/launch-package/launch-package-agent-output.json"
+                           "artifacts/launch-package"
                        ],
     "categories":  [
                        {
@@ -75,14 +73,14 @@
                                          "artifacts/agno/play-store/m2",
                                          "artifacts/agno/play-store/m4",
                                          "artifacts/agent-reality-runs",
-                                         "artifacts/launch-package/*.json|*.md root files"
+                                         "artifacts/launch-package"
                                      ],
                            "ownership":  "validator compatibility fixtures/evidence required by current agent validators"
                        }
                    ],
-    "file_count":  214,
+    "file_count":  228,
     "package_zip_name":  "play-store-agent-agno-transfer-20260617-062046-source-0fd7e70.zip",
-    "package_zip_sha256":  "61e84e868e309c9928d5db50b077fc2cbf29441921a92d378a39a69942eb8367",
+    "package_zip_sha256":  "729610577d347c1b27919246a82f060ae9479bce260ee25ea3caf9049f875f05",
     "files_included_name":  "FILES_INCLUDED.txt",
     "validation_plan":  [
                             "python scripts/agent_tools/run_play_store_agno_workflow.py --root . --mode local-l3 --run-id play-store-l3-\u003crun_id\u003e",
@@ -96,6 +94,6 @@
                          "No Play Console API calls are included or allowed.",
                          "No credentials are included in the transfer package.",
                          "docs/release, docs/privacy, and docs/launch are copied as app-owned evidence inputs so workflow validation can run on test-derived branch.",
-                         "evals/agents, artifacts/agno/play-store/m2|m4, and artifacts/agent-reality-runs are validator fixtures/evidence required by current validators; they are not new production run outputs."
+                         "evals/agents, artifacts/agno/play-store/m2|m4, artifacts/agent-reality-runs, and artifacts/launch-package are validator fixtures/evidence required by current validators; they are not new production run outputs."
                      ]
 }

@@ -1,0 +1,129 @@
+{
+  "schema_version": "play_store_agent_reality_launch_package_manifest.v1",
+  "package_id": "magazine-digest-m1",
+  "generated_at": "2026-06-15T14:08:40+00:00",
+  "app_key": "magazine-digest",
+  "product_key": "demo_cn_content",
+  "source_bundle": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+  "readiness": "RED",
+  "readiness_reasons": [
+    "八个代理均产生了真实 Magazine Digest reality 输出。",
+    "至少 release/privacy/data-safety/screenshot-capture/Play Console 仍有 blocker，因此 fail-closed。"
+  ],
+  "blockers": [
+    "signed Android build / EAS / Play Console submission evidence is missing",
+    "privacy policy URL, developer contact, Data Safety, SDK disclosure, children/family, ads/tracking require human review",
+    "real screenshot capture is blocked because no device/emulator screenshot evidence is present",
+    "content rights, listing category, target audience, and content rating require owner/legal review"
+  ],
+  "can_submit_google_play": false,
+  "safe_to_strengthen_agent_outputs": "evidence_bound_magazine_outputs_only",
+  "safe_to_strengthen_final_store_claims": false,
+  "agent_outputs": {
+    "release-build-agent": "artifacts/agent-reality-runs/release-build-agent/magazine-digest/agent-output.json",
+    "privacy-disclosure-prep": "artifacts/agent-reality-runs/privacy-disclosure-prep/magazine-digest/agent-output.json",
+    "google-play-listing": "artifacts/agent-reality-runs/google-play-listing/magazine-digest/agent-output.json",
+    "screenshot-storyboard": "artifacts/agent-reality-runs/screenshot-storyboard/magazine-digest/agent-output.json",
+    "launch-info-collector": "artifacts/agent-reality-runs/launch-info-collector/magazine-digest/agent-output.json",
+    "google-data-safety-agent": "artifacts/agent-reality-runs/google-data-safety-agent/magazine-digest/agent-output.json",
+    "screenshot-capture-agent": "artifacts/agent-reality-runs/screenshot-capture-agent/magazine-digest/agent-output.json",
+    "launch-package-agent": "artifacts/agent-reality-runs/launch-package-agent/magazine-digest/agent-output.json"
+  },
+  "per_agent": {
+    "release-build-agent": {
+      "readiness": "RED",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "真实内容包可证明 Magazine Digest 场景存在，但签名 Android 构建、EAS/Play Console、提交 dry-run 仍需人工。",
+        "不得把 release-build-agent 输出升级为可发布结论。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/release-build-agent/magazine-digest/agent-output.json"
+    },
+    "privacy-disclosure-prep": {
+      "readiness": "RED",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "DATA2 内容包可证明本地内容/偏好/通知相关数据面，但隐私政策 URL、法律审查、真实服务配置仍需人工。",
+        "不得生成最终隐私或法律结论。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/privacy-disclosure-prep/magazine-digest/agent-output.json"
+    },
+    "google-play-listing": {
+      "readiness": "YELLOW",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "可基于真实刊物和样例摘要生成草稿文案。",
+        "联系邮箱、隐私政策、类别、目标受众、内容评级和版权授权仍为 NEED_HUMAN。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/google-play-listing/magazine-digest/agent-output.json"
+    },
+    "screenshot-storyboard": {
+      "readiness": "YELLOW",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "分镜目标已绑定真实 article_id、刊物和摘要变体。",
+        "仍未产出可上传截图，也不得展示保留功能。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/screenshot-storyboard/magazine-digest/agent-output.json"
+    },
+    "launch-info-collector": {
+      "readiness": "YELLOW",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "可从仓库和真实内容包收集 product_key、scenario_id、刊物与样例内容事实。",
+        "Play Console 账号、开发者联系信息和公开商店字段仍需人工。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/launch-info-collector/magazine-digest/agent-output.json"
+    },
+    "google-data-safety-agent": {
+      "readiness": "RED",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "可把真实内容包和现有数据清单作为证据草稿输入。",
+        "Data Safety 最终答案、SDK 披露、儿童/家庭/广告追踪判断仍需人工。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/google-data-safety-agent/magazine-digest/agent-output.json"
+    },
+    "screenshot-capture-agent": {
+      "readiness": "RED",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "截图目标来自真实 Magazine Digest 内容。",
+        "当前没有真实 Android 设备/模拟器截图证据，不得列出截图文件。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/screenshot-capture-agent/magazine-digest/agent-output.json"
+    },
+    "launch-package-agent": {
+      "readiness": "RED",
+      "evidence_count": 6,
+      "human_review_count": 2,
+      "readiness_reasons": [
+        "已消费八个代理的 M1 reality 输出。",
+        "发布包仍包含 release、privacy、data safety、capture 和 Play Console blocker。"
+      ],
+      "output_path": "artifacts/agent-reality-runs/launch-package-agent/magazine-digest/agent-output.json"
+    }
+  },
+  "launch_package_outputs": [
+    "artifacts/launch-package/magazine-digest-m1/manifest.json",
+    "artifacts/launch-package/magazine-digest-m1/readiness-report.md",
+    "artifacts/launch-package/magazine-digest-m1/FILES_INCLUDED.txt",
+    "artifacts/launch-package/magazine-digest-m1/NEED_HUMAN.md"
+  ],
+  "non_claims": [
+    "not submitted",
+    "not production_ready",
+    "not Play Store ready",
+    "not Data Safety approved",
+    "not screenshots captured",
+    "Play Console API not called",
+    "real credentials not used"
+  ]
+}
