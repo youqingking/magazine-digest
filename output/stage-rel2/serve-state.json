@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "host": "127.0.0.1",
-  "port": 4198,
-  "base_url": "http://127.0.0.1:4198",
-  "dist_root": "runtime/dist",
-  "started_at": "2026-03-23T12:24:07.333Z"
-}

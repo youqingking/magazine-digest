@@ -1,7 +1,0 @@
-{
-  "status": "ok",
-  "selected_at": "2026-03-17T15:41:52.060Z",
-  "scenario_id": "s18_promo_code_apply_preview",
-  "bundle_source": "mobile\\fixtures\\runtime\\scenarios\\s18_promo_code_apply_preview.bundle.json",
-  "current_runtime_root": "mobile\\fixtures\\runtime\\current"
-}

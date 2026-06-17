@@ -1,7 +1,0 @@
-{
-  "run_id": "stateful-conflict-2026-03-22T03-13-55-616Z-9c9be433",
-  "root": "D:\\ws\\Playground\\output\\runs\\stateful-conflict-2026-03-22T03-13-55-616Z-9c9be433",
-  "script": "scripts/ops/hold-state-lock.mjs",
-  "profile": "stateful_runtime",
-  "created_at": "2026-03-22T03:13:55.654Z"
-}

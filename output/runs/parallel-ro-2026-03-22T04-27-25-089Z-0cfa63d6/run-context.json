@@ -1,7 +1,0 @@
-{
-  "run_id": "parallel-ro-2026-03-22T04-27-25-089Z-0cfa63d6",
-  "root": "D:\\ws\\Playground\\output\\runs\\parallel-ro-2026-03-22T04-27-25-089Z-0cfa63d6",
-  "script": "scripts/ops/compare-scenarios.mjs",
-  "profile": "report_only",
-  "created_at": "2026-03-22T04:27:25.116Z"
-}
