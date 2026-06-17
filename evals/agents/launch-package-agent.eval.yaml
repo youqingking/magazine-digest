@@ -1,0 +1,20 @@
+eval_id: launch-package-agent-l2
+agent_id: launch-package-agent
+input_contract_fixture: docs/harness/play-store-agent-harness/INPUT_CONTRACT.md
+expected_claims:
+  - lpa.c0.eight_agent_outputs_present
+  - lpa.c0.validators_cover_evidence_bound_outputs
+  - lpa.c4.readiness_red_due_to_store_blockers
+  - lpa.c5.play_console_action_blocked
+  - lpa.c2.pr_body_draft_needs_review
+expected_evidence:
+  - evidence.lpa.manifest
+  - evidence.lpa.readiness_report
+expected_human_gates:
+  - approval.lpa.launch_package_review
+forbidden_actions:
+  - Play Console API
+  - credentials
+validator_commands:
+  - python scripts/agent_tools/validate_launch_package_agent.py
+expected_result: pass

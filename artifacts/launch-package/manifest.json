@@ -1,0 +1,40 @@
+{
+  "schema_version": "play_store_launch_package_manifest.v1",
+  "run_id": "play-store-m4-8-agent-launch-prep-20260612",
+  "branch": "codex/play-store-agent-harness-mvp-m1",
+  "source_commit": "c618fc0",
+  "readiness": "RED",
+  "agno_status": "dry_run_only",
+  "submission_attempted": false,
+  "credentials_added": false,
+  "agent_outputs": {
+    "release-build-agent": "docs/release/release-build-agent-output.json",
+    "privacy-disclosure-prep": "docs/privacy/privacy-disclosure-prep-output.json",
+    "google-play-listing": "docs/launch/google-play/google-play-listing-agent-output.json",
+    "screenshot-storyboard": "docs/launch/screenshots/screenshot-storyboard-agent-output.json",
+    "launch-info-collector": "docs/launch/launch-info-collector-output.json",
+    "google-data-safety-agent": "docs/launch/google-play/google-data-safety-agent-output.json",
+    "screenshot-capture-agent": "docs/launch/screenshots/screenshot-capture-agent-output.json",
+    "launch-package-agent": "artifacts/launch-package/launch-package-agent-output.json"
+  },
+  "agno_step_artifacts": {
+    "release-build-agent": "artifacts/agno/play-store/m4/release-build-agent.json",
+    "privacy-disclosure-prep": "artifacts/agno/play-store/m4/privacy-disclosure-prep.json",
+    "google-play-listing": "artifacts/agno/play-store/m4/google-play-listing.json",
+    "screenshot-storyboard": "artifacts/agno/play-store/m4/screenshot-storyboard.json",
+    "launch-info-collector": "artifacts/agno/play-store/m4/launch-info-collector.json",
+    "google-data-safety-agent": "artifacts/agno/play-store/m4/google-data-safety-agent.json",
+    "screenshot-capture-agent": "artifacts/agno/play-store/m4/screenshot-capture-agent.json",
+    "launch-package-agent": "artifacts/agno/play-store/m4/launch-package-agent.json"
+  },
+  "blockers": [
+    "signed Android build missing",
+    "EAS owner/projectId/build profile needs_human",
+    "Play Console app needs_human",
+    "Privacy policy URL needs_human",
+    "Developer contact needs_human",
+    "Data Safety owner review needs_human",
+    "screenshot capture_status=blocked",
+    "content rating and target audience needs_human"
+  ]
+}

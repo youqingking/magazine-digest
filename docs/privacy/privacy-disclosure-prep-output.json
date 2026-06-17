@@ -1,0 +1,121 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "privacy-disclosure-prep",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "privacy_disclosure_status": "draft",
+  "claims": [
+    {
+      "claim_id": "pdp.c0.fixture_data_surfaces_observed",
+      "value": "Current app shell renders local runtime fixture surfaces for discovery, article detail, and debug seam status.",
+      "source": ["docs/privacy/DATA_INVENTORY.md", "apps/mobile/app/**"],
+      "status": "observed_in_repo",
+      "confidence": 0.88,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.pdp.data_inventory", "evidence.pdp.smoke_fixture"],
+      "limitations": ["Fixture content still needs policy and rights review before public store use."]
+    },
+    {
+      "claim_id": "pdp.c0.sdk_manifest_evidence_observed",
+      "value": "Current repo manifest/source evidence does not show live Supabase SDK, RevenueCat SDK, expo-notifications, ads/tracking, or analytics SDK in the current mobile shell.",
+      "source": ["docs/privacy/SDK_INVENTORY.md", "apps/mobile/package.json", "apps/mobile/app.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.84,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.pdp.sdk_inventory"],
+      "limitations": ["Release artifact dependency tree may differ and must be reviewed."]
+    },
+    {
+      "claim_id": "pdp.c3.service_seams_need_review",
+      "value": "Supabase, RevenueCat, and Push are reserved seams in current repo evidence and require privacy review before any live service disclosure.",
+      "source": ["docs/mobile/SUPABASE_ENV_CONTRACT.md", "packages/core-runtime/src/seams/**", "docs/privacy/DATA_INVENTORY.md"],
+      "status": "needs_human",
+      "confidence": 0.82,
+      "claim_class": "C3",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.pdp.service_seams"],
+      "limitations": ["Future production configuration can change this privacy claim."]
+    },
+    {
+      "claim_id": "pdp.c3.privacy_policy_url_missing",
+      "value": "Privacy policy URL is missing from repo evidence.",
+      "source": ["docs/launch/privacy/human-review-required.md", "docs/privacy/PLAY_STORE_PRIVACY_REVIEW.md"],
+      "status": "needs_human",
+      "confidence": 0.9,
+      "claim_class": "C3",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.pdp.privacy_policy_missing"],
+      "limitations": ["Owner may provide an external URL after review."]
+    },
+    {
+      "claim_id": "pdp.c4.data_safety_requires_owner_review",
+      "value": "Data Safety answers are evidence draft only and require owner/Pro review before Play Console use.",
+      "source": ["docs/launch/google-play/data-safety-draft.md", "docs/launch/google-play/data-safety-evidence.md"],
+      "status": "needs_human",
+      "confidence": 0.9,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.pdp.data_safety_draft"],
+      "limitations": ["No Play Console form is answered by this output."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.pdp.data_inventory",
+      "source_type": "repo_file",
+      "source_ref": "docs/privacy/DATA_INVENTORY.md",
+      "observed_value": "Current data surfaces table exists and is marked human review required.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.pdp.smoke_fixture",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run smoke:fixture",
+      "observed_value": "fixture smoke passed; Supabase unavailable missing_env",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.pdp.sdk_inventory",
+      "source_type": "repo_file",
+      "source_ref": "docs/privacy/SDK_INVENTORY.md",
+      "observed_value": "SDK inventory draft records current repo evidence and release artifact limitations.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.pdp.service_seams",
+      "source_type": "repo_file",
+      "source_ref": "packages/core-runtime/src/seams/**",
+      "observed_value": "Service seams are reserved and require review before live service disclosure.",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.pdp.privacy_policy_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Privacy policy URL",
+      "observed_value": "not present in repo evidence",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.pdp.data_safety_draft",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/google-play/data-safety-draft.md",
+      "observed_value": "Data Safety draft remains human review required.",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.pdp.privacy_review",
+      "claim_ids": [
+        "pdp.c3.service_seams_need_review",
+        "pdp.c3.privacy_policy_url_missing",
+        "pdp.c4.data_safety_requires_owner_review"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/privacy reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "launch-package-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "readiness": "RED",
+  "claims": [
+    {
+      "claim_id": "lpa.c0.eight_agent_outputs_present",
+      "value": "All eight Play Store agent outputs are represented in the launch package manifest.",
+      "source": ["artifacts/launch-package/manifest.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.92,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.lpa.manifest"],
+      "limitations": ["Presence of outputs does not resolve human gates."]
+    },
+    {
+      "claim_id": "lpa.c0.validators_cover_evidence_bound_outputs",
+      "value": "The package references validators that check output schema, claim fields, evidence refs, human gates, and dry_run_only artifacts.",
+      "source": ["scripts/agent_tools/validate_play_store_agent_mvp.py", "scripts/agent_tools/validate_launch_package_agent.py"],
+      "status": "observed_in_repo",
+      "confidence": 0.88,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.lpa.validators"],
+      "limitations": ["Validators do not replace owner/Pro review."]
+    },
+    {
+      "claim_id": "lpa.c4.readiness_red_due_to_store_blockers",
+      "value": "Readiness is RED because store submission blockers and C3/C4/C5 human gates remain unresolved.",
+      "source": ["docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md", "artifacts/launch-package/readiness-report.md"],
+      "status": "blocked",
+      "confidence": 0.94,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lpa.readiness_report"],
+      "limitations": ["Owner decisions can change readiness later."]
+    },
+    {
+      "claim_id": "lpa.c5.play_console_action_blocked",
+      "value": "Play Console credentials, API calls, submission, and rollout are forbidden in this dry-run package.",
+      "source": ["docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md", "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md"],
+      "status": "blocked",
+      "confidence": 0.95,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lpa.play_console_blocker"],
+      "limitations": ["C5 work requires external owner workflow, not this repo run."]
+    },
+    {
+      "claim_id": "lpa.c2.pr_body_draft_needs_review",
+      "value": "PR title/body in readiness-report.md is draft communication copy and needs owner review.",
+      "source": ["artifacts/launch-package/readiness-report.md"],
+      "status": "needs_human",
+      "confidence": 0.84,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lpa.pr_body_draft"],
+      "limitations": ["Owner may adjust PR wording before publishing."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.lpa.manifest",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/manifest.json",
+      "observed_value": "8-agent outputs and Agno artifacts listed",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.validators",
+      "source_type": "repo_file",
+      "source_ref": "scripts/agent_tools/validate_play_store_agent_mvp.py",
+      "observed_value": "aggregate validator imports/checks all eight agent validators",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lpa.readiness_report",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/readiness-report.md",
+      "observed_value": "readiness RED due to unresolved gates",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.play_console_blocker",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console credentials/API/submission/rollout",
+      "observed_value": "out of scope for dry-run package",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lpa.pr_body_draft",
+      "source_type": "repo_file",
+      "source_ref": "artifacts/launch-package/readiness-report.md",
+      "observed_value": "PR title/body draft present",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.lpa.launch_package_review",
+      "claim_ids": [
+        "lpa.c4.readiness_red_due_to_store_blockers",
+        "lpa.c5.play_console_action_blocked",
+        "lpa.c2.pr_body_draft_needs_review"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

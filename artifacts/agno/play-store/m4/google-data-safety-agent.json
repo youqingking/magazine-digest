@@ -1,0 +1,17 @@
+{
+  "schema_version": "play_store_agno_step_artifact.v1",
+  "run_id": "play-store-m4-8-agent-launch-prep-20260612",
+  "step_id": "m4-06-google-data-safety-agent",
+  "agent_id": "google-data-safety-agent",
+  "agno_status": "dry_run_only",
+  "maturity_level": "L2",
+  "input_contract_ref": "docs/harness/play-store-agent-harness/INPUT_CONTRACT.md",
+  "output_contract_ref": "docs/harness/play-store-agent-harness/OUTPUT_CONTRACT.md",
+  "evidence_ledger_ref": "docs/harness/play-store-agent-harness/EVIDENCE_LEDGER.md#m4-8-agent-evidence-ledger",
+  "claim_ids": ["gdsa.c0.data_inventory_present", "gdsa.c0.sdk_inventory_present", "gdsa.c3.local_fixture_content_needs_review", "gdsa.c3.no_live_service_collection_observed", "gdsa.c4.play_console_answers_need_human"],
+  "claim_classes": ["C0", "C3", "C4"],
+  "human_approval_gate_ref": "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+  "validation_results": {"validator_command": "python scripts/agent_tools/validate_google_data_safety_agent.py", "status": "pending_at_artifact_write"},
+  "next_allowed_action": "input to launch-package-agent readiness package",
+  "blocked_reason": "Data Safety remains evidence draft and C3/C4 human gates remain open"
+}

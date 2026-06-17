@@ -1,0 +1,255 @@
+{
+  "schema_version": "play_store_agent_magazine_reality_output.v1",
+  "agent_id": "release-build-agent",
+  "app_key": "magazine-digest",
+  "product_key": "demo_cn_content",
+  "generated_at": "2026-06-15T14:08:40+00:00",
+  "source_bundle": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+  "source_manifest": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json",
+  "source_provenance": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/provenance.json",
+  "source_kind": "real_content_release_candidate",
+  "scenario_id": "data2_multi_publication_release_candidate",
+  "readiness": "RED",
+  "readiness_reasons": [
+    "真实内容包可证明 Magazine Digest 场景存在，但签名 Android 构建、EAS/Play Console、提交 dry-run 仍需人工。",
+    "不得把 release-build-agent 输出升级为可发布结论。"
+  ],
+  "content_evidence": {
+    "publication_count": 5,
+    "publication_names": [
+      "Reader's Digest",
+      "Barron's",
+      "The Atlantic",
+      "The Economist",
+      "Science"
+    ],
+    "discovery_item_count": 118,
+    "detail_response_count": 708,
+    "publish_batch_count": 5,
+    "surface_status_count": 30,
+    "sample_articles": [
+      {
+        "article_id": "art_rd_12112025_001",
+        "article_key": "real_rd_12112025_001",
+        "title": "23项冬季生活锦囊",
+        "summary": "冬季效能优化的核心在于**生物钟管理**与**精力精算**：通过清晨光照调节昼夜节律以维持工作状态 ；利用“社交减法”拒绝低质量聚会以防倦怠 ；在饮食中加入姜黄等抗炎香料 ；并采用“羊毛+抓绒”的专业分层穿衣法维持体温平衡 。",
+        "publication_key": "readers_digest",
+        "publication_name": "Reader's Digest",
+        "reading_mode": "quick_30s",
+        "audience": "general",
+        "variant_key": "art_rd_12112025_001|zh-CN|general|quick_30s",
+        "content_hash": "8a3499662e1b9c93c80f0e7b706d11fb8e16dff5",
+        "markdown_excerpt": "冬季效能优化的核心在于**生物钟管理**与**精力精算**：通过清晨光照调节昼夜节律以维持工作状态 ；利用“社交减法”拒绝低质量聚会以防倦怠 ；在饮食中加入姜黄等抗炎香料 ；并采用“羊毛+抓绒”的专业分层穿衣法维持体温平衡 。"
+      },
+      {
+        "article_id": "art_barrons_09022026_001",
+        "article_key": "real_barrons_09022026_001",
+        "title": "华尔街风云：情绪化的市场",
+        "summary": "道指历史性突破 50,000 点，但市场正经历剧烈风格切换。AI 竞争压力引发科技股重挫，资金大规模流向能源与消费基建，复制 2000 年泡沫后期路径。",
+        "publication_key": "barrons",
+        "publication_name": "Barron's",
+        "reading_mode": "quick_30s",
+        "audience": "general",
+        "variant_key": "art_barrons_09022026_001|zh-CN|general|quick_30s",
+        "content_hash": "199b7767a12e317e5e8caec3abeb69afbddaaac9",
+        "markdown_excerpt": "道指历史性突破 50,000 点，但市场正经历剧烈风格切换。AI 竞争压力引发科技股重挫，资金大规模流向能源与消费基建，复制 2000 年泡沫后期路径。"
+      },
+      {
+        "article_id": "art_the_atlantic_012026_001",
+        "article_key": "real_the_atlantic_012026_001",
+        "title": "2026年1月刊前瞻：秩序的终结与机构的重塑",
+        "summary": "本文深度扫描了 2026 年初的全球核心议题：苏丹冲突成为“自由主义世界秩序”失效的注脚，揭示了传统国际协调机制的失灵；在科技领域，NASA 权力的让渡引发了关于私人资本（以 Elon Musk 为代表）主导航天工业的利弊辩论；而在教育界，美国高校“考试加时”现象的泛滥正引发关于",
+        "publication_key": "the_atlantic",
+        "publication_name": "The Atlantic",
+        "reading_mode": "quick_30s",
+        "audience": "general",
+        "variant_key": "art_the_atlantic_012026_001|zh-CN|general|quick_30s",
+        "content_hash": "002d97bb7924f4e68d1b59e9e39292bad9289725",
+        "markdown_excerpt": "本文深度扫描了 2026 年初的全球核心议题：苏丹冲突成为“自由主义世界秩序”失效的注脚，揭示了传统国际协调机制的失灵；在科技领域，NASA 权力的让渡引发了关于私人资本（以 Elon Musk 为代表）主导航天工业的利弊辩论；而在教育界，美国高校“考试加时”现象的泛滥正引发关于公平性与学术标准的深刻反思。"
+      },
+      {
+        "article_id": "art_the_economist_20260314_002",
+        "article_key": "real_the_economist_20260314_002",
+        "title": "本周全球商业回顾",
+        "summary": "全球能源市场因霍尔木兹海峡局势陷入剧震，布伦特原油价格飙升 30%，国际能源署（IEA）紧急释放 4 亿桶储备以对冲风险。尽管面临关税压力，中国 1-2 月出口额逆势增长 21.8%，展现了极强的贸易转移能力。同时，AI 行业呈现两极分化：Oracle 凭借基础设施需求营收大涨，",
+        "publication_key": "the_economist",
+        "publication_name": "The Economist",
+        "reading_mode": "quick_30s",
+        "audience": "general",
+        "variant_key": "art_the_economist_20260314_002|zh-CN|general|quick_30s",
+        "content_hash": "1d4e5ed914f91558a7834cd563bbb33ab57e7d78",
+        "markdown_excerpt": "全球能源市场因霍尔木兹海峡局势陷入剧震，布伦特原油价格飙升 30%，国际能源署（IEA）紧急释放 4 亿桶储备以对冲风险。尽管面临关税压力，中国 1-2 月出口额逆势增长 21.8%，展现了极强的贸易转移能力。同时，AI 行业呈现两极分化：Oracle 凭借基础设施需求营收大涨，而普通员工正面临“AI 脑力枯竭”（AI brain fry）的职场新危机。"
+      },
+      {
+        "article_id": "art_science_20260323_001",
+        "article_key": "real_science_20260323_001",
+        "title": "中国生物医药的逆袭",
+        "summary": "全球生命科学的领导力正发生历史性转移。凭借长期的战略投入，中国在生物医药领域已实现从“跟跑”到“并跑”的跨越。关键数据指标显示：中国在研新药数量增长了 8 倍，美国大型制药公司授权引进的新药中，已有 1/3 来自中国。中国凭借更高效（周期缩短 20%~40%）且更具成本优势（降低",
+        "publication_key": "science",
+        "publication_name": "Science",
+        "reading_mode": "quick_30s",
+        "audience": "general",
+        "variant_key": "art_science_20260323_001|zh-CN|general|quick_30s",
+        "content_hash": "f3c5cd084eb62732e08e4149e66a7be953aaffc8",
+        "markdown_excerpt": "全球生命科学的领导力正发生历史性转移。凭借长期的战略投入，中国在生物医药领域已实现从“跟跑”到“并跑”的跨越。关键数据指标显示：中国在研新药数量增长了 8 倍，美国大型制药公司授权引进的新药中，已有 1/3 来自中国。中国凭借更高效（周期缩短 20%~40%）且更具成本优势（降低 30%）的临床试验体系，正在重新定义全球医药创新的速率。"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence.release-build-agent.runtime_bundle_metadata",
+      "source_type": "repo_runtime_bundle",
+      "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+      "observed_value": "DATA2 release candidate bundle exposes product_key=demo_cn_content, scenario_id=data2_multi_publication_release_candidate, and source_kind=real_content_release_candidate.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.release-build-agent.publication_catalog",
+      "source_type": "repo_runtime_bundle",
+      "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+      "observed_value": "5 publications observed: Reader's Digest, Barron's, The Atlantic, The Economist, Science.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.release-build-agent.sample_article_variants",
+      "source_type": "repo_runtime_bundle",
+      "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+      "observed_value": "5 quick_30s general article variants include title, summary, publication, variant_key, and content_hash.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.release-build-agent.content_volume",
+      "source_type": "repo_runtime_bundle",
+      "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json",
+      "observed_value": "118 discovery items and 708 content detail responses are available.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.release-build-agent.existing_agent_output",
+      "source_type": "repo_file",
+      "source_ref": "docs/release/ANDROID_BUILD_READINESS.md",
+      "observed_value": "Existing release-build-agent source document/output remains a draft or blocked evidence source.",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.release-build-agent.human_gate",
+      "source_type": "repo_file",
+      "source_ref": "docs/NEED_HUMAN.md",
+      "observed_value": "Human owner review is still required for Play Console, legal/privacy, release signing, screenshots, and submission-sensitive decisions.",
+      "status": "needs_human"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "release-build-agent.m1.real_content_bundle_observed",
+      "value": "Magazine Digest 的 DATA2 运行时内容包在仓库中可观测，包含 product_key=demo_cn_content 和真实多刊物摘要场景。",
+      "source": [
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.96,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.release-build-agent.runtime_bundle_metadata",
+        "evidence.release-build-agent.content_volume"
+      ],
+      "limitations": [
+        "只证明仓库内 release candidate 内容存在，不证明 Play Store 发布状态。"
+      ]
+    },
+    {
+      "claim_id": "release-build-agent.m1.real_article_samples_observed",
+      "value": "代理输出可绑定真实 article_id、刊物、summary、reading_mode、audience 和 content_hash，而不是通用占位文案。",
+      "source": [
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.93,
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.release-build-agent.publication_catalog",
+        "evidence.release-build-agent.sample_article_variants"
+      ],
+      "limitations": [
+        "样例来自仓库 release candidate，不代表内容版权或商店审核已通过。"
+      ]
+    },
+    {
+      "claim_id": "release-build-agent.m1.release_gate_dry_run_only",
+      "value": "release-build-agent 只能给出 dry-run release readiness 证据；签名 Android build 和 Play Console 提交仍被阻断。",
+      "source": [
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json",
+        "docs/release/ANDROID_BUILD_READINESS.md",
+        "docs/release/PLAY_STORE_RELEASE_GATE.md",
+        "docs/release/release-build-agent-output.json"
+      ],
+      "status": "blocked",
+      "confidence": 0.9,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.release-build-agent.existing_agent_output",
+        "evidence.release-build-agent.human_gate"
+      ],
+      "limitations": [
+        "没有调用 EAS submit 或 Google Play API。"
+      ]
+    },
+    {
+      "claim_id": "release-build-agent.m1.build_claims_need_human",
+      "value": "任何可发布构建、签名证书、track 选择或上线状态必须保持 needs_human。",
+      "source": [
+        "docs/release/ANDROID_BUILD_READINESS.md",
+        "docs/release/PLAY_STORE_RELEASE_GATE.md",
+        "docs/release/release-build-agent-output.json"
+      ],
+      "status": "needs_human",
+      "confidence": 0.88,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.release-build-agent.human_gate"
+      ],
+      "limitations": [
+        "不能从文档存在推断真实构建已生成。"
+      ]
+    },
+    {
+      "claim_id": "release-build-agent.m1.runtime_content_evidence_is_reusable",
+      "value": "release 准备报告可以引用真实内容包样例来说明本次目标产品是 Magazine Digest。",
+      "source": [
+        "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json"
+      ],
+      "status": "observed_in_repo",
+      "confidence": 0.91,
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "evidence.release-build-agent.sample_article_variants"
+      ],
+      "limitations": [
+        "该证据不是发布签名或商店审核证据。"
+      ]
+    }
+  ],
+  "human_approval_gates": [
+    "Owner must review release, privacy, data safety, listing, screenshot, and Play Console claims before any submission.",
+    "Pro review must verify that every material claim has claim_id plus evidence_refs or needs_human/blocker status."
+  ],
+  "downstream_consumed_by": [
+    "artifacts/launch-package/magazine-digest-m1/manifest.json"
+  ],
+  "semantic_checks": {
+    "real_magazine_digest": true,
+    "has_product_key": true,
+    "has_real_content_samples": true,
+    "claim_evidence_or_needs_human": true,
+    "no_final_privacy_legal_store_claims": true
+  },
+  "evidence_count": 6,
+  "human_review_count": 2
+}

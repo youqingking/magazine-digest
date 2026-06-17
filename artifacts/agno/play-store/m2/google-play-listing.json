@@ -1,0 +1,25 @@
+{
+  "schema_version": "play_store_agno_step_artifact.v1",
+  "run_id": "play-store-m2-old-four-20260612",
+  "step_id": "m2-03-google-play-listing",
+  "agent_id": "google-play-listing",
+  "agno_status": "dry_run_only",
+  "maturity_level": "L2",
+  "input_contract_ref": "docs/harness/play-store-agent-harness/INPUT_CONTRACT.md",
+  "output_contract_ref": "docs/harness/play-store-agent-harness/OUTPUT_CONTRACT.md",
+  "evidence_ledger_ref": "docs/harness/play-store-agent-harness/EVIDENCE_LEDGER.md#m2-old-four-evidence-ledger",
+  "claim_ids": [
+    "gpl.c0.field_lengths_within_limits",
+    "gpl.c1.current_app_capabilities_draft",
+    "gpl.c2.localized_copy_draft_needs_review",
+    "gpl.c4.play_submission_not_attempted_needs_human"
+  ],
+  "claim_classes": ["C0", "C1", "C2", "C4"],
+  "human_approval_gate_ref": "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+  "validation_results": {
+    "validator_command": "python scripts/agent_tools/validate_google_play_listing.py .",
+    "status": "pending_at_artifact_write"
+  },
+  "next_allowed_action": "run validator and wait for owner/Pro listing review",
+  "blocked_reason": "listing is draft; privacy policy URL, developer contact, category, content rating, target audience and Play Console action remain human_review_required"
+}

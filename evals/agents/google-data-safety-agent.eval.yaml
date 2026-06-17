@@ -1,0 +1,21 @@
+eval_id: google-data-safety-agent-l2
+agent_id: google-data-safety-agent
+input_contract_fixture: docs/harness/play-store-agent-harness/INPUT_CONTRACT.md
+expected_claims:
+  - gdsa.c0.data_inventory_present
+  - gdsa.c0.sdk_inventory_present
+  - gdsa.c3.local_fixture_content_needs_review
+  - gdsa.c3.no_live_service_collection_observed
+  - gdsa.c4.play_console_answers_need_human
+expected_evidence:
+  - evidence.gdsa.data_inventory
+  - evidence.gdsa.sdk_inventory
+  - evidence.gdsa.human_review_gate
+expected_human_gates:
+  - approval.gdsa.data_safety_review
+forbidden_actions:
+  - Play Console Data Safety form submit
+  - credentials
+validator_commands:
+  - python scripts/agent_tools/validate_google_data_safety_agent.py
+expected_result: pass

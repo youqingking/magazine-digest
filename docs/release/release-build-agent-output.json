@@ -1,0 +1,146 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "release-build-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "release_status": "blocked",
+  "claims": [
+    {
+      "claim_id": "rba.c0.npm_ci_pass",
+      "value": "npm.cmd ci completed with exit code 0 in the current M2 run.",
+      "source": ["command:npm.cmd ci"],
+      "status": "observed_in_repo",
+      "confidence": 0.94,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.rba.npm_ci"],
+      "limitations": ["Warnings and audit findings are not resolved by this claim."]
+    },
+    {
+      "claim_id": "rba.c0.typecheck_pass",
+      "value": "apps/mobile TypeScript typecheck passed.",
+      "source": ["command:npm.cmd --prefix apps/mobile run typecheck"],
+      "status": "observed_in_repo",
+      "confidence": 0.96,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.rba.typecheck"],
+      "limitations": ["Typecheck does not prove signed Android build readiness."]
+    },
+    {
+      "claim_id": "rba.c0.fixture_smoke_pass",
+      "value": "Fixture smoke passed for current and s01_normal_full_matrix; Supabase mode remained unavailable without env.",
+      "source": ["command:npm.cmd --prefix apps/mobile run smoke:fixture"],
+      "status": "observed_in_repo",
+      "confidence": 0.96,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.rba.smoke_fixture"],
+      "limitations": ["Fixture smoke does not prove live service behavior."]
+    },
+    {
+      "claim_id": "rba.c0.start_smoke_pass",
+      "value": "Expo start smoke passed and reported a local URL.",
+      "source": ["command:npm.cmd --prefix apps/mobile run start:smoke"],
+      "status": "observed_in_repo",
+      "confidence": 0.95,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.rba.start_smoke"],
+      "limitations": ["Start smoke is not a store build or device QA result."]
+    },
+    {
+      "claim_id": "rba.c0.preflight_pass",
+      "value": "Repository preflight validation passed.",
+      "source": ["command:npm.cmd run validate:preflight"],
+      "status": "observed_in_repo",
+      "confidence": 0.93,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.rba.preflight"],
+      "limitations": ["Preflight does not approve Play submission."]
+    },
+    {
+      "claim_id": "rba.c4.android_release_build_blocked",
+      "value": "No signed Android release artifact, EAS build, or Play upload evidence exists in this run.",
+      "source": ["docs/release/ANDROID_BUILD_READINESS.md", "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md"],
+      "status": "blocked",
+      "confidence": 0.9,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.rba.android_build_missing"],
+      "limitations": ["A future release build may change this after owner approval."]
+    },
+    {
+      "claim_id": "rba.c5.play_console_credentials_blocked",
+      "value": "Play Console credentials, signing keys, and production actions are unavailable and forbidden in this harness run.",
+      "source": ["docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md", "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md"],
+      "status": "blocked",
+      "confidence": 0.92,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.rba.play_console_missing"],
+      "limitations": ["Only owner-reviewed external credential handling can unblock this."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.rba.npm_ci",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd ci",
+      "observed_value": "exit 0",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.rba.typecheck",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run typecheck",
+      "observed_value": "exit 0",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.rba.smoke_fixture",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run smoke:fixture",
+      "observed_value": "MOBILE_FIXTURE_READER_SMOKE_PASSED; supabase unavailable missing_env",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.rba.start_smoke",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run start:smoke",
+      "observed_value": "MOBILE_EXPO_START_SMOKE_PASSED",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.rba.preflight",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd run validate:preflight",
+      "observed_value": "exit 0",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.rba.android_build_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "signed Android AAB/APK or EAS build",
+      "observed_value": "not produced in no-credential M2 run",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.rba.play_console_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console account/app/credentials",
+      "observed_value": "not available and not approved for this run",
+      "status": "blocked"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.rba.release_identity",
+      "claim_ids": ["rba.c4.android_release_build_blocked", "rba.c5.play_console_credentials_blocked"],
+      "required": true,
+      "owner_role": "owner/Pro",
+      "status": "needs_human"
+    }
+  ]
+}

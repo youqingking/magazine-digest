@@ -1,0 +1,115 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "google-play-listing",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "listing_status": "draft",
+  "forbidden_terms_checked": [
+    "#1",
+    "best",
+    "top",
+    "award-winning",
+    "keyword stuffing",
+    "fabricated AI capability",
+    "fabricated Supabase / RevenueCat / Push capability",
+    "fabricated privacy promise",
+    "fabricated launched capability",
+    "competitor comparison",
+    "limited-time promotion"
+  ],
+  "claims": [
+    {
+      "claim_id": "gpl.c0.field_lengths_within_limits",
+      "value": "Current en-US and zh-CN listing drafts satisfy appName <= 30, shortDescription <= 80, and fullDescription <= 4000.",
+      "source": ["docs/launch/google-play/listing.en-US.json", "docs/launch/google-play/listing.zh-CN.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.96,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.gpl.field_lengths"],
+      "limitations": ["Field length validation does not approve listing claims."]
+    },
+    {
+      "claim_id": "gpl.c1.current_app_capabilities_draft",
+      "value": "Listing draft is based on observed fixture-backed discovery, article detail, scenario metadata, and reserved service seams.",
+      "source": ["docs/launch/store-fields/source-of-truth.json", "docs/mobile/MOBILE_RUNTIME_SHELL.md"],
+      "status": "inferred",
+      "confidence": 0.78,
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.gpl.source_of_truth", "evidence.gpl.mobile_runtime"],
+      "limitations": ["A human reviewer must confirm product positioning and public store fit."]
+    },
+    {
+      "claim_id": "gpl.c2.localized_copy_draft_needs_review",
+      "value": "Localized listing wording is draft marketing copy and needs owner/Pro review before store use.",
+      "source": ["docs/launch/google-play/listing.en-US.json", "docs/launch/google-play/listing.zh-CN.json"],
+      "status": "needs_human",
+      "confidence": 0.86,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.gpl.localized_listing"],
+      "limitations": ["Copy may need legal, trademark, and content review."]
+    },
+    {
+      "claim_id": "gpl.c4.play_submission_not_attempted_needs_human",
+      "value": "Play Console submission and public listing use require human review; no Play Console action was attempted.",
+      "source": ["docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md", "docs/launch/google-play/listing-validation-report.md"],
+      "status": "needs_human",
+      "confidence": 0.92,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.gpl.play_console_not_attempted"],
+      "limitations": ["External owner decision is required for any Play Console use."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.gpl.field_lengths",
+      "source_type": "validator_result",
+      "source_ref": "docs/launch/google-play/listing-validation-report.md",
+      "observed_value": "appName length 15; en-US short/full 60/650; zh-CN short/full 33/426",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gpl.source_of_truth",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/store-fields/source-of-truth.json",
+      "observed_value": "status=draft; submission_scope=dry-run_only; implemented capabilities and guardrails listed",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gpl.mobile_runtime",
+      "source_type": "repo_file",
+      "source_ref": "docs/mobile/MOBILE_RUNTIME_SHELL.md",
+      "observed_value": "Expo-first runtime shell and service seam boundaries documented",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gpl.localized_listing",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/google-play/listing.*.json",
+      "observed_value": "localized listing drafts exist and are marked human_review_required=true",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.gpl.play_console_not_attempted",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console",
+      "observed_value": "Play Console API and submission are out of scope",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.gpl.copy_and_store_review",
+      "claim_ids": [
+        "gpl.c2.localized_copy_draft_needs_review",
+        "gpl.c4.play_submission_not_attempted_needs_human"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

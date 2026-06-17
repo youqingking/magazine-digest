@@ -1,0 +1,20 @@
+id: play-store-agent-mvp
+status: skeleton
+language_policy: "中文为主，英文术语保留"
+goal: "评估四个 Play Store App Factory agents 是否能作为最小 repo 管理 Skills 被 Agno dry-run。"
+inputs:
+  - docs/agents/PLAY_STORE_AGENT_REGISTRY.md
+  - docs/agno/PLAY_STORE_AGENT_TEAM.md
+  - docs/agno/PLAY_STORE_LAUNCH_WORKFLOW.md
+expected_behavior:
+  - "按 release-build-agent -> privacy-disclosure-prep -> google-play-listing -> screenshot-storyboard 顺序 handoff。"
+  - "运行四个单项 validator 和汇总 validator。"
+  - "输出 changed files、validation、touched/restored、NEED_HUMAN、里程碑、PR 建议、Agno dry-run 结论。"
+acceptance:
+  - "所有 required files 存在。"
+  - "汇总 validator 命令为 python scripts/agent_tools/validate_play_store_agent_mvp.py ."
+  - "Google Play submission 仍为 out of scope。"
+blocked_cases:
+  - "workflow 调用真实 Play Store/EAS submission。"
+  - "workflow 添加 credentials。"
+  - "workflow 声称 privacy/listing/release 已经通过最终人工审核。"

@@ -1,0 +1,19 @@
+eval_id: screenshot-capture-agent-l2
+agent_id: screenshot-capture-agent
+input_contract_fixture: docs/harness/play-store-agent-harness/INPUT_CONTRACT.md
+expected_claims:
+  - sca.c0.adb_available
+  - sca.c0.storyboard_routes_available
+  - sca.c4.capture_blocked_no_device
+  - sca.c2.public_asset_selection_needs_review
+expected_evidence:
+  - evidence.sca.adb_available
+  - evidence.sca.no_attached_device
+expected_human_gates:
+  - approval.sca.capture_and_public_assets
+forbidden_actions:
+  - fabricated screenshots
+  - Play Console upload
+validator_commands:
+  - python scripts/agent_tools/validate_screenshot_capture_agent.py
+expected_result: pass

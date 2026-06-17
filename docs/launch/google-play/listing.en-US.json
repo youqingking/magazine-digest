@@ -1,0 +1,26 @@
+{
+  "locale": "en-US",
+  "status": "draft",
+  "human_review_required": true,
+  "source_of_truth": "docs/launch/store-fields/source-of-truth.json",
+  "appName": "Magazine Digest",
+  "shortDescription": "Fixture-backed magazine digest reader shell for Expo review.",
+  "fullDescription": "Magazine Digest is an Expo-first mobile runtime shell for reviewing standardized magazine digest fixtures. The current draft app shows a local discovery list, article reading views, scenario metadata, and placeholder service seam status for future Supabase, RevenueCat, and Push work.\n\nThis listing draft does not claim live cloud sync, subscriptions, push notifications, account sign-in, production content ingestion, rankings, awards, promotions, partnerships, or Google Play review status. Privacy, legal, trademark, Data safety, content rating, target audience, screenshot, and submission decisions require human review before any Play Store use.",
+  "whatsNew": "Initial no-credential runtime shell draft for internal Play Store readiness review.",
+  "keywords_draft": [
+    "magazine digest",
+    "reading",
+    "Expo",
+    "fixture review"
+  ],
+  "contactEmail": "NEED_HUMAN",
+  "privacyPolicyUrl": "NEED_HUMAN",
+  "category": "NEED_HUMAN",
+  "contentRating": "NEED_HUMAN",
+  "targetAudience": "NEED_HUMAN",
+  "claims_guardrails": {
+    "submission_attempted": false,
+    "do_not_claim_unavailable_features": true,
+    "legal_privacy_trademark_submission_human_review_required": true
+  }
+}

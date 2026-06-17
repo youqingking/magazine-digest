@@ -1,0 +1,24 @@
+id: screenshot-storyboard
+status: draft
+language_policy: "中文为主；英文技术名词、路径、route、agent 名称保留。"
+goal: "评估 screenshot-storyboard 是否只规划当前 Expo runtime shell 已存在 route 的截图，并明确所有截图素材仍需 human review required。"
+inputs:
+  - docs/launch/screenshots/storyboard.md
+  - docs/launch/screenshots/shot-list.json
+  - docs/launch/screenshots/screenshot-validation-notes.md
+expected_behavior:
+  - "只引用当前 app routes: /, /article/[articleId], /debug。"
+  - "将 /debug 标为 internal_evidence，默认不作为 public store screenshot。"
+  - "每个 shot 写明 route、fixture/scenario、visible_evidence、must_not_show 和 human_review_required。"
+  - "不创建截图图片，不改 app source behavior，不声称 Play Console 可直接使用。"
+acceptance:
+  - "shot-list JSON parseable。"
+  - "shot-list status=draft。"
+  - "submission_assets_created=false。"
+  - "所有 shots 的 human_review_required=true。"
+  - "validator 命令通过: python scripts/agent_tools/validate_screenshot_storyboard.py ."
+blocked_cases:
+  - "agent 创建或提交 public submission screenshot image files。"
+  - "agent 展示 push、paywall、account、cloud sync 等未实现功能。"
+  - "agent 修改 app source behavior 迎合截图。"
+  - "agent 把 storyboard / shot-list / validation notes 写成 Play Console approval。"

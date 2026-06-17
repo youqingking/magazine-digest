@@ -1,0 +1,26 @@
+{
+  "locale": "zh-CN",
+  "status": "draft",
+  "human_review_required": true,
+  "source_of_truth": "docs/launch/store-fields/source-of-truth.json",
+  "appName": "Magazine Digest",
+  "shortDescription": "基于 Expo 的杂志摘要阅读 runtime shell 草稿。",
+  "fullDescription": "Magazine Digest 是一个 Expo-first 移动 runtime shell，用于审阅标准化杂志摘要 fixture。当前草稿 app 可以展示本地 discovery 列表、文章阅读页、scenario 元数据，以及未来 Supabase、RevenueCat、Push 工作的 placeholder service seam 状态。\n\n此 Play Store listing 草稿不声明 live cloud sync、订阅购买、push notification、账号登录、生产内容流水线、排名、奖项、促销、合作关系或 Google Play review 状态。所有 privacy、legal、trademark、Data safety、content rating、target audience、screenshot 和 submission 判断都需要 human review 后才能用于 Play Store。",
+  "whatsNew": "首个 no-credential runtime shell 草稿，用于内部 Play Store readiness review。",
+  "keywords_draft": [
+    "杂志摘要",
+    "阅读",
+    "Expo",
+    "fixture review"
+  ],
+  "contactEmail": "NEED_HUMAN",
+  "privacyPolicyUrl": "NEED_HUMAN",
+  "category": "NEED_HUMAN",
+  "contentRating": "NEED_HUMAN",
+  "targetAudience": "NEED_HUMAN",
+  "claims_guardrails": {
+    "submission_attempted": false,
+    "do_not_claim_unavailable_features": true,
+    "legal_privacy_trademark_submission_human_review_required": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "screenshot-capture-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "capture_status": "blocked",
+  "screenshots": [],
+  "claims": [
+    {
+      "claim_id": "sca.c0.adb_available",
+      "value": "Android adb is available in the local environment.",
+      "source": ["command:where.exe adb"],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.sca.adb_available"],
+      "limitations": ["adb availability alone does not provide a capture device."]
+    },
+    {
+      "claim_id": "sca.c0.storyboard_routes_available",
+      "value": "Shot list contains routes /, /article/[articleId], and /debug mapped to fixture scenario s01_normal_full_matrix.",
+      "source": ["docs/launch/screenshots/shot-list.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.sca.shot_list"],
+      "limitations": ["Route planning does not prove rendered screenshot capture."]
+    },
+    {
+      "claim_id": "sca.c4.capture_blocked_no_device",
+      "value": "No attached Android device or emulator was available, so screenshot capture is blocked.",
+      "source": ["command:adb devices", "docs/launch/screenshots/capture-blockers.md"],
+      "status": "blocked",
+      "confidence": 0.94,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.sca.no_attached_device"],
+      "limitations": ["A future device/emulator may allow capture."]
+    },
+    {
+      "claim_id": "sca.c2.public_asset_selection_needs_review",
+      "value": "Public screenshot asset selection and visual messaging need owner/Pro review.",
+      "source": ["docs/launch/screenshots/screenshot-human-review-required.md"],
+      "status": "needs_human",
+      "confidence": 0.88,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.sca.public_asset_review"],
+      "limitations": ["No public screenshot asset is selected in this run."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.sca.adb_available",
+      "source_type": "repo_command",
+      "source_ref": "where.exe adb",
+      "observed_value": "adb.exe found under Android SDK platform-tools",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.sca.no_attached_device",
+      "source_type": "repo_command",
+      "source_ref": "adb devices",
+      "observed_value": "List of devices attached with no attached device rows",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.sca.shot_list",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/screenshots/shot-list.json",
+      "observed_value": "four planned shots map to existing routes and fixture scenario",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.sca.public_asset_review",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/screenshots/screenshot-human-review-required.md",
+      "observed_value": "screenshot public-use gates remain human review required",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.sca.capture_and_public_assets",
+      "claim_ids": [
+        "sca.c4.capture_blocked_no_device",
+        "sca.c2.public_asset_selection_needs_review"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

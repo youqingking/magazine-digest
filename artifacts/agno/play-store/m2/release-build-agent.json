@@ -1,0 +1,28 @@
+{
+  "schema_version": "play_store_agno_step_artifact.v1",
+  "run_id": "play-store-m2-old-four-20260612",
+  "step_id": "m2-01-release-build-agent",
+  "agent_id": "release-build-agent",
+  "agno_status": "dry_run_only",
+  "maturity_level": "L2",
+  "input_contract_ref": "docs/harness/play-store-agent-harness/INPUT_CONTRACT.md",
+  "output_contract_ref": "docs/harness/play-store-agent-harness/OUTPUT_CONTRACT.md",
+  "evidence_ledger_ref": "docs/harness/play-store-agent-harness/EVIDENCE_LEDGER.md#m2-old-four-evidence-ledger",
+  "claim_ids": [
+    "rba.c0.npm_ci_pass",
+    "rba.c0.typecheck_pass",
+    "rba.c0.fixture_smoke_pass",
+    "rba.c0.start_smoke_pass",
+    "rba.c0.preflight_pass",
+    "rba.c4.android_release_build_blocked",
+    "rba.c5.play_console_credentials_blocked"
+  ],
+  "claim_classes": ["C0", "C4", "C5"],
+  "human_approval_gate_ref": "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+  "validation_results": {
+    "validator_command": "python scripts/agent_tools/validate_release_build_agent.py .",
+    "status": "pending_at_artifact_write"
+  },
+  "next_allowed_action": "run validator and wait for owner review before M3/M4",
+  "blocked_reason": "real Android build, signing, EAS, Play Console and production actions remain human_review_required"
+}

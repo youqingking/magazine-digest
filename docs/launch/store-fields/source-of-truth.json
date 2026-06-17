@@ -1,0 +1,215 @@
+{
+  "schema_version": "play-store-agent-mvp.v2",
+  "status": "draft",
+  "submission_scope": "dry-run_only",
+  "human_review_required": true,
+  "app": {
+    "repo_product_key_policy": "product_key_required",
+    "app_display_name": "Magazine Digest Runtime Shell",
+    "public_listing_name_draft": "Magazine Digest",
+    "expo_slug": "magazine-digest-runtime-shell",
+    "scheme": "magazinedigest",
+    "android_package": "NEED_HUMAN",
+    "eas_owner": "NEED_HUMAN",
+    "eas_project_id": "NEED_HUMAN",
+    "google_play_app": "NEED_HUMAN"
+  },
+  "field_status": {
+    "app.app_display_name": {
+      "status": "observed_in_repo",
+      "value": "Magazine Digest Runtime Shell",
+      "source": "apps/mobile/app.json",
+      "evidence_refs": ["evidence.lic.mobile_app_config"],
+      "human_review_required": false,
+      "limitations": ["Display name still needs owner review before public store use."]
+    },
+    "app.public_listing_name_draft": {
+      "status": "inferred",
+      "value": "Magazine Digest",
+      "source": "docs/launch/google-play/listing.en-US.json",
+      "evidence_refs": ["evidence.lic.listing_draft"],
+      "human_review_required": true,
+      "limitations": ["Public listing name is draft copy and needs owner/Pro review."]
+    },
+    "app.expo_slug": {
+      "status": "observed_in_repo",
+      "value": "magazine-digest-runtime-shell",
+      "source": "apps/mobile/app.json",
+      "evidence_refs": ["evidence.lic.mobile_app_config"],
+      "human_review_required": false,
+      "limitations": ["Slug is not a Play package id."]
+    },
+    "app.scheme": {
+      "status": "observed_in_repo",
+      "value": "magazinedigest",
+      "source": "apps/mobile/app.json",
+      "evidence_refs": ["evidence.lic.mobile_app_config"],
+      "human_review_required": false,
+      "limitations": ["Scheme is not sufficient for store release identity."]
+    },
+    "app.android_package": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "apps/mobile/app.json",
+      "evidence_refs": ["evidence.lic.android_package_missing"],
+      "human_review_required": true,
+      "limitations": ["apps/mobile/app.json does not define production android.package."]
+    },
+    "app.eas_owner": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md",
+      "evidence_refs": ["evidence.lic.eas_missing"],
+      "human_review_required": true,
+      "limitations": ["No owner-confirmed EAS owner is present in launch evidence."]
+    },
+    "app.eas_project_id": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md",
+      "evidence_refs": ["evidence.lic.eas_missing"],
+      "human_review_required": true,
+      "limitations": ["No owner-confirmed EAS project id is present in launch evidence."]
+    },
+    "app.google_play_app": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md",
+      "evidence_refs": ["evidence.lic.play_console_missing"],
+      "human_review_required": true,
+      "limitations": ["No Play Console app evidence exists in repo."]
+    },
+    "google_play_fields.privacyPolicyUrl": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/launch/privacy/human-review-required.md",
+      "evidence_refs": ["evidence.lic.privacy_policy_missing"],
+      "human_review_required": true,
+      "limitations": ["No public privacy policy URL exists in repo evidence."]
+    },
+    "google_play_fields.contactEmail": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/launch/privacy/human-review-required.md",
+      "evidence_refs": ["evidence.lic.developer_contact_missing"],
+      "human_review_required": true,
+      "limitations": ["No Play developer contact exists in repo evidence."]
+    },
+    "google_play_fields.category": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md",
+      "evidence_refs": ["evidence.lic.store_category_missing"],
+      "human_review_required": true,
+      "limitations": ["Category must be selected by owner/Pro review."]
+    },
+    "google_play_fields.contentRating": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md",
+      "evidence_refs": ["evidence.lic.content_rating_missing"],
+      "human_review_required": true,
+      "limitations": ["Content rating requires owner policy review."]
+    },
+    "google_play_fields.targetAudience": {
+      "status": "needs_human",
+      "value": "NEED_HUMAN",
+      "source": "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md",
+      "evidence_refs": ["evidence.lic.target_audience_missing"],
+      "human_review_required": true,
+      "limitations": ["Target audience and children/family policy require human review."]
+    }
+  },
+  "implemented_capabilities": [
+    "Expo-first mobile runtime shell",
+    "local fixture-backed discovery list",
+    "fixture-backed article detail reading view",
+    "scenario and service seam status screen",
+    "product_key and scenario metadata visibility"
+  ],
+  "not_implemented_capabilities": [
+    "Google Play submission",
+    "live Supabase runtime sync",
+    "RevenueCat purchase or entitlement grant",
+    "push notification permission or delivery",
+    "user account or authentication",
+    "production content pipeline",
+    "production pricing, quota, feature flag, experiment, operations threshold, or risk threshold"
+  ],
+  "google_play_fields": {
+    "appName": {
+      "source": "public_listing_name_draft",
+      "value": "Magazine Digest",
+      "human_review_required": true
+    },
+    "shortDescription": {
+      "source": "localized_listing_json",
+      "human_review_required": true
+    },
+    "fullDescription": {
+      "source": "localized_listing_json",
+      "human_review_required": true
+    },
+    "category": {
+      "value": "NEED_HUMAN",
+      "human_review_required": true
+    },
+    "contentRating": {
+      "value": "NEED_HUMAN",
+      "human_review_required": true
+    },
+    "targetAudience": {
+      "value": "NEED_HUMAN",
+      "human_review_required": true
+    },
+    "privacyPolicyUrl": {
+      "value": "NEED_HUMAN",
+      "human_review_required": true
+    },
+    "contactEmail": {
+      "value": "NEED_HUMAN",
+      "human_review_required": true
+    }
+  },
+  "claim_guardrails": {
+    "must_not_claim": [
+      "Google Play review passed",
+      "live cloud sync",
+      "paid subscription purchase",
+      "push notifications available",
+      "real account sign-in",
+      "privacy or Data safety correctness without human review",
+      "authorized use of third-party publication trademarks",
+      "ranking, award, promotion, or partnership claim without evidence"
+    ],
+    "must_mark_human_review_required": [
+      "legal",
+      "privacy",
+      "trademark",
+      "Data safety",
+      "content rating",
+      "target audience",
+      "Google Play submission",
+      "release rollout"
+    ]
+  },
+  "evidence": {
+    "repo_readme": "README.md",
+    "mobile_readme": "apps/mobile/README.md",
+    "mobile_config": "apps/mobile/app.json",
+    "mobile_package": "apps/mobile/package.json",
+    "runtime_shell_doc": "docs/mobile/MOBILE_RUNTIME_SHELL.md",
+    "supabase_env_contract": "docs/mobile/SUPABASE_ENV_CONTRACT.md",
+    "release_gate": "docs/release/PLAY_STORE_RELEASE_GATE.md",
+    "data_inventory": "docs/privacy/DATA_INVENTORY.md",
+    "sdk_inventory": "docs/privacy/SDK_INVENTORY.md",
+    "privacy_human_review_gate": "docs/launch/privacy/human-review-required.md",
+    "screenshot_storyboard": "docs/launch/screenshots/storyboard.md"
+  },
+  "last_agent_update": {
+    "agent": "launch-info-collector",
+    "mode": "source-of-truth dry-run",
+    "submission_attempted": false,
+    "credentials_added": false
+  }
+}

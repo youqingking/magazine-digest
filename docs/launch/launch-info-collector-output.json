@@ -1,0 +1,156 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "launch-info-collector",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "launch_info_status": "draft",
+  "claims": [
+    {
+      "claim_id": "lic.c0.mobile_app_identity_observed",
+      "value": "apps/mobile/app.json defines name, slug, and scheme for the Expo runtime shell.",
+      "source": ["apps/mobile/app.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.96,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.lic.mobile_app_config"],
+      "limitations": ["Expo app identity is not sufficient for Play Store release identity."]
+    },
+    {
+      "claim_id": "lic.c1.public_listing_name_inferred",
+      "value": "Magazine Digest is the current public listing name draft inferred from localized listing JSON.",
+      "source": ["docs/launch/google-play/listing.en-US.json", "docs/launch/google-play/listing.zh-CN.json"],
+      "status": "inferred",
+      "confidence": 0.78,
+      "claim_class": "C1",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lic.listing_draft"],
+      "limitations": ["Owner/Pro must review the public name before store use."]
+    },
+    {
+      "claim_id": "lic.c4.android_package_needs_human",
+      "value": "Production Android package is missing from apps/mobile/app.json and needs owner decision.",
+      "source": ["apps/mobile/app.json", "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md"],
+      "status": "needs_human",
+      "confidence": 0.9,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lic.android_package_missing"],
+      "limitations": ["Root app config may contain migration reference metadata, but owner must decide release source of truth."]
+    },
+    {
+      "claim_id": "lic.c4_store_fields_need_human",
+      "value": "Privacy policy URL, Developer contact, category, content rating, and target audience are not available as owner-reviewed store fields.",
+      "source": ["docs/launch/privacy/human-review-required.md", "docs/launch/google-play/PLAY_STORE_SUBMISSION_READINESS.md"],
+      "status": "needs_human",
+      "confidence": 0.92,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.lic.privacy_policy_missing",
+        "evidence.lic.developer_contact_missing",
+        "evidence.lic.store_category_missing",
+        "evidence.lic.content_rating_missing",
+        "evidence.lic.target_audience_missing"
+      ],
+      "limitations": ["These fields require owner/Pro review and possibly external account context."]
+    },
+    {
+      "claim_id": "lic.c5.play_console_action_blocked",
+      "value": "Play Console account/app actions and credentials are outside this dry-run harness.",
+      "source": ["docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md", "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md"],
+      "status": "blocked",
+      "confidence": 0.93,
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.lic.play_console_missing"],
+      "limitations": ["C5 action is forbidden here and may only be handled by owner outside this run."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.lic.mobile_app_config",
+      "source_type": "repo_file",
+      "source_ref": "apps/mobile/app.json",
+      "observed_value": "name, slug, scheme observed",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.lic.listing_draft",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/google-play/listing.*.json",
+      "observed_value": "appName Magazine Digest in localized draft JSON",
+      "status": "inferred"
+    },
+    {
+      "evidence_id": "evidence.lic.android_package_missing",
+      "source_type": "repo_file",
+      "source_ref": "apps/mobile/app.json",
+      "observed_value": "production android.package is not defined in apps/mobile app config",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.eas_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "EAS owner/projectId/build profile",
+      "observed_value": "owner-confirmed EAS identity is missing",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.play_console_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Play Console account/app",
+      "observed_value": "no Play Console app evidence is present",
+      "status": "blocked"
+    },
+    {
+      "evidence_id": "evidence.lic.privacy_policy_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Privacy policy URL",
+      "observed_value": "missing from repo evidence",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.developer_contact_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Developer contact",
+      "observed_value": "missing from repo evidence",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.store_category_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Google Play category",
+      "observed_value": "missing from repo evidence",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.content_rating_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Content rating",
+      "observed_value": "missing from repo evidence",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.lic.target_audience_missing",
+      "source_type": "blocked_external_source",
+      "source_ref": "Target audience",
+      "observed_value": "missing from repo evidence",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.lic.store_source_of_truth",
+      "claim_ids": [
+        "lic.c1.public_listing_name_inferred",
+        "lic.c4.android_package_needs_human",
+        "lic.c4_store_fields_need_human",
+        "lic.c5.play_console_action_blocked"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

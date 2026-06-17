@@ -1,0 +1,194 @@
+{
+  "schema_version": "play-store-screenshot-storyboard.v1",
+  "status": "draft",
+  "human_review_required": true,
+  "source_docs": [
+    "apps/mobile/README.md",
+    "docs/mobile/MOBILE_RUNTIME_SHELL.md",
+    "docs/launch/screenshots/storyboard.md"
+  ],
+  "runtime_surface": {
+    "app": "apps/mobile",
+    "allowed_routes": [
+      "/",
+      "/article/[articleId]",
+      "/debug"
+    ],
+    "preferred_fixture_scenario": "s01_normal_full_matrix",
+    "preferred_article_id": "art_s01_city_signals",
+    "default_runtime_source": "fixture"
+  },
+  "submission_assets_created": false,
+  "shots": [
+    {
+      "id": "shot-01-discovery-list",
+      "shot_id": "shot-01-discovery-list",
+      "route": "/",
+      "screen_route": "/",
+      "capture_path": "/",
+      "runtime_scenario_id": "s01_normal_full_matrix",
+      "fixture_source": "mobile/fixtures/runtime/scenarios/s01_normal_full_matrix/runtime.bundle.json",
+      "fixture": "s01_normal_full_matrix",
+      "scenario": "baseline fixture-backed discovery list",
+      "audience": "public_candidate",
+      "purpose": "展示当前 Expo runtime shell 的 fixture-backed discovery list，以及 product_key / scenario metadata。",
+      "message": "Fixture-backed discovery list with product_key and scenario metadata.",
+      "user_benefit": "Reviewer can see the current implemented reading entry surface without live cloud or account claims.",
+      "implemented_now": true,
+      "requires_capture": true,
+      "claim_ids": [
+        "ss.c0.routes_observed",
+        "ss.c0.shot_list_maps_existing_routes",
+        "ss.c2.store_visual_messaging_needs_review"
+      ],
+      "risk_notes": [
+        "Fixture text and publication labels need content authorization before public store use."
+      ],
+      "visible_evidence": [
+        "product_key",
+        "scenario id",
+        "article card",
+        "publication label",
+        "article summary",
+        "Scenario debug button"
+      ],
+      "must_not_show": [
+        "live cloud sync",
+        "subscription purchase",
+        "RevenueCat paywall",
+        "push notification permission",
+        "account sign-in",
+        "production content pipeline"
+      ],
+      "availability": "implemented",
+      "human_review_required": true
+    },
+    {
+      "id": "shot-02-article-reading",
+      "shot_id": "shot-02-article-reading",
+      "route": "/article/[articleId]",
+      "screen_route": "/article/[articleId]",
+      "capture_path": "/article/art_s01_city_signals",
+      "runtime_scenario_id": "s01_normal_full_matrix",
+      "fixture_source": "mobile/fixtures/runtime/scenarios/s01_normal_full_matrix/runtime.bundle.json",
+      "fixture": "s01_normal_full_matrix",
+      "scenario": "fixture-backed article detail for art_s01_city_signals",
+      "audience": "public_candidate",
+      "purpose": "展示当前 Expo Router article detail 页面可读取 fixture markdown_body。",
+      "message": "Readable fixture-backed article detail in the current Expo Router shell.",
+      "user_benefit": "Reviewer can inspect the existing reading flow and article metadata.",
+      "implemented_now": true,
+      "requires_capture": true,
+      "claim_ids": [
+        "ss.c0.routes_observed",
+        "ss.c0.shot_list_maps_existing_routes",
+        "ss.c2.store_visual_messaging_needs_review"
+      ],
+      "risk_notes": [
+        "Article body and publication-like content need rights review before public screenshot use."
+      ],
+      "visible_evidence": [
+        "article title",
+        "publication or publication key",
+        "product_key",
+        "scenario id",
+        "reading mode",
+        "fixture markdown_body"
+      ],
+      "must_not_show": [
+        "unavailable article state",
+        "paywall",
+        "purchase flow",
+        "cloud account",
+        "live Supabase data",
+        "production content claim"
+      ],
+      "availability": "implemented",
+      "human_review_required": true
+    },
+    {
+      "id": "shot-03-reading-continuation",
+      "shot_id": "shot-03-reading-continuation",
+      "route": "/article/[articleId]",
+      "screen_route": "/article/[articleId]",
+      "capture_path": "/article/art_s01_city_signals#scrolled",
+      "runtime_scenario_id": "s01_normal_full_matrix",
+      "fixture_source": "mobile/fixtures/runtime/scenarios/s01_normal_full_matrix/runtime.bundle.json",
+      "fixture": "s01_normal_full_matrix",
+      "scenario": "same article as shot-02, scrolled lower if body text is long enough",
+      "audience": "public_candidate",
+      "purpose": "展示同一篇 fixture-backed article 的连续阅读状态，不新增功能承诺。",
+      "message": "Continuation of the same implemented article detail surface.",
+      "user_benefit": "Reviewer can see sustained reading context without invented product features.",
+      "implemented_now": true,
+      "requires_capture": true,
+      "claim_ids": [
+        "ss.c0.shot_list_maps_existing_routes",
+        "ss.c2.store_visual_messaging_needs_review"
+      ],
+      "risk_notes": [
+        "Only use if body length renders clearly; avoid generated marketing overlays."
+      ],
+      "visible_evidence": [
+        "body paragraphs",
+        "same article context as shot-02",
+        "fixture source wording"
+      ],
+      "must_not_show": [
+        "generated marketing overlay",
+        "production content claim",
+        "third-party trademark claim",
+        "subscription entitlement"
+      ],
+      "availability": "implemented",
+      "human_review_required": true
+    },
+    {
+      "id": "shot-04-debug-seams",
+      "shot_id": "shot-04-debug-seams",
+      "route": "/debug",
+      "screen_route": "/debug",
+      "capture_path": "/debug",
+      "runtime_scenario_id": "s01_normal_full_matrix",
+      "fixture_source": "mobile/fixtures/runtime/scenarios/s01_normal_full_matrix/runtime.bundle.json",
+      "fixture": "s01_normal_full_matrix",
+      "scenario": "internal evidence for runtime scenario and reserved service seams",
+      "audience": "internal_evidence",
+      "purpose": "内部 evidence：证明 Supabase、RevenueCat、Push-related seams 仍是 placeholder/reserved seam，不是 live integration。",
+      "message": "Internal debug route showing reserved service seam status.",
+      "user_benefit": "Internal reviewer can confirm service seams are not being represented as live app capabilities.",
+      "implemented_now": true,
+      "requires_capture": true,
+      "claim_ids": [
+        "ss.c0.routes_observed",
+        "ss.c0.shot_list_maps_existing_routes",
+        "ss.c4.play_screenshot_use_needs_review"
+      ],
+      "risk_notes": [
+        "/debug is internal evidence by default; public use needs explicit human approval."
+      ],
+      "visible_evidence": [
+        "selected scenario",
+        "product_key",
+        "Supabase runtime data seam",
+        "RevenueCat entitlement seam",
+        "Product notification seam",
+        "runtime source"
+      ],
+      "must_not_show": [
+        "seam marked live",
+        "Play Console submission claim",
+        "public asset approval claim"
+      ],
+      "availability": "implemented_internal",
+      "human_review_required": true
+    }
+  ],
+  "capture_guardrails": {
+    "real_device_or_emulator_capture": "NEED_HUMAN",
+    "google_play_image_spec_review": "NEED_HUMAN",
+    "trademark_and_content_authorization": "NEED_HUMAN",
+    "public_store_asset_selection": "NEED_HUMAN",
+    "debug_screen_public_use": "NEED_HUMAN"
+  }
+}

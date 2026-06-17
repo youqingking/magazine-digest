@@ -1,0 +1,44 @@
+[
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.runtime_bundle_metadata",
+    "source_type": "repo_runtime_bundle",
+    "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+    "observed_value": "DATA2 release candidate bundle exposes product_key=demo_cn_content, scenario_id=data2_multi_publication_release_candidate, and source_kind=real_content_release_candidate.",
+    "status": "observed_in_repo"
+  },
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.publication_catalog",
+    "source_type": "repo_runtime_bundle",
+    "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+    "observed_value": "5 publications observed: Reader's Digest, Barron's, The Atlantic, The Economist, Science.",
+    "status": "observed_in_repo"
+  },
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.sample_article_variants",
+    "source_type": "repo_runtime_bundle",
+    "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/bundle.json",
+    "observed_value": "5 quick_30s general article variants include title, summary, publication, variant_key, and content_hash.",
+    "status": "observed_in_repo"
+  },
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.content_volume",
+    "source_type": "repo_runtime_bundle",
+    "source_ref": "runtime/releases/rel_data2_multi_publication_release_candidate_20260323T121747Z/manifest.json",
+    "observed_value": "118 discovery items and 708 content detail responses are available.",
+    "status": "observed_in_repo"
+  },
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.existing_agent_output",
+    "source_type": "repo_file",
+    "source_ref": "docs/privacy/DATA_INVENTORY.md",
+    "observed_value": "Existing privacy-disclosure-prep source document/output remains a draft or blocked evidence source.",
+    "status": "observed_in_repo"
+  },
+  {
+    "evidence_id": "evidence.privacy-disclosure-prep.human_gate",
+    "source_type": "repo_file",
+    "source_ref": "docs/NEED_HUMAN.md",
+    "observed_value": "Human owner review is still required for Play Console, legal/privacy, release signing, screenshots, and submission-sensitive decisions.",
+    "status": "needs_human"
+  }
+]

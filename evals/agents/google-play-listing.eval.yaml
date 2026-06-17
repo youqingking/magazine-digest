@@ -1,0 +1,21 @@
+id: google-play-listing
+status: draft
+language_policy: "中文为主，listing locale 内容按目标语言"
+goal: "评估 google-play-listing 是否从 source-of-truth 生成 Play Store listing draft，并避免未实现功能 claim。"
+inputs:
+  - docs/launch/store-fields/source-of-truth.json
+  - docs/launch/google-play/listing.en-US.json
+  - docs/launch/google-play/listing.zh-CN.json
+expected_behavior:
+  - "保持 JSON parseable。"
+  - "只描述 fixture-backed discovery、article detail、scenario/seam status。"
+  - "contactEmail、privacyPolicyUrl、category、contentRating 等缺口保持 NEED_HUMAN。"
+acceptance:
+  - "localized listing 均有 status=draft 和 human_review_required=true。"
+  - "claims_guardrails.do_not_claim_unavailable_features=true。"
+  - "validator 命令为 python scripts/agent_tools/validate_google_play_listing.py ."
+  - "PLAY_STORE_SUBMISSION_READINESS.md 保持 blocked，并将无法确认事项标为 NEED_HUMAN。"
+blocked_cases:
+  - "listing 声称 live sync、subscriptions、push、account 已实现。"
+  - "listing 声称已经通过 Play Store 审核。"
+  - "listing 使用未经审核商标 claim。"

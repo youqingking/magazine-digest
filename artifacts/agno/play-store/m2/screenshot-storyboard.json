@@ -1,0 +1,25 @@
+{
+  "schema_version": "play_store_agno_step_artifact.v1",
+  "run_id": "play-store-m2-old-four-20260612",
+  "step_id": "m2-04-screenshot-storyboard",
+  "agent_id": "screenshot-storyboard",
+  "agno_status": "dry_run_only",
+  "maturity_level": "L2",
+  "input_contract_ref": "docs/harness/play-store-agent-harness/INPUT_CONTRACT.md",
+  "output_contract_ref": "docs/harness/play-store-agent-harness/OUTPUT_CONTRACT.md",
+  "evidence_ledger_ref": "docs/harness/play-store-agent-harness/EVIDENCE_LEDGER.md#m2-old-four-evidence-ledger",
+  "claim_ids": [
+    "ss.c0.routes_observed",
+    "ss.c0.shot_list_maps_existing_routes",
+    "ss.c2.store_visual_messaging_needs_review",
+    "ss.c4.play_screenshot_use_needs_review"
+  ],
+  "claim_classes": ["C0", "C2", "C4"],
+  "human_approval_gate_ref": "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+  "validation_results": {
+    "validator_command": "python scripts/agent_tools/validate_screenshot_storyboard.py .",
+    "status": "pending_at_artifact_write"
+  },
+  "next_allowed_action": "run validator and wait for screenshot capture owner review",
+  "blocked_reason": "real capture, image spec, content authorization and public store asset selection remain human_review_required"
+}

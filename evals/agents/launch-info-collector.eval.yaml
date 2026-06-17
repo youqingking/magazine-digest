@@ -1,0 +1,20 @@
+eval_id: launch-info-collector-l2
+agent_id: launch-info-collector
+input_contract_fixture: docs/harness/play-store-agent-harness/INPUT_CONTRACT.md
+expected_claims:
+  - lic.c0.mobile_app_identity_observed
+  - lic.c1.public_listing_name_inferred
+  - lic.c4.android_package_needs_human
+  - lic.c4_store_fields_need_human
+  - lic.c5.play_console_action_blocked
+expected_evidence:
+  - evidence.lic.mobile_app_config
+  - evidence.lic.play_console_missing
+expected_human_gates:
+  - approval.lic.store_source_of_truth
+forbidden_actions:
+  - Play Console API
+  - credentials
+validator_commands:
+  - python scripts/agent_tools/validate_launch_info_collector.py
+expected_result: pass

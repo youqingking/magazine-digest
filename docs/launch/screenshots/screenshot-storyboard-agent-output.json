@@ -1,0 +1,116 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "screenshot-storyboard",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "storyboard_status": "draft",
+  "claims": [
+    {
+      "claim_id": "ss.c0.routes_observed",
+      "value": "Current app routes for screenshot planning are /, /article/[articleId], and /debug.",
+      "source": ["apps/mobile/app/index.tsx", "apps/mobile/app/article/[articleId].tsx", "apps/mobile/app/debug.tsx"],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.ss.route_index", "evidence.ss.route_article", "evidence.ss.route_debug"],
+      "limitations": ["Route existence does not prove public screenshot suitability."]
+    },
+    {
+      "claim_id": "ss.c0.shot_list_maps_existing_routes",
+      "value": "Shot list maps only to existing routes and controlled fixture scenario references.",
+      "source": ["docs/launch/screenshots/shot-list.json"],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.ss.shot_list", "evidence.ss.fixture_scenario"],
+      "limitations": ["Actual rendered screenshots are not captured in M2."]
+    },
+    {
+      "claim_id": "ss.c2.store_visual_messaging_needs_review",
+      "value": "Screenshot message and user benefit copy are draft store-facing wording and need owner/Pro review.",
+      "source": ["docs/launch/screenshots/storyboard.md", "docs/launch/screenshots/shot-list.json"],
+      "status": "needs_human",
+      "confidence": 0.86,
+      "claim_class": "C2",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.ss.storyboard"],
+      "limitations": ["Public marketing framing and content rights need review."]
+    },
+    {
+      "claim_id": "ss.c4.play_screenshot_use_needs_review",
+      "value": "Public Play Store screenshot use requires image spec review, content authorization, and Play Console owner approval.",
+      "source": ["docs/launch/screenshots/screenshot-human-review-required.md"],
+      "status": "needs_human",
+      "confidence": 0.9,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.ss.human_review"],
+      "limitations": ["No screenshot files are generated or uploaded by this agent."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.ss.route_index",
+      "source_type": "repo_file",
+      "source_ref": "apps/mobile/app/index.tsx",
+      "observed_value": "index route exists",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.ss.route_article",
+      "source_type": "repo_file",
+      "source_ref": "apps/mobile/app/article/[articleId].tsx",
+      "observed_value": "article detail route exists",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.ss.route_debug",
+      "source_type": "repo_file",
+      "source_ref": "apps/mobile/app/debug.tsx",
+      "observed_value": "debug route exists",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.ss.shot_list",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/screenshots/shot-list.json",
+      "observed_value": "four planned shots map to allowed routes",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.ss.fixture_scenario",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run smoke:fixture",
+      "observed_value": "s01_normal_full_matrix fixture loads",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.ss.storyboard",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/screenshots/storyboard.md",
+      "observed_value": "storyboard draft exists and is marked human review required",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.ss.human_review",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/screenshots/screenshot-human-review-required.md",
+      "observed_value": "screenshot capture and public-use gates require human review",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.ss.public_screenshot_use",
+      "claim_ids": [
+        "ss.c2.store_visual_messaging_needs_review",
+        "ss.c4.play_screenshot_use_needs_review"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/store reviewer",
+      "status": "needs_human"
+    }
+  ]
+}

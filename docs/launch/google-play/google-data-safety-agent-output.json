@@ -1,0 +1,114 @@
+{
+  "schema_version": "play_store_agent_output.v1",
+  "agent_id": "google-data-safety-agent",
+  "agent_maturity": "L2",
+  "agno_status": "dry_run_only",
+  "data_safety_status": "evidence_draft",
+  "claims": [
+    {
+      "claim_id": "gdsa.c0.data_inventory_present",
+      "value": "DATA_INVENTORY exists and records current app data surfaces and non-evidenced areas.",
+      "source": ["docs/privacy/DATA_INVENTORY.md"],
+      "status": "observed_in_repo",
+      "confidence": 0.9,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.gdsa.data_inventory"],
+      "limitations": ["Inventory is a draft and needs human review before Play Console use."]
+    },
+    {
+      "claim_id": "gdsa.c0.sdk_inventory_present",
+      "value": "SDK_INVENTORY exists and records current repo SDK/seam evidence plus release artifact limitations.",
+      "source": ["docs/privacy/SDK_INVENTORY.md"],
+      "status": "observed_in_repo",
+      "confidence": 0.88,
+      "claim_class": "C0",
+      "human_review_required": false,
+      "evidence_refs": ["evidence.gdsa.sdk_inventory"],
+      "limitations": ["Release artifact SDK inventory is still missing."]
+    },
+    {
+      "claim_id": "gdsa.c3.local_fixture_content_needs_review",
+      "value": "Local fixture content is rendered in the app and needs privacy/content review before public store use.",
+      "source": ["docs/privacy/DATA_INVENTORY.md", "docs/launch/google-play/data-safety-evidence.md"],
+      "status": "needs_human",
+      "confidence": 0.86,
+      "claim_class": "C3",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.gdsa.data_inventory", "evidence.gdsa.fixture_smoke"],
+      "limitations": ["Fixture content may include publication names or content-like text requiring rights review."]
+    },
+    {
+      "claim_id": "gdsa.c3.no_live_service_collection_observed",
+      "value": "Current repo evidence does not show live Supabase, RevenueCat, Push, ads/tracking, analytics, payment, or account collection in apps/mobile.",
+      "source": ["docs/privacy/SDK_INVENTORY.md", "docs/launch/google-play/data-safety-evidence.md"],
+      "status": "needs_human",
+      "confidence": 0.82,
+      "claim_class": "C3",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.gdsa.sdk_inventory", "evidence.gdsa.service_seams"],
+      "limitations": ["Release artifact and production service configuration may change Data Safety answers."]
+    },
+    {
+      "claim_id": "gdsa.c4.play_console_answers_need_human",
+      "value": "Play Console Data Safety answers require owner/Pro review and cannot be produced as a store form answer by this dry-run agent.",
+      "source": ["docs/launch/google-play/data-safety-human-review-required.md"],
+      "status": "needs_human",
+      "confidence": 0.92,
+      "claim_class": "C4",
+      "human_review_required": true,
+      "evidence_refs": ["evidence.gdsa.human_review_gate"],
+      "limitations": ["No Play Console form is submitted or filled by this output."]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.gdsa.data_inventory",
+      "source_type": "repo_file",
+      "source_ref": "docs/privacy/DATA_INVENTORY.md",
+      "observed_value": "data inventory draft exists and records current local data surfaces",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gdsa.sdk_inventory",
+      "source_type": "repo_file",
+      "source_ref": "docs/privacy/SDK_INVENTORY.md",
+      "observed_value": "SDK inventory draft exists and records current repo evidence",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gdsa.fixture_smoke",
+      "source_type": "repo_command",
+      "source_ref": "npm.cmd --prefix apps/mobile run smoke:fixture",
+      "observed_value": "fixture smoke passed; Supabase unavailable missing_env",
+      "status": "observed_in_repo"
+    },
+    {
+      "evidence_id": "evidence.gdsa.service_seams",
+      "source_type": "repo_file",
+      "source_ref": "packages/core-runtime/src/seams/**",
+      "observed_value": "Supabase, RevenueCat, and Push are reserved seams",
+      "status": "needs_human"
+    },
+    {
+      "evidence_id": "evidence.gdsa.human_review_gate",
+      "source_type": "repo_file",
+      "source_ref": "docs/launch/google-play/data-safety-human-review-required.md",
+      "observed_value": "Data Safety human review gates are unresolved",
+      "status": "needs_human"
+    }
+  ],
+  "human_approval_gates": [
+    {
+      "approval_id": "approval.gdsa.data_safety_review",
+      "claim_ids": [
+        "gdsa.c3.local_fixture_content_needs_review",
+        "gdsa.c3.no_live_service_collection_observed",
+        "gdsa.c4.play_console_answers_need_human"
+      ],
+      "required": true,
+      "owner_role": "owner/Pro/privacy reviewer",
+      "status": "needs_human"
+    }
+  ]
+}
