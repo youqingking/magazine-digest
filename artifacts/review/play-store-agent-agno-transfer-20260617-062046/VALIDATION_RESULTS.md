@@ -2,9 +2,9 @@
 
 Run id: `play-store-l3-test-agent-agno-workflow-20260617-062046`
 Branch: `codex/test-play-store-agent-agno-workflow-20260617-062046-testbase`
-Checkpoint commit: `4226dc1`
+Workflow validation commit: `4226dc1`
 Transfer package: `play-store-agent-agno-transfer-20260617-062046-source-0fd7e70.zip`
-Transfer package SHA-256: `61e84e868e309c9928d5db50b077fc2cbf29441921a92d378a39a69942eb8367`
+Transfer package SHA-256: `729610577d347c1b27919246a82f060ae9479bce260ee25ea3caf9049f875f05`
 
 ## Results
 
