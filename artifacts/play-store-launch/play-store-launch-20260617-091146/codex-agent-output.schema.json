@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "play-store-launch/schemas/codex-agent-output.schema.json",
+  "title": "Play Store launch readiness Codex agent output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "summary_zh",
+    "confirmed_facts",
+    "risks",
+    "human_review_items",
+    "next_steps",
+    "evidence_ids_used"
+  ],
+  "properties": {
+    "summary_zh": {
+      "type": "string"
+    },
+    "confirmed_facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_review_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

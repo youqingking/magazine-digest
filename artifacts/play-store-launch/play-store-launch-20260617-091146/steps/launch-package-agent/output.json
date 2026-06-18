@@ -1,0 +1,145 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "launch-package-agent",
+  "step_index": 8,
+  "agno_step_id": "08-launch-package-agent",
+  "agno_step_name": "launch-package-agent",
+  "skill_path": ".agents/skills/launch-package-agent/SKILL.md",
+  "skill_hash": "fd381d1b7e673318dbdebaa04fcc75fc48ca2a3069cf7920a3c72c84e86cbfd7",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:25:11Z",
+    "completed_at": "2026-06-17T09:27:20Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/model-output.json"
+    ],
+    "prompt_id": "launch-package-agent.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "ad78e3ceccc02eeeeaccacf3f192e76e5ffb3ecab9d4c33f35fa1ab81142365e",
+    "input_evidence_ids": [
+      "launch-package-agent.evidence.01",
+      "launch-package-agent.evidence.02",
+      "launch-package-agent.evidence.03",
+      "launch-package-agent.evidence.04",
+      "launch-package-agent.evidence.05",
+      "launch-package-agent.evidence.06",
+      "launch-package-agent.evidence.07"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:25:11Z",
+    "completed_at": "2026-06-17T09:27:20Z",
+    "duration_ms": 129157
+  },
+  "ai_summary": "本步骤仅汇总当前 run 前 7 个上游 step 的输出。7 个上游 step 均为 RED，且每个 step 均有 1 项需人工审核/阻塞项；因此整体仍为草稿状态，需要人工补充与复核，不能提交。",
+  "claims": [
+    {
+      "claim_id": "launch-package-agent.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "launch-package-agent.evidence.01",
+        "launch-package-agent.evidence.02",
+        "launch-package-agent.evidence.03",
+        "launch-package-agent.evidence.04",
+        "launch-package-agent.evidence.05",
+        "launch-package-agent.evidence.06",
+        "launch-package-agent.evidence.07"
+      ]
+    },
+    {
+      "claim_id": "launch-package-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "launch-package-agent.evidence.01",
+        "launch-package-agent.evidence.02",
+        "launch-package-agent.evidence.03",
+        "launch-package-agent.evidence.04",
+        "launch-package-agent.evidence.05",
+        "launch-package-agent.evidence.06",
+        "launch-package-agent.evidence.07"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "launch-package-agent",
+      "claim_id": "launch-package-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "发布包汇总 仍需要人工确认。",
+      "impact": "汇总包只能 fail-closed，不得把上游 blocker 改写为可提交。",
+      "unblock_action": "等待前 7 个代理 blocker 解除后重新运行 workflow。",
+      "evidence_refs": [
+        "launch-package-agent.evidence.01",
+        "launch-package-agent.evidence.02",
+        "launch-package-agent.evidence.03",
+        "launch-package-agent.evidence.04",
+        "launch-package-agent.evidence.05",
+        "launch-package-agent.evidence.06",
+        "launch-package-agent.evidence.07"
+      ]
+    }
+  ],
+  "evidence_count": 7,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/summary.zh.md"
+  },
+  "upstream_agents": [
+    "release-build-agent",
+    "privacy-disclosure-prep",
+    "google-play-listing",
+    "screenshot-storyboard",
+    "launch-info-collector",
+    "google-data-safety-agent",
+    "screenshot-capture-agent"
+  ],
+  "upstream_step_outputs": [
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/output.json",
+    "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/output.json"
+  ],
+  "upstream_agno_step_ids": [
+    "01-release-build-agent",
+    "02-privacy-disclosure-prep",
+    "03-google-play-listing",
+    "04-screenshot-storyboard",
+    "05-launch-info-collector",
+    "06-google-data-safety-agent",
+    "07-screenshot-capture-agent"
+  ]
+}

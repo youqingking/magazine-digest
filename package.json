@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "typecheck": "powershell -ExecutionPolicy Bypass -File scripts/validate/typecheck.ps1",
     "preflight": "powershell -ExecutionPolicy Bypass -File scripts/harness/preflight.ps1",
     "validate:preflight": "powershell -ExecutionPolicy Bypass -File scripts/validate/preflight.ps1",
     "validate:preflight:sh": "sh ./scripts/validate/preflight.sh",

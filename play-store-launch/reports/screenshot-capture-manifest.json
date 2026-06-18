@@ -1,0 +1,52 @@
+{
+  "schema_version": "screenshot_capture_manifest.v1",
+  "generated_at": "2026-06-17T15:21:33Z",
+  "capture_status": "blocked",
+  "screenshots": [],
+  "blockers": [
+    {
+      "blocker_id": "debug_container_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
+      "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。",
+      "evidence_refs": [
+        "evidence.0003",
+        "evidence.0004"
+      ]
+    },
+    {
+      "blocker_id": "target_app_not_foreground",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
+      "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。",
+      "evidence_refs": [
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    },
+    {
+      "blocker_id": "multi_shot_navigation_unverified",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
+      "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。",
+      "evidence_refs": [
+        "evidence.0011",
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0014"
+      ]
+    },
+    {
+      "blocker_id": "google_play_public_use_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+      "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。",
+      "evidence_refs": []
+    }
+  ],
+  "review_status": "NEED_HUMAN"
+}

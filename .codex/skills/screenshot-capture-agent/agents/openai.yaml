@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screenshot Capture"
+  short_description: "按 storyboard shot-list 真实捕获 Android 截图证据"
+  default_prompt: "Use $screenshot-capture-agent after $screenshot-storyboard to consume the shot-list and attempt real Android screenshot capture with fail-closed evidence."

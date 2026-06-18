@@ -1,0 +1,3 @@
+display_name: Google Play Listing
+short_description: Generate evidence-bound Google Play listing drafts and blockers.
+default_prompt: 基于当前项目运行 google-play-listing，生成 Google Play 主商店 listing 草稿、字段长度检查、claim 证据、preview assets 状态和人工阻塞项。

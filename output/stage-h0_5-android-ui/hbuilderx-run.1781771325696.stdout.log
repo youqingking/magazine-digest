@@ -1,0 +1,12 @@
+16:28:45.998 HBuilderX Version: 5.07
+16:28:46.486 项目 mobile 开始编译
+16:28:46.781 uniCloud本地调试服务启动失败：当前项目未关联uniCloud服务空间，请调整后重新运行uni-app项目
+16:28:47.463 5.07
+16:28:47.465 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。
+16:28:47.602 正在编译中...
+16:28:47.603 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]
+16:28:48.119 [31m​Browserslist: caniuse-lite is outdated. Please run:[39m
+16:28:48.120 [31m  npx update-browserslist-db@latest[39m
+16:28:48.122 [31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​[39m
+16:28:54.694 [警告⚠] `fixtures\runtime\current\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。
+16:29:10.017 项目 mobile 编译成功。

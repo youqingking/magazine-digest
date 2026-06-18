@@ -1,0 +1,12 @@
+category,data_type,collected,shared,processed_ephemerally,required_or_optional,purposes,linked_to_identity,used_for_tracking,human_review,evidence_ids
+Personal info,User IDs,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,Account management; App functionality,YES_CANDIDATE,NO_NOT_OBSERVED,NEED_HUMAN,ev_0012
+Personal info,Name,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,Account management,YES_CANDIDATE,NO_NOT_OBSERVED,NEED_HUMAN,ev_0013
+Personal info,Email address,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,Account management,YES_CANDIDATE,NO_NOT_OBSERVED,NEED_HUMAN,ev_0014
+Personal info,Phone number,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,"Account management; Fraud prevention, security, and compliance",YES_CANDIDATE,NO_NOT_OBSERVED,NEED_HUMAN,ev_0015
+Financial info,Purchase history,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,App functionality; Payments,YES_CANDIDATE,NO_NOT_OBSERVED,NEED_HUMAN,ev_0016
+Photos and videos,Photos or videos,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,App functionality,NEED_HUMAN,NO_NOT_OBSERVED,NEED_HUMAN,ev_0017
+Files and docs,Files and docs,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,App functionality,NEED_HUMAN,NO_NOT_OBSERVED,NEED_HUMAN,ev_0018
+App activity,App interactions,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,Analytics; App functionality,NEED_HUMAN,NO_NOT_OBSERVED,NEED_HUMAN,ev_0019
+App info and performance,Diagnostics,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,Analytics; App functionality,NEED_HUMAN,NO_NOT_OBSERVED,NEED_HUMAN,ev_0020
+Device or other IDs,Device or other IDs,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,"App functionality; Fraud prevention, security, and compliance",NEED_HUMAN,YES_CANDIDATE,NEED_HUMAN,ev_0021
+Messages,Other in-app messages,YES_CANDIDATE,NEED_HUMAN,NEED_HUMAN,NEED_HUMAN,App functionality,NEED_HUMAN,NO_NOT_OBSERVED,NEED_HUMAN,ev_0022

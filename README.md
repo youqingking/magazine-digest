@@ -1,98 +1,80 @@
-# Magazine Digest
+## 全局准备与总体验证
 
-Magazine Digest is an Expo-first migration workspace for efficient magazine reading and digest-style content consumption.
+| 目的 | 命令 | 说明 |
+| --- | --- | --- |
+| 安装依赖 | `npm install` | 使用根目录 `package-lock.json` 安装 Node 依赖。 |
+| 仓库安装引导 | `npm run install` | 执行 `scripts/bootstrap/install.ps1`，属于项目自带 bootstrap 脚本。 |
+| 基础预检 | `npm run preflight` | 执行 `scripts/harness/preflight.ps1`。 |
+| 验证预检脚本 | `npm run validate:preflight` | PowerShell 版 preflight 验证。 |
+| POSIX 预检验证 | `npm run validate:preflight:sh` | `sh ./scripts/validate/preflight.sh`，需要可用的 `sh` 环境。 |
+| 主验证链路 | `npm run verify` | 运行 harness verify，并继续执行 Stage B contract 校验。 |
+| 主 smoke 链路 | `npm run smoke` | 运行 Stage C smoke。 |
+| 测试输入构建 | `npm run build:test-inputs` | 生成 synthetic test pack。 |
+| 测试输入校验 | `npm run validate:test-inputs` | 校验 synthetic test pack。 |
+| 测试输入 smoke | `npm run smoke:test-inputs` | 对 synthetic test pack 做 smoke。 |
 
-## Scope
+## 应用与运行命令
 
-- Mobile shell target: Expo, React Native, TypeScript, Expo Router, EAS.
-- Backend target: Supabase.
-- Subscriptions target: RevenueCat.
-- Notifications target: `expo-notifications` / Expo Push, with an FCM/APNs seam reserved.
+| 应用/入口 | 运行命令 | 测试/验证命令 | 备注 |
+| --- | --- | --- | --- |
+| Root Static Preview | `powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 8080` | `npm run preflight`; `npm run verify`; `npm run smoke` | 打开 `http://localhost:8080/`。入口文件为根目录 `index.html`，配套 `app.js`、`snake-logic.js`、`styles.css`。 |
+| Admin Static Shell | `npm run generate-admin`; `npm run build:admin`; `cd admin`; `powershell -ExecutionPolicy Bypass -File ..\serve.ps1 -Port 8081` | 根目录：`npm run generate-admin`; `npm run build:admin`。`admin/` 目录内：`npm run generate:pages`; `npm run build:shell` | 打开 `http://localhost:8081/`。`admin/package.json` 只提供生成与构建脚本，静态预览仍复用根目录 `serve.ps1`。 |
+| Legacy Mobile Shell | 在 HBuilderX 中打开 `mobile/` 后运行 H5 或 Android 目标 | `npm run build:mobile`; `npm run smoke:stage-ui35-h5`; `npm run smoke:h0_5-h5`; `npm run smoke:h0_5-hbuilderx`; `npm run smoke:h0_5-android`; `npm run smoke:h0_5-android-ui`; `npm run verify:h0_5-db`; `npm run report:h0_5` | `mobile/package.json` 提供 `npm run build:shell`，等价于调用根目录 mobile build 脚本。真实 uni-app 编译/设备运行需要本机 HBuilderX 或对应移动端环境。 |
+| Backend Fixture Runtime | `node .\backend\cli.mjs` | `npm run build:backend`; `node .\backend\cli.mjs` | 当前 backend 是 fixture/smoke runtime，不是常驻 HTTP 服务。CLI 会生成/刷新 `output/stage-d/backend-smoke.json`。 |
+| Operator Console | `node .\scripts\ops\start-operator-console.mjs` | `npm run smoke:stage-ops5`; `powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap\smoke-stage-ops4.ps1`; `node .\scripts\bootstrap\smoke-stage-ops5.mjs` | 默认打开 `http://127.0.0.1:4174/`。支持 `--port`、`--host`、`--base-path`、`--runtime-base-path`、`--default-remote-base-url`。 |
+| Runtime Dist Probe | `node .\scripts\ops\serve-runtime-dist.mjs` | `npm run smoke:stage-ops5`; `powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap\smoke-stage-rel2.ps1` | 支撑 ops/release 验证的 runtime dist 服务/探针；默认端口以脚本内配置为准，可通过参数覆盖。 |
 
-## Repository Boundary
+## Stage 与专项验证脚本
 
-This repository consumes standardized content packages and runtime metadata produced by an external pipeline. It does not implement external content ingestion, PDF parsing, web scraping, prompt generation, markdown generation, or content pipeline scheduling.
+| 阶段/目标 | 命令 |
+| --- | --- |
+| Stage H0 contract | `npm run validate:stage-h0` |
+| H0.5 device readiness | `npm run validate:h0_5-device-readiness` |
+| F1 foundation | `npm run validate:f1-foundation` |
+| Stage G contract | `npm run validate:stage-g` |
+| Stage D smoke | `npm run smoke:stage-d` |
+| OPS5 smoke | `npm run smoke:stage-ops5` |
+| E0 smoke | `npm run smoke:stage-e0` |
+| F1 smoke | `npm run smoke:stage-f1` |
+| Stage G smoke | `npm run smoke:stage-g` |
+| H0 smoke | `npm run smoke:stage-h0` |
+| UI35 H5 smoke | `npm run smoke:stage-ui35-h5` |
+| H0.5 H5 smoke | `npm run smoke:h0_5-h5` |
+| H0.5 HBuilderX smoke | `npm run smoke:h0_5-hbuilderx` |
+| H0.5 Android smoke | `npm run smoke:h0_5-android` |
+| H0.5 Android UI smoke | `npm run smoke:h0_5-android-ui` |
+| H0.5 DB verify | `npm run verify:h0_5-db` |
+| H0.5 report | `npm run report:h0_5` |
 
-Legacy DCloud / uni-app / uniCloud surfaces remain as migration references. Future implementation should land under `apps/mobile`, `packages/core-*`, and `infra/supabase`.
+## 非独立应用目录
 
-## Current Runnable Surfaces
+| 目录 | 结论 | 验证方式 |
+| --- | --- | --- |
+| `domains/magazine-domain` | 领域投影/库包，`package.json` 没有 scripts。 | 通过根目录 `npm run verify`、`npm run smoke` 或使用方脚本间接验证。 |
+| `domains/podcast-domain` | 领域投影/库包，`package.json` 没有 scripts。 | 通过根目录验证链路间接验证。 |
+| `domains/youtube-domain` | 领域投影/库包，`package.json` 没有 scripts。 | 通过根目录验证链路间接验证。 |
+| `packages/*` | workspace library/harness 包，当前未发现独立 run/test scripts。 | 通过根目录 scripts、contracts、smoke 链路验证。 |
+| `mobile/uni_modules/*` | uni-app 插件/模块目录，不作为仓库的一等应用单独启动。 | 通过 mobile build/smoke 或 HBuilderX 验证。 |
 
-This branch is restored at `44bf23e`. It is not a complete Expo app shell yet. The runnable surfaces are:
+## Expo 目标状态
 
-- Root static preview: `index.html`, `app.js`, `snake-logic.js`, and `styles.css`.
-- Admin static shell: `admin/index.html` with generated resources under `admin/pages-generated`.
-- Legacy mobile shell: `mobile/` as a DCloud / uni-app project, intended to be opened from HBuilderX.
-- Expo target config: root `app.json` and `eas.json` exist, but there is no complete migrated `apps/mobile` Expo Router shell on this branch.
+根目录存在 `app.json`、`eas.json` 等 Expo/EAS 目标配置，但当前分支未发现完整的 `apps/mobile` Expo Router 应用壳。因此不要把 `npx expo start` 当作当前分支的可靠启动命令；如果需要恢复 Expo 应用，应先补齐对应应用目录与 package scripts，再更新本文。
 
-## Start And Preview Commands
-
-Run commands from the repository root unless a command says otherwise.
-
-### 1. Preflight
+## 建议的快速验证顺序
 
 ```powershell
 npm run preflight
-```
-
-Checks local tool availability and reports known manual blockers.
-
-### 2. Root Static Preview
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 8080
-```
-
-Open `http://localhost:8080/`.
-
-### 3. Admin Static Shell
-
-Prepare or refresh generated admin resources:
-
-```powershell
+npm run build:backend
 npm run generate-admin
 npm run build:admin
-```
-
-Start a static server from the `admin` directory:
-
-```powershell
-cd admin
-powershell -ExecutionPolicy Bypass -File ..\serve.ps1 -Port 8081
-```
-
-Open `http://localhost:8081/`.
-
-### 4. Legacy Mobile Uni-App Shell
-
-Validate the mobile shell structure:
-
-```powershell
 npm run build:mobile
-```
-
-Run the mobile app manually in HBuilderX:
-
-1. Open HBuilderX.
-2. Import the `mobile/` directory as a uni-app project.
-3. Use HBuilderX to run to H5, Android, or another supported target.
-
-If HBuilderX CLI is installed and discoverable, run the automated H5 smoke flow:
-
-```powershell
-npm run smoke:stage-ui35-h5
-```
-
-The smoke flow publishes the `mobile/` project to `mobile/unpackage/dist/build/web`, starts a temporary local web server, runs Playwright checks, and then stops the temporary server.
-
-### 5. Expo Target
-
-The target stack is Expo-first, but this restored branch does not contain a complete migrated Expo application shell. Treat root `app.json` and `eas.json` as target configuration only. Do not rely on `npx expo start` for this branch until an Expo shell is restored or rebuilt under the future `apps/mobile` path.
-
-## Validation Commands
-
-```powershell
 npm run verify
 npm run smoke
 ```
 
-`verify` runs the core harness and stage contract checks. `smoke` aggregates preflight, verify, mobile build, and admin build signals.
+## NEED_HUMAN
+
+- `mobile/` 的真实 H5/Android 运行依赖 HBuilderX、模拟器或真机环境，纯 CLI 只能覆盖项目内已有 build/smoke 脚本。
+- Playwright smoke 需要本机已安装可用浏览器与依赖；缺失时需要先安装对应 Playwright browser。
+- 部分 preflight/发布相关脚本会检查环境变量，例如 `ALICLOUD_SPACE_ID`、`ALICLOUD_CLIENT_SECRET`、`UNI_ADMIN_BASE_URL`、`PUSH_APP_KEY`、`PRODUCT_KEY_DEFAULT`。
+- 涉及发布、apply、sync 的 ops 脚本可能会改变外部状态；默认优先使用 smoke、probe 或 dry-run 路径。

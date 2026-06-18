@@ -1,0 +1,6 @@
+interface:
+  display_name: "Privacy Disclosure Prep"
+  short_description: "扫描 app 隐私披露证据与 Data safety 风险"
+  default_prompt: "Use $privacy-disclosure-prep to scan this app for SDKs, permissions, data collection, tracking, sharing, account deletion, privacy policy URL, and children/sensitive-data risks."
+policy:
+  allow_implicit_invocation: true

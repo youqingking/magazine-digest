@@ -1,0 +1,46 @@
+
+> smoke:h0_5-android-ui
+> powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android-ui.ps1
+
+{
+  "status": "blocked",
+  "layer": "android_device_ui_smoke",
+  "blocking_reason": "HBUILDERX_APP_LAUNCH_TIMEOUT",
+  "target_serial": "emulator-5554",
+  "connected_devices": [
+    "emulator-5554"
+  ],
+  "detected_packages": [
+    "io.dcloud.HBuilder",
+    "com.factlock.os"
+  ],
+  "package_name": "io.dcloud.HBuilder",
+  "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+  "hbuilderx_stdout_tail": [
+    "13:34:04.859 HBuilderX Version: 5.07",
+    "13:34:06.373 项目 mobile 开始编译",
+    "13:34:10.453 uniCloud本地调试服务启动失败：当前项目未关联uniCloud服务空间，请调整后重新运行uni-app项目",
+    "13:34:29.725 5.07",
+    "13:34:29.727 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+    "13:34:31.980 正在编译中...",
+    "13:34:31.981 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+    "13:34:44.472 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+    "13:34:44.474 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+    "13:34:44.475 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+    "13:35:18.777 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+    "13:35:34.592 项目 mobile 编译成功。",
+    "13:35:34.975 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
+    "13:35:34.976 \u001b[31mPID：18724\u001b[39m",
+    "13:35:34.977 \u001b[31m进程名称：adb.exe\u001b[39m",
+    "13:35:34.995 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
+    "13:35:35.002 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
+    "13:35:42.016 检测到HBuilder调试基座有更新，正在更新...",
+    "13:36:17.579 安装HBuilder调试基座成功",
+    "13:37:16.391 正在建立手机连接...",
+    "13:37:27.523 \u001b[31m手机无响应？请检查：",
+    "1. 基座是否已成功安装并在手机上启动",
+    "2. ADB 反向代理是否创建成功",
+    "3. 手机和电脑是否处于同一网络\u001b[39m"
+  ],
+  "hbuilderx_stderr_tail": []
+}

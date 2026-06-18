@@ -1,0 +1,3548 @@
+{
+  "schema_version": "google_play_data_safety_draft.v1",
+  "generated_at": "2026-06-18T10:14:22Z",
+  "root": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
+  "project_fingerprint": {
+    "git_commit": "b1d7c7ff5ae38633ee454e11bd323c6c012510f5",
+    "skill_path": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/.codex/skills/privacy-disclosure-prep/SKILL.md",
+    "skill_scanner": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/.codex/skills/privacy-disclosure-prep/scripts/privacy_scan.py"
+  },
+  "overall_status": "blocked",
+  "official_source": "https://support.google.com/googleplay/android-developer/answer/10787469?hl=en",
+  "review_status": "NEED_HUMAN",
+  "non_final_notice": "这是给人工填写 Play Console Data safety 表单用的证据草稿，不是最终提交答案。",
+  "csv_notice": "Google Play Console 支持从 Data safety 页面导出/导入 CSV，并可下载 sample CSV；本 CSV 是证据草稿映射，不是官方导出的可直接导入模板。",
+  "global_questions": {
+    "does_app_collect_or_share_user_data": {
+      "draft_answer": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.75,
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108",
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006",
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145",
+        "evidence.0111"
+      ]
+    },
+    "is_all_user_data_collected_encrypted_in_transit": {
+      "draft_answer": "NEED_HUMAN",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.0,
+      "reason": "静态扫描不能证明所有传输路径均使用加密，也不能证明第三方 SDK 传输行为。",
+      "evidence_refs": []
+    },
+    "can_users_request_data_deletion": {
+      "draft_answer": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "Play Console 需要确认删除请求机制；如果 app 支持账号创建，还需要确认账号和关联数据删除路径。",
+      "evidence_refs": [
+        "evidence.0294",
+        "evidence.0304",
+        "evidence.0313",
+        "evidence.0314",
+        "evidence.0320",
+        "evidence.0332",
+        "evidence.0333"
+      ]
+    },
+    "privacy_policy_url": {
+      "draft_answer": "NEED_HUMAN",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.1,
+      "reason": "必须由人工确认这是 app 自有、公开可访问且覆盖当前数据行为的隐私政策 URL。",
+      "evidence_refs": []
+    },
+    "third_party_sdk_or_external_sharing": {
+      "draft_answer": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.7,
+      "third_party_sdk_count": 2,
+      "evidence_refs": [
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    "tracking": {
+      "draft_answer": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.65,
+      "tracking_candidate_count": 12,
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    "children_or_sensitive_data_risk": {
+      "draft_answer": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "confidence": 0.7,
+      "risk_count": 27,
+      "evidence_refs": [
+        "evidence.0407",
+        "evidence.0408",
+        "evidence.0409",
+        "evidence.0410",
+        "evidence.0411",
+        "evidence.0412",
+        "evidence.0413",
+        "evidence.0414",
+        "evidence.0415",
+        "evidence.0416",
+        "evidence.0417",
+        "evidence.0418",
+        "evidence.0419",
+        "evidence.0420",
+        "evidence.0421",
+        "evidence.0422",
+        "evidence.0423",
+        "evidence.0424",
+        "evidence.0425",
+        "evidence.0426",
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145",
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0049"
+      ]
+    }
+  },
+  "data_types": [
+    {
+      "category": "App activity",
+      "data_type": "App interactions",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Analytics"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "App info and performance",
+      "data_type": "Diagnostics",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Analytics",
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal",
+        "sdk_inventory"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Calendar",
+      "data_type": "Calendar events",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "data_type": "Contacts",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Advertising or marketing",
+        "Fraud prevention, security, and compliance"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "YES_CANDIDATE",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Files and docs",
+      "data_type": "Files and docs",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Financial info",
+      "data_type": "Purchase history",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Location",
+      "data_type": "Approximate or precise location",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Messages",
+      "data_type": "Other in-app messages",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Address",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0165"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Email address",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Name",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Phone number",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "User IDs",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    },
+    {
+      "category": "Web browsing",
+      "data_type": "Web browsing history",
+      "collected": "NEED_HUMAN",
+      "shared": "NO_NOT_OBSERVED",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "purposes_review_status": "NEED_HUMAN",
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "review_status": "NEED_HUMAN",
+      "source_kinds": [
+        "code_or_log_signal"
+      ],
+      "confidence": 0.65,
+      "evidence_refs": [
+        "evidence.0102"
+      ],
+      "notes": [
+        "这是 Google Play Data safety 填表草稿；collected/shared/ephemeral/required/purpose 必须由人工最终确认。"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "item_id": "global.does_app_collect_or_share_user_data",
+      "field_path": "global_questions.does_app_collect_or_share_user_data",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.75,
+      "reason": "该字段需要人工确认后才能进入 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108",
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006",
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145",
+        "evidence.0111"
+      ]
+    },
+    {
+      "item_id": "global.is_all_user_data_collected_encrypted_in_transit",
+      "field_path": "global_questions.is_all_user_data_collected_encrypted_in_transit",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.0,
+      "reason": "静态扫描不能证明所有传输路径均使用加密，也不能证明第三方 SDK 传输行为。",
+      "evidence_refs": []
+    },
+    {
+      "item_id": "global.can_users_request_data_deletion",
+      "field_path": "global_questions.can_users_request_data_deletion",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "Play Console 需要确认删除请求机制；如果 app 支持账号创建，还需要确认账号和关联数据删除路径。",
+      "evidence_refs": [
+        "evidence.0294",
+        "evidence.0304",
+        "evidence.0313",
+        "evidence.0314",
+        "evidence.0320",
+        "evidence.0332",
+        "evidence.0333"
+      ]
+    },
+    {
+      "item_id": "global.privacy_policy_url",
+      "field_path": "global_questions.privacy_policy_url",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.1,
+      "reason": "必须由人工确认这是 app 自有、公开可访问且覆盖当前数据行为的隐私政策 URL。",
+      "evidence_refs": []
+    },
+    {
+      "item_id": "global.third_party_sdk_or_external_sharing",
+      "field_path": "global_questions.third_party_sdk_or_external_sharing",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.7,
+      "reason": "该字段需要人工确认后才能进入 Play Console。",
+      "evidence_refs": [
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "global.tracking",
+      "field_path": "global_questions.tracking",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "该字段需要人工确认后才能进入 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "global.children_or_sensitive_data_risk",
+      "field_path": "global_questions.children_or_sensitive_data_risk",
+      "review_status": "NEED_HUMAN",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.7,
+      "reason": "该字段需要人工确认后才能进入 Play Console。",
+      "evidence_refs": [
+        "evidence.0407",
+        "evidence.0408",
+        "evidence.0409",
+        "evidence.0410",
+        "evidence.0411",
+        "evidence.0412",
+        "evidence.0413",
+        "evidence.0414",
+        "evidence.0415",
+        "evidence.0416",
+        "evidence.0417",
+        "evidence.0418",
+        "evidence.0419",
+        "evidence.0420",
+        "evidence.0421",
+        "evidence.0422",
+        "evidence.0423",
+        "evidence.0424",
+        "evidence.0425",
+        "evidence.0426",
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145",
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0049"
+      ]
+    },
+    {
+      "item_id": "data_types[0].collected",
+      "field_path": "data_types[0].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].shared",
+      "field_path": "data_types[0].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].processed_ephemerally",
+      "field_path": "data_types[0].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].required_or_optional",
+      "field_path": "data_types[0].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].purposes",
+      "field_path": "data_types[0].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": [
+        "Analytics"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].linked_to_identity",
+      "field_path": "data_types[0].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[0].used_for_tracking",
+      "field_path": "data_types[0].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App activity",
+      "data_type": "App interactions",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0052",
+        "evidence.0053",
+        "evidence.0054",
+        "evidence.0104",
+        "evidence.0105",
+        "evidence.0106",
+        "evidence.0107",
+        "evidence.0108"
+      ]
+    },
+    {
+      "item_id": "data_types[1].collected",
+      "field_path": "data_types[1].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].shared",
+      "field_path": "data_types[1].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].processed_ephemerally",
+      "field_path": "data_types[1].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].required_or_optional",
+      "field_path": "data_types[1].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].purposes",
+      "field_path": "data_types[1].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": [
+        "Analytics",
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].linked_to_identity",
+      "field_path": "data_types[1].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[1].used_for_tracking",
+      "field_path": "data_types[1].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "App info and performance",
+      "data_type": "Diagnostics",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0073",
+        "evidence.0074",
+        "evidence.0075",
+        "evidence.0076",
+        "evidence.0077",
+        "evidence.0078",
+        "evidence.0094",
+        "evidence.0095",
+        "evidence.0096",
+        "evidence.0097",
+        "evidence.0098",
+        "evidence.0099",
+        "evidence.0005",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0009",
+        "evidence.0006"
+      ]
+    },
+    {
+      "item_id": "data_types[2].collected",
+      "field_path": "data_types[2].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].shared",
+      "field_path": "data_types[2].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].processed_ephemerally",
+      "field_path": "data_types[2].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].required_or_optional",
+      "field_path": "data_types[2].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].purposes",
+      "field_path": "data_types[2].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].linked_to_identity",
+      "field_path": "data_types[2].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[2].used_for_tracking",
+      "field_path": "data_types[2].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Calendar",
+      "data_type": "Calendar events",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0127",
+        "evidence.0128",
+        "evidence.0144",
+        "evidence.0145"
+      ]
+    },
+    {
+      "item_id": "data_types[3].collected",
+      "field_path": "data_types[3].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].shared",
+      "field_path": "data_types[3].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].processed_ephemerally",
+      "field_path": "data_types[3].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].required_or_optional",
+      "field_path": "data_types[3].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].purposes",
+      "field_path": "data_types[3].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].linked_to_identity",
+      "field_path": "data_types[3].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[3].used_for_tracking",
+      "field_path": "data_types[3].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Contacts",
+      "data_type": "Contacts",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0111",
+        "evidence.0112",
+        "evidence.0115",
+        "evidence.0116",
+        "evidence.0117",
+        "evidence.0118",
+        "evidence.0122",
+        "evidence.0126",
+        "evidence.0133",
+        "evidence.0134",
+        "evidence.0150",
+        "evidence.0151"
+      ]
+    },
+    {
+      "item_id": "data_types[4].collected",
+      "field_path": "data_types[4].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].shared",
+      "field_path": "data_types[4].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].processed_ephemerally",
+      "field_path": "data_types[4].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].required_or_optional",
+      "field_path": "data_types[4].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].purposes",
+      "field_path": "data_types[4].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": [
+        "Advertising or marketing",
+        "Fraud prevention, security, and compliance"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].linked_to_identity",
+      "field_path": "data_types[4].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[4].used_for_tracking",
+      "field_path": "data_types[4].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0015",
+        "evidence.0016",
+        "evidence.0018",
+        "evidence.0019",
+        "evidence.0021",
+        "evidence.0022",
+        "evidence.0023",
+        "evidence.0025",
+        "evidence.0040",
+        "evidence.0044"
+      ]
+    },
+    {
+      "item_id": "data_types[5].collected",
+      "field_path": "data_types[5].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].shared",
+      "field_path": "data_types[5].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].processed_ephemerally",
+      "field_path": "data_types[5].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].required_or_optional",
+      "field_path": "data_types[5].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].purposes",
+      "field_path": "data_types[5].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].linked_to_identity",
+      "field_path": "data_types[5].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[5].used_for_tracking",
+      "field_path": "data_types[5].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Files and docs",
+      "data_type": "Files and docs",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0131",
+        "evidence.0132",
+        "evidence.0142",
+        "evidence.0143",
+        "evidence.0148",
+        "evidence.0149",
+        "evidence.0158",
+        "evidence.0159",
+        "evidence.0168",
+        "evidence.0169",
+        "evidence.0170",
+        "evidence.0171"
+      ]
+    },
+    {
+      "item_id": "data_types[6].collected",
+      "field_path": "data_types[6].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].shared",
+      "field_path": "data_types[6].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].processed_ephemerally",
+      "field_path": "data_types[6].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].required_or_optional",
+      "field_path": "data_types[6].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].purposes",
+      "field_path": "data_types[6].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].linked_to_identity",
+      "field_path": "data_types[6].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[6].used_for_tracking",
+      "field_path": "data_types[6].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Financial info",
+      "data_type": "Purchase history",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0049",
+        "evidence.0050",
+        "evidence.0051",
+        "evidence.0083",
+        "evidence.0084",
+        "evidence.0085",
+        "evidence.0086",
+        "evidence.0087",
+        "evidence.0088",
+        "evidence.0091",
+        "evidence.0092",
+        "evidence.0093"
+      ]
+    },
+    {
+      "item_id": "data_types[7].collected",
+      "field_path": "data_types[7].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].shared",
+      "field_path": "data_types[7].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].processed_ephemerally",
+      "field_path": "data_types[7].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].required_or_optional",
+      "field_path": "data_types[7].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].purposes",
+      "field_path": "data_types[7].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].linked_to_identity",
+      "field_path": "data_types[7].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[7].used_for_tracking",
+      "field_path": "data_types[7].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Health and fitness",
+      "data_type": "Health info or fitness info",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0136",
+        "evidence.0137",
+        "evidence.0152",
+        "evidence.0153",
+        "evidence.0172"
+      ]
+    },
+    {
+      "item_id": "data_types[8].collected",
+      "field_path": "data_types[8].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].shared",
+      "field_path": "data_types[8].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].processed_ephemerally",
+      "field_path": "data_types[8].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].required_or_optional",
+      "field_path": "data_types[8].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].purposes",
+      "field_path": "data_types[8].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].linked_to_identity",
+      "field_path": "data_types[8].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[8].used_for_tracking",
+      "field_path": "data_types[8].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Location",
+      "data_type": "Approximate or precise location",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0061",
+        "evidence.0062",
+        "evidence.0063",
+        "evidence.0064",
+        "evidence.0065",
+        "evidence.0066",
+        "evidence.0067",
+        "evidence.0068",
+        "evidence.0069",
+        "evidence.0070",
+        "evidence.0071",
+        "evidence.0072"
+      ]
+    },
+    {
+      "item_id": "data_types[9].collected",
+      "field_path": "data_types[9].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].shared",
+      "field_path": "data_types[9].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].processed_ephemerally",
+      "field_path": "data_types[9].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].required_or_optional",
+      "field_path": "data_types[9].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].purposes",
+      "field_path": "data_types[9].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].linked_to_identity",
+      "field_path": "data_types[9].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[9].used_for_tracking",
+      "field_path": "data_types[9].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Messages",
+      "data_type": "Other in-app messages",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0048",
+        "evidence.0056",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0059",
+        "evidence.0060",
+        "evidence.0079",
+        "evidence.0080",
+        "evidence.0081",
+        "evidence.0082",
+        "evidence.0089",
+        "evidence.0090"
+      ]
+    },
+    {
+      "item_id": "data_types[10].collected",
+      "field_path": "data_types[10].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].shared",
+      "field_path": "data_types[10].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].processed_ephemerally",
+      "field_path": "data_types[10].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].required_or_optional",
+      "field_path": "data_types[10].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].purposes",
+      "field_path": "data_types[10].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": [
+        "Account management"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].linked_to_identity",
+      "field_path": "data_types[10].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[10].used_for_tracking",
+      "field_path": "data_types[10].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Address",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0165"
+      ]
+    },
+    {
+      "item_id": "data_types[11].collected",
+      "field_path": "data_types[11].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].shared",
+      "field_path": "data_types[11].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].processed_ephemerally",
+      "field_path": "data_types[11].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].required_or_optional",
+      "field_path": "data_types[11].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].purposes",
+      "field_path": "data_types[11].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": [
+        "Account management"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].linked_to_identity",
+      "field_path": "data_types[11].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[11].used_for_tracking",
+      "field_path": "data_types[11].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Email address",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0034",
+        "evidence.0036",
+        "evidence.0100",
+        "evidence.0101",
+        "evidence.0103",
+        "evidence.0109",
+        "evidence.0110",
+        "evidence.0114",
+        "evidence.0119",
+        "evidence.0120",
+        "evidence.0121",
+        "evidence.0135"
+      ]
+    },
+    {
+      "item_id": "data_types[12].collected",
+      "field_path": "data_types[12].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].shared",
+      "field_path": "data_types[12].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].processed_ephemerally",
+      "field_path": "data_types[12].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].required_or_optional",
+      "field_path": "data_types[12].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].purposes",
+      "field_path": "data_types[12].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": [
+        "Account management"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].linked_to_identity",
+      "field_path": "data_types[12].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[12].used_for_tracking",
+      "field_path": "data_types[12].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Name",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0028",
+        "evidence.0029",
+        "evidence.0030",
+        "evidence.0031",
+        "evidence.0032",
+        "evidence.0033",
+        "evidence.0035",
+        "evidence.0037",
+        "evidence.0038",
+        "evidence.0039",
+        "evidence.0041",
+        "evidence.0042"
+      ]
+    },
+    {
+      "item_id": "data_types[13].collected",
+      "field_path": "data_types[13].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].shared",
+      "field_path": "data_types[13].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].processed_ephemerally",
+      "field_path": "data_types[13].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].required_or_optional",
+      "field_path": "data_types[13].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].purposes",
+      "field_path": "data_types[13].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": [
+        "Account management"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].linked_to_identity",
+      "field_path": "data_types[13].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[13].used_for_tracking",
+      "field_path": "data_types[13].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "Phone number",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0123",
+        "evidence.0124",
+        "evidence.0125",
+        "evidence.0140",
+        "evidence.0141",
+        "evidence.0156",
+        "evidence.0157",
+        "evidence.0160",
+        "evidence.0163",
+        "evidence.0164",
+        "evidence.0166",
+        "evidence.0167"
+      ]
+    },
+    {
+      "item_id": "data_types[14].collected",
+      "field_path": "data_types[14].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].shared",
+      "field_path": "data_types[14].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].processed_ephemerally",
+      "field_path": "data_types[14].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].required_or_optional",
+      "field_path": "data_types[14].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].purposes",
+      "field_path": "data_types[14].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": [
+        "Account management"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].linked_to_identity",
+      "field_path": "data_types[14].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[14].used_for_tracking",
+      "field_path": "data_types[14].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Personal info",
+      "data_type": "User IDs",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0011",
+        "evidence.0014",
+        "evidence.0017",
+        "evidence.0020",
+        "evidence.0024",
+        "evidence.0026",
+        "evidence.0027",
+        "evidence.0043",
+        "evidence.0045",
+        "evidence.0046",
+        "evidence.0047"
+      ]
+    },
+    {
+      "item_id": "data_types[15].collected",
+      "field_path": "data_types[15].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "YES_CANDIDATE",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].shared",
+      "field_path": "data_types[15].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].processed_ephemerally",
+      "field_path": "data_types[15].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].required_or_optional",
+      "field_path": "data_types[15].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].purposes",
+      "field_path": "data_types[15].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].linked_to_identity",
+      "field_path": "data_types[15].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[15].used_for_tracking",
+      "field_path": "data_types[15].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0055",
+        "evidence.0113",
+        "evidence.0129",
+        "evidence.0130",
+        "evidence.0138",
+        "evidence.0139",
+        "evidence.0146",
+        "evidence.0147",
+        "evidence.0154",
+        "evidence.0155",
+        "evidence.0161",
+        "evidence.0162"
+      ]
+    },
+    {
+      "item_id": "data_types[16].collected",
+      "field_path": "data_types[16].collected",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].shared",
+      "field_path": "data_types[16].shared",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].processed_ephemerally",
+      "field_path": "data_types[16].processed_ephemerally",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].required_or_optional",
+      "field_path": "data_types[16].required_or_optional",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].purposes",
+      "field_path": "data_types[16].purposes",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": [
+        "App functionality"
+      ],
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].linked_to_identity",
+      "field_path": "data_types[16].linked_to_identity",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NEED_HUMAN",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    },
+    {
+      "item_id": "data_types[16].used_for_tracking",
+      "field_path": "data_types[16].used_for_tracking",
+      "review_status": "NEED_HUMAN",
+      "data_category": "Web browsing",
+      "data_type": "Web browsing history",
+      "draft_answer": "NO_NOT_OBSERVED",
+      "confidence": 0.65,
+      "reason": "逐数据类型字段需要 owner/privacy 人工确认后才能填写 Play Console。",
+      "evidence_refs": [
+        "evidence.0102"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "privacy_policy_url_missing",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "未在扫描范围内发现隐私政策 URL。",
+      "unblock_action": "提供公开可访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享和删除流程。",
+      "evidence_refs": []
+    }
+  ],
+  "limitations": [
+    "静态扫描不能证明生产运行时所有数据行为。",
+    "第三方 SDK 的实际数据处理需结合 SDK 文档、控制台配置、release artifact 和人工审核。",
+    "`not_observed` 只表示扫描范围内未发现，不能解释为不存在或不收集。"
+  ],
+  "source_reports": {
+    "machine_json": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/privacy-disclosure-prep-output.json",
+    "evidence_jsonl": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/privacy-disclosure-prep-evidence.jsonl"
+  }
+}

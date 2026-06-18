@@ -1,0 +1,183 @@
+{
+  "schema_version": "privacy_data_safety_owner_input.v1",
+  "status": "draft_owner_review_required",
+  "canUseAsFinalPlayConsoleAnswer": false,
+  "privacyPolicyUrl": "NEED_HUMAN",
+  "encryptedInTransit": "NEED_HUMAN",
+  "canUsersRequestDataDeletion": "NEED_HUMAN",
+  "childrenOrSensitiveDataRisk": {
+    "targetAgeRange": "NEED_HUMAN",
+    "directedToChildren": "NEED_HUMAN",
+    "handlesSensitiveData": "NEED_HUMAN",
+    "notes": "Owner/legal/privacy must confirm target age, Families policy relevance, and sensitive data scope."
+  },
+  "dataTypes": [
+    {
+      "category": "Personal info",
+      "dataType": "User IDs",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Account management",
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Personal info",
+      "dataType": "Name",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Account management"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Personal info",
+      "dataType": "Email address",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Account management"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Account management",
+        "Fraud prevention, security, and compliance"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Financial info",
+      "dataType": "Purchase history",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "App functionality",
+        "Payments"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Photos and videos",
+      "dataType": "Photos or videos",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Files and docs",
+      "dataType": "Files and docs",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "App activity",
+      "dataType": "App interactions",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Analytics",
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "App info and performance",
+      "dataType": "Diagnostics",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "Analytics",
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Device or other IDs",
+      "dataType": "Device or other IDs",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "App functionality",
+        "Fraud prevention, security, and compliance"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    },
+    {
+      "category": "Messages",
+      "dataType": "Other in-app messages",
+      "collected": "NEED_HUMAN",
+      "shared": "NEED_HUMAN",
+      "processedEphemerally": "NEED_HUMAN",
+      "requiredOrOptional": "NEED_HUMAN",
+      "purposeCandidates": [
+        "App functionality"
+      ],
+      "purposes": "NEED_HUMAN",
+      "linkedToIdentity": "NEED_HUMAN",
+      "usedForTracking": "NEED_HUMAN"
+    }
+  ],
+  "ownerReviewRequired": [
+    "Replace privacyPolicyUrl with a public URL covering the current app, SDKs, data collection, sharing, and deletion flow.",
+    "Replace encryptedInTransit with true or false after confirming app and third-party SDK network transport.",
+    "Replace canUsersRequestDataDeletion with true or false after confirming account/data deletion behavior.",
+    "Complete childrenOrSensitiveDataRisk with target age, child-directed status, and sensitive-data scope.",
+    "For every dataTypes row, replace NEED_HUMAN fields with owner-confirmed answers before Play Console use."
+  ]
+}

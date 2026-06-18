@@ -1,0 +1,18 @@
+{
+  "en-US": {
+    "locale": "en-US",
+    "status": "draft",
+    "source": "play-store-launch/inputs/google-play-listing.json",
+    "appName": "Magazine Digest",
+    "shortDescription": "Save, search, and continue reading magazine digests on mobile.",
+    "fullDescription": "Magazine Digest helps readers keep up with long-form magazine content in one mobile place.\n\nUse it to browse publication and article collections, open concise article details, continue reading from saved progress, follow topics or publications, and manage saved items for later.\n\nThe app also includes account, profile, notification preference, inbox, and entitlement surfaces that are visible in the current app evidence. Subscription availability, pricing, privacy policy, support contact, and public screenshot copy still require owner review before public store use.",
+    "privacyPolicyUrl": "NEED_HUMAN",
+    "contactEmail": "NEED_HUMAN",
+    "category": "News & Magazines",
+    "contentRating": "NEED_HUMAN",
+    "targetAudience": "Adults and general readers",
+    "video": null,
+    "draft_only": true,
+    "can_use_for_submission": false
+  }
+}

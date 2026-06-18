@@ -1,0 +1,469 @@
+{
+  "schema_version": "play_store_launch_readiness_run.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "mode": "launch-readiness",
+  "root": ".",
+  "branch": "test-main2",
+  "commit": "b1d7c7f",
+  "started_at": "2026-06-17T09:11:46Z",
+  "finished_at": "2026-06-17T09:27:20Z",
+  "runner_command": "python scripts/agent_tools/run_play_store_agno_workflow.py --root . --mode launch-readiness",
+  "status": "completed",
+  "readiness": "RED",
+  "agno": {
+    "maturity": "A3_CODEX_CLI_BACKED",
+    "status": "codex_cli_model_backed_per_agent_run",
+    "model_backed_reasoning": true,
+    "orchestration_mode": "agno_native_8_step_pipeline",
+    "native_step_count": 8,
+    "step_order": [
+      "01-release-build-agent",
+      "02-privacy-disclosure-prep",
+      "03-google-play-listing",
+      "04-screenshot-storyboard",
+      "05-launch-info-collector",
+      "06-google-data-safety-agent",
+      "07-screenshot-capture-agent",
+      "08-launch-package-agent"
+    ],
+    "workflow_id": "play-store-launch-readiness-workflow",
+    "step_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091146/agno-step-ledger.jsonl"
+  },
+  "agent_steps": [
+    {
+      "agent_name": "release-build-agent",
+      "step_index": 1,
+      "agno_step_id": "01-release-build-agent",
+      "agno_step_name": "release-build-agent",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/release-build-agent/SKILL.md",
+      "skill_hash": "4325f1cf16c29a2f5ab7332ee14b194b97834a5c2d76fc640037eb14da0a5a0a",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/model-output.json"
+        ],
+        "prompt_id": "release-build-agent.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "a6ff1b7bee6ddc37b40acb20bf4c6447de967cc2cf25ad3db10da7ec13b1dc1f",
+        "input_evidence_ids": [
+          "release-build-agent.evidence.01",
+          "release-build-agent.evidence.02",
+          "release-build-agent.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:11:46Z",
+        "completed_at": "2026-06-17T09:13:25Z",
+        "duration_ms": 98527
+      }
+    },
+    {
+      "agent_name": "privacy-disclosure-prep",
+      "step_index": 2,
+      "agno_step_id": "02-privacy-disclosure-prep",
+      "agno_step_name": "privacy-disclosure-prep",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/privacy-disclosure-prep/SKILL.md",
+      "skill_hash": "6239bf8c3c096a7fa0142d16d4f59b8a30328c2195ba058e41142145f68450e2",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/model-output.json"
+        ],
+        "prompt_id": "privacy-disclosure-prep.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "0f14372a0619e45085c92aab971a96fff77218d025111499e51558123bfdf2e4",
+        "input_evidence_ids": [
+          "privacy-disclosure-prep.evidence.01",
+          "privacy-disclosure-prep.evidence.02",
+          "privacy-disclosure-prep.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:13:25Z",
+        "completed_at": "2026-06-17T09:13:54Z",
+        "duration_ms": 29385
+      }
+    },
+    {
+      "agent_name": "google-play-listing",
+      "step_index": 3,
+      "agno_step_id": "03-google-play-listing",
+      "agno_step_name": "google-play-listing",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/google-play-listing/SKILL.md",
+      "skill_hash": "73cda927dba4e9fd91c57df780d44f02e54dd5284a4ab3920ee73d3670a38f55",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/model-output.json"
+        ],
+        "prompt_id": "google-play-listing.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "738adfa6a82fd7a9d96cf0779e8d077eabb7083f43d18e04615fe23a35598715",
+        "input_evidence_ids": [
+          "google-play-listing.evidence.01",
+          "google-play-listing.evidence.02",
+          "google-play-listing.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:13:54Z",
+        "completed_at": "2026-06-17T09:16:06Z",
+        "duration_ms": 131564
+      }
+    },
+    {
+      "agent_name": "screenshot-storyboard",
+      "step_index": 4,
+      "agno_step_id": "04-screenshot-storyboard",
+      "agno_step_name": "screenshot-storyboard",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/screenshot-storyboard/SKILL.md",
+      "skill_hash": "da08aa967bfa2e4cff3c6a0e074dcb4f095f64e03ced27cbad43edc30f34f484",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/model-output.json"
+        ],
+        "prompt_id": "screenshot-storyboard.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "a29bd58523d5997305d8411e3c15a72cf6dfb1ebb1dbfdd301751143fc1f9b1d",
+        "input_evidence_ids": [
+          "screenshot-storyboard.evidence.01",
+          "screenshot-storyboard.evidence.02",
+          "screenshot-storyboard.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:16:06Z",
+        "completed_at": "2026-06-17T09:18:18Z",
+        "duration_ms": 131824
+      }
+    },
+    {
+      "agent_name": "launch-info-collector",
+      "step_index": 5,
+      "agno_step_id": "05-launch-info-collector",
+      "agno_step_name": "launch-info-collector",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/launch-info-collector/SKILL.md",
+      "skill_hash": "f9bb4a7884cdb01ec8fc784e2ea798939f4653bbc8e768cc5b0d5e10ee9f7b35",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/model-output.json"
+        ],
+        "prompt_id": "launch-info-collector.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "10bab02b718434e17e4824d04486e9db2a85dc6fc4f92963989b9d4a84852936",
+        "input_evidence_ids": [
+          "launch-info-collector.evidence.01",
+          "launch-info-collector.evidence.02",
+          "launch-info-collector.evidence.03",
+          "launch-info-collector.evidence.04"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:18:18Z",
+        "completed_at": "2026-06-17T09:20:43Z",
+        "duration_ms": 145386
+      }
+    },
+    {
+      "agent_name": "google-data-safety-agent",
+      "step_index": 6,
+      "agno_step_id": "06-google-data-safety-agent",
+      "agno_step_name": "google-data-safety-agent",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/google-data-safety-agent/SKILL.md",
+      "skill_hash": "62a149f85363365cd0a4e27972417b0917f9ed85373cfab7914cc603caf3afe1",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/model-output.json"
+        ],
+        "prompt_id": "google-data-safety-agent.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "32757ffa6ec4a1e89dc904ce7c08b6ced7f37d8d5b68b42ba1a5a63d65b8befa",
+        "input_evidence_ids": [
+          "google-data-safety-agent.evidence.01",
+          "google-data-safety-agent.evidence.02",
+          "google-data-safety-agent.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:20:43Z",
+        "completed_at": "2026-06-17T09:22:57Z",
+        "duration_ms": 134148
+      }
+    },
+    {
+      "agent_name": "screenshot-capture-agent",
+      "step_index": 7,
+      "agno_step_id": "07-screenshot-capture-agent",
+      "agno_step_name": "screenshot-capture-agent",
+      "upstream_agno_step_ids": [],
+      "skill_path": ".agents/skills/screenshot-capture-agent/SKILL.md",
+      "skill_hash": "7e41b67898a7cc8cef8c982dfc1d9515a110074a5935fee2cf810b34da5809cf",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/model-output.json"
+        ],
+        "prompt_id": "screenshot-capture-agent.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "16dfb4ab5fda697851f6f8bd74b1934dc3ef9743861e50f6e6ea2aa4408cfaf4",
+        "input_evidence_ids": [
+          "screenshot-capture-agent.evidence.01",
+          "screenshot-capture-agent.evidence.02",
+          "screenshot-capture-agent.evidence.03"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:22:57Z",
+        "completed_at": "2026-06-17T09:25:11Z",
+        "duration_ms": 133720
+      }
+    },
+    {
+      "agent_name": "launch-package-agent",
+      "step_index": 8,
+      "agno_step_id": "08-launch-package-agent",
+      "agno_step_name": "launch-package-agent",
+      "upstream_agno_step_ids": [
+        "01-release-build-agent",
+        "02-privacy-disclosure-prep",
+        "03-google-play-listing",
+        "04-screenshot-storyboard",
+        "05-launch-info-collector",
+        "06-google-data-safety-agent",
+        "07-screenshot-capture-agent"
+      ],
+      "skill_path": ".agents/skills/launch-package-agent/SKILL.md",
+      "skill_hash": "fd381d1b7e673318dbdebaa04fcc75fc48ca2a3069cf7920a3c72c84e86cbfd7",
+      "skill_hash_algorithm": "sha256",
+      "agent_status": "completed_model_invocation",
+      "readiness": "RED",
+      "output_paths": {
+        "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/output.json",
+        "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/evidence.jsonl",
+        "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/summary.zh.md"
+      },
+      "model_invocation": {
+        "required": true,
+        "enabled": true,
+        "provider": "codex_cli",
+        "model": "gpt-5.5",
+        "auth_method": "chatgpt_login_or_cli_cached",
+        "command": "codex exec",
+        "command_args": [
+          "--ignore-user-config",
+          "--model",
+          "gpt-5.5",
+          "--sandbox",
+          "read-only",
+          "--ephemeral",
+          "--output-schema",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+          "--output-last-message",
+          "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/model-output.json"
+        ],
+        "prompt_id": "launch-package-agent.launch_readiness.fresh_ai.v1",
+        "prompt_hash": "ad78e3ceccc02eeeeaccacf3f192e76e5ffb3ecab9d4c33f35fa1ab81142365e",
+        "input_evidence_ids": [
+          "launch-package-agent.evidence.01",
+          "launch-package-agent.evidence.02",
+          "launch-package-agent.evidence.03",
+          "launch-package-agent.evidence.04",
+          "launch-package-agent.evidence.05",
+          "launch-package-agent.evidence.06",
+          "launch-package-agent.evidence.07"
+        ],
+        "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-package-agent/model-output.json",
+        "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+        "schema_valid": true,
+        "exit_code": 0,
+        "started_at": "2026-06-17T09:25:11Z",
+        "completed_at": "2026-06-17T09:27:20Z",
+        "duration_ms": 129157
+      }
+    }
+  ],
+  "output_paths": {
+    "run": "artifacts/play-store-launch/play-store-launch-20260617-091146/run.json",
+    "launch_readiness_markdown": "artifacts/play-store-launch/play-store-launch-20260617-091146/launch-readiness.zh.md",
+    "launch_readiness_json": "artifacts/play-store-launch/play-store-launch-20260617-091146/launch-readiness.json",
+    "evidence_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091146/evidence-ledger.jsonl",
+    "human_review": "artifacts/play-store-launch/play-store-launch-20260617-091146/human-review.md",
+    "agno_step_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091146/agno-step-ledger.jsonl"
+  },
+  "safety": {
+    "play_console_api_called": false,
+    "credentials_used": false,
+    "can_submit_google_play": false,
+    "safe_to_strengthen_final_store_claims": false
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "release-build-agent",
+  "step_index": 1,
+  "agno_step_id": "01-release-build-agent",
+  "agno_step_name": "release-build-agent",
+  "skill_path": ".agents/skills/release-build-agent/SKILL.md",
+  "skill_hash": "4325f1cf16c29a2f5ab7332ee14b194b97834a5c2d76fc640037eb14da0a5a0a",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:11:46Z",
+    "completed_at": "2026-06-17T09:13:25Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/model-output.json"
+    ],
+    "prompt_id": "release-build-agent.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "a6ff1b7bee6ddc37b40acb20bf4c6447de967cc2cf25ad3db10da7ec13b1dc1f",
+    "input_evidence_ids": [
+      "release-build-agent.evidence.01",
+      "release-build-agent.evidence.02",
+      "release-build-agent.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:11:46Z",
+    "completed_at": "2026-06-17T09:13:25Z",
+    "duration_ms": 98527
+  },
+  "ai_summary": "本轮校验器退出码为 1，输出为 RELEASE_BUILD_AGENT_VALIDATION_FAILED；已确认多份上架准备所需文档缺失，因此当前只能解释为证据链不完整和工程闸门材料不足，不能据此进入商店提交流程。",
+  "claims": [
+    {
+      "claim_id": "release-build-agent.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "release-build-agent.evidence.01",
+        "release-build-agent.evidence.02",
+        "release-build-agent.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "release-build-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "release-build-agent.evidence.01",
+        "release-build-agent.evidence.02",
+        "release-build-agent.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "release-build-agent",
+      "claim_id": "release-build-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "发布构建检查 仍需要人工确认。",
+      "impact": "无法证明签名 Android 构建、EAS 配置或 Play Console 提交流程可用。",
+      "unblock_action": "owner/dev 提供 EAS project、签名策略、release build 和 dry-run 证据。",
+      "evidence_refs": [
+        "release-build-agent.evidence.01",
+        "release-build-agent.evidence.02",
+        "release-build-agent.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/release-build-agent/summary.zh.md"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "play_store_launch_reference_catalog.v1",
+  "phase": "phase_5_reference_catalog_active",
+  "policy": {
+    "ordinary_user_entrypoint": "play-store-launch/README.md",
+    "do_not_copy_app_owned_evidence": true,
+    "do_not_commit_generated_runtime_artifacts_by_default": true,
+    "catalog_is_index_not_content_copy": true,
+    "reality_gate": "FAIL_CLOSED",
+    "safe_to_strengthen_final_store_claims": false
+  },
+  "groups": [
+    {
+      "id": "audit",
+      "future_owner": "play-store-launch/references/audit/",
+      "migration_strategy": "indexed_reference_only",
+      "paths": [
+        "docs/agents/PLAY_STORE_AGENT_MVP.md",
+        "docs/agents/PLAY_STORE_AGENT_MVP_FINAL_REVIEW.md",
+        "docs/agents/PLAY_STORE_AGENT_MVP_GAP_AUDIT.md",
+        "docs/agents/PLAY_STORE_AGENT_MVP_PR_SUMMARY.md",
+        "docs/agents/PLAY_STORE_AGENT_MVP_VALIDATION_RESULTS.md",
+        "docs/agents/PLAY_STORE_AGENT_REALITY_GAP_AUDIT.md",
+        "docs/agents/PLAY_STORE_AGENT_REALITY_GATE_PRO_REVIEW.md",
+        "docs/agents/PLAY_STORE_AGENT_REGISTRY.md"
+      ]
+    },
+    {
+      "id": "harness",
+      "future_owner": "play-store-launch/references/harness/",
+      "migration_strategy": "indexed_reference_only",
+      "paths": [
+        "docs/harness/play-store-agent-harness/AGENT_PLUGIN_SPEC.md",
+        "docs/harness/play-store-agent-harness/AGNO_REAL_RUN_STANDARD.md",
+        "docs/harness/play-store-agent-harness/AGNO_STEP_PROTOCOL.md",
+        "docs/harness/play-store-agent-harness/CLAIM_CLASSIFICATION.md",
+        "docs/harness/play-store-agent-harness/CROSS_PRD_PROOF_PROTOCOL.md",
+        "docs/harness/play-store-agent-harness/EVAL_PROTOCOL.md",
+        "docs/harness/play-store-agent-harness/EVIDENCE_LEDGER.md",
+        "docs/harness/play-store-agent-harness/FAILURE_MODES.md",
+        "docs/harness/play-store-agent-harness/HUMAN_APPROVAL_GATE.md",
+        "docs/harness/play-store-agent-harness/INPUT_CONTRACT.md",
+        "docs/harness/play-store-agent-harness/OUTPUT_CONTRACT.md",
+        "docs/harness/play-store-agent-harness/PER_AGENT_TRUTH_TABLE.md",
+        "docs/harness/play-store-agent-harness/README.md",
+        "docs/harness/play-store-agent-harness/REALITY_GATE.md",
+        "docs/harness/play-store-agent-harness/RUN_ARTIFACT_SCHEMA.md",
+        "docs/harness/play-store-agent-harness/VALIDATION_MATRIX.md"
+      ]
+    },
+    {
+      "id": "agno",
+      "future_owner": "play-store-launch/references/agno/",
+      "migration_strategy": "indexed_reference_only",
+      "paths": [
+        "docs/agno/AGNO_L3_RUNBOOK.md",
+        "docs/agno/AGNO_L3_RUNTIME_ADOPTION_PLAN.md",
+        "docs/agno/AGNO_RUNTIME_CHECK.md",
+        "docs/agno/PLAY_STORE_AGENT_TEAM.md",
+        "docs/agno/PLAY_STORE_LAUNCH_WORKFLOW.md",
+        "docs/agno/requirements-agno.txt",
+        "docs/agno/runs/play-store-m2-old-four-run-20260612.md"
+      ]
+    },
+    {
+      "id": "archive",
+      "future_owner": "play-store-launch/references/archive/manifest-only",
+      "migration_strategy": "root_manifest_only",
+      "paths": [
+        "artifacts/agent-reality-runs/",
+        "artifacts/launch-package/",
+        "artifacts/agno/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": "screenshot_shot_list.v1",
+  "generated_at": "2026-06-17T14:58:45Z",
+  "produced_by": "screenshot-storyboard",
+  "draft_only": true,
+  "can_use_for_submission": false,
+  "shots": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "route": "pages/feed/index",
+      "route_path": "pages/feed/index",
+      "route_params": {},
+      "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+      "title": "首页",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/feed/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+      ],
+      "visible_evidence": [
+        "首页/效率阅读入口",
+        "文章标题或摘要卡片",
+        "30 秒先读",
+        "消息摘要入口"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Feed 诊断信息",
+        "debug/diagnostic 信息",
+        "开发态或诊断信息",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0002",
+        "evidence.0029",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_02_detail_deep_read",
+      "route": "pages/detail/index",
+      "route_path": "pages/detail/index",
+      "route_params": {
+        "articleId": "art_barrons_09022026_004",
+        "readingMode": "deep_3m",
+        "source": "storyboard"
+      },
+      "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+      "title": "3分钟精读",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/detail/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+      ],
+      "visible_evidence": [
+        "3 分钟精读标题",
+        "文章标题",
+        "摘要/精读正文",
+        "阅读操作",
+        "示例文章来自 runtime fixture"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "支付信息",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0004",
+        "evidence.0031",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_03_sources_follow",
+      "route": "pages/search/index",
+      "route_path": "pages/search/index",
+      "route_params": {
+        "focus": "follows"
+      },
+      "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+      "title": "来源",
+      "claim_ids": [
+        "listing_claim_source_updates"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/search/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+      ],
+      "visible_evidence": [
+        "搜索文章、来源、期次、主题",
+        "关注杂志",
+        "来源结果",
+        "阅读深度筛选"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0003",
+        "evidence.0030",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_04_profile_summary",
+      "route": "pages/profile/index",
+      "route_path": "pages/profile/index",
+      "route_params": {},
+      "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+      "title": "我的",
+      "claim_ids": [
+        "listing_claim_inbox_profile_settings"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/profile/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+      ],
+      "visible_evidence": [
+        "阅读权益",
+        "未读消息",
+        "消息摘要",
+        "稍后再读",
+        "打开设置"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0007",
+        "evidence.0034",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    }
+  ]
+}

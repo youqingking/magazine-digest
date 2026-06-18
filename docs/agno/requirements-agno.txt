@@ -1,0 +1,3 @@
+# Repo-owned Agno dependency pin for Play Store L3 local workflow.
+# Install with: python -m pip install -r docs/agno/requirements-agno.txt
+agno==2.6.12

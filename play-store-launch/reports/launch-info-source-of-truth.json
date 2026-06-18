@@ -1,0 +1,609 @@
+{
+  "schema_version": "launch_info_source_of_truth.v1",
+  "status": "draft_blocked",
+  "can_use_as_final_launch_truth": false,
+  "fields": {
+    "app_name": {
+      "status": "observed",
+      "value": "Magazine Digest",
+      "candidates": [
+        "Magazine Digest"
+      ],
+      "alternate_names": [
+        "高效阅读",
+        "com.daowei2026.magazinedigest",
+        "magazine-digest",
+        "__UNI__005A993"
+      ],
+      "sources": [
+        {
+          "source": "launch-info-json",
+          "type": "explicit_launch_json",
+          "app_name": "Magazine Digest",
+          "package": null,
+          "description": null
+        },
+        {
+          "source": "app.json",
+          "type": "expo_or_app_json",
+          "app_name": "Magazine Digest",
+          "package": "com.daowei2026.magazinedigest",
+          "description": null
+        },
+        {
+          "source": "package.json",
+          "type": "package_json",
+          "app_name": null,
+          "package": "magazine-digest",
+          "description": null
+        },
+        {
+          "source": "mobile/manifest.json",
+          "type": "manifest_json",
+          "app_name": "高效阅读",
+          "package": "__UNI__005A993",
+          "description": "Compile-targeted placeholder shell aligned with Stage B contracts."
+        }
+      ],
+      "evidence_ids": [
+        "ev_0009",
+        "ev_0010",
+        "ev_0011",
+        "ev_0012",
+        "ev_0013",
+        "ev_0014",
+        "ev_0015"
+      ],
+      "reason": "显式 launch info 提供了当前上架名称；manifest/package 中的其他名称列为备用名或技术名候选。",
+      "human_action": ""
+    },
+    "positioning": {
+      "status": "observed",
+      "value": "为重度阅读者整理杂志长文摘要、续读进度和收藏内容的移动阅读工具",
+      "evidence_ids": [
+        "ev_0016"
+      ],
+      "reason": "发现一句话定位。",
+      "human_action": ""
+    },
+    "core_features": {
+      "status": "observed",
+      "value": [
+        "聚合杂志文章与出版物内容，支持发现和搜索",
+        "提供文章摘要、详情页和继续阅读记录",
+        "支持关注、收藏和稍后阅读等个人阅读管理",
+        "提供订阅权益、付费计划和会员状态展示",
+        "通过通知收件箱和偏好设置管理内容提醒"
+      ],
+      "evidence_ids": [
+        "ev_0017"
+      ],
+      "reason": "显式 launch info 提供了核心功能。",
+      "human_action": ""
+    },
+    "target_users": {
+      "status": "observed",
+      "value": [
+        "重度杂志与长文读者",
+        "希望快速筛选和继续阅读内容的移动端用户",
+        "需要管理关注、收藏和阅读记录的内容消费者"
+      ],
+      "evidence_ids": [
+        "ev_0018"
+      ],
+      "reason": "显式 launch info 提供了目标用户。",
+      "human_action": ""
+    },
+    "supported_platforms": {
+      "status": "inferred",
+      "value": [
+        {
+          "platform": "Android",
+          "status": "observed",
+          "reason": "发现 Android package、AndroidManifest 或 Android 工程信号。",
+          "sources": [
+            "app.json"
+          ],
+          "evidence_id": "ev_0019"
+        },
+        {
+          "platform": "iOS",
+          "status": "inferred",
+          "reason": "Expo 项目通常可支持 iOS，但 repo 中未发现明确 iOS bundle 配置。",
+          "sources": [
+            "app.json"
+          ],
+          "evidence_id": "ev_0020"
+        },
+        {
+          "platform": "Web/H5",
+          "status": "observed",
+          "reason": "发现 Web/H5 入口或相关源码。",
+          "sources": [
+            "index.html",
+            "tests/smoke/h5-white-screen.spec.js"
+          ],
+          "evidence_id": "ev_0021"
+        },
+        {
+          "platform": "React Native/Expo",
+          "status": "observed",
+          "reason": "package.json 包含 React Native/Expo 依赖。",
+          "sources": [
+            "package.json"
+          ],
+          "evidence_id": "ev_0022"
+        },
+        {
+          "platform": "uni-app",
+          "status": "observed",
+          "reason": "发现 uni-app manifest 或 mobile 工程目录。",
+          "sources": [
+            "mobile/manifest.json"
+          ],
+          "evidence_id": "ev_0023"
+        }
+      ],
+      "reason": "发现平台证据。",
+      "evidence_ids": [
+        "ev_0019",
+        "ev_0020",
+        "ev_0021",
+        "ev_0022",
+        "ev_0023"
+      ],
+      "human_action": "确认哪些平台属于本次上架/发布范围，尤其是仅由框架能力推断的平台。"
+    },
+    "privacy": {
+      "status": "inferred",
+      "value": {
+        "data_categories": [
+          "账号/个人资料",
+          "设备/推送标识",
+          "内容行为/阅读状态",
+          "订阅/支付/权益",
+          "活动/分析事件"
+        ],
+        "third_party_sdk_candidates": [
+          "expo",
+          "uni_app"
+        ],
+        "android_permissions": []
+      },
+      "sdk_candidates": [
+        {
+          "name": "expo",
+          "dependencies": [
+            "expo",
+            "expo-dev-client"
+          ],
+          "paths": [
+            "scripts/bootstrap/export-mobile-runtime-fixtures.mjs",
+            "scripts/bootstrap/export-mobile-runtime-fixtures.ps1",
+            "scripts/content/export-runtime-scenarios.mjs",
+            "scripts/content/export-runtime-scenarios.ps1",
+            "scripts/ops/export-runtime-dist.mjs"
+          ],
+          "evidence_id": "ev_0024"
+        },
+        {
+          "name": "uni_app",
+          "dependencies": [],
+          "paths": [
+            "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/index.obj.js",
+            "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/package.json",
+            "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/index.js",
+            "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/package.json",
+            "mobile/uniCloud-aliyun/cloudfunctions/device-sync-co/index.obj.js"
+          ],
+          "evidence_id": "ev_0025"
+        }
+      ],
+      "data_signal_candidates": [
+        {
+          "category": "账号/个人资料",
+          "signals": [
+            {
+              "source": "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/index.js",
+              "matched": "auth",
+              "where": "path"
+            },
+            {
+              "source": "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/package.json",
+              "matched": "auth",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/auth-refresh.mjs",
+              "matched": "auth",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/auth-session.mjs",
+              "matched": "auth",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/auth-signout.mjs",
+              "matched": "auth",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/profile-benefits.mjs",
+              "matched": "profile",
+              "where": "path"
+            }
+          ],
+          "evidence_id": "ev_0026"
+        },
+        {
+          "category": "设备/推送标识",
+          "signals": [
+            {
+              "source": "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/index.obj.js",
+              "matched": "device",
+              "where": "path"
+            },
+            {
+              "source": "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/package.json",
+              "matched": "device",
+              "where": "path"
+            },
+            {
+              "source": "admin/pages-generated/device_installations.generated.json",
+              "matched": "device[_-]?installations?",
+              "where": "path"
+            },
+            {
+              "source": "admin/pages-generated/notification_campaigns.generated.json",
+              "matched": "notification",
+              "where": "path"
+            },
+            {
+              "source": "admin/pages-generated/notification_deliveries.generated.json",
+              "matched": "notification",
+              "where": "path"
+            },
+            {
+              "source": "admin/pages-generated/notification_inbox.generated.json",
+              "matched": "notification",
+              "where": "path"
+            }
+          ],
+          "evidence_id": "ev_0027"
+        },
+        {
+          "category": "内容行为/阅读状态",
+          "signals": [
+            {
+              "source": "admin/pages-generated/user_content_state.generated.json",
+              "matched": "user[_-]?content[_-]?state",
+              "where": "path"
+            },
+            {
+              "source": "admin/pages-generated/user_follows.generated.json",
+              "matched": "follows?",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/content-resume.mjs",
+              "matched": "content[-_]?resume",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/follow-catalog.mjs",
+              "matched": "follows?",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/follow-toggle.mjs",
+              "matched": "follows?",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/save-for-later.mjs",
+              "matched": "save[-_]?for[-_]?later",
+              "where": "path"
+            }
+          ],
+          "evidence_id": "ev_0028"
+        },
+        {
+          "category": "订阅/支付/权益",
+          "signals": [
+            {
+              "source": "admin/pages-generated/pricing_plans.generated.json",
+              "matched": "pricing",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/entitlement-snapshot.mjs",
+              "matched": "entitlement",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/pricing-preview.mjs",
+              "matched": "pricing",
+              "where": "path"
+            },
+            {
+              "source": "database/entitlements.schema.json",
+              "matched": "entitlement",
+              "where": "path"
+            },
+            {
+              "source": "database/payment_orders.schema.json",
+              "matched": "payment",
+              "where": "path"
+            },
+            {
+              "source": "database/pricing_plans.schema.json",
+              "matched": "pricing",
+              "where": "path"
+            }
+          ],
+          "evidence_id": "ev_0029"
+        },
+        {
+          "category": "活动/分析事件",
+          "signals": [
+            {
+              "source": "admin/pages-generated/experiments.generated.json",
+              "matched": "experiment",
+              "where": "path"
+            },
+            {
+              "source": "backend/surfaces/experiment-assign.mjs",
+              "matched": "experiment",
+              "where": "path"
+            },
+            {
+              "source": "database/event_logs_raw.schema.json",
+              "matched": "event[_-]?logs?",
+              "where": "path"
+            },
+            {
+              "source": "database/event_metrics_daily.schema.json",
+              "matched": "metrics",
+              "where": "path"
+            },
+            {
+              "source": "database/experiment_assignments.schema.json",
+              "matched": "experiment",
+              "where": "path"
+            },
+            {
+              "source": "database/experiments.schema.json",
+              "matched": "experiment",
+              "where": "path"
+            }
+          ],
+          "evidence_id": "ev_0030"
+        }
+      ],
+      "document_evidence": [],
+      "evidence_ids": [
+        "ev_0024",
+        "ev_0025",
+        "ev_0026",
+        "ev_0027",
+        "ev_0028",
+        "ev_0029",
+        "ev_0030"
+      ],
+      "reason": "发现隐私/数据/SDK 相关证据，但是否收集、用途、共享、追踪仍需人工确认。",
+      "human_action": "补充并确认：实际收集的数据、是否关联身份、是否追踪、是否共享、第三方 SDK 用途、隐私政策 URL。"
+    },
+    "account_system": {
+      "status": "needs_human",
+      "value": {
+        "account_signals_found": true,
+        "must_login": "NEED_HUMAN"
+      },
+      "signals": [
+        {
+          "source": "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/index.obj.js",
+          "matched": "register",
+          "where": "content",
+          "excerpt": "iceRecord?.last_update_date || null, uid }; } module.exports = { async registerDevice(params = {}) { const pushClientId = typeof params.pushClientId === 's"
+        },
+        {
+          "source": "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/index.js",
+          "matched": "\\bauth\\b",
+          "where": "path"
+        },
+        {
+          "source": "mobile/uniCloud-tcb/cloudfunctions/h0_5-web-auth-smoke/package.json",
+          "matched": "\\bauth\\b",
+          "where": "path"
+        },
+        {
+          "source": "admin/src/main.js",
+          "matched": "\\bauth\\b",
+          "where": "content",
+          "excerpt": "<p>Stage H0 keeps admin on generated/manual dual rails and adds remote runtime, auth, device, and push foundation inspection on top of the local fixture-backed base"
+        },
+        {
+          "source": "admin/src/modules/generated/render-generated.js",
+          "matched": "register",
+          "where": "content",
+          "excerpt": "\"> <h2>Missing Generated Resource</h2> <p>${resourceKey} is not registered in the generated track.</p> </div> `; } return ` <div clas"
+        },
+        {
+          "source": "admin/src/modules/manual/manual-registry.js",
+          "matched": "\\bauth\\b",
+          "where": "content",
+          "excerpt": "ing shell\" }, { moduleKey: \"auth_session_config_inspector\", title: \"Auth Session Config Inspector\", reason: \"auth session seam and refresh shell\""
+        },
+        {
+          "source": "admin/src/modules/manual/render-manual.js",
+          "matched": "\\bauth\\b",
+          "where": "content",
+          "excerpt": "inbox stays canonical.\", auth_session_config_inspector: \"Shows uni-id-ready auth session, refresh, and signout contract placeholders without introducing a full"
+        },
+        {
+          "source": "backend/surfaces/auth-refresh.mjs",
+          "matched": "\\bauth\\b",
+          "where": "path"
+        },
+        {
+          "source": "backend/surfaces/auth-session.mjs",
+          "matched": "\\bauth\\b",
+          "where": "path"
+        },
+        {
+          "source": "backend/surfaces/auth-signout.mjs",
+          "matched": "\\bauth\\b",
+          "where": "path"
+        },
+        {
+          "source": "backend/surfaces/profile-benefits.mjs",
+          "matched": "profile",
+          "where": "path"
+        },
+        {
+          "source": "backend/surfaces/register-device.mjs",
+          "matched": "register",
+          "where": "path"
+        }
+      ],
+      "mandatory_login_signals": [],
+      "document_evidence": [],
+      "evidence_ids": [
+        "ev_0031"
+      ],
+      "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+      "human_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+    },
+    "subscription_iap": {
+      "status": "inferred",
+      "value": {
+        "monetization_signals_found": true,
+        "has_iap_or_subscription": "LIKELY_YES"
+      },
+      "signals": [
+        {
+          "source": "admin/pages-generated/pricing_plans.generated.json",
+          "matched": "pricing",
+          "where": "path"
+        },
+        {
+          "source": "admin/pages-generated/registry.generated.json",
+          "matched": "pricing",
+          "where": "content",
+          "excerpt": "sourceOfTruth\": \"database/articles.schema.json\" }, { \"resource\": \"pricing_plans\", \"track\": \"generated\", \"sourceOfTruth\": \"database/pricing_pl"
+        },
+        {
+          "source": "admin/src/modules/generated/generated-registry.js",
+          "matched": "pricing",
+          "where": "content",
+          "excerpt": "\"sourceOfTruth\": \"database/articles.schema.json\" }, { \"resource\": \"pricing_plans\", \"track\": \"generated\", \"sourceOfTruth\": \"database/pricing_plans."
+        },
+        {
+          "source": "admin/src/modules/manual/manual-registry.js",
+          "matched": "pricing",
+          "where": "content",
+          "excerpt": "view\", reason: \"safe audience fallback inspection\" }, { moduleKey: \"pricing_rule_inspector\", title: \"Pricing Rule Inspector\", reason: \"pricing prec"
+        },
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "matched": "entitlement",
+          "where": "path"
+        },
+        {
+          "source": "backend/surfaces/pricing-preview.mjs",
+          "matched": "pricing",
+          "where": "path"
+        },
+        {
+          "source": "data/real-content/barrons/09022026/normalized/article-016.json",
+          "matched": "订阅",
+          "where": "content",
+          "excerpt": "首席经济学家托马斯·哈兹莱特（Thomas Hazlett）指出，这种视角已然过时。\\n\\n市场份额的重新锚定： 尽管奈飞与 WBD 合并后将拥有近三成的流媒体订阅份额，但若将视野放大至整个视频消费领域，YouTube 才是真正的王者。按观看时长计算，YouTube 占据 13% 的市场份额，而合并后的奈飞实体仅为 9%。"
+        },
+        {
+          "source": "data/real-content/barrons/09022026/normalized/article-017.json",
+          "matched": "权益",
+          "where": "content",
+          "excerpt": "移影响，美元自 2025 年开启的贬值趋势可能持续十年。相比科技股过载的 S&P 500 指数，海外市场展现出更佳的估值吸引力。研究表明，将组合中约 35% 的权益资产配置于非美公司（如 VEU 等全球化 ETF），或增持海外收入占比超 40% 的跨国企业，能有效对冲单一货币风险。同时需辩证看待 AI：它虽在短期内冲击软件"
+        },
+        {
+          "source": "data/real-content/the_economist/20260314/normalized/article-008.json",
+          "matched": "支付",
+          "where": "content",
+          "excerpt": "。\", \"deep_3m\": \"- 社会保障与贫困陷阱： 哈佛大学教授指出，简单地将实物福利折算为收入来衡量减贫成效具有误导性。真正的贫困缓解不应仅依赖转移支付，而应通过提升公共教育、医疗和安全等公共产品供应，打破 1940 年代至 1980 年代间显著收窄的跨代流动性僵局。\\n- 代议制机构的效能瓶颈： 随着美国众议"
+        },
+        {
+          "source": "data/real-content/the_economist/20260314/normalized/article-012.json",
+          "matched": "支付",
+          "where": "content",
+          "excerpt": "经济命脉。\", \"deep_3m\": \"- 债务泥潭与财政承压： 在冲突爆发前，巴林的公共债务已攀升至 GDP 的 146%，约三分之一的政府财政收入被用于支付债务利息。当前地区冲突导致基础设施损毁，财政赤字预计将突破 GDP 的 10%，主权信用风险激增。\\n- 支柱产业的物理性瘫痪： 石油与铝业占据巴林政府收入的"
+        },
+        {
+          "source": "data/real-content/the_economist/20260314/normalized/article-035.json",
+          "matched": "试用",
+          "where": "content",
+          "excerpt": "舰，在这么窄的地方也很难发现这些躲在石头缝里的“小麻烦”。\\n- 能源的“蝴蝶效应”： 因为大船不敢走，石油送不出去，这会导致全球的能源价格上涨。科学家们正在尝试用最先进的扫雷机器人去清理航道，但海里的环境非常复杂，这就像是在黑漆漆的房间里找一根掉在地上的针。\\n- 未来的启示： 这场危机告诉我们，人类对单一航道的依赖是非"
+        },
+        {
+          "source": "data/real-content/the_economist/20260314/normalized/article-038.json",
+          "matched": "trial",
+          "where": "content",
+          "excerpt": "uth/038_Europe.md\", \"title\": \"土耳其：地缘博弈中的“权力审判”\", \"original_title\": \"Europe: Trial of strength\", \"summary\": \"2026 年 3 月，土耳其反对党领袖伊马姆奥卢（Ekrem Imamoglu）面临长达数千年的刑期审"
+        }
+      ],
+      "document_evidence": [],
+      "evidence_ids": [
+        "ev_0032"
+      ],
+      "reason": "发现订阅/支付/权益信号，但上架版本是否启用 IAP/订阅/试用仍需人工确认。",
+      "human_action": "确认是否有 IAP、订阅、试用、价格、支付渠道，以及 Google Play Billing 合规路径。"
+    },
+    "support": {
+      "status": "missing",
+      "value": "NEED_HUMAN",
+      "candidates": [],
+      "document_evidence": [],
+      "evidence_ids": [],
+      "reason": "未发现 support URL、email 或 FAQ。",
+      "human_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+    },
+    "screenshot_demo_data": {
+      "status": "observed",
+      "value": {
+        "policy": "截图必须来自真实 app UI；可使用种子文章、出版物、关注与收藏数据，但不能展示尚未实现的功能。",
+        "exampleSources": [
+          "mobile/fixtures/runtime",
+          "backend/adapters/fixture-repository.mjs"
+        ]
+      },
+      "signals": [],
+      "evidence_ids": [
+        "ev_0033"
+      ],
+      "reason": "显式 launch info 提供了截图 demo 数据。",
+      "human_action": ""
+    }
+  },
+  "blockers": [
+    {
+      "field_id": "account_system",
+      "label": "账号系统",
+      "status": "needs_human",
+      "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+      "unblock_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+    },
+    {
+      "field_id": "support",
+      "label": "支持方式",
+      "status": "missing",
+      "reason": "未发现 support URL、email 或 FAQ。",
+      "unblock_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+    }
+  ],
+  "limitations": [
+    "inferred 字段需要人类复核后才能作为最终商店信息。",
+    "本输出只作为上架信息收集结果，不执行任何发布动作。",
+    "隐私、账号、订阅和支持方式必须由产品/法务/运营 owner 最终确认。"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "google-data-safety-agent",
+  "step_index": 6,
+  "agno_step_id": "06-google-data-safety-agent",
+  "agno_step_name": "google-data-safety-agent",
+  "skill_path": ".agents/skills/google-data-safety-agent/SKILL.md",
+  "skill_hash": "62a149f85363365cd0a4e27972417b0917f9ed85373cfab7914cc603caf3afe1",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:20:43Z",
+    "completed_at": "2026-06-17T09:22:57Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/model-output.json"
+    ],
+    "prompt_id": "google-data-safety-agent.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "32757ffa6ec4a1e89dc904ce7c08b6ced7f37d8d5b68b42ba1a5a63d65b8befa",
+    "input_evidence_ids": [
+      "google-data-safety-agent.evidence.01",
+      "google-data-safety-agent.evidence.02",
+      "google-data-safety-agent.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:20:43Z",
+    "completed_at": "2026-06-17T09:22:57Z",
+    "duration_ms": 134148
+  },
+  "ai_summary": "当前仅有证据显示 3 个 Data Safety 相关文件缺失；因此本步骤只能形成草稿状态说明，所有 Data Safety 判断均保持 unknown / needs_human，不能把未知项写成未收集数据。",
+  "claims": [
+    {
+      "claim_id": "google-data-safety-agent.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "google-data-safety-agent.evidence.01",
+        "google-data-safety-agent.evidence.02",
+        "google-data-safety-agent.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "google-data-safety-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "google-data-safety-agent.evidence.01",
+        "google-data-safety-agent.evidence.02",
+        "google-data-safety-agent.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "google-data-safety-agent",
+      "claim_id": "google-data-safety-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "Data Safety 草稿 仍需要人工确认。",
+      "impact": "Data Safety 只能保持 evidence draft，不能视为商店答案。",
+      "unblock_action": "owner/Pro 按 Play Console 问题逐项确认 Data Safety、SDK、儿童家庭和广告追踪答案。",
+      "evidence_refs": [
+        "google-data-safety-agent.evidence.01",
+        "google-data-safety-agent.evidence.02",
+        "google-data-safety-agent.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-data-safety-agent/summary.zh.md"
+  }
+}

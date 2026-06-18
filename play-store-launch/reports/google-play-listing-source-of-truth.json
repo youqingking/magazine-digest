@@ -1,0 +1,143 @@
+{
+  "schema_version": "google_play_listing_source_of_truth.v2",
+  "status": "draft",
+  "can_submit_google_play": false,
+  "submission_attempted": false,
+  "official_requirements": {
+    "appName": "Google Play app title <= 30 characters.",
+    "shortDescription": "Google Play short description <= 80 characters.",
+    "fullDescription": "Google Play full description <= 4000 characters.",
+    "appIcon": "512x512 PNG, 32-bit, <= 1024KB.",
+    "featureGraphic": "1024x500 JPEG or 24-bit PNG.",
+    "screenshots": "At least 2 screenshots for the target form factor; screenshots should show real app experience.",
+    "video": "Promo video is optional preview media.",
+    "metadataPolicy": "Do not use misleading, irrelevant, excessively formatted, inappropriate, ranking, price, or promotional metadata."
+  },
+  "app_identity": {
+    "app_name": "Magazine Digest",
+    "description": "Compile-targeted placeholder shell aligned with Stage B contracts.",
+    "package": "com.daowei2026.magazinedigest",
+    "sources": [
+      {
+        "source": "app.json",
+        "type": "expo_or_app_json",
+        "appName": "Magazine Digest",
+        "description": null,
+        "package": "com.daowei2026.magazinedigest"
+      },
+      {
+        "source": "package.json",
+        "type": "package_json",
+        "appName": "magazine-digest",
+        "description": null,
+        "package": "magazine-digest"
+      },
+      {
+        "source": "mobile/manifest.json",
+        "type": "uni_app_manifest",
+        "appName": "高效阅读",
+        "description": "Compile-targeted placeholder shell aligned with Stage B contracts.",
+        "package": "__UNI__005A993"
+      }
+    ],
+    "warnings": [
+      "description 看起来像工程占位描述，不能直接作为商店描述。"
+    ]
+  },
+  "listing_metadata_sources": {
+    "en-US": {
+      "source": "play-store-launch/inputs/google-play-listing.json",
+      "appName": "Magazine Digest",
+      "shortDescription": "Save, search, and continue reading magazine digests on mobile.",
+      "fullDescription": "Magazine Digest helps readers keep up with long-form magazine content in one mobile place.\n\nUse it to browse publication and article collections, open concise article details, continue reading from saved progress, follow topics or publications, and manage saved items for later.\n\nThe app also includes account, profile, notification preference, inbox, and entitlement surfaces that are visible in the current app evidence. Subscription availability, pricing, privacy policy, support contact, and public screenshot copy still require owner review before public store use.",
+      "privacyPolicyUrl": "NEED_HUMAN",
+      "contactEmail": "NEED_HUMAN",
+      "category": "News & Magazines",
+      "contentRating": "NEED_HUMAN",
+      "targetAudience": "Adults and general readers",
+      "video": null
+    }
+  },
+  "listing_drafts": {
+    "en-US": {
+      "locale": "en-US",
+      "status": "draft",
+      "source": "play-store-launch/inputs/google-play-listing.json",
+      "appName": "Magazine Digest",
+      "shortDescription": "Save, search, and continue reading magazine digests on mobile.",
+      "fullDescription": "Magazine Digest helps readers keep up with long-form magazine content in one mobile place.\n\nUse it to browse publication and article collections, open concise article details, continue reading from saved progress, follow topics or publications, and manage saved items for later.\n\nThe app also includes account, profile, notification preference, inbox, and entitlement surfaces that are visible in the current app evidence. Subscription availability, pricing, privacy policy, support contact, and public screenshot copy still require owner review before public store use.",
+      "privacyPolicyUrl": "NEED_HUMAN",
+      "contactEmail": "NEED_HUMAN",
+      "category": "News & Magazines",
+      "contentRating": "NEED_HUMAN",
+      "targetAudience": "Adults and general readers",
+      "video": null,
+      "draft_only": true,
+      "can_use_for_submission": false
+    }
+  },
+  "preview_assets": {
+    "app_icon": {
+      "status": "blocked",
+      "reason": "未发现 512x512、32-bit PNG、<=1024KB 的 app icon。",
+      "candidates": [],
+      "valid_candidates": []
+    },
+    "feature_graphic": {
+      "status": "blocked",
+      "reason": "未发现 1024x500 JPEG 或 24-bit PNG feature graphic。",
+      "candidates": [],
+      "valid_candidates": []
+    },
+    "screenshots": {
+      "status": "blocked",
+      "reason": "未发现至少 2 张 screenshot 候选。",
+      "candidate_count": 0,
+      "valid_candidate_count": 0,
+      "candidates": [],
+      "valid_candidates": []
+    },
+    "video": {
+      "status": "optional_missing",
+      "reason": "Promo video 是可选素材；当前未发现视频候选。",
+      "candidates": []
+    }
+  },
+  "human_required_fields": {
+    "privacy_policy_url": {
+      "value": "NEED_HUMAN",
+      "status": "candidate_found",
+      "human_review_required": true,
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。"
+    },
+    "developer_contact_email": {
+      "value": "NEED_HUMAN",
+      "status": "candidate_found",
+      "human_review_required": true,
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。"
+    },
+    "category": {
+      "value": "News & Magazines",
+      "status": "candidate_found",
+      "human_review_required": true,
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。"
+    },
+    "content_rating": {
+      "value": "NEED_HUMAN",
+      "status": "candidate_found",
+      "human_review_required": true,
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。"
+    },
+    "target_audience": {
+      "value": "Adults and general readers",
+      "status": "candidate_found",
+      "human_review_required": true,
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。"
+    }
+  },
+  "limitations": [
+    "listing draft 不代表 Google Play 最终批准。",
+    "listing draft 不代表可以提交 Play Console。",
+    "隐私政策、开发者联系、类目、内容分级、目标用户、品牌授权和截图文案仍需人工审核。"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "launch_info_input.v1",
+  "status": "draft_owner_review_required",
+  "appName": "Magazine Digest",
+  "alternateNames": [
+    "高效阅读"
+  ],
+  "positioning": "为重度阅读者整理杂志长文摘要、续读进度和收藏内容的移动阅读工具",
+  "coreFeatures": [
+    "聚合杂志文章与出版物内容，支持发现和搜索",
+    "提供文章摘要、详情页和继续阅读记录",
+    "支持关注、收藏和稍后阅读等个人阅读管理",
+    "提供订阅权益、付费计划和会员状态展示",
+    "通过通知收件箱和偏好设置管理内容提醒"
+  ],
+  "targetUsers": [
+    "重度杂志与长文读者",
+    "希望快速筛选和继续阅读内容的移动端用户",
+    "需要管理关注、收藏和阅读记录的内容消费者"
+  ],
+  "supportedPlatforms": [
+    "Android"
+  ],
+  "screenshotDemoData": {
+    "policy": "截图必须来自真实 app UI；可使用种子文章、出版物、关注与收藏数据，但不能展示尚未实现的功能。",
+    "exampleSources": [
+      "mobile/fixtures/runtime",
+      "backend/adapters/fixture-repository.mjs"
+    ]
+  },
+  "ownerReviewRequired": [
+    "是否必须登录以及账号删除/注销是否面向生产版本开放",
+    "公开 support URL、support email 或 FAQ/help center",
+    "隐私政策 URL、Data safety 最终答案、内容分级和目标年龄"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "firebase": {
+    "patterns": ["firebase", "@react-native-firebase/app", "@react-native-firebase/analytics", "firebase-analytics"],
+    "category": "analytics",
+    "third_party": "Google Firebase",
+    "data_categories": ["App activity", "Device or other IDs"],
+    "risk": "analytics_or_crash"
+  },
+  "crashlytics": {
+    "patterns": ["crashlytics", "@react-native-firebase/crashlytics"],
+    "category": "crash_reporting",
+    "third_party": "Google Firebase Crashlytics",
+    "data_categories": ["App info and performance", "Device or other IDs"],
+    "risk": "crash_reporting"
+  },
+  "sentry": {
+    "patterns": ["sentry", "@sentry/react-native", "@sentry/browser", "@sentry/node"],
+    "category": "crash_reporting",
+    "third_party": "Sentry",
+    "data_categories": ["App info and performance", "Device or other IDs"],
+    "risk": "crash_reporting"
+  },
+  "revenuecat": {
+    "patterns": ["revenuecat", "react-native-purchases", "purchases-ios", "purchases-android"],
+    "category": "subscription",
+    "third_party": "RevenueCat",
+    "data_categories": ["Financial info", "Personal info", "Device or other IDs"],
+    "risk": "payment_or_subscription"
+  },
+  "admob": {
+    "patterns": ["admob", "google-mobile-ads", "react-native-google-mobile-ads", "play-services-ads"],
+    "category": "ads",
+    "third_party": "Google AdMob",
+    "data_categories": ["Device or other IDs", "App activity"],
+    "risk": "ads_tracking_candidate"
+  },
+  "appsflyer": {
+    "patterns": ["appsflyer", "react-native-appsflyer"],
+    "category": "attribution",
+    "third_party": "AppsFlyer",
+    "data_categories": ["Device or other IDs", "App activity"],
+    "risk": "tracking_candidate"
+  },
+  "adjust": {
+    "patterns": ["adjust", "react-native-adjust"],
+    "category": "attribution",
+    "third_party": "Adjust",
+    "data_categories": ["Device or other IDs", "App activity"],
+    "risk": "tracking_candidate"
+  },
+  "amplitude": {
+    "patterns": ["amplitude", "@amplitude/analytics-react-native", "@amplitude/analytics-browser"],
+    "category": "analytics",
+    "third_party": "Amplitude",
+    "data_categories": ["App activity", "Device or other IDs"],
+    "risk": "analytics"
+  },
+  "mixpanel": {
+    "patterns": ["mixpanel", "mixpanel-react-native"],
+    "category": "analytics",
+    "third_party": "Mixpanel",
+    "data_categories": ["App activity", "Device or other IDs"],
+    "risk": "analytics"
+  },
+  "segment": {
+    "patterns": ["segment", "@segment/analytics-react-native", "analytics-react-native"],
+    "category": "analytics",
+    "third_party": "Segment",
+    "data_categories": ["App activity", "Device or other IDs"],
+    "risk": "analytics"
+  },
+  "posthog": {
+    "patterns": ["posthog", "posthog-react-native", "posthog-js"],
+    "category": "analytics",
+    "third_party": "PostHog",
+    "data_categories": ["App activity", "Device or other IDs"],
+    "risk": "analytics"
+  },
+  "supabase": {
+    "patterns": ["supabase", "@supabase/supabase-js"],
+    "category": "database_backend",
+    "third_party": "Supabase",
+    "data_categories": ["Personal info", "App activity"],
+    "risk": "backend_or_auth"
+  },
+  "expo-notifications": {
+    "patterns": ["expo-notifications", "firebase-messaging", "@react-native-firebase/messaging"],
+    "category": "push_notification",
+    "third_party": "Push notification provider",
+    "data_categories": ["Device or other IDs", "Messages"],
+    "risk": "push_token"
+  },
+  "expo-location": {
+    "patterns": ["expo-location", "react-native-geolocation", "play-services-location"],
+    "category": "maps_location",
+    "third_party": "Location services provider",
+    "data_categories": ["Location"],
+    "risk": "location"
+  },
+  "stripe": {
+    "patterns": ["stripe", "@stripe/stripe-react-native"],
+    "category": "payment",
+    "third_party": "Stripe",
+    "data_categories": ["Financial info", "Personal info"],
+    "risk": "payment"
+  }
+}

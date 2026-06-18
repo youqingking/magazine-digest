@@ -1,0 +1,1028 @@
+{
+  "schema_version": "screenshot_capture_agent.v1",
+  "generated_at": "2026-06-17T15:21:33Z",
+  "capture_status": "blocked",
+  "root": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
+  "project_fingerprint": {
+    "git_commit": "b1d7c7ff5ae38633ee454e11bd323c6c012510f5",
+    "skill_path": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/.codex/skills/screenshot-capture-agent/SKILL.md",
+    "skill_scanner": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/.codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py"
+  },
+  "tooling": {
+    "adb_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+    "adb_available": true
+  },
+  "device_inventory": {
+    "selected_serial": "emulator-5554",
+    "devices": [
+      {
+        "serial": "emulator-5554",
+        "state": "device",
+        "descriptors": {
+          "product": "sdk_gphone64_x86_64",
+          "model": "sdk_gphone64_x86_64",
+          "device": "emu64xa",
+          "transport_id": "2"
+        },
+        "model": "sdk_gphone64_x86_64",
+        "wm_size": "Physical size: 1080x2400",
+        "locale": ""
+      }
+    ]
+  },
+  "target_app": {
+    "package_candidates": [
+      {
+        "package": "com.daowei2026.magazinedigest",
+        "source": "app.json",
+        "role": "declared_release_package"
+      },
+      {
+        "package": "io.dcloud.HBuilder",
+        "source": "mobile/manifest.json",
+        "role": "hbuilderx_debug_container_for___UNI__005A993"
+      }
+    ],
+    "installed_candidates": [
+      {
+        "package": "io.dcloud.HBuilder",
+        "source": "mobile/manifest.json",
+        "role": "hbuilderx_debug_container_for___UNI__005A993",
+        "pm_path": "package:/data/app/~~8QRu0VUMkP113FR9KVR8CQ==/io.dcloud.HBuilder-92AUwsYK3t-HLJkfHEpCtA==/base.apk",
+        "evidence_refs": [
+          "evidence.0006"
+        ]
+      }
+    ],
+    "selected_package": "io.dcloud.HBuilder",
+    "selected_package_role": "hbuilderx_debug_container_for___UNI__005A993",
+    "capture_build_type": "debug_container",
+    "foreground": {
+      "package": "com.google.android.apps.nexuslauncher",
+      "activity": ".NexusLauncherActivity",
+      "raw_match": "mFocusedApp=ActivityRecord{fc52215 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity"
+    },
+    "foreground_matches_target": false
+  },
+  "upstream_storyboard": {
+    "status": "observed_in_repo",
+    "path": "play-store-launch/reports/screenshot-capture-handoff.json",
+    "schema_version": "screenshot_capture_handoff.v1",
+    "produced_by": "screenshot-storyboard",
+    "expected_downstream_skill": "screenshot-capture-agent",
+    "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
+    "recommended_capture_command": "python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json",
+    "blockers": [
+      {
+        "blocker_id": "release_gate_not_passed",
+        "status": "blocked",
+        "review_status": "NEED_HUMAN",
+        "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+        "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+        "evidence_refs": [
+          "evidence.0057"
+        ]
+      },
+      {
+        "blocker_id": "raw_screenshots_not_captured",
+        "status": "blocked",
+        "review_status": "NEED_HUMAN",
+        "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+        "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+        "evidence_refs": [
+          "evidence.0059"
+        ]
+      },
+      {
+        "blocker_id": "privacy_or_target_audience_needs_human",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+        "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
+        "evidence_refs": [
+          "evidence.0058"
+        ]
+      }
+    ],
+    "human_review_gates": [
+      {
+        "gate_id": "human.screenshot.public_use",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
+        "evidence_refs": [
+          "evidence.0002",
+          "evidence.0029",
+          "evidence.0055",
+          "evidence.0056",
+          "evidence.0004",
+          "evidence.0031",
+          "evidence.0003",
+          "evidence.0030",
+          "evidence.0007",
+          "evidence.0034"
+        ]
+      },
+      {
+        "gate_id": "human.screenshot.google_play_specs",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。",
+        "evidence_refs": []
+      },
+      {
+        "gate_id": "human.screenshot.trademark_content_authorization",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
+        "evidence_refs": [
+          "evidence.0055"
+        ]
+      },
+      {
+        "gate_id": "human.screenshot.capture_execution",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。",
+        "evidence_refs": []
+      },
+      {
+        "gate_id": "human.release_context",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
+        "evidence_refs": [
+          "evidence.0057"
+        ]
+      },
+      {
+        "gate_id": "human.held_shots",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
+        "evidence_refs": [
+          "evidence.0008",
+          "evidence.0035",
+          "evidence.0005",
+          "evidence.0032",
+          "evidence.0006",
+          "evidence.0033",
+          "evidence.0009",
+          "evidence.0036",
+          "evidence.0010",
+          "evidence.0037",
+          "evidence.0011",
+          "evidence.0038"
+        ]
+      }
+    ],
+    "evidence_refs": [
+      "evidence.0009"
+    ]
+  },
+  "navigation": {
+    "navigation_verified": false,
+    "shot_id_filter": "",
+    "allow_multi_shot_current_screen": false
+  },
+  "shot_plan": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "route": "pages/feed/index",
+      "route_path": "pages/feed/index",
+      "route_params": {},
+      "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+      "title": "首页",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/feed/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+      ],
+      "visible_evidence": [
+        "首页/效率阅读入口",
+        "文章标题或摘要卡片",
+        "30 秒先读",
+        "消息摘要入口"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Feed 诊断信息",
+        "debug/diagnostic 信息",
+        "开发态或诊断信息",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "source_schema": "",
+      "planned_route_from_storyboard": true,
+      "navigation_verified": false,
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0011"
+      ]
+    },
+    {
+      "shot_id": "shot_02_detail_deep_read",
+      "route": "pages/detail/index",
+      "route_path": "pages/detail/index",
+      "route_params": {
+        "articleId": "art_barrons_09022026_004",
+        "readingMode": "deep_3m",
+        "source": "storyboard"
+      },
+      "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+      "title": "3分钟精读",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/detail/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+      ],
+      "visible_evidence": [
+        "3 分钟精读标题",
+        "文章标题",
+        "摘要/精读正文",
+        "阅读操作",
+        "示例文章来自 runtime fixture"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "支付信息",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "source_schema": "",
+      "planned_route_from_storyboard": true,
+      "navigation_verified": false,
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0012"
+      ]
+    },
+    {
+      "shot_id": "shot_03_sources_follow",
+      "route": "pages/search/index",
+      "route_path": "pages/search/index",
+      "route_params": {
+        "focus": "follows"
+      },
+      "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+      "title": "来源",
+      "claim_ids": [
+        "listing_claim_source_updates"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/search/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+      ],
+      "visible_evidence": [
+        "搜索文章、来源、期次、主题",
+        "关注杂志",
+        "来源结果",
+        "阅读深度筛选"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "source_schema": "",
+      "planned_route_from_storyboard": true,
+      "navigation_verified": false,
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0013"
+      ]
+    },
+    {
+      "shot_id": "shot_04_profile_summary",
+      "route": "pages/profile/index",
+      "route_path": "pages/profile/index",
+      "route_params": {},
+      "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+      "title": "我的",
+      "claim_ids": [
+        "listing_claim_inbox_profile_settings"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/profile/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+      ],
+      "visible_evidence": [
+        "阅读权益",
+        "未读消息",
+        "消息摘要",
+        "稍后再读",
+        "打开设置"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "source_schema": "",
+      "planned_route_from_storyboard": true,
+      "navigation_verified": false,
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0014"
+      ]
+    }
+  ],
+  "capture_attempts": [],
+  "screenshots": [],
+  "google_play_spec_checks": [],
+  "claims": [
+    {
+      "claim_id": "screenshot.environment",
+      "question": "是否发现 adb 和 Android device/emulator",
+      "status": "observed_in_repo",
+      "claim_class": "C0",
+      "human_review_required": false,
+      "review_status": "AUTO_PARSED",
+      "value": {
+        "adb": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+        "selected_serial": "emulator-5554"
+      },
+      "confidence": 0.9,
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.upstream_storyboard",
+      "question": "是否消费上游 storyboard handoff/shot-list",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "review_status": "AUTO_PARSED",
+      "value": {
+        "handoff": {
+          "status": "observed_in_repo",
+          "path": "play-store-launch/reports/screenshot-capture-handoff.json",
+          "schema_version": "screenshot_capture_handoff.v1",
+          "produced_by": "screenshot-storyboard",
+          "expected_downstream_skill": "screenshot-capture-agent",
+          "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
+          "recommended_capture_command": "python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json",
+          "blockers": [
+            {
+              "blocker_id": "release_gate_not_passed",
+              "status": "blocked",
+              "review_status": "NEED_HUMAN",
+              "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+              "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+              "evidence_refs": [
+                "evidence.0057"
+              ]
+            },
+            {
+              "blocker_id": "raw_screenshots_not_captured",
+              "status": "blocked",
+              "review_status": "NEED_HUMAN",
+              "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+              "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+              "evidence_refs": [
+                "evidence.0059"
+              ]
+            },
+            {
+              "blocker_id": "privacy_or_target_audience_needs_human",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+              "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
+              "evidence_refs": [
+                "evidence.0058"
+              ]
+            }
+          ],
+          "human_review_gates": [
+            {
+              "gate_id": "human.screenshot.public_use",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
+              "evidence_refs": [
+                "evidence.0002",
+                "evidence.0029",
+                "evidence.0055",
+                "evidence.0056",
+                "evidence.0004",
+                "evidence.0031",
+                "evidence.0003",
+                "evidence.0030",
+                "evidence.0007",
+                "evidence.0034"
+              ]
+            },
+            {
+              "gate_id": "human.screenshot.google_play_specs",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。",
+              "evidence_refs": []
+            },
+            {
+              "gate_id": "human.screenshot.trademark_content_authorization",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
+              "evidence_refs": [
+                "evidence.0055"
+              ]
+            },
+            {
+              "gate_id": "human.screenshot.capture_execution",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。",
+              "evidence_refs": []
+            },
+            {
+              "gate_id": "human.release_context",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
+              "evidence_refs": [
+                "evidence.0057"
+              ]
+            },
+            {
+              "gate_id": "human.held_shots",
+              "status": "needs_human",
+              "review_status": "NEED_HUMAN",
+              "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
+              "evidence_refs": [
+                "evidence.0008",
+                "evidence.0035",
+                "evidence.0005",
+                "evidence.0032",
+                "evidence.0006",
+                "evidence.0033",
+                "evidence.0009",
+                "evidence.0036",
+                "evidence.0010",
+                "evidence.0037",
+                "evidence.0011",
+                "evidence.0038"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            "evidence.0009"
+          ]
+        },
+        "shot_count": 4
+      },
+      "confidence": 0.9,
+      "evidence_refs": [
+        "evidence.0009"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.target_app",
+      "question": "是否发现并确认目标 app 前台运行",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "value": {
+        "selected_package": "io.dcloud.HBuilder",
+        "foreground": {
+          "package": "com.google.android.apps.nexuslauncher",
+          "activity": ".NexusLauncherActivity",
+          "raw_match": "mFocusedApp=ActivityRecord{fc52215 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity"
+        }
+      },
+      "confidence": 0.3,
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.route_navigation",
+      "question": "截图 route 是否由设备导航证据证明",
+      "status": "needs_human",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "value": {
+        "navigation_verified": false,
+        "planned_routes": [
+          "pages/feed/index",
+          "pages/detail/index",
+          "pages/search/index",
+          "pages/profile/index"
+        ]
+      },
+      "confidence": 0.3,
+      "evidence_refs": [
+        "evidence.0010"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.raw_capture",
+      "question": "是否真实捕获 raw PNG",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "value": {
+        "screenshot_count": 0
+      },
+      "confidence": 0.2,
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.google_play_specs",
+      "question": "截图是否满足 Google Play 基础规格候选",
+      "status": "blocked",
+      "claim_class": "C4",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "value": {
+        "checks": []
+      },
+      "confidence": 0.2,
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "screenshot.public_use",
+      "question": "截图是否可公开用于商店",
+      "status": "needs_human",
+      "claim_class": "C3",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "value": "所有公开使用必须人工审核。",
+      "confidence": 0.2,
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ],
+      "limitations": []
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.0001",
+      "source_type": "tooling",
+      "source_ref": "adb",
+      "observed_key": "adb.path",
+      "observed_value": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+      "parser": "which",
+      "snippet_hash": "sha256:33dea6e19958a5b461ea15872e9e20ee06f6a8d5b739c603546b5f074ad470a2",
+      "confidence": 1.0
+    },
+    {
+      "evidence_id": "evidence.0002",
+      "source_type": "command",
+      "source_ref": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE devices -l",
+      "observed_key": "adb.devices",
+      "observed_value": {
+        "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE devices -l",
+        "exit_code": 0,
+        "stdout_excerpt": "List of devices attached\nemulator-5554          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:2\n\n",
+        "stderr_excerpt": "",
+        "timed_out": false
+      },
+      "parser": "subprocess",
+      "snippet_hash": "sha256:195a9b9ba0c4c7a954946a2e7a237459e7d61c0e63117e5ffcd41c718e943673",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0003",
+      "source_type": "repo_config",
+      "source_ref": "app.json",
+      "observed_key": "package_candidate.com.daowei2026.magazinedigest",
+      "observed_value": {
+        "package": "com.daowei2026.magazinedigest",
+        "source": "app.json",
+        "role": "declared_release_package"
+      },
+      "parser": "json_or_default",
+      "snippet_hash": "sha256:3d9c997be27c703cff1a2bd2ed388b7ede400dc5c424235f53ea57b715bcc0ca",
+      "confidence": 0.8
+    },
+    {
+      "evidence_id": "evidence.0004",
+      "source_type": "repo_config",
+      "source_ref": "mobile/manifest.json",
+      "observed_key": "package_candidate.io.dcloud.HBuilder",
+      "observed_value": {
+        "package": "io.dcloud.HBuilder",
+        "source": "mobile/manifest.json",
+        "role": "hbuilderx_debug_container_for___UNI__005A993"
+      },
+      "parser": "json_or_default",
+      "snippet_hash": "sha256:b9c6cb2b55319c12abfd2ec678a0c0d8909bd35e1b8150a86aa655425281c425",
+      "confidence": 0.8
+    },
+    {
+      "evidence_id": "evidence.0005",
+      "source_type": "command",
+      "source_ref": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell pm path com.daowei2026.magazinedigest",
+      "observed_key": "pm.path.com.daowei2026.magazinedigest",
+      "observed_value": {
+        "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell pm path com.daowei2026.magazinedigest",
+        "exit_code": 1,
+        "stdout_excerpt": "",
+        "stderr_excerpt": "",
+        "timed_out": false
+      },
+      "parser": "subprocess",
+      "snippet_hash": "sha256:1b7a57330b5a9af2d4eec3238e7cdecbf036f09607d3c20e992e36162c9ac6ee",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0006",
+      "source_type": "command",
+      "source_ref": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell pm path io.dcloud.HBuilder",
+      "observed_key": "pm.path.io.dcloud.HBuilder",
+      "observed_value": {
+        "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell pm path io.dcloud.HBuilder",
+        "exit_code": 0,
+        "stdout_excerpt": "package:/data/app/~~8QRu0VUMkP113FR9KVR8CQ==/io.dcloud.HBuilder-92AUwsYK3t-HLJkfHEpCtA==/base.apk\n",
+        "stderr_excerpt": "",
+        "timed_out": false
+      },
+      "parser": "subprocess",
+      "snippet_hash": "sha256:495c9ac394a9741d19aac9057f4e52fd9985a5820fe28e95a1848a02bb3335d1",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0007",
+      "source_type": "command",
+      "source_ref": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell dumpsys window",
+      "observed_key": "dumpsys.window",
+      "observed_value": {
+        "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell dumpsys window",
+        "exit_code": 0,
+        "stdout_excerpt": "\nWINDOW MANAGER LAST ANR (dumpsys window lastanr)\n  <no ANR has occurred since boot>\n\nWINDOW MANAGER POLICY STATE (dumpsys window policy)\n    mSafeMode=false mSystemReady=true mSystemBooted=true\n    mCameraLensCoverState=CAMERA_LENS_COVER_ABSENT\n    mWakeGestureEnabledSetting=true\n    mUiMode=UI_MODE_TYPE_NORMALmEnableCarDockHomeCapture=false\n    mLidKeyboardAccessibility=0 mLidNavigationAccessibility=0 getLidBehavior=LID_BEHAVIOR_NONE\n    mLongPressOnBackBehavior=LONG_PRESS_BACK_NOTHING\n    mLongPressOnHomeBehavior=LONG_PRESS_HOME_NOTHING\n    mDoubleTapOnHomeBehavior=DOUBLE_TAP_HOME_NOTHING\n    mShortPressOnPowerBehavior=SHORT_PRESS_POWER_GO_TO_SLEEP\n    mLongPressOnPowerBehavior=LONG_PRESS_POWER_ASSISTANT\n    mSettingsKeyBehavior=SETTINGS_KEY_BEHAVIOR_SETTINGS_ACTIVITY\n    mLongPressOnPowerAssistantTimeoutMs=500\n    mVeryLongPressOnPowerBehavior=VERY_LONG_PRESS_POWER_NOTHING\n    mDoublePressOnPowerBehavior=MULTI_PRESS_POWER_NOTHING\n    mTriplePressOnPowerBehavior=MULTI_PRESS_POWER_NOTHING\n    mSupportShortPressPowerWhenDefaultDisplayOn=false\n    mPowerVolUpBehavior=POWER_VOLUME_UP_BEHAVIOR_GLOBAL_ACTIONS\n    mShortPressOnSleepBehavior=SHORT_PRESS_SLEEP_GO_TO_SLEEP\n    mShortPressOnWindowBehavior=SHORT_PRESS_WINDOW_PICTURE_IN_PICTURE\n    mShortPressOnStemPrimaryBehavior=SHORT_PRESS_PRIMARY_NOTHING\n    mDoublePressOnStemPrimaryBehavior=DOUBLE_PRESS_PRIMARY_NOTHING\n    mTriplePressOnStemPrimaryBehavior=TRIPLE_PRESS_PRIMARY_NOTHING\n    mLongPressOnStemPrimaryBehavior=LONG_PRESS_PRIMARY_NOTHING\n    mAllowStartActivityForLongPressOnPowerDuringSetup=false\n    mHasSoftInput=true\n    mDismissImeOnBackKeyPressed=false mIncallPowerBehavior=sleep\n    mIncallBackBehavior=<nothing> mEndcallBehavior=sleep\n    mDisplayHomeButtonHandlers=\n    mKeyguardOccluded=false mKeyguardOccludedChanged=false mPendingKeyguardOccluded=false\n    mAllowLockscreenWhenOnDisplays=false mLockScreenTimeout=2147483647 mLockScreenTimerActive=false\n    mKidsModeEnabled=false\nmHapticTextHandleEnabled=fals...<truncated 51037 chars>",
+        "stderr_excerpt": "",
+        "timed_out": false
+      },
+      "parser": "subprocess",
+      "snippet_hash": "sha256:ab7ecbf8f699a38bbb6482ba0f0a61fc1ecf6dfc2b789059354bc50dae44517f",
+      "confidence": 0.7
+    },
+    {
+      "evidence_id": "evidence.0008",
+      "source_type": "command",
+      "source_ref": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell dumpsys activity activities",
+      "observed_key": "dumpsys.activity.activities",
+      "observed_value": {
+        "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE -s emulator-5554 shell dumpsys activity activities",
+        "exit_code": 0,
+        "stdout_excerpt": "ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)\nDisplay #0 (activities from top to bottom):\n  * Task{bed8223 #1 type=home U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}\n    * Task{890192a #8 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity U=0 rootTaskId=1 visible=true visibleRequested=true mode=fullscreen translucent=false sz=2}\n      mLastNonFullscreenBounds=Rect(297, 660 - 783, 1740)\n      isSleeping=false\n      topResumedActivity=ActivityRecord{fc52215 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t8}\n      * Hist  #1: ActivityRecord{fc52215 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t8}\n        packageName=com.google.android.apps.nexuslauncher processName=com.google.android.apps.nexuslauncher\n        launchedFromUid=0 launchedFromPackage=null launchedFromFeature=null userId=0\n        app=ProcessRecord{abac38 4698:com.google.android.apps.nexuslauncher/u0a179}\n        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras) }\n        rootOfTask=true task=Task{890192a #8 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity}\n        taskAffinity=null\n        mActivityComponent=com.google.android.apps.nexuslauncher/.NexusLauncherActivity\n        baseDir=/system_ext/priv-app/NexusLauncherRelease/NexusLauncherRelease.apk\n        dataDir=/data/user/0/com.google.android.apps.nexuslauncher\n        stateNotNeeded=true componentSpecified=true mActivityType=home\n        compat={420dpi} theme=0x7f140019\n        mLastReportedConfigurations:\n          mGlobalConfig={1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefi...<truncated 23147 chars>",
+        "stderr_excerpt": "",
+        "timed_out": false
+      },
+      "parser": "subprocess",
+      "snippet_hash": "sha256:9c0bd03019a3975700ecfd1243b0e1efa156b345f0c88c821f4fa1e0c9b896cf",
+      "confidence": 0.7
+    },
+    {
+      "evidence_id": "evidence.0009",
+      "source_type": "storyboard_handoff",
+      "source_ref": "play-store-launch/reports/screenshot-capture-handoff.json",
+      "observed_key": "storyboard.handoff",
+      "observed_value": {
+        "schema_version": "screenshot_capture_handoff.v1",
+        "produced_by": "screenshot-storyboard",
+        "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
+        "shot_count": 4,
+        "blocker_count": 3
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:f04eaf82d8ceff7a1a614766be37a50a617b30572269f506e2c096be161a4abd",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0010",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "mobile.routes",
+      "observed_value": {
+        "count": 26,
+        "routes": [
+          "pages/campaign/index",
+          "pages/detail/index",
+          "pages/feed/index",
+          "pages/follows/index",
+          "pages/inbox/index",
+          "pages/invite/index",
+          "pages/paywall/index",
+          "pages/profile/index",
+          "pages/search/index",
+          "pages/settings/index",
+          "uni_modules/uni-id-pages/pages/common/webview/webview",
+          "uni_modules/uni-id-pages/pages/login/login-smscode",
+          "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+          "uni_modules/uni-id-pages/pages/login/login-withpwd",
+          "uni_modules/uni-id-pages/pages/register/register",
+          "uni_modules/uni-id-pages/pages/register/register-admin",
+          "uni_modules/uni-id-pages/pages/register/register-by-email",
+          "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+          "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+          "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+          "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+          "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+          "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+          "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+          "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+          "uni_modules/uni-id-pages/pages/userinfo/userinfo"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:6b6cb97bfde49a1fadd901136be4fd7120455d43dfc814c86534fed55c2263d7",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0011",
+      "source_type": "repo_config",
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "observed_key": "shot_plan.shot_01_home_feed",
+      "observed_value": {
+        "route": "pages/feed/index",
+        "route_path": "pages/feed/index",
+        "route_params": {},
+        "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "Feed 诊断信息",
+          "debug/diagnostic 信息",
+          "开发态或诊断信息",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:e250ae116317ab4a20c95ff63391439b99a6b7f91ce9382dc65c46ec3560a744",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0012",
+      "source_type": "repo_config",
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "observed_key": "shot_plan.shot_02_detail_deep_read",
+      "observed_value": {
+        "route": "pages/detail/index",
+        "route_path": "pages/detail/index",
+        "route_params": {
+          "articleId": "art_barrons_09022026_004",
+          "readingMode": "deep_3m",
+          "source": "storyboard"
+        },
+        "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "支付信息",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:31d855c0adcb0977bcf65237fa16d73890edfa00c547d158047d276e440409c1",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0013",
+      "source_type": "repo_config",
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "observed_key": "shot_plan.shot_03_sources_follow",
+      "observed_value": {
+        "route": "pages/search/index",
+        "route_path": "pages/search/index",
+        "route_params": {
+          "focus": "follows"
+        },
+        "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+        "claim_ids": [
+          "listing_claim_source_updates"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:24ebf905f1c236f965906274ce5c718088e391238d55cf16ecf08059e548044f",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0014",
+      "source_type": "repo_config",
+      "source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "observed_key": "shot_plan.shot_04_profile_summary",
+      "observed_value": {
+        "route": "pages/profile/index",
+        "route_path": "pages/profile/index",
+        "route_params": {},
+        "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+        "claim_ids": [
+          "listing_claim_inbox_profile_settings"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:26be83a1483651f20428c897de7f30d162784fa1a34099c0fa3a4ec71ec29fe4",
+      "confidence": 0.9
+    }
+  ],
+  "human_review_gates": [
+    {
+      "gate_id": "human.screenshot.target_app",
+      "claim_id": "screenshot.target_app",
+      "reason": "是否发现并确认目标 app 前台运行",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.route_navigation",
+      "claim_id": "screenshot.route_navigation",
+      "reason": "截图 route 是否由设备导航证据证明",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0010"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.raw_capture",
+      "claim_id": "screenshot.raw_capture",
+      "reason": "是否真实捕获 raw PNG",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.google_play_specs",
+      "claim_id": "screenshot.google_play_specs",
+      "reason": "截图是否满足 Google Play 基础规格候选",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.public_use",
+      "claim_id": "screenshot.public_use",
+      "reason": "截图是否可公开用于商店",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0001",
+        "evidence.0003",
+        "evidence.0004",
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "debug_container_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
+      "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。",
+      "evidence_refs": [
+        "evidence.0003",
+        "evidence.0004"
+      ]
+    },
+    {
+      "blocker_id": "target_app_not_foreground",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
+      "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。",
+      "evidence_refs": [
+        "evidence.0007",
+        "evidence.0008"
+      ]
+    },
+    {
+      "blocker_id": "multi_shot_navigation_unverified",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
+      "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。",
+      "evidence_refs": [
+        "evidence.0011",
+        "evidence.0012",
+        "evidence.0013",
+        "evidence.0014"
+      ]
+    },
+    {
+      "blocker_id": "google_play_public_use_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+      "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。",
+      "evidence_refs": []
+    }
+  ],
+  "limitations": [
+    "静态和 adb 证据不能证明截图内容适合公开上架。",
+    "上游 storyboard 只证明规划 route；设备当前 route 仍需自动导航或人工证明。",
+    "raw PNG 可能需要转换为 24-bit PNG 或 JPEG 后才能作为 Play Store 素材。"
+  ],
+  "output_paths": {
+    "machine_json": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/screenshot-capture-agent-output.json",
+    "human_markdown": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/screenshot-capture-agent.zh.md",
+    "evidence_jsonl": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
+    "manifest_json": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/reports/screenshot-capture-manifest.json",
+    "raw_dir": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US"
+  }
+}

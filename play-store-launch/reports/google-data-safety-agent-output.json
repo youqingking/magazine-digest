@@ -1,0 +1,3310 @@
+{
+  "schema_version": "google_data_safety_agent_output.v1",
+  "generated_at": "2026-06-18T10:15:44Z",
+  "proof_mode": "parsed_repo_evidence",
+  "overall_status": "blocked",
+  "output_dir": "play-store-launch/reports",
+  "scanned_file_count": 557,
+  "semantic_file_count": 145,
+  "global_questions": {
+    "does_app_collect_or_share_user_data": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现用户数据或 SDK 信号。"
+    },
+    "is_all_user_data_collected_encrypted_in_transit": {
+      "draft_answer": "NEED_HUMAN",
+      "human_review": "NEED_HUMAN",
+      "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。"
+    },
+    "can_users_request_data_deletion": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现账号删除/注销候选。",
+      "evidence_ids": [
+        "ev_0010"
+      ]
+    },
+    "privacy_policy_url": {
+      "draft_answer": "NEED_HUMAN",
+      "human_review": "NEED_HUMAN",
+      "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+      "evidence_ids": []
+    },
+    "third_party_sdk_or_external_sharing": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现第三方 SDK/服务候选。",
+      "evidence_ids": [
+        "ev_0005",
+        "ev_0006"
+      ]
+    },
+    "tracking": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现 ads、analytics 或 device id 相关 tracking 候选。"
+    },
+    "children_or_sensitive_data_risk": {
+      "draft_answer": "NEED_HUMAN",
+      "human_review": "NEED_HUMAN",
+      "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+      "evidence_ids": []
+    },
+    "account_system": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现相关实现或数据结构信号。",
+      "evidence_ids": [
+        "ev_0009"
+      ]
+    },
+    "payment_provider": {
+      "draft_answer": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "reason": "发现相关实现或数据结构信号。",
+      "evidence_ids": [
+        "ev_0011"
+      ]
+    },
+    "crash_reporting": {
+      "draft_answer": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "reason": "未发现相关证据。",
+      "evidence_ids": []
+    },
+    "ad_sdk": {
+      "draft_answer": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "reason": "未发现相关证据。",
+      "evidence_ids": []
+    }
+  },
+  "data_types": [
+    {
+      "category": "Personal info",
+      "data_type": "User IDs",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management",
+        "App functionality"
+      ],
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0012"
+      ],
+      "signals": [
+        {
+          "source": "backend/surfaces/auth-session.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "source) { const now = runtimeConfig.now || new Date().toISOString(); const userId = request.user_id || \"user_local_stage_e0\"; return { session_state: adap"
+        },
+        {
+          "source": "backend/surfaces/content-resume.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return { items: r"
+        },
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "Key(request, runtimeConfig); const subjectId = assertRequiredString( \"user_id_or_installation_id\", request.user_id ?? request.installation_id );"
+        },
+        {
+          "source": "backend/surfaces/follow-toggle.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); const subjectType = ass"
+        },
+        {
+          "source": "backend/surfaces/home-discovery.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.build"
+        },
+        {
+          "source": "backend/surfaces/mark-inbox-read.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.markI"
+        },
+        {
+          "source": "backend/surfaces/notification-delivery-preview.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "null, product_key: request.product_key || runtimeConfig.productKey, user_id: request.user_id || \"user_local_stage_e0\", publish_batch_id: request.publ"
+        },
+        {
+          "source": "backend/surfaces/notification-inbox.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); const items = repositor"
+        },
+        {
+          "source": "backend/surfaces/notification-prefs.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); if (request.update) {"
+        },
+        {
+          "source": "backend/surfaces/publish-batch-summary.mjs",
+          "where": "content",
+          "matched": "user[_-]?id",
+          "excerpt": "= assertRequiredString(\"publish_batch_id\", request.publish_batch_id); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.getPu"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Name",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0013"
+      ],
+      "signals": [
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "realname",
+          "excerpt": "leText\": \"注销账号\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify\", \"style\": { \"enablePullDownRefresh\": false,"
+        },
+        {
+          "source": "mobile/pages/auth-test/index.vue",
+          "where": "content",
+          "matched": "user[_-]?name",
+          "excerpt": "on mobile.\" /> <view class=\"field-stack\"> <input v-model=\"username\" class=\"auth-input\" placeholder=\"Test username\" /> <input v-model=\""
+        },
+        {
+          "source": "mobile/pages/profile/index.vue",
+          "where": "content",
+          "matched": "nickname",
+          "excerpt": "e || \"普通读者\"; }, displayName() { return this.auth.currentUserInfo?.nickname || this.auth.currentUserInfo?.uid || \"阅读用户\"; }, profileSubtitle() {"
+        },
+        {
+          "source": "mobile/services/auth.service.js",
+          "where": "content",
+          "matched": "user[_-]?name",
+          "excerpt": "nCo = null; } return uniIdLoginCo; } function buildPasswordLoginPayload({ username = \"\", password = \"\" } = {}) { const payload = { password }; if (/^1\\"
+        },
+        {
+          "source": "mobile/uniCloud-aliyun/cloudfunctions/h0_5-web-auth-smoke/index.js",
+          "where": "content",
+          "matched": "user[_-]?name",
+          "excerpt": "userAppList.some((item) => appList.includes(item)); } function buildUserQuery(username) { if (!username) { throw new Error('AUTH_INPUT_MISSING'); } if (/^1"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Email address",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management"
+      ],
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0014"
+      ],
+      "signals": [
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "\\bemail\\b",
+          "excerpt": "\"\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/register/register-by-email\", \"style\": { \"navigationBarTitleText\": \"邮箱验证码注册\" } } ,{ \"pa"
+        },
+        {
+          "source": "mobile/services/auth.service.js",
+          "where": "content",
+          "matched": "\\bemail\\b",
+          "excerpt": "{ payload.mobile = username; } else if (/@/.test(username)) { payload.email = username; } else { payload.username = username; } return payload;"
+        },
+        {
+          "source": "mobile/uniCloud-aliyun/cloudfunctions/h0_5-web-auth-smoke/index.js",
+          "where": "content",
+          "matched": "\\bemail\\b",
+          "excerpt": "mobile_confirmed: 1 }]; } if (/@/.test(username)) { const queries = [{ email: username, email_confirmed: 1 }]; if (username.toLowerCase() !== username)"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Personal info",
+      "data_type": "Phone number",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Account management",
+        "Fraud prevention, security, and compliance"
+      ],
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0015"
+      ],
+      "signals": [
+        {
+          "source": "database/user_profiles.schema.json",
+          "where": "content",
+          "matched": "phone",
+          "excerpt": "8\", \"scope\": \"global\", \"write_model\": \"master_data\", \"required\": [\"_id\", \"phone\", \"auth_state\", \"consent_accepted\", \"created_at\", \"updated_at\"], \"properties\""
+        },
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "sms",
+          "excerpt": "t\": \"账号密码登录\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/login/login-smscode\", \"style\": { \"navigationBarTitleText\": \"手机验证码登录\" } } ,{"
+        },
+        {
+          "source": "uniCloud/database/user_profiles.schema.json",
+          "where": "content",
+          "matched": "phone",
+          "excerpt": "6\", \"scope\": \"global\", \"write_model\": \"master_data\", \"required\": [\"_id\", \"phone\", \"auth_state\", \"consent_accepted\", \"created_at\", \"updated_at\"], \"properties\""
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Financial info",
+      "data_type": "Purchase history",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality",
+        "Payments"
+      ],
+      "linked_to_identity": "YES_CANDIDATE",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0016"
+      ],
+      "signals": [
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "where": "path",
+          "matched": "entitlement"
+        },
+        {
+          "source": "backend/surfaces/pricing-preview.mjs",
+          "where": "path",
+          "matched": "pricing"
+        },
+        {
+          "source": "backend/surfaces/promo-preview.mjs",
+          "where": "content",
+          "matched": "pricing",
+          "excerpt": ".promo_code); return repository.previewPromo(productKey, promoCode, request.pricing_plan_id || null); }; }"
+        },
+        {
+          "source": "database/entitlements.schema.json",
+          "where": "path",
+          "matched": "entitlement"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "content",
+          "matched": "purchase",
+          "excerpt": "tch\", \"read_progress\", \"paywall_impression\", \"paywall_dismiss\", \"plan_select\", \"purchase_success\", \"purchase_fail\", \"share_click\", \"share_success\", \"invite_bind_success"
+        },
+        {
+          "source": "database/payment_orders.schema.json",
+          "where": "path",
+          "matched": "payment_orders?"
+        },
+        {
+          "source": "database/pricing_plans.schema.json",
+          "where": "path",
+          "matched": "pricing"
+        },
+        {
+          "source": "database/promo_campaigns.schema.json",
+          "where": "content",
+          "matched": "pricing",
+          "excerpt": "name\": { \"type\": \"string\" }, \"campaign_type\": { \"type\": \"string\", \"enum\": [\"pricing_discount\", \"welcome_reward\", \"invite_reward\", \"internal_beta\"] }, \"price_mu"
+        },
+        {
+          "source": "database/subscription_records.schema.json",
+          "where": "path",
+          "matched": "subscription_records?"
+        },
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "订阅",
+          "excerpt": "th\": \"pages/paywall/index\", \"style\": { \"navigationBarTitleText\": \"订阅\" } }, { \"path\": \"pages/invite/index\", \"style\": {"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Photos and videos",
+      "data_type": "Photos or videos",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0017"
+      ],
+      "signals": [
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "cropimage",
+          "excerpt": "Text\": \"绑定手机号码\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage\", \"style\": { \"navigationBarTitleText\": \"\" } } ,{"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Files and docs",
+      "data_type": "Files and docs",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0018"
+      ],
+      "signals": [
+        {
+          "source": "mobile/pages/feed/index.vue",
+          "where": "content",
+          "matched": "\\bpdf\\b",
+          "excerpt": "ems=\"heroMeta\" /> </AppCard> </view> <AppCard class=\"pdf-import-card\" tone=\"muted\"> <view class=\"pdf-import-content\">"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "App activity",
+      "data_type": "App interactions",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Analytics",
+        "App functionality"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0019"
+      ],
+      "signals": [
+        {
+          "source": "backend/surfaces/bootstrap-config.mjs",
+          "where": "content",
+          "matched": "experiment",
+          "excerpt": "s: product?.active_status ?? \"inactive\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id"
+        },
+        {
+          "source": "backend/surfaces/content-detail.mjs",
+          "where": "content",
+          "matched": "reading",
+          "excerpt": "import { assertAudienceSegment, assertProductKey, assertReadingMode, assertRequiredString } from \"../guards/request-guards.mjs\"; function is"
+        },
+        {
+          "source": "backend/surfaces/experiment-assign.mjs",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "backend/surfaces/follow-catalog.mjs",
+          "where": "path",
+          "matched": "follows?"
+        },
+        {
+          "source": "backend/surfaces/follow-toggle.mjs",
+          "where": "path",
+          "matched": "follows?"
+        },
+        {
+          "source": "backend/surfaces/notification-prefs.mjs",
+          "where": "content",
+          "matched": "follows?",
+          "excerpt": "ours_end_minute ?? 0 }, max_daily_push: record.max_daily_push ?? 3, followed_only: record.follow_alert_level === \"immediate\" || record.follow_alert_level"
+        },
+        {
+          "source": "database/article_variants.schema.json",
+          "where": "content",
+          "matched": "reading",
+          "excerpt": "equired\": [\"_id\", \"article_id\", \"product_key\", \"language\", \"audience_segment\", \"reading_mode\", \"revision\", \"publish_status\", \"publish_at\", \"markdown_body\", \"content_ha"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "path",
+          "matched": "event_logs?"
+        },
+        {
+          "source": "database/event_metrics_daily.schema.json",
+          "where": "path",
+          "matched": "event_metrics?"
+        },
+        {
+          "source": "database/experiment_assignments.schema.json",
+          "where": "path",
+          "matched": "experiment"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "App info and performance",
+      "data_type": "Diagnostics",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "Analytics",
+        "App functionality"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0020"
+      ],
+      "signals": [
+        {
+          "source": "database/audit_logs.schema.json",
+          "where": "path",
+          "matched": "audit_logs?"
+        },
+        {
+          "source": "mobile/pages/auth-test/index.vue",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "ed debug\" description=\"AUTH_TEST_ADVANCED_DEBUG. Expanded only when deeper H0.5 diagnostics are needed.\" /> <MetaRow :items=\"advancedDebugMeta\" /> <vi"
+        },
+        {
+          "source": "mobile/pages/feed/index.vue",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "/> </view> </scroll-view> </view> <view v-if=\"showDevDiagnostics\" :style=\"$theme.pageSection\"> <AppCard tone=\"muted\"> <SectionHea"
+        },
+        {
+          "source": "mobile/pages/profile/index.vue",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "xt> </view> <view class=\"profile-action-card\" @click=\"toggleDiagnostics\"> <text class=\"profile-action-title\">设备状态</text> <text"
+        },
+        {
+          "source": "mobile/pages/settings/index.vue",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "StateCard :capability=\"pushCapability\" :preview=\"pushPreview\" /> <DeviceDiagnosticCard :diagnostics=\"auth.deviceDiagnostics\" /> <AppCard tone=\"muted\">"
+        },
+        {
+          "source": "mobile/services/auth.service.js",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "\"../stores/session.store.js\"; import { setAuthCurrentUserInfo, setAuthDeviceDiagnostics, setAuthError, setAuthPasswordPrep, setAuthPending, setAuthSession,"
+        },
+        {
+          "source": "mobile/services/device.service.js",
+          "where": "content",
+          "matched": "diagnostic",
+          "excerpt": "eway } from \"./runtime-gateway.service.js\"; import { getAuthState, setAuthDeviceDiagnostics } from \"../stores/auth.store.js\"; import { getSessionState } from \"../stores/s"
+        },
+        {
+          "source": "uniCloud/database/_sync-manifest.json",
+          "where": "content",
+          "matched": "audit_logs?",
+          "excerpt": "\"files\": [ \"article_variants.schema.json\", \"articles.schema.json\", \"audit_logs.schema.json\", \"device_installations.schema.json\", \"entitlements.schema."
+        },
+        {
+          "source": "uniCloud/database/audit_logs.schema.json",
+          "where": "path",
+          "matched": "audit_logs?"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Device or other IDs",
+      "data_type": "Device or other IDs",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality",
+        "Fraud prevention, security, and compliance"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "YES_CANDIDATE",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0021"
+      ],
+      "signals": [
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": ", runtimeConfig); const subjectId = assertRequiredString( \"user_id_or_installation_id\", request.user_id ?? request.installation_id ); return {"
+        },
+        {
+          "source": "backend/surfaces/experiment-assign.mjs",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const installationId = assertRequiredString( \"installation_id\", request.installation_i"
+        },
+        {
+          "source": "backend/surfaces/push-capability.mjs",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "app\", product_key: request.product_key || runtimeConfig.productKey, installation_id: request.installation_id || \"inst_local_stub\", source }; }; }"
+        },
+        {
+          "source": "backend/surfaces/register-device.mjs",
+          "where": "content",
+          "matched": "device[_-]?id",
+          "excerpt": "ed\", installation_id: request.installation_id || \"inst_local_stub\", device_id: request.device_id || request.installation_id || \"device_local_stub\", pus"
+        },
+        {
+          "source": "database/device_installations.schema.json",
+          "where": "path",
+          "matched": "device_installations?"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "del\": \"append_only_ledger\", \"required\": [\"_id\", \"product_key\", \"event_name\", \"installation_id\", \"session_id\", \"request_id\", \"dedup_key\", \"occurred_at\", \"server_received_a"
+        },
+        {
+          "source": "database/experiment_assignments.schema.json",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "{ \"type\": \"string\" }, \"subject_type\": { \"type\": \"string\", \"enum\": [\"user\", \"installation\"] }, \"subject_id\": { \"type\": \"string\" }, \"assignment_version\": { \"type\""
+        },
+        {
+          "source": "database/experiments.schema.json",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "\"archived\"] }, \"assignment_unit\": { \"type\": \"string\", \"enum\": [\"user_id\", \"installation_id\"] }, \"bucket_definitions\": { \"type\": \"array\", \"items\": { \"type\": \"object"
+        },
+        {
+          "source": "database/notification_deliveries.schema.json",
+          "where": "content",
+          "matched": "device_installations?",
+          "excerpt": ": { \"type\": \"string\" }, \"notification_inbox_id\": { \"type\": \"string\" }, \"device_installation_id\": { \"type\": \"string\" }, \"source_inbox_id\": { \"type\": \"string\" }, \"de"
+        },
+        {
+          "source": "database/promo_redemptions.schema.json",
+          "where": "content",
+          "matched": "installation",
+          "excerpt": "er\", \"required\": [\"_id\", \"product_key\", \"campaign_id\", \"code_id\", \"user_id\", \"installation_id\", \"redemption_key\", \"status\", \"request_id\", \"created_at\"], \"properties\": {"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    },
+    {
+      "category": "Messages",
+      "data_type": "Other in-app messages",
+      "collected": "YES_CANDIDATE",
+      "shared": "NEED_HUMAN",
+      "processed_ephemerally": "NEED_HUMAN",
+      "required_or_optional": "NEED_HUMAN",
+      "purposes": [
+        "App functionality"
+      ],
+      "linked_to_identity": "NEED_HUMAN",
+      "used_for_tracking": "NO_NOT_OBSERVED",
+      "human_review": "NEED_HUMAN",
+      "confidence": 0.65,
+      "evidence_ids": [
+        "ev_0022"
+      ],
+      "signals": [
+        {
+          "source": "backend/surfaces/mark-inbox-read.mjs",
+          "where": "path",
+          "matched": "inbox"
+        },
+        {
+          "source": "backend/surfaces/notification-delivery-preview.mjs",
+          "where": "content",
+          "matched": "notification_inbox",
+          "excerpt": "e: \"durable\", delivery_channel: request.delivery_channel || \"push\", notification_inbox_id: request.notification_inbox_id || null, product_key: request.product_k"
+        },
+        {
+          "source": "backend/surfaces/notification-inbox.mjs",
+          "where": "path",
+          "matched": "inbox"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "content",
+          "matched": "inbox",
+          "excerpt": "uccess\", \"promo_redeem_success\", \"notification_received\", \"notification_open\", \"inbox_open\", \"follow_add\", \"follow_remove\", \"bookmark_add\", \"bookmark_remove\", \"conti"
+        },
+        {
+          "source": "database/notification_campaigns.schema.json",
+          "where": "content",
+          "matched": "inbox",
+          "excerpt": "pe\": { \"type\": \"string\", \"enum\": [\"new_publish_batch\", \"followed_topic_alert\", \"inbox_digest\", \"revision_highlight\", \"operational_retouch\"] }, \"display_name\": {"
+        },
+        {
+          "source": "database/notification_deliveries.schema.json",
+          "where": "content",
+          "matched": "message",
+          "excerpt": "\"last_previewed_at\": { \"type\": \"string\", \"format\": \"date-time\" }, \"provider_message_id\": { \"type\": \"string\" }, \"failure_code\": { \"type\": \"string\" }, \"plann"
+        },
+        {
+          "source": "database/notification_inbox.schema.json",
+          "where": "path",
+          "matched": "notification_inbox"
+        },
+        {
+          "source": "database/user_follows.schema.json",
+          "where": "content",
+          "matched": "notification_inbox",
+          "excerpt": "ype\": \"string\", \"enum\": [\"follow_catalog\", \"content_detail\", \"search_content\", \"notification_inbox\", \"ops_import\"] }, \"last_notified_publish_batch_id\": { \"type\": \"string\" },"
+        },
+        {
+          "source": "database/user_notification_prefs.schema.json",
+          "where": "content",
+          "matched": "inbox",
+          "excerpt": "te\", \"required\": [\"_id\", \"product_key\", \"user_id\", \"status\", \"push_enabled\", \"inbox_enabled\", \"digest_enabled\", \"quiet_hours_enabled\", \"timezone\", \"created_at\", \"u"
+        },
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "inbox",
+          "excerpt": "\"navigationBarTitleText\": \"设置\" } }, { \"path\": \"pages/inbox/index\", \"style\": { \"navigationBarTitleText\": \"消息摘要\" } }"
+        }
+      ],
+      "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "owner_input_evidence_id": "ev_0001",
+      "owner_missing_fields": [
+        "collected",
+        "shared",
+        "processed_ephemerally",
+        "required_or_optional",
+        "purposes",
+        "linked_to_identity",
+        "used_for_tracking"
+      ]
+    }
+  ],
+  "evidence_sections": {
+    "app_permissions": [],
+    "sdk_list": [
+      {
+        "sdk_type": "auth",
+        "dependencies": [],
+        "paths": [
+          "mobile/uni_modules/uni-id-common",
+          "mobile/uni_modules/uni-id-pages"
+        ],
+        "evidence_id": "ev_0005"
+      },
+      {
+        "sdk_type": "cloud_backend",
+        "dependencies": [],
+        "paths": [
+          "mobile/uni_modules/uni-cloud-s2s"
+        ],
+        "evidence_id": "ev_0006"
+      }
+    ],
+    "analytics_events": {
+      "status": "inferred",
+      "hits": [
+        {
+          "source": "backend/surfaces/bootstrap-config.mjs",
+          "where": "content",
+          "matched": "experiment",
+          "excerpt": "s: product?.active_status ?? \"inactive\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id"
+        },
+        {
+          "source": "backend/surfaces/experiment-assign.mjs",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "path",
+          "matched": "event_logs?"
+        },
+        {
+          "source": "database/event_metrics_daily.schema.json",
+          "where": "path",
+          "matched": "event_metrics?"
+        },
+        {
+          "source": "database/experiment_assignments.schema.json",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "database/experiments.schema.json",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "mobile/services/experiment.service.js",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "mobile/services/runtime-gateway.service.js",
+          "where": "content",
+          "matched": "experiment",
+          "excerpt": "eMode).getPricingPreviewCatalog(withRuntimeDefaults(request)); }, async getExperimentAssignment(request = {}) { const session = getSessionState(); return pic"
+        },
+        {
+          "source": "uniCloud/database/_sync-manifest.json",
+          "where": "content",
+          "matched": "event_logs?",
+          "excerpt": "\", \"device_installations.schema.json\", \"entitlements.schema.json\", \"event_logs_raw.schema.json\", \"event_metrics_daily.schema.json\", \"experiment_assign"
+        },
+        {
+          "source": "uniCloud/database/event_logs_raw.schema.json",
+          "where": "path",
+          "matched": "event_logs?"
+        },
+        {
+          "source": "uniCloud/database/event_metrics_daily.schema.json",
+          "where": "path",
+          "matched": "event_metrics?"
+        },
+        {
+          "source": "uniCloud/database/experiment_assignments.schema.json",
+          "where": "path",
+          "matched": "experiment"
+        },
+        {
+          "source": "uniCloud/database/experiments.schema.json",
+          "where": "path",
+          "matched": "experiment"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0007"
+      ],
+      "reason": "发现相关实现或数据结构信号。"
+    },
+    "backend_api_logs": {
+      "status": "inferred",
+      "hits": [
+        {
+          "source": "backend/surfaces/auth-refresh.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/auth-session.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/auth-signout.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/bootstrap-config.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/campaign-landing.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/commercial-offer.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/content-detail.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/content-resume.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/content-sync-delta.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/event-ingest.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/experiment-assign.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/follow-catalog.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/follow-toggle.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/home-discovery.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        },
+        {
+          "source": "backend/surfaces/mark-inbox-read.mjs",
+          "where": "path",
+          "matched": "backend[\\\\/]"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0008"
+      ],
+      "reason": "发现相关实现或数据结构信号。"
+    },
+    "account_system": {
+      "status": "inferred",
+      "hits": [
+        {
+          "source": "backend/surfaces/auth-refresh.mjs",
+          "where": "path",
+          "matched": "\\bauth\\b"
+        },
+        {
+          "source": "backend/surfaces/auth-session.mjs",
+          "where": "path",
+          "matched": "\\bauth\\b"
+        },
+        {
+          "source": "backend/surfaces/auth-signout.mjs",
+          "where": "path",
+          "matched": "\\bauth\\b"
+        },
+        {
+          "source": "backend/surfaces/profile-benefits.mjs",
+          "where": "path",
+          "matched": "profile"
+        },
+        {
+          "source": "backend/surfaces/register-device.mjs",
+          "where": "path",
+          "matched": "register"
+        },
+        {
+          "source": "database/device_installations.schema.json",
+          "where": "content",
+          "matched": "register",
+          "excerpt": "ype\": \"string\", \"enum\": [\"unknown\", \"prompt\", \"granted\", \"denied\"] }, \"push_registered_at\": { \"type\": \"string\", \"format\": \"date-time\" }, \"remote_runtime_mode\":"
+        },
+        {
+          "source": "database/user_product_profiles.schema.json",
+          "where": "path",
+          "matched": "profile"
+        },
+        {
+          "source": "database/user_profiles.schema.json",
+          "where": "path",
+          "matched": "profile"
+        },
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "\\bauth\\b",
+          "excerpt": "\"navigationBarTitleText\": \"活动说明\" } }, { \"path\": \"pages/auth-test/index\", \"style\": { \"navigationBarTitleText\": \"Auth test\""
+        },
+        {
+          "source": "mobile/pages/auth-test/index.vue",
+          "where": "path",
+          "matched": "\\bauth\\b"
+        },
+        {
+          "source": "mobile/pages/inbox/index.vue",
+          "where": "content",
+          "matched": "account",
+          "excerpt": "ts/discovery/DiscoverySection.vue\"; import PushStateCard from \"../../components/account/PushStateCard.vue\"; import AppButton from \"../../components/ui/AppButton.vue\";"
+        },
+        {
+          "source": "mobile/pages/profile/index.vue",
+          "where": "path",
+          "matched": "profile"
+        },
+        {
+          "source": "mobile/pages/settings/index.vue",
+          "where": "content",
+          "matched": "\\bauth\\b",
+          "excerpt": "lse)\" /> </view> </AppCard> <AuthStateCard :session=\"auth.session\" :current-user-info=\"auth.currentUserInfo\" /> <DeviceStateCard"
+        },
+        {
+          "source": "mobile/services/auth.service.js",
+          "where": "path",
+          "matched": "\\bauth\\b"
+        },
+        {
+          "source": "mobile/services/cache.service.js",
+          "where": "content",
+          "matched": "register",
+          "excerpt": "nction writeCacheIndex(keys) { writeValue(CACHE_INDEX_KEY, keys); } function registerKey(key) { const keys = readCacheIndex(); if (keys.indexOf(key) === -1) {"
+        },
+        {
+          "source": "mobile/services/commercial.service.js",
+          "where": "content",
+          "matched": "profile",
+          "excerpt": "() { return runtimeGateway.getCampaignLanding(); } export async function loadProfileBenefits() { return runtimeGateway.getProfileBenefits(); }"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0009"
+      ],
+      "reason": "发现相关实现或数据结构信号。"
+    },
+    "account_deletion": {
+      "status": "inferred",
+      "hits": [
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "deactivate",
+          "excerpt": "leText\": \"设置密码\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate\", \"style\": { \"navigationBarTitleText\": \"注销账号\" } } ,{"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0010"
+      ],
+      "reason": "发现相关实现或数据结构信号。"
+    },
+    "payment_provider": {
+      "status": "inferred",
+      "hits": [
+        {
+          "source": "backend/surfaces/entitlement-snapshot.mjs",
+          "where": "path",
+          "matched": "entitlement"
+        },
+        {
+          "source": "backend/surfaces/pricing-preview.mjs",
+          "where": "path",
+          "matched": "pricing"
+        },
+        {
+          "source": "backend/surfaces/promo-preview.mjs",
+          "where": "content",
+          "matched": "pricing",
+          "excerpt": ".promo_code); return repository.previewPromo(productKey, promoCode, request.pricing_plan_id || null); }; }"
+        },
+        {
+          "source": "database/entitlements.schema.json",
+          "where": "path",
+          "matched": "entitlement"
+        },
+        {
+          "source": "database/event_logs_raw.schema.json",
+          "where": "content",
+          "matched": "purchase",
+          "excerpt": "tch\", \"read_progress\", \"paywall_impression\", \"paywall_dismiss\", \"plan_select\", \"purchase_success\", \"purchase_fail\", \"share_click\", \"share_success\", \"invite_bind_success"
+        },
+        {
+          "source": "database/payment_orders.schema.json",
+          "where": "path",
+          "matched": "payment"
+        },
+        {
+          "source": "database/pricing_plans.schema.json",
+          "where": "path",
+          "matched": "pricing"
+        },
+        {
+          "source": "database/promo_campaigns.schema.json",
+          "where": "content",
+          "matched": "pricing",
+          "excerpt": "name\": { \"type\": \"string\" }, \"campaign_type\": { \"type\": \"string\", \"enum\": [\"pricing_discount\", \"welcome_reward\", \"invite_reward\", \"internal_beta\"] }, \"price_mu"
+        },
+        {
+          "source": "database/subscription_records.schema.json",
+          "where": "path",
+          "matched": "subscription"
+        },
+        {
+          "source": "mobile/pages.json",
+          "where": "content",
+          "matched": "订阅",
+          "excerpt": "th\": \"pages/paywall/index\", \"style\": { \"navigationBarTitleText\": \"订阅\" } }, { \"path\": \"pages/invite/index\", \"style\": {"
+        },
+        {
+          "source": "mobile/pages/auth-test/index.vue",
+          "where": "content",
+          "matched": "payment",
+          "excerpt": "_path. Dev-safe auth and device verification entry, not a production account or payment path.\" /> <view :style=\"$theme.pageSection\"> <view :style=\"$them"
+        },
+        {
+          "source": "mobile/pages/campaign/index.vue",
+          "where": "content",
+          "matched": "订阅",
+          "excerpt": "nHeader title=\"Campaign Alias\" description=\"旧 campaign route 仅保留为内部兼容 alias，将跳转到订阅页商业区块。\" /> </view> </template> <script> import SectionHeader from \"../../comp"
+        },
+        {
+          "source": "mobile/pages/detail/index.vue",
+          "where": "content",
+          "matched": "entitlement",
+          "excerpt": "sibilityEnabled } from \"../../services/dev-visibility.service.js\"; import { loadEntitlementSnapshot } from \"../../services/entitlement.service.js\"; import { ingestRuntimeE"
+        },
+        {
+          "source": "mobile/pages/invite/index.vue",
+          "where": "content",
+          "matched": "订阅",
+          "excerpt": "itle\">邀请与兑换</text> <text class=\"invite-description\">只承接邀请摘要、奖励预览与兑换入口，不扩张为订阅或社交流程。</text> </view> <view :style=\"$theme.pageSection\"> <view :s"
+        },
+        {
+          "source": "mobile/pages/paywall/index.vue",
+          "where": "content",
+          "matched": "pricing",
+          "excerpt": "> <PaywallPlanCard v-for=\"plan in plans\" :key=\"plan.pricing_plan_id\" :plan=\"buildPaywallPlan(plan)\" :recommended=\"Boole"
+        },
+        {
+          "source": "mobile/pages/profile/index.vue",
+          "where": "content",
+          "matched": "subscription",
+          "excerpt": "\"; }, membershipTitle() { return this.commercial.profileBenefits?.subscription_status === \"active\" ? \"已开通完整阅读\" : \"当前为预览版权益\"; }, membershipMeta() {"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0011"
+      ],
+      "reason": "发现相关实现或数据结构信号。"
+    },
+    "crash_reporting": {
+      "status": "missing",
+      "hits": [],
+      "evidence_ids": [],
+      "reason": "未发现相关证据。"
+    },
+    "ad_sdk": {
+      "status": "missing",
+      "hits": [],
+      "evidence_ids": [],
+      "reason": "未发现相关证据。"
+    },
+    "children_sensitive": {
+      "status": "missing",
+      "hits": [],
+      "evidence_ids": [],
+      "reason": "未发现相关证据。"
+    },
+    "privacy_policy_url": {
+      "answer": "NEED_HUMAN",
+      "status": "NEED_HUMAN",
+      "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+      "candidates": [],
+      "evidence_ids": []
+    },
+    "owner_input": {
+      "status": "observed",
+      "files": [
+        {
+          "source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+          "data": {
+            "schema_version": "privacy_data_safety_owner_input.v1",
+            "status": "draft_owner_review_required",
+            "canUseAsFinalPlayConsoleAnswer": false,
+            "privacyPolicyUrl": "NEED_HUMAN",
+            "encryptedInTransit": "NEED_HUMAN",
+            "canUsersRequestDataDeletion": "NEED_HUMAN",
+            "childrenOrSensitiveDataRisk": {
+              "targetAgeRange": "NEED_HUMAN",
+              "directedToChildren": "NEED_HUMAN",
+              "handlesSensitiveData": "NEED_HUMAN",
+              "notes": "Owner/legal/privacy must confirm target age, Families policy relevance, and sensitive data scope."
+            },
+            "dataTypes": [
+              {
+                "category": "Personal info",
+                "dataType": "User IDs",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Account management",
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Personal info",
+                "dataType": "Name",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Account management"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Personal info",
+                "dataType": "Email address",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Account management"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Personal info",
+                "dataType": "Phone number",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Account management",
+                  "Fraud prevention, security, and compliance"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Financial info",
+                "dataType": "Purchase history",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "App functionality",
+                  "Payments"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Photos and videos",
+                "dataType": "Photos or videos",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Files and docs",
+                "dataType": "Files and docs",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "App activity",
+                "dataType": "App interactions",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Analytics",
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "App info and performance",
+                "dataType": "Diagnostics",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "Analytics",
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Device or other IDs",
+                "dataType": "Device or other IDs",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "App functionality",
+                  "Fraud prevention, security, and compliance"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              },
+              {
+                "category": "Messages",
+                "dataType": "Other in-app messages",
+                "collected": "NEED_HUMAN",
+                "shared": "NEED_HUMAN",
+                "processedEphemerally": "NEED_HUMAN",
+                "requiredOrOptional": "NEED_HUMAN",
+                "purposeCandidates": [
+                  "App functionality"
+                ],
+                "purposes": "NEED_HUMAN",
+                "linkedToIdentity": "NEED_HUMAN",
+                "usedForTracking": "NEED_HUMAN"
+              }
+            ],
+            "ownerReviewRequired": [
+              "Replace privacyPolicyUrl with a public URL covering the current app, SDKs, data collection, sharing, and deletion flow.",
+              "Replace encryptedInTransit with true or false after confirming app and third-party SDK network transport.",
+              "Replace canUsersRequestDataDeletion with true or false after confirming account/data deletion behavior.",
+              "Complete childrenOrSensitiveDataRisk with target age, child-directed status, and sensitive-data scope.",
+              "For every dataTypes row, replace NEED_HUMAN fields with owner-confirmed answers before Play Console use."
+            ]
+          },
+          "evidence_id": "ev_0001"
+        },
+        {
+          "source": "play-store-launch/inputs/google-play-listing.json",
+          "data": {
+            "schema_version": "google_play_listing_input.v1",
+            "locale": "en-US",
+            "status": "draft_owner_review_required",
+            "appName": "Magazine Digest",
+            "shortDescription": "Save, search, and continue reading magazine digests on mobile.",
+            "fullDescription": "Magazine Digest helps readers keep up with long-form magazine content in one mobile place.\n\nUse it to browse publication and article collections, open concise article details, continue reading from saved progress, follow topics or publications, and manage saved items for later.\n\nThe app also includes account, profile, notification preference, inbox, and entitlement surfaces that are visible in the current app evidence. Subscription availability, pricing, privacy policy, support contact, and public screenshot copy still require owner review before public store use.",
+            "privacyPolicyUrl": "NEED_HUMAN",
+            "contactEmail": "NEED_HUMAN",
+            "category": "News & Magazines",
+            "contentRating": "NEED_HUMAN",
+            "targetAudience": "Adults and general readers",
+            "draftOnly": true,
+            "canUseForSubmission": false,
+            "ownerReviewRequired": [
+              "Replace NEED_HUMAN privacyPolicyUrl with a public privacy policy URL.",
+              "Replace NEED_HUMAN contactEmail with a public developer support email.",
+              "Confirm contentRating through the Play Console questionnaire.",
+              "Confirm category and targetAudience with the owner before submission.",
+              "Use only real captured screenshots and approved preview assets."
+            ]
+          },
+          "evidence_id": "ev_0002"
+        }
+      ],
+      "evidence_ids": [
+        "ev_0001",
+        "ev_0002"
+      ]
+    },
+    "source_reports": [
+      {
+        "source": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+        "summary": {
+          "schema_version": "privacy_disclosure_prep.v1",
+          "overall_status": "blocked",
+          "top_keys": [
+            "schema_version",
+            "generated_at",
+            "root",
+            "scan_policy",
+            "project_fingerprint",
+            "overall_status",
+            "detected_platforms",
+            "disclosure_question_matrix",
+            "sdk_inventory",
+            "permission_inventory",
+            "data_flows",
+            "data_safety_form_draft"
+          ]
+        },
+        "evidence_id": "ev_0003"
+      },
+      {
+        "source": "play-store-launch/reports/launch-info-collector-output.json",
+        "summary": {
+          "schema_version": "launch_info_collector_output.v1",
+          "overall_status": "blocked",
+          "top_keys": [
+            "schema_version",
+            "generated_at",
+            "proof_mode",
+            "overall_status",
+            "output_dir",
+            "scanned_file_count",
+            "document_source_count",
+            "document_sources",
+            "fields",
+            "blockers",
+            "evidence",
+            "source_of_truth"
+          ]
+        },
+        "evidence_id": "ev_0004"
+      }
+    ]
+  },
+  "blockers": [
+    {
+      "field": "is_all_user_data_collected_encrypted_in_transit",
+      "label": "加密传输",
+      "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+      "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+    },
+    {
+      "field": "privacy_policy_url",
+      "label": "隐私政策 URL",
+      "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+      "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+    },
+    {
+      "field": "children_or_sensitive_data_risk",
+      "label": "儿童/敏感数据风险",
+      "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+      "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+    },
+    {
+      "field": "data_type_matrix",
+      "label": "逐数据类型答案",
+      "reason": "发现 11 个数据类型候选，其中 11 个仍未完成 owner 逐项确认；collected/shared/purpose/identity/tracking/required 需要人工逐项确认。",
+      "unblock_action": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中每个 dataTypes 条目的 collected、shared、purposes、linkedToIdentity、usedForTracking、requiredOrOptional、processedEphemerally。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_0001",
+      "field": "owner_data_safety_input",
+      "source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+      "status": "observed",
+      "excerpt": "{\"schema_version\": \"privacy_data_safety_owner_input.v1\", \"status\": \"draft_owner_review_required\", \"keys\": [\"canUseAsFinalPlayConsoleAnswer\", \"canUsersRequestDataDeletion\", \"childrenOrSensitiveDataRisk\", \"dataTypes\", \"encryptedInTransit\", \"ownerReviewRequired\", \"privacyPolicyUrl\", \"schema_version\", \"status\"]}",
+      "note": "Owner-provided launch/privacy/Data safety input."
+    },
+    {
+      "id": "ev_0002",
+      "field": "owner_data_safety_input",
+      "source": "play-store-launch/inputs/google-play-listing.json",
+      "status": "observed",
+      "excerpt": "{\"schema_version\": \"google_play_listing_input.v1\", \"status\": \"draft_owner_review_required\", \"keys\": [\"appName\", \"canUseForSubmission\", \"category\", \"contactEmail\", \"contentRating\", \"draftOnly\", \"fullDescription\", \"locale\", \"ownerReviewRequired\", \"privacyPolicyUrl\", \"schema_version\", \"shortDescription\", \"status\", \"targetAudience\"]}",
+      "note": "Owner-provided launch/privacy/Data safety input."
+    },
+    {
+      "id": "ev_0003",
+      "field": "source_report",
+      "source": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+      "status": "observed",
+      "excerpt": "{\"schema_version\": \"privacy_disclosure_prep.v1\", \"overall_status\": \"blocked\", \"top_keys\": [\"schema_version\", \"generated_at\", \"root\", \"scan_policy\", \"project_fingerprint\", \"overall_status\", \"detected_platforms\", \"disclosure_question_matrix\", \"sdk_inventory\", \"permission_inventory\", \"data_flows\", \"data_safety_form_draft\"]}",
+      "note": "可选上游报告证据。"
+    },
+    {
+      "id": "ev_0004",
+      "field": "source_report",
+      "source": "play-store-launch/reports/launch-info-collector-output.json",
+      "status": "observed",
+      "excerpt": "{\"schema_version\": \"launch_info_collector_output.v1\", \"overall_status\": \"blocked\", \"top_keys\": [\"schema_version\", \"generated_at\", \"proof_mode\", \"overall_status\", \"output_dir\", \"scanned_file_count\", \"document_source_count\", \"document_sources\", \"fields\", \"blockers\", \"evidence\", \"source_of_truth\"]}",
+      "note": "可选上游报告证据。"
+    },
+    {
+      "id": "ev_0005",
+      "field": "sdk_list",
+      "source": "mobile/uni_modules/uni-id-common",
+      "status": "inferred",
+      "excerpt": "{\"sdk_type\": \"auth\", \"dependencies\": [], \"paths\": [\"mobile/uni_modules/uni-id-common\", \"mobile/uni_modules/uni-id-pages\"]}",
+      "note": "SDK/服务候选。"
+    },
+    {
+      "id": "ev_0006",
+      "field": "sdk_list",
+      "source": "mobile/uni_modules/uni-cloud-s2s",
+      "status": "inferred",
+      "excerpt": "{\"sdk_type\": \"cloud_backend\", \"dependencies\": [], \"paths\": [\"mobile/uni_modules/uni-cloud-s2s\"]}",
+      "note": "SDK/服务候选。"
+    },
+    {
+      "id": "ev_0007",
+      "field": "analytics_events",
+      "source": "backend/surfaces/bootstrap-config.mjs",
+      "status": "inferred",
+      "excerpt": "[{\"source\": \"backend/surfaces/bootstrap-config.mjs\", \"where\": \"content\", \"matched\": \"experiment\", \"excerpt\": \"s: product?.active_status ?? \\\"inactive\\\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id\"}, {\"source\": \"backend/surfaces/experiment-assign.mjs\", \"where\": \"path\", \"matched\": \"experiment\"}, {...",
+      "note": "analytics/events/metrics 候选。"
+    },
+    {
+      "id": "ev_0008",
+      "field": "backend_api_logs",
+      "source": "backend/surfaces/auth-refresh.mjs",
+      "status": "inferred",
+      "excerpt": "[{\"source\": \"backend/surfaces/auth-refresh.mjs\", \"where\": \"path\", \"matched\": \"backend[\\\\\\\\/]\"}, {\"source\": \"backend/surfaces/auth-session.mjs\", \"where\": \"path\", \"matched\": \"backend[\\\\\\\\/]\"}, {\"source\": \"backend/surfaces/auth-signout.mjs\", \"where\": \"path\", \"matched\": \"backend[\\\\\\\\/]\"}, {\"source\": \"backend/surfaces/bootstrap-config.mjs\", \"where\": \"path\", \"m...",
+      "note": "backend/API/schema/log 候选。"
+    },
+    {
+      "id": "ev_0009",
+      "field": "account_system",
+      "source": "backend/surfaces/auth-refresh.mjs",
+      "status": "inferred",
+      "excerpt": "[{\"source\": \"backend/surfaces/auth-refresh.mjs\", \"where\": \"path\", \"matched\": \"\\\\bauth\\\\b\"}, {\"source\": \"backend/surfaces/auth-session.mjs\", \"where\": \"path\", \"matched\": \"\\\\bauth\\\\b\"}, {\"source\": \"backend/surfaces/auth-signout.mjs\", \"where\": \"path\", \"matched\": \"\\\\bauth\\\\b\"}, {\"source\": \"backend/surfaces/profile-benefits.mjs\", \"where\": \"path\", \"matched\": \"pr...",
+      "note": "账号/登录系统候选。"
+    },
+    {
+      "id": "ev_0010",
+      "field": "account_deletion",
+      "source": "mobile/pages.json",
+      "status": "inferred",
+      "excerpt": "[{\"source\": \"mobile/pages.json\", \"where\": \"content\", \"matched\": \"deactivate\", \"excerpt\": \"leText\\\": \\\"设置密码\\\" } } ,{ \\\"path\\\": \\\"uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate\\\", \\\"style\\\": { \\\"navigationBarTitleText\\\": \\\"注销账号\\\" } } ,{\"}]",
+      "note": "账号删除/注销候选。"
+    },
+    {
+      "id": "ev_0011",
+      "field": "payment_provider",
+      "source": "backend/surfaces/entitlement-snapshot.mjs",
+      "status": "inferred",
+      "excerpt": "[{\"source\": \"backend/surfaces/entitlement-snapshot.mjs\", \"where\": \"path\", \"matched\": \"entitlement\"}, {\"source\": \"backend/surfaces/pricing-preview.mjs\", \"where\": \"path\", \"matched\": \"pricing\"}, {\"source\": \"backend/surfaces/promo-preview.mjs\", \"where\": \"content\", \"matched\": \"pricing\", \"excerpt\": \".promo_code); return repository.previewPromo(productKey, promo...",
+      "note": "支付/订阅/权益候选。"
+    },
+    {
+      "id": "ev_0012",
+      "field": "data_type",
+      "source": "backend/surfaces/auth-session.mjs",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Personal info\", \"data_type\": \"User IDs\", \"hits\": [{\"source\": \"backend/surfaces/auth-session.mjs\", \"where\": \"content\", \"matched\": \"user[_-]?id\", \"excerpt\": \"source) { const now = runtimeConfig.now || new Date().toISOString(); const userId = request.user_id || \\\"user_local_stage_e0\\\"; return { session_state: adap\"}, {\"source\": \"backend/surface...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0013",
+      "field": "data_type",
+      "source": "mobile/pages.json",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Personal info\", \"data_type\": \"Name\", \"hits\": [{\"source\": \"mobile/pages.json\", \"where\": \"content\", \"matched\": \"realname\", \"excerpt\": \"leText\\\": \\\"注销账号\\\" } } ,{ \\\"path\\\": \\\"uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify\\\", \\\"style\\\": { \\\"enablePullDownRefresh\\\": false,\"}, {\"source\": \"mobile/pages/auth-test/index.vue\",...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0014",
+      "field": "data_type",
+      "source": "mobile/pages.json",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Personal info\", \"data_type\": \"Email address\", \"hits\": [{\"source\": \"mobile/pages.json\", \"where\": \"content\", \"matched\": \"\\\\bemail\\\\b\", \"excerpt\": \"\\\"\\\" } } ,{ \\\"path\\\": \\\"uni_modules/uni-id-pages/pages/register/register-by-email\\\", \\\"style\\\": { \\\"navigationBarTitleText\\\": \\\"邮箱验证码注册\\\" } } ,{ \\\"pa\"}, {\"source\": \"mobile/services/auth.service.js\",...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0015",
+      "field": "data_type",
+      "source": "database/user_profiles.schema.json",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Personal info\", \"data_type\": \"Phone number\", \"hits\": [{\"source\": \"database/user_profiles.schema.json\", \"where\": \"content\", \"matched\": \"phone\", \"excerpt\": \"8\\\", \\\"scope\\\": \\\"global\\\", \\\"write_model\\\": \\\"master_data\\\", \\\"required\\\": [\\\"_id\\\", \\\"phone\\\", \\\"auth_state\\\", \\\"consent_accepted\\\", \\\"created_at\\\", \\\"updated_at\\\"], \\\"properties\\\"\"}, {\"...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0016",
+      "field": "data_type",
+      "source": "backend/surfaces/entitlement-snapshot.mjs",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Financial info\", \"data_type\": \"Purchase history\", \"hits\": [{\"source\": \"backend/surfaces/entitlement-snapshot.mjs\", \"where\": \"path\", \"matched\": \"entitlement\"}, {\"source\": \"backend/surfaces/pricing-preview.mjs\", \"where\": \"path\", \"matched\": \"pricing\"}, {\"source\": \"backend/surfaces/promo-preview.mjs\", \"where\": \"content\", \"matched\": \"pricing\", \"e...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0017",
+      "field": "data_type",
+      "source": "mobile/pages.json",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Photos and videos\", \"data_type\": \"Photos or videos\", \"hits\": [{\"source\": \"mobile/pages.json\", \"where\": \"content\", \"matched\": \"cropimage\", \"excerpt\": \"Text\\\": \\\"绑定手机号码\\\" } } ,{ \\\"path\\\": \\\"uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage\\\", \\\"style\\\": { \\\"navigationBarTitleText\\\": \\\"\\\" } } ,{\"}]}",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0018",
+      "field": "data_type",
+      "source": "mobile/pages/feed/index.vue",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Files and docs\", \"data_type\": \"Files and docs\", \"hits\": [{\"source\": \"mobile/pages/feed/index.vue\", \"where\": \"content\", \"matched\": \"\\\\bpdf\\\\b\", \"excerpt\": \"ems=\\\"heroMeta\\\" /> </AppCard> </view> <AppCard class=\\\"pdf-import-card\\\" tone=\\\"muted\\\"> <view class=\\\"pdf-import-content\\\">\"}]}",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0019",
+      "field": "data_type",
+      "source": "backend/surfaces/bootstrap-config.mjs",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"App activity\", \"data_type\": \"App interactions\", \"hits\": [{\"source\": \"backend/surfaces/bootstrap-config.mjs\", \"where\": \"content\", \"matched\": \"experiment\", \"excerpt\": \"s: product?.active_status ?? \\\"inactive\\\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id\"}, {\"source\": \"backend/surface...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0020",
+      "field": "data_type",
+      "source": "database/audit_logs.schema.json",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"App info and performance\", \"data_type\": \"Diagnostics\", \"hits\": [{\"source\": \"database/audit_logs.schema.json\", \"where\": \"path\", \"matched\": \"audit_logs?\"}, {\"source\": \"mobile/pages/auth-test/index.vue\", \"where\": \"content\", \"matched\": \"diagnostic\", \"excerpt\": \"ed debug\\\" description=\\\"AUTH_TEST_ADVANCED_DEBUG. Expanded only when deeper H0.5 dia...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0021",
+      "field": "data_type",
+      "source": "backend/surfaces/entitlement-snapshot.mjs",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Device or other IDs\", \"data_type\": \"Device or other IDs\", \"hits\": [{\"source\": \"backend/surfaces/entitlement-snapshot.mjs\", \"where\": \"content\", \"matched\": \"installation\", \"excerpt\": \", runtimeConfig); const subjectId = assertRequiredString( \\\"user_id_or_installation_id\\\", request.user_id ?? request.installation_id ); return {\"}, {\"source\": \"b...",
+      "note": "Data safety 数据类型候选。"
+    },
+    {
+      "id": "ev_0022",
+      "field": "data_type",
+      "source": "backend/surfaces/mark-inbox-read.mjs",
+      "status": "inferred",
+      "excerpt": "{\"category\": \"Messages\", \"data_type\": \"Other in-app messages\", \"hits\": [{\"source\": \"backend/surfaces/mark-inbox-read.mjs\", \"where\": \"path\", \"matched\": \"inbox\"}, {\"source\": \"backend/surfaces/notification-delivery-preview.mjs\", \"where\": \"content\", \"matched\": \"notification_inbox\", \"excerpt\": \"e: \\\"durable\\\", delivery_channel: request.delivery_channel || \\\"pu...",
+      "note": "Data safety 数据类型候选。"
+    }
+  ],
+  "source_of_truth": {
+    "schema_version": "google_data_safety_source_of_truth.v1",
+    "status": "draft_blocked",
+    "can_use_as_final_data_safety_answer": false,
+    "global_questions": {
+      "does_app_collect_or_share_user_data": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现用户数据或 SDK 信号。"
+      },
+      "is_all_user_data_collected_encrypted_in_transit": {
+        "draft_answer": "NEED_HUMAN",
+        "human_review": "NEED_HUMAN",
+        "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。"
+      },
+      "can_users_request_data_deletion": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现账号删除/注销候选。",
+        "evidence_ids": [
+          "ev_0010"
+        ]
+      },
+      "privacy_policy_url": {
+        "draft_answer": "NEED_HUMAN",
+        "human_review": "NEED_HUMAN",
+        "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+        "evidence_ids": []
+      },
+      "third_party_sdk_or_external_sharing": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现第三方 SDK/服务候选。",
+        "evidence_ids": [
+          "ev_0005",
+          "ev_0006"
+        ]
+      },
+      "tracking": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现 ads、analytics 或 device id 相关 tracking 候选。"
+      },
+      "children_or_sensitive_data_risk": {
+        "draft_answer": "NEED_HUMAN",
+        "human_review": "NEED_HUMAN",
+        "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+        "evidence_ids": []
+      },
+      "account_system": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现相关实现或数据结构信号。",
+        "evidence_ids": [
+          "ev_0009"
+        ]
+      },
+      "payment_provider": {
+        "draft_answer": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "reason": "发现相关实现或数据结构信号。",
+        "evidence_ids": [
+          "ev_0011"
+        ]
+      },
+      "crash_reporting": {
+        "draft_answer": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "reason": "未发现相关证据。",
+        "evidence_ids": []
+      },
+      "ad_sdk": {
+        "draft_answer": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "reason": "未发现相关证据。",
+        "evidence_ids": []
+      }
+    },
+    "data_types": [
+      {
+        "category": "Personal info",
+        "data_type": "User IDs",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Account management",
+          "App functionality"
+        ],
+        "linked_to_identity": "YES_CANDIDATE",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0012"
+        ],
+        "signals": [
+          {
+            "source": "backend/surfaces/auth-session.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "source) { const now = runtimeConfig.now || new Date().toISOString(); const userId = request.user_id || \"user_local_stage_e0\"; return { session_state: adap"
+          },
+          {
+            "source": "backend/surfaces/content-resume.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return { items: r"
+          },
+          {
+            "source": "backend/surfaces/entitlement-snapshot.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "Key(request, runtimeConfig); const subjectId = assertRequiredString( \"user_id_or_installation_id\", request.user_id ?? request.installation_id );"
+          },
+          {
+            "source": "backend/surfaces/follow-toggle.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); const subjectType = ass"
+          },
+          {
+            "source": "backend/surfaces/home-discovery.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.build"
+          },
+          {
+            "source": "backend/surfaces/mark-inbox-read.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.markI"
+          },
+          {
+            "source": "backend/surfaces/notification-delivery-preview.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "null, product_key: request.product_key || runtimeConfig.productKey, user_id: request.user_id || \"user_local_stage_e0\", publish_batch_id: request.publ"
+          },
+          {
+            "source": "backend/surfaces/notification-inbox.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); const items = repositor"
+          },
+          {
+            "source": "backend/surfaces/notification-prefs.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const userId = assertRequiredString(\"user_id\", request.user_id); if (request.update) {"
+          },
+          {
+            "source": "backend/surfaces/publish-batch-summary.mjs",
+            "where": "content",
+            "matched": "user[_-]?id",
+            "excerpt": "= assertRequiredString(\"publish_batch_id\", request.publish_batch_id); const userId = assertRequiredString(\"user_id\", request.user_id); return repository.getPu"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Personal info",
+        "data_type": "Name",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Account management"
+        ],
+        "linked_to_identity": "YES_CANDIDATE",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0013"
+        ],
+        "signals": [
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "realname",
+            "excerpt": "leText\": \"注销账号\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify\", \"style\": { \"enablePullDownRefresh\": false,"
+          },
+          {
+            "source": "mobile/pages/auth-test/index.vue",
+            "where": "content",
+            "matched": "user[_-]?name",
+            "excerpt": "on mobile.\" /> <view class=\"field-stack\"> <input v-model=\"username\" class=\"auth-input\" placeholder=\"Test username\" /> <input v-model=\""
+          },
+          {
+            "source": "mobile/pages/profile/index.vue",
+            "where": "content",
+            "matched": "nickname",
+            "excerpt": "e || \"普通读者\"; }, displayName() { return this.auth.currentUserInfo?.nickname || this.auth.currentUserInfo?.uid || \"阅读用户\"; }, profileSubtitle() {"
+          },
+          {
+            "source": "mobile/services/auth.service.js",
+            "where": "content",
+            "matched": "user[_-]?name",
+            "excerpt": "nCo = null; } return uniIdLoginCo; } function buildPasswordLoginPayload({ username = \"\", password = \"\" } = {}) { const payload = { password }; if (/^1\\"
+          },
+          {
+            "source": "mobile/uniCloud-aliyun/cloudfunctions/h0_5-web-auth-smoke/index.js",
+            "where": "content",
+            "matched": "user[_-]?name",
+            "excerpt": "userAppList.some((item) => appList.includes(item)); } function buildUserQuery(username) { if (!username) { throw new Error('AUTH_INPUT_MISSING'); } if (/^1"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Personal info",
+        "data_type": "Email address",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Account management"
+        ],
+        "linked_to_identity": "YES_CANDIDATE",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0014"
+        ],
+        "signals": [
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "\\bemail\\b",
+            "excerpt": "\"\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/register/register-by-email\", \"style\": { \"navigationBarTitleText\": \"邮箱验证码注册\" } } ,{ \"pa"
+          },
+          {
+            "source": "mobile/services/auth.service.js",
+            "where": "content",
+            "matched": "\\bemail\\b",
+            "excerpt": "{ payload.mobile = username; } else if (/@/.test(username)) { payload.email = username; } else { payload.username = username; } return payload;"
+          },
+          {
+            "source": "mobile/uniCloud-aliyun/cloudfunctions/h0_5-web-auth-smoke/index.js",
+            "where": "content",
+            "matched": "\\bemail\\b",
+            "excerpt": "mobile_confirmed: 1 }]; } if (/@/.test(username)) { const queries = [{ email: username, email_confirmed: 1 }]; if (username.toLowerCase() !== username)"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Personal info",
+        "data_type": "Phone number",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Account management",
+          "Fraud prevention, security, and compliance"
+        ],
+        "linked_to_identity": "YES_CANDIDATE",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0015"
+        ],
+        "signals": [
+          {
+            "source": "database/user_profiles.schema.json",
+            "where": "content",
+            "matched": "phone",
+            "excerpt": "8\", \"scope\": \"global\", \"write_model\": \"master_data\", \"required\": [\"_id\", \"phone\", \"auth_state\", \"consent_accepted\", \"created_at\", \"updated_at\"], \"properties\""
+          },
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "sms",
+            "excerpt": "t\": \"账号密码登录\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/login/login-smscode\", \"style\": { \"navigationBarTitleText\": \"手机验证码登录\" } } ,{"
+          },
+          {
+            "source": "uniCloud/database/user_profiles.schema.json",
+            "where": "content",
+            "matched": "phone",
+            "excerpt": "6\", \"scope\": \"global\", \"write_model\": \"master_data\", \"required\": [\"_id\", \"phone\", \"auth_state\", \"consent_accepted\", \"created_at\", \"updated_at\"], \"properties\""
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Financial info",
+        "data_type": "Purchase history",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "App functionality",
+          "Payments"
+        ],
+        "linked_to_identity": "YES_CANDIDATE",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0016"
+        ],
+        "signals": [
+          {
+            "source": "backend/surfaces/entitlement-snapshot.mjs",
+            "where": "path",
+            "matched": "entitlement"
+          },
+          {
+            "source": "backend/surfaces/pricing-preview.mjs",
+            "where": "path",
+            "matched": "pricing"
+          },
+          {
+            "source": "backend/surfaces/promo-preview.mjs",
+            "where": "content",
+            "matched": "pricing",
+            "excerpt": ".promo_code); return repository.previewPromo(productKey, promoCode, request.pricing_plan_id || null); }; }"
+          },
+          {
+            "source": "database/entitlements.schema.json",
+            "where": "path",
+            "matched": "entitlement"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "content",
+            "matched": "purchase",
+            "excerpt": "tch\", \"read_progress\", \"paywall_impression\", \"paywall_dismiss\", \"plan_select\", \"purchase_success\", \"purchase_fail\", \"share_click\", \"share_success\", \"invite_bind_success"
+          },
+          {
+            "source": "database/payment_orders.schema.json",
+            "where": "path",
+            "matched": "payment_orders?"
+          },
+          {
+            "source": "database/pricing_plans.schema.json",
+            "where": "path",
+            "matched": "pricing"
+          },
+          {
+            "source": "database/promo_campaigns.schema.json",
+            "where": "content",
+            "matched": "pricing",
+            "excerpt": "name\": { \"type\": \"string\" }, \"campaign_type\": { \"type\": \"string\", \"enum\": [\"pricing_discount\", \"welcome_reward\", \"invite_reward\", \"internal_beta\"] }, \"price_mu"
+          },
+          {
+            "source": "database/subscription_records.schema.json",
+            "where": "path",
+            "matched": "subscription_records?"
+          },
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "订阅",
+            "excerpt": "th\": \"pages/paywall/index\", \"style\": { \"navigationBarTitleText\": \"订阅\" } }, { \"path\": \"pages/invite/index\", \"style\": {"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Photos and videos",
+        "data_type": "Photos or videos",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "App functionality"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0017"
+        ],
+        "signals": [
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "cropimage",
+            "excerpt": "Text\": \"绑定手机号码\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage\", \"style\": { \"navigationBarTitleText\": \"\" } } ,{"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Files and docs",
+        "data_type": "Files and docs",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "App functionality"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0018"
+        ],
+        "signals": [
+          {
+            "source": "mobile/pages/feed/index.vue",
+            "where": "content",
+            "matched": "\\bpdf\\b",
+            "excerpt": "ems=\"heroMeta\" /> </AppCard> </view> <AppCard class=\"pdf-import-card\" tone=\"muted\"> <view class=\"pdf-import-content\">"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "App activity",
+        "data_type": "App interactions",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Analytics",
+          "App functionality"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0019"
+        ],
+        "signals": [
+          {
+            "source": "backend/surfaces/bootstrap-config.mjs",
+            "where": "content",
+            "matched": "experiment",
+            "excerpt": "s: product?.active_status ?? \"inactive\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id"
+          },
+          {
+            "source": "backend/surfaces/content-detail.mjs",
+            "where": "content",
+            "matched": "reading",
+            "excerpt": "import { assertAudienceSegment, assertProductKey, assertReadingMode, assertRequiredString } from \"../guards/request-guards.mjs\"; function is"
+          },
+          {
+            "source": "backend/surfaces/experiment-assign.mjs",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "backend/surfaces/follow-catalog.mjs",
+            "where": "path",
+            "matched": "follows?"
+          },
+          {
+            "source": "backend/surfaces/follow-toggle.mjs",
+            "where": "path",
+            "matched": "follows?"
+          },
+          {
+            "source": "backend/surfaces/notification-prefs.mjs",
+            "where": "content",
+            "matched": "follows?",
+            "excerpt": "ours_end_minute ?? 0 }, max_daily_push: record.max_daily_push ?? 3, followed_only: record.follow_alert_level === \"immediate\" || record.follow_alert_level"
+          },
+          {
+            "source": "database/article_variants.schema.json",
+            "where": "content",
+            "matched": "reading",
+            "excerpt": "equired\": [\"_id\", \"article_id\", \"product_key\", \"language\", \"audience_segment\", \"reading_mode\", \"revision\", \"publish_status\", \"publish_at\", \"markdown_body\", \"content_ha"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "path",
+            "matched": "event_logs?"
+          },
+          {
+            "source": "database/event_metrics_daily.schema.json",
+            "where": "path",
+            "matched": "event_metrics?"
+          },
+          {
+            "source": "database/experiment_assignments.schema.json",
+            "where": "path",
+            "matched": "experiment"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "App info and performance",
+        "data_type": "Diagnostics",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "Analytics",
+          "App functionality"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0020"
+        ],
+        "signals": [
+          {
+            "source": "database/audit_logs.schema.json",
+            "where": "path",
+            "matched": "audit_logs?"
+          },
+          {
+            "source": "mobile/pages/auth-test/index.vue",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "ed debug\" description=\"AUTH_TEST_ADVANCED_DEBUG. Expanded only when deeper H0.5 diagnostics are needed.\" /> <MetaRow :items=\"advancedDebugMeta\" /> <vi"
+          },
+          {
+            "source": "mobile/pages/feed/index.vue",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "/> </view> </scroll-view> </view> <view v-if=\"showDevDiagnostics\" :style=\"$theme.pageSection\"> <AppCard tone=\"muted\"> <SectionHea"
+          },
+          {
+            "source": "mobile/pages/profile/index.vue",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "xt> </view> <view class=\"profile-action-card\" @click=\"toggleDiagnostics\"> <text class=\"profile-action-title\">设备状态</text> <text"
+          },
+          {
+            "source": "mobile/pages/settings/index.vue",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "StateCard :capability=\"pushCapability\" :preview=\"pushPreview\" /> <DeviceDiagnosticCard :diagnostics=\"auth.deviceDiagnostics\" /> <AppCard tone=\"muted\">"
+          },
+          {
+            "source": "mobile/services/auth.service.js",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "\"../stores/session.store.js\"; import { setAuthCurrentUserInfo, setAuthDeviceDiagnostics, setAuthError, setAuthPasswordPrep, setAuthPending, setAuthSession,"
+          },
+          {
+            "source": "mobile/services/device.service.js",
+            "where": "content",
+            "matched": "diagnostic",
+            "excerpt": "eway } from \"./runtime-gateway.service.js\"; import { getAuthState, setAuthDeviceDiagnostics } from \"../stores/auth.store.js\"; import { getSessionState } from \"../stores/s"
+          },
+          {
+            "source": "uniCloud/database/_sync-manifest.json",
+            "where": "content",
+            "matched": "audit_logs?",
+            "excerpt": "\"files\": [ \"article_variants.schema.json\", \"articles.schema.json\", \"audit_logs.schema.json\", \"device_installations.schema.json\", \"entitlements.schema."
+          },
+          {
+            "source": "uniCloud/database/audit_logs.schema.json",
+            "where": "path",
+            "matched": "audit_logs?"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Device or other IDs",
+        "data_type": "Device or other IDs",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "App functionality",
+          "Fraud prevention, security, and compliance"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "YES_CANDIDATE",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0021"
+        ],
+        "signals": [
+          {
+            "source": "backend/surfaces/entitlement-snapshot.mjs",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": ", runtimeConfig); const subjectId = assertRequiredString( \"user_id_or_installation_id\", request.user_id ?? request.installation_id ); return {"
+          },
+          {
+            "source": "backend/surfaces/experiment-assign.mjs",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "t) { const productKey = assertProductKey(request, runtimeConfig); const installationId = assertRequiredString( \"installation_id\", request.installation_i"
+          },
+          {
+            "source": "backend/surfaces/push-capability.mjs",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "app\", product_key: request.product_key || runtimeConfig.productKey, installation_id: request.installation_id || \"inst_local_stub\", source }; }; }"
+          },
+          {
+            "source": "backend/surfaces/register-device.mjs",
+            "where": "content",
+            "matched": "device[_-]?id",
+            "excerpt": "ed\", installation_id: request.installation_id || \"inst_local_stub\", device_id: request.device_id || request.installation_id || \"device_local_stub\", pus"
+          },
+          {
+            "source": "database/device_installations.schema.json",
+            "where": "path",
+            "matched": "device_installations?"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "del\": \"append_only_ledger\", \"required\": [\"_id\", \"product_key\", \"event_name\", \"installation_id\", \"session_id\", \"request_id\", \"dedup_key\", \"occurred_at\", \"server_received_a"
+          },
+          {
+            "source": "database/experiment_assignments.schema.json",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "{ \"type\": \"string\" }, \"subject_type\": { \"type\": \"string\", \"enum\": [\"user\", \"installation\"] }, \"subject_id\": { \"type\": \"string\" }, \"assignment_version\": { \"type\""
+          },
+          {
+            "source": "database/experiments.schema.json",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "\"archived\"] }, \"assignment_unit\": { \"type\": \"string\", \"enum\": [\"user_id\", \"installation_id\"] }, \"bucket_definitions\": { \"type\": \"array\", \"items\": { \"type\": \"object"
+          },
+          {
+            "source": "database/notification_deliveries.schema.json",
+            "where": "content",
+            "matched": "device_installations?",
+            "excerpt": ": { \"type\": \"string\" }, \"notification_inbox_id\": { \"type\": \"string\" }, \"device_installation_id\": { \"type\": \"string\" }, \"source_inbox_id\": { \"type\": \"string\" }, \"de"
+          },
+          {
+            "source": "database/promo_redemptions.schema.json",
+            "where": "content",
+            "matched": "installation",
+            "excerpt": "er\", \"required\": [\"_id\", \"product_key\", \"campaign_id\", \"code_id\", \"user_id\", \"installation_id\", \"redemption_key\", \"status\", \"request_id\", \"created_at\"], \"properties\": {"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      },
+      {
+        "category": "Messages",
+        "data_type": "Other in-app messages",
+        "collected": "YES_CANDIDATE",
+        "shared": "NEED_HUMAN",
+        "processed_ephemerally": "NEED_HUMAN",
+        "required_or_optional": "NEED_HUMAN",
+        "purposes": [
+          "App functionality"
+        ],
+        "linked_to_identity": "NEED_HUMAN",
+        "used_for_tracking": "NO_NOT_OBSERVED",
+        "human_review": "NEED_HUMAN",
+        "confidence": 0.65,
+        "evidence_ids": [
+          "ev_0022"
+        ],
+        "signals": [
+          {
+            "source": "backend/surfaces/mark-inbox-read.mjs",
+            "where": "path",
+            "matched": "inbox"
+          },
+          {
+            "source": "backend/surfaces/notification-delivery-preview.mjs",
+            "where": "content",
+            "matched": "notification_inbox",
+            "excerpt": "e: \"durable\", delivery_channel: request.delivery_channel || \"push\", notification_inbox_id: request.notification_inbox_id || null, product_key: request.product_k"
+          },
+          {
+            "source": "backend/surfaces/notification-inbox.mjs",
+            "where": "path",
+            "matched": "inbox"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "content",
+            "matched": "inbox",
+            "excerpt": "uccess\", \"promo_redeem_success\", \"notification_received\", \"notification_open\", \"inbox_open\", \"follow_add\", \"follow_remove\", \"bookmark_add\", \"bookmark_remove\", \"conti"
+          },
+          {
+            "source": "database/notification_campaigns.schema.json",
+            "where": "content",
+            "matched": "inbox",
+            "excerpt": "pe\": { \"type\": \"string\", \"enum\": [\"new_publish_batch\", \"followed_topic_alert\", \"inbox_digest\", \"revision_highlight\", \"operational_retouch\"] }, \"display_name\": {"
+          },
+          {
+            "source": "database/notification_deliveries.schema.json",
+            "where": "content",
+            "matched": "message",
+            "excerpt": "\"last_previewed_at\": { \"type\": \"string\", \"format\": \"date-time\" }, \"provider_message_id\": { \"type\": \"string\" }, \"failure_code\": { \"type\": \"string\" }, \"plann"
+          },
+          {
+            "source": "database/notification_inbox.schema.json",
+            "where": "path",
+            "matched": "notification_inbox"
+          },
+          {
+            "source": "database/user_follows.schema.json",
+            "where": "content",
+            "matched": "notification_inbox",
+            "excerpt": "ype\": \"string\", \"enum\": [\"follow_catalog\", \"content_detail\", \"search_content\", \"notification_inbox\", \"ops_import\"] }, \"last_notified_publish_batch_id\": { \"type\": \"string\" },"
+          },
+          {
+            "source": "database/user_notification_prefs.schema.json",
+            "where": "content",
+            "matched": "inbox",
+            "excerpt": "te\", \"required\": [\"_id\", \"product_key\", \"user_id\", \"status\", \"push_enabled\", \"inbox_enabled\", \"digest_enabled\", \"quiet_hours_enabled\", \"timezone\", \"created_at\", \"u"
+          },
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "inbox",
+            "excerpt": "\"navigationBarTitleText\": \"设置\" } }, { \"path\": \"pages/inbox/index\", \"style\": { \"navigationBarTitleText\": \"消息摘要\" } }"
+          }
+        ],
+        "owner_input_source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+        "owner_input_evidence_id": "ev_0001",
+        "owner_missing_fields": [
+          "collected",
+          "shared",
+          "processed_ephemerally",
+          "required_or_optional",
+          "purposes",
+          "linked_to_identity",
+          "used_for_tracking"
+        ]
+      }
+    ],
+    "evidence_sections": {
+      "app_permissions": [],
+      "sdk_list": [
+        {
+          "sdk_type": "auth",
+          "dependencies": [],
+          "paths": [
+            "mobile/uni_modules/uni-id-common",
+            "mobile/uni_modules/uni-id-pages"
+          ],
+          "evidence_id": "ev_0005"
+        },
+        {
+          "sdk_type": "cloud_backend",
+          "dependencies": [],
+          "paths": [
+            "mobile/uni_modules/uni-cloud-s2s"
+          ],
+          "evidence_id": "ev_0006"
+        }
+      ],
+      "analytics_events": {
+        "status": "inferred",
+        "hits": [
+          {
+            "source": "backend/surfaces/bootstrap-config.mjs",
+            "where": "content",
+            "matched": "experiment",
+            "excerpt": "s: product?.active_status ?? \"inactive\" }, feature_flags: [], experiments: repository.listExperiments(productKey).map((item) => ({ experiment_id"
+          },
+          {
+            "source": "backend/surfaces/experiment-assign.mjs",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "path",
+            "matched": "event_logs?"
+          },
+          {
+            "source": "database/event_metrics_daily.schema.json",
+            "where": "path",
+            "matched": "event_metrics?"
+          },
+          {
+            "source": "database/experiment_assignments.schema.json",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "database/experiments.schema.json",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "mobile/services/experiment.service.js",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "mobile/services/runtime-gateway.service.js",
+            "where": "content",
+            "matched": "experiment",
+            "excerpt": "eMode).getPricingPreviewCatalog(withRuntimeDefaults(request)); }, async getExperimentAssignment(request = {}) { const session = getSessionState(); return pic"
+          },
+          {
+            "source": "uniCloud/database/_sync-manifest.json",
+            "where": "content",
+            "matched": "event_logs?",
+            "excerpt": "\", \"device_installations.schema.json\", \"entitlements.schema.json\", \"event_logs_raw.schema.json\", \"event_metrics_daily.schema.json\", \"experiment_assign"
+          },
+          {
+            "source": "uniCloud/database/event_logs_raw.schema.json",
+            "where": "path",
+            "matched": "event_logs?"
+          },
+          {
+            "source": "uniCloud/database/event_metrics_daily.schema.json",
+            "where": "path",
+            "matched": "event_metrics?"
+          },
+          {
+            "source": "uniCloud/database/experiment_assignments.schema.json",
+            "where": "path",
+            "matched": "experiment"
+          },
+          {
+            "source": "uniCloud/database/experiments.schema.json",
+            "where": "path",
+            "matched": "experiment"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0007"
+        ],
+        "reason": "发现相关实现或数据结构信号。"
+      },
+      "backend_api_logs": {
+        "status": "inferred",
+        "hits": [
+          {
+            "source": "backend/surfaces/auth-refresh.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/auth-session.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/auth-signout.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/bootstrap-config.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/campaign-landing.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/commercial-offer.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/content-detail.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/content-resume.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/content-sync-delta.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/entitlement-snapshot.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/event-ingest.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/experiment-assign.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/follow-catalog.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/follow-toggle.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/home-discovery.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          },
+          {
+            "source": "backend/surfaces/mark-inbox-read.mjs",
+            "where": "path",
+            "matched": "backend[\\\\/]"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0008"
+        ],
+        "reason": "发现相关实现或数据结构信号。"
+      },
+      "account_system": {
+        "status": "inferred",
+        "hits": [
+          {
+            "source": "backend/surfaces/auth-refresh.mjs",
+            "where": "path",
+            "matched": "\\bauth\\b"
+          },
+          {
+            "source": "backend/surfaces/auth-session.mjs",
+            "where": "path",
+            "matched": "\\bauth\\b"
+          },
+          {
+            "source": "backend/surfaces/auth-signout.mjs",
+            "where": "path",
+            "matched": "\\bauth\\b"
+          },
+          {
+            "source": "backend/surfaces/profile-benefits.mjs",
+            "where": "path",
+            "matched": "profile"
+          },
+          {
+            "source": "backend/surfaces/register-device.mjs",
+            "where": "path",
+            "matched": "register"
+          },
+          {
+            "source": "database/device_installations.schema.json",
+            "where": "content",
+            "matched": "register",
+            "excerpt": "ype\": \"string\", \"enum\": [\"unknown\", \"prompt\", \"granted\", \"denied\"] }, \"push_registered_at\": { \"type\": \"string\", \"format\": \"date-time\" }, \"remote_runtime_mode\":"
+          },
+          {
+            "source": "database/user_product_profiles.schema.json",
+            "where": "path",
+            "matched": "profile"
+          },
+          {
+            "source": "database/user_profiles.schema.json",
+            "where": "path",
+            "matched": "profile"
+          },
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "\\bauth\\b",
+            "excerpt": "\"navigationBarTitleText\": \"活动说明\" } }, { \"path\": \"pages/auth-test/index\", \"style\": { \"navigationBarTitleText\": \"Auth test\""
+          },
+          {
+            "source": "mobile/pages/auth-test/index.vue",
+            "where": "path",
+            "matched": "\\bauth\\b"
+          },
+          {
+            "source": "mobile/pages/inbox/index.vue",
+            "where": "content",
+            "matched": "account",
+            "excerpt": "ts/discovery/DiscoverySection.vue\"; import PushStateCard from \"../../components/account/PushStateCard.vue\"; import AppButton from \"../../components/ui/AppButton.vue\";"
+          },
+          {
+            "source": "mobile/pages/profile/index.vue",
+            "where": "path",
+            "matched": "profile"
+          },
+          {
+            "source": "mobile/pages/settings/index.vue",
+            "where": "content",
+            "matched": "\\bauth\\b",
+            "excerpt": "lse)\" /> </view> </AppCard> <AuthStateCard :session=\"auth.session\" :current-user-info=\"auth.currentUserInfo\" /> <DeviceStateCard"
+          },
+          {
+            "source": "mobile/services/auth.service.js",
+            "where": "path",
+            "matched": "\\bauth\\b"
+          },
+          {
+            "source": "mobile/services/cache.service.js",
+            "where": "content",
+            "matched": "register",
+            "excerpt": "nction writeCacheIndex(keys) { writeValue(CACHE_INDEX_KEY, keys); } function registerKey(key) { const keys = readCacheIndex(); if (keys.indexOf(key) === -1) {"
+          },
+          {
+            "source": "mobile/services/commercial.service.js",
+            "where": "content",
+            "matched": "profile",
+            "excerpt": "() { return runtimeGateway.getCampaignLanding(); } export async function loadProfileBenefits() { return runtimeGateway.getProfileBenefits(); }"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0009"
+        ],
+        "reason": "发现相关实现或数据结构信号。"
+      },
+      "account_deletion": {
+        "status": "inferred",
+        "hits": [
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "deactivate",
+            "excerpt": "leText\": \"设置密码\" } } ,{ \"path\": \"uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate\", \"style\": { \"navigationBarTitleText\": \"注销账号\" } } ,{"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0010"
+        ],
+        "reason": "发现相关实现或数据结构信号。"
+      },
+      "payment_provider": {
+        "status": "inferred",
+        "hits": [
+          {
+            "source": "backend/surfaces/entitlement-snapshot.mjs",
+            "where": "path",
+            "matched": "entitlement"
+          },
+          {
+            "source": "backend/surfaces/pricing-preview.mjs",
+            "where": "path",
+            "matched": "pricing"
+          },
+          {
+            "source": "backend/surfaces/promo-preview.mjs",
+            "where": "content",
+            "matched": "pricing",
+            "excerpt": ".promo_code); return repository.previewPromo(productKey, promoCode, request.pricing_plan_id || null); }; }"
+          },
+          {
+            "source": "database/entitlements.schema.json",
+            "where": "path",
+            "matched": "entitlement"
+          },
+          {
+            "source": "database/event_logs_raw.schema.json",
+            "where": "content",
+            "matched": "purchase",
+            "excerpt": "tch\", \"read_progress\", \"paywall_impression\", \"paywall_dismiss\", \"plan_select\", \"purchase_success\", \"purchase_fail\", \"share_click\", \"share_success\", \"invite_bind_success"
+          },
+          {
+            "source": "database/payment_orders.schema.json",
+            "where": "path",
+            "matched": "payment"
+          },
+          {
+            "source": "database/pricing_plans.schema.json",
+            "where": "path",
+            "matched": "pricing"
+          },
+          {
+            "source": "database/promo_campaigns.schema.json",
+            "where": "content",
+            "matched": "pricing",
+            "excerpt": "name\": { \"type\": \"string\" }, \"campaign_type\": { \"type\": \"string\", \"enum\": [\"pricing_discount\", \"welcome_reward\", \"invite_reward\", \"internal_beta\"] }, \"price_mu"
+          },
+          {
+            "source": "database/subscription_records.schema.json",
+            "where": "path",
+            "matched": "subscription"
+          },
+          {
+            "source": "mobile/pages.json",
+            "where": "content",
+            "matched": "订阅",
+            "excerpt": "th\": \"pages/paywall/index\", \"style\": { \"navigationBarTitleText\": \"订阅\" } }, { \"path\": \"pages/invite/index\", \"style\": {"
+          },
+          {
+            "source": "mobile/pages/auth-test/index.vue",
+            "where": "content",
+            "matched": "payment",
+            "excerpt": "_path. Dev-safe auth and device verification entry, not a production account or payment path.\" /> <view :style=\"$theme.pageSection\"> <view :style=\"$them"
+          },
+          {
+            "source": "mobile/pages/campaign/index.vue",
+            "where": "content",
+            "matched": "订阅",
+            "excerpt": "nHeader title=\"Campaign Alias\" description=\"旧 campaign route 仅保留为内部兼容 alias，将跳转到订阅页商业区块。\" /> </view> </template> <script> import SectionHeader from \"../../comp"
+          },
+          {
+            "source": "mobile/pages/detail/index.vue",
+            "where": "content",
+            "matched": "entitlement",
+            "excerpt": "sibilityEnabled } from \"../../services/dev-visibility.service.js\"; import { loadEntitlementSnapshot } from \"../../services/entitlement.service.js\"; import { ingestRuntimeE"
+          },
+          {
+            "source": "mobile/pages/invite/index.vue",
+            "where": "content",
+            "matched": "订阅",
+            "excerpt": "itle\">邀请与兑换</text> <text class=\"invite-description\">只承接邀请摘要、奖励预览与兑换入口，不扩张为订阅或社交流程。</text> </view> <view :style=\"$theme.pageSection\"> <view :s"
+          },
+          {
+            "source": "mobile/pages/paywall/index.vue",
+            "where": "content",
+            "matched": "pricing",
+            "excerpt": "> <PaywallPlanCard v-for=\"plan in plans\" :key=\"plan.pricing_plan_id\" :plan=\"buildPaywallPlan(plan)\" :recommended=\"Boole"
+          },
+          {
+            "source": "mobile/pages/profile/index.vue",
+            "where": "content",
+            "matched": "subscription",
+            "excerpt": "\"; }, membershipTitle() { return this.commercial.profileBenefits?.subscription_status === \"active\" ? \"已开通完整阅读\" : \"当前为预览版权益\"; }, membershipMeta() {"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0011"
+        ],
+        "reason": "发现相关实现或数据结构信号。"
+      },
+      "crash_reporting": {
+        "status": "missing",
+        "hits": [],
+        "evidence_ids": [],
+        "reason": "未发现相关证据。"
+      },
+      "ad_sdk": {
+        "status": "missing",
+        "hits": [],
+        "evidence_ids": [],
+        "reason": "未发现相关证据。"
+      },
+      "children_sensitive": {
+        "status": "missing",
+        "hits": [],
+        "evidence_ids": [],
+        "reason": "未发现相关证据。"
+      },
+      "privacy_policy_url": {
+        "answer": "NEED_HUMAN",
+        "status": "NEED_HUMAN",
+        "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+        "candidates": [],
+        "evidence_ids": []
+      },
+      "owner_input": {
+        "status": "observed",
+        "files": [
+          {
+            "source": "play-store-launch/inputs/privacy-data-safety-owner-input.json",
+            "data": {
+              "schema_version": "privacy_data_safety_owner_input.v1",
+              "status": "draft_owner_review_required",
+              "canUseAsFinalPlayConsoleAnswer": false,
+              "privacyPolicyUrl": "NEED_HUMAN",
+              "encryptedInTransit": "NEED_HUMAN",
+              "canUsersRequestDataDeletion": "NEED_HUMAN",
+              "childrenOrSensitiveDataRisk": {
+                "targetAgeRange": "NEED_HUMAN",
+                "directedToChildren": "NEED_HUMAN",
+                "handlesSensitiveData": "NEED_HUMAN",
+                "notes": "Owner/legal/privacy must confirm target age, Families policy relevance, and sensitive data scope."
+              },
+              "dataTypes": [
+                {
+                  "category": "Personal info",
+                  "dataType": "User IDs",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Account management",
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Personal info",
+                  "dataType": "Name",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Account management"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Personal info",
+                  "dataType": "Email address",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Account management"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Personal info",
+                  "dataType": "Phone number",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Account management",
+                    "Fraud prevention, security, and compliance"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Financial info",
+                  "dataType": "Purchase history",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "App functionality",
+                    "Payments"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Photos and videos",
+                  "dataType": "Photos or videos",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Files and docs",
+                  "dataType": "Files and docs",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "App activity",
+                  "dataType": "App interactions",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Analytics",
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "App info and performance",
+                  "dataType": "Diagnostics",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "Analytics",
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Device or other IDs",
+                  "dataType": "Device or other IDs",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "App functionality",
+                    "Fraud prevention, security, and compliance"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                },
+                {
+                  "category": "Messages",
+                  "dataType": "Other in-app messages",
+                  "collected": "NEED_HUMAN",
+                  "shared": "NEED_HUMAN",
+                  "processedEphemerally": "NEED_HUMAN",
+                  "requiredOrOptional": "NEED_HUMAN",
+                  "purposeCandidates": [
+                    "App functionality"
+                  ],
+                  "purposes": "NEED_HUMAN",
+                  "linkedToIdentity": "NEED_HUMAN",
+                  "usedForTracking": "NEED_HUMAN"
+                }
+              ],
+              "ownerReviewRequired": [
+                "Replace privacyPolicyUrl with a public URL covering the current app, SDKs, data collection, sharing, and deletion flow.",
+                "Replace encryptedInTransit with true or false after confirming app and third-party SDK network transport.",
+                "Replace canUsersRequestDataDeletion with true or false after confirming account/data deletion behavior.",
+                "Complete childrenOrSensitiveDataRisk with target age, child-directed status, and sensitive-data scope.",
+                "For every dataTypes row, replace NEED_HUMAN fields with owner-confirmed answers before Play Console use."
+              ]
+            },
+            "evidence_id": "ev_0001"
+          },
+          {
+            "source": "play-store-launch/inputs/google-play-listing.json",
+            "data": {
+              "schema_version": "google_play_listing_input.v1",
+              "locale": "en-US",
+              "status": "draft_owner_review_required",
+              "appName": "Magazine Digest",
+              "shortDescription": "Save, search, and continue reading magazine digests on mobile.",
+              "fullDescription": "Magazine Digest helps readers keep up with long-form magazine content in one mobile place.\n\nUse it to browse publication and article collections, open concise article details, continue reading from saved progress, follow topics or publications, and manage saved items for later.\n\nThe app also includes account, profile, notification preference, inbox, and entitlement surfaces that are visible in the current app evidence. Subscription availability, pricing, privacy policy, support contact, and public screenshot copy still require owner review before public store use.",
+              "privacyPolicyUrl": "NEED_HUMAN",
+              "contactEmail": "NEED_HUMAN",
+              "category": "News & Magazines",
+              "contentRating": "NEED_HUMAN",
+              "targetAudience": "Adults and general readers",
+              "draftOnly": true,
+              "canUseForSubmission": false,
+              "ownerReviewRequired": [
+                "Replace NEED_HUMAN privacyPolicyUrl with a public privacy policy URL.",
+                "Replace NEED_HUMAN contactEmail with a public developer support email.",
+                "Confirm contentRating through the Play Console questionnaire.",
+                "Confirm category and targetAudience with the owner before submission.",
+                "Use only real captured screenshots and approved preview assets."
+              ]
+            },
+            "evidence_id": "ev_0002"
+          }
+        ],
+        "evidence_ids": [
+          "ev_0001",
+          "ev_0002"
+        ]
+      },
+      "source_reports": [
+        {
+          "source": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+          "summary": {
+            "schema_version": "privacy_disclosure_prep.v1",
+            "overall_status": "blocked",
+            "top_keys": [
+              "schema_version",
+              "generated_at",
+              "root",
+              "scan_policy",
+              "project_fingerprint",
+              "overall_status",
+              "detected_platforms",
+              "disclosure_question_matrix",
+              "sdk_inventory",
+              "permission_inventory",
+              "data_flows",
+              "data_safety_form_draft"
+            ]
+          },
+          "evidence_id": "ev_0003"
+        },
+        {
+          "source": "play-store-launch/reports/launch-info-collector-output.json",
+          "summary": {
+            "schema_version": "launch_info_collector_output.v1",
+            "overall_status": "blocked",
+            "top_keys": [
+              "schema_version",
+              "generated_at",
+              "proof_mode",
+              "overall_status",
+              "output_dir",
+              "scanned_file_count",
+              "document_source_count",
+              "document_sources",
+              "fields",
+              "blockers",
+              "evidence",
+              "source_of_truth"
+            ]
+          },
+          "evidence_id": "ev_0004"
+        }
+      ]
+    },
+    "blockers": [
+      {
+        "field": "is_all_user_data_collected_encrypted_in_transit",
+        "label": "加密传输",
+        "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+        "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+      },
+      {
+        "field": "privacy_policy_url",
+        "label": "隐私政策 URL",
+        "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+        "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+      },
+      {
+        "field": "children_or_sensitive_data_risk",
+        "label": "儿童/敏感数据风险",
+        "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+        "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+      },
+      {
+        "field": "data_type_matrix",
+        "label": "逐数据类型答案",
+        "reason": "发现 11 个数据类型候选，其中 11 个仍未完成 owner 逐项确认；collected/shared/purpose/identity/tracking/required 需要人工逐项确认。",
+        "unblock_action": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中每个 dataTypes 条目的 collected、shared、purposes、linkedToIdentity、usedForTracking、requiredOrOptional、processedEphemerally。"
+      }
+    ],
+    "limitations": [
+      "静态证据不能证明最终 Data safety 答案。",
+      "shared、tracking、linked_to_identity、required_or_optional、encrypted_in_transit、deletion_request 必须人工确认。",
+      "第三方 SDK 的实际数据处理行为必须由 SDK 文档、配置和 owner 确认。"
+    ]
+  },
+  "generated_files": {
+    "human_report": "play-store-launch/reports/google-data-safety-agent.zh.md",
+    "machine_report": "play-store-launch/reports/google-data-safety-agent-output.json",
+    "source_of_truth": "play-store-launch/reports/google-data-safety-source-of-truth.json",
+    "evidence_jsonl": "play-store-launch/reports/google-data-safety-evidence.jsonl",
+    "csv_draft": "play-store-launch/reports/google-data-safety-form-draft.csv"
+  }
+}

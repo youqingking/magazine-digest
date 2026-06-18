@@ -1,0 +1,895 @@
+{
+  "schema_version": "release_build_agent_output.v2",
+  "generated_at": "2026-06-18T09:28:45Z",
+  "proof_mode": "executed",
+  "max_total_seconds": 720,
+  "overall_status": "pass",
+  "environment_preparation": [
+    {
+      "tool": "hbuilderx",
+      "status": "ready",
+      "cli_path": "D:\\HBuilderX\\cli.exe",
+      "actions": [
+        {
+          "step": "probe_version",
+          "result": {
+            "command": "D:\\HBuilderX\\cli.exe version",
+            "exit_code": 0,
+            "stdout": "\u001b[1;32m5.07.2026041006\u001b[0m",
+            "stderr": ""
+          }
+        }
+      ],
+      "reason": ""
+    },
+    {
+      "tool": "android_emulator",
+      "status": "ready",
+      "adb_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+      "emulator_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.EXE",
+      "selected_avd": null,
+      "selected_serial": "emulator-5556",
+      "actions": [
+        {
+          "step": "initial_adb_devices",
+          "result": {
+            "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE devices",
+            "exit_code": 0,
+            "stdout": "List of devices attached\nemulator-5556\tdevice",
+            "stderr": ""
+          },
+          "devices": [
+            "emulator-5556"
+          ]
+        }
+      ],
+      "reason": ""
+    }
+  ],
+  "command_gates": [
+    {
+      "gate_id": "build",
+      "required": true,
+      "status": "pass",
+      "reason": "所有已发现的现有命令均形成通过证据。",
+      "command": "npm.cmd run build:mobile",
+      "commands": [
+        {
+          "script": "build:mobile",
+          "source": "package.json",
+          "command": "npm.cmd run build:mobile",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/build-mobile.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 status=ok。",
+          "result": {
+            "started_at": "2026-06-18T09:26:41Z",
+            "finished_at": "2026-06-18T09:27:11Z",
+            "duration_ms": 30352,
+            "exit_code": 0,
+            "stdout_excerpt": "                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/account/index.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/rsa-public-key-pem.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/qq/normalize.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/share/certutil.js\",\n                                                              \"pattern\":  \"from \\\"fs\\\"\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/weixin/normalize.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/utils/weixin.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          },\n                                                          {\n                                                              \"file\":  \"mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/module/facial-recognition-verify/get-auth-result.js\",\n                                                              \"pattern\":  \"Buffer\"\n                                                          }\n                                                      ],\n                     \"main_js_uses_create_ssr_app\":  false,\n                     \"main_js_uses_legacy_vue_mount\":  true,\n                     \"app_vue_uses_slot_shell\":  false\n                 },\n    \"auto_steps\":  [\n                       \"detected HBuilderX executable using explicit-path/env/default fallback priority\",\n                       \"validated required mobile shell files\",\n                       \"validated pages.json route list\",\n                       \"validated manifest.json presence\",\n                       \"scanned mobile sources for cross-root imports\",\n                       \"scanned mobile sources for Node-only API references\",\n                       \"checked main.js for uni-app-compatible bootstrap\",\n                       \"checked App.vue for uni-app-safe lifecycle shell\"\n                   ],\n    \"manual_steps_required\":  [\n                                  \"Open mobile/ in HBuilderX\",\n                                  \"Run Android app-plus local debug first\",\n                                  \"If Android target is unavailable, run H5 preview and capture console/runtime output\"\n                              ],\n    \"raw_stage_e1_conclusion\":  \"hbuilderx_detected_compile_readiness_passed_real_compile_not_auto_triggered\",\n    \"classification_notes\":  \"A real compile was attempted and passed.\"\n}\n",
+            "stderr_excerpt": "",
+            "parsed_json": {
+              "generated_at": "2026-06-18T17:27:11.5172958+08:00",
+              "stage": "UI3.5",
+              "source_stage": "E1",
+              "classification": "real_compile_passed",
+              "compile_success": true,
+              "compile_readiness_passed": true,
+              "real_compile_attempted": true,
+              "real_compile_command": "node scripts/bootstrap/smoke-h0_5-hbuilderx.mjs",
+              "real_compile_exit_code": 0,
+              "real_compile_error": "",
+              "real_compile_report_path": "output/stage-h0_5-hbuilderx/android-compile.json",
+              "real_compile_report": {
+                "status": "ok",
+                "layer": "hbuilderx_android_compile",
+                "blocking_reason": "",
+                "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+                "adb_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+                "cli_version": "\u001b[1;32m5.07.2026041006\u001b[0m",
+                "project_list": [
+                  "1 - mobile(UniApp_VUE)",
+                  "0:project list:OK"
+                ],
+                "android_devices_raw": "17:26:43.620 Codex_API_30_X86【emulator-5556】",
+                "adb_devices_raw": "List of devices attached\r\nemulator-5556\tdevice",
+                "compile_succeeded": true,
+                "compile_log_tail": [
+                  "17:26:43.692 HBuilderX Version: 5.07",
+                  "17:26:44.308 项目 mobile 开始编译",
+                  "17:26:46.357 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                  "17:26:46.454 5.07",
+                  "17:26:46.457 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                  "17:26:46.579 正在编译中...",
+                  "17:26:46.580 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                  "17:26:47.152 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                  "17:26:47.154 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                  "17:26:47.155 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                  "17:26:57.074 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                  "17:27:11.320 项目 mobile 编译成功。",
+                  "17:27:11.471 \u001b[31m已停止运行...\u001b[39m"
+                ]
+              },
+              "readiness_compile_success": false,
+              "tool_detected": true,
+              "compile_target": {
+                "preferred": "android-app-plus-local",
+                "fallback": "h5-preview",
+                "verified_target": null
+              },
+              "environment": {
+                "hbuilderx_path": "D:/HBuilderX/HBuilderX.exe",
+                "hbuilderx_detection_priority": [
+                  "D:/HBuilderX/HBuilderX.exe",
+                  "HBUILDERX_EXE",
+                  "HBUILDERX_PATH",
+                  "common default paths"
+                ],
+                "project_dir": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest\\mobile",
+                "package_name": "mobile-shell",
+                "manifest_appid": "__UNI__005A993"
+              },
+              "pages": [
+                "pages/feed/index",
+                "pages/search/index",
+                "pages/detail/index",
+                "pages/paywall/index",
+                "pages/invite/index",
+                "pages/profile/index",
+                "pages/settings/index",
+                "pages/inbox/index",
+                "pages/follows/index",
+                "pages/campaign/index",
+                "pages/auth-test/index",
+                "uni_modules/uni-id-pages/pages/register/register",
+                "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+                "uni_modules/uni-id-pages/pages/login/login-withpwd",
+                "uni_modules/uni-id-pages/pages/login/login-smscode",
+                "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+                "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+                "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+                "uni_modules/uni-id-pages/pages/register/register-by-email",
+                "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+                "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+                "uni_modules/uni-id-pages/pages/common/webview/webview",
+                "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+                "uni_modules/uni-id-pages/pages/register/register-admin",
+                "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+                "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+                "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify"
+              ],
+              "findings": {
+                "missing_files": [],
+                "cross_root_imports": [],
+                "relevant_node_only_references": [],
+                "ignored_node_only_references": [
+                  {
+                    "file": "mobile/uniCloud-aliyun/cloudfunctions/device-sync-co/index.obj.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/index.obj.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-captcha/uniCloud/cloudfunctions/common/uni-captcha/index.js",
+                    "pattern": "from \"fs\""
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-cloud-s2s/uniCloud/cloudfunctions/common/uni-cloud-s2s/index.js",
+                    "pattern": "from \"fs\""
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center/index.js",
+                    "pattern": "from \"fs\""
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/common/sensitive-aes-cipher.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/npm/index.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/alipay/alipayBase.js",
+                    "pattern": "from \"fs\""
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/account/index.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/rsa-public-key-pem.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/qq/normalize.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/share/certutil.js",
+                    "pattern": "from \"fs\""
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/weixin/normalize.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/utils/weixin.js",
+                    "pattern": "Buffer"
+                  },
+                  {
+                    "file": "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/module/facial-recognition-verify/get-auth-result.js",
+                    "pattern": "Buffer"
+                  }
+                ],
+                "main_js_uses_create_ssr_app": false,
+                "main_js_uses_legacy_vue_mount": true,
+                "app_vue_uses_slot_shell": false
+              },
+              "auto_steps": [
+                "detected HBuilderX executable using explicit-path/env/default fallback priority",
+                "validated required mobile shell files",
+                "validated pages.json route list",
+                "validated manifest.json presence",
+                "scanned mobile sources for cross-root imports",
+                "scanned mobile sources for Node-only API references",
+                "checked main.js for uni-app-compatible bootstrap",
+                "checked App.vue for uni-app-safe lifecycle shell"
+              ],
+              "manual_steps_required": [
+                "Open mobile/ in HBuilderX",
+                "Run Android app-plus local debug first",
+                "If Android target is unavailable, run H5 preview and capture console/runtime output"
+              ],
+              "raw_stage_e1_conclusion": "hbuilderx_detected_compile_readiness_passed_real_compile_not_auto_triggered",
+              "classification_notes": "A real compile was attempted and passed."
+            }
+          }
+        }
+      ],
+      "source": "package.json"
+    },
+    {
+      "gate_id": "typecheck",
+      "required": true,
+      "status": "pass",
+      "reason": "所有已发现的现有命令均形成通过证据。",
+      "command": "npm.cmd run typecheck",
+      "commands": [
+        {
+          "script": "typecheck",
+          "source": "package.json",
+          "command": "npm.cmd run typecheck",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/validate/typecheck.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 passed=true。",
+          "result": {
+            "started_at": "2026-06-18T09:27:11Z",
+            "finished_at": "2026-06-18T09:27:27Z",
+            "duration_ms": 15457,
+            "exit_code": 0,
+            "stdout_excerpt": "\n> typecheck\n> powershell -ExecutionPolicy Bypass -File scripts/validate/typecheck.ps1\n\n{\n  \"generated_at\": \"2026-06-18T09:27:27.041Z\",\n  \"status\": \"ok\",\n  \"passed\": true,\n  \"gate\": \"typecheck\",\n  \"checker\": \"js_uniapp_static_type_gate\",\n  \"summary\": {\n    \"files_checked\": 320,\n    \"syntax_issue_count\": 0,\n    \"import_issue_count\": 0,\n    \"contract_type_missing_count\": 0\n  },\n  \"evidence\": {\n    \"node\": \"v24.11.1\",\n    \"scan_roots\": [\n      \"mobile/api\",\n      \"mobile/components\",\n      \"mobile/contracts\",\n      \"mobile/fixtures/runtime\",\n      \"mobile/pages\",\n      \"mobile/services\",\n      \"mobile/stores\",\n      \"mobile/theme\",\n      \"mobile/App.vue\",\n      \"mobile/main.js\",\n      \"packages\",\n      \"scripts/bootstrap\",\n      \"scripts/contracts\",\n      \"scripts/content\",\n      \"scripts/harness\",\n      \"scripts/import\",\n      \"scripts/ops\",\n      \"scripts/validate\",\n      \"shared\"\n    ],\n    \"ignored_repo_prefixes\": [\n      \"artifacts/\",\n      \"data/\",\n      \"mobile/uniCloud-aliyun/\",\n      \"mobile/uniCloud-tcb/\",\n      \"mobile/uni_modules/\",\n      \"play-store-launch/\",\n      \"runtime/dist/\"\n    ],\n    \"contract_types\": {\n      \"ok\": true,\n      \"path\": \"shared/types/contracts.d.ts\",\n      \"missing_types\": []\n    }\n  },\n  \"issues\": {\n    \"syntax\": [],\n    \"imports\": []\n  }\n}\n",
+            "stderr_excerpt": "",
+            "parsed_json": {
+              "generated_at": "2026-06-18T09:27:27.041Z",
+              "status": "ok",
+              "passed": true,
+              "gate": "typecheck",
+              "checker": "js_uniapp_static_type_gate",
+              "summary": {
+                "files_checked": 320,
+                "syntax_issue_count": 0,
+                "import_issue_count": 0,
+                "contract_type_missing_count": 0
+              },
+              "evidence": {
+                "node": "v24.11.1",
+                "scan_roots": [
+                  "mobile/api",
+                  "mobile/components",
+                  "mobile/contracts",
+                  "mobile/fixtures/runtime",
+                  "mobile/pages",
+                  "mobile/services",
+                  "mobile/stores",
+                  "mobile/theme",
+                  "mobile/App.vue",
+                  "mobile/main.js",
+                  "packages",
+                  "scripts/bootstrap",
+                  "scripts/contracts",
+                  "scripts/content",
+                  "scripts/harness",
+                  "scripts/import",
+                  "scripts/ops",
+                  "scripts/validate",
+                  "shared"
+                ],
+                "ignored_repo_prefixes": [
+                  "artifacts/",
+                  "data/",
+                  "mobile/uniCloud-aliyun/",
+                  "mobile/uniCloud-tcb/",
+                  "mobile/uni_modules/",
+                  "play-store-launch/",
+                  "runtime/dist/"
+                ],
+                "contract_types": {
+                  "ok": true,
+                  "path": "shared/types/contracts.d.ts",
+                  "missing_types": []
+                }
+              },
+              "issues": {
+                "syntax": [],
+                "imports": []
+              }
+            }
+          }
+        }
+      ],
+      "source": "package.json"
+    },
+    {
+      "gate_id": "preflight",
+      "required": true,
+      "status": "pass",
+      "reason": "所有已发现的现有命令均形成通过证据。",
+      "command": "npm.cmd run preflight && npm.cmd run validate:preflight",
+      "commands": [
+        {
+          "script": "preflight",
+          "source": "package.json",
+          "command": "npm.cmd run preflight",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/harness/preflight.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "退出码和结构化输出未发现失败信号。",
+          "result": {
+            "started_at": "2026-06-18T09:27:27Z",
+            "finished_at": "2026-06-18T09:27:28Z",
+            "duration_ms": 1504,
+            "exit_code": 0,
+            "stdout_excerpt": "\n> preflight\n> powershell -ExecutionPolicy Bypass -File scripts/harness/preflight.ps1\n\n{\n    \"timestamp\":  \"2026-06-18T17:27:27.8021331+08:00\",\n    \"cwd\":  \"C:\\\\Users\\\\Administrator\\\\.codex\\\\worktrees\\\\66ef\\\\magazine-digest\",\n    \"tools\":  {\n                  \"node\":  \"available\",\n                  \"pnpm\":  \"Version 10.33.3\",\n                  \"npm\":  \"npm \\u003ccommand\\u003e\",\n                  \"git\":  \"usage: git [-v | --version] [-h | --help] [-C \\u003cpath\\u003e] [-c \\u003cname\\u003e=\\u003cvalue\\u003e]\",\n                  \"hbuilderx\":  \"D:\\\\HBuilderX\\\\HBuilderX.exe\"\n              },\n    \"directories\":  [\n                        {\n                            \"path\":  \"docs\",\n                            \"exists\":  true\n                        },\n                        {\n                            \"path\":  \"scripts\",\n                            \"exists\":  true\n                        },\n                        {\n                            \"path\":  \"scripts/harness\",\n                            \"exists\":  true\n                        },\n                        {\n                            \"path\":  \"fixtures\",\n                            \"exists\":  true\n                        },\n                        {\n                            \"path\":  \"fixtures/content\",\n                            \"exists\":  true\n                        },\n                        {\n                            \"path\":  \"fixtures/content/sample_article_variants\",\n                            \"exists\":  true\n                        }\n                    ],\n    \"env\":  [\n                {\n                    \"name\":  \"ALICLOUD_SPACE_ID\",\n                    \"configured\":  false\n                },\n                {\n                    \"name\":  \"ALICLOUD_CLIENT_SECRET\",\n                    \"configured\":  false\n                },\n                {\n                    \"name\":  \"UNI_ADMIN_BASE_URL\",\n                    \"configured\":  false\n                },\n                {\n                    \"name\":  \"PUSH_APP_KEY\",\n                    \"configured\":  false\n                },\n                {\n                    \"name\":  \"PRODUCT_KEY_DEFAULT\",\n                    \"configured\":  false\n                }\n            ],\n    \"git\":  {\n                \"available\":  true,\n                \"branch\":  \"test-main2\",\n                \"summary\":  [\n                                \"## test-main2...origin/test-main2\",\n                                \" M AGENTS.md\",\n                                \" M README.md\",\n                                \" M mobile/pages.json\",\n                                \" M package-lock.json\",\n                                \" M package.json\",\n                                \" M scripts/bootstrap/build-mobile.ps1\",\n                                \" M scripts/bootstrap/collect-stage-e1-report.mjs\",\n                                \" M scripts/bootstrap/smoke-h0_5-android-ui.mjs\",\n                                \" M scripts/validate/preflight.ps1\",\n                                \" M scripts/validate/preflight.sh\",\n                                \"?? .codex/\",\n                                \"?? artifacts/\",\n                                \"?? docs/agno/\",\n                                \"?? mobile/uniCloud-tcb/\",\n                                \"?? output/\",\n                                \"?? play-store-launch/\",\n                                \"?? prd.md\",\n                                \"?? scripts/agent_tools/\",\n                                \"?? scripts/validate/typecheck.mjs\",\n                                \"?? scripts/validate/typecheck.ps1\"\n                            ]\n            }\n}\n",
+            "stderr_excerpt": "",
+            "parsed_json": {
+              "timestamp": "2026-06-18T17:27:27.8021331+08:00",
+              "cwd": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
+              "tools": {
+                "node": "available",
+                "pnpm": "Version 10.33.3",
+                "npm": "npm <command>",
+                "git": "usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]",
+                "hbuilderx": "D:\\HBuilderX\\HBuilderX.exe"
+              },
+              "directories": [
+                {
+                  "path": "docs",
+                  "exists": true
+                },
+                {
+                  "path": "scripts",
+                  "exists": true
+                },
+                {
+                  "path": "scripts/harness",
+                  "exists": true
+                },
+                {
+                  "path": "fixtures",
+                  "exists": true
+                },
+                {
+                  "path": "fixtures/content",
+                  "exists": true
+                },
+                {
+                  "path": "fixtures/content/sample_article_variants",
+                  "exists": true
+                }
+              ],
+              "env": [
+                {
+                  "name": "ALICLOUD_SPACE_ID",
+                  "configured": false
+                },
+                {
+                  "name": "ALICLOUD_CLIENT_SECRET",
+                  "configured": false
+                },
+                {
+                  "name": "UNI_ADMIN_BASE_URL",
+                  "configured": false
+                },
+                {
+                  "name": "PUSH_APP_KEY",
+                  "configured": false
+                },
+                {
+                  "name": "PRODUCT_KEY_DEFAULT",
+                  "configured": false
+                }
+              ],
+              "git": {
+                "available": true,
+                "branch": "test-main2",
+                "summary": [
+                  "## test-main2...origin/test-main2",
+                  " M AGENTS.md",
+                  " M README.md",
+                  " M mobile/pages.json",
+                  " M package-lock.json",
+                  " M package.json",
+                  " M scripts/bootstrap/build-mobile.ps1",
+                  " M scripts/bootstrap/collect-stage-e1-report.mjs",
+                  " M scripts/bootstrap/smoke-h0_5-android-ui.mjs",
+                  " M scripts/validate/preflight.ps1",
+                  " M scripts/validate/preflight.sh",
+                  "?? .codex/",
+                  "?? artifacts/",
+                  "?? docs/agno/",
+                  "?? mobile/uniCloud-tcb/",
+                  "?? output/",
+                  "?? play-store-launch/",
+                  "?? prd.md",
+                  "?? scripts/agent_tools/",
+                  "?? scripts/validate/typecheck.mjs",
+                  "?? scripts/validate/typecheck.ps1"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "script": "validate:preflight",
+          "source": "package.json",
+          "command": "npm.cmd run validate:preflight",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/validate/preflight.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 passed=true。",
+          "result": {
+            "started_at": "2026-06-18T09:27:28Z",
+            "finished_at": "2026-06-18T09:27:29Z",
+            "duration_ms": 1273,
+            "exit_code": 0,
+            "stdout_excerpt": "\",\n                                \"?? .codex/\",\n                                \"?? artifacts/\",\n                                \"?? docs/agno/\",\n                                \"?? mobile/uniCloud-tcb/\",\n                                \"?? output/\",\n                                \"?? play-store-launch/\",\n                                \"?? prd.md\",\n                                \"?? scripts/agent_tools/\",\n                                \"?? scripts/validate/typecheck.mjs\",\n                                \"?? scripts/validate/typecheck.ps1\"\n                            ]\n            },\n    \"tools\":  {\n                  \"node\":  \"available\",\n                  \"pnpm\":  \"Version 10.33.3\",\n                  \"npm\":  \"npm \\u003ccommand\\u003e\",\n                  \"git\":  \"usage: git [-v | --version] [-h | --help] [-C \\u003cpath\\u003e] [-c \\u003cname\\u003e=\\u003cvalue\\u003e]\"\n              },\n    \"required_paths\":  [\n                           {\n                               \"path\":  \"AGENTS.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/STACK_DECISION.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/MIGRATION_AUDIT.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/TARGET_REPO_MAP.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/WORKTREE_PLAN.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/VALIDATION_MATRIX.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/OUT_OF_SCOPE.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/NEED_HUMAN.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"docs/NEXT_THREAD_PROMPT.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"pnpm-workspace.yaml\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"package.json\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"scripts/validate/preflight.ps1\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"scripts/validate/preflight.sh\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"packages/core-contracts/README.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"packages/core-domain/README.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"packages/core-ui/README.md\",\n                               \"exists\":  true\n                           },\n                           {\n                               \"path\":  \"infra/supabase/README.md\",\n                               \"exists\":  true\n                           }\n                       ],\n    \"result\":  {\n                   \"missing_count\":  0,\n                   \"passed\":  true\n               }\n}\n",
+            "stderr_excerpt": "",
+            "parsed_json": {
+              "timestamp": "2026-06-18T17:27:29.1525730+08:00",
+              "cwd": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
+              "git": {
+                "is_repo": true,
+                "branch": "test-main2",
+                "on_protected_branch": false,
+                "summary": [
+                  "## test-main2...origin/test-main2",
+                  " M AGENTS.md",
+                  " M README.md",
+                  " M mobile/pages.json",
+                  " M package-lock.json",
+                  " M package.json",
+                  " M scripts/bootstrap/build-mobile.ps1",
+                  " M scripts/bootstrap/collect-stage-e1-report.mjs",
+                  " M scripts/bootstrap/smoke-h0_5-android-ui.mjs",
+                  " M scripts/validate/preflight.ps1",
+                  " M scripts/validate/preflight.sh",
+                  "?? .codex/",
+                  "?? artifacts/",
+                  "?? docs/agno/",
+                  "?? mobile/uniCloud-tcb/",
+                  "?? output/",
+                  "?? play-store-launch/",
+                  "?? prd.md",
+                  "?? scripts/agent_tools/",
+                  "?? scripts/validate/typecheck.mjs",
+                  "?? scripts/validate/typecheck.ps1"
+                ]
+              },
+              "tools": {
+                "node": "available",
+                "pnpm": "Version 10.33.3",
+                "npm": "npm <command>",
+                "git": "usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]"
+              },
+              "required_paths": [
+                {
+                  "path": "AGENTS.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/STACK_DECISION.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/MIGRATION_AUDIT.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/TARGET_REPO_MAP.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/WORKTREE_PLAN.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/VALIDATION_MATRIX.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/OUT_OF_SCOPE.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/NEED_HUMAN.md",
+                  "exists": true
+                },
+                {
+                  "path": "docs/NEXT_THREAD_PROMPT.md",
+                  "exists": true
+                },
+                {
+                  "path": "pnpm-workspace.yaml",
+                  "exists": true
+                },
+                {
+                  "path": "package.json",
+                  "exists": true
+                },
+                {
+                  "path": "scripts/validate/preflight.ps1",
+                  "exists": true
+                },
+                {
+                  "path": "scripts/validate/preflight.sh",
+                  "exists": true
+                },
+                {
+                  "path": "packages/core-contracts/README.md",
+                  "exists": true
+                },
+                {
+                  "path": "packages/core-domain/README.md",
+                  "exists": true
+                },
+                {
+                  "path": "packages/core-ui/README.md",
+                  "exists": true
+                },
+                {
+                  "path": "infra/supabase/README.md",
+                  "exists": true
+                }
+              ],
+              "result": {
+                "missing_count": 0,
+                "passed": true
+              }
+            }
+          }
+        }
+      ],
+      "source": "package.json"
+    },
+    {
+      "gate_id": "smoke",
+      "required": true,
+      "status": "pass",
+      "reason": "所有已发现的现有命令均形成通过证据。",
+      "command": "npm.cmd run smoke:h0_5-hbuilderx && npm.cmd run smoke:h0_5-android && npm.cmd run smoke:h0_5-android-ui",
+      "commands": [
+        {
+          "script": "smoke:h0_5-hbuilderx",
+          "source": "package.json",
+          "command": "npm.cmd run smoke:h0_5-hbuilderx",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-hbuilderx.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 status=ok。",
+          "result": {
+            "started_at": "2026-06-18T09:27:29Z",
+            "finished_at": "2026-06-18T09:27:56Z",
+            "duration_ms": 26283,
+            "exit_code": 0,
+            "stdout_excerpt": "\n> smoke:h0_5-hbuilderx\n> powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-hbuilderx.ps1\n\n{\n  \"status\": \"ok\",\n  \"layer\": \"hbuilderx_android_compile\",\n  \"blocking_reason\": \"\",\n  \"hbuilderx_cli_path\": \"D:\\\\HBuilderX\\\\cli.exe\",\n  \"adb_path\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.EXE\",\n  \"cli_version\": \"\\u001b[1;32m5.07.2026041006\\u001b[0m\",\n  \"project_list\": [\n    \"1 - mobile(UniApp_VUE)\",\n    \"0:project list:OK\"\n  ],\n  \"android_devices_raw\": \"17:27:30.778 Codex_API_30_X86【emulator-5556】\",\n  \"adb_devices_raw\": \"List of devices attached\\r\\nemulator-5556\\tdevice\",\n  \"compile_succeeded\": true,\n  \"compile_log_tail\": [\n    \"17:27:30.834 HBuilderX Version: 5.07\",\n    \"17:27:31.314 项目 mobile 开始编译\",\n    \"17:27:32.950 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732\",\n    \"17:27:33.025 5.07\",\n    \"17:27:33.028 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。\",\n    \"17:27:33.116 正在编译中...\",\n    \"17:27:33.120 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]\",\n    \"17:27:33.644 \\u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\\u001b[39m\",\n    \"17:27:33.646 \\u001b[31m  npx update-browserslist-db@latest\\u001b[39m\",\n    \"17:27:33.647 \\u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\\u001b[39m\",\n    \"17:27:43.110 [警告⚠] `fixtures\\\\runtime\\\\current\\\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。\",\n    \"17:27:55.927 项目 mobile 编译成功。\",\n    \"17:27:56.069 \\u001b[31m已停止运行...\\u001b[39m\"\n  ]\n}\n",
+            "stderr_excerpt": "",
+            "parsed_json": {
+              "status": "ok",
+              "layer": "hbuilderx_android_compile",
+              "blocking_reason": "",
+              "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+              "adb_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+              "cli_version": "\u001b[1;32m5.07.2026041006\u001b[0m",
+              "project_list": [
+                "1 - mobile(UniApp_VUE)",
+                "0:project list:OK"
+              ],
+              "android_devices_raw": "17:27:30.778 Codex_API_30_X86【emulator-5556】",
+              "adb_devices_raw": "List of devices attached\r\nemulator-5556\tdevice",
+              "compile_succeeded": true,
+              "compile_log_tail": [
+                "17:27:30.834 HBuilderX Version: 5.07",
+                "17:27:31.314 项目 mobile 开始编译",
+                "17:27:32.950 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                "17:27:33.025 5.07",
+                "17:27:33.028 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                "17:27:33.116 正在编译中...",
+                "17:27:33.120 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                "17:27:33.644 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                "17:27:33.646 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                "17:27:33.647 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                "17:27:43.110 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                "17:27:55.927 项目 mobile 编译成功。",
+                "17:27:56.069 \u001b[31m已停止运行...\u001b[39m"
+              ]
+            }
+          }
+        },
+        {
+          "script": "smoke:h0_5-android",
+          "source": "package.json",
+          "command": "npm.cmd run smoke:h0_5-android",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 status=ok。",
+          "result": {
+            "started_at": "2026-06-18T09:27:56Z",
+            "finished_at": "2026-06-18T09:27:58Z",
+            "duration_ms": 1858,
+            "exit_code": 0,
+            "stdout_excerpt": "\n> smoke:h0_5-android\n> powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android.ps1\n\n{\n  \"status\": \"ok\",\n  \"layer\": \"android_device_smoke\",\n  \"target_serial\": \"emulator-5556\",\n  \"connected_devices\": [\n    \"emulator-5556\"\n  ],\n  \"detected_packages\": [\n    \"io.dcloud.HBuilder\"\n  ],\n  \"package_name\": \"io.dcloud.HBuilder\",\n  \"launch_output\": \"bash arg: -p\\r\\n  bash arg: io.dcloud.HBuilder\\r\\n  bash arg: -c\\r\\n  bash arg: android.intent.category.LAUNCHER\\r\\n  bash arg: 1\\r\\nEvents injected: 1\\r\\n## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)\",\n  \"collected_log_lines\": [\n    \"06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \\\"-p\\\"\",\n    \"06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \\\"io.dcloud.HBuilder\\\"\",\n    \"06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \\\"-c\\\"\",\n    \"06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \\\"android.intent.category.LAUNCHER\\\"\",\n    \"06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \\\"1\\\"\",\n    \"06-18 09:27:53.427 13148 13148 W Monkey  : data=\\\"io.dcloud.HBuilder\\\"\",\n    \"06-18 09:27:53.428 13148 13148 W Monkey  : data=\\\"android.intent.category.LAUNCHER\\\"\",\n    \"06-18 09:27:53.451   520   566 W BroadcastQueue: Skipping deliver [background] BroadcastRecord{b9e38e u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{4f57af 13148 (unknown name)/2000/u-1 remote:31d2290}: process gone or crashing\",\n    \"06-18 09:27:53.478   520  1687 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=io.dcloud.HBuilder/io.dcloud.PandoraEntry} from uid 2000\",\n    \"06-18 09:27:53.478   520   560 D EventSequenceValidator: Transition from INTENT_FAILED to INTENT_STARTED\",\n    \"06-18 09:27:53.482   418   418 I perfetto: ing_service_impl.cc:758 Configured tracing session 24, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:1, uid:1071 session name: \\\"\\\"\",\n    \"06-18 09:27:53.482 13148 13148 I Monkey  : Events injected: 1\",\n    \"06-18 09:27:53.483   413   413 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=24)\",\n    \"06-18 09:27:53.486   520   560 D EventSequenceValidator: Transition from INTENT_STARTED to INTENT_FAILED\",\n    \"06-18 09:27:53.499 13148 13148 I Monkey  : ## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)\",\n    \"06-18 09:27:53.502 13148 13148 I app_process: System.exit called, status: 0\",\n    \"06-18 09:27:53.502 13148 13148 I AndroidRuntime: VM exiting with result code 0.\",\n    \"06-18 09:27:53.542   413   413 I perfetto: ftrace_procfs.cc:176    enabled ftrace\",\n    \"06-18 09:27:53.513     0     0 W perfetto: enabled ftrace\",\n    \"\"\n  ],\n  \"blocking_reason\": \"\"\n}\n",
+            "stderr_excerpt": "args: [-p, io.dcloud.HBuilder, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"io.dcloud.HBuilder\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"io.dcloud.HBuilder\"\ndata=\"android.intent.category.LAUNCHER\"\n",
+            "parsed_json": {
+              "status": "ok",
+              "layer": "android_device_smoke",
+              "target_serial": "emulator-5556",
+              "connected_devices": [
+                "emulator-5556"
+              ],
+              "detected_packages": [
+                "io.dcloud.HBuilder"
+              ],
+              "package_name": "io.dcloud.HBuilder",
+              "launch_output": "bash arg: -p\r\n  bash arg: io.dcloud.HBuilder\r\n  bash arg: -c\r\n  bash arg: android.intent.category.LAUNCHER\r\n  bash arg: 1\r\nEvents injected: 1\r\n## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)",
+              "collected_log_lines": [
+                "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"-p\"",
+                "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"io.dcloud.HBuilder\"",
+                "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"-c\"",
+                "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"android.intent.category.LAUNCHER\"",
+                "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"1\"",
+                "06-18 09:27:53.427 13148 13148 W Monkey  : data=\"io.dcloud.HBuilder\"",
+                "06-18 09:27:53.428 13148 13148 W Monkey  : data=\"android.intent.category.LAUNCHER\"",
+                "06-18 09:27:53.451   520   566 W BroadcastQueue: Skipping deliver [background] BroadcastRecord{b9e38e u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{4f57af 13148 (unknown name)/2000/u-1 remote:31d2290}: process gone or crashing",
+                "06-18 09:27:53.478   520  1687 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=io.dcloud.HBuilder/io.dcloud.PandoraEntry} from uid 2000",
+                "06-18 09:27:53.478   520   560 D EventSequenceValidator: Transition from INTENT_FAILED to INTENT_STARTED",
+                "06-18 09:27:53.482   418   418 I perfetto: ing_service_impl.cc:758 Configured tracing session 24, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:1, uid:1071 session name: \"\"",
+                "06-18 09:27:53.482 13148 13148 I Monkey  : Events injected: 1",
+                "06-18 09:27:53.483   413   413 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=24)",
+                "06-18 09:27:53.486   520   560 D EventSequenceValidator: Transition from INTENT_STARTED to INTENT_FAILED",
+                "06-18 09:27:53.499 13148 13148 I Monkey  : ## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)",
+                "06-18 09:27:53.502 13148 13148 I app_process: System.exit called, status: 0",
+                "06-18 09:27:53.502 13148 13148 I AndroidRuntime: VM exiting with result code 0.",
+                "06-18 09:27:53.542   413   413 I perfetto: ftrace_procfs.cc:176    enabled ftrace",
+                "06-18 09:27:53.513     0     0 W perfetto: enabled ftrace",
+                ""
+              ],
+              "blocking_reason": ""
+            }
+          }
+        },
+        {
+          "script": "smoke:h0_5-android-ui",
+          "source": "package.json",
+          "command": "npm.cmd run smoke:h0_5-android-ui",
+          "script_value": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android-ui.ps1",
+          "required": true,
+          "status": "pass",
+          "reason": "结构化输出 status=ok。",
+          "result": {
+            "started_at": "2026-06-18T09:27:58Z",
+            "finished_at": "2026-06-18T09:28:44Z",
+            "duration_ms": 46979,
+            "exit_code": 0,
+            "stdout_excerpt": "\n> smoke:h0_5-android-ui\n> powershell -ExecutionPolicy Bypass -File scripts/bootstrap/smoke-h0_5-android-ui.ps1\n\n{\n  \"status\": \"ok\",\n  \"layer\": \"android_device_ui_smoke\",\n  \"target_serial\": \"emulator-5556\",\n  \"connected_devices\": [\n    \"emulator-5556\"\n  ],\n  \"detected_packages\": [\n    \"io.dcloud.HBuilder\"\n  ],\n  \"package_name\": \"io.dcloud.HBuilder\",\n  \"hbuilderx_cli_path\": \"D:\\\\HBuilderX\\\\cli.exe\",\n  \"credentials_used\": {\n    \"username\": \"qqqq\",\n    \"password_present\": true\n  },\n  \"steps\": [\n    {\n      \"step\": \"hbuilderx_run_ready\",\n      \"marker\": \"项目 mobile 编译成功\"\n    },\n    {\n      \"step\": \"launch_auth_test_page\",\n      \"screenshot\": \"01-auth-test-ready.png\"\n    }\n  ],\n  \"automation_summary\": \"AUTOMATION_SUMMARY login=idle uid=none login_error=none session=signed_out token=token_missing device=precheck_blocked db=idle device_found=no user_device_found=no db_error=none\",\n  \"ui_summary\": {\n    \"has_auth_test_ready\": true,\n    \"has_auto_login\": true,\n    \"has_verify_device_records\": true,\n    \"has_automation_summary\": true,\n    \"automation_summary_matched\": false,\n    \"ui_smoke_passed\": true,\n    \"login_success\": false,\n    \"db_verification_ok\": false,\n    \"device_found\": false,\n    \"user_device_found\": false\n  },\n  \"diagnostic_summary\": {\n    \"login_success\": false,\n    \"db_verification_ok\": false,\n    \"device_found\": false,\n    \"user_device_found\": false,\n    \"note\": \"auth_or_device_diagnostics_not_part_of_core_ui_smoke\"\n  },\n  \"coordinates_used\": {\n    \"authTestScroll\": {\n      \"startX\": 960,\n      \"startY\": 930,\n      \"endX\": 960,\n      \"endY\": 500,\n      \"durationMs\": 280\n    }\n  },\n  \"final_screenshot\": \"03-final-ui.png\",\n  \"hbuilderx_stdout_tail\": [\n    \"17:28:06.166 HBuilderX Version: 5.07\",\n    \"17:28:06.789 项目 mobile 开始编译\",\n    \"17:28:08.411 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732\",\n    \"17:28:08.484 5.07\",\n    \"17:28:08.487 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。\",\n    \"17:28:08.604 正在编译中...\",\n    \"17:28:08.606 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]\",\n    \"17:28:09.208 \\u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\\u001b[39m\",\n    \"17:28:09.211 \\u001b[31m  npx update-browserslist-db@latest\\u001b[39m\",\n    \"17:28:09.215 \\u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\\u001b[39m\",\n    \"17:28:20.889 [警告⚠] `fixtures\\\\runtime\\\\current\\\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。\",\n    \"17:28:38.321 项目 mobile 编译成功。\",\n    \"17:28:38.527 \\u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\\u001b[39m\",\n    \"17:28:38.536 \\u001b[31mPID：18724\\u001b[39m\",\n    \"17:28:38.539 \\u001b[31m进程名称：adb.exe\\u001b[39m\",\n    \"17:28:38.543 \\u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\\u001b[39m\",\n    \"17:28:38.546 \\u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\\u001b[39m\",\n    \"17:28:38.746 \\u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\\u001b[39m\",\n    \"17:28:39.606 正在建立手机连接...\"\n  ],\n  \"hbuilderx_stderr_tail\": [],\n  \"blocking_reason\": \"\"\n}\n",
+            "stderr_excerpt": "ERROR: null root node returned by UiTestAutomationBridge.\n/sdcard/wait-auth-test-page-ready.xml: 1 file pulled, 0 skipped. 6.3 MB/s (33577 bytes in 0.005s)\n",
+            "parsed_json": {
+              "status": "ok",
+              "layer": "android_device_ui_smoke",
+              "target_serial": "emulator-5556",
+              "connected_devices": [
+                "emulator-5556"
+              ],
+              "detected_packages": [
+                "io.dcloud.HBuilder"
+              ],
+              "package_name": "io.dcloud.HBuilder",
+              "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+              "credentials_used": {
+                "username": "qqqq",
+                "password_present": true
+              },
+              "steps": [
+                {
+                  "step": "hbuilderx_run_ready",
+                  "marker": "项目 mobile 编译成功"
+                },
+                {
+                  "step": "launch_auth_test_page",
+                  "screenshot": "01-auth-test-ready.png"
+                }
+              ],
+              "automation_summary": "AUTOMATION_SUMMARY login=idle uid=none login_error=none session=signed_out token=token_missing device=precheck_blocked db=idle device_found=no user_device_found=no db_error=none",
+              "ui_summary": {
+                "has_auth_test_ready": true,
+                "has_auto_login": true,
+                "has_verify_device_records": true,
+                "has_automation_summary": true,
+                "automation_summary_matched": false,
+                "ui_smoke_passed": true,
+                "login_success": false,
+                "db_verification_ok": false,
+                "device_found": false,
+                "user_device_found": false
+              },
+              "diagnostic_summary": {
+                "login_success": false,
+                "db_verification_ok": false,
+                "device_found": false,
+                "user_device_found": false,
+                "note": "auth_or_device_diagnostics_not_part_of_core_ui_smoke"
+              },
+              "coordinates_used": {
+                "authTestScroll": {
+                  "startX": 960,
+                  "startY": 930,
+                  "endX": 960,
+                  "endY": 500,
+                  "durationMs": 280
+                }
+              },
+              "final_screenshot": "03-final-ui.png",
+              "hbuilderx_stdout_tail": [
+                "17:28:06.166 HBuilderX Version: 5.07",
+                "17:28:06.789 项目 mobile 开始编译",
+                "17:28:08.411 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                "17:28:08.484 5.07",
+                "17:28:08.487 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                "17:28:08.604 正在编译中...",
+                "17:28:08.606 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                "17:28:09.208 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                "17:28:09.211 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                "17:28:09.215 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                "17:28:20.889 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                "17:28:38.321 项目 mobile 编译成功。",
+                "17:28:38.527 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
+                "17:28:38.536 \u001b[31mPID：18724\u001b[39m",
+                "17:28:38.539 \u001b[31m进程名称：adb.exe\u001b[39m",
+                "17:28:38.543 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
+                "17:28:38.546 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
+                "17:28:38.746 \u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\u001b[39m",
+                "17:28:39.606 正在建立手机连接..."
+              ],
+              "hbuilderx_stderr_tail": [],
+              "blocking_reason": ""
+            },
+            "related_artifacts": {
+              "latest_stdout_log": "hbuilderx-run.1781774878889.stdout.log",
+              "latest_stderr_log": "hbuilderx-run.1781774878889.stderr.log",
+              "stdout_tail": [
+                "17:28:06.166 HBuilderX Version: 5.07",
+                "17:28:06.789 项目 mobile 开始编译",
+                "17:28:08.411 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                "17:28:08.484 5.07",
+                "17:28:08.487 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                "17:28:08.604 正在编译中...",
+                "17:28:08.606 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                "17:28:09.208 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                "17:28:09.211 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                "17:28:09.215 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                "17:28:20.889 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                "17:28:38.321 项目 mobile 编译成功。",
+                "17:28:38.527 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
+                "17:28:38.536 \u001b[31mPID：18724\u001b[39m",
+                "17:28:38.539 \u001b[31m进程名称：adb.exe\u001b[39m",
+                "17:28:38.543 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
+                "17:28:38.546 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
+                "17:28:38.746 \u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\u001b[39m",
+                "17:28:39.606 正在建立手机连接..."
+              ],
+              "stderr_tail": [],
+              "diagnostic_lines": [],
+              "last_report": {
+                "status": "ok",
+                "layer": "android_device_ui_smoke",
+                "target_serial": "emulator-5556",
+                "connected_devices": [
+                  "emulator-5556"
+                ],
+                "detected_packages": [
+                  "io.dcloud.HBuilder"
+                ],
+                "package_name": "io.dcloud.HBuilder",
+                "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+                "credentials_used": {
+                  "username": "qqqq",
+                  "password_present": true
+                },
+                "steps": [
+                  {
+                    "step": "hbuilderx_run_ready",
+                    "marker": "项目 mobile 编译成功"
+                  },
+                  {
+                    "step": "launch_auth_test_page",
+                    "screenshot": "01-auth-test-ready.png"
+                  }
+                ],
+                "automation_summary": "AUTOMATION_SUMMARY login=idle uid=none login_error=none session=signed_out token=token_missing device=precheck_blocked db=idle device_found=no user_device_found=no db_error=none",
+                "ui_summary": {
+                  "has_auth_test_ready": true,
+                  "has_auto_login": true,
+                  "has_verify_device_records": true,
+                  "has_automation_summary": true,
+                  "automation_summary_matched": false,
+                  "ui_smoke_passed": true,
+                  "login_success": false,
+                  "db_verification_ok": false,
+                  "device_found": false,
+                  "user_device_found": false
+                },
+                "diagnostic_summary": {
+                  "login_success": false,
+                  "db_verification_ok": false,
+                  "device_found": false,
+                  "user_device_found": false,
+                  "note": "auth_or_device_diagnostics_not_part_of_core_ui_smoke"
+                },
+                "coordinates_used": {
+                  "authTestScroll": {
+                    "startX": 960,
+                    "startY": 930,
+                    "endX": 960,
+                    "endY": 500,
+                    "durationMs": 280
+                  }
+                },
+                "final_screenshot": "03-final-ui.png",
+                "hbuilderx_stdout_tail": [
+                  "17:28:06.166 HBuilderX Version: 5.07",
+                  "17:28:06.789 项目 mobile 开始编译",
+                  "17:28:08.411 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                  "17:28:08.484 5.07",
+                  "17:28:08.487 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                  "17:28:08.604 正在编译中...",
+                  "17:28:08.606 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                  "17:28:09.208 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                  "17:28:09.211 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                  "17:28:09.215 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                  "17:28:20.889 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                  "17:28:38.321 项目 mobile 编译成功。",
+                  "17:28:38.527 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
+                  "17:28:38.536 \u001b[31mPID：18724\u001b[39m",
+                  "17:28:38.539 \u001b[31m进程名称：adb.exe\u001b[39m",
+                  "17:28:38.543 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
+                  "17:28:38.546 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
+                  "17:28:38.746 \u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\u001b[39m",
+                  "17:28:39.606 正在建立手机连接..."
+                ],
+                "hbuilderx_stderr_tail": [],
+                "blocking_reason": ""
+              }
+            }
+          }
+        }
+      ],
+      "source": "package.json"
+    }
+  ],
+  "gate_blockers": []
+}

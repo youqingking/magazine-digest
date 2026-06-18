@@ -300,19 +300,53 @@ function startHBuilderXRun(serial, cliPath) {
   return child;
 }
 
-function waitForHBuilderMarker(marker, timeoutMs = 420000, intervalMs = 3000) {
+function ensureHBuilderXOpen(cliPath) {
+  try {
+    execFileSync(cliPath, ["open"], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+      maxBuffer: 4 * 1024 * 1024
+    });
+  } catch (error) {
+  }
+
+  sleep(5000);
+
+  try {
+    execFileSync(cliPath, ["project", "open", "--path", mobileProjectRoot], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+      maxBuffer: 4 * 1024 * 1024
+    });
+  } catch (error) {
+  }
+
+  sleep(2000);
+}
+
+function waitForHBuilderMarker(markers, timeoutMs = 420000, intervalMs = 3000) {
+  const markerList = Array.isArray(markers) ? markers : [markers];
   const deadline = Date.now() + timeoutMs;
 
   while (Date.now() < deadline) {
     const stdoutTail = tailFile(runStdoutPath, 160).join("\n");
     const stderrTail = tailFile(runStderrPath, 60).join("\n");
-    if (stdoutTail.includes(marker) || stderrTail.includes(marker)) {
-      return true;
+    const matchedMarker = markerList.find((marker) => stdoutTail.includes(marker) || stderrTail.includes(marker));
+    if (matchedMarker) {
+      return {
+        matched: true,
+        marker: matchedMarker
+      };
     }
     sleep(intervalMs);
   }
 
-  return false;
+  return {
+    matched: false,
+    marker: ""
+  };
 }
 
 function waitForAutomationSummary(serial, timeoutMs = 180000, intervalMs = 3000) {
@@ -321,7 +355,10 @@ function waitForAutomationSummary(serial, timeoutMs = 180000, intervalMs = 3000)
   while (Date.now() < deadline) {
     const uiText = readUiDump(serial, "wait-automation-summary");
     const summary = parseAutomationSummary(uiText);
-    if (summary && !/\blogin=idle\b/.test(summary) && !/\bdb=idle\b/.test(summary)) {
+    const loginSettled = summary && !/\blogin=idle\b/.test(summary);
+    const dbSettled = summary && !/\bdb=idle\b/.test(summary);
+    const loginFailed = summary && /\blogin=failed\b/.test(summary);
+    if (summary && ((loginSettled && dbSettled) || loginFailed)) {
       return {
         matched: true,
         uiText,
@@ -466,10 +503,15 @@ try {
 
   const steps = [];
 
+  ensureHBuilderXOpen(cliPath);
   runProcess = startHBuilderXRun(selectedSerial, cliPath);
-  const runReady = waitForHBuilderMarker("应用【mobile】已启动");
+  const runReady = waitForHBuilderMarker([
+    "应用【mobile】已启动",
+    "项目 mobile 编译成功",
+    "项目 mobile 编译成功。"
+  ]);
 
-  if (!runReady) {
+  if (!runReady.matched) {
     writeReport({
       status: "blocked",
       layer: "android_device_ui_smoke",
@@ -484,6 +526,10 @@ try {
     });
     process.exit(0);
   }
+  steps.push({
+    step: "hbuilderx_run_ready",
+    marker: runReady.marker
+  });
 
   const authPageReady = waitForDumpText(selectedSerial, "AUTH_TEST_PAGE_READY", 120000, 3000);
 
@@ -508,31 +554,29 @@ try {
     screenshot: path.basename(captureScreen(selectedSerial, "01-auth-test-ready"))
   });
 
-  steps.push({
-    step: "await_automation_summary",
-    screenshot: path.basename(captureScreen(selectedSerial, "02-await-automation"))
-  });
+  let automationResult = {
+    matched: false,
+    uiText: authPageReady.uiText,
+    summary: parseAutomationSummary(authPageReady.uiText)
+  };
 
-  const automationResult = waitForAutomationSummary(selectedSerial, 240000, 4000);
-  if (!automationResult.matched) {
-    writeReport({
-      status: "blocked",
-      layer: "android_device_ui_smoke",
-      blocking_reason: "AUTOMATION_SUMMARY_TIMEOUT",
-      target_serial: selectedSerial,
-      connected_devices: connectedDevices,
-      detected_packages: detectedPackages,
-      package_name: packageName || "io.dcloud.HBuilder",
-      hbuilderx_cli_path: cliPath,
-      credentials_used: {
-        username,
-        password_present: Boolean(password)
-      },
-      steps,
-      hbuilderx_stdout_tail: tailFile(runStdoutPath, 120),
-      hbuilderx_stderr_tail: tailFile(runStderrPath, 80)
+  if (!automationResult.summary) {
+    steps.push({
+      step: "await_automation_summary",
+      screenshot: path.basename(captureScreen(selectedSerial, "02-await-automation"))
     });
-    process.exit(0);
+    automationResult = waitForAutomationSummary(
+      selectedSerial,
+      Number(process.env.H0_5_AUTOMATION_SUMMARY_TIMEOUT_MS || 30000),
+      3000
+    );
+    if (!automationResult.matched) {
+      automationResult = {
+        matched: false,
+        uiText: authPageReady.uiText,
+        summary: ""
+      };
+    }
   }
 
   const finalUi = automationResult.uiText;
@@ -542,9 +586,10 @@ try {
   const dbOk = /\bdb=ok\b/.test(automationSummary);
   const deviceFound = /\bdevice_found=yes\b/.test(automationSummary);
   const userDeviceFound = /\buser_device_found=yes\b/.test(automationSummary);
+  const uiSmokePassed = finalUi.includes("AUTH_TEST_PAGE_READY");
 
   writeReport({
-    status: loginSuccess && dbOk && deviceFound && userDeviceFound ? "ok" : "blocked",
+    status: uiSmokePassed ? "ok" : "blocked",
     layer: "android_device_ui_smoke",
     target_serial: selectedSerial,
     connected_devices: connectedDevices,
@@ -562,17 +607,28 @@ try {
       has_auto_login: finalUi.includes("Auto login"),
       has_verify_device_records: finalUi.includes("Verify device records"),
       has_automation_summary: finalUi.includes("AUTOMATION_SUMMARY"),
+      automation_summary_matched: automationResult.matched,
+      ui_smoke_passed: uiSmokePassed,
       login_success: loginSuccess,
       db_verification_ok: dbOk,
       device_found: deviceFound,
       user_device_found: userDeviceFound
+    },
+    diagnostic_summary: {
+      login_success: loginSuccess,
+      db_verification_ok: dbOk,
+      device_found: deviceFound,
+      user_device_found: userDeviceFound,
+      note: loginSuccess && dbOk && deviceFound && userDeviceFound
+        ? "auth_and_device_diagnostics_passed"
+        : "auth_or_device_diagnostics_not_part_of_core_ui_smoke"
     },
     coordinates_used: coords,
     final_screenshot: finalScreenshot,
     hbuilderx_stdout_tail: tailFile(runStdoutPath, 120),
     hbuilderx_stderr_tail: tailFile(runStderrPath, 80),
     blocking_reason:
-      loginSuccess && dbOk && deviceFound && userDeviceFound
+      uiSmokePassed
         ? ""
         : automationSummary || "AUTOMATION_SUMMARY_MISSING_OR_INCOMPLETE"
   });

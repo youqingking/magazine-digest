@@ -1,0 +1,3226 @@
+{
+  "schema_version": "screenshot_storyboard.v1",
+  "generated_at": "2026-06-17T14:58:45Z",
+  "overall_status": "blocked",
+  "storyboard_status": "planned",
+  "can_use_for_submission": false,
+  "root": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
+  "project_fingerprint": {
+    "git_commit": "b1d7c7ff5ae38633ee454e11bd323c6c012510f5",
+    "git_status_short": [
+      "M AGENTS.md",
+      " M README.md",
+      " M package-lock.json",
+      " M scripts/validate/preflight.ps1",
+      " M scripts/validate/preflight.sh",
+      "?? .codex/",
+      "?? artifacts/",
+      "?? docs/agno/",
+      "?? output/",
+      "?? play-store-launch/",
+      "?? prd.md",
+      "?? scripts/agent_tools/"
+    ],
+    "skill_path": ".codex/skills/screenshot-storyboard/SKILL.md",
+    "skill_generator": ".codex/skills/screenshot-storyboard/scripts/screenshot_storyboard.py"
+  },
+  "official_requirements": {
+    "source_url": "https://support.google.com/googleplay/android-developer/answer/9866151?hl=en",
+    "minimum_screenshots": 2,
+    "maximum_screenshots_per_form_factor": 8,
+    "formats": [
+      "JPEG",
+      "24-bit PNG without alpha"
+    ],
+    "min_dimension_px": 320,
+    "max_dimension_px": 3840,
+    "max_ratio_rule": "最大边不能超过最小边 2 倍。",
+    "content_rule": "截图必须展示真实 app 体验；公开使用前需要人工审核。"
+  },
+  "source_of_truth": {
+    "app_identity": {
+      "app_name": "高效阅读",
+      "manifest_appid": "__UNI__005A993",
+      "manifest_description": "Compile-targeted placeholder shell aligned with Stage B contracts.",
+      "expo_slug": "magazine-digest",
+      "android_package": "com.daowei2026.magazinedigest",
+      "sources": [
+        "mobile/manifest.json",
+        "app.json"
+      ]
+    },
+    "routes": {
+      "source": "mobile/pages.json",
+      "status": "observed_in_repo",
+      "pages": [
+        {
+          "path": "pages/feed/index",
+          "title": "首页",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0002"
+          ]
+        },
+        {
+          "path": "pages/search/index",
+          "title": "来源",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0003"
+          ]
+        },
+        {
+          "path": "pages/detail/index",
+          "title": "3分钟精读",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0004"
+          ]
+        },
+        {
+          "path": "pages/paywall/index",
+          "title": "订阅",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0005"
+          ]
+        },
+        {
+          "path": "pages/invite/index",
+          "title": "邀请与兑换",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0006"
+          ]
+        },
+        {
+          "path": "pages/profile/index",
+          "title": "我的",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0007"
+          ]
+        },
+        {
+          "path": "pages/settings/index",
+          "title": "设置",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0008"
+          ]
+        },
+        {
+          "path": "pages/inbox/index",
+          "title": "消息摘要",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0009"
+          ]
+        },
+        {
+          "path": "pages/follows/index",
+          "title": "来源与关注",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0010"
+          ]
+        },
+        {
+          "path": "pages/campaign/index",
+          "title": "活动说明",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0011"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/register/register",
+          "title": "注册",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0012"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+          "title": "登录",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0013"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+          "title": "账号密码登录",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0014"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/login/login-smscode",
+          "title": "手机验证码登录",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0015"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+          "title": "个人资料",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0016"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+          "title": "绑定手机号码",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0017"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+          "title": "",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0018"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/register/register-by-email",
+          "title": "邮箱验证码注册",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0019"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+          "title": "重置密码",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0020"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+          "title": "通过邮箱重置密码",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0021"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/common/webview/webview",
+          "title": "",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0022"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+          "title": "修改密码",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0023"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/register/register-admin",
+          "title": "注册管理员账号",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0024"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+          "title": "设置密码",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0025"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+          "title": "注销账号",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0026"
+          ]
+        },
+        {
+          "path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+          "title": "实名认证",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0027"
+          ]
+        }
+      ],
+      "tab_bar": [
+        {
+          "path": "pages/feed/index",
+          "text": "首页"
+        },
+        {
+          "path": "pages/search/index",
+          "text": "来源"
+        },
+        {
+          "path": "pages/profile/index",
+          "text": "我的"
+        }
+      ]
+    },
+    "page_signals": {
+      "pages/feed/index": {
+        "source_ref": "mobile/pages/feed/index.vue",
+        "visible_text_sample": [
+          "publication.label",
+          "issue.label",
+          "tab.label",
+          "开发态",
+          "Feed 诊断",
+          "用于判断当前是 source 选错、同步为空，还是页面过滤后为空。",
+          "正在整理首页内容",
+          "首页暂时不可用",
+          "30 秒先读",
+          "选择 PDF",
+          "消息",
+          "消息摘要"
+        ],
+        "risk_labels": [
+          "Feed 诊断信息",
+          "debug/diagnostic 信息",
+          "开发态或诊断信息"
+        ],
+        "evidence_refs": [
+          "evidence.0029"
+        ]
+      },
+      "pages/search/index": {
+        "source_ref": "mobile/pages/search/index.vue",
+        "visible_text_sample": [
+          "搜索文章、来源、期次、主题",
+          "formatLabel(publication)",
+          "formatIssue(issueId)",
+          "formatLabel(sectionLabels[section] || section)",
+          "formatLabel(bucket)",
+          "formatLabel(tag)",
+          "mode === 'quick_30s' ? '30 秒速览' : '3 分钟精读'",
+          "关注",
+          "关注杂志",
+          "subject.display_name || subject.publication_key || subject.tag_key",
+          "期次",
+          "栏目"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0030"
+        ]
+      },
+      "pages/detail/index": {
+        "source_ref": "mobile/pages/detail/index.vue",
+        "visible_text_sample": [
+          "articleTitle",
+          "正在准备阅读内容",
+          "这篇文章暂时打不开",
+          "正在阅读缓存版本",
+          "阅读",
+          "3 分钟精读",
+          "操作",
+          "阅读操作",
+          "isSaved ? '移出稍后再读' : '保存到稍后再读'",
+          "查看订阅说明",
+          "权益",
+          "阅读权益"
+        ],
+        "risk_labels": [
+          "支付信息",
+          "订阅/支付权益"
+        ],
+        "evidence_refs": [
+          "evidence.0031"
+        ]
+      },
+      "pages/paywall/index": {
+        "source_ref": "mobile/pages/paywall/index.vue",
+        "visible_text_sample": [
+          "查看邀请奖励",
+          "查看方案",
+          "PAYWALL_PAGE_READY",
+          "先了解权益，再决定是否订阅",
+          "这里展示套餐、额度、优惠码和活动信息，帮助你理解当前阅读权益。",
+          "邀请与奖励",
+          "订阅页继续保留通往邀请/兑换的正式入口，但不把邀请重新放回底部主壳。"
+        ],
+        "risk_labels": [
+          "订阅/支付权益"
+        ],
+        "evidence_refs": [
+          "evidence.0032"
+        ]
+      },
+      "pages/invite/index": {
+        "source_ref": "mobile/pages/invite/index.vue",
+        "visible_text_sample": [
+          "Growth",
+          "兑换入口",
+          "这里只做预览态兑换入口，不推进真实 redeem。",
+          "输入兑换码",
+          "复制邀请码",
+          "分享邀请",
+          "预览兑换",
+          "邀请与兑换",
+          "只承接邀请摘要、奖励预览与兑换入口，不扩张为订阅或社交流程。"
+        ],
+        "risk_labels": [
+          "兑换码/奖励结算",
+          "订阅/支付权益"
+        ],
+        "evidence_refs": [
+          "evidence.0033"
+        ]
+      },
+      "pages/profile/index": {
+        "source_ref": "mobile/pages/profile/index.vue",
+        "visible_text_sample": [
+          "entitlementBadgeLabel",
+          "个人",
+          "我的摘要",
+          "把保存、消息、权益与奖励集中在这里。",
+          "查看订阅",
+          "邀请奖励",
+          "打开设置",
+          "设备状态",
+          "消息摘要",
+          "消息主入口仍在首页，这里保留最近提醒摘要。",
+          "稍后再读",
+          "你保存的内容会在这里汇总。"
+        ],
+        "risk_labels": [
+          "订阅/支付权益"
+        ],
+        "evidence_refs": [
+          "evidence.0034"
+        ]
+      },
+      "pages/settings/index": {
+        "source_ref": "mobile/pages/settings/index.vue",
+        "visible_text_sample": [
+          "数据来源",
+          "运行方式",
+          "这里可以切换本地、混合或远端接缝模式，方便开发预览。",
+          "远端桥接",
+          "内容自动更新",
+          "这一步只要配置一次，后续后台发布内容不需要重装客户端。",
+          "https://runtime.example.com/runtime 或 http://8.136.215.40/magazine-runtime",
+          "保存远端桥接",
+          "检测远端桥接",
+          "阅读",
+          "阅读默认值",
+          "控制默认人群。这里切到青少年后，首页与搜索里的 30 秒摘要也会跟着切换，并持续记住。"
+        ],
+        "risk_labels": [
+          "Bridge Base URL",
+          "debug/diagnostic 信息",
+          "内部能力或兼容页面",
+          "开发态或诊断信息",
+          "构建信息",
+          "远端桥接配置"
+        ],
+        "evidence_refs": [
+          "evidence.0035"
+        ]
+      },
+      "pages/inbox/index": {
+        "source_ref": "mobile/pages/inbox/index.vue",
+        "visible_text_sample": [
+          "Inbox Internal",
+          "旧 inbox 不再是一级页面，但内部能力页继续保留 inbox truth 和 delivery preview 可见性。",
+          "Inbox truth durable",
+          "`notification_inbox` 仍是用户消息真相源；首页只展示摘要，这里保留内部能力视图。",
+          "消息内容",
+          "保留 delivery preview、digest queued、suppressed 等 foundation 语义的查看入口。",
+          "回到正式 IA",
+          "正式入口在首页消息摘要；本页仅保留内部能力可见性，不恢复一级导航。",
+          "打开首页消息摘要"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面"
+        ],
+        "evidence_refs": [
+          "evidence.0036"
+        ]
+      },
+      "pages/follows/index": {
+        "source_ref": "mobile/pages/follows/index.vue",
+        "visible_text_sample": [
+          "Follows Alias",
+          "旧 follows route 仅保留为内部兼容 alias，将跳转到搜索页关注目录。"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面"
+        ],
+        "evidence_refs": [
+          "evidence.0037"
+        ]
+      },
+      "pages/campaign/index": {
+        "source_ref": "mobile/pages/campaign/index.vue",
+        "visible_text_sample": [
+          "Campaign Alias",
+          "旧 campaign route 仅保留为内部兼容 alias，将跳转到订阅页商业区块。"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面",
+          "订阅/支付权益"
+        ],
+        "evidence_refs": [
+          "evidence.0038"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/register/register": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register.vue",
+        "visible_text_sample": [
+          "请输入用户名",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "用户名密码注册",
+          "邮箱验证码注册",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0039"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/login/login-withoutpwd": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withoutpwd.vue",
+        "visible_text_sample": [
+          "请输入手机号",
+          "请选择登录方式",
+          "将根据第三方账号服务平台的授权范围获取你的信息",
+          "未注册的账号验证通过后将自动注册"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0040"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/login/login-withpwd": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withpwd.vue",
+        "visible_text_sample": [
+          "请输入手机号/用户名/邮箱",
+          "请输入密码",
+          "账号密码登录",
+          "忘记了？",
+          "找回密码",
+          "注册账号"
+        ],
+        "risk_labels": [
+          "管理员入口"
+        ],
+        "evidence_refs": [
+          "evidence.0041"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/login/login-smscode": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-smscode.vue",
+        "visible_text_sample": [
+          "请输入验证码",
+          "先输入图形验证码，再获取短信验证码"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0042"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/userinfo": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/userinfo.vue",
+        "visible_text_sample": [
+          "昵称",
+          "手机号",
+          "电子邮箱",
+          "实名认证",
+          "修改密码",
+          "注销账号",
+          "设置昵称",
+          "请输入要设置的昵称"
+        ],
+        "risk_labels": [
+          "实名认证流程",
+          "账号注销流程"
+        ],
+        "evidence_refs": [
+          "evidence.0043"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile.vue",
+        "visible_text_sample": [
+          "请输入手机号",
+          "绑定手机号"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0044"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage.vue",
+        "visible_text_sample": [],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0045"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/register/register-by-email": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-by-email.vue",
+        "visible_text_sample": [
+          "请输入邮箱",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "邮箱验证码注册",
+          "用户名密码注册",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0046"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/retrieve/retrieve": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve.vue",
+        "visible_text_sample": [
+          "请输入手机号",
+          "请输入新密码",
+          "请再次输入新密码",
+          "通过手机验证码找回密码",
+          "通过邮箱验证码找回密码",
+          "返回登录"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0047"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email.vue",
+        "visible_text_sample": [
+          "请输入邮箱",
+          "请输入新密码",
+          "请再次输入新密码",
+          "通过邮箱验证码找回密码",
+          "通过手机验证码找回密码",
+          "返回登录"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0048"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/common/webview/webview": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/common/webview/webview.vue",
+        "visible_text_sample": [],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0049"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd.vue",
+        "visible_text_sample": [
+          "请输入旧密码",
+          "请输入新密码",
+          "请再次输入新密码",
+          "修改密码"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0050"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/register/register-admin": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-admin.vue",
+        "visible_text_sample": [
+          "请输入用户名",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "创建超级管理员",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [
+          "管理员入口"
+        ],
+        "evidence_refs": [
+          "evidence.0051"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd.vue",
+        "visible_text_sample": [
+          "请输入密码",
+          "请再次输入新密码",
+          "设置密码",
+          "输入密码",
+          "再次输入密码"
+        ],
+        "risk_labels": [],
+        "evidence_refs": [
+          "evidence.0052"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate.vue",
+        "visible_text_sample": [],
+        "risk_labels": [
+          "支付信息"
+        ],
+        "evidence_refs": [
+          "evidence.0053"
+        ]
+      },
+      "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify": {
+        "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify.vue",
+        "visible_text_sample": [
+          "姓名",
+          "身份证号码",
+          "实名认证"
+        ],
+        "risk_labels": [
+          "debug/diagnostic 信息",
+          "实名认证流程"
+        ],
+        "evidence_refs": [
+          "evidence.0054"
+        ]
+      }
+    },
+    "runtime_facts": {
+      "source": "mobile/fixtures/runtime/current/runtime.bundle.json",
+      "status": "observed_in_repo",
+      "implemented_surfaces": [
+        "bootstrap-config",
+        "content-sync-delta",
+        "content-detail",
+        "entitlement-snapshot",
+        "pricing-preview",
+        "experiment-assign",
+        "event-ingest",
+        "home-discovery",
+        "search-content",
+        "follow-catalog",
+        "follow-toggle",
+        "notification-inbox",
+        "notification-prefs",
+        "mark-inbox-read",
+        "content-resume",
+        "save-for-later",
+        "publish-batch-summary",
+        "commercial-offer",
+        "quota-status",
+        "promo-preview",
+        "referral-summary",
+        "reward-summary",
+        "campaign-landing",
+        "profile-benefits"
+      ],
+      "article_count": 63,
+      "publication_names": [
+        "Barron's",
+        "The Atlantic",
+        "The Economist"
+      ],
+      "selected_article": {
+        "article_id": "art_barrons_09022026_004",
+        "title": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷：风险还是机遇？",
+        "publication_name": "Barron's",
+        "issue_display_label": "2026.09.02",
+        "reading_mode": "deep_3m",
+        "source_key": "art_barrons_09022026_004|zh-CN|teen|deep_3m"
+      },
+      "inbox_count": 3,
+      "profile_benefits": {
+        "subscription_status": "free",
+        "entitlement_status": "inactive",
+        "saved_count": 1,
+        "inbox_unread_count": 1,
+        "benefit_summary": [
+          "Barron's + Reader's Digest + Science + The Atlantic + The Economist release candidate",
+          "78 篇真实文章已导入",
+          "free quota test limit 8"
+        ]
+      },
+      "evidence_refs": [
+        "evidence.0055"
+      ]
+    },
+    "upstream_reports": {
+      "listing_status": "blocked",
+      "release_status": "blocked",
+      "privacy_status": "blocked",
+      "capture_status": "blocked"
+    }
+  },
+  "shots": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "priority": 1,
+      "route": "pages/feed/index",
+      "route_params": {},
+      "screen_title": "首页",
+      "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+      "story_goal": "证明用户可以先浏览中文文章摘要，再选择进入精读。",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "source_surfaces": [
+        "home-discovery"
+      ],
+      "visible_evidence": [
+        "首页/效率阅读入口",
+        "文章标题或摘要卡片",
+        "30 秒先读",
+        "消息摘要入口"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/feed/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+      ],
+      "overlay_copy": {
+        "title_zh": "先看摘要，再决定是否精读",
+        "subtitle_zh": "首页聚合文章更新与 30 秒先读。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "device_type": "phone",
+      "locale": "zh-CN",
+      "status": "planned",
+      "route_path": "pages/feed/index",
+      "route_url": "/pages/feed/index",
+      "claim_text_zh": [
+        "浏览中文文章摘要和详情页。"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Feed 诊断信息",
+        "debug/diagnostic 信息",
+        "开发态或诊断信息",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "risk_flags": [
+        "public_use_needs_human_review",
+        "third_party_content_authorization_needs_human",
+        "page_contains_development_or_internal_signals"
+      ],
+      "capture_preconditions": [
+        "使用真实 Android 设备或模拟器打开目标 app。",
+        "目标 route 必须在真实 app 中可达，并由人工或自动导航确认。",
+        "公开截图前确认生产/预览构建未显示开发态诊断或内部配置。",
+        "capture skill 必须通过 adb 从目标 app 前台捕获 raw PNG。"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0002",
+        "evidence.0029",
+        "evidence.0055",
+        "evidence.0056"
+      ],
+      "limitations": [
+        "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
+        "公开使用前需要人工确认画面内容、裁切、安全区、商标和授权。"
+      ]
+    },
+    {
+      "shot_id": "shot_02_detail_deep_read",
+      "priority": 2,
+      "route": "pages/detail/index",
+      "route_params": {
+        "articleId": "art_barrons_09022026_004",
+        "readingMode": "deep_3m",
+        "source": "storyboard"
+      },
+      "screen_title": "3分钟精读",
+      "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+      "story_goal": "证明 app 存在文章详情与 3 分钟精读体验。",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "source_surfaces": [
+        "content-detail"
+      ],
+      "visible_evidence": [
+        "3 分钟精读标题",
+        "文章标题",
+        "摘要/精读正文",
+        "阅读操作",
+        "示例文章来自 runtime fixture"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/detail/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+      ],
+      "overlay_copy": {
+        "title_zh": "把长文压缩成可读精华",
+        "subtitle_zh": "详情页展示 3 分钟精读内容。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "device_type": "phone",
+      "locale": "zh-CN",
+      "status": "planned",
+      "route_path": "pages/detail/index",
+      "route_url": "/pages/detail/index",
+      "claim_text_zh": [
+        "浏览中文文章摘要和详情页。"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "支付信息",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "risk_flags": [
+        "public_use_needs_human_review",
+        "third_party_content_authorization_needs_human",
+        "page_contains_development_or_internal_signals",
+        "account_or_entitlement_context_needs_human"
+      ],
+      "capture_preconditions": [
+        "使用真实 Android 设备或模拟器打开目标 app。",
+        "目标 route 必须在真实 app 中可达，并由人工或自动导航确认。",
+        "公开截图前确认生产/预览构建未显示开发态诊断或内部配置。",
+        "capture skill 必须通过 adb 从目标 app 前台捕获 raw PNG。"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0004",
+        "evidence.0031",
+        "evidence.0055",
+        "evidence.0056"
+      ],
+      "limitations": [
+        "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
+        "公开使用前需要人工确认画面内容、裁切、安全区、商标和授权。"
+      ]
+    },
+    {
+      "shot_id": "shot_03_sources_follow",
+      "priority": 3,
+      "route": "pages/search/index",
+      "route_params": {
+        "focus": "follows"
+      },
+      "screen_title": "来源",
+      "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+      "story_goal": "证明用户可以查看来源更新并关注感兴趣的来源。",
+      "claim_ids": [
+        "listing_claim_source_updates"
+      ],
+      "source_surfaces": [
+        "search-content",
+        "follow-catalog",
+        "follow-toggle"
+      ],
+      "visible_evidence": [
+        "搜索文章、来源、期次、主题",
+        "关注杂志",
+        "来源结果",
+        "阅读深度筛选"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/search/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+      ],
+      "overlay_copy": {
+        "title_zh": "按来源发现更新",
+        "subtitle_zh": "搜索文章、期次和关注的杂志来源。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "device_type": "phone",
+      "locale": "zh-CN",
+      "status": "planned",
+      "route_path": "pages/search/index",
+      "route_url": "/pages/search/index",
+      "claim_text_zh": [
+        "查看来源更新并关注感兴趣的来源。"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "risk_flags": [
+        "public_use_needs_human_review",
+        "third_party_content_authorization_needs_human"
+      ],
+      "capture_preconditions": [
+        "使用真实 Android 设备或模拟器打开目标 app。",
+        "目标 route 必须在真实 app 中可达，并由人工或自动导航确认。",
+        "公开截图前确认生产/预览构建未显示开发态诊断或内部配置。",
+        "capture skill 必须通过 adb 从目标 app 前台捕获 raw PNG。"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0003",
+        "evidence.0030",
+        "evidence.0055",
+        "evidence.0056"
+      ],
+      "limitations": [
+        "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
+        "公开使用前需要人工确认画面内容、裁切、安全区、商标和授权。"
+      ]
+    },
+    {
+      "shot_id": "shot_04_profile_summary",
+      "priority": 4,
+      "route": "pages/profile/index",
+      "route_params": {},
+      "screen_title": "我的",
+      "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+      "story_goal": "证明 app 有阅读状态汇总入口，但公开使用需避开账号隐私。",
+      "claim_ids": [
+        "listing_claim_inbox_profile_settings"
+      ],
+      "source_surfaces": [
+        "profile-benefits",
+        "notification-inbox",
+        "content-resume"
+      ],
+      "visible_evidence": [
+        "阅读权益",
+        "未读消息",
+        "消息摘要",
+        "稍后再读",
+        "打开设置"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/profile/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+      ],
+      "overlay_copy": {
+        "title_zh": "集中管理阅读状态",
+        "subtitle_zh": "消息、保存和权益入口汇总在个人页。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "device_type": "phone",
+      "locale": "zh-CN",
+      "status": "planned",
+      "route_path": "pages/profile/index",
+      "route_url": "/pages/profile/index",
+      "claim_text_zh": [
+        "使用消息摘要、个人页和设置入口管理阅读状态。"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "risk_flags": [
+        "public_use_needs_human_review",
+        "third_party_content_authorization_needs_human",
+        "page_contains_development_or_internal_signals",
+        "account_or_entitlement_context_needs_human"
+      ],
+      "capture_preconditions": [
+        "使用真实 Android 设备或模拟器打开目标 app。",
+        "目标 route 必须在真实 app 中可达，并由人工或自动导航确认。",
+        "公开截图前确认生产/预览构建未显示开发态诊断或内部配置。",
+        "capture skill 必须通过 adb 从目标 app 前台捕获 raw PNG。"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0007",
+        "evidence.0034",
+        "evidence.0055",
+        "evidence.0056"
+      ],
+      "limitations": [
+        "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
+        "公开使用前需要人工确认画面内容、裁切、安全区、商标和授权。"
+      ]
+    }
+  ],
+  "held_shots": [
+    {
+      "shot_id": "held_pages_settings_index",
+      "route": "pages/settings/index",
+      "screen_title": "设置",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "设置页含远端桥接、设备、本地调试和构建信息；公开截图前必须确认生产构建隐藏开发态内容。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Bridge Base URL",
+        "debug/diagnostic 信息",
+        "内部能力或兼容页面",
+        "开发态或诊断信息",
+        "构建信息",
+        "远端桥接配置",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0008",
+        "evidence.0035"
+      ]
+    },
+    {
+      "shot_id": "held_pages_paywall_index",
+      "route": "pages/paywall/index",
+      "screen_title": "订阅",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "订阅/套餐/额度属于商业和支付相关表达；需产品、法务和 Play policy 人工确认。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0005",
+        "evidence.0032"
+      ]
+    },
+    {
+      "shot_id": "held_pages_invite_index",
+      "route": "pages/invite/index",
+      "screen_title": "邀请与兑换",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "兑换码、奖励和邀请属于增长/奖励表达；不能展示未证明的奖励结算。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "兑换码/奖励结算",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0006",
+        "evidence.0033"
+      ]
+    },
+    {
+      "shot_id": "held_pages_inbox_index",
+      "route": "pages/inbox/index",
+      "screen_title": "消息摘要",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 internal 能力页，正式入口在首页消息摘要；不作为默认公开截图。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0009",
+        "evidence.0036"
+      ]
+    },
+    {
+      "shot_id": "held_pages_follows_index",
+      "route": "pages/follows/index",
+      "screen_title": "来源与关注",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 alias route，会跳转到搜索页；使用 search route 作为正式截图。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0037"
+      ]
+    },
+    {
+      "shot_id": "held_pages_campaign_index",
+      "route": "pages/campaign/index",
+      "screen_title": "活动说明",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 alias/internal campaign route，会跳转到订阅页商业区块。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0011",
+        "evidence.0038"
+      ]
+    }
+  ],
+  "capture_shot_list": {
+    "schema_version": "screenshot_shot_list.v1",
+    "generated_at": "2026-06-17T14:58:45Z",
+    "produced_by": "screenshot-storyboard",
+    "draft_only": true,
+    "can_use_for_submission": false,
+    "shots": [
+      {
+        "shot_id": "shot_01_home_feed",
+        "route": "pages/feed/index",
+        "route_path": "pages/feed/index",
+        "route_params": {},
+        "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+        "title": "首页",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/feed/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+        ],
+        "visible_evidence": [
+          "首页/效率阅读入口",
+          "文章标题或摘要卡片",
+          "30 秒先读",
+          "消息摘要入口"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "Feed 诊断信息",
+          "debug/diagnostic 信息",
+          "开发态或诊断信息",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0002",
+          "evidence.0029",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_02_detail_deep_read",
+        "route": "pages/detail/index",
+        "route_path": "pages/detail/index",
+        "route_params": {
+          "articleId": "art_barrons_09022026_004",
+          "readingMode": "deep_3m",
+          "source": "storyboard"
+        },
+        "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+        "title": "3分钟精读",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/detail/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+        ],
+        "visible_evidence": [
+          "3 分钟精读标题",
+          "文章标题",
+          "摘要/精读正文",
+          "阅读操作",
+          "示例文章来自 runtime fixture"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "支付信息",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0004",
+          "evidence.0031",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_03_sources_follow",
+        "route": "pages/search/index",
+        "route_path": "pages/search/index",
+        "route_params": {
+          "focus": "follows"
+        },
+        "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+        "title": "来源",
+        "claim_ids": [
+          "listing_claim_source_updates"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/search/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+        ],
+        "visible_evidence": [
+          "搜索文章、来源、期次、主题",
+          "关注杂志",
+          "来源结果",
+          "阅读深度筛选"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0003",
+          "evidence.0030",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_04_profile_summary",
+        "route": "pages/profile/index",
+        "route_path": "pages/profile/index",
+        "route_params": {},
+        "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+        "title": "我的",
+        "claim_ids": [
+          "listing_claim_inbox_profile_settings"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/profile/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+        ],
+        "visible_evidence": [
+          "阅读权益",
+          "未读消息",
+          "消息摘要",
+          "稍后再读",
+          "打开设置"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0007",
+          "evidence.0034",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      }
+    ]
+  },
+  "capture_handoff": {
+    "schema_version": "screenshot_capture_handoff.v1",
+    "generated_at": "2026-06-17T14:58:45Z",
+    "produced_by": "screenshot-storyboard",
+    "expected_downstream_skill": "screenshot-capture-agent",
+    "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
+    "recommended_capture_command": "python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json",
+    "capture_preconditions": [
+      "安装或启动目标 Android app。",
+      "使目标 app 位于前台，不要停留在系统 Launcher。",
+      "按 shot-list route 手动或自动导航到目标页面。",
+      "使用 screenshot-capture-agent 通过 adb 捕获 raw PNG。",
+      "捕获后由人工确认 route、locale、设备、安全区、裁切和公开使用。"
+    ],
+    "shots": [
+      {
+        "shot_id": "shot_01_home_feed",
+        "route": "pages/feed/index",
+        "route_path": "pages/feed/index",
+        "route_params": {},
+        "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+        "title": "首页",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/feed/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+        ],
+        "visible_evidence": [
+          "首页/效率阅读入口",
+          "文章标题或摘要卡片",
+          "30 秒先读",
+          "消息摘要入口"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "Feed 诊断信息",
+          "debug/diagnostic 信息",
+          "开发态或诊断信息",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0002",
+          "evidence.0029",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_02_detail_deep_read",
+        "route": "pages/detail/index",
+        "route_path": "pages/detail/index",
+        "route_params": {
+          "articleId": "art_barrons_09022026_004",
+          "readingMode": "deep_3m",
+          "source": "storyboard"
+        },
+        "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+        "title": "3分钟精读",
+        "claim_ids": [
+          "listing_claim_digest_detail"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/detail/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+        ],
+        "visible_evidence": [
+          "3 分钟精读标题",
+          "文章标题",
+          "摘要/精读正文",
+          "阅读操作",
+          "示例文章来自 runtime fixture"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "支付信息",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0004",
+          "evidence.0031",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_03_sources_follow",
+        "route": "pages/search/index",
+        "route_path": "pages/search/index",
+        "route_params": {
+          "focus": "follows"
+        },
+        "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+        "title": "来源",
+        "claim_ids": [
+          "listing_claim_source_updates"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/search/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+        ],
+        "visible_evidence": [
+          "搜索文章、来源、期次、主题",
+          "关注杂志",
+          "来源结果",
+          "阅读深度筛选"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0003",
+          "evidence.0030",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      },
+      {
+        "shot_id": "shot_04_profile_summary",
+        "route": "pages/profile/index",
+        "route_path": "pages/profile/index",
+        "route_params": {},
+        "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+        "title": "我的",
+        "claim_ids": [
+          "listing_claim_inbox_profile_settings"
+        ],
+        "fixture_source": [
+          "mobile/pages.json:pages/profile/index",
+          "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+        ],
+        "visible_evidence": [
+          "阅读权益",
+          "未读消息",
+          "消息摘要",
+          "稍后再读",
+          "打开设置"
+        ],
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "human_review_required": true,
+        "review_status": "NEED_HUMAN",
+        "evidence_refs": [
+          "evidence.0007",
+          "evidence.0034",
+          "evidence.0055",
+          "evidence.0056"
+        ]
+      }
+    ],
+    "blockers": [
+      {
+        "blocker_id": "release_gate_not_passed",
+        "status": "blocked",
+        "review_status": "NEED_HUMAN",
+        "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+        "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+        "evidence_refs": [
+          "evidence.0057"
+        ]
+      },
+      {
+        "blocker_id": "raw_screenshots_not_captured",
+        "status": "blocked",
+        "review_status": "NEED_HUMAN",
+        "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+        "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+        "evidence_refs": [
+          "evidence.0059"
+        ]
+      },
+      {
+        "blocker_id": "privacy_or_target_audience_needs_human",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+        "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
+        "evidence_refs": [
+          "evidence.0058"
+        ]
+      }
+    ],
+    "human_review_gates": [
+      {
+        "gate_id": "human.screenshot.public_use",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
+        "evidence_refs": [
+          "evidence.0002",
+          "evidence.0029",
+          "evidence.0055",
+          "evidence.0056",
+          "evidence.0004",
+          "evidence.0031",
+          "evidence.0003",
+          "evidence.0030",
+          "evidence.0007",
+          "evidence.0034"
+        ]
+      },
+      {
+        "gate_id": "human.screenshot.google_play_specs",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。",
+        "evidence_refs": []
+      },
+      {
+        "gate_id": "human.screenshot.trademark_content_authorization",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
+        "evidence_refs": [
+          "evidence.0055"
+        ]
+      },
+      {
+        "gate_id": "human.screenshot.capture_execution",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。",
+        "evidence_refs": []
+      },
+      {
+        "gate_id": "human.release_context",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
+        "evidence_refs": [
+          "evidence.0057"
+        ]
+      },
+      {
+        "gate_id": "human.held_shots",
+        "status": "needs_human",
+        "review_status": "NEED_HUMAN",
+        "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
+        "evidence_refs": [
+          "evidence.0008",
+          "evidence.0035",
+          "evidence.0005",
+          "evidence.0032",
+          "evidence.0006",
+          "evidence.0033",
+          "evidence.0009",
+          "evidence.0036",
+          "evidence.0010",
+          "evidence.0037",
+          "evidence.0011",
+          "evidence.0038"
+        ]
+      }
+    ]
+  },
+  "design_brief": {
+    "schema_version": "screenshot_design_brief.v1",
+    "generated_at": "2026-06-17T14:58:45Z",
+    "produced_by": "screenshot-storyboard",
+    "draft_only": true,
+    "base_image_rule": "只能使用 screenshot-capture-agent 真实捕获的 raw screenshot 作为 app 画面。",
+    "allowed": [
+      "在 raw screenshot 外部添加背景、标题和极简说明。",
+      "对 raw screenshot 做安全裁切和设备框包装，但不得改变 app 内部 UI 功能含义。",
+      "为不同 locale 准备人工审核后的标题文案。"
+    ],
+    "not_allowed": [
+      "新增 app 中不存在的按钮、页面、功能或内容。",
+      "把 mockup、旧设计稿、系统桌面、HBuilderX 空壳当作真实 app 截图。",
+      "展示价格促销、排名、评分、下载量或 Play Store 表现暗示。",
+      "展示未经授权的第三方内容、商标或真实个人数据。"
+    ],
+    "shot_overlays": [
+      {
+        "shot_id": "shot_01_home_feed",
+        "route": "pages/feed/index",
+        "overlay_copy": {
+          "title_zh": "先看摘要，再决定是否精读",
+          "subtitle_zh": "首页聚合文章更新与 30 秒先读。",
+          "copy_status": "draft_needs_human_review"
+        },
+        "review_status": "NEED_HUMAN"
+      },
+      {
+        "shot_id": "shot_02_detail_deep_read",
+        "route": "pages/detail/index",
+        "overlay_copy": {
+          "title_zh": "把长文压缩成可读精华",
+          "subtitle_zh": "详情页展示 3 分钟精读内容。",
+          "copy_status": "draft_needs_human_review"
+        },
+        "review_status": "NEED_HUMAN"
+      },
+      {
+        "shot_id": "shot_03_sources_follow",
+        "route": "pages/search/index",
+        "overlay_copy": {
+          "title_zh": "按来源发现更新",
+          "subtitle_zh": "搜索文章、期次和关注的杂志来源。",
+          "copy_status": "draft_needs_human_review"
+        },
+        "review_status": "NEED_HUMAN"
+      },
+      {
+        "shot_id": "shot_04_profile_summary",
+        "route": "pages/profile/index",
+        "overlay_copy": {
+          "title_zh": "集中管理阅读状态",
+          "subtitle_zh": "消息、保存和权益入口汇总在个人页。",
+          "copy_status": "draft_needs_human_review"
+        },
+        "review_status": "NEED_HUMAN"
+      }
+    ],
+    "held_shots": [
+      {
+        "shot_id": "held_pages_settings_index",
+        "route": "pages/settings/index",
+        "screen_title": "设置",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "设置页含远端桥接、设备、本地调试和构建信息；公开截图前必须确认生产构建隐藏开发态内容。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "Bridge Base URL",
+          "debug/diagnostic 信息",
+          "内部能力或兼容页面",
+          "开发态或诊断信息",
+          "构建信息",
+          "远端桥接配置",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0008",
+          "evidence.0035"
+        ]
+      },
+      {
+        "shot_id": "held_pages_paywall_index",
+        "route": "pages/paywall/index",
+        "screen_title": "订阅",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "订阅/套餐/额度属于商业和支付相关表达；需产品、法务和 Play policy 人工确认。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0005",
+          "evidence.0032"
+        ]
+      },
+      {
+        "shot_id": "held_pages_invite_index",
+        "route": "pages/invite/index",
+        "screen_title": "邀请与兑换",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "兑换码、奖励和邀请属于增长/奖励表达；不能展示未证明的奖励结算。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "兑换码/奖励结算",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0006",
+          "evidence.0033"
+        ]
+      },
+      {
+        "shot_id": "held_pages_inbox_index",
+        "route": "pages/inbox/index",
+        "screen_title": "消息摘要",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "源码标记为 internal 能力页，正式入口在首页消息摘要；不作为默认公开截图。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "内部能力或兼容页面",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0009",
+          "evidence.0036"
+        ]
+      },
+      {
+        "shot_id": "held_pages_follows_index",
+        "route": "pages/follows/index",
+        "screen_title": "来源与关注",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "源码标记为 alias route，会跳转到搜索页；使用 search route 作为正式截图。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "内部能力或兼容页面",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0010",
+          "evidence.0037"
+        ]
+      },
+      {
+        "shot_id": "held_pages_campaign_index",
+        "route": "pages/campaign/index",
+        "screen_title": "活动说明",
+        "status": "held",
+        "review_status": "NEED_HUMAN",
+        "human_review_required": true,
+        "reason": "源码标记为 alias/internal campaign route，会跳转到订阅页商业区块。",
+        "must_not_show": [
+          "不存在或未证明的功能",
+          "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+          "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+          "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+          "内部能力或兼容页面",
+          "订阅/支付权益",
+          "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+        ],
+        "evidence_refs": [
+          "evidence.0011",
+          "evidence.0038"
+        ]
+      }
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "listing_claim_digest_detail",
+      "value_zh": "浏览中文文章摘要和详情页。",
+      "value_en": "Browse Chinese article digests and detail pages.",
+      "status": "inferred",
+      "confidence": "medium",
+      "claim_class": "implemented_app_surface",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "source_evidence_refs": [
+        "mobile/pages.json",
+        "mobile/fixtures/runtime/current/runtime.bundle.json"
+      ],
+      "evidence_refs": [
+        "evidence.0056",
+        "evidence.0055"
+      ],
+      "limitations": [
+        "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
+      ]
+    },
+    {
+      "claim_id": "listing_claim_source_updates",
+      "value_zh": "查看来源更新并关注感兴趣的来源。",
+      "value_en": "View source updates and follow sources.",
+      "status": "inferred",
+      "confidence": "medium",
+      "claim_class": "implemented_app_surface",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "source_evidence_refs": [
+        "mobile/pages.json",
+        "mobile/fixtures/runtime/current/runtime.bundle.json"
+      ],
+      "evidence_refs": [
+        "evidence.0056",
+        "evidence.0055"
+      ],
+      "limitations": [
+        "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
+      ]
+    },
+    {
+      "claim_id": "listing_claim_inbox_profile_settings",
+      "value_zh": "使用消息摘要、个人页和设置入口管理阅读状态。",
+      "value_en": "Use inbox, profile, and settings screens for reading state.",
+      "status": "inferred",
+      "confidence": "medium",
+      "claim_class": "implemented_app_surface",
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "source_evidence_refs": [
+        "mobile/pages.json"
+      ],
+      "evidence_refs": [
+        "evidence.0056",
+        "evidence.0055"
+      ],
+      "limitations": [
+        "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence.0001",
+      "source_type": "repo_config",
+      "source_ref": "mobile/manifest.json + app.json",
+      "observed_key": "app_identity",
+      "observed_value": {
+        "app_name": "高效阅读",
+        "manifest_appid": "__UNI__005A993",
+        "manifest_description": "Compile-targeted placeholder shell aligned with Stage B contracts.",
+        "expo_slug": "magazine-digest",
+        "android_package": "com.daowei2026.magazinedigest",
+        "sources": [
+          "mobile/manifest.json",
+          "app.json"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:69d0cd0fc61ec6324f1b52c091bfbfdd709a4ef37ce6c39540a20bd8a6846ff7",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0002",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/feed/index",
+      "observed_value": {
+        "path": "pages/feed/index",
+        "title": "首页",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0002"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:6835182112dde003c53973dcf1f30ec92d8ff5ce62834182c44d7ce42f756430",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0003",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/search/index",
+      "observed_value": {
+        "path": "pages/search/index",
+        "title": "来源",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0003"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ee9696a5d6077dd7de0ecec8a60f767388c0981b6c985af9b15725b9a60a10ba",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0004",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/detail/index",
+      "observed_value": {
+        "path": "pages/detail/index",
+        "title": "3分钟精读",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0004"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:e2f61a0e92cbd53e8818048b56f0c03d3671f4c44790501696c9bc7a88fceecc",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0005",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/paywall/index",
+      "observed_value": {
+        "path": "pages/paywall/index",
+        "title": "订阅",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0005"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:daf46e0c3c2252408e116c691e615143b901724679f17b437830942c32254086",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0006",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/invite/index",
+      "observed_value": {
+        "path": "pages/invite/index",
+        "title": "邀请与兑换",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0006"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:07378901989817e3b34d6066fcea10dec0928601539380702ae15df5abac3f19",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0007",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/profile/index",
+      "observed_value": {
+        "path": "pages/profile/index",
+        "title": "我的",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0007"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ef8977d27db408d4f9be3186514d55329ae4800459c35790a92559a45c785c16",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0008",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/settings/index",
+      "observed_value": {
+        "path": "pages/settings/index",
+        "title": "设置",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0008"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:f70cfb156d6fbd040286d48000964c3ea9aee6479b8f2ff6f503e0ef22219261",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0009",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/inbox/index",
+      "observed_value": {
+        "path": "pages/inbox/index",
+        "title": "消息摘要",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0009"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:1bb1433d714b9b3748a9a451b31ac085b001639fbde0298727ce168e0f909099",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0010",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/follows/index",
+      "observed_value": {
+        "path": "pages/follows/index",
+        "title": "来源与关注",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0010"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ecda3df3efebdf88c12732c9386b07715ef2a29b2ae42911d637d5c187075d20",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0011",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/campaign/index",
+      "observed_value": {
+        "path": "pages/campaign/index",
+        "title": "活动说明",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0011"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ea5fd8b4bf4b7f6f9455da95fc12ec259d929c6798bbec47ef555c832e5adba9",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0012",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/register/register",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/register/register",
+        "title": "注册",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0012"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:5e423a31a3b986e455a9ebdbde7d53b845e1a440fcbab1f119a04020102721a6",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0013",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+        "title": "登录",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0013"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:1884f754736a2df308b828ce0422fa07febeeaedaecf1283a0acb79adf59495b",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0014",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-withpwd",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+        "title": "账号密码登录",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0014"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:775b20a6856ef6f6f63fc3401fddeaa17f54b3ca119d270727d486da27810fc9",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0015",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-smscode",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/login/login-smscode",
+        "title": "手机验证码登录",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0015"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:e1ee2b85083557dc619b87a21e46cae21d3c08726f27c8d855a3503199df5f72",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0016",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/userinfo",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+        "title": "个人资料",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0016"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:dc638e02e917fb9885955ba389a6678834898d7e2b214110cbdd7c7b88292f46",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0017",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+        "title": "绑定手机号码",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0017"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:5ed1377285369d90ed01703a3b62adc3bd6faba7436f31e582f205001b375d51",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0018",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+        "title": "",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0018"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:5f59d5e670b50535b99a5ff4a97db2940c707c723ae5be5c8a0f1aec83176fc5",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0019",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/register/register-by-email",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/register/register-by-email",
+        "title": "邮箱验证码注册",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0019"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:3f31117d1b90605e0a74dc279193d91496d0a98effc110615093a6f77cc286f7",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0020",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/retrieve/retrieve",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+        "title": "重置密码",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0020"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:6ae725a330a74d51261dff71f48394be47db6021b74e56313a009638feb40424",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0021",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+        "title": "通过邮箱重置密码",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0021"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:c0147d167e4db35db6565a27dd84841b7032196fc898fa9be37d74d445a74468",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0022",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/common/webview/webview",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/common/webview/webview",
+        "title": "",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0022"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:419a2a04983ece5760e964a3c7b28a704d7636a1076d4bdec2e3c6e14a46049e",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0023",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+        "title": "修改密码",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0023"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:897cab1e872c220bc763b4e41bff0ab647364669579693a3a8a33c1c9e4435bf",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0024",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/register/register-admin",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/register/register-admin",
+        "title": "注册管理员账号",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0024"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:26b3695bee5092ab10bf2ead6d78d49a1b20336ec6e7208e9f60a6a6386e394e",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0025",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+        "title": "设置密码",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0025"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ddf4899a2fd85630b7a3b9fad1ab37eb36b28c2ef12f0f8024c356049cdf567d",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0026",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+        "title": "注销账号",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0026"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:449674dc72833e4cee7a64c3465e4bb53484471e148dfcba9a73cab5188bd5d2",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0027",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+      "observed_value": {
+        "path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+        "title": "实名认证",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0027"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:86456b7e82537e8d740548028251672ab6ff9122a0cec1a500e1347a2eac6e0b",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0028",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
+      "observed_key": "routes.summary",
+      "observed_value": {
+        "count": 26,
+        "tab_bar": [
+          {
+            "path": "pages/feed/index",
+            "text": "首页"
+          },
+          {
+            "path": "pages/search/index",
+            "text": "来源"
+          },
+          {
+            "path": "pages/profile/index",
+            "text": "我的"
+          }
+        ],
+        "paths": [
+          "pages/feed/index",
+          "pages/search/index",
+          "pages/detail/index",
+          "pages/paywall/index",
+          "pages/invite/index",
+          "pages/profile/index",
+          "pages/settings/index",
+          "pages/inbox/index",
+          "pages/follows/index",
+          "pages/campaign/index",
+          "uni_modules/uni-id-pages/pages/register/register",
+          "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+          "uni_modules/uni-id-pages/pages/login/login-withpwd",
+          "uni_modules/uni-id-pages/pages/login/login-smscode",
+          "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+          "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+          "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+          "uni_modules/uni-id-pages/pages/register/register-by-email",
+          "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+          "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+          "uni_modules/uni-id-pages/pages/common/webview/webview",
+          "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+          "uni_modules/uni-id-pages/pages/register/register-admin",
+          "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+          "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+          "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:48b33b4965c73339ea3041fe4d5a45c23ac861aea65f53697aea8084c9da5b6c",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0029",
+      "source_type": "source",
+      "source_ref": "mobile/pages/feed/index.vue",
+      "observed_key": "page_source.pages/feed/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "publication.label",
+          "issue.label",
+          "tab.label",
+          "开发态",
+          "Feed 诊断",
+          "用于判断当前是 source 选错、同步为空，还是页面过滤后为空。",
+          "正在整理首页内容",
+          "首页暂时不可用"
+        ],
+        "risk_labels": [
+          "Feed 诊断信息",
+          "debug/diagnostic 信息",
+          "开发态或诊断信息"
+        ],
+        "line_count": 1092
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:9c6da6b3afe2ba02dc4465cf3f0f2090e57945bec0c6f1da4bbadb099c75aa06",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0030",
+      "source_type": "source",
+      "source_ref": "mobile/pages/search/index.vue",
+      "observed_key": "page_source.pages/search/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "搜索文章、来源、期次、主题",
+          "formatLabel(publication)",
+          "formatIssue(issueId)",
+          "formatLabel(sectionLabels[section] || section)",
+          "formatLabel(bucket)",
+          "formatLabel(tag)",
+          "mode === 'quick_30s' ? '30 秒速览' : '3 分钟精读'",
+          "关注"
+        ],
+        "risk_labels": [],
+        "line_count": 980
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:2a2c4147799559652c2d681f1bb204688a7dca5af0246e5a23ddcc83de6568fc",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0031",
+      "source_type": "source",
+      "source_ref": "mobile/pages/detail/index.vue",
+      "observed_key": "page_source.pages/detail/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "articleTitle",
+          "正在准备阅读内容",
+          "这篇文章暂时打不开",
+          "正在阅读缓存版本",
+          "阅读",
+          "3 分钟精读",
+          "操作",
+          "阅读操作"
+        ],
+        "risk_labels": [
+          "支付信息",
+          "订阅/支付权益"
+        ],
+        "line_count": 578
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:ef8b7e88a7cf98077c9062b69ac0e7ca63ff3ff4bdd4ecca20d47c3b8e093c5b",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0032",
+      "source_type": "source",
+      "source_ref": "mobile/pages/paywall/index.vue",
+      "observed_key": "page_source.pages/paywall/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "查看邀请奖励",
+          "查看方案",
+          "PAYWALL_PAGE_READY",
+          "先了解权益，再决定是否订阅",
+          "这里展示套餐、额度、优惠码和活动信息，帮助你理解当前阅读权益。",
+          "邀请与奖励",
+          "订阅页继续保留通往邀请/兑换的正式入口，但不把邀请重新放回底部主壳。"
+        ],
+        "risk_labels": [
+          "订阅/支付权益"
+        ],
+        "line_count": 255
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:5bc557b6c644dba082be0258125129cd515146c282cba6aa6f407b54c0ad848e",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0033",
+      "source_type": "source",
+      "source_ref": "mobile/pages/invite/index.vue",
+      "observed_key": "page_source.pages/invite/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "Growth",
+          "兑换入口",
+          "这里只做预览态兑换入口，不推进真实 redeem。",
+          "输入兑换码",
+          "复制邀请码",
+          "分享邀请",
+          "预览兑换",
+          "邀请与兑换"
+        ],
+        "risk_labels": [
+          "兑换码/奖励结算",
+          "订阅/支付权益"
+        ],
+        "line_count": 154
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:57b7bc58c680f8f254ee6b857dfd50d29b55c2d1551ca65717c7859c6b53f41c",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0034",
+      "source_type": "source",
+      "source_ref": "mobile/pages/profile/index.vue",
+      "observed_key": "page_source.pages/profile/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "entitlementBadgeLabel",
+          "个人",
+          "我的摘要",
+          "把保存、消息、权益与奖励集中在这里。",
+          "查看订阅",
+          "邀请奖励",
+          "打开设置",
+          "设备状态"
+        ],
+        "risk_labels": [
+          "订阅/支付权益"
+        ],
+        "line_count": 415
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:d52a0ff7f2a33b867d3139abed8eef8f4684800c888cee10b78f1cdb6ac633dd",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0035",
+      "source_type": "source",
+      "source_ref": "mobile/pages/settings/index.vue",
+      "observed_key": "page_source.pages/settings/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "数据来源",
+          "运行方式",
+          "这里可以切换本地、混合或远端接缝模式，方便开发预览。",
+          "远端桥接",
+          "内容自动更新",
+          "这一步只要配置一次，后续后台发布内容不需要重装客户端。",
+          "https://runtime.example.com/runtime 或 http://8.136.215.40/magazine-runtime",
+          "保存远端桥接"
+        ],
+        "risk_labels": [
+          "Bridge Base URL",
+          "debug/diagnostic 信息",
+          "内部能力或兼容页面",
+          "开发态或诊断信息",
+          "构建信息",
+          "远端桥接配置"
+        ],
+        "line_count": 568
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:e9357d31569e93682df396506bc374fa628433191ee498c396f7d55192f78c1c",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0036",
+      "source_type": "source",
+      "source_ref": "mobile/pages/inbox/index.vue",
+      "observed_key": "page_source.pages/inbox/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "Inbox Internal",
+          "旧 inbox 不再是一级页面，但内部能力页继续保留 inbox truth 和 delivery preview 可见性。",
+          "Inbox truth durable",
+          "`notification_inbox` 仍是用户消息真相源；首页只展示摘要，这里保留内部能力视图。",
+          "消息内容",
+          "保留 delivery preview、digest queued、suppressed 等 foundation 语义的查看入口。",
+          "回到正式 IA",
+          "正式入口在首页消息摘要；本页仅保留内部能力可见性，不恢复一级导航。"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面"
+        ],
+        "line_count": 140
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:614ff61d0779ec7e4834ff94f7925bcba90b8a02b30a4ffdde1ac23b23e4b6a9",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0037",
+      "source_type": "source",
+      "source_ref": "mobile/pages/follows/index.vue",
+      "observed_key": "page_source.pages/follows/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "Follows Alias",
+          "旧 follows route 仅保留为内部兼容 alias，将跳转到搜索页关注目录。"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面"
+        ],
+        "line_count": 22
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:4c362a8220cf2121d393781cdb51aa0c3bbd40f405fd864a4b08fe1b20f14e9b",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0038",
+      "source_type": "source",
+      "source_ref": "mobile/pages/campaign/index.vue",
+      "observed_key": "page_source.pages/campaign/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "Campaign Alias",
+          "旧 campaign route 仅保留为内部兼容 alias，将跳转到订阅页商业区块。"
+        ],
+        "risk_labels": [
+          "内部能力或兼容页面",
+          "订阅/支付权益"
+        ],
+        "line_count": 22
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:b1cfbf66c471479b9d542df0648f360647a3c7e79de5375ae67111f8fedcdb6c",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0039",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入用户名",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "用户名密码注册",
+          "邮箱验证码注册",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [],
+        "line_count": 181
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:33ae0c62ecc8f0ba3ea42b9f8ed7ac88b820dd5c4afcd9237d366f96a70ce3c3",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0040",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withoutpwd.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入手机号",
+          "请选择登录方式",
+          "将根据第三方账号服务平台的授权范围获取你的信息",
+          "未注册的账号验证通过后将自动注册"
+        ],
+        "risk_labels": [],
+        "line_count": 294
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:86f79b5a541db3d724578df26f2ccd10741a994bb7e1a28b190cfeba6baef348",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0041",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withpwd.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-withpwd",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入手机号/用户名/邮箱",
+          "请输入密码",
+          "账号密码登录",
+          "忘记了？",
+          "找回密码",
+          "注册账号"
+        ],
+        "risk_labels": [
+          "管理员入口"
+        ],
+        "line_count": 176
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:088b98c7f2185e74f1d6973b657ac01f5f5951733dd18fcaf5f5499317402716",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0042",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-smscode.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-smscode",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入验证码",
+          "先输入图形验证码，再获取短信验证码"
+        ],
+        "risk_labels": [],
+        "line_count": 120
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:e5065690264fe457c05a4daf4583a87e42bf409c7d48cc9c9230bc1b17c807cf",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0043",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/userinfo.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/userinfo",
+      "observed_value": {
+        "visible_text_sample": [
+          "昵称",
+          "手机号",
+          "电子邮箱",
+          "实名认证",
+          "修改密码",
+          "注销账号",
+          "设置昵称",
+          "请输入要设置的昵称"
+        ],
+        "risk_labels": [
+          "实名认证流程",
+          "账号注销流程"
+        ],
+        "line_count": 272
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:75cf544f709f2f4b6aab7b2341f2b46f465667273bdd792ad8a84eb828c38825",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0044",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入手机号",
+          "绑定手机号"
+        ],
+        "risk_labels": [],
+        "line_count": 131
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:df401c01c27349ce8bd2a9a9cf453a2e21f8ec93b2802cdd3d477fae751a7ffb",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0045",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+      "observed_value": {
+        "visible_text_sample": [],
+        "risk_labels": [],
+        "line_count": 39
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:ee87ea4614c159832f565e6caeaf006bbbcd1a8469b4abad4930a742ce2bffcd",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0046",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-by-email.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register-by-email",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入邮箱",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "邮箱验证码注册",
+          "用户名密码注册",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [],
+        "line_count": 216
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:11cf36826326cc91c1440c1ed72bc3c5ce175dbc5d08b3847572a1b940c0e62f",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0047",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/retrieve/retrieve",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入手机号",
+          "请输入新密码",
+          "请再次输入新密码",
+          "通过手机验证码找回密码",
+          "通过邮箱验证码找回密码",
+          "返回登录"
+        ],
+        "risk_labels": [],
+        "line_count": 241
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:3b2104a0bdc508d9e1b05d164953d65eef2c71f3bf9fef199d54291d6a37521f",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0048",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入邮箱",
+          "请输入新密码",
+          "请再次输入新密码",
+          "通过邮箱验证码找回密码",
+          "通过手机验证码找回密码",
+          "返回登录"
+        ],
+        "risk_labels": [],
+        "line_count": 218
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:2f27fea8f324203b1ef6a1c89ef4df2cac3ff8aa89ae27c6551cf72f2f672f1b",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0049",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/common/webview/webview.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/common/webview/webview",
+      "observed_value": {
+        "visible_text_sample": [],
+        "risk_labels": [],
+        "line_count": 37
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:c9d071b323b123d24fb0220a568625ff96d37a5eb97fed1a54c44ea0d37c1450",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0050",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入旧密码",
+          "请输入新密码",
+          "请再次输入新密码",
+          "修改密码"
+        ],
+        "risk_labels": [],
+        "line_count": 130
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:6259ea717c4f2ff63c620a942d0faa2ddf10423040db5ac7bec7eb9178408a32",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0051",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-admin.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register-admin",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入用户名",
+          "请输入用户昵称",
+          "'请输入' + (config.passwordStrength == 'weak'?'6':'8') + '-16位密码'",
+          "再次输入密码",
+          "创建超级管理员",
+          "已有账号？点此登录"
+        ],
+        "risk_labels": [
+          "管理员入口"
+        ],
+        "line_count": 178
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:cc7585584c14e50fe0af89603ef72dbef22303d86b9ed3ae253b216078c4fc2c",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0052",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+      "observed_value": {
+        "visible_text_sample": [
+          "请输入密码",
+          "请再次输入新密码",
+          "设置密码",
+          "输入密码",
+          "再次输入密码"
+        ],
+        "risk_labels": [],
+        "line_count": 171
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:706937d0790122add359a00014baf78cb80888646f46c7e15f6ecc662551bacb",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0053",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+      "observed_value": {
+        "visible_text_sample": [],
+        "risk_labels": [
+          "支付信息"
+        ],
+        "line_count": 117
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:35e19f020ae1953e7f36e7a848d84d225d147ad75142319b03f254f22bd54366",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0054",
+      "source_type": "source",
+      "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify.vue",
+      "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+      "observed_value": {
+        "visible_text_sample": [
+          "姓名",
+          "身份证号码",
+          "实名认证"
+        ],
+        "risk_labels": [
+          "debug/diagnostic 信息",
+          "实名认证流程"
+        ],
+        "line_count": 315
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:0239a5f6a47f1102ee998bca45bfcf90d5a0e06b14176d051423f157057418a0",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0055",
+      "source_type": "runtime_fixture",
+      "source_ref": "mobile/fixtures/runtime/current/runtime.bundle.json",
+      "observed_key": "runtime_facts.summary",
+      "observed_value": {
+        "implemented_surfaces": [
+          "bootstrap-config",
+          "content-sync-delta",
+          "content-detail",
+          "entitlement-snapshot",
+          "pricing-preview",
+          "experiment-assign",
+          "event-ingest",
+          "home-discovery",
+          "search-content",
+          "follow-catalog",
+          "follow-toggle",
+          "notification-inbox",
+          "notification-prefs",
+          "mark-inbox-read",
+          "content-resume",
+          "save-for-later",
+          "publish-batch-summary",
+          "commercial-offer",
+          "quota-status",
+          "promo-preview",
+          "referral-summary",
+          "reward-summary",
+          "campaign-landing",
+          "profile-benefits"
+        ],
+        "article_count": 63,
+        "publication_names": [
+          "Barron's",
+          "The Atlantic",
+          "The Economist"
+        ],
+        "selected_article": {
+          "article_id": "art_barrons_09022026_004",
+          "title": "BDCs Get Cheaper Amid Software Selloff / 软件股抛售潮下的私人信贷：风险还是机遇？",
+          "publication_name": "Barron's",
+          "issue_display_label": "2026.09.02",
+          "reading_mode": "deep_3m",
+          "source_key": "art_barrons_09022026_004|zh-CN|teen|deep_3m"
+        },
+        "inbox_count": 3,
+        "profile_benefits": {
+          "subscription_status": "free",
+          "entitlement_status": "inactive",
+          "saved_count": 1,
+          "inbox_unread_count": 1,
+          "benefit_summary": [
+            "Barron's + Reader's Digest + Science + The Atlantic + The Economist release candidate",
+            "78 篇真实文章已导入",
+            "free quota test limit 8"
+          ]
+        }
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:6f7081fd87e34352c3ae2f1bf29010a4ed9e2ae8451eacd4014c90c974ff642d",
+      "confidence": 0.9
+    },
+    {
+      "evidence_id": "evidence.0056",
+      "source_type": "agent_report",
+      "source_ref": "play-store-launch/reports/google-play-listing-output.json",
+      "observed_key": "google_play_listing",
+      "observed_value": {
+        "schema_version": "google_play_listing_output.v2",
+        "overall_status": "blocked",
+        "capture_status": null,
+        "blocker_count": 4
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:5baa617d8a58f950980bb81c6a562d8d68614624745efc86e6d578b47cf37ed5",
+      "confidence": 0.85
+    },
+    {
+      "evidence_id": "evidence.0057",
+      "source_type": "agent_report",
+      "source_ref": "play-store-launch/reports/release-build-agent-output.json",
+      "observed_key": "release_build",
+      "observed_value": {
+        "schema_version": "release_build_agent_output.v2",
+        "overall_status": "blocked",
+        "capture_status": null,
+        "blocker_count": 0
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:a0680ee9608d40aff3539169521089c69fbf4d3ced922d204f0c2d7e685276cc",
+      "confidence": 0.85
+    },
+    {
+      "evidence_id": "evidence.0058",
+      "source_type": "agent_report",
+      "source_ref": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+      "observed_key": "privacy_disclosure",
+      "observed_value": {
+        "schema_version": "privacy_disclosure_prep.v1",
+        "overall_status": "blocked",
+        "capture_status": null,
+        "blocker_count": 1
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:ef1c1221a38153d1da2581d2f1ddb703ccd5fb3cc023d375fac7183e58b85dee",
+      "confidence": 0.85
+    },
+    {
+      "evidence_id": "evidence.0059",
+      "source_type": "agent_report",
+      "source_ref": "play-store-launch/reports/screenshot-capture-agent-output.json",
+      "observed_key": "screenshot_capture",
+      "observed_value": {
+        "schema_version": "screenshot_capture_agent.v1",
+        "overall_status": null,
+        "capture_status": "blocked",
+        "blocker_count": 3
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:e65eb7beb3b0fd7937f29d75dba95b556916fbabfef1ae7990659f31ce6b4344",
+      "confidence": 0.85
+    }
+  ],
+  "human_review_gates": [
+    {
+      "gate_id": "human.screenshot.public_use",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
+      "evidence_refs": [
+        "evidence.0002",
+        "evidence.0029",
+        "evidence.0055",
+        "evidence.0056",
+        "evidence.0004",
+        "evidence.0031",
+        "evidence.0003",
+        "evidence.0030",
+        "evidence.0007",
+        "evidence.0034"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.google_play_specs",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "human.screenshot.trademark_content_authorization",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
+      "evidence_refs": [
+        "evidence.0055"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.capture_execution",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "human.release_context",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
+      "evidence_refs": [
+        "evidence.0057"
+      ]
+    },
+    {
+      "gate_id": "human.held_shots",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
+      "evidence_refs": [
+        "evidence.0008",
+        "evidence.0035",
+        "evidence.0005",
+        "evidence.0032",
+        "evidence.0006",
+        "evidence.0033",
+        "evidence.0009",
+        "evidence.0036",
+        "evidence.0010",
+        "evidence.0037",
+        "evidence.0011",
+        "evidence.0038"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "release_gate_not_passed",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+      "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+      "evidence_refs": [
+        "evidence.0057"
+      ]
+    },
+    {
+      "blocker_id": "raw_screenshots_not_captured",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+      "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+      "evidence_refs": [
+        "evidence.0059"
+      ]
+    },
+    {
+      "blocker_id": "privacy_or_target_audience_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+      "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
+      "evidence_refs": [
+        "evidence.0058"
+      ]
+    }
+  ],
+  "limitations": [
+    "Storyboard 只证明截图规划与证据绑定，不证明真实截图已经捕获。",
+    "真实 raw screenshot 必须由 screenshot-capture-agent 从目标 app 前台捕获。",
+    "设计阶段只能基于 raw screenshot 加背景/标题，不能虚构 app UI 或功能。",
+    "公开上架使用、商标、内容授权、目标受众、隐私、裁切和安全区均需人工确认。"
+  ],
+  "output_paths": {
+    "human_report": "play-store-launch/reports/screenshot-storyboard.zh.md",
+    "machine_report": "play-store-launch/reports/screenshot-storyboard-output.json",
+    "evidence_jsonl": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
+    "shot_list": "play-store-launch/reports/screenshot-shot-list.json",
+    "capture_handoff": "play-store-launch/reports/screenshot-capture-handoff.json",
+    "design_brief": "play-store-launch/reports/screenshot-design-brief.json"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screenshot Storyboard"
+  short_description: "把截图 shot 绑定到真实页面、场景和 claim"
+  default_prompt: "Use $screenshot-storyboard to create an evidence-bound Google Play screenshot storyboard and capture handoff."

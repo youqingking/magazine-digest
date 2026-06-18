@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "screenshot-capture-agent",
+  "step_index": 7,
+  "agno_step_id": "07-screenshot-capture-agent",
+  "agno_step_name": "screenshot-capture-agent",
+  "skill_path": ".agents/skills/screenshot-capture-agent/SKILL.md",
+  "skill_hash": "7e41b67898a7cc8cef8c982dfc1d9515a110074a5935fee2cf810b34da5809cf",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:22:57Z",
+    "completed_at": "2026-06-17T09:25:11Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/model-output.json"
+    ],
+    "prompt_id": "screenshot-capture-agent.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "16dfb4ab5fda697851f6f8bd74b1934dc3ef9743861e50f6e6ea2aa4408cfaf4",
+    "input_evidence_ids": [
+      "screenshot-capture-agent.evidence.01",
+      "screenshot-capture-agent.evidence.02",
+      "screenshot-capture-agent.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:22:57Z",
+    "completed_at": "2026-06-17T09:25:11Z",
+    "duration_ms": 133720
+  },
+  "ai_summary": "当前截图采集未完成：本轮证据显示无法确认 Android 设备可用性，且截图采集报告与阻塞项文档均缺失。因此不能生成、补写或伪造 Play 商店截图材料。",
+  "claims": [
+    {
+      "claim_id": "screenshot-capture-agent.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "screenshot-capture-agent.evidence.01",
+        "screenshot-capture-agent.evidence.02",
+        "screenshot-capture-agent.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "screenshot-capture-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "screenshot-capture-agent.evidence.01",
+        "screenshot-capture-agent.evidence.02",
+        "screenshot-capture-agent.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "screenshot-capture-agent",
+      "claim_id": "screenshot-capture-agent.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "真实截图捕获 仍需要人工确认。",
+      "impact": "没有真实设备或模拟器截图证据，不能列出截图文件。",
+      "unblock_action": "dev 连接 Android 设备或模拟器，生成带 route、device、locale、commit 的真实截图证据。",
+      "evidence_refs": [
+        "screenshot-capture-agent.evidence.01",
+        "screenshot-capture-agent.evidence.02",
+        "screenshot-capture-agent.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-capture-agent/summary.zh.md"
+  }
+}

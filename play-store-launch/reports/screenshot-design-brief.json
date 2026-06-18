@@ -1,0 +1,195 @@
+{
+  "schema_version": "screenshot_design_brief.v1",
+  "generated_at": "2026-06-17T14:58:45Z",
+  "produced_by": "screenshot-storyboard",
+  "draft_only": true,
+  "base_image_rule": "只能使用 screenshot-capture-agent 真实捕获的 raw screenshot 作为 app 画面。",
+  "allowed": [
+    "在 raw screenshot 外部添加背景、标题和极简说明。",
+    "对 raw screenshot 做安全裁切和设备框包装，但不得改变 app 内部 UI 功能含义。",
+    "为不同 locale 准备人工审核后的标题文案。"
+  ],
+  "not_allowed": [
+    "新增 app 中不存在的按钮、页面、功能或内容。",
+    "把 mockup、旧设计稿、系统桌面、HBuilderX 空壳当作真实 app 截图。",
+    "展示价格促销、排名、评分、下载量或 Play Store 表现暗示。",
+    "展示未经授权的第三方内容、商标或真实个人数据。"
+  ],
+  "shot_overlays": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "route": "pages/feed/index",
+      "overlay_copy": {
+        "title_zh": "先看摘要，再决定是否精读",
+        "subtitle_zh": "首页聚合文章更新与 30 秒先读。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "review_status": "NEED_HUMAN"
+    },
+    {
+      "shot_id": "shot_02_detail_deep_read",
+      "route": "pages/detail/index",
+      "overlay_copy": {
+        "title_zh": "把长文压缩成可读精华",
+        "subtitle_zh": "详情页展示 3 分钟精读内容。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "review_status": "NEED_HUMAN"
+    },
+    {
+      "shot_id": "shot_03_sources_follow",
+      "route": "pages/search/index",
+      "overlay_copy": {
+        "title_zh": "按来源发现更新",
+        "subtitle_zh": "搜索文章、期次和关注的杂志来源。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "review_status": "NEED_HUMAN"
+    },
+    {
+      "shot_id": "shot_04_profile_summary",
+      "route": "pages/profile/index",
+      "overlay_copy": {
+        "title_zh": "集中管理阅读状态",
+        "subtitle_zh": "消息、保存和权益入口汇总在个人页。",
+        "copy_status": "draft_needs_human_review"
+      },
+      "review_status": "NEED_HUMAN"
+    }
+  ],
+  "held_shots": [
+    {
+      "shot_id": "held_pages_settings_index",
+      "route": "pages/settings/index",
+      "screen_title": "设置",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "设置页含远端桥接、设备、本地调试和构建信息；公开截图前必须确认生产构建隐藏开发态内容。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Bridge Base URL",
+        "debug/diagnostic 信息",
+        "内部能力或兼容页面",
+        "开发态或诊断信息",
+        "构建信息",
+        "远端桥接配置",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0008",
+        "evidence.0035"
+      ]
+    },
+    {
+      "shot_id": "held_pages_paywall_index",
+      "route": "pages/paywall/index",
+      "screen_title": "订阅",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "订阅/套餐/额度属于商业和支付相关表达；需产品、法务和 Play policy 人工确认。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0005",
+        "evidence.0032"
+      ]
+    },
+    {
+      "shot_id": "held_pages_invite_index",
+      "route": "pages/invite/index",
+      "screen_title": "邀请与兑换",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "兑换码、奖励和邀请属于增长/奖励表达；不能展示未证明的奖励结算。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "兑换码/奖励结算",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0006",
+        "evidence.0033"
+      ]
+    },
+    {
+      "shot_id": "held_pages_inbox_index",
+      "route": "pages/inbox/index",
+      "screen_title": "消息摘要",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 internal 能力页，正式入口在首页消息摘要；不作为默认公开截图。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0009",
+        "evidence.0036"
+      ]
+    },
+    {
+      "shot_id": "held_pages_follows_index",
+      "route": "pages/follows/index",
+      "screen_title": "来源与关注",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 alias route，会跳转到搜索页；使用 search route 作为正式截图。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0010",
+        "evidence.0037"
+      ]
+    },
+    {
+      "shot_id": "held_pages_campaign_index",
+      "route": "pages/campaign/index",
+      "screen_title": "活动说明",
+      "status": "held",
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "reason": "源码标记为 alias/internal campaign route，会跳转到订阅页商业区块。",
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "内部能力或兼容页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "evidence_refs": [
+        "evidence.0011",
+        "evidence.0038"
+      ]
+    }
+  ]
+}

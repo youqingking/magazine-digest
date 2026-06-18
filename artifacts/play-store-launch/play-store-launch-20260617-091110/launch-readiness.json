@@ -1,0 +1,35 @@
+{
+  "schema_version": "play_store_launch_readiness_report.v2",
+  "run_id": "play-store-launch-20260617-091110",
+  "mode": "launch-readiness",
+  "readiness": "GREEN",
+  "can_submit_google_play": false,
+  "safe_to_strengthen_final_store_claims": false,
+  "agno": {
+    "maturity": "A3_CODEX_CLI_BACKED",
+    "status": "codex_cli_model_backed_per_agent_run",
+    "model_backed_reasoning": true,
+    "orchestration_mode": "agno_native_8_step_pipeline",
+    "native_step_count": 0,
+    "step_order": [],
+    "workflow_id": "play-store-launch-readiness-workflow",
+    "step_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091110/agno-step-ledger.jsonl"
+  },
+  "output_dir": "artifacts/play-store-launch/play-store-launch-20260617-091110",
+  "confirmed_facts": [
+    "8 个 agent step 均在当前 run_id 下重新生成。",
+    "每个 step 的 output/evidence/summary 都位于 artifacts/play-store-launch/<run-id>/steps/<agent>/ 下。",
+    "launch-package-agent 只消费当前 run 前 7 个 step 的输出。",
+    "Reality Gate 继续保持 FAIL_CLOSED；本轮不进入 Goal 2 cross-PRD 或 Goal 3 production proof。"
+  ],
+  "materials_available": [],
+  "missing_materials": [],
+  "blockers": [],
+  "agent_steps": [],
+  "evidence_index": [],
+  "non_goals": [
+    "Goal 2 cross-PRD not run",
+    "Goal 3 production proof not run",
+    "Play Store production readiness not claimed"
+  ]
+}

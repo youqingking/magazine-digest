@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-06-18T09:27:27.041Z",
+  "status": "ok",
+  "passed": true,
+  "gate": "typecheck",
+  "checker": "js_uniapp_static_type_gate",
+  "summary": {
+    "files_checked": 320,
+    "syntax_issue_count": 0,
+    "import_issue_count": 0,
+    "contract_type_missing_count": 0
+  },
+  "evidence": {
+    "node": "v24.11.1",
+    "scan_roots": [
+      "mobile/api",
+      "mobile/components",
+      "mobile/contracts",
+      "mobile/fixtures/runtime",
+      "mobile/pages",
+      "mobile/services",
+      "mobile/stores",
+      "mobile/theme",
+      "mobile/App.vue",
+      "mobile/main.js",
+      "packages",
+      "scripts/bootstrap",
+      "scripts/contracts",
+      "scripts/content",
+      "scripts/harness",
+      "scripts/import",
+      "scripts/ops",
+      "scripts/validate",
+      "shared"
+    ],
+    "ignored_repo_prefixes": [
+      "artifacts/",
+      "data/",
+      "mobile/uniCloud-aliyun/",
+      "mobile/uniCloud-tcb/",
+      "mobile/uni_modules/",
+      "play-store-launch/",
+      "runtime/dist/"
+    ],
+    "contract_types": {
+      "ok": true,
+      "path": "shared/types/contracts.d.ts",
+      "missing_types": []
+    }
+  },
+  "issues": {
+    "syntax": [],
+    "imports": []
+  }
+}

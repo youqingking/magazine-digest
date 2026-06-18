@@ -1,0 +1,23 @@
+17:17:48.496 HBuilderX Version: 5.07
+17:17:49.030 项目 mobile 开始编译
+17:17:50.916 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732
+17:17:51.024 5.07
+17:17:51.026 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。
+17:17:51.207 正在编译中...
+17:17:51.214 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]
+17:17:51.848 [31m​Browserslist: caniuse-lite is outdated. Please run:[39m
+17:17:51.850 [31m  npx update-browserslist-db@latest[39m
+17:17:51.852 [31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​[39m
+17:18:03.107 [警告⚠] `fixtures\runtime\current\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。
+17:18:18.443 项目 mobile 编译成功。
+17:18:18.678 [31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：[39m
+17:18:18.687 [31mPID：18724[39m
+17:18:18.689 [31m进程名称：adb.exe[39m
+17:18:18.690 [31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe[39m
+17:18:18.692 [31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径[39m
+17:18:19.188 [33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新[39m
+17:18:19.555 正在建立手机连接...
+17:18:28.196 正在同步手机端程序文件...
+17:18:33.803 同步手机端程序文件成功
+17:18:35.787 正在启动HBuilder调试基座...
+17:18:36.802 [31m应用【mobile】已启动[39m

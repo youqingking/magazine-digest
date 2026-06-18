@@ -1,0 +1,28 @@
+[阿里云:magazine-digest-test] 本地node版本是18.20.0，云端node版本是16.15.1，请注意兼容问题。调整云端node版本参考
+[阿里云:magazine-digest-test] 正在上传云对象device-sync-co...
+[阿里云:magazine-digest-test] 云对象device-sync-co上传完成
+0:cloud functions:OK
+
+
+[阿里云:magazine-digest-test] 本地node版本是18.20.0，云端node版本是16.15.1，请注意兼容问题。调整云端node版本参考
+[阿里云:magazine-digest-test] 正在上传云函数h0_5-web-auth-smoke...
+[阿里云:magazine-digest-test] 云函数h0_5-web-auth-smoke上传完成
+0:cloud functions:OK
+
+
+[阿里云:magazine-digest-test] 正在上传公共模块uni-config-center...
+[阿里云:magazine-digest-test] 公共模块uni-config-center被云端云函数依赖，正在更新相关云端云函数...
+[阿里云:magazine-digest-test] 更新云端云函数成功
+[阿里云:magazine-digest-test] 公共模块uni-config-center上传成功
+0:cloud functions:OK
+
+
+[阿里云:magazine-digest-test] 正在上传公共模块uni-id-common...
+[阿里云:magazine-digest-test] 公共模块uni-id-common被云端云函数依赖，正在更新相关云端云函数...
+[阿里云:magazine-digest-test] 更新云端云函数成功
+[阿里云:magazine-digest-test] 公共模块uni-id-common上传成功
+0:cloud functions:OK
+
+
+16:40:39.571 [31m此应用 DCloud appid 为 __UNI__005A993 ，您不是这个应用的项目成员。1、联系这个应用的所有者，请求加入项目成员（https://dev.dcloud.net.cn "成员管理"-"添加项目成员"）；2、重新在manifest.json中生成自己的APPID；3、联系应用所有者将此 DCloud appid 转让给当前账号。[39m
+

@@ -1,0 +1,3 @@
+display_name: 上架信息收集
+short_description: 收集 App 上架信息证据、缺失项和人工阻塞。
+default_prompt: 运行 launch-info-collector，收集 App 名称、定位、核心功能、目标用户、支持平台、隐私、账号系统、订阅/内购、支持方式和截图 demo 数据，并输出缺失项与阻塞原因。

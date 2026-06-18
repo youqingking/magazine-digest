@@ -12,6 +12,13 @@ const smokeReportPath = path.join(outputDir, "manual-smoke-report.json");
 const issuesPath = path.join(outputDir, "issues.json");
 const mobileDir = path.join(repoRoot, "mobile");
 const command = process.argv[2];
+const ignoredMobileScanDirs = new Set([
+  ".hbuilderx",
+  "node_modules",
+  "unpackage"
+]);
+const sourceExtensions = new Set([".js", ".vue", ".json"]);
+const codeExtensions = new Set([".js", ".vue"]);
 
 function nowIso() {
   return new Date().toISOString();
@@ -53,6 +60,75 @@ async function readText(filePath) {
 
 async function writeJson(filePath, payload) {
   await fs.writeFile(filePath, JSON.stringify(payload, null, 2) + "\n", "utf8");
+}
+
+function toRepoRelative(absolutePath) {
+  return path.relative(repoRoot, absolutePath).replaceAll("\\", "/");
+}
+
+function isInsideDirectory(candidatePath, parentPath) {
+  const relativePath = path.relative(parentPath, candidatePath);
+  return Boolean(relativePath) && !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
+}
+
+function extractImportSpecifiers(content) {
+  const specifiers = [];
+  const patterns = [
+    /\bimport\s+(?:[^'"]+\s+from\s+)?["']([^"']+)["']/g,
+    /\bexport\s+[^'"]+\s+from\s+["']([^"']+)["']/g,
+    /\brequire\(\s*["']([^"']+)["']\s*\)/g
+  ];
+
+  for (const pattern of patterns) {
+    for (const match of content.matchAll(pattern)) {
+      specifiers.push(match[1]);
+    }
+  }
+
+  return specifiers;
+}
+
+function stripStringAndCommentText(content) {
+  return content
+    .replace(/(["'`])(?:\\[\s\S]|(?!\1)[\s\S])*\1/g, "")
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+}
+
+function findCrossRootImport(absolutePath, content) {
+  for (const specifier of extractImportSpecifiers(content)) {
+    if (!specifier.startsWith(".")) {
+      continue;
+    }
+
+    const resolvedImportPath = path.resolve(path.dirname(absolutePath), specifier);
+    if (!isInsideDirectory(resolvedImportPath, mobileDir) && resolvedImportPath !== mobileDir) {
+      return specifier;
+    }
+  }
+
+  return "";
+}
+
+function findNodeOnlyPattern(content) {
+  const importSpecifiers = extractImportSpecifiers(content);
+  if (importSpecifiers.includes("fs")) {
+    return "from \"fs\"";
+  }
+  if (importSpecifiers.includes("path")) {
+    return "from \"path\"";
+  }
+  if (importSpecifiers.find((specifier) => specifier.startsWith("node:"))) {
+    return "node:";
+  }
+
+  const executableText = stripStringAndCommentText(content);
+  const nodeOnlyPatterns = [
+    "__dirname",
+    "process.cwd",
+    "Buffer"
+  ];
+  return nodeOnlyPatterns.find((pattern) => executableText.includes(pattern)) || "";
 }
 
 async function saveIssues(newIssues) {
@@ -123,11 +199,15 @@ async function collectCompileReadiness() {
       const absolutePath = path.join(currentPath, entry.name);
 
       if (entry.isDirectory()) {
+        const relativeDir = path.relative(mobileDir, absolutePath).replaceAll("\\", "/");
+        if (ignoredMobileScanDirs.has(entry.name) || relativeDir === "unpackage" || relativeDir.startsWith("unpackage/")) {
+          continue;
+        }
         await visit(absolutePath);
         continue;
       }
 
-      if (absolutePath.endsWith(".js") || absolutePath.endsWith(".vue") || absolutePath.endsWith(".json")) {
+      if (sourceExtensions.has(path.extname(absolutePath))) {
         sourceFiles.push(absolutePath);
       }
     }
@@ -140,23 +220,16 @@ async function collectCompileReadiness() {
 
   for (const absolutePath of sourceFiles) {
     const content = await readText(absolutePath);
-    const relativePath = path.relative(repoRoot, absolutePath).replaceAll("\\", "/");
+    const relativePath = toRepoRelative(absolutePath);
+    const extension = path.extname(absolutePath);
 
-    if (content.includes("../../shared/")) {
+    if (codeExtensions.has(extension) && findCrossRootImport(absolutePath, content)) {
       crossRootImports.push(relativePath);
     }
 
-    const nodeOnlyPatterns = [
-      "from \"fs\"",
-      "from 'fs'",
-      "from \"path\"",
-      "from 'path'",
-      "node:",
-      "__dirname",
-      "process.cwd",
-      "Buffer"
-    ];
-    const matchedPattern = nodeOnlyPatterns.find((pattern) => content.includes(pattern));
+    const matchedPattern = codeExtensions.has(extension)
+      ? findNodeOnlyPattern(content)
+      : "";
 
     if (matchedPattern) {
       nodeOnlyReferences.push({

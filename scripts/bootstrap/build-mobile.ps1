@@ -7,6 +7,8 @@ $ErrorActionPreference = "Stop"
 $rawReportPath = "output/stage-e1/compile-report.json"
 $normalizedDir = "output/stage-ui3"
 $normalizedReportPath = Join-Path $normalizedDir "build-mobile-report.json"
+$realCompileReportPath = "output/stage-h0_5-hbuilderx/android-compile.json"
+$realCompileCommand = "node scripts/bootstrap/smoke-h0_5-hbuilderx.mjs"
 
 if (-not (Test-Path $rawReportPath)) {
     throw "RAW_COMPILE_REPORT_MISSING: $rawReportPath"
@@ -14,12 +16,14 @@ if (-not (Test-Path $rawReportPath)) {
 
 New-Item -ItemType Directory -Force -Path $normalizedDir | Out-Null
 
-$raw = Get-Content $rawReportPath -Raw | ConvertFrom-Json
+$raw = Get-Content $rawReportPath -Raw -Encoding UTF8 | ConvertFrom-Json
 
 $ignoredNodeOnlyPrefixes = @(
     "mobile/unpackage/",
     "mobile/uniCloud-aliyun/cloudfunctions/",
+    "mobile/uniCloud-tcb/cloudfunctions/",
     "mobile/uni_modules/uni-captcha/uniCloud/",
+    "mobile/uni_modules/uni-cloud-s2s/uniCloud/",
     "mobile/uni_modules/uni-config-center/uniCloud/",
     "mobile/uni_modules/uni-id-common/uniCloud/",
     "mobile/uni_modules/uni-id-pages/uniCloud/"
@@ -39,14 +43,38 @@ $readinessPassed =
     (($raw.findings.main_js_uses_create_ssr_app) -or ($raw.findings.main_js_uses_legacy_vue_mount)) -and
     (-not $raw.findings.app_vue_uses_slot_shell)
 
-$realCompileAttempted = [bool]($raw.PSObject.Properties.Name -contains "real_compile_attempted" -and $raw.real_compile_attempted)
 $toolDetected = [bool]$raw.environment.hbuilderx_path
+
+$realCompileReport = $null
+$realCompileExitCode = $null
+$realCompileError = ""
+
+if ($toolDetected -and $readinessPassed) {
+    try {
+        & node "scripts/bootstrap/smoke-h0_5-hbuilderx.mjs" | Out-Null
+        $realCompileExitCode = $LASTEXITCODE
+    } catch {
+        $realCompileError = $_.Exception.Message
+        $realCompileExitCode = $LASTEXITCODE
+    }
+
+    if (Test-Path $realCompileReportPath) {
+        $realCompileReport = Get-Content $realCompileReportPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    }
+}
+
+$rawRealCompileAttempted = [bool]($raw.PSObject.Properties.Name -contains "real_compile_attempted" -and $raw.real_compile_attempted)
+$realCompileAttempted = [bool]($realCompileReport -ne $null -or $rawRealCompileAttempted)
+$realCompileSucceeded = [bool](
+    ($realCompileReport -ne $null -and $realCompileReport.compile_succeeded) -or
+    ($realCompileReport -eq $null -and $raw.compile_success)
+)
 
 if (-not $toolDetected) {
     $classification = "tool_missing"
 } elseif (-not $readinessPassed) {
     $classification = "compile_readiness_failed"
-} elseif ($raw.compile_success) {
+} elseif ($realCompileSucceeded) {
     $classification = "real_compile_passed"
 } elseif ($realCompileAttempted) {
     $classification = "real_compile_failed"
@@ -59,9 +87,15 @@ $normalized = [PSCustomObject]@{
     stage = "UI3.5"
     source_stage = $raw.stage
     classification = $classification
-    compile_success = [bool]$raw.compile_success
+    compile_success = $realCompileSucceeded
     compile_readiness_passed = $readinessPassed
     real_compile_attempted = $realCompileAttempted
+    real_compile_command = if ($toolDetected -and $readinessPassed) { $realCompileCommand } else { "" }
+    real_compile_exit_code = $realCompileExitCode
+    real_compile_error = $realCompileError
+    real_compile_report_path = if ($realCompileReport -ne $null) { $realCompileReportPath } else { "" }
+    real_compile_report = $realCompileReport
+    readiness_compile_success = [bool]$raw.compile_success
     tool_detected = $toolDetected
     compile_target = $raw.compile_target
     environment = $raw.environment

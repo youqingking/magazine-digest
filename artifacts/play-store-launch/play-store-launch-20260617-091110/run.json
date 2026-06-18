@@ -1,0 +1,38 @@
+{
+  "schema_version": "play_store_launch_readiness_run.v2",
+  "run_id": "play-store-launch-20260617-091110",
+  "mode": "launch-readiness",
+  "root": ".",
+  "branch": "test-main2",
+  "commit": "b1d7c7f",
+  "started_at": "2026-06-17T09:11:10Z",
+  "finished_at": "2026-06-17T09:11:10Z",
+  "runner_command": "python scripts/agent_tools/run_play_store_agno_workflow.py --root . --mode launch-readiness",
+  "status": "completed",
+  "readiness": "GREEN",
+  "agno": {
+    "maturity": "A3_CODEX_CLI_BACKED",
+    "status": "codex_cli_model_backed_per_agent_run",
+    "model_backed_reasoning": true,
+    "orchestration_mode": "agno_native_8_step_pipeline",
+    "native_step_count": 0,
+    "step_order": [],
+    "workflow_id": "play-store-launch-readiness-workflow",
+    "step_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091110/agno-step-ledger.jsonl"
+  },
+  "agent_steps": [],
+  "output_paths": {
+    "run": "artifacts/play-store-launch/play-store-launch-20260617-091110/run.json",
+    "launch_readiness_markdown": "artifacts/play-store-launch/play-store-launch-20260617-091110/launch-readiness.zh.md",
+    "launch_readiness_json": "artifacts/play-store-launch/play-store-launch-20260617-091110/launch-readiness.json",
+    "evidence_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091110/evidence-ledger.jsonl",
+    "human_review": "artifacts/play-store-launch/play-store-launch-20260617-091110/human-review.md",
+    "agno_step_ledger": "artifacts/play-store-launch/play-store-launch-20260617-091110/agno-step-ledger.jsonl"
+  },
+  "safety": {
+    "play_console_api_called": false,
+    "credentials_used": false,
+    "can_submit_google_play": false,
+    "safe_to_strengthen_final_store_claims": false
+  }
+}

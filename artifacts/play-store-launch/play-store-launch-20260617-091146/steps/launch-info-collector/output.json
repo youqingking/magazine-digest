@@ -1,0 +1,106 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "launch-info-collector",
+  "step_index": 5,
+  "agno_step_id": "05-launch-info-collector",
+  "agno_step_name": "launch-info-collector",
+  "skill_path": ".agents/skills/launch-info-collector/SKILL.md",
+  "skill_hash": "f9bb4a7884cdb01ec8fc784e2ea798939f4653bbc8e768cc5b0d5e10ee9f7b35",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:18:18Z",
+    "completed_at": "2026-06-17T09:20:43Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/model-output.json"
+    ],
+    "prompt_id": "launch-info-collector.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "10bab02b718434e17e4824d04486e9db2a85dc6fc4f92963989b9d4a84852936",
+    "input_evidence_ids": [
+      "launch-info-collector.evidence.01",
+      "launch-info-collector.evidence.02",
+      "launch-info-collector.evidence.03",
+      "launch-info-collector.evidence.04"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:18:18Z",
+    "completed_at": "2026-06-17T09:20:43Z",
+    "duration_ms": 145386
+  },
+  "ai_summary": "本步骤仅从本轮证据抽取到候选应用名称为 magazine-digest；描述、支持联系方式、隐私政策、分类等上架字段均未在可用证据中确认，需人工补充。",
+  "claims": [
+    {
+      "claim_id": "launch-info-collector.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "launch-info-collector.evidence.01",
+        "launch-info-collector.evidence.02",
+        "launch-info-collector.evidence.03",
+        "launch-info-collector.evidence.04"
+      ]
+    },
+    {
+      "claim_id": "launch-info-collector.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "launch-info-collector.evidence.01",
+        "launch-info-collector.evidence.02",
+        "launch-info-collector.evidence.03",
+        "launch-info-collector.evidence.04"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "launch-info-collector",
+      "claim_id": "launch-info-collector.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "上架信息收集 仍需要人工确认。",
+      "impact": "Play Console、开发者联系人和公开商店字段仍缺 source-of-truth。",
+      "unblock_action": "owner 补齐 Play Console app/account、公开字段和开发者联系信息。",
+      "evidence_refs": [
+        "launch-info-collector.evidence.01",
+        "launch-info-collector.evidence.02",
+        "launch-info-collector.evidence.03",
+        "launch-info-collector.evidence.04"
+      ]
+    }
+  ],
+  "evidence_count": 4,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/launch-info-collector/summary.zh.md"
+  }
+}

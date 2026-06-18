@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "google-play-listing",
+  "step_index": 3,
+  "agno_step_id": "03-google-play-listing",
+  "agno_step_name": "google-play-listing",
+  "skill_path": ".agents/skills/google-play-listing/SKILL.md",
+  "skill_hash": "73cda927dba4e9fd91c57df780d44f02e54dd5284a4ab3920ee73d3670a38f55",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:13:54Z",
+    "completed_at": "2026-06-17T09:16:06Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/model-output.json"
+    ],
+    "prompt_id": "google-play-listing.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "738adfa6a82fd7a9d96cf0779e8d077eabb7083f43d18e04615fe23a35598715",
+    "input_evidence_ids": [
+      "google-play-listing.evidence.01",
+      "google-play-listing.evidence.02",
+      "google-play-listing.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:13:54Z",
+    "completed_at": "2026-06-17T09:16:06Z",
+    "duration_ms": 131564
+  },
+  "ai_summary": "当前仅确认既有上架文案文件与校验报告均缺失，因此只能给出无功能声称的占位草稿：标题草稿为“杂志摘要”；短描述草稿为“阅读与整理杂志内容摘要。”；完整描述草稿为“杂志摘要用于呈现杂志内容摘要，帮助用户查看整理后的阅读内容。实际功能、数据来源、目标地区、隐私说明与合规表述仍需人工基于当前应用证据补充和审核。本内容仍为草稿，不能提交。”",
+  "claims": [
+    {
+      "claim_id": "google-play-listing.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "google-play-listing.evidence.01",
+        "google-play-listing.evidence.02",
+        "google-play-listing.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "google-play-listing.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "google-play-listing.evidence.01",
+        "google-play-listing.evidence.02",
+        "google-play-listing.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "google-play-listing",
+      "claim_id": "google-play-listing.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "商店文案草稿 仍需要人工确认。",
+      "impact": "商店文案只能保持草稿，类别、评级、受众和授权不能视为完成。",
+      "unblock_action": "owner/Pro 审核文案、类别、内容评级、目标受众、授权和商标风险。",
+      "evidence_refs": [
+        "google-play-listing.evidence.01",
+        "google-play-listing.evidence.02",
+        "google-play-listing.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/google-play-listing/summary.zh.md"
+  }
+}

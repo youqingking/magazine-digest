@@ -1,0 +1,367 @@
+{
+  "schema_version": "play_store_launch_boundary_manifest.v1",
+  "phase": "phase_6_agno_native_orchestration_active",
+  "status": "active",
+  "created_for": "Play Store launch agent/workflow boundary consolidation",
+  "primary_command": "python scripts/agent_tools/run_play_store_agno_workflow.py --root . --mode launch-readiness",
+  "compatibility_policy": {
+    "keep_existing_command": true,
+    "keep_skill_discovery_paths": true,
+    "do_not_move_existing_files_in_phase_0": true,
+    "thin_wrappers_required_before_future_moves": true,
+    "phase_1_canonical_paths_active": true,
+    "old_agent_tools_paths_are_wrappers": true
+  },
+  "phase_2_skill_resources": {
+    "active": true,
+    "scope": "Add per-agent skill-local bundled resources while keeping shared runtime and workflow logic under play-store-launch.",
+    "skill_local_files": [
+      ".agents/skills/<agent-name>/scripts/validate.py",
+      ".agents/skills/<agent-name>/references/boundary.md"
+    ],
+    "shared_runtime_not_copied_into_skills": true,
+    "skill_scripts_are_thin_validator_entrypoints": true,
+    "app_project_docs_are_evidence_only": true
+  },
+  "phase_3_current_run_skill_binding": {
+    "active": true,
+    "scope": "Record each current-run agent step's skill_path and SHA-256 skill_hash so launch-readiness artifacts can be traced back to the exact skill file used by the run.",
+    "required_step_output_fields": [
+      "skill_path",
+      "skill_hash",
+      "skill_hash_algorithm"
+    ],
+    "hash_algorithm": "sha256",
+    "validator": "play-store-launch/validators/validate_play_store_launch_readiness_run.py"
+  },
+  "phase_4_source_schema_and_artifact_policy": {
+    "active": true,
+    "scope": "Keep launch-readiness source schemas, artifact policy, and reference indexes inside play-store-launch without moving app-owned evidence or committing generated runtime artifacts by default.",
+    "canonical_schema": "play-store-launch/schemas/codex-agent-output.schema.json",
+    "artifacts_policy": "play-store-launch/artifacts/README.md",
+    "references_index": "play-store-launch/references/README.md",
+    "run_validator_requires_schema_snapshot_match": true,
+    "generated_runtime_artifacts_committed_by_default": false,
+    "source_validators_depend_on_generated_runtime_artifacts": false
+  },
+  "phase_5_reference_catalog": {
+    "active": true,
+    "phase": "phase_5_reference_catalog_active",
+    "scope": "Index Play Store audit, harness, Agno, and archive reference materials under play-store-launch/references without copying long historical docs or app-owned evidence.",
+    "catalog": "play-store-launch/references/catalog.json",
+    "catalog_is_index_not_content_copy": true,
+    "covered_groups": [
+      "audit",
+      "harness",
+      "agno",
+      "archive"
+    ],
+    "source_validators_require_catalog_completeness": true
+  },
+  "phase_6_agno_native_orchestration": {
+    "active": true,
+    "scope": "Run launch-readiness as an Agno-native sequential workflow with one explicit Step per Play Store agent.",
+    "orchestration_mode": "agno_native_8_step_pipeline",
+    "primary_command": "python scripts/agent_tools/run_play_store_agno_workflow.py --root . --mode launch-readiness",
+    "requires_8_agno_steps": true,
+    "step_order": [
+      "01-release-build-agent",
+      "02-privacy-disclosure-prep",
+      "03-google-play-listing",
+      "04-screenshot-storyboard",
+      "05-launch-info-collector",
+      "06-google-data-safety-agent",
+      "07-screenshot-capture-agent",
+      "08-launch-package-agent"
+    ],
+    "ledger": "artifacts/play-store-launch/<run-id>/agno-step-ledger.jsonl",
+    "launch_package_consumes_first_7_current_run_steps": true,
+    "validator": "play-store-launch/validators/validate_play_store_launch_readiness_run.py"
+  },
+  "reality_policy": {
+    "reality_gate": "FAIL_CLOSED",
+    "can_submit_google_play": false,
+    "safe_to_strengthen_final_store_claims": false,
+    "play_store_production_readiness_claimed": false
+  },
+  "target_structure": {
+    "skill_entry": ".agents/skills/<agent-name>/SKILL.md",
+    "skill_scripts": ".agents/skills/<agent-name>/scripts/",
+    "skill_references": ".agents/skills/<agent-name>/references/",
+    "boundary_readme": "play-store-launch/README.md",
+    "boundary_manifest": "play-store-launch/manifest.json",
+    "workflow": "play-store-launch/workflow/",
+    "shared_runtime": "play-store-launch/shared/",
+    "schemas": "play-store-launch/schemas/",
+    "validators": "play-store-launch/validators/",
+    "references": "play-store-launch/references/",
+    "artifacts_policy": "play-store-launch/artifacts/README.md"
+  },
+  "phase_1_summary": {
+    "scope": "Move Play Store launch workflow, shared runtime, and validators into play-store-launch while keeping scripts/agent_tools compatibility wrappers.",
+    "canonical_workflow": [
+      "play-store-launch/workflow/run_play_store_agno_workflow.py",
+      "play-store-launch/workflow/play_store_launch_readiness.py",
+      "play-store-launch/workflow/play_store_agno_adapters.py",
+      "play-store-launch/workflow/generate_agent_reality_outputs.py"
+    ],
+    "canonical_shared_runtime": [
+      "play-store-launch/shared/play_store_model_client.py",
+      "play-store-launch/shared/play_store_agent_validation_lib.py",
+      "play-store-launch/shared/agent_reality_validation.py"
+    ],
+    "canonical_validators": [
+      "play-store-launch/validators/validate_agent_reality_gate.py",
+      "play-store-launch/validators/validate_play_store_launch_readiness_run.py",
+      "play-store-launch/validators/validate_play_store_agno_l3.py",
+      "play-store-launch/validators/validate_play_store_agent_mvp.py",
+      "play-store-launch/validators/validate_play_store_agent_harness.py",
+      "play-store-launch/validators/validate_release_build_agent.py",
+      "play-store-launch/validators/validate_privacy_disclosure_prep.py",
+      "play-store-launch/validators/validate_google_play_listing.py",
+      "play-store-launch/validators/validate_screenshot_storyboard.py",
+      "play-store-launch/validators/validate_launch_info_collector.py",
+      "play-store-launch/validators/validate_google_data_safety_agent.py",
+      "play-store-launch/validators/validate_screenshot_capture_agent.py",
+      "play-store-launch/validators/validate_launch_package_agent.py"
+    ],
+    "compatibility_wrappers": [
+      "scripts/agent_tools/_play_store_launch_wrapper.py",
+      "scripts/agent_tools/run_play_store_agno_workflow.py",
+      "scripts/agent_tools/play_store_launch_readiness.py",
+      "scripts/agent_tools/play_store_agno_adapters.py",
+      "scripts/agent_tools/generate_agent_reality_outputs.py",
+      "scripts/agent_tools/play_store_model_client.py",
+      "scripts/agent_tools/play_store_agent_validation_lib.py",
+      "scripts/agent_tools/agent_reality_validation.py",
+      "scripts/agent_tools/validate_*.py"
+    ],
+    "explicit_non_migrations": [
+      ".agents/skills/**",
+      "docs/agents/**",
+      "docs/harness/**",
+      "docs/agno/**",
+      "docs/launch/**",
+      "docs/privacy/**",
+      "docs/release/**",
+      "artifacts/**",
+      "evals/agents/**"
+    ]
+  },
+  "agent_steps": [
+    {
+      "agent_name": "release-build-agent",
+      "skill_path": ".agents/skills/release-build-agent/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_release_build_agent.py",
+      "skill_script": ".agents/skills/release-build-agent/scripts/validate.py",
+      "skill_reference": ".agents/skills/release-build-agent/references/boundary.md"
+    },
+    {
+      "agent_name": "privacy-disclosure-prep",
+      "skill_path": ".agents/skills/privacy-disclosure-prep/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_privacy_disclosure_prep.py",
+      "skill_script": ".agents/skills/privacy-disclosure-prep/scripts/validate.py",
+      "skill_reference": ".agents/skills/privacy-disclosure-prep/references/boundary.md"
+    },
+    {
+      "agent_name": "google-play-listing",
+      "skill_path": ".agents/skills/google-play-listing/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_google_play_listing.py",
+      "skill_script": ".agents/skills/google-play-listing/scripts/validate.py",
+      "skill_reference": ".agents/skills/google-play-listing/references/boundary.md"
+    },
+    {
+      "agent_name": "screenshot-storyboard",
+      "skill_path": ".agents/skills/screenshot-storyboard/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_screenshot_storyboard.py",
+      "skill_script": ".agents/skills/screenshot-storyboard/scripts/validate.py",
+      "skill_reference": ".agents/skills/screenshot-storyboard/references/boundary.md"
+    },
+    {
+      "agent_name": "launch-info-collector",
+      "skill_path": ".agents/skills/launch-info-collector/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_launch_info_collector.py",
+      "skill_script": ".agents/skills/launch-info-collector/scripts/validate.py",
+      "skill_reference": ".agents/skills/launch-info-collector/references/boundary.md"
+    },
+    {
+      "agent_name": "google-data-safety-agent",
+      "skill_path": ".agents/skills/google-data-safety-agent/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_google_data_safety_agent.py",
+      "skill_script": ".agents/skills/google-data-safety-agent/scripts/validate.py",
+      "skill_reference": ".agents/skills/google-data-safety-agent/references/boundary.md"
+    },
+    {
+      "agent_name": "screenshot-capture-agent",
+      "skill_path": ".agents/skills/screenshot-capture-agent/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_screenshot_capture_agent.py",
+      "skill_script": ".agents/skills/screenshot-capture-agent/scripts/validate.py",
+      "skill_reference": ".agents/skills/screenshot-capture-agent/references/boundary.md"
+    },
+    {
+      "agent_name": "launch-package-agent",
+      "skill_path": ".agents/skills/launch-package-agent/SKILL.md",
+      "current_runtime": "scripts/agent_tools/play_store_launch_readiness.py",
+      "current_validator": "play-store-launch/validators/validate_launch_package_agent.py",
+      "skill_script": ".agents/skills/launch-package-agent/scripts/validate.py",
+      "skill_reference": ".agents/skills/launch-package-agent/references/boundary.md"
+    }
+  ],
+  "path_ownership": [
+    {
+      "current_path": ".agents/skills/**",
+      "category": "skill-owned",
+      "phase_0_action": "keep",
+      "future_owner": ".agents/skills/<agent-name>/",
+      "reason": "Standard skill discovery must remain stable."
+    },
+    {
+      "current_path": "scripts/agent_tools/run_play_store_agno_workflow.py",
+      "category": "workflow-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/workflow/",
+      "reason": "Keep current command stable until a thin wrapper is introduced."
+    },
+    {
+      "current_path": "scripts/agent_tools/play_store_launch_readiness.py",
+      "category": "workflow-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/workflow/",
+      "reason": "Core launch-readiness workflow implementation."
+    },
+    {
+      "current_path": "scripts/agent_tools/play_store_model_client.py",
+      "category": "shared-runtime-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/shared/",
+      "reason": "Shared model invocation client must not be copied into each skill."
+    },
+    {
+      "current_path": "scripts/agent_tools/play_store_agent_validation_lib.py",
+      "category": "shared-runtime-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/shared/",
+      "reason": "Shared validator helpers must remain a single source."
+    },
+    {
+      "current_path": "scripts/agent_tools/validate_play_store_launch_readiness_run.py",
+      "category": "validator-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/validators/",
+      "reason": "Workflow run validation belongs to the launch boundary."
+    },
+    {
+      "current_path": "scripts/agent_tools/validate_*agent*.py",
+      "category": "validator-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/validators/ or .agents/skills/<agent-name>/scripts/",
+      "reason": "Per-agent validators need a later split between shared and agent-specific logic."
+    },
+    {
+      "current_path": "docs/harness/play-store-agent-harness/**",
+      "category": "review-audit-reference",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/references/harness/",
+      "reason": "Harness specs are launch boundary references, not app facts."
+    },
+    {
+      "current_path": "docs/agents/PLAY_STORE_*",
+      "category": "review-audit-reference",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/references/audit/",
+      "reason": "Reality Gate, MVP, pro review, and audit docs should become reference material."
+    },
+    {
+      "current_path": "docs/agno/**",
+      "category": "workflow-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/references/agno/",
+      "reason": "Agno workflow docs belong to the launch workflow boundary."
+    },
+    {
+      "current_path": "docs/launch/**",
+      "category": "app-owned-evidence-source",
+      "phase_0_action": "no_change",
+      "future_owner": "app project evidence source",
+      "reason": "Launch facts and drafts are evidence inputs; do not copy them into agent-owned facts."
+    },
+    {
+      "current_path": "docs/privacy/**",
+      "category": "app-owned-evidence-source",
+      "phase_0_action": "no_change",
+      "future_owner": "app project evidence source",
+      "reason": "Data inventory, SDK inventory, and privacy review are app-owned evidence."
+    },
+    {
+      "current_path": "docs/release/**",
+      "category": "app-owned-evidence-source",
+      "phase_0_action": "no_change",
+      "future_owner": "app project evidence source",
+      "reason": "Release readiness and blockers are app-owned evidence."
+    },
+    {
+      "current_path": "evals/agents/**",
+      "category": "validator-owned",
+      "phase_0_action": "keep",
+      "future_owner": "play-store-launch/validators/evals/",
+      "reason": "Agent eval specs should move with the validation boundary later."
+    },
+    {
+      "current_path": "artifacts/play-store-launch/**",
+      "category": "generated-runtime-artifact",
+      "phase_0_action": "ignore",
+      "future_owner": "runtime artifacts, not committed by default",
+      "reason": "Current run outputs are generated and should not become source files."
+    },
+    {
+      "current_path": "artifacts/agent-reality-runs/**",
+      "category": "legacy-or-duplicate",
+      "phase_0_action": "ignore",
+      "future_owner": "play-store-launch/references/archive/manifest only",
+      "reason": "M0/M1 reality outputs are historical evidence, not active runtime source."
+    },
+    {
+      "current_path": "artifacts/launch-package/**",
+      "category": "legacy-or-duplicate",
+      "phase_0_action": "ignore",
+      "future_owner": "play-store-launch/references/archive/manifest only",
+      "reason": "Legacy launch-package artifacts are superseded by launch-readiness runs."
+    },
+    {
+      "current_path": "artifacts/agno/**",
+      "category": "generated-runtime-artifact",
+      "phase_0_action": "ignore",
+      "future_owner": "runtime artifacts, not committed by default",
+      "reason": "Agno run outputs and logs are generated historical artifacts."
+    }
+  ],
+  "do_not_move": [
+    "package.json",
+    "docs/privacy/DATA_INVENTORY.md",
+    "docs/privacy/SDK_INVENTORY.md",
+    "docs/privacy/PLAY_STORE_PRIVACY_REVIEW.md",
+    "docs/release/ANDROID_BUILD_READINESS.md",
+    "docs/release/PLAY_STORE_RELEASE_GATE.md",
+    "docs/release/PLAY_STORE_TECHNICAL_BLOCKERS.md",
+    "docs/launch/LAUNCH_INFO.md",
+    "docs/launch/store-fields/source-of-truth.json",
+    "docs/launch/google-play/listing.*.json",
+    "docs/launch/screenshots/storyboard.md",
+    "docs/launch/screenshots/shot-list.json"
+  ],
+  "future_phase_notes": [
+    "Phase 1 may move workflow/shared/validators only after thin wrappers preserve old commands.",
+    "Phase 2 adds per-agent scripts and references under each skill directory.",
+    "Phase 3 records skill_path and skill_hash in every current-run step output.",
+    "Phase 4 records source schema ownership, artifact policy, and reference indexes under play-store-launch.",
+    "Phase 5 records an indexed reference catalog for Play Store audit, harness, Agno, and archive materials.",
+    "No future phase may claim Play Store production readiness without human approval evidence."
+  ]
+}

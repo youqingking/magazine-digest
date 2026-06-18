@@ -59,6 +59,12 @@
       "style": {
         "navigationBarTitleText": "活动说明"
       }
+    },
+    {
+      "path": "pages/auth-test/index",
+      "style": {
+        "navigationBarTitleText": "Auth test"
+      }
     }
   ,{
     "path": "uni_modules/uni-id-pages/pages/register/register",

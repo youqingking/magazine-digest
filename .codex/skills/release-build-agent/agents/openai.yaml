@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Build Agent"
+  short_description: "真实执行 app 发布前核心工程门禁"
+  default_prompt: "用项目已有命令真实证明当前 app 的 build、typecheck、smoke、preflight，并输出 gate 阻塞项。"

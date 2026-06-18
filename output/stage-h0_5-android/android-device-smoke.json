@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "layer": "android_device_smoke",
+  "target_serial": "emulator-5556",
+  "connected_devices": [
+    "emulator-5556"
+  ],
+  "detected_packages": [
+    "io.dcloud.HBuilder"
+  ],
+  "package_name": "io.dcloud.HBuilder",
+  "launch_output": "bash arg: -p\r\n  bash arg: io.dcloud.HBuilder\r\n  bash arg: -c\r\n  bash arg: android.intent.category.LAUNCHER\r\n  bash arg: 1\r\nEvents injected: 1\r\n## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)",
+  "collected_log_lines": [
+    "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"-p\"",
+    "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"io.dcloud.HBuilder\"",
+    "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"-c\"",
+    "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"android.intent.category.LAUNCHER\"",
+    "06-18 09:27:53.427 13148 13148 W Monkey  :  arg: \"1\"",
+    "06-18 09:27:53.427 13148 13148 W Monkey  : data=\"io.dcloud.HBuilder\"",
+    "06-18 09:27:53.428 13148 13148 W Monkey  : data=\"android.intent.category.LAUNCHER\"",
+    "06-18 09:27:53.451   520   566 W BroadcastQueue: Skipping deliver [background] BroadcastRecord{b9e38e u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{4f57af 13148 (unknown name)/2000/u-1 remote:31d2290}: process gone or crashing",
+    "06-18 09:27:53.478   520  1687 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=io.dcloud.HBuilder/io.dcloud.PandoraEntry} from uid 2000",
+    "06-18 09:27:53.478   520   560 D EventSequenceValidator: Transition from INTENT_FAILED to INTENT_STARTED",
+    "06-18 09:27:53.482   418   418 I perfetto: ing_service_impl.cc:758 Configured tracing session 24, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:1, uid:1071 session name: \"\"",
+    "06-18 09:27:53.482 13148 13148 I Monkey  : Events injected: 1",
+    "06-18 09:27:53.483   413   413 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=24)",
+    "06-18 09:27:53.486   520   560 D EventSequenceValidator: Transition from INTENT_STARTED to INTENT_FAILED",
+    "06-18 09:27:53.499 13148 13148 I Monkey  : ## Network stats: elapsed time=23ms (0ms mobile, 0ms wifi, 23ms not connected)",
+    "06-18 09:27:53.502 13148 13148 I app_process: System.exit called, status: 0",
+    "06-18 09:27:53.502 13148 13148 I AndroidRuntime: VM exiting with result code 0.",
+    "06-18 09:27:53.542   413   413 I perfetto: ftrace_procfs.cc:176    enabled ftrace",
+    "06-18 09:27:53.513     0     0 W perfetto: enabled ftrace",
+    ""
+  ],
+  "blocking_reason": ""
+}

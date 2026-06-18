@@ -1,0 +1,18 @@
+14:47:57.375 HBuilderX Version: 5.07
+14:47:58.758 项目 mobile 开始编译
+14:47:59.896 uniCloud本地调试服务启动失败：当前项目未关联uniCloud服务空间，请调整后重新运行uni-app项目
+14:48:13.525 5.07
+14:48:13.528 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。
+14:48:14.062 正在编译中...
+14:48:14.065 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]
+14:48:16.155 [31m​Browserslist: caniuse-lite is outdated. Please run:[39m
+14:48:16.164 [31m  npx update-browserslist-db@latest[39m
+14:48:16.171 [31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​[39m
+14:48:37.400 [警告⚠] `fixtures\runtime\current\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。
+14:49:33.903 项目 mobile 编译成功。
+14:49:35.343 [31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：[39m
+14:49:35.376 [31mPID：18724[39m
+14:49:35.383 [31m进程名称：adb.exe[39m
+14:49:35.407 [31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe[39m
+14:49:35.413 [31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径[39m
+14:49:38.773 [33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新[39m

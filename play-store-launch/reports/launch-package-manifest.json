@@ -1,0 +1,241 @@
+{
+  "schema_version": "launch_package_manifest.v1",
+  "generated_at": "2026-06-18T10:16:04Z",
+  "readiness": "RED",
+  "can_submit_google_play": false,
+  "included_files": [
+    {
+      "source_agent": "release-build-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/release-build-agent-output.json",
+      "exists": true,
+      "size_bytes": 66550
+    },
+    {
+      "source_agent": "release-build-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/release-build-agent.zh.md",
+      "exists": true,
+      "size_bytes": 6036
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+      "exists": true,
+      "size_bytes": 485859
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "human_report",
+      "path": "play-store-launch/reports/privacy-disclosure-prep.zh.md",
+      "exists": true,
+      "size_bytes": 21895
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/privacy-disclosure-prep-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 177808
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_json",
+      "path": "play-store-launch/reports/data-safety-form-draft.json",
+      "exists": true,
+      "size_bytes": 112464
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_markdown",
+      "path": "play-store-launch/reports/data-safety-form-draft.zh.md",
+      "exists": true,
+      "size_bytes": 35052
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_csv",
+      "path": "play-store-launch/reports/data-safety-form-draft.csv",
+      "exists": true,
+      "size_bytes": 44943
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/launch-info-collector-output.json",
+      "exists": true,
+      "size_bytes": 60117
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "human_report",
+      "path": "play-store-launch/reports/launch-info-collector.zh.md",
+      "exists": true,
+      "size_bytes": 6793
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/launch-info-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 23562
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/launch-info-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 9646
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/google-data-safety-agent-output.json",
+      "exists": true,
+      "size_bytes": 140583
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/google-data-safety-agent.zh.md",
+      "exists": true,
+      "size_bytes": 14290
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/google-data-safety-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 62062
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/google-data-safety-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 11799
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "csv_draft",
+      "path": "play-store-launch/reports/google-data-safety-form-draft.csv",
+      "exists": true,
+      "size_bytes": 1876
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/google-play-listing-output.json",
+      "exists": true,
+      "size_bytes": 19683
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "human_report",
+      "path": "play-store-launch/reports/google-play-listing.zh.md",
+      "exists": true,
+      "size_bytes": 3794
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/google-play-listing-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 6445
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "drafts",
+      "path": "play-store-launch/reports/google-play-listing-drafts.json",
+      "exists": true,
+      "size_bytes": 1151
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/screenshot-storyboard-output.json",
+      "exists": true,
+      "size_bytes": 119522
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "human_report",
+      "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
+      "exists": true,
+      "size_bytes": 8105
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 33206
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "shot_list",
+      "path": "play-store-launch/reports/screenshot-shot-list.json",
+      "exists": true,
+      "size_bytes": 6117
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "capture_handoff",
+      "path": "play-store-launch/reports/screenshot-capture-handoff.json",
+      "exists": true,
+      "size_bytes": 10532
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "design_brief",
+      "path": "play-store-launch/reports/screenshot-design-brief.json",
+      "exists": true,
+      "size_bytes": 8155
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
+      "exists": true,
+      "size_bytes": 45127
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
+      "exists": true,
+      "size_bytes": 4285
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 14705
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "manifest_json",
+      "path": "play-store-launch/reports/screenshot-capture-manifest.json",
+      "exists": true,
+      "size_bytes": 2115
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "raw_dir",
+      "path": "play-store-launch/screenshots/raw/android/en-US",
+      "exists": false,
+      "size_bytes": null
+    }
+  ],
+  "missing_files": [
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "raw_dir",
+      "path": "play-store-launch/screenshots/raw/android/en-US",
+      "exists": false,
+      "size_bytes": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "layer": "hbuilderx_android_compile",
+  "blocking_reason": "",
+  "hbuilderx_cli_path": "D:\\HBuilderX\\cli.exe",
+  "adb_path": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+  "cli_version": "\u001b[1;32m5.07.2026041006\u001b[0m",
+  "project_list": [
+    "1 - mobile(UniApp_VUE)",
+    "0:project list:OK"
+  ],
+  "android_devices_raw": "17:27:30.778 Codex_API_30_X86【emulator-5556】",
+  "adb_devices_raw": "List of devices attached\r\nemulator-5556\tdevice",
+  "compile_succeeded": true,
+  "compile_log_tail": [
+    "17:27:30.834 HBuilderX Version: 5.07",
+    "17:27:31.314 项目 mobile 开始编译",
+    "17:27:32.950 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+    "17:27:33.025 5.07",
+    "17:27:33.028 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+    "17:27:33.116 正在编译中...",
+    "17:27:33.120 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+    "17:27:33.644 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+    "17:27:33.646 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+    "17:27:33.647 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+    "17:27:43.110 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+    "17:27:55.927 项目 mobile 编译成功。",
+    "17:27:56.069 \u001b[31m已停止运行...\u001b[39m"
+  ]
+}

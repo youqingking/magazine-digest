@@ -1,0 +1,184 @@
+﻿{
+    "generated_at":  "2026-06-18T17:27:11.5172958+08:00",
+    "stage":  "UI3.5",
+    "source_stage":  "E1",
+    "classification":  "real_compile_passed",
+    "compile_success":  true,
+    "compile_readiness_passed":  true,
+    "real_compile_attempted":  true,
+    "real_compile_command":  "node scripts/bootstrap/smoke-h0_5-hbuilderx.mjs",
+    "real_compile_exit_code":  0,
+    "real_compile_error":  "",
+    "real_compile_report_path":  "output/stage-h0_5-hbuilderx/android-compile.json",
+    "real_compile_report":  {
+                                "status":  "ok",
+                                "layer":  "hbuilderx_android_compile",
+                                "blocking_reason":  "",
+                                "hbuilderx_cli_path":  "D:\\HBuilderX\\cli.exe",
+                                "adb_path":  "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.EXE",
+                                "cli_version":  "\u001b[1;32m5.07.2026041006\u001b[0m",
+                                "project_list":  [
+                                                     "1 - mobile(UniApp_VUE)",
+                                                     "0:project list:OK"
+                                                 ],
+                                "android_devices_raw":  "17:26:43.620 Codex_API_30_X86【emulator-5556】",
+                                "adb_devices_raw":  "List of devices attached\r\nemulator-5556\tdevice",
+                                "compile_succeeded":  true,
+                                "compile_log_tail":  [
+                                                         "17:26:43.692 HBuilderX Version: 5.07",
+                                                         "17:26:44.308 项目 mobile 开始编译",
+                                                         "17:26:46.357 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+                                                         "17:26:46.454 5.07",
+                                                         "17:26:46.457 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+                                                         "17:26:46.579 正在编译中...",
+                                                         "17:26:46.580 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+                                                         "17:26:47.152 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+                                                         "17:26:47.154 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+                                                         "17:26:47.155 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+                                                         "17:26:57.074 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+                                                         "17:27:11.320 项目 mobile 编译成功。",
+                                                         "17:27:11.471 \u001b[31m已停止运行...\u001b[39m"
+                                                     ]
+                            },
+    "readiness_compile_success":  false,
+    "tool_detected":  true,
+    "compile_target":  {
+                           "preferred":  "android-app-plus-local",
+                           "fallback":  "h5-preview",
+                           "verified_target":  null
+                       },
+    "environment":  {
+                        "hbuilderx_path":  "D:/HBuilderX/HBuilderX.exe",
+                        "hbuilderx_detection_priority":  [
+                                                             "D:/HBuilderX/HBuilderX.exe",
+                                                             "HBUILDERX_EXE",
+                                                             "HBUILDERX_PATH",
+                                                             "common default paths"
+                                                         ],
+                        "project_dir":  "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest\\mobile",
+                        "package_name":  "mobile-shell",
+                        "manifest_appid":  "__UNI__005A993"
+                    },
+    "pages":  [
+                  "pages/feed/index",
+                  "pages/search/index",
+                  "pages/detail/index",
+                  "pages/paywall/index",
+                  "pages/invite/index",
+                  "pages/profile/index",
+                  "pages/settings/index",
+                  "pages/inbox/index",
+                  "pages/follows/index",
+                  "pages/campaign/index",
+                  "pages/auth-test/index",
+                  "uni_modules/uni-id-pages/pages/register/register",
+                  "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+                  "uni_modules/uni-id-pages/pages/login/login-withpwd",
+                  "uni_modules/uni-id-pages/pages/login/login-smscode",
+                  "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+                  "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+                  "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+                  "uni_modules/uni-id-pages/pages/register/register-by-email",
+                  "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+                  "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+                  "uni_modules/uni-id-pages/pages/common/webview/webview",
+                  "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+                  "uni_modules/uni-id-pages/pages/register/register-admin",
+                  "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+                  "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+                  "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify"
+              ],
+    "findings":  {
+                     "missing_files":  [
+
+                                       ],
+                     "cross_root_imports":  [
+
+                                            ],
+                     "relevant_node_only_references":  [
+
+                                                       ],
+                     "ignored_node_only_references":  [
+                                                          {
+                                                              "file":  "mobile/uniCloud-aliyun/cloudfunctions/device-sync-co/index.obj.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uniCloud-tcb/cloudfunctions/device-sync-co/index.obj.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-captcha/uniCloud/cloudfunctions/common/uni-captcha/index.js",
+                                                              "pattern":  "from \"fs\""
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-cloud-s2s/uniCloud/cloudfunctions/common/uni-cloud-s2s/index.js",
+                                                              "pattern":  "from \"fs\""
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center/index.js",
+                                                              "pattern":  "from \"fs\""
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/common/sensitive-aes-cipher.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/npm/index.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/alipay/alipayBase.js",
+                                                              "pattern":  "from \"fs\""
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/account/index.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/apple/rsa-public-key-pem.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/qq/normalize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/share/certutil.js",
+                                                              "pattern":  "from \"fs\""
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/third-party/weixin/normalize.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/lib/utils/weixin.js",
+                                                              "pattern":  "Buffer"
+                                                          },
+                                                          {
+                                                              "file":  "mobile/uni_modules/uni-id-pages/uniCloud/cloudfunctions/uni-id-co/module/facial-recognition-verify/get-auth-result.js",
+                                                              "pattern":  "Buffer"
+                                                          }
+                                                      ],
+                     "main_js_uses_create_ssr_app":  false,
+                     "main_js_uses_legacy_vue_mount":  true,
+                     "app_vue_uses_slot_shell":  false
+                 },
+    "auto_steps":  [
+                       "detected HBuilderX executable using explicit-path/env/default fallback priority",
+                       "validated required mobile shell files",
+                       "validated pages.json route list",
+                       "validated manifest.json presence",
+                       "scanned mobile sources for cross-root imports",
+                       "scanned mobile sources for Node-only API references",
+                       "checked main.js for uni-app-compatible bootstrap",
+                       "checked App.vue for uni-app-safe lifecycle shell"
+                   ],
+    "manual_steps_required":  [
+                                  "Open mobile/ in HBuilderX",
+                                  "Run Android app-plus local debug first",
+                                  "If Android target is unavailable, run H5 preview and capture console/runtime output"
+                              ],
+    "raw_stage_e1_conclusion":  "hbuilderx_detected_compile_readiness_passed_real_compile_not_auto_triggered",
+    "classification_notes":  "A real compile was attempted and passed."
+}

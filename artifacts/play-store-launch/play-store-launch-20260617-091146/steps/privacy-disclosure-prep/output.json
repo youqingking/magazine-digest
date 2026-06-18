@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "privacy-disclosure-prep",
+  "step_index": 2,
+  "agno_step_id": "02-privacy-disclosure-prep",
+  "agno_step_name": "privacy-disclosure-prep",
+  "skill_path": ".agents/skills/privacy-disclosure-prep/SKILL.md",
+  "skill_hash": "6239bf8c3c096a7fa0142d16d4f59b8a30328c2195ba058e41142145f68450e2",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:13:25Z",
+    "completed_at": "2026-06-17T09:13:54Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/model-output.json"
+    ],
+    "prompt_id": "privacy-disclosure-prep.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "0f14372a0619e45085c92aab971a96fff77218d025111499e51558123bfdf2e4",
+    "input_evidence_ids": [
+      "privacy-disclosure-prep.evidence.01",
+      "privacy-disclosure-prep.evidence.02",
+      "privacy-disclosure-prep.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:13:25Z",
+    "completed_at": "2026-06-17T09:13:54Z",
+    "duration_ms": 29385
+  },
+  "ai_summary": "隐私披露准备阶段当前只能确认三项关键隐私材料均缺失，因此本轮不能形成可用于上架表单填写的披露结论。输出仅为草稿风险归纳与人工补充清单，不构成法律或隐私合规结论。",
+  "claims": [
+    {
+      "claim_id": "privacy-disclosure-prep.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "privacy-disclosure-prep.evidence.01",
+        "privacy-disclosure-prep.evidence.02",
+        "privacy-disclosure-prep.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "privacy-disclosure-prep.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "privacy-disclosure-prep.evidence.01",
+        "privacy-disclosure-prep.evidence.02",
+        "privacy-disclosure-prep.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "privacy-disclosure-prep",
+      "claim_id": "privacy-disclosure-prep.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "隐私披露准备 仍需要人工确认。",
+      "impact": "隐私披露、隐私政策 URL 和法律措辞不能用于公开商店材料。",
+      "unblock_action": "owner/Pro 提供并审核隐私政策 URL、开发者联系人和适用法律披露。",
+      "evidence_refs": [
+        "privacy-disclosure-prep.evidence.01",
+        "privacy-disclosure-prep.evidence.02",
+        "privacy-disclosure-prep.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/privacy-disclosure-prep/summary.zh.md"
+  }
+}

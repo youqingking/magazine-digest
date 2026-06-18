@@ -1,0 +1,3 @@
+display_name: Data Safety 准备
+short_description: 准备 Google Play Data safety 证据草稿和人工阻塞。
+default_prompt: 运行 google-data-safety-agent，基于权限、SDK、analytics、backend API/log、账号、支付、crash 和 ads 证据生成 Data safety 草稿、数据类型矩阵和人工阻塞项。

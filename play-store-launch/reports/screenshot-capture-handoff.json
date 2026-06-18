@@ -1,0 +1,279 @@
+{
+  "schema_version": "screenshot_capture_handoff.v1",
+  "generated_at": "2026-06-17T14:58:45Z",
+  "produced_by": "screenshot-storyboard",
+  "expected_downstream_skill": "screenshot-capture-agent",
+  "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
+  "recommended_capture_command": "python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json",
+  "capture_preconditions": [
+    "安装或启动目标 Android app。",
+    "使目标 app 位于前台，不要停留在系统 Launcher。",
+    "按 shot-list route 手动或自动导航到目标页面。",
+    "使用 screenshot-capture-agent 通过 adb 捕获 raw PNG。",
+    "捕获后由人工确认 route、locale、设备、安全区、裁切和公开使用。"
+  ],
+  "shots": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "route": "pages/feed/index",
+      "route_path": "pages/feed/index",
+      "route_params": {},
+      "scenario": "打开 app 首页，展示内容流、30 秒先读摘要和消息摘要入口。",
+      "title": "首页",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/feed/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+      ],
+      "visible_evidence": [
+        "首页/效率阅读入口",
+        "文章标题或摘要卡片",
+        "30 秒先读",
+        "消息摘要入口"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Feed 诊断信息",
+        "debug/diagnostic 信息",
+        "开发态或诊断信息",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0002",
+        "evidence.0029",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_02_detail_deep_read",
+      "route": "pages/detail/index",
+      "route_path": "pages/detail/index",
+      "route_params": {
+        "articleId": "art_barrons_09022026_004",
+        "readingMode": "deep_3m",
+        "source": "storyboard"
+      },
+      "scenario": "进入文章详情页，展示 3 分钟精读、阅读操作和权益提示。 示例 articleId=art_barrons_09022026_004。",
+      "title": "3分钟精读",
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/detail/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:contentDetail.responses"
+      ],
+      "visible_evidence": [
+        "3 分钟精读标题",
+        "文章标题",
+        "摘要/精读正文",
+        "阅读操作",
+        "示例文章来自 runtime fixture"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "支付信息",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0004",
+        "evidence.0031",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_03_sources_follow",
+      "route": "pages/search/index",
+      "route_path": "pages/search/index",
+      "route_params": {
+        "focus": "follows"
+      },
+      "scenario": "打开来源页，展示搜索、来源结果和关注杂志入口。",
+      "title": "来源",
+      "claim_ids": [
+        "listing_claim_source_updates"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/search/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:followCatalog"
+      ],
+      "visible_evidence": [
+        "搜索文章、来源、期次、主题",
+        "关注杂志",
+        "来源结果",
+        "阅读深度筛选"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0003",
+        "evidence.0030",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    },
+    {
+      "shot_id": "shot_04_profile_summary",
+      "route": "pages/profile/index",
+      "route_path": "pages/profile/index",
+      "route_params": {},
+      "scenario": "打开我的页面，展示未读消息、稍后再读、权益和设置入口。",
+      "title": "我的",
+      "claim_ids": [
+        "listing_claim_inbox_profile_settings"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/profile/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:stageG.profileBenefits"
+      ],
+      "visible_evidence": [
+        "阅读权益",
+        "未读消息",
+        "消息摘要",
+        "稍后再读",
+        "打开设置"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "订阅/支付权益",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "human_review_required": true,
+      "review_status": "NEED_HUMAN",
+      "evidence_refs": [
+        "evidence.0007",
+        "evidence.0034",
+        "evidence.0055",
+        "evidence.0056"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "release_gate_not_passed",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+      "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+      "evidence_refs": [
+        "evidence.0057"
+      ]
+    },
+    {
+      "blocker_id": "raw_screenshots_not_captured",
+      "status": "blocked",
+      "review_status": "NEED_HUMAN",
+      "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+      "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+      "evidence_refs": [
+        "evidence.0059"
+      ]
+    },
+    {
+      "blocker_id": "privacy_or_target_audience_needs_human",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+      "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
+      "evidence_refs": [
+        "evidence.0058"
+      ]
+    }
+  ],
+  "human_review_gates": [
+    {
+      "gate_id": "human.screenshot.public_use",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
+      "evidence_refs": [
+        "evidence.0002",
+        "evidence.0029",
+        "evidence.0055",
+        "evidence.0056",
+        "evidence.0004",
+        "evidence.0031",
+        "evidence.0003",
+        "evidence.0030",
+        "evidence.0007",
+        "evidence.0034"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.google_play_specs",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "human.screenshot.trademark_content_authorization",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
+      "evidence_refs": [
+        "evidence.0055"
+      ]
+    },
+    {
+      "gate_id": "human.screenshot.capture_execution",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "human.release_context",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
+      "evidence_refs": [
+        "evidence.0057"
+      ]
+    },
+    {
+      "gate_id": "human.held_shots",
+      "status": "needs_human",
+      "review_status": "NEED_HUMAN",
+      "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
+      "evidence_refs": [
+        "evidence.0008",
+        "evidence.0035",
+        "evidence.0005",
+        "evidence.0032",
+        "evidence.0006",
+        "evidence.0033",
+        "evidence.0009",
+        "evidence.0036",
+        "evidence.0010",
+        "evidence.0037",
+        "evidence.0011",
+        "evidence.0038"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "play_store_launch_readiness_step.v2",
+  "run_id": "play-store-launch-20260617-091146",
+  "agent_name": "screenshot-storyboard",
+  "step_index": 4,
+  "agno_step_id": "04-screenshot-storyboard",
+  "agno_step_name": "screenshot-storyboard",
+  "skill_path": ".agents/skills/screenshot-storyboard/SKILL.md",
+  "skill_hash": "da08aa967bfa2e4cff3c6a0e074dcb4f095f64e03ced27cbad43edc30f34f484",
+  "skill_hash_algorithm": "sha256",
+  "agent_status": "completed_model_invocation",
+  "readiness": "RED",
+  "execution": {
+    "mode": "fresh_ai_agent_run",
+    "used_prior_outputs": false,
+    "source_policy": "no_prior_agent_outputs",
+    "started_at": "2026-06-17T09:16:06Z",
+    "completed_at": "2026-06-17T09:18:18Z"
+  },
+  "model_invocation": {
+    "required": true,
+    "enabled": true,
+    "provider": "codex_cli",
+    "model": "gpt-5.5",
+    "auth_method": "chatgpt_login_or_cli_cached",
+    "command": "codex exec",
+    "command_args": [
+      "--ignore-user-config",
+      "--model",
+      "gpt-5.5",
+      "--sandbox",
+      "read-only",
+      "--ephemeral",
+      "--output-schema",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+      "--output-last-message",
+      "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/model-output.json"
+    ],
+    "prompt_id": "screenshot-storyboard.launch_readiness.fresh_ai.v1",
+    "prompt_hash": "a29bd58523d5997305d8411e3c15a72cf6dfb1ebb1dbfdd301751143fc1f9b1d",
+    "input_evidence_ids": [
+      "screenshot-storyboard.evidence.01",
+      "screenshot-storyboard.evidence.02",
+      "screenshot-storyboard.evidence.03"
+    ],
+    "output_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/model-output.json",
+    "schema_path": "artifacts/play-store-launch/play-store-launch-20260617-091146/codex-agent-output.schema.json",
+    "schema_valid": true,
+    "exit_code": 0,
+    "started_at": "2026-06-17T09:16:06Z",
+    "completed_at": "2026-06-17T09:18:18Z",
+    "duration_ms": 131824
+  },
+  "ai_summary": "当前仅确认截图分镜、镜头清单与截图校验说明三个目标文件均缺失；因此本轮不能产出基于仓库证据的具体 route、scenario 或 value proposition，只能标记为待补充草稿输入。",
+  "claims": [
+    {
+      "claim_id": "screenshot-storyboard.fresh_run.current_evidence_collected",
+      "status": "observed_in_repo",
+      "claim_class": "C1",
+      "human_review_required": false,
+      "evidence_refs": [
+        "screenshot-storyboard.evidence.01",
+        "screenshot-storyboard.evidence.02",
+        "screenshot-storyboard.evidence.03"
+      ]
+    },
+    {
+      "claim_id": "screenshot-storyboard.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "human_review_required": true,
+      "evidence_refs": [
+        "screenshot-storyboard.evidence.01",
+        "screenshot-storyboard.evidence.02",
+        "screenshot-storyboard.evidence.03"
+      ]
+    }
+  ],
+  "human_review_items": [
+    {
+      "agent_name": "screenshot-storyboard",
+      "claim_id": "screenshot-storyboard.fresh_run.fail_closed_status",
+      "status": "blocked",
+      "claim_class": "C5",
+      "reason": "截图分镜规划 仍需要人工确认。",
+      "impact": "已有截图规划，但还不能作为可上传截图资产。",
+      "unblock_action": "owner/Pro 审核分镜表达，dev 后续用真实设备或模拟器捕获截图。",
+      "evidence_refs": [
+        "screenshot-storyboard.evidence.01",
+        "screenshot-storyboard.evidence.02",
+        "screenshot-storyboard.evidence.03"
+      ]
+    }
+  ],
+  "evidence_count": 3,
+  "human_review_count": 1,
+  "output_paths": {
+    "output": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/output.json",
+    "evidence": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/evidence.jsonl",
+    "summary": "artifacts/play-store-launch/play-store-launch-20260617-091146/steps/screenshot-storyboard/summary.zh.md"
+  }
+}

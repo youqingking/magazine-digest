@@ -71,7 +71,6 @@ $requiredPaths = @(
     "package.json",
     "scripts/validate/preflight.ps1",
     "scripts/validate/preflight.sh",
-    "apps/mobile/README.md",
     "packages/core-contracts/README.md",
     "packages/core-domain/README.md",
     "packages/core-ui/README.md",

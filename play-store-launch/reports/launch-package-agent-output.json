@@ -1,0 +1,1473 @@
+{
+  "schema_version": "launch_package_agent_output.v1",
+  "generated_at": "2026-06-18T10:16:04Z",
+  "proof_mode": "upstream_report_packaging_only",
+  "overall_status": "blocked",
+  "readiness": "RED",
+  "can_submit_google_play": false,
+  "output_dir": "play-store-launch/reports",
+  "required_upstream_reports": [
+    "release-build-agent-output.json",
+    "privacy-disclosure-prep-output.json",
+    "launch-info-collector-output.json",
+    "google-data-safety-agent-output.json",
+    "google-play-listing-output.json",
+    "screenshot-storyboard-output.json",
+    "screenshot-capture-agent-output.json"
+  ],
+  "materials": [
+    {
+      "agent_id": "release-build-agent",
+      "title": "工程发布门禁",
+      "purpose": "证明 build、typecheck、smoke、preflight 等发布前工程门禁。",
+      "owner": "工程",
+      "required_output": "play-store-launch/reports/release-build-agent-output.json",
+      "status": "pass",
+      "hard_gate": true,
+      "blocker_count": 0,
+      "blockers": [],
+      "generated_at": "2026-06-18T09:28:45Z",
+      "files": [
+        {
+          "source_agent": "release-build-agent",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/release-build-agent-output.json",
+          "exists": true,
+          "size_bytes": 66550
+        },
+        {
+          "source_agent": "release-build-agent",
+          "role": "human_report",
+          "path": "play-store-launch/reports/release-build-agent.zh.md",
+          "exists": true,
+          "size_bytes": 6036
+        }
+      ]
+    },
+    {
+      "agent_id": "privacy-disclosure-prep",
+      "title": "隐私披露准备",
+      "purpose": "整理 SDK、权限、数据流、隐私政策和账号删除等披露证据。",
+      "owner": "隐私/法务/产品",
+      "required_output": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+      "status": "blocked",
+      "hard_gate": true,
+      "blocker_count": 1,
+      "blockers": [
+        {
+          "agent_id": "privacy-disclosure-prep",
+          "agent_title": "隐私披露准备",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "privacy_policy_url_missing",
+          "status": "blocked",
+          "reason": "未在扫描范围内发现隐私政策 URL。",
+          "unblock_action": "提供公开可访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享和删除流程。"
+        }
+      ],
+      "generated_at": "2026-06-18T10:14:22Z",
+      "files": [
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+          "exists": true,
+          "size_bytes": 485859
+        },
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "human_report",
+          "path": "play-store-launch/reports/privacy-disclosure-prep.zh.md",
+          "exists": true,
+          "size_bytes": 21895
+        },
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "evidence_jsonl",
+          "path": "play-store-launch/reports/privacy-disclosure-prep-evidence.jsonl",
+          "exists": true,
+          "size_bytes": 177808
+        },
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "data_safety_json",
+          "path": "play-store-launch/reports/data-safety-form-draft.json",
+          "exists": true,
+          "size_bytes": 112464
+        },
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "data_safety_markdown",
+          "path": "play-store-launch/reports/data-safety-form-draft.zh.md",
+          "exists": true,
+          "size_bytes": 35052
+        },
+        {
+          "source_agent": "privacy-disclosure-prep",
+          "role": "data_safety_csv",
+          "path": "play-store-launch/reports/data-safety-form-draft.csv",
+          "exists": true,
+          "size_bytes": 44943
+        }
+      ]
+    },
+    {
+      "agent_id": "launch-info-collector",
+      "title": "上架基础信息",
+      "purpose": "收集 App 名称、定位、目标用户、平台、订阅、支持方式和 demo 数据。",
+      "owner": "产品/运营",
+      "required_output": "play-store-launch/reports/launch-info-collector-output.json",
+      "status": "blocked",
+      "hard_gate": false,
+      "blocker_count": 2,
+      "blockers": [
+        {
+          "agent_id": "launch-info-collector",
+          "agent_title": "上架基础信息",
+          "owner": "产品/运营",
+          "source": "blockers",
+          "id": "账号系统",
+          "status": "needs_human",
+          "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+          "unblock_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+        },
+        {
+          "agent_id": "launch-info-collector",
+          "agent_title": "上架基础信息",
+          "owner": "产品/运营",
+          "source": "blockers",
+          "id": "支持方式",
+          "status": "missing",
+          "reason": "未发现 support URL、email 或 FAQ。",
+          "unblock_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+        }
+      ],
+      "generated_at": "2026-06-18T09:52:59Z",
+      "files": [
+        {
+          "source_agent": "launch-info-collector",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/launch-info-collector-output.json",
+          "exists": true,
+          "size_bytes": 60117
+        },
+        {
+          "source_agent": "launch-info-collector",
+          "role": "human_report",
+          "path": "play-store-launch/reports/launch-info-collector.zh.md",
+          "exists": true,
+          "size_bytes": 6793
+        },
+        {
+          "source_agent": "launch-info-collector",
+          "role": "source_of_truth",
+          "path": "play-store-launch/reports/launch-info-source-of-truth.json",
+          "exists": true,
+          "size_bytes": 23562
+        },
+        {
+          "source_agent": "launch-info-collector",
+          "role": "evidence_jsonl",
+          "path": "play-store-launch/reports/launch-info-evidence.jsonl",
+          "exists": true,
+          "size_bytes": 9646
+        }
+      ]
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "title": "Google Play Data safety",
+      "purpose": "准备 Data safety 草稿、数据类型矩阵和证据绑定阻塞项。",
+      "owner": "隐私/法务/产品",
+      "required_output": "play-store-launch/reports/google-data-safety-agent-output.json",
+      "status": "blocked",
+      "hard_gate": true,
+      "blocker_count": 4,
+      "blockers": [
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "加密传输",
+          "status": "needs_human",
+          "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+          "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "隐私政策 URL",
+          "status": "needs_human",
+          "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+          "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "儿童/敏感数据风险",
+          "status": "needs_human",
+          "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+          "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "逐数据类型答案",
+          "status": "needs_human",
+          "reason": "发现 11 个数据类型候选，其中 11 个仍未完成 owner 逐项确认；collected/shared/purpose/identity/tracking/required 需要人工逐项确认。",
+          "unblock_action": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中每个 dataTypes 条目的 collected、shared、purposes、linkedToIdentity、usedForTracking、requiredOrOptional、processedEphemerally。"
+        }
+      ],
+      "generated_at": "2026-06-18T10:15:44Z",
+      "files": [
+        {
+          "source_agent": "google-data-safety-agent",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/google-data-safety-agent-output.json",
+          "exists": true,
+          "size_bytes": 140583
+        },
+        {
+          "source_agent": "google-data-safety-agent",
+          "role": "human_report",
+          "path": "play-store-launch/reports/google-data-safety-agent.zh.md",
+          "exists": true,
+          "size_bytes": 14290
+        },
+        {
+          "source_agent": "google-data-safety-agent",
+          "role": "source_of_truth",
+          "path": "play-store-launch/reports/google-data-safety-source-of-truth.json",
+          "exists": true,
+          "size_bytes": 62062
+        },
+        {
+          "source_agent": "google-data-safety-agent",
+          "role": "evidence_jsonl",
+          "path": "play-store-launch/reports/google-data-safety-evidence.jsonl",
+          "exists": true,
+          "size_bytes": 11799
+        },
+        {
+          "source_agent": "google-data-safety-agent",
+          "role": "csv_draft",
+          "path": "play-store-launch/reports/google-data-safety-form-draft.csv",
+          "exists": true,
+          "size_bytes": 1876
+        }
+      ]
+    },
+    {
+      "agent_id": "google-play-listing",
+      "title": "Google Play 主商店 listing",
+      "purpose": "准备 title、short description、full description、app icon、feature graphic 和截图素材检查。",
+      "owner": "产品/运营/设计",
+      "required_output": "play-store-launch/reports/google-play-listing-output.json",
+      "status": "blocked",
+      "hard_gate": true,
+      "blocker_count": 7,
+      "blockers": [
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "blockers",
+          "id": "gate:preview_assets",
+          "status": "blocked",
+          "reason": "app icon、feature graphic 或 screenshots 缺失/不合规。",
+          "unblock_action": "提供 512x512 32-bit PNG app icon、1024x500 feature graphic、至少 2 张截图；video 可选。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "blockers",
+          "id": "gate:human_required_fields",
+          "status": "blocked",
+          "reason": "privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。",
+          "unblock_action": "人工提供并确认 privacy policy URL、developer contact、category、content rating 和 target audience。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "privacy_policy_url",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 privacy_policy_url。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "developer_contact_email",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 developer_contact_email。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "category",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 category。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "content_rating",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 content_rating。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "target_audience",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 target_audience。"
+        }
+      ],
+      "generated_at": "2026-06-18T09:52:47Z",
+      "files": [
+        {
+          "source_agent": "google-play-listing",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/google-play-listing-output.json",
+          "exists": true,
+          "size_bytes": 19683
+        },
+        {
+          "source_agent": "google-play-listing",
+          "role": "human_report",
+          "path": "play-store-launch/reports/google-play-listing.zh.md",
+          "exists": true,
+          "size_bytes": 3794
+        },
+        {
+          "source_agent": "google-play-listing",
+          "role": "source_of_truth",
+          "path": "play-store-launch/reports/google-play-listing-source-of-truth.json",
+          "exists": true,
+          "size_bytes": 6445
+        },
+        {
+          "source_agent": "google-play-listing",
+          "role": "drafts",
+          "path": "play-store-launch/reports/google-play-listing-drafts.json",
+          "exists": true,
+          "size_bytes": 1151
+        }
+      ]
+    },
+    {
+      "agent_id": "screenshot-storyboard",
+      "title": "截图 storyboard",
+      "purpose": "把每张截图绑定到真实 screen、route、scenario、claim 和 capture handoff。",
+      "owner": "产品/设计",
+      "required_output": "play-store-launch/reports/screenshot-storyboard-output.json",
+      "status": "blocked",
+      "hard_gate": false,
+      "blocker_count": 2,
+      "blockers": [
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "raw_screenshots_not_captured",
+          "status": "blocked",
+          "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
+        },
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "privacy_or_target_audience_needs_human",
+          "status": "needs_human",
+          "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+          "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+        }
+      ],
+      "generated_at": "2026-06-17T14:58:45Z",
+      "files": [
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/screenshot-storyboard-output.json",
+          "exists": true,
+          "size_bytes": 119522
+        },
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "human_report",
+          "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
+          "exists": true,
+          "size_bytes": 8105
+        },
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "evidence_jsonl",
+          "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
+          "exists": true,
+          "size_bytes": 33206
+        },
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "shot_list",
+          "path": "play-store-launch/reports/screenshot-shot-list.json",
+          "exists": true,
+          "size_bytes": 6117
+        },
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "capture_handoff",
+          "path": "play-store-launch/reports/screenshot-capture-handoff.json",
+          "exists": true,
+          "size_bytes": 10532
+        },
+        {
+          "source_agent": "screenshot-storyboard",
+          "role": "design_brief",
+          "path": "play-store-launch/reports/screenshot-design-brief.json",
+          "exists": true,
+          "size_bytes": 8155
+        }
+      ],
+      "resolved_stale_blockers": [
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "release_gate_not_passed",
+          "status": "blocked",
+          "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
+          "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
+          "resolution": "latest_release_build_agent_passed"
+        }
+      ]
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "title": "真实截图捕获",
+      "purpose": "从真实 Android 设备或模拟器捕获 raw screenshots 并记录设备、locale、route 证据。",
+      "owner": "工程/设计",
+      "required_output": "play-store-launch/reports/screenshot-capture-agent-output.json",
+      "status": "blocked",
+      "hard_gate": true,
+      "blocker_count": 4,
+      "blockers": [
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "debug_container_needs_human",
+          "status": "needs_human",
+          "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
+          "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "target_app_not_foreground",
+          "status": "blocked",
+          "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
+          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "multi_shot_navigation_unverified",
+          "status": "blocked",
+          "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
+          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "google_play_public_use_needs_human",
+          "status": "needs_human",
+          "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+          "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
+        }
+      ],
+      "generated_at": "2026-06-17T15:21:33Z",
+      "files": [
+        {
+          "source_agent": "screenshot-capture-agent",
+          "role": "machine_report",
+          "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
+          "exists": true,
+          "size_bytes": 45127
+        },
+        {
+          "source_agent": "screenshot-capture-agent",
+          "role": "human_report",
+          "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
+          "exists": true,
+          "size_bytes": 4285
+        },
+        {
+          "source_agent": "screenshot-capture-agent",
+          "role": "evidence_jsonl",
+          "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
+          "exists": true,
+          "size_bytes": 14705
+        },
+        {
+          "source_agent": "screenshot-capture-agent",
+          "role": "manifest_json",
+          "path": "play-store-launch/reports/screenshot-capture-manifest.json",
+          "exists": true,
+          "size_bytes": 2115
+        },
+        {
+          "source_agent": "screenshot-capture-agent",
+          "role": "raw_dir",
+          "path": "play-store-launch/screenshots/raw/android/en-US",
+          "exists": false,
+          "size_bytes": null
+        }
+      ]
+    }
+  ],
+  "material_usability": [
+    {
+      "agent_id": "release-build-agent",
+      "title": "工程发布门禁",
+      "status": "pass",
+      "owner": "工程",
+      "can_use_for": "工程发布门禁 当前未报告阻塞，可进入 owner 复核。",
+      "cannot_use_for": "仍需最终人工确认后再用于提交。",
+      "blocker_count": 0,
+      "top_blockers": []
+    },
+    {
+      "agent_id": "privacy-disclosure-prep",
+      "title": "隐私披露准备",
+      "status": "blocked",
+      "owner": "隐私/法务/产品",
+      "can_use_for": "可用于内部隐私复核和确认隐私政策缺口。",
+      "cannot_use_for": "不能作为最终隐私披露或 Data safety 答案。",
+      "blocker_count": 1,
+      "top_blockers": [
+        {
+          "id": "隐私政策 URL 缺失",
+          "reason": "未在扫描范围内发现隐私政策 URL。",
+          "unblock_action": "提供公开可访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享和删除流程。"
+        }
+      ]
+    },
+    {
+      "agent_id": "launch-info-collector",
+      "title": "上架基础信息",
+      "status": "blocked",
+      "owner": "产品/运营",
+      "can_use_for": "可用于整理产品上架信息候选项。",
+      "cannot_use_for": "不能作为 owner 已确认的唯一 source of truth。",
+      "blocker_count": 2,
+      "top_blockers": [
+        {
+          "id": "账号系统",
+          "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+          "unblock_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+        },
+        {
+          "id": "支持方式",
+          "reason": "未发现 support URL、email 或 FAQ。",
+          "unblock_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+        }
+      ]
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "title": "Google Play Data safety",
+      "status": "blocked",
+      "owner": "隐私/法务/产品",
+      "can_use_for": "可用于 Data safety 草稿和逐项确认清单。",
+      "cannot_use_for": "不能直接提交到 Play Console Data safety 表单。",
+      "blocker_count": 4,
+      "top_blockers": [
+        {
+          "id": "加密传输",
+          "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+          "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+        },
+        {
+          "id": "隐私政策 URL 缺失",
+          "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+          "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+        },
+        {
+          "id": "儿童/敏感数据风险",
+          "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+          "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+        }
+      ]
+    },
+    {
+      "agent_id": "google-play-listing",
+      "title": "Google Play 主商店 listing",
+      "status": "blocked",
+      "owner": "产品/运营/设计",
+      "can_use_for": "可用于 listing 缺口检查和文案草稿起点。",
+      "cannot_use_for": "不能作为最终 Play Store listing metadata。",
+      "blocker_count": 7,
+      "top_blockers": [
+        {
+          "id": "Preview assets 缺失或不合规",
+          "reason": "app icon、feature graphic 或 screenshots 缺失，或还没有规格证明。",
+          "unblock_action": "提供 512x512 32-bit PNG app icon、1024x500 feature graphic、至少 2 张截图；video 可选。"
+        },
+        {
+          "id": "Listing 必填人工信息缺失",
+          "reason": "privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。",
+          "unblock_action": "人工提供并确认 privacy policy URL、developer contact、category、content rating 和 target audience。"
+        },
+        {
+          "id": "隐私政策 URL 缺失",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 privacy_policy_url。"
+        }
+      ]
+    },
+    {
+      "agent_id": "screenshot-storyboard",
+      "title": "截图 storyboard",
+      "status": "blocked",
+      "owner": "产品/设计",
+      "can_use_for": "可用于截图规划、shot-list 和 capture handoff。",
+      "cannot_use_for": "不能证明真实截图已经捕获或素材可公开使用。",
+      "blocker_count": 2,
+      "top_blockers": [
+        {
+          "id": "真实截图未捕获",
+          "reason": "还没有从真实 app UI 捕获可追溯的 raw screenshots。",
+          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
+        },
+        {
+          "id": "目标受众缺失",
+          "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+          "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+        }
+      ]
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "title": "真实截图捕获",
+      "status": "blocked",
+      "owner": "工程/设计",
+      "can_use_for": "可用于定位截图捕获环境和设备阻塞。",
+      "cannot_use_for": "不能作为最终截图素材证据。",
+      "blocker_count": 4,
+      "top_blockers": [
+        {
+          "id": "当前是 HBuilderX debug 容器",
+          "reason": "当前运行目标是调试容器，不能自动等同于最终 release app 体验。",
+          "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
+        },
+        {
+          "id": "目标 app 未在前台",
+          "reason": "设备当前没有停留在目标 app，不能证明截图来自目标 app。",
+          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
+        },
+        {
+          "id": "多张截图导航未证明",
+          "reason": "多个截图 shot 没有逐张导航和捕获证明。",
+          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+        }
+      ]
+    }
+  ],
+  "owner_actions": [
+    {
+      "id": "privacy_policy",
+      "priority": "P0",
+      "owner": "产品/隐私/法务",
+      "title": "提供公开隐私政策 URL 并确认覆盖当前数据行为",
+      "why": "隐私政策 URL 同时阻塞隐私披露、Data safety 和 Google Play listing，是提交前的硬性材料。",
+      "done_when": "提供可公开访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享、删除流程和儿童/敏感数据边界。",
+      "next_step": "准备隐私政策页面；把公开 URL 填入 play-store-launch/inputs/privacy-data-safety-owner-input.json 和 google-play-listing.json；确认 URL 可访问后重跑 privacy-disclosure-prep、google-data-safety-agent 和 google-play-listing。",
+      "related_blocker_count": 3,
+      "related_blockers": [
+        {
+          "agent_id": "privacy-disclosure-prep",
+          "agent_title": "隐私披露准备",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "privacy_policy_url_missing",
+          "status": "blocked",
+          "reason": "未在扫描范围内发现隐私政策 URL。",
+          "unblock_action": "提供公开可访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享和删除流程。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "隐私政策 URL",
+          "status": "needs_human",
+          "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+          "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "privacy_policy_url",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 privacy_policy_url。"
+        }
+      ]
+    },
+    {
+      "id": "data_safety_answers",
+      "priority": "P0",
+      "owner": "产品/隐私/法务",
+      "title": "逐项确认 Google Play Data safety 答案",
+      "why": "当前只能从证据推断数据类型候选，不能替 owner 回答是否收集、共享、关联身份或用于追踪。",
+      "done_when": "每个数据类型都确认 collected/shared/purpose/identity/tracking/required，并确认传输加密、儿童/敏感数据风险。",
+      "next_step": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中的隐私政策 URL、加密传输、删除请求、儿童/敏感数据和逐数据类型答案；确认后重跑 privacy-disclosure-prep 与 google-data-safety-agent。",
+      "related_blocker_count": 3,
+      "related_blockers": [
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "加密传输",
+          "status": "needs_human",
+          "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+          "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "儿童/敏感数据风险",
+          "status": "needs_human",
+          "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+          "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+        },
+        {
+          "agent_id": "google-data-safety-agent",
+          "agent_title": "Google Play Data safety",
+          "owner": "隐私/法务/产品",
+          "source": "blockers",
+          "id": "逐数据类型答案",
+          "status": "needs_human",
+          "reason": "发现 11 个数据类型候选，其中 11 个仍未完成 owner 逐项确认；collected/shared/purpose/identity/tracking/required 需要人工逐项确认。",
+          "unblock_action": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中每个 dataTypes 条目的 collected、shared、purposes、linkedToIdentity、usedForTracking、requiredOrOptional、processedEphemerally。"
+        }
+      ]
+    },
+    {
+      "id": "store_listing_metadata",
+      "priority": "P0",
+      "owner": "产品/运营",
+      "title": "确认 Google Play listing 人工必填信息",
+      "why": "当前 app title、short description、full description 已由 google-play-listing 检查通过；剩余阻塞是 开发者联系邮箱、应用分类、内容分级、目标受众 仍需 owner 确认，脚本不能替产品/运营/法务做最终提交判断。",
+      "done_when": "开发者联系邮箱、应用分类、内容分级、目标受众 已提供或确认，隐私政策 URL 按单独 P0 项处理；重跑 google-play-listing 后不再报告 human_required_fields 阻塞。",
+      "next_step": "在 play-store-launch/inputs/google-play-listing.json 或项目既有 fastlane/metadata 输入中补齐/确认 开发者联系邮箱、应用分类、内容分级、目标受众；如果字段值仍是 NEED_HUMAN，必须替换为真实可提交值或明确 owner 确认值。",
+      "related_blocker_count": 5,
+      "related_blockers": [
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "blockers",
+          "id": "gate:human_required_fields",
+          "status": "blocked",
+          "reason": "privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。",
+          "unblock_action": "人工提供并确认 privacy policy URL、developer contact、category、content rating 和 target audience。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "developer_contact_email",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 developer_contact_email。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "category",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 category。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "content_rating",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 content_rating。"
+        },
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "human_required_fields",
+          "id": "target_audience",
+          "status": "candidate_found",
+          "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+          "unblock_action": "补充并确认 target_audience。"
+        }
+      ]
+    },
+    {
+      "id": "store_assets",
+      "priority": "P0",
+      "owner": "设计/产品/运营",
+      "title": "补齐 Google Play preview assets",
+      "why": "app icon、feature graphic 和 screenshots 是主商店 listing 的核心素材，当前缺失或没有合规证明。",
+      "done_when": "app icon 为 512x512 32-bit PNG 且 <=1024KB；feature graphic、至少 2 张截图和可选 video 均有文件与规格证据。",
+      "next_step": "准备 app icon、feature graphic；等真实截图捕获通过后再生成最终截图素材。",
+      "related_blocker_count": 1,
+      "related_blockers": [
+        {
+          "agent_id": "google-play-listing",
+          "agent_title": "Google Play 主商店 listing",
+          "owner": "产品/运营/设计",
+          "source": "blockers",
+          "id": "gate:preview_assets",
+          "status": "blocked",
+          "reason": "app icon、feature graphic 或 screenshots 缺失/不合规。",
+          "unblock_action": "提供 512x512 32-bit PNG app icon、1024x500 feature graphic、至少 2 张截图；video 可选。"
+        }
+      ]
+    },
+    {
+      "id": "real_screenshot_capture",
+      "priority": "P0",
+      "owner": "工程/设计",
+      "title": "用真实 app UI 逐张捕获 raw screenshots",
+      "why": "截图必须来自真实 app UI；当前目标 app 没有处于前台，且不能把同一屏幕重复当作多个 route 的截图证据。",
+      "done_when": "每个 shot 都有真实设备/模拟器、route、locale、raw PNG 和导航证明；截图捕获报告不再 blocked。",
+      "next_step": "安装或打开可代表最终体验的 app；按 screenshot-shot-list.json 逐张导航和捕获，确保每张截图都有对应 route 证明。",
+      "related_blocker_count": 5,
+      "related_blockers": [
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "raw_screenshots_not_captured",
+          "status": "blocked",
+          "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
+        },
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "privacy_or_target_audience_needs_human",
+          "status": "needs_human",
+          "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+          "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "debug_container_needs_human",
+          "status": "needs_human",
+          "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
+          "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "target_app_not_foreground",
+          "status": "blocked",
+          "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
+          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "multi_shot_navigation_unverified",
+          "status": "blocked",
+          "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
+          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+        }
+      ]
+    },
+    {
+      "id": "launch_info_truth",
+      "priority": "P1",
+      "owner": "产品/运营",
+      "title": "确认上架基础信息 source of truth",
+      "why": "App 名称、定位、目标用户、账号系统和支持方式会影响 listing、Data safety、截图文案和审核材料。",
+      "done_when": "最终 App 名称、备用名、定位、目标用户、账号/删除流程、support URL/email/FAQ 均有 owner 确认。",
+      "next_step": "补齐 launch-info-collector 报告中缺失或冲突的信息，然后重跑 launch-info-collector。",
+      "related_blocker_count": 2,
+      "related_blockers": [
+        {
+          "agent_id": "launch-info-collector",
+          "agent_title": "上架基础信息",
+          "owner": "产品/运营",
+          "source": "blockers",
+          "id": "账号系统",
+          "status": "needs_human",
+          "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+          "unblock_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+        },
+        {
+          "agent_id": "launch-info-collector",
+          "agent_title": "上架基础信息",
+          "owner": "产品/运营",
+          "source": "blockers",
+          "id": "支持方式",
+          "status": "missing",
+          "reason": "未发现 support URL、email 或 FAQ。",
+          "unblock_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+        }
+      ]
+    },
+    {
+      "id": "screenshot_public_review",
+      "priority": "P1",
+      "owner": "产品/设计/法务",
+      "title": "完成截图公开使用审核",
+      "why": "即使 raw screenshot 捕获成功，也需要确认标题、裁切、安全区、第三方内容、商标和宣传 claim 不误导。",
+      "done_when": "所有最终商店截图均完成公开使用、内容授权、商标和 claim 审核。",
+      "next_step": "在 raw screenshots 捕获通过后，基于真实截图完成设计稿并进行公开使用审核。",
+      "related_blocker_count": 1,
+      "related_blockers": [
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "google_play_public_use_needs_human",
+          "status": "needs_human",
+          "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+          "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
+        }
+      ]
+    },
+    {
+      "id": "final_repackage",
+      "priority": "P2",
+      "owner": "发布负责人",
+      "title": "重跑所有受影响 agent 并重新生成上架总包",
+      "why": "当前总包只是 blocked 状态快照；修复上游材料后必须重新生成，才能形成新的提交判断。",
+      "done_when": "相关上游报告全部更新，本报告重新生成后 readiness 不再是 RED。",
+      "next_step": "按 P0/P1 顺序处理后，重新运行 launch-package-agent。",
+      "related_blocker_count": 0,
+      "related_blockers": []
+    }
+  ],
+  "consolidated_blockers": [
+    {
+      "agent_id": "privacy-disclosure-prep",
+      "agent_title": "隐私披露准备",
+      "owner": "隐私/法务/产品",
+      "source": "blockers",
+      "id": "privacy_policy_url_missing",
+      "status": "blocked",
+      "reason": "未在扫描范围内发现隐私政策 URL。",
+      "unblock_action": "提供公开可访问的隐私政策 URL，并确认内容覆盖当前 app、SDK、数据收集、共享和删除流程。"
+    },
+    {
+      "agent_id": "launch-info-collector",
+      "agent_title": "上架基础信息",
+      "owner": "产品/运营",
+      "source": "blockers",
+      "id": "账号系统",
+      "status": "needs_human",
+      "reason": "发现账号/登录能力信号，但没有证明 app 是否必须登录。",
+      "unblock_action": "说明是否必须登录、哪些功能可游客使用、是否提供账号删除/注销入口。"
+    },
+    {
+      "agent_id": "launch-info-collector",
+      "agent_title": "上架基础信息",
+      "owner": "产品/运营",
+      "source": "blockers",
+      "id": "支持方式",
+      "status": "missing",
+      "reason": "未发现 support URL、email 或 FAQ。",
+      "unblock_action": "提供可公开的 support URL、support email 或 FAQ/help center。"
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "agent_title": "Google Play Data safety",
+      "owner": "隐私/法务/产品",
+      "source": "blockers",
+      "id": "加密传输",
+      "status": "needs_human",
+      "reason": "静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。",
+      "unblock_action": "提供网络传输与第三方 SDK 传输是否加密的证明或人工确认。"
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "agent_title": "Google Play Data safety",
+      "owner": "隐私/法务/产品",
+      "source": "blockers",
+      "id": "隐私政策 URL",
+      "status": "needs_human",
+      "reason": "未发现可用于 Data safety 的隐私政策 URL。",
+      "unblock_action": "提供公开可访问且覆盖当前 app 数据行为的隐私政策 URL。"
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "agent_title": "Google Play Data safety",
+      "owner": "隐私/法务/产品",
+      "source": "blockers",
+      "id": "儿童/敏感数据风险",
+      "status": "needs_human",
+      "reason": "未发现足够证据确认是否面向儿童或处理敏感数据。",
+      "unblock_action": "确认目标年龄、儿童/家庭政策和敏感数据处理范围。"
+    },
+    {
+      "agent_id": "google-data-safety-agent",
+      "agent_title": "Google Play Data safety",
+      "owner": "隐私/法务/产品",
+      "source": "blockers",
+      "id": "逐数据类型答案",
+      "status": "needs_human",
+      "reason": "发现 11 个数据类型候选，其中 11 个仍未完成 owner 逐项确认；collected/shared/purpose/identity/tracking/required 需要人工逐项确认。",
+      "unblock_action": "填写 play-store-launch/inputs/privacy-data-safety-owner-input.json 中每个 dataTypes 条目的 collected、shared、purposes、linkedToIdentity、usedForTracking、requiredOrOptional、processedEphemerally。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "blockers",
+      "id": "gate:preview_assets",
+      "status": "blocked",
+      "reason": "app icon、feature graphic 或 screenshots 缺失/不合规。",
+      "unblock_action": "提供 512x512 32-bit PNG app icon、1024x500 feature graphic、至少 2 张截图；video 可选。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "blockers",
+      "id": "gate:human_required_fields",
+      "status": "blocked",
+      "reason": "privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。",
+      "unblock_action": "人工提供并确认 privacy policy URL、developer contact、category、content rating 和 target audience。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "human_required_fields",
+      "id": "privacy_policy_url",
+      "status": "candidate_found",
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+      "unblock_action": "补充并确认 privacy_policy_url。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "human_required_fields",
+      "id": "developer_contact_email",
+      "status": "candidate_found",
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+      "unblock_action": "补充并确认 developer_contact_email。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "human_required_fields",
+      "id": "category",
+      "status": "candidate_found",
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+      "unblock_action": "补充并确认 category。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "human_required_fields",
+      "id": "content_rating",
+      "status": "candidate_found",
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+      "unblock_action": "补充并确认 content_rating。"
+    },
+    {
+      "agent_id": "google-play-listing",
+      "agent_title": "Google Play 主商店 listing",
+      "owner": "产品/运营/设计",
+      "source": "human_required_fields",
+      "id": "target_audience",
+      "status": "candidate_found",
+      "reason": "需要人工确认该字段适用于当前 app 和 Google Play Console。",
+      "unblock_action": "补充并确认 target_audience。"
+    },
+    {
+      "agent_id": "screenshot-storyboard",
+      "agent_title": "截图 storyboard",
+      "owner": "产品/设计",
+      "source": "blockers",
+      "id": "raw_screenshots_not_captured",
+      "status": "blocked",
+      "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+      "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
+    },
+    {
+      "agent_id": "screenshot-storyboard",
+      "agent_title": "截图 storyboard",
+      "owner": "产品/设计",
+      "source": "blockers",
+      "id": "privacy_or_target_audience_needs_human",
+      "status": "needs_human",
+      "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+      "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "agent_title": "真实截图捕获",
+      "owner": "工程/设计",
+      "source": "blockers",
+      "id": "debug_container_needs_human",
+      "status": "needs_human",
+      "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
+      "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "agent_title": "真实截图捕获",
+      "owner": "工程/设计",
+      "source": "blockers",
+      "id": "target_app_not_foreground",
+      "status": "blocked",
+      "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
+      "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "agent_title": "真实截图捕获",
+      "owner": "工程/设计",
+      "source": "blockers",
+      "id": "multi_shot_navigation_unverified",
+      "status": "blocked",
+      "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
+      "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+    },
+    {
+      "agent_id": "screenshot-capture-agent",
+      "agent_title": "真实截图捕获",
+      "owner": "工程/设计",
+      "source": "blockers",
+      "id": "google_play_public_use_needs_human",
+      "status": "needs_human",
+      "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+      "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
+    }
+  ],
+  "readiness_reasons": [
+    "隐私披露准备 未通过：privacy_policy_url_missing：未在扫描范围内发现隐私政策 URL。",
+    "上架基础信息 未通过：账号系统：发现账号/登录能力信号，但没有证明 app 是否必须登录。；支持方式：未发现 support URL、email 或 FAQ。",
+    "Google Play Data safety 未通过：加密传输：静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。；隐私政策 URL：未发现可用于 Data safety 的隐私政策 URL。；儿童/敏感数据风险：未发现足够证据确认是否面向儿童或处理敏感数据。；另有 1 项",
+    "Google Play 主商店 listing 未通过：gate:preview_assets：app icon、feature graphic 或 screenshots 缺失/不合规。；gate:human_required_fields：privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。；privacy_policy_url：需要人工确认该字段适用于当前 app 和 Google Play Console。；另有 4 项",
+    "截图 storyboard 未通过：raw_screenshots_not_captured：尚未通过 screenshot-capture-agent 证明真实 raw screenshots。；privacy_or_target_audience_needs_human：隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+    "真实截图捕获 未通过：debug_container_needs_human：当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。；target_app_not_foreground：目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder；multi_shot_navigation_unverified：上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。；另有 1 项"
+  ],
+  "included_files": [
+    {
+      "source_agent": "release-build-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/release-build-agent-output.json",
+      "exists": true,
+      "size_bytes": 66550
+    },
+    {
+      "source_agent": "release-build-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/release-build-agent.zh.md",
+      "exists": true,
+      "size_bytes": 6036
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/privacy-disclosure-prep-output.json",
+      "exists": true,
+      "size_bytes": 485859
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "human_report",
+      "path": "play-store-launch/reports/privacy-disclosure-prep.zh.md",
+      "exists": true,
+      "size_bytes": 21895
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/privacy-disclosure-prep-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 177808
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_json",
+      "path": "play-store-launch/reports/data-safety-form-draft.json",
+      "exists": true,
+      "size_bytes": 112464
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_markdown",
+      "path": "play-store-launch/reports/data-safety-form-draft.zh.md",
+      "exists": true,
+      "size_bytes": 35052
+    },
+    {
+      "source_agent": "privacy-disclosure-prep",
+      "role": "data_safety_csv",
+      "path": "play-store-launch/reports/data-safety-form-draft.csv",
+      "exists": true,
+      "size_bytes": 44943
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/launch-info-collector-output.json",
+      "exists": true,
+      "size_bytes": 60117
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "human_report",
+      "path": "play-store-launch/reports/launch-info-collector.zh.md",
+      "exists": true,
+      "size_bytes": 6793
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/launch-info-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 23562
+    },
+    {
+      "source_agent": "launch-info-collector",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/launch-info-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 9646
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/google-data-safety-agent-output.json",
+      "exists": true,
+      "size_bytes": 140583
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/google-data-safety-agent.zh.md",
+      "exists": true,
+      "size_bytes": 14290
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/google-data-safety-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 62062
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/google-data-safety-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 11799
+    },
+    {
+      "source_agent": "google-data-safety-agent",
+      "role": "csv_draft",
+      "path": "play-store-launch/reports/google-data-safety-form-draft.csv",
+      "exists": true,
+      "size_bytes": 1876
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/google-play-listing-output.json",
+      "exists": true,
+      "size_bytes": 19683
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "human_report",
+      "path": "play-store-launch/reports/google-play-listing.zh.md",
+      "exists": true,
+      "size_bytes": 3794
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "source_of_truth",
+      "path": "play-store-launch/reports/google-play-listing-source-of-truth.json",
+      "exists": true,
+      "size_bytes": 6445
+    },
+    {
+      "source_agent": "google-play-listing",
+      "role": "drafts",
+      "path": "play-store-launch/reports/google-play-listing-drafts.json",
+      "exists": true,
+      "size_bytes": 1151
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/screenshot-storyboard-output.json",
+      "exists": true,
+      "size_bytes": 119522
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "human_report",
+      "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
+      "exists": true,
+      "size_bytes": 8105
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 33206
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "shot_list",
+      "path": "play-store-launch/reports/screenshot-shot-list.json",
+      "exists": true,
+      "size_bytes": 6117
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "capture_handoff",
+      "path": "play-store-launch/reports/screenshot-capture-handoff.json",
+      "exists": true,
+      "size_bytes": 10532
+    },
+    {
+      "source_agent": "screenshot-storyboard",
+      "role": "design_brief",
+      "path": "play-store-launch/reports/screenshot-design-brief.json",
+      "exists": true,
+      "size_bytes": 8155
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "machine_report",
+      "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
+      "exists": true,
+      "size_bytes": 45127
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "human_report",
+      "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
+      "exists": true,
+      "size_bytes": 4285
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "evidence_jsonl",
+      "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
+      "exists": true,
+      "size_bytes": 14705
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "manifest_json",
+      "path": "play-store-launch/reports/screenshot-capture-manifest.json",
+      "exists": true,
+      "size_bytes": 2115
+    },
+    {
+      "source_agent": "screenshot-capture-agent",
+      "role": "raw_dir",
+      "path": "play-store-launch/screenshots/raw/android/en-US",
+      "exists": false,
+      "size_bytes": null
+    }
+  ],
+  "owner_summary": {
+    "decision": "当前不能提交 Google Play",
+    "current_use": "内部复核、分工推进、缺口追踪",
+    "not_safe_for": [
+      "Play Console 最终提交",
+      "对外公开素材发布",
+      "声明 release ready"
+    ],
+    "p0_count": 5,
+    "p0_titles": [
+      "提供公开隐私政策 URL 并确认覆盖当前数据行为",
+      "逐项确认 Google Play Data safety 答案",
+      "确认 Google Play listing 人工必填信息",
+      "补齐 Google Play preview assets",
+      "用真实 app UI 逐张捕获 raw screenshots"
+    ],
+    "recommended_order": [
+      "工程发布门禁已通过；优先补齐隐私政策 URL 和 Data safety 人工答案，因为它们会影响 listing、目标受众和截图文案。",
+      "确认产品上架 source of truth，再补齐 listing 文案、分类、开发者联系信息和 preview assets。",
+      "基于当前可运行 app 重跑 screenshot-storyboard / screenshot-capture-agent，用真实 app UI 逐张捕获 raw screenshots。",
+      "完成截图公开使用审核，确认标题、裁切、安全区、商标和 claim 不误导。",
+      "重跑受影响的上游 agent，最后重新生成 launch-package-agent 总包。"
+    ]
+  },
+  "generated_files": {
+    "human_report": "play-store-launch/reports/launch-package-agent.zh.md",
+    "machine_report": "play-store-launch/reports/launch-package-agent-output.json",
+    "manifest": "play-store-launch/reports/launch-package-manifest.json",
+    "need_human": "play-store-launch/reports/launch-package-need-human.md",
+    "files_included": "play-store-launch/reports/launch-package-files-included.txt"
+  }
+}
