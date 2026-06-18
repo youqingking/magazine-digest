@@ -1,6 +1,6 @@
 # screenshot-storyboard 截图规划报告
 
-- 生成时间：`2026-06-17T14:58:45Z`
+- 生成时间：`2026-06-18T10:36:12Z`
 - 总状态：`blocked`
 - Storyboard 状态：`planned`
 - 结论：这是截图规划和 capture handoff，不是最终 Google Play 上架素材。
@@ -9,7 +9,7 @@
 
 - App 名称：`高效阅读`
 - Android package：`com.daowei2026.magazinedigest`
-- 路由来源：`mobile/pages.json`，共 `26` 个页面。
+- 路由来源：`mobile/pages.json`，共 `27` 个页面。
 - Runtime fixture：`observed_in_repo`；文章候选 `63`；implemented surfaces `24` 个。
 
 ## Primary Shots
@@ -82,12 +82,10 @@
 - `human.screenshot.google_play_specs`：Storyboard 无法证明最终图片尺寸、格式、alpha、设备类型和 Play Console 分类，需要在 raw screenshot/design 阶段人工确认。
 - `human.screenshot.trademark_content_authorization`：runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。
 - `human.screenshot.capture_execution`：storyboard 只生成 shot-list；必须由 screenshot-capture-agent 从真实 app 前台捕获 raw screenshot。
-- `human.release_context`：release-build-agent 当前为 blocked，截图只能作为规划草稿。
 - `human.held_shots`：部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。
 
 ## Blockers
 
-- `release_gate_not_passed`：release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。 解除方式：先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。
 - `raw_screenshots_not_captured`：尚未通过 screenshot-capture-agent 证明真实 raw screenshots。 解除方式：使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。
 - `privacy_or_target_audience_needs_human`：隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。 解除方式：完成 privacy/data safety/target audience 人工审核后再批准公开截图。
 

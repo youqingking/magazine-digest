@@ -1,6 +1,6 @@
 {
   "schema_version": "launch_package_agent_output.v1",
-  "generated_at": "2026-06-18T10:16:04Z",
+  "generated_at": "2026-06-18T11:06:36Z",
   "proof_mode": "upstream_report_packaging_only",
   "overall_status": "blocked",
   "readiness": "RED",
@@ -385,18 +385,8 @@
       "required_output": "play-store-launch/reports/screenshot-storyboard-output.json",
       "status": "blocked",
       "hard_gate": false,
-      "blocker_count": 2,
+      "blocker_count": 1,
       "blockers": [
-        {
-          "agent_id": "screenshot-storyboard",
-          "agent_title": "截图 storyboard",
-          "owner": "产品/设计",
-          "source": "blockers",
-          "id": "raw_screenshots_not_captured",
-          "status": "blocked",
-          "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
-          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
-        },
         {
           "agent_id": "screenshot-storyboard",
           "agent_title": "截图 storyboard",
@@ -408,28 +398,28 @@
           "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
         }
       ],
-      "generated_at": "2026-06-17T14:58:45Z",
+      "generated_at": "2026-06-18T10:36:12Z",
       "files": [
         {
           "source_agent": "screenshot-storyboard",
           "role": "machine_report",
           "path": "play-store-launch/reports/screenshot-storyboard-output.json",
           "exists": true,
-          "size_bytes": 119522
+          "size_bytes": 120178
         },
         {
           "source_agent": "screenshot-storyboard",
           "role": "human_report",
           "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
           "exists": true,
-          "size_bytes": 8105
+          "size_bytes": 7787
         },
         {
           "source_agent": "screenshot-storyboard",
           "role": "evidence_jsonl",
           "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
           "exists": true,
-          "size_bytes": 33206
+          "size_bytes": 34293
         },
         {
           "source_agent": "screenshot-storyboard",
@@ -443,7 +433,7 @@
           "role": "capture_handoff",
           "path": "play-store-launch/reports/screenshot-capture-handoff.json",
           "exists": true,
-          "size_bytes": 10532
+          "size_bytes": 9844
         },
         {
           "source_agent": "screenshot-storyboard",
@@ -459,11 +449,11 @@
           "agent_title": "截图 storyboard",
           "owner": "产品/设计",
           "source": "blockers",
-          "id": "release_gate_not_passed",
+          "id": "raw_screenshots_not_captured",
           "status": "blocked",
-          "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
-          "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
-          "resolution": "latest_release_build_agent_passed"
+          "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
+          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
+          "resolution": "latest_screenshot_capture_has_raw_evidence"
         }
       ]
     },
@@ -473,9 +463,9 @@
       "purpose": "从真实 Android 设备或模拟器捕获 raw screenshots 并记录设备、locale、route 证据。",
       "owner": "工程/设计",
       "required_output": "play-store-launch/reports/screenshot-capture-agent-output.json",
-      "status": "blocked",
+      "status": "partial",
       "hard_gate": true,
-      "blocker_count": 4,
+      "blocker_count": 3,
       "blockers": [
         {
           "agent_id": "screenshot-capture-agent",
@@ -492,20 +482,10 @@
           "agent_title": "真实截图捕获",
           "owner": "工程/设计",
           "source": "blockers",
-          "id": "target_app_not_foreground",
-          "status": "blocked",
-          "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
-          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
-        },
-        {
-          "agent_id": "screenshot-capture-agent",
-          "agent_title": "真实截图捕获",
-          "owner": "工程/设计",
-          "source": "blockers",
-          "id": "multi_shot_navigation_unverified",
-          "status": "blocked",
-          "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
-          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+          "id": "google_play_spec_needs_work",
+          "status": "needs_human",
+          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
+          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
         },
         {
           "agent_id": "screenshot-capture-agent",
@@ -518,43 +498,48 @@
           "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
         }
       ],
-      "generated_at": "2026-06-17T15:21:33Z",
+      "generated_at": "2026-06-18T10:57:30Z",
       "files": [
         {
           "source_agent": "screenshot-capture-agent",
           "role": "machine_report",
           "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
           "exists": true,
-          "size_bytes": 45127
+          "size_bytes": 41452
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "human_report",
           "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
           "exists": true,
-          "size_bytes": 4285
+          "size_bytes": 3797
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "evidence_jsonl",
           "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
           "exists": true,
-          "size_bytes": 14705
+          "size_bytes": 13393
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "manifest_json",
           "path": "play-store-launch/reports/screenshot-capture-manifest.json",
           "exists": true,
-          "size_bytes": 2115
+          "size_bytes": 5588
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "raw_dir",
           "path": "play-store-launch/screenshots/raw/android/en-US",
-          "exists": false,
+          "exists": true,
           "size_bytes": null
         }
+      ],
+      "capture_status": "partial",
+      "screenshot_count": 1,
+      "raw_screenshot_paths": [
+        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_01_home_feed-pages-feed-index-emulator-5554-1781780249.png"
       ]
     }
   ],
@@ -665,13 +650,8 @@
       "owner": "产品/设计",
       "can_use_for": "可用于截图规划、shot-list 和 capture handoff。",
       "cannot_use_for": "不能证明真实截图已经捕获或素材可公开使用。",
-      "blocker_count": 2,
+      "blocker_count": 1,
       "top_blockers": [
-        {
-          "id": "真实截图未捕获",
-          "reason": "还没有从真实 app UI 捕获可追溯的 raw screenshots。",
-          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
-        },
         {
           "id": "目标受众缺失",
           "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
@@ -682,11 +662,11 @@
     {
       "agent_id": "screenshot-capture-agent",
       "title": "真实截图捕获",
-      "status": "blocked",
+      "status": "partial",
       "owner": "工程/设计",
-      "can_use_for": "可用于定位截图捕获环境和设备阻塞。",
-      "cannot_use_for": "不能作为最终截图素材证据。",
-      "blocker_count": 4,
+      "can_use_for": "可用于证明已从真实设备捕获 1 张 raw screenshot，并追溯 package、route、locale、commit 和 PNG 规格。",
+      "cannot_use_for": "不能直接作为最终 Play Store 截图素材；仍需 release app/公开使用审核和 Google Play 规格转换。",
+      "blocker_count": 3,
       "top_blockers": [
         {
           "id": "当前是 HBuilderX debug 容器",
@@ -694,14 +674,14 @@
           "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
         },
         {
-          "id": "目标 app 未在前台",
-          "reason": "设备当前没有停留在目标 app，不能证明截图来自目标 app。",
-          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
+          "id": "google_play_spec_needs_work",
+          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
+          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
         },
         {
-          "id": "多张截图导航未证明",
-          "reason": "多个截图 shot 没有逐张导航和捕获证明。",
-          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+          "id": "截图公开使用未审核",
+          "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
+          "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
         }
       ]
     }
@@ -879,32 +859,12 @@
       "id": "real_screenshot_capture",
       "priority": "P0",
       "owner": "工程/设计",
-      "title": "用真实 app UI 逐张捕获 raw screenshots",
-      "why": "截图必须来自真实 app UI；当前目标 app 没有处于前台，且不能把同一屏幕重复当作多个 route 的截图证据。",
-      "done_when": "每个 shot 都有真实设备/模拟器、route、locale、raw PNG 和导航证明；截图捕获报告不再 blocked。",
-      "next_step": "安装或打开可代表最终体验的 app；按 screenshot-shot-list.json 逐张导航和捕获，确保每张截图都有对应 route 证明。",
-      "related_blocker_count": 5,
+      "title": "补齐 release app 与最终截图规格证据",
+      "why": "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，但当前运行的是 HBuilderX debug 容器，且 raw Android screencap 还不是可直接提交的 24-bit 商店截图素材；其余 shot 也需要逐张补齐 route 证据。",
+      "done_when": "安装 release package 后重跑，或由 owner 明确确认 debug 容器画面可代表最终 app；shot-list 中每个必需 shot 都有 raw PNG、route、locale、device 和 commit 证据；最终截图完成规格转换和人工公开使用审核。",
+      "next_step": "优先安装 `com.daowei2026.magazinedigest` release 包后重跑 capture；如果暂时只能使用 HBuilderX debug 容器，需 owner 书面确认可代表最终体验。随后按 `screenshot-shot-list.json` 逐张捕获剩余 route，并把 raw PNG 转成符合 Google Play 要求的最终截图素材。",
+      "related_blocker_count": 2,
       "related_blockers": [
-        {
-          "agent_id": "screenshot-storyboard",
-          "agent_title": "截图 storyboard",
-          "owner": "产品/设计",
-          "source": "blockers",
-          "id": "raw_screenshots_not_captured",
-          "status": "blocked",
-          "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
-          "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
-        },
-        {
-          "agent_id": "screenshot-storyboard",
-          "agent_title": "截图 storyboard",
-          "owner": "产品/设计",
-          "source": "blockers",
-          "id": "privacy_or_target_audience_needs_human",
-          "status": "needs_human",
-          "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
-          "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
-        },
         {
           "agent_id": "screenshot-capture-agent",
           "agent_title": "真实截图捕获",
@@ -920,20 +880,10 @@
           "agent_title": "真实截图捕获",
           "owner": "工程/设计",
           "source": "blockers",
-          "id": "target_app_not_foreground",
-          "status": "blocked",
-          "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
-          "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
-        },
-        {
-          "agent_id": "screenshot-capture-agent",
-          "agent_title": "真实截图捕获",
-          "owner": "工程/设计",
-          "source": "blockers",
-          "id": "multi_shot_navigation_unverified",
-          "status": "blocked",
-          "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
-          "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+          "id": "google_play_spec_needs_work",
+          "status": "needs_human",
+          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
+          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
         }
       ]
     },
@@ -977,8 +927,18 @@
       "why": "即使 raw screenshot 捕获成功，也需要确认标题、裁切、安全区、第三方内容、商标和宣传 claim 不误导。",
       "done_when": "所有最终商店截图均完成公开使用、内容授权、商标和 claim 审核。",
       "next_step": "在 raw screenshots 捕获通过后，基于真实截图完成设计稿并进行公开使用审核。",
-      "related_blocker_count": 1,
+      "related_blocker_count": 2,
       "related_blockers": [
+        {
+          "agent_id": "screenshot-storyboard",
+          "agent_title": "截图 storyboard",
+          "owner": "产品/设计",
+          "source": "blockers",
+          "id": "privacy_or_target_audience_needs_human",
+          "status": "needs_human",
+          "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+          "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+        },
         {
           "agent_id": "screenshot-capture-agent",
           "agent_title": "真实截图捕获",
@@ -1149,16 +1109,6 @@
       "agent_title": "截图 storyboard",
       "owner": "产品/设计",
       "source": "blockers",
-      "id": "raw_screenshots_not_captured",
-      "status": "blocked",
-      "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
-      "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。"
-    },
-    {
-      "agent_id": "screenshot-storyboard",
-      "agent_title": "截图 storyboard",
-      "owner": "产品/设计",
-      "source": "blockers",
       "id": "privacy_or_target_audience_needs_human",
       "status": "needs_human",
       "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
@@ -1179,20 +1129,10 @@
       "agent_title": "真实截图捕获",
       "owner": "工程/设计",
       "source": "blockers",
-      "id": "target_app_not_foreground",
-      "status": "blocked",
-      "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
-      "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。"
-    },
-    {
-      "agent_id": "screenshot-capture-agent",
-      "agent_title": "真实截图捕获",
-      "owner": "工程/设计",
-      "source": "blockers",
-      "id": "multi_shot_navigation_unverified",
-      "status": "blocked",
-      "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
-      "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。"
+      "id": "google_play_spec_needs_work",
+      "status": "needs_human",
+      "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
+      "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
     },
     {
       "agent_id": "screenshot-capture-agent",
@@ -1210,8 +1150,8 @@
     "上架基础信息 未通过：账号系统：发现账号/登录能力信号，但没有证明 app 是否必须登录。；支持方式：未发现 support URL、email 或 FAQ。",
     "Google Play Data safety 未通过：加密传输：静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。；隐私政策 URL：未发现可用于 Data safety 的隐私政策 URL。；儿童/敏感数据风险：未发现足够证据确认是否面向儿童或处理敏感数据。；另有 1 项",
     "Google Play 主商店 listing 未通过：gate:preview_assets：app icon、feature graphic 或 screenshots 缺失/不合规。；gate:human_required_fields：privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。；privacy_policy_url：需要人工确认该字段适用于当前 app 和 Google Play Console。；另有 4 项",
-    "截图 storyboard 未通过：raw_screenshots_not_captured：尚未通过 screenshot-capture-agent 证明真实 raw screenshots。；privacy_or_target_audience_needs_human：隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
-    "真实截图捕获 未通过：debug_container_needs_human：当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。；target_app_not_foreground：目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder；multi_shot_navigation_unverified：上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。；另有 1 项"
+    "截图 storyboard 未通过：privacy_or_target_audience_needs_human：隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
+    "真实截图捕获 未通过：debug_container_needs_human：当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。；google_play_spec_needs_work：PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；google_play_public_use_needs_human：截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。"
   ],
   "included_files": [
     {
@@ -1366,21 +1306,21 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-storyboard-output.json",
       "exists": true,
-      "size_bytes": 119522
+      "size_bytes": 120178
     },
     {
       "source_agent": "screenshot-storyboard",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
       "exists": true,
-      "size_bytes": 8105
+      "size_bytes": 7787
     },
     {
       "source_agent": "screenshot-storyboard",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
       "exists": true,
-      "size_bytes": 33206
+      "size_bytes": 34293
     },
     {
       "source_agent": "screenshot-storyboard",
@@ -1394,7 +1334,7 @@
       "role": "capture_handoff",
       "path": "play-store-launch/reports/screenshot-capture-handoff.json",
       "exists": true,
-      "size_bytes": 10532
+      "size_bytes": 9844
     },
     {
       "source_agent": "screenshot-storyboard",
@@ -1408,34 +1348,34 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
       "exists": true,
-      "size_bytes": 45127
+      "size_bytes": 41452
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
       "exists": true,
-      "size_bytes": 4285
+      "size_bytes": 3797
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
       "exists": true,
-      "size_bytes": 14705
+      "size_bytes": 13393
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "manifest_json",
       "path": "play-store-launch/reports/screenshot-capture-manifest.json",
       "exists": true,
-      "size_bytes": 2115
+      "size_bytes": 5588
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "raw_dir",
       "path": "play-store-launch/screenshots/raw/android/en-US",
-      "exists": false,
+      "exists": true,
       "size_bytes": null
     }
   ],
@@ -1453,7 +1393,7 @@
       "逐项确认 Google Play Data safety 答案",
       "确认 Google Play listing 人工必填信息",
       "补齐 Google Play preview assets",
-      "用真实 app UI 逐张捕获 raw screenshots"
+      "补齐 release app 与最终截图规格证据"
     ],
     "recommended_order": [
       "工程发布门禁已通过；优先补齐隐私政策 URL 和 Data safety 人工答案，因为它们会影响 listing、目标受众和截图文案。",

@@ -1,6 +1,6 @@
 {
   "schema_version": "launch_package_manifest.v1",
-  "generated_at": "2026-06-18T10:16:04Z",
+  "generated_at": "2026-06-18T11:06:36Z",
   "readiness": "RED",
   "can_submit_google_play": false,
   "included_files": [
@@ -156,21 +156,21 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-storyboard-output.json",
       "exists": true,
-      "size_bytes": 119522
+      "size_bytes": 120178
     },
     {
       "source_agent": "screenshot-storyboard",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-storyboard.zh.md",
       "exists": true,
-      "size_bytes": 8105
+      "size_bytes": 7787
     },
     {
       "source_agent": "screenshot-storyboard",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-storyboard-evidence.jsonl",
       "exists": true,
-      "size_bytes": 33206
+      "size_bytes": 34293
     },
     {
       "source_agent": "screenshot-storyboard",
@@ -184,7 +184,7 @@
       "role": "capture_handoff",
       "path": "play-store-launch/reports/screenshot-capture-handoff.json",
       "exists": true,
-      "size_bytes": 10532
+      "size_bytes": 9844
     },
     {
       "source_agent": "screenshot-storyboard",
@@ -198,44 +198,36 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
       "exists": true,
-      "size_bytes": 45127
+      "size_bytes": 41452
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
       "exists": true,
-      "size_bytes": 4285
+      "size_bytes": 3797
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
       "exists": true,
-      "size_bytes": 14705
+      "size_bytes": 13393
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "manifest_json",
       "path": "play-store-launch/reports/screenshot-capture-manifest.json",
       "exists": true,
-      "size_bytes": 2115
+      "size_bytes": 5588
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "raw_dir",
       "path": "play-store-launch/screenshots/raw/android/en-US",
-      "exists": false,
+      "exists": true,
       "size_bytes": null
     }
   ],
-  "missing_files": [
-    {
-      "source_agent": "screenshot-capture-agent",
-      "role": "raw_dir",
-      "path": "play-store-launch/screenshots/raw/android/en-US",
-      "exists": false,
-      "size_bytes": null
-    }
-  ]
+  "missing_files": []
 }

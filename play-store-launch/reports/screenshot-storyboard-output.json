@@ -1,26 +1,13 @@
 {
   "schema_version": "screenshot_storyboard.v1",
-  "generated_at": "2026-06-17T14:58:45Z",
+  "generated_at": "2026-06-18T10:36:12Z",
   "overall_status": "blocked",
   "storyboard_status": "planned",
   "can_use_for_submission": false,
   "root": "C:\\Users\\Administrator\\.codex\\worktrees\\66ef\\magazine-digest",
   "project_fingerprint": {
-    "git_commit": "b1d7c7ff5ae38633ee454e11bd323c6c012510f5",
-    "git_status_short": [
-      "M AGENTS.md",
-      " M README.md",
-      " M package-lock.json",
-      " M scripts/validate/preflight.ps1",
-      " M scripts/validate/preflight.sh",
-      "?? .codex/",
-      "?? artifacts/",
-      "?? docs/agno/",
-      "?? output/",
-      "?? play-store-launch/",
-      "?? prd.md",
-      "?? scripts/agent_tools/"
-    ],
+    "git_commit": "8305ecdf2508a4c173f7c1ede096528c6d559e7f",
+    "git_status_short": [],
     "skill_path": ".codex/skills/screenshot-storyboard/SKILL.md",
     "skill_generator": ".codex/skills/screenshot-storyboard/scripts/screenshot_storyboard.py"
   },
@@ -134,11 +121,19 @@
           ]
         },
         {
+          "path": "pages/auth-test/index",
+          "title": "Auth test",
+          "source": "mobile/pages.json",
+          "evidence_refs": [
+            "evidence.0012"
+          ]
+        },
+        {
           "path": "uni_modules/uni-id-pages/pages/register/register",
           "title": "注册",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0012"
+            "evidence.0013"
           ]
         },
         {
@@ -146,7 +141,7 @@
           "title": "登录",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0013"
+            "evidence.0014"
           ]
         },
         {
@@ -154,7 +149,7 @@
           "title": "账号密码登录",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0014"
+            "evidence.0015"
           ]
         },
         {
@@ -162,7 +157,7 @@
           "title": "手机验证码登录",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0015"
+            "evidence.0016"
           ]
         },
         {
@@ -170,7 +165,7 @@
           "title": "个人资料",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0016"
+            "evidence.0017"
           ]
         },
         {
@@ -178,7 +173,7 @@
           "title": "绑定手机号码",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0017"
+            "evidence.0018"
           ]
         },
         {
@@ -186,7 +181,7 @@
           "title": "",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0018"
+            "evidence.0019"
           ]
         },
         {
@@ -194,7 +189,7 @@
           "title": "邮箱验证码注册",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0019"
+            "evidence.0020"
           ]
         },
         {
@@ -202,7 +197,7 @@
           "title": "重置密码",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0020"
+            "evidence.0021"
           ]
         },
         {
@@ -210,7 +205,7 @@
           "title": "通过邮箱重置密码",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0021"
+            "evidence.0022"
           ]
         },
         {
@@ -218,7 +213,7 @@
           "title": "",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0022"
+            "evidence.0023"
           ]
         },
         {
@@ -226,7 +221,7 @@
           "title": "修改密码",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0023"
+            "evidence.0024"
           ]
         },
         {
@@ -234,7 +229,7 @@
           "title": "注册管理员账号",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0024"
+            "evidence.0025"
           ]
         },
         {
@@ -242,7 +237,7 @@
           "title": "设置密码",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0025"
+            "evidence.0026"
           ]
         },
         {
@@ -250,7 +245,7 @@
           "title": "注销账号",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0026"
+            "evidence.0027"
           ]
         },
         {
@@ -258,7 +253,7 @@
           "title": "实名认证",
           "source": "mobile/pages.json",
           "evidence_refs": [
-            "evidence.0027"
+            "evidence.0028"
           ]
         }
       ],
@@ -300,7 +295,7 @@
           "开发态或诊断信息"
         ],
         "evidence_refs": [
-          "evidence.0029"
+          "evidence.0030"
         ]
       },
       "pages/search/index": {
@@ -321,7 +316,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0030"
+          "evidence.0031"
         ]
       },
       "pages/detail/index": {
@@ -345,7 +340,7 @@
           "订阅/支付权益"
         ],
         "evidence_refs": [
-          "evidence.0031"
+          "evidence.0032"
         ]
       },
       "pages/paywall/index": {
@@ -363,7 +358,7 @@
           "订阅/支付权益"
         ],
         "evidence_refs": [
-          "evidence.0032"
+          "evidence.0033"
         ]
       },
       "pages/invite/index": {
@@ -384,7 +379,7 @@
           "订阅/支付权益"
         ],
         "evidence_refs": [
-          "evidence.0033"
+          "evidence.0034"
         ]
       },
       "pages/profile/index": {
@@ -407,7 +402,7 @@
           "订阅/支付权益"
         ],
         "evidence_refs": [
-          "evidence.0034"
+          "evidence.0035"
         ]
       },
       "pages/settings/index": {
@@ -435,7 +430,7 @@
           "远端桥接配置"
         ],
         "evidence_refs": [
-          "evidence.0035"
+          "evidence.0036"
         ]
       },
       "pages/inbox/index": {
@@ -455,7 +450,7 @@
           "内部能力或兼容页面"
         ],
         "evidence_refs": [
-          "evidence.0036"
+          "evidence.0037"
         ]
       },
       "pages/follows/index": {
@@ -468,7 +463,7 @@
           "内部能力或兼容页面"
         ],
         "evidence_refs": [
-          "evidence.0037"
+          "evidence.0038"
         ]
       },
       "pages/campaign/index": {
@@ -482,7 +477,30 @@
           "订阅/支付权益"
         ],
         "evidence_refs": [
-          "evidence.0038"
+          "evidence.0039"
+        ]
+      },
+      "pages/auth-test/index": {
+        "source_ref": "mobile/pages/auth-test/index.vue",
+        "visible_text_sample": [
+          "Auth test entry",
+          "Boundary",
+          "Keep this route available for smoke and manual verification only.",
+          "Primary actions",
+          "AUTH_TEST_PRIMARY_ACTIONS. Keep the first-screen flow minimal on mobile.",
+          "Test username",
+          "Test password",
+          "Auto login",
+          "Open password login",
+          "Verify device records",
+          "Prepare test input",
+          "Summary"
+        ],
+        "risk_labels": [
+          "debug/diagnostic 信息"
+        ],
+        "evidence_refs": [
+          "evidence.0040"
         ]
       },
       "uni_modules/uni-id-pages/pages/register/register": {
@@ -498,7 +516,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0039"
+          "evidence.0041"
         ]
       },
       "uni_modules/uni-id-pages/pages/login/login-withoutpwd": {
@@ -511,7 +529,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0040"
+          "evidence.0042"
         ]
       },
       "uni_modules/uni-id-pages/pages/login/login-withpwd": {
@@ -528,7 +546,7 @@
           "管理员入口"
         ],
         "evidence_refs": [
-          "evidence.0041"
+          "evidence.0043"
         ]
       },
       "uni_modules/uni-id-pages/pages/login/login-smscode": {
@@ -539,7 +557,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0042"
+          "evidence.0044"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/userinfo": {
@@ -559,7 +577,7 @@
           "账号注销流程"
         ],
         "evidence_refs": [
-          "evidence.0043"
+          "evidence.0045"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile": {
@@ -570,7 +588,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0044"
+          "evidence.0046"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage": {
@@ -578,7 +596,7 @@
         "visible_text_sample": [],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0045"
+          "evidence.0047"
         ]
       },
       "uni_modules/uni-id-pages/pages/register/register-by-email": {
@@ -594,7 +612,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0046"
+          "evidence.0048"
         ]
       },
       "uni_modules/uni-id-pages/pages/retrieve/retrieve": {
@@ -609,7 +627,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0047"
+          "evidence.0049"
         ]
       },
       "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email": {
@@ -624,7 +642,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0048"
+          "evidence.0050"
         ]
       },
       "uni_modules/uni-id-pages/pages/common/webview/webview": {
@@ -632,7 +650,7 @@
         "visible_text_sample": [],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0049"
+          "evidence.0051"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd": {
@@ -645,7 +663,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0050"
+          "evidence.0052"
         ]
       },
       "uni_modules/uni-id-pages/pages/register/register-admin": {
@@ -662,7 +680,7 @@
           "管理员入口"
         ],
         "evidence_refs": [
-          "evidence.0051"
+          "evidence.0053"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd": {
@@ -676,7 +694,7 @@
         ],
         "risk_labels": [],
         "evidence_refs": [
-          "evidence.0052"
+          "evidence.0054"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate": {
@@ -686,7 +704,7 @@
           "支付信息"
         ],
         "evidence_refs": [
-          "evidence.0053"
+          "evidence.0055"
         ]
       },
       "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify": {
@@ -701,7 +719,7 @@
           "实名认证流程"
         ],
         "evidence_refs": [
-          "evidence.0054"
+          "evidence.0056"
         ]
       }
     },
@@ -761,12 +779,12 @@
         ]
       },
       "evidence_refs": [
-        "evidence.0055"
+        "evidence.0057"
       ]
     },
     "upstream_reports": {
       "listing_status": "blocked",
-      "release_status": "blocked",
+      "release_status": "pass",
       "privacy_status": "blocked",
       "capture_status": "blocked"
     }
@@ -834,9 +852,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0002",
-        "evidence.0029",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0030",
+        "evidence.0057",
+        "evidence.0058"
       ],
       "limitations": [
         "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
@@ -910,9 +928,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0004",
-        "evidence.0031",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0032",
+        "evidence.0057",
+        "evidence.0058"
       ],
       "limitations": [
         "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
@@ -981,9 +999,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0003",
-        "evidence.0030",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0031",
+        "evidence.0057",
+        "evidence.0058"
       ],
       "limitations": [
         "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
@@ -1054,9 +1072,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0007",
-        "evidence.0034",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0035",
+        "evidence.0057",
+        "evidence.0058"
       ],
       "limitations": [
         "storyboard 只证明规划和证据绑定，不证明已经捕获真实截图。",
@@ -1088,7 +1106,7 @@
       ],
       "evidence_refs": [
         "evidence.0008",
-        "evidence.0035"
+        "evidence.0036"
       ]
     },
     {
@@ -1109,7 +1127,7 @@
       ],
       "evidence_refs": [
         "evidence.0005",
-        "evidence.0032"
+        "evidence.0033"
       ]
     },
     {
@@ -1131,7 +1149,7 @@
       ],
       "evidence_refs": [
         "evidence.0006",
-        "evidence.0033"
+        "evidence.0034"
       ]
     },
     {
@@ -1152,7 +1170,7 @@
       ],
       "evidence_refs": [
         "evidence.0009",
-        "evidence.0036"
+        "evidence.0037"
       ]
     },
     {
@@ -1173,7 +1191,7 @@
       ],
       "evidence_refs": [
         "evidence.0010",
-        "evidence.0037"
+        "evidence.0038"
       ]
     },
     {
@@ -1195,13 +1213,13 @@
       ],
       "evidence_refs": [
         "evidence.0011",
-        "evidence.0038"
+        "evidence.0039"
       ]
     }
   ],
   "capture_shot_list": {
     "schema_version": "screenshot_shot_list.v1",
-    "generated_at": "2026-06-17T14:58:45Z",
+    "generated_at": "2026-06-18T10:36:12Z",
     "produced_by": "screenshot-storyboard",
     "draft_only": true,
     "can_use_for_submission": false,
@@ -1240,9 +1258,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0002",
-          "evidence.0029",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0030",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1283,9 +1301,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0004",
-          "evidence.0031",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0032",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1321,9 +1339,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0003",
-          "evidence.0030",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0031",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1359,16 +1377,16 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0007",
-          "evidence.0034",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0035",
+          "evidence.0057",
+          "evidence.0058"
         ]
       }
     ]
   },
   "capture_handoff": {
     "schema_version": "screenshot_capture_handoff.v1",
-    "generated_at": "2026-06-17T14:58:45Z",
+    "generated_at": "2026-06-18T10:36:12Z",
     "produced_by": "screenshot-storyboard",
     "expected_downstream_skill": "screenshot-capture-agent",
     "shot_list_path": "play-store-launch/reports/screenshot-shot-list.json",
@@ -1415,9 +1433,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0002",
-          "evidence.0029",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0030",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1458,9 +1476,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0004",
-          "evidence.0031",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0032",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1496,9 +1514,9 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0003",
-          "evidence.0030",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0031",
+          "evidence.0057",
+          "evidence.0058"
         ]
       },
       {
@@ -1534,23 +1552,13 @@
         "review_status": "NEED_HUMAN",
         "evidence_refs": [
           "evidence.0007",
-          "evidence.0034",
-          "evidence.0055",
-          "evidence.0056"
+          "evidence.0035",
+          "evidence.0057",
+          "evidence.0058"
         ]
       }
     ],
     "blockers": [
-      {
-        "blocker_id": "release_gate_not_passed",
-        "status": "blocked",
-        "review_status": "NEED_HUMAN",
-        "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
-        "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
-        "evidence_refs": [
-          "evidence.0057"
-        ]
-      },
       {
         "blocker_id": "raw_screenshots_not_captured",
         "status": "blocked",
@@ -1558,7 +1566,7 @@
         "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
         "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
         "evidence_refs": [
-          "evidence.0059"
+          "evidence.0061"
         ]
       },
       {
@@ -1568,7 +1576,7 @@
         "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
         "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
         "evidence_refs": [
-          "evidence.0058"
+          "evidence.0060"
         ]
       }
     ],
@@ -1580,15 +1588,15 @@
         "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
         "evidence_refs": [
           "evidence.0002",
-          "evidence.0029",
-          "evidence.0055",
-          "evidence.0056",
-          "evidence.0004",
-          "evidence.0031",
-          "evidence.0003",
           "evidence.0030",
+          "evidence.0057",
+          "evidence.0058",
+          "evidence.0004",
+          "evidence.0032",
+          "evidence.0003",
+          "evidence.0031",
           "evidence.0007",
-          "evidence.0034"
+          "evidence.0035"
         ]
       },
       {
@@ -1604,7 +1612,7 @@
         "review_status": "NEED_HUMAN",
         "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
         "evidence_refs": [
-          "evidence.0055"
+          "evidence.0057"
         ]
       },
       {
@@ -1615,39 +1623,30 @@
         "evidence_refs": []
       },
       {
-        "gate_id": "human.release_context",
-        "status": "needs_human",
-        "review_status": "NEED_HUMAN",
-        "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
-        "evidence_refs": [
-          "evidence.0057"
-        ]
-      },
-      {
         "gate_id": "human.held_shots",
         "status": "needs_human",
         "review_status": "NEED_HUMAN",
         "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
         "evidence_refs": [
           "evidence.0008",
-          "evidence.0035",
-          "evidence.0005",
-          "evidence.0032",
-          "evidence.0006",
-          "evidence.0033",
-          "evidence.0009",
           "evidence.0036",
-          "evidence.0010",
+          "evidence.0005",
+          "evidence.0033",
+          "evidence.0006",
+          "evidence.0034",
+          "evidence.0009",
           "evidence.0037",
+          "evidence.0010",
+          "evidence.0038",
           "evidence.0011",
-          "evidence.0038"
+          "evidence.0039"
         ]
       }
     ]
   },
   "design_brief": {
     "schema_version": "screenshot_design_brief.v1",
-    "generated_at": "2026-06-17T14:58:45Z",
+    "generated_at": "2026-06-18T10:36:12Z",
     "produced_by": "screenshot-storyboard",
     "draft_only": true,
     "base_image_rule": "只能使用 screenshot-capture-agent 真实捕获的 raw screenshot 作为 app 画面。",
@@ -1728,7 +1727,7 @@
         ],
         "evidence_refs": [
           "evidence.0008",
-          "evidence.0035"
+          "evidence.0036"
         ]
       },
       {
@@ -1749,7 +1748,7 @@
         ],
         "evidence_refs": [
           "evidence.0005",
-          "evidence.0032"
+          "evidence.0033"
         ]
       },
       {
@@ -1771,7 +1770,7 @@
         ],
         "evidence_refs": [
           "evidence.0006",
-          "evidence.0033"
+          "evidence.0034"
         ]
       },
       {
@@ -1792,7 +1791,7 @@
         ],
         "evidence_refs": [
           "evidence.0009",
-          "evidence.0036"
+          "evidence.0037"
         ]
       },
       {
@@ -1813,7 +1812,7 @@
         ],
         "evidence_refs": [
           "evidence.0010",
-          "evidence.0037"
+          "evidence.0038"
         ]
       },
       {
@@ -1835,7 +1834,7 @@
         ],
         "evidence_refs": [
           "evidence.0011",
-          "evidence.0038"
+          "evidence.0039"
         ]
       }
     ]
@@ -1855,8 +1854,8 @@
         "mobile/fixtures/runtime/current/runtime.bundle.json"
       ],
       "evidence_refs": [
-        "evidence.0056",
-        "evidence.0055"
+        "evidence.0058",
+        "evidence.0057"
       ],
       "limitations": [
         "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
@@ -1876,8 +1875,8 @@
         "mobile/fixtures/runtime/current/runtime.bundle.json"
       ],
       "evidence_refs": [
-        "evidence.0056",
-        "evidence.0055"
+        "evidence.0058",
+        "evidence.0057"
       ],
       "limitations": [
         "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
@@ -1896,8 +1895,8 @@
         "mobile/pages.json"
       ],
       "evidence_refs": [
-        "evidence.0056",
-        "evidence.0055"
+        "evidence.0058",
+        "evidence.0057"
       ],
       "limitations": [
         "未发现 google-play-listing 报告，claim 由页面和 fixture 组合推断。"
@@ -2099,13 +2098,30 @@
       "evidence_id": "evidence.0012",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
+      "observed_key": "route.pages/auth-test/index",
+      "observed_value": {
+        "path": "pages/auth-test/index",
+        "title": "Auth test",
+        "source": "mobile/pages.json",
+        "evidence_refs": [
+          "evidence.0012"
+        ]
+      },
+      "parser": "json",
+      "snippet_hash": "sha256:3d6b0358b39318b5149ddeb7788fded7b57e865d5c1e554d1991bef2342a8cef",
+      "confidence": 0.95
+    },
+    {
+      "evidence_id": "evidence.0013",
+      "source_type": "repo_config",
+      "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/register/register",
       "observed_value": {
         "path": "uni_modules/uni-id-pages/pages/register/register",
         "title": "注册",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0012"
+          "evidence.0013"
         ]
       },
       "parser": "json",
@@ -2113,7 +2129,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0013",
+      "evidence_id": "evidence.0014",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-withoutpwd",
@@ -2122,7 +2138,7 @@
         "title": "登录",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0013"
+          "evidence.0014"
         ]
       },
       "parser": "json",
@@ -2130,7 +2146,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0014",
+      "evidence_id": "evidence.0015",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-withpwd",
@@ -2139,7 +2155,7 @@
         "title": "账号密码登录",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0014"
+          "evidence.0015"
         ]
       },
       "parser": "json",
@@ -2147,7 +2163,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0015",
+      "evidence_id": "evidence.0016",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/login/login-smscode",
@@ -2156,7 +2172,7 @@
         "title": "手机验证码登录",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0015"
+          "evidence.0016"
         ]
       },
       "parser": "json",
@@ -2164,7 +2180,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0016",
+      "evidence_id": "evidence.0017",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/userinfo",
@@ -2173,7 +2189,7 @@
         "title": "个人资料",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0016"
+          "evidence.0017"
         ]
       },
       "parser": "json",
@@ -2181,7 +2197,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0017",
+      "evidence_id": "evidence.0018",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
@@ -2190,7 +2206,7 @@
         "title": "绑定手机号码",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0017"
+          "evidence.0018"
         ]
       },
       "parser": "json",
@@ -2198,7 +2214,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0018",
+      "evidence_id": "evidence.0019",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
@@ -2207,7 +2223,7 @@
         "title": "",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0018"
+          "evidence.0019"
         ]
       },
       "parser": "json",
@@ -2215,7 +2231,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0019",
+      "evidence_id": "evidence.0020",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/register/register-by-email",
@@ -2224,7 +2240,7 @@
         "title": "邮箱验证码注册",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0019"
+          "evidence.0020"
         ]
       },
       "parser": "json",
@@ -2232,7 +2248,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0020",
+      "evidence_id": "evidence.0021",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/retrieve/retrieve",
@@ -2241,7 +2257,7 @@
         "title": "重置密码",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0020"
+          "evidence.0021"
         ]
       },
       "parser": "json",
@@ -2249,7 +2265,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0021",
+      "evidence_id": "evidence.0022",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
@@ -2258,7 +2274,7 @@
         "title": "通过邮箱重置密码",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0021"
+          "evidence.0022"
         ]
       },
       "parser": "json",
@@ -2266,7 +2282,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0022",
+      "evidence_id": "evidence.0023",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/common/webview/webview",
@@ -2275,7 +2291,7 @@
         "title": "",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0022"
+          "evidence.0023"
         ]
       },
       "parser": "json",
@@ -2283,7 +2299,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0023",
+      "evidence_id": "evidence.0024",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
@@ -2292,7 +2308,7 @@
         "title": "修改密码",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0023"
+          "evidence.0024"
         ]
       },
       "parser": "json",
@@ -2300,7 +2316,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0024",
+      "evidence_id": "evidence.0025",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/register/register-admin",
@@ -2309,7 +2325,7 @@
         "title": "注册管理员账号",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0024"
+          "evidence.0025"
         ]
       },
       "parser": "json",
@@ -2317,7 +2333,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0025",
+      "evidence_id": "evidence.0026",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
@@ -2326,7 +2342,7 @@
         "title": "设置密码",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0025"
+          "evidence.0026"
         ]
       },
       "parser": "json",
@@ -2334,7 +2350,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0026",
+      "evidence_id": "evidence.0027",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
@@ -2343,7 +2359,7 @@
         "title": "注销账号",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0026"
+          "evidence.0027"
         ]
       },
       "parser": "json",
@@ -2351,7 +2367,7 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0027",
+      "evidence_id": "evidence.0028",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "route.uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
@@ -2360,7 +2376,7 @@
         "title": "实名认证",
         "source": "mobile/pages.json",
         "evidence_refs": [
-          "evidence.0027"
+          "evidence.0028"
         ]
       },
       "parser": "json",
@@ -2368,12 +2384,12 @@
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0028",
+      "evidence_id": "evidence.0029",
       "source_type": "repo_config",
       "source_ref": "mobile/pages.json",
       "observed_key": "routes.summary",
       "observed_value": {
-        "count": 26,
+        "count": 27,
         "tab_bar": [
           {
             "path": "pages/feed/index",
@@ -2399,6 +2415,7 @@
           "pages/inbox/index",
           "pages/follows/index",
           "pages/campaign/index",
+          "pages/auth-test/index",
           "uni_modules/uni-id-pages/pages/register/register",
           "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
           "uni_modules/uni-id-pages/pages/login/login-withpwd",
@@ -2418,11 +2435,11 @@
         ]
       },
       "parser": "json",
-      "snippet_hash": "sha256:48b33b4965c73339ea3041fe4d5a45c23ac861aea65f53697aea8084c9da5b6c",
+      "snippet_hash": "sha256:4fba20d5b64224d0342a569eee8e0cb5b15b0054752141fbd05efd84de616e21",
       "confidence": 0.95
     },
     {
-      "evidence_id": "evidence.0029",
+      "evidence_id": "evidence.0030",
       "source_type": "source",
       "source_ref": "mobile/pages/feed/index.vue",
       "observed_key": "page_source.pages/feed/index",
@@ -2449,7 +2466,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0030",
+      "evidence_id": "evidence.0031",
       "source_type": "source",
       "source_ref": "mobile/pages/search/index.vue",
       "observed_key": "page_source.pages/search/index",
@@ -2472,7 +2489,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0031",
+      "evidence_id": "evidence.0032",
       "source_type": "source",
       "source_ref": "mobile/pages/detail/index.vue",
       "observed_key": "page_source.pages/detail/index",
@@ -2498,7 +2515,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0032",
+      "evidence_id": "evidence.0033",
       "source_type": "source",
       "source_ref": "mobile/pages/paywall/index.vue",
       "observed_key": "page_source.pages/paywall/index",
@@ -2522,7 +2539,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0033",
+      "evidence_id": "evidence.0034",
       "source_type": "source",
       "source_ref": "mobile/pages/invite/index.vue",
       "observed_key": "page_source.pages/invite/index",
@@ -2548,7 +2565,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0034",
+      "evidence_id": "evidence.0035",
       "source_type": "source",
       "source_ref": "mobile/pages/profile/index.vue",
       "observed_key": "page_source.pages/profile/index",
@@ -2573,7 +2590,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0035",
+      "evidence_id": "evidence.0036",
       "source_type": "source",
       "source_ref": "mobile/pages/settings/index.vue",
       "observed_key": "page_source.pages/settings/index",
@@ -2603,7 +2620,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0036",
+      "evidence_id": "evidence.0037",
       "source_type": "source",
       "source_ref": "mobile/pages/inbox/index.vue",
       "observed_key": "page_source.pages/inbox/index",
@@ -2628,7 +2645,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0037",
+      "evidence_id": "evidence.0038",
       "source_type": "source",
       "source_ref": "mobile/pages/follows/index.vue",
       "observed_key": "page_source.pages/follows/index",
@@ -2647,7 +2664,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0038",
+      "evidence_id": "evidence.0039",
       "source_type": "source",
       "source_ref": "mobile/pages/campaign/index.vue",
       "observed_key": "page_source.pages/campaign/index",
@@ -2667,7 +2684,32 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0039",
+      "evidence_id": "evidence.0040",
+      "source_type": "source",
+      "source_ref": "mobile/pages/auth-test/index.vue",
+      "observed_key": "page_source.pages/auth-test/index",
+      "observed_value": {
+        "visible_text_sample": [
+          "Auth test entry",
+          "Boundary",
+          "Keep this route available for smoke and manual verification only.",
+          "Primary actions",
+          "AUTH_TEST_PRIMARY_ACTIONS. Keep the first-screen flow minimal on mobile.",
+          "Test username",
+          "Test password",
+          "Auto login"
+        ],
+        "risk_labels": [
+          "debug/diagnostic 信息"
+        ],
+        "line_count": 578
+      },
+      "parser": "regex_text",
+      "snippet_hash": "sha256:92181ad2436947c30ebd89aa0b878a7c785ad89b5cb08e52741a0f895c001b0c",
+      "confidence": 0.75
+    },
+    {
+      "evidence_id": "evidence.0041",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register",
@@ -2689,7 +2731,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0040",
+      "evidence_id": "evidence.0042",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withoutpwd.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-withoutpwd",
@@ -2708,7 +2750,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0041",
+      "evidence_id": "evidence.0043",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-withpwd.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-withpwd",
@@ -2731,7 +2773,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0042",
+      "evidence_id": "evidence.0044",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/login/login-smscode.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/login/login-smscode",
@@ -2748,7 +2790,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0043",
+      "evidence_id": "evidence.0045",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/userinfo.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/userinfo",
@@ -2774,7 +2816,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0044",
+      "evidence_id": "evidence.0046",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
@@ -2791,7 +2833,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0045",
+      "evidence_id": "evidence.0047",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
@@ -2805,7 +2847,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0046",
+      "evidence_id": "evidence.0048",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-by-email.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register-by-email",
@@ -2827,7 +2869,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0047",
+      "evidence_id": "evidence.0049",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/retrieve/retrieve",
@@ -2848,7 +2890,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0048",
+      "evidence_id": "evidence.0050",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
@@ -2869,7 +2911,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0049",
+      "evidence_id": "evidence.0051",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/common/webview/webview.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/common/webview/webview",
@@ -2883,7 +2925,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0050",
+      "evidence_id": "evidence.0052",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
@@ -2902,7 +2944,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0051",
+      "evidence_id": "evidence.0053",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/register/register-admin.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/register/register-admin",
@@ -2925,7 +2967,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0052",
+      "evidence_id": "evidence.0054",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
@@ -2945,7 +2987,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0053",
+      "evidence_id": "evidence.0055",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
@@ -2961,7 +3003,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0054",
+      "evidence_id": "evidence.0056",
       "source_type": "source",
       "source_ref": "mobile/uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify.vue",
       "observed_key": "page_source.uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
@@ -2982,7 +3024,7 @@
       "confidence": 0.75
     },
     {
-      "evidence_id": "evidence.0055",
+      "evidence_id": "evidence.0057",
       "source_type": "runtime_fixture",
       "source_ref": "mobile/fixtures/runtime/current/runtime.bundle.json",
       "observed_key": "runtime_facts.summary",
@@ -3045,7 +3087,7 @@
       "confidence": 0.9
     },
     {
-      "evidence_id": "evidence.0056",
+      "evidence_id": "evidence.0058",
       "source_type": "agent_report",
       "source_ref": "play-store-launch/reports/google-play-listing-output.json",
       "observed_key": "google_play_listing",
@@ -3053,29 +3095,29 @@
         "schema_version": "google_play_listing_output.v2",
         "overall_status": "blocked",
         "capture_status": null,
-        "blocker_count": 4
+        "blocker_count": 2
       },
       "parser": "json",
-      "snippet_hash": "sha256:5baa617d8a58f950980bb81c6a562d8d68614624745efc86e6d578b47cf37ed5",
+      "snippet_hash": "sha256:a6ada25cde437d411d5315e95b15556440bbe8e060a12a181b70afb63e495d05",
       "confidence": 0.85
     },
     {
-      "evidence_id": "evidence.0057",
+      "evidence_id": "evidence.0059",
       "source_type": "agent_report",
       "source_ref": "play-store-launch/reports/release-build-agent-output.json",
       "observed_key": "release_build",
       "observed_value": {
         "schema_version": "release_build_agent_output.v2",
-        "overall_status": "blocked",
+        "overall_status": "pass",
         "capture_status": null,
         "blocker_count": 0
       },
       "parser": "json",
-      "snippet_hash": "sha256:a0680ee9608d40aff3539169521089c69fbf4d3ced922d204f0c2d7e685276cc",
+      "snippet_hash": "sha256:a83f0fe6d0bd86fae968ec767e56588fea70ee105d4809c4519d2307ddb8f035",
       "confidence": 0.85
     },
     {
-      "evidence_id": "evidence.0058",
+      "evidence_id": "evidence.0060",
       "source_type": "agent_report",
       "source_ref": "play-store-launch/reports/privacy-disclosure-prep-output.json",
       "observed_key": "privacy_disclosure",
@@ -3090,7 +3132,7 @@
       "confidence": 0.85
     },
     {
-      "evidence_id": "evidence.0059",
+      "evidence_id": "evidence.0061",
       "source_type": "agent_report",
       "source_ref": "play-store-launch/reports/screenshot-capture-agent-output.json",
       "observed_key": "screenshot_capture",
@@ -3098,10 +3140,10 @@
         "schema_version": "screenshot_capture_agent.v1",
         "overall_status": null,
         "capture_status": "blocked",
-        "blocker_count": 3
+        "blocker_count": 4
       },
       "parser": "json",
-      "snippet_hash": "sha256:e65eb7beb3b0fd7937f29d75dba95b556916fbabfef1ae7990659f31ce6b4344",
+      "snippet_hash": "sha256:c29146e8253af453b7359abe0240f26e63cdc930250ea4c6d1c7b0d4fa7575ab",
       "confidence": 0.85
     }
   ],
@@ -3113,15 +3155,15 @@
       "reason": "所有公开用于 Google Play 的截图、标题、背景、裁切和安全区都必须人工审核。",
       "evidence_refs": [
         "evidence.0002",
-        "evidence.0029",
-        "evidence.0055",
-        "evidence.0056",
-        "evidence.0004",
-        "evidence.0031",
-        "evidence.0003",
         "evidence.0030",
+        "evidence.0057",
+        "evidence.0058",
+        "evidence.0004",
+        "evidence.0032",
+        "evidence.0003",
+        "evidence.0031",
         "evidence.0007",
-        "evidence.0034"
+        "evidence.0035"
       ]
     },
     {
@@ -3137,7 +3179,7 @@
       "review_status": "NEED_HUMAN",
       "reason": "runtime fixture 中存在第三方出版物或文章内容，公开截图使用前需要授权/商标/内容合规确认。",
       "evidence_refs": [
-        "evidence.0055"
+        "evidence.0057"
       ]
     },
     {
@@ -3148,46 +3190,27 @@
       "evidence_refs": []
     },
     {
-      "gate_id": "human.release_context",
-      "status": "needs_human",
-      "review_status": "NEED_HUMAN",
-      "reason": "release-build-agent 当前为 blocked，截图只能作为规划草稿。",
-      "evidence_refs": [
-        "evidence.0057"
-      ]
-    },
-    {
       "gate_id": "human.held_shots",
       "status": "needs_human",
       "review_status": "NEED_HUMAN",
       "reason": "部分页面涉及内部、开发、订阅、兑换或 alias 风险，默认不进入 capture shot-list。",
       "evidence_refs": [
         "evidence.0008",
-        "evidence.0035",
-        "evidence.0005",
-        "evidence.0032",
-        "evidence.0006",
-        "evidence.0033",
-        "evidence.0009",
         "evidence.0036",
-        "evidence.0010",
+        "evidence.0005",
+        "evidence.0033",
+        "evidence.0006",
+        "evidence.0034",
+        "evidence.0009",
         "evidence.0037",
+        "evidence.0010",
+        "evidence.0038",
         "evidence.0011",
-        "evidence.0038"
+        "evidence.0039"
       ]
     }
   ],
   "blockers": [
-    {
-      "blocker_id": "release_gate_not_passed",
-      "status": "blocked",
-      "review_status": "NEED_HUMAN",
-      "reason": "release-build-agent 当前状态为 blocked；截图规划不能代表可提交素材。",
-      "unblock_action": "先修复 build/typecheck/smoke 等 release blockers，再重新捕获截图。",
-      "evidence_refs": [
-        "evidence.0057"
-      ]
-    },
     {
       "blocker_id": "raw_screenshots_not_captured",
       "status": "blocked",
@@ -3195,7 +3218,7 @@
       "reason": "尚未通过 screenshot-capture-agent 证明真实 raw screenshots。",
       "unblock_action": "使用生成的 screenshot-shot-list.json 重跑 screenshot-capture-agent，并确保目标 app 在前台。",
       "evidence_refs": [
-        "evidence.0059"
+        "evidence.0061"
       ]
     },
     {
@@ -3205,7 +3228,7 @@
       "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
       "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。",
       "evidence_refs": [
-        "evidence.0058"
+        "evidence.0060"
       ]
     }
   ],

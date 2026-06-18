@@ -1,9 +1,9 @@
 {
   "status": "ok",
   "layer": "android_device_ui_smoke",
-  "target_serial": "emulator-5556",
+  "target_serial": "emulator-5554",
   "connected_devices": [
-    "emulator-5556"
+    "emulator-5554"
   ],
   "detected_packages": [
     "io.dcloud.HBuilder"
@@ -24,7 +24,7 @@
       "screenshot": "01-auth-test-ready.png"
     }
   ],
-  "automation_summary": "AUTOMATION_SUMMARY login=idle uid=none login_error=none session=signed_out token=token_missing device=precheck_blocked db=idle device_found=no user_device_found=no db_error=none",
+  "automation_summary": "AUTOMATION_SUMMARY login=failed uid=none login_error=Invalid errorOptions.type: none session=signed_out token=token_missing device=precheck_blocked db=idle device_found=no user_device_found=no db_error=none",
   "ui_summary": {
     "has_auth_test_ready": true,
     "has_auto_login": true,
@@ -55,25 +55,29 @@
   },
   "final_screenshot": "03-final-ui.png",
   "hbuilderx_stdout_tail": [
-    "17:28:06.166 HBuilderX Version: 5.07",
-    "17:28:06.789 项目 mobile 开始编译",
-    "17:28:08.411 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
-    "17:28:08.484 5.07",
-    "17:28:08.487 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
-    "17:28:08.604 正在编译中...",
-    "17:28:08.606 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
-    "17:28:09.208 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
-    "17:28:09.211 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
-    "17:28:09.215 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
-    "17:28:20.889 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
-    "17:28:38.321 项目 mobile 编译成功。",
-    "17:28:38.527 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
-    "17:28:38.536 \u001b[31mPID：18724\u001b[39m",
-    "17:28:38.539 \u001b[31m进程名称：adb.exe\u001b[39m",
-    "17:28:38.543 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
-    "17:28:38.546 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
-    "17:28:38.746 \u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\u001b[39m",
-    "17:28:39.606 正在建立手机连接..."
+    "18:50:07.004 HBuilderX Version: 5.07",
+    "18:50:18.097 项目 mobile 开始编译",
+    "18:50:36.101 当前项目的uniCloud使用的默认服务空间spaceId为：mp-748a182a-e5ab-47e4-bec5-e1e93cc56732",
+    "18:50:36.626 5.07",
+    "18:50:36.627 请注意运行模式下，因日志输出、sourcemap以及未压缩源码等原因，性能和包体积，均不及发行模式。",
+    "18:50:37.629 正在编译中...",
+    "18:50:37.631 编译会生成大量临时文件，杀毒软件监控时会影响编译速度，并造成CPU升高。推荐把项目目录添加到杀毒软件的监控排除名单中。[添加] [帮助]",
+    "18:50:42.877 \u001b[31m​Browserslist: caniuse-lite is outdated. Please run:\u001b[39m",
+    "18:50:42.878 \u001b[31m  npx update-browserslist-db@latest\u001b[39m",
+    "18:50:42.879 \u001b[31m  Why you should do it regularly: https://github.com/browserslist/update-db#readme​\u001b[39m",
+    "18:50:56.634 [警告⚠] `fixtures\\runtime\\current\\index.js` 文件体积超过 500KB，已跳过压缩以及 ES6 转 ES5 的处理，手机端使用过大的js库影响性能。",
+    "18:51:07.278 项目 mobile 编译成功。",
+    "18:51:08.244 \u001b[31m注：当前使用的 ADB 非 HBuilderX 内置或自定义版本：\u001b[39m",
+    "18:51:08.253 \u001b[31mPID：18724\u001b[39m",
+    "18:51:08.255 \u001b[31m进程名称：adb.exe\u001b[39m",
+    "18:51:08.260 \u001b[31m路径：C:/Users/Administrator/AppData/Local/Android/Sdk/platform-tools/adb.exe\u001b[39m",
+    "18:51:08.264 \u001b[31m可能存在 ADB 冲突，导致真机运行不刷新或无法重启。运行正常可忽略，如遇异常请前往 运行配置 中设置 ADB 路径\u001b[39m",
+    "18:51:08.765 \u001b[33m手机端调试基座版本号为5.07，与本地版本相同，跳过更新\u001b[39m",
+    "18:51:09.414 正在建立手机连接...",
+    "18:51:12.855 正在同步手机端程序文件...",
+    "18:51:15.265 同步手机端程序文件成功",
+    "18:51:16.725 正在启动HBuilder调试基座...",
+    "18:51:18.055 \u001b[31m应用【mobile】已启动\u001b[39m"
   ],
   "hbuilderx_stderr_tail": [],
   "blocking_reason": ""

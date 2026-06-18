@@ -1,6 +1,6 @@
 {
   "schema_version": "screenshot_shot_list.v1",
-  "generated_at": "2026-06-17T14:58:45Z",
+  "generated_at": "2026-06-18T10:36:12Z",
   "produced_by": "screenshot-storyboard",
   "draft_only": true,
   "can_use_for_submission": false,
@@ -39,9 +39,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0002",
-        "evidence.0029",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0030",
+        "evidence.0057",
+        "evidence.0058"
       ]
     },
     {
@@ -82,9 +82,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0004",
-        "evidence.0031",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0032",
+        "evidence.0057",
+        "evidence.0058"
       ]
     },
     {
@@ -120,9 +120,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0003",
-        "evidence.0030",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0031",
+        "evidence.0057",
+        "evidence.0058"
       ]
     },
     {
@@ -158,9 +158,9 @@
       "review_status": "NEED_HUMAN",
       "evidence_refs": [
         "evidence.0007",
-        "evidence.0034",
-        "evidence.0055",
-        "evidence.0056"
+        "evidence.0035",
+        "evidence.0057",
+        "evidence.0058"
       ]
     }
   ]

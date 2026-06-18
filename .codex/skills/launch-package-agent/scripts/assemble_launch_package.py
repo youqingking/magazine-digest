@@ -301,7 +301,7 @@ def agent_entry(agent: dict[str, Any], root: Path, reports_dir: Path) -> dict[st
     blockers = collect_blockers(agent, data, error)
     status = status_from_data(data, error, blockers)
     files = collect_files(agent, data, root, reports_dir)
-    return {
+    entry = {
         "agent_id": agent["agent_id"],
         "title": agent["title"],
         "purpose": agent["purpose"],
@@ -314,6 +314,17 @@ def agent_entry(agent: dict[str, Any], root: Path, reports_dir: Path) -> dict[st
         "generated_at": data.get("generated_at") if isinstance(data, dict) else None,
         "files": [record.__dict__ for record in files],
     }
+    if agent["agent_id"] == "screenshot-capture-agent" and isinstance(data, dict):
+        screenshots = data.get("screenshots")
+        entry["capture_status"] = data.get("capture_status")
+        entry["screenshot_count"] = len(screenshots) if isinstance(screenshots, list) else 0
+        if isinstance(screenshots, list):
+            entry["raw_screenshot_paths"] = [
+                item.get("path")
+                for item in screenshots
+                if isinstance(item, dict) and isinstance(item.get("path"), str)
+            ][:8]
+    return entry
 
 
 def dedupe_text(items: list[str]) -> list[str]:
@@ -406,6 +417,55 @@ def reconcile_stale_downstream_release_blockers(materials: list[dict[str, Any]])
                 stale.append({
                     **blocker,
                     "resolution": "latest_release_build_agent_passed",
+                })
+            else:
+                retained.append(blocker)
+
+        if not stale:
+            continue
+
+        material["blockers"] = retained
+        material["blocker_count"] = len(retained)
+        material.setdefault("resolved_stale_blockers", []).extend(stale)
+        if not retained and str(material["status"]).lower() in RED_STATUSES:
+            material["status"] = "needs_human"
+
+
+def screenshot_capture_has_raw_evidence(materials: list[dict[str, Any]]) -> bool:
+    for material in materials:
+        if material["agent_id"] != "screenshot-capture-agent":
+            continue
+        status = str(material["status"]).lower()
+        count = int(material.get("screenshot_count") or 0)
+        return count > 0 and status not in {"blocked", "missing", "invalid", "error", "fail", "failed"}
+    return False
+
+
+def stale_raw_screenshot_blocker(blocker: dict[str, Any]) -> bool:
+    if blocker.get("agent_id") != "screenshot-storyboard":
+        return False
+    text = " ".join(
+        str(blocker.get(key, ""))
+        for key in ("id", "reason", "unblock_action", "source")
+    ).lower()
+    return "raw_screenshots_not_captured" in text or "真实 raw screenshots" in text
+
+
+def reconcile_stale_storyboard_capture_blockers(materials: list[dict[str, Any]]) -> None:
+    if not screenshot_capture_has_raw_evidence(materials):
+        return
+
+    for material in materials:
+        if material["agent_id"] != "screenshot-storyboard":
+            continue
+
+        retained: list[dict[str, Any]] = []
+        stale: list[dict[str, Any]] = []
+        for blocker in material["blockers"]:
+            if stale_raw_screenshot_blocker(blocker):
+                stale.append({
+                    **blocker,
+                    "resolution": "latest_screenshot_capture_has_raw_evidence",
                 })
             else:
                 retained.append(blocker)
@@ -540,7 +600,7 @@ def action_category(blocker: dict[str, Any]) -> str:
             return "store_assets"
         return "store_listing_metadata"
     if agent_id in {"screenshot-storyboard", "screenshot-capture-agent"}:
-        if any(token in text for token in ("public_use", "商标", "误导", "公开上架", "公开使用")):
+        if any(token in text for token in ("public_use", "privacy_or_target_audience", "target audience", "商标", "误导", "公开上架", "公开使用", "目标受众", "隐私、data safety")):
             return "screenshot_public_review"
         return "real_screenshot_capture"
     return "final_repackage"
@@ -638,6 +698,57 @@ def store_listing_metadata_overrides(related: list[dict[str, Any]]) -> dict[str,
     }
 
 
+def real_screenshot_capture_overrides(related: list[dict[str, Any]]) -> dict[str, str] | None:
+    text = " ".join(
+        str(blocker.get(key, ""))
+        for blocker in related
+        for key in ("id", "reason", "unblock_action", "source")
+    ).lower()
+
+    if "device_missing" in text:
+        return {
+            "title": "启动或连接 Android 设备后捕获 raw screenshots",
+            "why": "screenshot-capture-agent 最新真实运行显示 adb 未发现在线 Android device/emulator；没有真实设备就无法证明截图来自真实 app UI。",
+            "done_when": "adb 至少发现 1 台在线 Android 设备或模拟器，并且 screenshot-capture-agent 对指定 shot 生成 raw PNG、设备、package、locale 和截图规格证据。",
+            "next_step": "启动 Android 模拟器或连接真机后，先运行 `adb devices -l` 确认在线；再运行 `python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json --shot-id shot_01_home_feed --launch`。如果已手动导航到目标页面，再加 `--navigation-verified`。",
+        }
+
+    if "target_app_not_foreground" in text:
+        return {
+            "title": "把目标 app 打到前台后捕获 raw screenshots",
+            "why": "screenshot-capture-agent 发现设备在线，但前台应用不是目标 app；不能把 launcher、系统页或非目标 app 当成商店截图证据。",
+            "done_when": "目标 package 位于前台，且每个 captured shot 都有 raw PNG、foreground package 和 route 导航证据。",
+            "next_step": "启动目标 app 或使用 capture 脚本的 `--launch`；确认目标页面在前台后按 `--shot-id` 逐张捕获。",
+        }
+
+    if "multi_shot_navigation_unverified" in text:
+        return {
+            "title": "按 shot-id 逐张导航并捕获 raw screenshots",
+            "why": "shot-list 包含多个 route；没有逐张导航证明时，不能把同一屏幕重复绑定成多张商店截图。",
+            "done_when": "每个 shot 都单独运行 capture，或在人工/自动导航完成后显式提供 `--navigation-verified`。",
+            "next_step": "按 `screenshot-shot-list.json` 中的 `shot_id` 逐张运行 screenshot-capture-agent；每张截图都确认 route 后再进入公开使用审核。",
+        }
+
+    if "debug_container_needs_human" in text or "google_play_spec_needs_work" in text:
+        return {
+            "title": "补齐 release app 与最终截图规格证据",
+            "why": (
+                "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，但当前运行的是 HBuilderX debug 容器，"
+                "且 raw Android screencap 还不是可直接提交的 24-bit 商店截图素材；其余 shot 也需要逐张补齐 route 证据。"
+            ),
+            "done_when": (
+                "安装 release package 后重跑，或由 owner 明确确认 debug 容器画面可代表最终 app；"
+                "shot-list 中每个必需 shot 都有 raw PNG、route、locale、device 和 commit 证据；最终截图完成规格转换和人工公开使用审核。"
+            ),
+            "next_step": (
+                "优先安装 `com.daowei2026.magazinedigest` release 包后重跑 capture；如果暂时只能使用 HBuilderX debug 容器，"
+                "需 owner 书面确认可代表最终体验。随后按 `screenshot-shot-list.json` 逐张捕获剩余 route，并把 raw PNG 转成符合 Google Play 要求的最终截图素材。"
+            ),
+        }
+
+    return None
+
+
 def build_owner_actions(blockers: list[dict[str, Any]], materials: list[dict[str, Any]]) -> list[dict[str, Any]]:
     grouped: dict[str, list[dict[str, Any]]] = {}
     for blocker in blockers:
@@ -660,6 +771,13 @@ def build_owner_actions(blockers: list[dict[str, Any]], materials: list[dict[str
             next_step = engineering_release_next_step(related, next_step)
         elif action_id == "store_listing_metadata":
             overrides = store_listing_metadata_overrides(related)
+            if overrides:
+                title = overrides["title"]
+                why = overrides["why"]
+                done_when = overrides["done_when"]
+                next_step = overrides["next_step"]
+        elif action_id == "real_screenshot_capture":
+            overrides = real_screenshot_capture_overrides(related)
             if overrides:
                 title = overrides["title"]
                 why = overrides["why"]
@@ -717,6 +835,10 @@ def material_usability(material: dict[str, Any]) -> dict[str, Any]:
         ),
     }
     can_use, cannot_use = by_agent.get(material["agent_id"], ("可用于内部复核。", "不能作为最终提交材料。"))
+    if material["agent_id"] == "screenshot-capture-agent" and int(material.get("screenshot_count") or 0) > 0:
+        count = int(material.get("screenshot_count") or 0)
+        can_use = f"可用于证明已从真实设备捕获 {count} 张 raw screenshot，并追溯 package、route、locale、commit 和 PNG 规格。"
+        cannot_use = "不能直接作为最终 Play Store 截图素材；仍需 release app/公开使用审核和 Google Play 规格转换。"
     if not blocked:
         can_use = f"{title} 当前未报告阻塞，可进入 owner 复核。"
         cannot_use = "仍需最终人工确认后再用于提交。"
@@ -1080,6 +1202,7 @@ def assemble(root: Path, output_dir: Path) -> dict[str, Any]:
     reports_dir = output_dir if output_dir.is_absolute() else root / output_dir
     materials = [agent_entry(agent, root, reports_dir) for agent in REQUIRED_AGENTS]
     reconcile_stale_downstream_release_blockers(materials)
+    reconcile_stale_storyboard_capture_blockers(materials)
     blockers = summarize_blockers(materials)
     overall_status, readiness, can_submit, readiness_reasons = classify_package(materials)
     owner_actions = build_owner_actions(blockers, materials)

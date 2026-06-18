@@ -1,8 +1,101 @@
 {
   "schema_version": "screenshot_capture_manifest.v1",
-  "generated_at": "2026-06-17T15:21:33Z",
-  "capture_status": "blocked",
-  "screenshots": [],
+  "generated_at": "2026-06-18T10:57:30Z",
+  "capture_status": "partial",
+  "screenshots": [
+    {
+      "shot_id": "shot_01_home_feed",
+      "path": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_01_home_feed-pages-feed-index-emulator-5554-1781780249.png",
+      "route": "pages/feed/index",
+      "route_path": "pages/feed/index",
+      "route_params": {},
+      "planned_route_from_storyboard": true,
+      "navigation_verified": true,
+      "route_verified": true,
+      "claim_ids": [
+        "listing_claim_digest_detail"
+      ],
+      "fixture_source": [
+        "mobile/pages.json:pages/feed/index",
+        "mobile/fixtures/runtime/current/runtime.bundle.json:discoveryCatalog.items"
+      ],
+      "visible_evidence": [
+        "首页/效率阅读入口",
+        "文章标题或摘要卡片",
+        "30 秒先读",
+        "消息摘要入口"
+      ],
+      "must_not_show": [
+        "不存在或未证明的功能",
+        "排名、评分、下载量、价格促销、限时优惠或 Play Store 表现暗示",
+        "真实个人隐私、手机号、邮箱、支付凭据、密钥或后台 token",
+        "系统 Launcher、HBuilderX 空壳、错误页、崩溃页或非目标 app 页面",
+        "Feed 诊断信息",
+        "debug/diagnostic 信息",
+        "开发态或诊断信息",
+        "未经授权确认的第三方出版物名称、文章标题或品牌露出"
+      ],
+      "shot_source_ref": "play-store-launch/reports/screenshot-shot-list.json",
+      "device": "emulator-5554",
+      "locale": "en-US",
+      "commit": "8305ecdf2508a4c173f7c1ede096528c6d559e7f",
+      "package": "io.dcloud.HBuilder",
+      "capture_build_type": "debug_container",
+      "foreground": {
+        "package": "io.dcloud.HBuilder",
+        "activity": "io.dcloud.PandoraEntryActivity",
+        "raw_match": "mCurrentFocus=Window{f4c5a50 u0 io.dcloud.HBuilder/io.dcloud.PandoraEntryActivity}"
+      },
+      "sha256": "sha256:371f1adeb2e3bca01e70574ed9ee464e84e63d007454563926809e944a55d4f7",
+      "byte_count": 399840,
+      "width": 1080,
+      "height": 2280,
+      "png_analysis": {
+        "path": "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_01_home_feed-pages-feed-index-emulator-5554-1781780249.png",
+        "sha256": "sha256:371f1adeb2e3bca01e70574ed9ee464e84e63d007454563926809e944a55d4f7",
+        "byte_count": 399840,
+        "is_png": true,
+        "width": 1080,
+        "height": 2280,
+        "bit_depth": 8,
+        "color_type": 6,
+        "has_alpha": true,
+        "basic_dimensions_pass": false,
+        "store_ready_candidate": false,
+        "blank_analysis": {
+          "status": "decoded_sample",
+          "sampled_pixels": 12000,
+          "distinct_sample_values": 61,
+          "likely_blank": false
+        }
+      },
+      "google_play_spec_check": {
+        "official_source": "https://support.google.com/googleplay/android-developer/answer/9866151?hl=en",
+        "basic_dimensions_pass": false,
+        "store_ready_candidate": false,
+        "failures": [
+          "dimension_or_ratio_failed",
+          "png_has_alpha",
+          "png_not_24_bit_truecolor"
+        ],
+        "review_status": "NEED_HUMAN",
+        "notes": [
+          "Google Play 公开使用仍需人工审核内容、裁切、安全区、商标和是否误导。",
+          "raw Android screencap 可能包含 alpha；含 alpha 时不能直接作为 24-bit PNG 上架素材。"
+        ]
+      },
+      "review_status": "NEED_HUMAN",
+      "human_review_required": true,
+      "evidence_refs": [
+        "evidence.0013",
+        "evidence.0014",
+        "evidence.0011",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0012"
+      ]
+    }
+  ],
   "blockers": [
     {
       "blocker_id": "debug_container_needs_human",
@@ -16,27 +109,18 @@
       ]
     },
     {
-      "blocker_id": "target_app_not_foreground",
-      "status": "blocked",
+      "blocker_id": "google_play_spec_needs_work",
+      "status": "needs_human",
       "review_status": "NEED_HUMAN",
-      "reason": "目标 package 未处于前台。foreground=com.google.android.apps.nexuslauncher target=io.dcloud.HBuilder",
-      "unblock_action": "手动打开目标 app/目标页面，或使用 --launch 后确认 app 能启动，再重跑。",
+      "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
+      "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。",
       "evidence_refs": [
-        "evidence.0007",
-        "evidence.0008"
-      ]
-    },
-    {
-      "blocker_id": "multi_shot_navigation_unverified",
-      "status": "blocked",
-      "review_status": "NEED_HUMAN",
-      "reason": "上游 shot-list 包含多个 shot，但未指定 --shot-id 或 --navigation-verified；不能把当前屏幕重复写成多个 route 的截图证据。",
-      "unblock_action": "每次使用 --shot-id 捕获一个 shot，或在自动/人工导航完成后显式传入 --navigation-verified。",
-      "evidence_refs": [
-        "evidence.0011",
-        "evidence.0012",
         "evidence.0013",
-        "evidence.0014"
+        "evidence.0014",
+        "evidence.0011",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0012"
       ]
     },
     {
@@ -45,7 +129,14 @@
       "review_status": "NEED_HUMAN",
       "reason": "截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。",
       "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。",
-      "evidence_refs": []
+      "evidence_refs": [
+        "evidence.0013",
+        "evidence.0014",
+        "evidence.0011",
+        "evidence.0007",
+        "evidence.0008",
+        "evidence.0012"
+      ]
     }
   ],
   "review_status": "NEED_HUMAN"

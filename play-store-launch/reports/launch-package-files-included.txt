@@ -29,3 +29,4 @@ play-store-launch/reports/screenshot-capture-agent-output.json
 play-store-launch/reports/screenshot-capture-agent.zh.md
 play-store-launch/reports/screenshot-capture-agent-evidence.jsonl
 play-store-launch/reports/screenshot-capture-manifest.json
+play-store-launch/screenshots/raw/android/en-US
