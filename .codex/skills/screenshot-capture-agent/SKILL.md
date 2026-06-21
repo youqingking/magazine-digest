@@ -59,6 +59,27 @@ python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --ro
 python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-id shot_01_home_feed --navigation-verified
 ```
 
+如果项目已有可从命令行打开指定 route 的启动器，优先把它写成 JSON 字符串数组文件，再由脚本逐 shot 执行。脚本会把 `{route_path}`、`{route_query}`、`{serial}` 等占位符替换成当前 shot 的值，并用 `uiautomator dump` 中出现的 route 字符串作为导航证据：
+
+```json
+[
+  "tool-or-cli",
+  "launch",
+  "--device",
+  "{serial}",
+  "--pagePath",
+  "{route_path}",
+  "--pageQuery",
+  "{route_query}"
+]
+```
+
+```powershell
+python .codex/skills/screenshot-capture-agent/scripts/screenshot_capture.py --root . --shot-list play-store-launch/reports/screenshot-shot-list.json --route-launch-command-file play-store-launch/reports/screenshot-capture-route-launch-command.json
+```
+
+不要把同一当前屏幕强行绑定到多个 shot。多 shot 捕获只有在逐 shot route 启动命令、`--shot-id` 逐张运行，或明确 `--navigation-verified` 且外部已逐张导航时才可接受。
+
 如果人工已把模拟器停在目标 app 的目标页面，可显式允许捕获当前屏幕：
 
 ```powershell

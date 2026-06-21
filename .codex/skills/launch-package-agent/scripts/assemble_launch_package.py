@@ -733,16 +733,16 @@ def real_screenshot_capture_overrides(related: list[dict[str, Any]]) -> dict[str
         return {
             "title": "补齐 release app 与最终截图规格证据",
             "why": (
-                "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，但当前运行的是 HBuilderX debug 容器，"
-                "且 raw Android screencap 还不是可直接提交的 24-bit 商店截图素材；其余 shot 也需要逐张补齐 route 证据。"
+                "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，且 route 已有导航证据；"
+                "但当前运行的是 HBuilderX debug 容器，raw Android screencap 也还不是可直接提交的 24-bit 商店截图素材。"
             ),
             "done_when": (
                 "安装 release package 后重跑，或由 owner 明确确认 debug 容器画面可代表最终 app；"
-                "shot-list 中每个必需 shot 都有 raw PNG、route、locale、device 和 commit 证据；最终截图完成规格转换和人工公开使用审核。"
+                "最终截图完成尺寸、alpha/格式转换和人工公开使用审核。"
             ),
             "next_step": (
                 "优先安装 `com.daowei2026.magazinedigest` release 包后重跑 capture；如果暂时只能使用 HBuilderX debug 容器，"
-                "需 owner 书面确认可代表最终体验。随后按 `screenshot-shot-list.json` 逐张捕获剩余 route，并把 raw PNG 转成符合 Google Play 要求的最终截图素材。"
+                "需 owner 书面确认可代表最终体验。随后把已捕获 raw PNG 转成符合 Google Play 要求的最终截图素材。"
             ),
         }
 

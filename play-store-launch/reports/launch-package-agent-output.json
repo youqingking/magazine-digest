@@ -1,6 +1,6 @@
 {
   "schema_version": "launch_package_agent_output.v1",
-  "generated_at": "2026-06-18T11:06:36Z",
+  "generated_at": "2026-06-18T12:30:52Z",
   "proof_mode": "upstream_report_packaging_only",
   "overall_status": "blocked",
   "readiness": "RED",
@@ -484,8 +484,8 @@
           "source": "blockers",
           "id": "google_play_spec_needs_work",
           "status": "needs_human",
-          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
-          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
+          "reason": "4 张 PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；affected_shots=shot_01_home_feed, shot_02_detail_deep_read, shot_03_sources_follow, shot_04_profile_summary",
+          "unblock_action": "按 Google Play 截图规格转换/裁切，并对最终截图素材重新做尺寸、alpha 和公开使用审核。"
         },
         {
           "agent_id": "screenshot-capture-agent",
@@ -498,35 +498,35 @@
           "unblock_action": "由 owner/design/legal 审核 raw 截图和最终商店图。"
         }
       ],
-      "generated_at": "2026-06-18T10:57:30Z",
+      "generated_at": "2026-06-18T12:27:21Z",
       "files": [
         {
           "source_agent": "screenshot-capture-agent",
           "role": "machine_report",
           "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
           "exists": true,
-          "size_bytes": 41452
+          "size_bytes": 324501
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "human_report",
           "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
           "exists": true,
-          "size_bytes": 3797
+          "size_bytes": 6340
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "evidence_jsonl",
           "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
           "exists": true,
-          "size_bytes": 13393
+          "size_bytes": 231496
         },
         {
           "source_agent": "screenshot-capture-agent",
           "role": "manifest_json",
           "path": "play-store-launch/reports/screenshot-capture-manifest.json",
           "exists": true,
-          "size_bytes": 5588
+          "size_bytes": 21372
         },
         {
           "source_agent": "screenshot-capture-agent",
@@ -537,9 +537,12 @@
         }
       ],
       "capture_status": "partial",
-      "screenshot_count": 1,
+      "screenshot_count": 4,
       "raw_screenshot_paths": [
-        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_01_home_feed-pages-feed-index-emulator-5554-1781780249.png"
+        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_01_home_feed-pages-feed-index-emulator-5554-1781785483.png",
+        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_02_detail_deep_read-pages-detail-index-emulator-5554-1781785536.png",
+        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_03_sources_follow-pages-search-index-emulator-5554-1781785588.png",
+        "C:/Users/Administrator/.codex/worktrees/66ef/magazine-digest/play-store-launch/screenshots/raw/android/en-US/shot_04_profile_summary-pages-profile-index-emulator-5554-1781785641.png"
       ]
     }
   ],
@@ -664,7 +667,7 @@
       "title": "真实截图捕获",
       "status": "partial",
       "owner": "工程/设计",
-      "can_use_for": "可用于证明已从真实设备捕获 1 张 raw screenshot，并追溯 package、route、locale、commit 和 PNG 规格。",
+      "can_use_for": "可用于证明已从真实设备捕获 4 张 raw screenshot，并追溯 package、route、locale、commit 和 PNG 规格。",
       "cannot_use_for": "不能直接作为最终 Play Store 截图素材；仍需 release app/公开使用审核和 Google Play 规格转换。",
       "blocker_count": 3,
       "top_blockers": [
@@ -675,8 +678,8 @@
         },
         {
           "id": "google_play_spec_needs_work",
-          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
-          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
+          "reason": "4 张 PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；affected_shots=shot_01_home_feed, shot_02_detail_deep_read, shot_03_sources_follow, shot_04_profile_summary",
+          "unblock_action": "按 Google Play 截图规格转换/裁切，并对最终截图素材重新做尺寸、alpha 和公开使用审核。"
         },
         {
           "id": "截图公开使用未审核",
@@ -860,10 +863,10 @@
       "priority": "P0",
       "owner": "工程/设计",
       "title": "补齐 release app 与最终截图规格证据",
-      "why": "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，但当前运行的是 HBuilderX debug 容器，且 raw Android screencap 还不是可直接提交的 24-bit 商店截图素材；其余 shot 也需要逐张补齐 route 证据。",
-      "done_when": "安装 release package 后重跑，或由 owner 明确确认 debug 容器画面可代表最终 app；shot-list 中每个必需 shot 都有 raw PNG、route、locale、device 和 commit 证据；最终截图完成规格转换和人工公开使用审核。",
-      "next_step": "优先安装 `com.daowei2026.magazinedigest` release 包后重跑 capture；如果暂时只能使用 HBuilderX debug 容器，需 owner 书面确认可代表最终体验。随后按 `screenshot-shot-list.json` 逐张捕获剩余 route，并把 raw PNG 转成符合 Google Play 要求的最终截图素材。",
-      "related_blocker_count": 2,
+      "why": "最新 screenshot-capture-agent 已从真实设备捕获到 raw PNG，且 route 已有导航证据；但当前运行的是 HBuilderX debug 容器，raw Android screencap 也还不是可直接提交的 24-bit 商店截图素材。",
+      "done_when": "安装 release package 后重跑，或由 owner 明确确认 debug 容器画面可代表最终 app；最终截图完成尺寸、alpha/格式转换和人工公开使用审核。",
+      "next_step": "优先安装 `com.daowei2026.magazinedigest` release 包后重跑 capture；如果暂时只能使用 HBuilderX debug 容器，需 owner 书面确认可代表最终体验。随后把已捕获 raw PNG 转成符合 Google Play 要求的最终截图素材。",
+      "related_blocker_count": 1,
       "related_blockers": [
         {
           "agent_id": "screenshot-capture-agent",
@@ -874,16 +877,6 @@
           "status": "needs_human",
           "reason": "当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。",
           "unblock_action": "人工确认 debug 容器画面可代表目标 app，或安装 release package 后重跑。"
-        },
-        {
-          "agent_id": "screenshot-capture-agent",
-          "agent_title": "真实截图捕获",
-          "owner": "工程/设计",
-          "source": "blockers",
-          "id": "google_play_spec_needs_work",
-          "status": "needs_human",
-          "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
-          "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
         }
       ]
     },
@@ -927,7 +920,7 @@
       "why": "即使 raw screenshot 捕获成功，也需要确认标题、裁切、安全区、第三方内容、商标和宣传 claim 不误导。",
       "done_when": "所有最终商店截图均完成公开使用、内容授权、商标和 claim 审核。",
       "next_step": "在 raw screenshots 捕获通过后，基于真实截图完成设计稿并进行公开使用审核。",
-      "related_blocker_count": 2,
+      "related_blocker_count": 3,
       "related_blockers": [
         {
           "agent_id": "screenshot-storyboard",
@@ -938,6 +931,16 @@
           "status": "needs_human",
           "reason": "隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
           "unblock_action": "完成 privacy/data safety/target audience 人工审核后再批准公开截图。"
+        },
+        {
+          "agent_id": "screenshot-capture-agent",
+          "agent_title": "真实截图捕获",
+          "owner": "工程/设计",
+          "source": "blockers",
+          "id": "google_play_spec_needs_work",
+          "status": "needs_human",
+          "reason": "4 张 PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；affected_shots=shot_01_home_feed, shot_02_detail_deep_read, shot_03_sources_follow, shot_04_profile_summary",
+          "unblock_action": "按 Google Play 截图规格转换/裁切，并对最终截图素材重新做尺寸、alpha 和公开使用审核。"
         },
         {
           "agent_id": "screenshot-capture-agent",
@@ -1131,8 +1134,8 @@
       "source": "blockers",
       "id": "google_play_spec_needs_work",
       "status": "needs_human",
-      "reason": "PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor",
-      "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。"
+      "reason": "4 张 PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；affected_shots=shot_01_home_feed, shot_02_detail_deep_read, shot_03_sources_follow, shot_04_profile_summary",
+      "unblock_action": "按 Google Play 截图规格转换/裁切，并对最终截图素材重新做尺寸、alpha 和公开使用审核。"
     },
     {
       "agent_id": "screenshot-capture-agent",
@@ -1151,7 +1154,7 @@
     "Google Play Data safety 未通过：加密传输：静态项目证据不能证明所有传输路径和第三方 SDK 均加密传输。；隐私政策 URL：未发现可用于 Data safety 的隐私政策 URL。；儿童/敏感数据风险：未发现足够证据确认是否面向儿童或处理敏感数据。；另有 1 项",
     "Google Play 主商店 listing 未通过：gate:preview_assets：app icon、feature graphic 或 screenshots 缺失/不合规。；gate:human_required_fields：privacy policy URL、developer contact、category、content rating 或 target audience 仍需人工提供/确认。；privacy_policy_url：需要人工确认该字段适用于当前 app 和 Google Play Console。；另有 4 项",
     "截图 storyboard 未通过：privacy_or_target_audience_needs_human：隐私、Data safety、目标年龄或敏感内容仍有人工确认项，公开截图文案需同步确认。",
-    "真实截图捕获 未通过：debug_container_needs_human：当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。；google_play_spec_needs_work：PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；google_play_public_use_needs_human：截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。"
+    "真实截图捕获 未通过：debug_container_needs_human：当前目标 package 是 HBuilderX debug 容器，不能自动等同于最终 release app 体验。；google_play_spec_needs_work：4 张 PNG 基础规格存在风险：dimension_or_ratio_failed, png_has_alpha, png_not_24_bit_truecolor；affected_shots=shot_01_home_feed, shot_02_detail_deep_read, shot_03_sources_follow, shot_04_profile_summary；google_play_public_use_needs_human：截图公开上架使用必须人工审核内容、裁切、安全区、商标和是否误导。"
   ],
   "included_files": [
     {
@@ -1348,28 +1351,28 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
       "exists": true,
-      "size_bytes": 41452
+      "size_bytes": 324501
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
       "exists": true,
-      "size_bytes": 3797
+      "size_bytes": 6340
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
       "exists": true,
-      "size_bytes": 13393
+      "size_bytes": 231496
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "manifest_json",
       "path": "play-store-launch/reports/screenshot-capture-manifest.json",
       "exists": true,
-      "size_bytes": 5588
+      "size_bytes": 21372
     },
     {
       "source_agent": "screenshot-capture-agent",

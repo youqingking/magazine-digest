@@ -1,6 +1,6 @@
 {
   "schema_version": "launch_package_manifest.v1",
-  "generated_at": "2026-06-18T11:06:36Z",
+  "generated_at": "2026-06-18T12:30:52Z",
   "readiness": "RED",
   "can_submit_google_play": false,
   "included_files": [
@@ -198,28 +198,28 @@
       "role": "machine_report",
       "path": "play-store-launch/reports/screenshot-capture-agent-output.json",
       "exists": true,
-      "size_bytes": 41452
+      "size_bytes": 324501
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "human_report",
       "path": "play-store-launch/reports/screenshot-capture-agent.zh.md",
       "exists": true,
-      "size_bytes": 3797
+      "size_bytes": 6340
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "evidence_jsonl",
       "path": "play-store-launch/reports/screenshot-capture-agent-evidence.jsonl",
       "exists": true,
-      "size_bytes": 13393
+      "size_bytes": 231496
     },
     {
       "source_agent": "screenshot-capture-agent",
       "role": "manifest_json",
       "path": "play-store-launch/reports/screenshot-capture-manifest.json",
       "exists": true,
-      "size_bytes": 5588
+      "size_bytes": 21372
     },
     {
       "source_agent": "screenshot-capture-agent",

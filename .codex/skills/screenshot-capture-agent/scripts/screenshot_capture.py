@@ -11,6 +11,7 @@ import shutil
 import struct
 import subprocess
 import time
+from urllib.parse import urlencode
 import zlib
 from datetime import datetime, timezone
 from pathlib import Path
@@ -189,6 +190,178 @@ def run_binary(command: list[str], timeout: int = 30) -> dict[str, Any]:
             "byte_count": 0,
             "timed_out": False,
         }
+
+
+def load_route_launch_command_template(value: str) -> tuple[list[str], str]:
+    value = value.lstrip("\ufeff")
+    if not value.strip():
+        return [], ""
+    try:
+        data = json.loads(value)
+    except json.JSONDecodeError as exc:
+        return [], f"route launch command JSON 解析失败：{exc}"
+    if not isinstance(data, list) or not data or not all(isinstance(item, str) and item for item in data):
+        return [], "route launch command JSON 必须是非空字符串数组。"
+    return data, ""
+
+
+def route_query_string(params: Any) -> str:
+    if not isinstance(params, dict) or not params:
+        return ""
+    return urlencode({str(key): str(value) for key, value in params.items()})
+
+
+def format_route_launch_command(template: list[str], root: Path, serial: str, package: str, shot: dict[str, Any]) -> list[str]:
+    route_path = str(shot.get("route_path") or shot.get("route") or "")
+    route_query = route_query_string(shot.get("route_params"))
+    context = {
+        "root": str(root),
+        "root_posix": as_posix(root),
+        "mobile_root": str(root / "mobile"),
+        "mobile_root_posix": as_posix(root / "mobile"),
+        "serial": serial,
+        "package": package,
+        "shot_id": str(shot.get("shot_id") or ""),
+        "route": str(shot.get("route") or route_path),
+        "route_path": route_path,
+        "route_query": route_query,
+    }
+    return [part.format(**context) for part in template]
+
+
+def query_foreground(adb: str, serial: str, evidence: list[dict[str, Any]], key_prefix: str) -> tuple[dict[str, str], list[str]]:
+    refs: list[str] = []
+    window = run_command(adb_cmd(adb, serial, "shell", "dumpsys", "window"), timeout=20)
+    activity = run_command(adb_cmd(adb, serial, "shell", "dumpsys", "activity", "activities"), timeout=20)
+    refs.append(add_command_evidence(evidence, window, f"{key_prefix}.dumpsys.window", confidence=0.7))
+    refs.append(add_command_evidence(evidence, activity, f"{key_prefix}.dumpsys.activity.activities", confidence=0.7))
+    return parse_foreground_package(window.get("stdout", ""), activity.get("stdout", "")), refs
+
+
+def dump_ui_xml(adb: str, serial: str, evidence: list[dict[str, Any]], key_prefix: str) -> tuple[str, list[str]]:
+    refs: list[str] = []
+    dump = run_command(adb_cmd(adb, serial, "shell", "uiautomator", "dump", "/sdcard/codex-screenshot-capture-ui.xml"), timeout=15)
+    refs.append(add_command_evidence(evidence, dump, f"{key_prefix}.uiautomator.dump", confidence=0.75))
+    if dump["exit_code"] != 0:
+        return "", refs
+    cat = run_command(adb_cmd(adb, serial, "exec-out", "cat", "/sdcard/codex-screenshot-capture-ui.xml"), timeout=15)
+    refs.append(add_command_evidence(evidence, cat, f"{key_prefix}.uiautomator.xml", confidence=0.75))
+    return cat.get("stdout", ""), refs
+
+
+def run_route_launch_command(
+    *,
+    template: list[str],
+    root: Path,
+    output_dir: Path,
+    adb: str,
+    serial: str,
+    package: str,
+    shot: dict[str, Any],
+    evidence: list[dict[str, Any]],
+    timeout_seconds: int,
+    settle_seconds: float,
+) -> dict[str, Any]:
+    command = format_route_launch_command(template, root, serial, package, shot)
+    shot_id = safe_name(str(shot.get("shot_id") or "shot"))
+    route_path = str(shot.get("route_path") or shot.get("route") or "")
+    log_dir = output_dir / "screenshot-capture-route-launch-logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    stdout_path = log_dir / f"{shot_id}.{int(time.time())}.stdout.log"
+    stderr_path = log_dir / f"{shot_id}.{int(time.time())}.stderr.log"
+    started_at = utc_now()
+    refs: list[str] = []
+    route_found = False
+    ui_excerpt = ""
+    exit_code: int | None = None
+    timed_out = False
+    foreground: dict[str, str] = {"package": "", "activity": "", "raw_match": ""}
+    foreground_refs: list[str] = []
+    route_detect_ref = add_evidence(
+        evidence,
+        source_type="route_navigation_command",
+        source_ref=command_display(command),
+        observed_key=f"route_launch.{shot_id}.start",
+        observed_value={
+            "shot_id": shot.get("shot_id"),
+            "route_path": route_path,
+            "route_query": route_query_string(shot.get("route_params")),
+            "stdout_log": as_posix(stdout_path),
+            "stderr_log": as_posix(stderr_path),
+        },
+        parser="subprocess_popen",
+        confidence=0.8,
+    )
+    refs.append(route_detect_ref)
+
+    stdout_handle = stdout_path.open("ab")
+    stderr_handle = stderr_path.open("ab")
+    process: subprocess.Popen[bytes] | None = None
+    try:
+        process = subprocess.Popen(command, cwd=root, stdin=subprocess.DEVNULL, stdout=stdout_handle, stderr=stderr_handle)
+        deadline = time.time() + max(1, timeout_seconds)
+        while time.time() < deadline:
+            ui_xml, ui_refs = dump_ui_xml(adb, serial, evidence, f"route_launch.{shot_id}")
+            refs.extend(ui_refs)
+            ui_excerpt = excerpt(ui_xml, 500)
+            if route_path and route_path in ui_xml:
+                route_found = True
+                break
+            if process.poll() is not None:
+                break
+            time.sleep(2)
+        exit_code = process.poll()
+        if not route_found and exit_code is None and time.time() >= deadline:
+            timed_out = True
+        if route_found and settle_seconds > 0:
+            time.sleep(settle_seconds)
+    finally:
+        if process is not None and process.poll() is None:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait(timeout=5)
+        if process is not None:
+            exit_code = process.returncode
+        stdout_handle.close()
+        stderr_handle.close()
+
+    foreground, foreground_refs = query_foreground(adb, serial, evidence, f"route_launch.{shot_id}.foreground")
+    refs.extend(foreground_refs)
+    refs.append(add_evidence(
+        evidence,
+        source_type="route_navigation_result",
+        source_ref=command_display(command),
+        observed_key=f"route_launch.{shot_id}.result",
+        observed_value={
+            "shot_id": shot.get("shot_id"),
+            "route_path": route_path,
+            "route_found_in_ui_xml": route_found,
+            "foreground": foreground,
+            "exit_code": exit_code,
+            "timed_out": timed_out,
+            "started_at": started_at,
+            "finished_at": utc_now(),
+            "stdout_log": as_posix(stdout_path),
+            "stderr_log": as_posix(stderr_path),
+            "ui_xml_excerpt": ui_excerpt,
+        },
+        parser="route_launch_and_uiautomator",
+        confidence=0.9 if route_found else 0.35,
+    ))
+    return {
+        "command": command_display(command),
+        "route_found": route_found,
+        "foreground": foreground,
+        "foreground_refs": foreground_refs,
+        "evidence_refs": refs,
+        "exit_code": exit_code,
+        "timed_out": timed_out,
+        "stdout_log": as_posix(stdout_path),
+        "stderr_log": as_posix(stderr_path),
+    }
 
 
 def add_evidence(
@@ -856,6 +1029,7 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
     claims: list[dict[str, Any]] = []
     screenshots: list[dict[str, Any]] = []
     attempts: list[dict[str, Any]] = []
+    spec_failure_items: list[dict[str, Any]] = []
 
     commit = git_commit(root)
     adb = find_adb(args.adb)
@@ -863,6 +1037,26 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
     adb_ref = add_evidence(evidence, source_type="tooling", source_ref="adb", observed_key="adb.path", observed_value=adb or "missing", parser="which", confidence=1.0 if adb else 0.2)
     if not adb:
         blockers.append({"blocker_id": "adb_missing", "status": "blocked", "review_status": NEED_HUMAN, "reason": "未发现 adb。", "unblock_action": "安装 Android SDK platform-tools 或通过 --adb 指定 adb 路径。", "evidence_refs": [adb_ref]})
+    route_launch_source = args.route_launch_command_json
+    if args.route_launch_command_file:
+        route_launch_file = path_for(root, args.route_launch_command_file)
+        route_launch_source = read_text(route_launch_file)
+        if not route_launch_source:
+            route_launch_error = f"route launch command file 不存在或为空：{rel_to_root(route_launch_file, root)}"
+            route_launch_template = []
+        else:
+            route_launch_template, route_launch_error = load_route_launch_command_template(route_launch_source)
+    else:
+        route_launch_template, route_launch_error = load_route_launch_command_template(route_launch_source)
+    if route_launch_error:
+        blockers.append({
+            "blocker_id": "route_launch_command_invalid",
+            "status": "blocked",
+            "review_status": NEED_HUMAN,
+            "reason": route_launch_error,
+            "unblock_action": "传入 JSON 字符串数组或 --route-launch-command-file，例如 [\"tool\",\"--pagePath\",\"{route_path}\"]；不要传 shell 字符串。",
+            "evidence_refs": [adb_ref],
+        })
 
     devices: list[dict[str, Any]] = []
     selected_serial = ""
@@ -925,13 +1119,9 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
     foreground = {"package": "", "activity": "", "raw_match": ""}
     foreground_refs: list[str] = []
     if adb and selected_serial:
-        window = run_command(adb_cmd(adb, selected_serial, "shell", "dumpsys", "window"), timeout=20)
-        activity = run_command(adb_cmd(adb, selected_serial, "shell", "dumpsys", "activity", "activities"), timeout=20)
-        foreground_refs.append(add_command_evidence(evidence, window, "dumpsys.window", confidence=0.7))
-        foreground_refs.append(add_command_evidence(evidence, activity, "dumpsys.activity.activities", confidence=0.7))
-        foreground = parse_foreground_package(window.get("stdout", ""), activity.get("stdout", ""))
+        foreground, foreground_refs = query_foreground(adb, selected_serial, evidence, "initial_foreground")
     foreground_matches = bool(selected_package and foreground.get("package") == selected_package)
-    if selected_package and not foreground_matches:
+    if selected_package and not foreground_matches and not route_launch_template:
         blockers.append({
             "blocker_id": "target_app_not_foreground",
             "status": "blocked",
@@ -957,7 +1147,7 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
             parser="cli",
             confidence=0.7,
         )
-    multi_shot_safe = len(shot_plan) <= 1 or bool(args.shot_id) or bool(args.navigation_verified) or bool(args.allow_multi_shot_current_screen)
+    multi_shot_safe = len(shot_plan) <= 1 or bool(args.shot_id) or bool(args.navigation_verified) or bool(args.allow_multi_shot_current_screen) or bool(route_launch_template)
     if shot_plan and not multi_shot_safe:
         blockers.append({
             "blocker_id": "multi_shot_navigation_unverified",
@@ -970,12 +1160,49 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
     route_confirmed = bool(args.navigation_verified)
     effective_locale = args.locale or next((str(shot.get("locale")) for shot in shot_plan if shot.get("locale")), "") or "en-US"
 
-    can_attempt_capture = bool(adb and selected_serial and selected_package and foreground_matches and shot_plan and multi_shot_safe)
+    can_attempt_capture = bool(adb and selected_serial and selected_package and (foreground_matches or route_launch_template) and shot_plan and multi_shot_safe)
     if can_attempt_capture:
         raw_dir.mkdir(parents=True, exist_ok=True)
         for shot in shot_plan:
             shot_id = safe_name(shot["shot_id"])
             route_name = safe_name(shot.get("route_path") or shot.get("route", "route"))
+            shot_route_confirmed = bool(args.navigation_verified)
+            shot_foreground = foreground
+            shot_foreground_refs = list(foreground_refs)
+            shot_navigation_refs: list[str] = [navigation_ref] if navigation_ref else []
+            if route_launch_template:
+                nav = run_route_launch_command(
+                    template=route_launch_template,
+                    root=root,
+                    output_dir=output_dir,
+                    adb=adb,
+                    serial=selected_serial,
+                    package=selected_package,
+                    shot=shot,
+                    evidence=evidence,
+                    timeout_seconds=max(1, args.route_launch_timeout_seconds),
+                    settle_seconds=max(0.0, args.route_launch_settle_seconds),
+                )
+                shot_navigation_refs.extend(nav["evidence_refs"])
+                shot_foreground = nav["foreground"]
+                shot_foreground_refs = nav["foreground_refs"]
+                shot_route_confirmed = bool(nav["route_found"]) or bool(args.navigation_verified)
+                if not selected_package or shot_foreground.get("package") != selected_package:
+                    attempts.append({
+                        "shot_id": shot["shot_id"],
+                        "status": "blocked",
+                        "reason": "route 启动命令执行后目标 app 未处于前台。",
+                        "evidence_refs": nav["evidence_refs"],
+                    })
+                    blockers.append({
+                        "blocker_id": "target_app_not_foreground",
+                        "status": "blocked",
+                        "review_status": NEED_HUMAN,
+                        "reason": f"shot {shot['shot_id']} route 启动后目标 package 未处于前台。foreground={shot_foreground.get('package') or 'unknown'} target={selected_package}",
+                        "unblock_action": "检查 route 启动命令模板、设备连接和目标 app 安装状态后重跑。",
+                        "evidence_refs": nav["evidence_refs"],
+                    })
+                    continue
             output_path = raw_dir / f"{shot_id}-{route_name}-{selected_serial}-{int(time.time())}.png"
             result = run_binary(adb_cmd(adb, selected_serial, "exec-out", "screencap", "-p"), timeout=args.capture_timeout_seconds)
             command_ref = add_evidence(
@@ -1010,8 +1237,8 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
                 "route_path": shot.get("route_path", shot.get("route", NEED_HUMAN)),
                 "route_params": shot.get("route_params", {}),
                 "planned_route_from_storyboard": bool(shot.get("planned_route_from_storyboard")),
-                "navigation_verified": route_confirmed,
-                "route_verified": route_confirmed,
+                "navigation_verified": shot_route_confirmed,
+                "route_verified": shot_route_confirmed,
                 "claim_ids": shot.get("claim_ids", []),
                 "fixture_source": shot.get("fixture_source", []),
                 "visible_evidence": shot.get("visible_evidence", []),
@@ -1022,7 +1249,7 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
                 "commit": commit,
                 "package": selected_package,
                 "capture_build_type": capture_build_type,
-                "foreground": foreground,
+                "foreground": shot_foreground,
                 "sha256": analysis["sha256"],
                 "byte_count": analysis["byte_count"],
                 "width": analysis["width"],
@@ -1031,14 +1258,26 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
                 "google_play_spec_check": spec,
                 "review_status": NEED_HUMAN,
                 "human_review_required": True,
-                "evidence_refs": [command_ref, png_ref] + shot.get("evidence_refs", []) + foreground_refs + ([navigation_ref] if navigation_ref else []),
+                "evidence_refs": [command_ref, png_ref] + shot.get("evidence_refs", []) + shot_foreground_refs + shot_navigation_refs,
             }
             screenshots.append(screenshot)
             attempts.append({"shot_id": shot["shot_id"], "status": "captured", "reason": "真实 adb screencap 写入 raw PNG；公开使用仍需人工审核。", "screenshot_path": as_posix(output_path), "evidence_refs": screenshot["evidence_refs"]})
-            if not route_confirmed:
+            if not shot_route_confirmed:
                 blockers.append({"blocker_id": "route_not_verified", "status": "needs_human", "review_status": NEED_HUMAN, "reason": "截图 route 仅来自上游规划，设备当前页面未由导航证据证明。", "unblock_action": "人工确认当前截图对应 route/scenario，或在完成导航证明后用 --navigation-verified 重跑。", "evidence_refs": screenshot["evidence_refs"]})
             if spec["failures"]:
-                blockers.append({"blocker_id": "google_play_spec_needs_work", "status": "needs_human", "review_status": NEED_HUMAN, "reason": f"PNG 基础规格存在风险：{', '.join(spec['failures'])}", "unblock_action": "按 Google Play 截图规格转换/裁切并人工审核。", "evidence_refs": screenshot["evidence_refs"]})
+                spec_failure_items.append({"shot_id": shot["shot_id"], "failures": spec["failures"], "evidence_refs": screenshot["evidence_refs"]})
+    if spec_failure_items:
+        failure_names = sorted({failure for item in spec_failure_items for failure in item["failures"]})
+        affected = ", ".join(str(item["shot_id"]) for item in spec_failure_items)
+        blockers.append({
+            "blocker_id": "google_play_spec_needs_work",
+            "status": "needs_human",
+            "review_status": NEED_HUMAN,
+            "reason": f"{len(spec_failure_items)} 张 PNG 基础规格存在风险：{', '.join(failure_names)}；affected_shots={affected}",
+            "unblock_action": "按 Google Play 截图规格转换/裁切，并对最终截图素材重新做尺寸、alpha 和公开使用审核。",
+            "evidence_refs": [ref for item in spec_failure_items for ref in item.get("evidence_refs", [])][:40],
+        })
+    route_confirmed = bool(screenshots) and all(bool(shot.get("route_verified")) for shot in screenshots)
     hashes: dict[str, list[str]] = {}
     for screenshot in screenshots:
         hashes.setdefault(str(screenshot.get("sha256")), []).append(str(screenshot.get("shot_id")))
@@ -1068,11 +1307,15 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
     add_claim(claims, claim_id="screenshot.environment", question="是否发现 adb 和 Android device/emulator", status="observed_in_repo" if adb and selected_serial else "blocked", claim_class="C0", evidence_refs=scan_refs or [adb_ref], value={"adb": adb, "selected_serial": selected_serial}, confidence=0.9 if adb and selected_serial else 0.3, human_review_required=False)
     add_claim(claims, claim_id="screenshot.upstream_storyboard", question="是否消费上游 storyboard handoff/shot-list", status="observed_in_repo" if storyboard_handoff.get("status") == "observed_in_repo" and shot_plan else "blocked", claim_class="C1" if storyboard_handoff.get("status") == "observed_in_repo" and shot_plan else "C5", evidence_refs=storyboard_handoff.get("evidence_refs", []) or route_evidence_refs or [adb_ref], value={"handoff": storyboard_handoff, "shot_count": len(shot_plan)}, confidence=0.9 if shot_plan else 0.2)
     add_claim(claims, claim_id="screenshot.target_app", question="是否发现并确认目标 app 前台运行", status="observed_in_repo" if foreground_matches else "blocked", claim_class="C2" if foreground_matches else "C5", evidence_refs=scan_refs or [adb_ref], value={"selected_package": selected_package, "foreground": foreground}, confidence=0.8 if foreground_matches else 0.3)
-    add_claim(claims, claim_id="screenshot.route_navigation", question="截图 route 是否由设备导航证据证明", status="observed_in_repo" if route_confirmed else "needs_human", claim_class="C2" if route_confirmed else "C5", evidence_refs=([navigation_ref] if navigation_ref else route_evidence_refs or [adb_ref]), value={"navigation_verified": route_confirmed, "planned_routes": [shot.get("route_path") for shot in shot_plan]}, confidence=0.8 if route_confirmed else 0.3)
+    navigation_refs = [ref for shot in screenshots for ref in shot.get("evidence_refs", [])] or ([navigation_ref] if navigation_ref else route_evidence_refs or [adb_ref])
+    add_claim(claims, claim_id="screenshot.route_navigation", question="截图 route 是否由设备导航证据证明", status="observed_in_repo" if route_confirmed else "needs_human", claim_class="C2" if route_confirmed else "C5", evidence_refs=navigation_refs, value={"navigation_verified": route_confirmed, "planned_routes": [shot.get("route_path") for shot in shot_plan]}, confidence=0.8 if route_confirmed else 0.3)
     add_claim(claims, claim_id="screenshot.raw_capture", question="是否真实捕获 raw PNG", status="observed_in_repo" if screenshots else "blocked", claim_class="C1" if screenshots else "C5", evidence_refs=screenshot_refs or scan_refs or [adb_ref], value={"screenshot_count": len(screenshots)}, confidence=0.95 if screenshots else 0.2)
     add_claim(claims, claim_id="screenshot.google_play_specs", question="截图是否满足 Google Play 基础规格候选", status="needs_human" if screenshots else "blocked", claim_class="C4", evidence_refs=screenshot_refs or scan_refs or [adb_ref], value={"checks": [shot["google_play_spec_check"] for shot in screenshots]}, confidence=0.7 if screenshots else 0.2)
     add_claim(claims, claim_id="screenshot.public_use", question="截图是否可公开用于商店", status="needs_human", claim_class="C3", evidence_refs=screenshot_refs or scan_refs or [adb_ref], value="所有公开使用必须人工审核。", confidence=0.2)
 
+    capture_foreground = screenshots[-1]["foreground"] if screenshots else foreground
+    capture_foreground_matches = bool(screenshots) and all(shot.get("foreground", {}).get("package") == selected_package for shot in screenshots)
+    target_foreground_matches = capture_foreground_matches if screenshots else foreground_matches
     human_gates = build_human_gates(claims)
     machine_path = output_dir / "screenshot-capture-agent-output.json"
     human_path = output_dir / "screenshot-capture-agent.zh.md"
@@ -1086,9 +1329,9 @@ def generate(root: Path, output_dir: Path, raw_dir: Path, args: argparse.Namespa
         "project_fingerprint": {"git_commit": commit, "skill_path": as_posix(SKILL_DIR / "SKILL.md"), "skill_scanner": as_posix(Path(__file__).resolve())},
         "tooling": tooling,
         "device_inventory": device_inventory,
-        "target_app": {"package_candidates": package_candidates, "installed_candidates": installed, "selected_package": selected_package, "selected_package_role": selected_package_role, "capture_build_type": capture_build_type, "foreground": foreground, "foreground_matches_target": foreground_matches},
+        "target_app": {"package_candidates": package_candidates, "installed_candidates": installed, "selected_package": selected_package, "selected_package_role": selected_package_role, "capture_build_type": capture_build_type, "initial_foreground": foreground, "foreground": capture_foreground, "foreground_matches_target": target_foreground_matches},
         "upstream_storyboard": storyboard_handoff,
-        "navigation": {"navigation_verified": route_confirmed, "shot_id_filter": args.shot_id or "", "allow_multi_shot_current_screen": bool(args.allow_multi_shot_current_screen)},
+        "navigation": {"navigation_verified": route_confirmed, "shot_id_filter": args.shot_id or "", "allow_multi_shot_current_screen": bool(args.allow_multi_shot_current_screen), "route_launch_command_json_provided": bool(route_launch_template)},
         "shot_plan": shot_plan,
         "capture_attempts": attempts,
         "screenshots": screenshots,
@@ -1127,6 +1370,10 @@ def main() -> int:
     parser.add_argument("--allow-current-screen", action="store_true", help="允许捕获当前前台目标 app 屏幕；route 仍需人工确认")
     parser.add_argument("--navigation-verified", action="store_true", help="显式声明设备当前已导航到 shot-list 对应 route；否则 route_verified=false")
     parser.add_argument("--allow-multi-shot-current-screen", action="store_true", help="允许一次对多个 shot 捕获当前屏幕；默认禁止以避免重复截图误绑定")
+    parser.add_argument("--route-launch-command-json", default="", help="逐 shot 导航命令模板，JSON 字符串数组；支持 {root}、{mobile_root}、{serial}、{package}、{shot_id}、{route_path}、{route_query} 占位符")
+    parser.add_argument("--route-launch-command-file", default="", help="逐 shot 导航命令模板 JSON 文件；比命令行 JSON 更适合 Windows PowerShell")
+    parser.add_argument("--route-launch-timeout-seconds", type=int, default=180, help="每个 route 启动命令等待 UI route 证据的最长秒数")
+    parser.add_argument("--route-launch-settle-seconds", type=float, default=2.0, help="发现 route 后等待 UI 稳定的秒数")
     parser.add_argument("--launch", action="store_true", help="尝试用 monkey 启动目标 package")
     parser.add_argument("--launch-wait-seconds", type=float, default=3.0, help="启动后等待秒数")
     parser.add_argument("--capture-timeout-seconds", type=int, default=30, help="screencap 超时秒数")
